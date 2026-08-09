@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EPIC21 — 무료 한국어 교재 / Free Korean Textbooks</title>
+<meta name="description" content="Free Korean textbooks in 20 languages. TOPIK I & II. No sign-up, no payment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────
+   EPIC21 · 교재 배포 허브
+   색: 표지의 남색 / 원고지 크림 / 띠지 주황 / 채점 붉은선
+   구조: 원고지 칸에 언어를 한 자씩 앉힌다
+   ───────────────────────────────────────────── */
+:root{
+  --ink:#0E1730;
+  --ink-2:#182648;
+  --cream:#F5F0E3;
+  --cream-2:#EAE2CE;
+  --amber:#E8913C;
+  --rule:#C4695A;          /* 원고지 붉은 괘선 */
+  --muted:#8E9AB4;
+  --cell:56px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);
+  color:var(--cream);
+  font-family:"Noto Sans KR","Noto Sans","Noto Sans Arabic","Noto Sans Bengali",
+    "Noto Sans Devanagari","Noto Sans Khmer","Noto Sans Myanmar","Noto Sans Sinhala",
+    "Noto Sans Thai",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.6;
+  min-height:100vh;
+  background-image:
+    radial-gradient(120% 70% at 50% -10%, #1B2A4E 0%, transparent 60%);
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 72px}
+
+/* ── 머리말 ───────────────────────────────── */
+header{padding:56px 0 40px;text-align:center}
+.mark{
+  font-size:13px;letter-spacing:.42em;font-weight:700;
+  color:var(--amber);text-transform:uppercase;margin-bottom:22px;
+}
+h1{
+  font-size:clamp(28px,7vw,46px);font-weight:900;line-height:1.25;
+  letter-spacing:.34em;text-indent:.34em;
+}
+.sub{
+  margin-top:16px;color:var(--muted);font-size:15px;font-weight:400;
+  letter-spacing:.01em;
+}
+.count{
+  display:inline-block;margin-top:22px;padding:7px 16px;
+  border:1px solid rgba(232,145,60,.5);border-radius:999px;
+  color:var(--amber);font-size:13px;font-weight:700;letter-spacing:.06em;
+}
+
+/* ── 원고지 언어판 ─────────────────────────── */
+.sheet{
+  background:var(--cream);
+  border-radius:4px;
+  padding:22px;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);
+  position:relative;
+}
+.sheet::before{
+  content:"";position:absolute;inset:10px;border:1px solid rgba(196,105,90,.35);
+  border-radius:2px;pointer-events:none;
+}
+.sheet-label{
+  color:#7C6A57;font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  margin-bottom:14px;font-weight:700;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(148px,1fr));
+  border-top:1px solid rgba(196,105,90,.45);
+  border-left:1px solid rgba(196,105,90,.45);
+}
+.cellbtn{
+  appearance:none;background:transparent;cursor:pointer;
+  border:0;
+  border-right:1px solid rgba(196,105,90,.45);
+  border-bottom:1px solid rgba(196,105,90,.45);
+  min-height:var(--cell);
+  padding:12px 10px;
+  font:inherit;font-size:16px;font-weight:500;
+  color:#1D2740;
+  text-align:center;
+  transition:background .14s ease,color .14s ease;
+}
+.cellbtn:hover{background:rgba(232,145,60,.2)}
+.cellbtn:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.cellbtn[aria-pressed="true"]{background:var(--ink);color:var(--cream)}
+
+/* ── 교재 목록 ─────────────────────────────── */
+#panel{margin-top:36px}
+#panel[hidden]{display:none}
+.panelhead{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:12px 16px;
+  margin-bottom:20px;
+}
+.chosen{font-size:24px;font-weight:700}
+.change{
+  appearance:none;background:transparent;border:1px solid rgba(245,240,227,.28);
+  color:var(--muted);border-radius:999px;padding:6px 14px;
+  font:inherit;font-size:13px;cursor:pointer;transition:border-color .14s,color .14s;
+}
+.change:hover{border-color:var(--amber);color:var(--amber)}
+.change:focus-visible{outline:2px solid var(--amber);outline-offset:2px}
+
+.book{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;
+  padding:20px 0;
+  border-top:1px solid rgba(245,240,227,.13);
+}
+.book:last-child{border-bottom:1px solid rgba(245,240,227,.13)}
+.bmeta{flex:1 1 260px;min-width:0}
+.bko{font-size:17px;font-weight:700;line-height:1.4}
+.ben{font-size:13px;color:var(--muted);margin-top:3px}
+.get{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--amber);color:#231607;
+  border:0;border-radius:6px;padding:12px 22px;
+  font:inherit;font-size:15px;font-weight:700;text-decoration:none;
+  transition:transform .12s ease,filter .12s ease;
+  white-space:nowrap;
+}
+.get:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.get:focus-visible{outline:3px solid var(--cream);outline-offset:2px}
+.get svg{width:16px;height:16px;flex:none}
+.na{color:var(--muted);font-size:14px;text-decoration:underline;text-underline-offset:3px}
+
+.state{padding:28px 0;color:var(--muted);font-size:15px}
+.state a{color:var(--amber)}
+
+/* ── 꼬리말 ───────────────────────────────── */
+footer{
+  margin-top:56px;padding-top:26px;
+  border-top:1px solid rgba(245,240,227,.12);
+  display:flex;flex-wrap:wrap;gap:10px 26px;
+  font-size:14px;color:var(--muted);
+}
+footer a{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent}
+footer a:hover{color:var(--amber);border-bottom-color:var(--amber)}
+footer a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+
+@media (max-width:520px){
+  :root{--cell:52px}
+  header{padding:40px 0 30px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+  .cellbtn{font-size:15px}
+  .get{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">EPIC21</div>
+  <h1>무료 한국어 교재</h1>
+  <p class="sub">Free Korean textbooks · TOPIK I &amp; II</p>
+  <div class="count" id="freeBadge">가입 없음 · 결제 없음</div>
+</header>
+
+<main>
+  <section class="sheet" aria-labelledby="pickLabel">
+    <div class="sheet-label" id="pickLabel">언어를 고르세요 / Choose your language</div>
+    <div class="grid" id="grid" role="group" aria-labelledby="pickLabel"></div>
+  </section>
+
+  <section id="panel" hidden aria-live="polite">
+    <div class="panelhead">
+      <span class="chosen" id="chosen"></span>
+      <button class="change" id="change" type="button">Change language</button>
+    </div>
+    <div id="books"><p class="state">…</p></div>
+  </section>
+</main>
+
+<footer>
+  <a href="https://archive.org/details/@epic21korean">Internet Archive</a>
+  <a href="https://www.youtube.com/@EPIC21korean">YouTube · @EPIC21korean</a>
+  <span>CC BY-NC-ND 4.0</span>
+</footer>
+
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════
+   교재를 추가할 때는 아래 BOOKS 배열에 한 줄만 넣으세요.
+   id 는 아카이브 주소 뒤쪽 이름입니다.
+   파일 목록은 아카이브에서 자동으로 읽어 오므로
+   파일명을 여기에 적을 필요가 없습니다.
+   ═══════════════════════════════════════════════════ */
+const BOOKS = [
+  { id:'epic21-essential-korean-grammar',
+    ko:'한국어 필수 문법 완결판',
+    en:'Essential Korean Grammar' },
+  { id:'epic21-topik-vocab-grammar-s1',
+    ko:'대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1',
+    en:'TOPIK Vocabulary & Grammar through Dialogue 1' },
+  { id:'epic21-topik1-mv-vol1-two-hands',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제1편 두 손으로',
+    en:'Learn Korean through a Music Video — TOPIK I, Vol.1' },
+  { id:'epic21-topik2-writing-master',
+    ko:'외국인 학습자를 위한 TOPIK II 쓰기 마스터',
+    en:'TOPIK II Writing Master — Questions 51–54' },
+  { id:'epic21-topik2-mv-vol1-four-seasons',
+    ko:'뮤직비디오로 배우는 한국어 · 제1편 사계절',
+    en:'Learn Korean through Music Videos — Vol.1 Four Seasons' }
+];
+
+/* 언어: [파일명에 들어가는 영어 이름, BCP47 코드, 그 언어 표기, RTL 여부] */
+const LANGS = [
+  ['English','en','English'],
+  ['Spanish','es','Español'],
+  ['French','fr','Français'],
+  ['Portuguese','pt','Português'],
+  ['Indonesian','id','Bahasa Indonesia'],
+  ['Vietnamese','vi','Tiếng Việt'],
+  ['Tagalog','tl','Tagalog'],
+  ['Uzbek','uz','Oʻzbekcha'],
+  ['Russian','ru','Русский'],
+  ['Mongolian','mn','Монгол'],
+  ['Japanese','ja','日本語'],
+  ['Chinese-Simplified','zh-Hans','简体中文'],
+  ['Thai','th','ภาษาไทย'],
+  ['Khmer','km','ភាសាខ្មែរ'],
+  ['Burmese','my','မြန်မာ'],
+  ['Nepali','ne','नेपाली'],
+  ['Bengali','bn','বাংলা'],
+  ['Sinhala','si','සිංහල'],
+  ['Arabic','ar','العربية', true],
+  ['Urdu','ur','اردو', true]
+];
+
+/* 화면에 쓰는 낱말 — 고른 언어로 바뀝니다 */
+const UI = {
+  en:['Download','Change language','Not available yet','Open on Archive','No sign-up · No payment'],
+  es:['Descargar','Cambiar idioma','Aún no disponible','Abrir en Archive','Sin registro · Sin pago'],
+  fr:['Télécharger','Changer de langue','Pas encore disponible','Ouvrir sur Archive','Sans inscription · Sans paiement'],
+  pt:['Baixar','Mudar de idioma','Ainda não disponível','Abrir no Archive','Sem cadastro · Sem pagamento'],
+  id:['Unduh','Ganti bahasa','Belum tersedia','Buka di Archive','Tanpa pendaftaran · Tanpa biaya'],
+  vi:['Tải về','Đổi ngôn ngữ','Chưa có','Mở trên Archive','Không đăng ký · Không trả phí'],
+  tl:['I-download','Palitan ang wika','Wala pa','Buksan sa Archive','Walang rehistro · Walang bayad'],
+  uz:['Yuklab olish','Tilni oʻzgartirish','Hozircha yoʻq','Archive’da ochish','Roʻyxatsiz · Toʻlovsiz'],
+  ru:['Скачать','Сменить язык','Пока нет','Открыть на Archive','Без регистрации · Бесплатно'],
+  mn:['Татах','Хэл солих','Одоохондоо байхгүй','Archive дээр нээх','Бүртгэлгүй · Үнэгүй'],
+  ja:['ダウンロード','言語を変える','準備中','Archiveで開く','登録不要・無料'],
+  'zh-Hans':['下载','更换语言','暂无','在 Archive 打开','无需注册 · 完全免费'],
+  th:['ดาวน์โหลด','เปลี่ยนภาษา','ยังไม่มี','เปิดใน Archive','ไม่ต้องสมัคร · ฟรี'],
+  km:['ទាញយក','ប្តូរភាសា','មិនទាន់មាន','បើកនៅ Archive','មិនចាំបាច់ចុះឈ្មោះ · ឥតគិតថ្លៃ'],
+  my:['ဒေါင်းလုဒ်','ဘာသာစကား ပြောင်းရန်','မရှိသေးပါ','Archive တွင် ဖွင့်ရန်','အကောင့်မလို · အခမဲ့'],
+  ne:['डाउनलोड','भाषा बदल्नुहोस्','अहिले उपलब्ध छैन','Archive मा खोल्नुहोस्','दर्ता छैन · निःशुल्क'],
+  bn:['ডাউনলোড','ভাষা বদলান','এখনও নেই','Archive-এ খুলুন','নিবন্ধন নেই · বিনামূল্যে'],
+  si:['බාගන්න','භාෂාව වෙනස් කරන්න','තවම නැත','Archive හි විවෘත කරන්න','ලියාපදිංචියක් නැත · නොමිලේ'],
+  ar:['تحميل','تغيير اللغة','غير متوفر بعد','افتح في Archive','بدون تسجيل · مجانًا'],
+  ur:['ڈاؤن لوڈ','زبان بدلیں','ابھی دستیاب نہیں','Archive پر کھولیں','رجسٹریشن نہیں · مفت']
+};
+
+const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>';
+
+const gridEl   = document.getElementById('grid');
+const panelEl  = document.getElementById('panel');
+const booksEl  = document.getElementById('books');
+const chosenEl = document.getElementById('chosen');
+const changeEl = document.getElementById('change');
+const badgeEl  = document.getElementById('freeBadge');
+
+const cache = {};   // id -> [파일명]
+
+/* 언어 칸 그리기 */
+LANGS.forEach(function (L) {
+  const b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'cellbtn';
+  b.lang = L[1];
+  b.textContent = L[2];
+  b.setAttribute('aria-pressed', 'false');
+  if (L[3]) b.dir = 'rtl';
+  b.addEventListener('click', function () { pick(L, b); });
+  gridEl.appendChild(b);
+});
+
+changeEl.addEventListener('click', function () {
+  gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  gridEl.querySelector('.cellbtn').focus();
+});
+
+function pick(L, btn) {
+  gridEl.querySelectorAll('.cellbtn').forEach(function (x) {
+    x.setAttribute('aria-pressed', x === btn ? 'true' : 'false');
+  });
+
+  const t = UI[L[1]] || UI.en;
+  chosenEl.lang = L[1];
+  chosenEl.textContent = L[2];
+  changeEl.lang = L[1];
+  changeEl.textContent = t[1];
+  badgeEl.lang = L[1];
+  badgeEl.textContent = t[4];
+  panelEl.dir = L[3] ? 'rtl' : 'ltr';
+  panelEl.hidden = false;
+  booksEl.innerHTML = '<p class="state">…</p>';
+
+  Promise.all(BOOKS.map(function (bk) { return files(bk.id); }))
+    .then(function (lists) { render(L, t, lists); })
+    .catch(function () {
+      booksEl.innerHTML = '<p class="state">Connection failed. ' +
+        '<a href="https://archive.org/details/@epic21korean">Open on Archive</a></p>';
+    });
+}
+
+/* 아카이브에서 PDF 파일 목록 읽기 */
+function files(id) {
+  if (cache[id]) return Promise.resolve(cache[id]);
+  return fetch('https://archive.org/metadata/' + id)
+    .then(function (r) { return r.json(); })
+    .then(function (j) {
+      const names = (j.files || [])
+        .filter(function (f) {
+          return /\.pdf$/i.test(f.name) && (!f.source || f.source === 'original');
+        })
+        .map(function (f) { return f.name; });
+      cache[id] = names;
+      return names;
+    });
+}
+
+function render(L, t, lists) {
+  const token = L[0].toLowerCase();
+  const html = BOOKS.map(function (bk, i) {
+    const hit = (lists[i] || []).find(function (n) {
+      return n.toLowerCase().indexOf('_' + token + '_') > -1;
+    });
+    const action = hit
+      ? '<a class="get" lang="' + L[1] + '" href="https://archive.org/download/' +
+        bk.id + '/' + encodeURIComponent(hit) + '">' + ARROW + '<span>' + t[0] + '</span></a>'
+      : '<a class="na" lang="' + L[1] + '" href="https://archive.org/details/' +
+        bk.id + '">' + t[2] + ' — ' + t[3] + '</a>';
+    return '<div class="book"><div class="bmeta">' +
+      '<div class="bko" lang="ko">' + bk.ko + '</div>' +
+      '<div class="ben" lang="en">' + bk.en + '</div>' +
+      '</div>' + action + '</div>';
+  }).join('');
+  booksEl.innerHTML = html;
+}
+</script>
+</body>
+</html>
