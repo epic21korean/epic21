@@ -168,7 +168,7 @@ footer a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
 
    영상별 링크 예시
      https://epic21korean.github.io/epic21/#two-hands
-     https://epic21korean.github.io/epic21/#four-seasons
+     https://epic21korean.github.io/epic21/#clinic
    ═══════════════════════════════════════════════════ */
 var BOOKS = [
   { id:'epic21-essential-korean-grammar', slug:'grammar',
@@ -177,15 +177,44 @@ var BOOKS = [
   { id:'epic21-topik-vocab-grammar-s1', slug:'dialogue1',
     ko:'대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1',
     en:'TOPIK Vocabulary & Grammar through Dialogue 1' },
-  { id:'epic21-topik1-mv-vol1-two-hands', slug:'two-hands',
-    ko:'뮤직비디오로 배우는 TOPIK I · 제1편 두 손으로',
-    en:'Learn Korean through a Music Video — TOPIK I, Vol.1' },
   { id:'epic21-topik2-writing-master', slug:'writing',
     ko:'외국인 학습자를 위한 TOPIK II 쓰기 마스터',
     en:'TOPIK II Writing Master — Questions 51–54' },
   { id:'epic21-topik2-mv-vol1-four-seasons', slug:'four-seasons',
     ko:'뮤직비디오로 배우는 한국어 · 제1편 사계절',
-    en:'Learn Korean through Music Videos — Vol.1 Four Seasons' }
+    en:'Learn Korean through Music Videos — Vol.1 Four Seasons' },
+
+  /* ── 뮤직비디오로 배우는 TOPIK I (제1~10편) ── */
+  { id:'epic21-topik1-mv-vol1-two-hands', slug:'two-hands',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제1편 두 손으로',
+    en:"Learn Korean through a Music Video — TOPIK I, Vol.1 'With Both Hands'" },
+  { id:'epic21-topik1-mv-vol2-restroom', slug:'restroom',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제2편 화장실이 어디예요?',
+    en:"TOPIK I, Vol.2 'Where Is the Restroom?'" },
+  { id:'epic21-topik1-mv-vol3-americano', slug:'americano',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제3편 아이스아메리카노 두 잔 주세요',
+    en:"TOPIK I, Vol.3 'Two Iced Americanos, Please'" },
+  { id:'epic21-topik1-mv-vol4-wifi', slug:'wifi',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제4편 여기 와이파이 돼요?',
+    en:"TOPIK I, Vol.4 'Do You Have Wi-Fi Here?'" },
+  { id:'epic21-topik1-mv-vol5-myeongdong', slug:'myeongdong',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제5편 명동역이 어디예요?',
+    en:"TOPIK I, Vol.5 'Where Is Myeongdong Station?'" },
+  { id:'epic21-topik1-mv-vol6-transit-card', slug:'transitcard',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제6편 교통 카드 좀 충전해 주세요',
+    en:"TOPIK I, Vol.6 'Please Top Up My Transit Card'" },
+  { id:'epic21-topik1-mv-vol7-shopping', slug:'shopping',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제7편 이거 입어 봐도 돼요?',
+    en:"TOPIK I, Vol.7 'Can I Try This On?'" },
+  { id:'epic21-topik1-mv-vol8-samgyeopsal', slug:'samgyeopsal',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제8편 우리 삼겹살 먹을까?',
+    en:"TOPIK I, Vol.8 'Shall We Get Samgyeopsal?'" },
+  { id:'epic21-topik1-mv-vol9-chicken', slug:'chicken',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제9편 오는 데 얼마나 걸려요?',
+    en:"TOPIK I, Vol.9 'How Long Will It Take?'" },
+  { id:'epic21-topik1-mv-vol10-clinic', slug:'clinic',
+    ko:'뮤직비디오로 배우는 TOPIK I · 제10편 나 감기 걸렸나 봐',
+    en:"TOPIK I, Vol.10 'I Think I Caught a Cold'" }
 ];
 
 /* [파일명 속 영어 이름, 언어 코드, 그 언어 표기, RTL] */
@@ -325,14 +354,23 @@ function files(id) {
       }).map(function (f) { return f.name; });
       cache[id] = names;
       return names;
-    });
+    })
+    .catch(function () { cache[id] = []; return []; });
 }
 
+/* 파일명에서 언어를 찾는다.
+   두 가지 형태를 모두 인정한다.
+     …_English_…  (밑줄로 이어지는 경우)
+     …_English.pdf (언어 이름으로 끝나는 경우 — 제2편 이후)  */
 function action(bk, list, L, t, big) {
-  var token = L[0].toLowerCase();
+  var token = '_' + L[0].toLowerCase();
   var hit = null;
   for (var i = 0; i < list.length; i++) {
-    if (list[i].toLowerCase().indexOf('_' + token + '_') > -1) { hit = list[i]; break; }
+    var n = list[i].toLowerCase();
+    if (n.indexOf(token + '_') > -1 || n.indexOf(token + '.') > -1) {
+      hit = list[i];
+      break;
+    }
   }
   if (hit) {
     return '<a class="get" lang="' + L[1] + '" href="https://archive.org/download/' +
