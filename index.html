@@ -377,15 +377,19 @@ function files(id) {
      …_English_…  (밑줄로 이어지는 경우)
      …_English.pdf (언어 이름으로 끝나는 경우 — 제2편 이후)  */
 function action(bk, list, L, t, big) {
-  var token = '_' + L[0].toLowerCase();
-  var hit = null;
-  for (var i = 0; i < list.length; i++) {
-    var n = list[i].toLowerCase();
-    if (n.indexOf(token + '_') > -1 || n.indexOf(token + '.') > -1) {
-      hit = list[i];
-      break;
-    }
-  }
+ var base = L[0].toLowerCase();
+var tokens = ['' + base];
+if (base.indexOf('-') > -1) tokens.push('' + base.replace(/-/g, ''));
+var hit = null;
+for (var i = 0; i < list.length && !hit; i++) {
+var n = list[i].toLowerCase();
+for (var k = 0; k < tokens.length; k++) {
+if (n.indexOf(tokens[k] + '_') > -1 || n.indexOf(tokens[k] + '.') > -1) {
+hit = list[i];
+break;
+}
+}
+}
   if (hit) {
     return '<a class="get" lang="' + L[1] + '" href="https://archive.org/download/' +
       bk.id + '/' + encodeURIComponent(hit) + '">' + ARROW + '<span>' + t[0] + '</span></a>';
