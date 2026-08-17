@@ -350,7 +350,7 @@ function pick(L, btn) {
   panelEl.hidden = false;
   booksEl.innerHTML = '<p class="state">…</p>';
 
-  Promise.all(BOOKS.map(function (bk) { return files(bk.id); }))
+  filesAll(BOOKS)
     .then(function (lists) { render(L, t, lists); })
     .catch(function () {
       booksEl.innerHTML = '<p class="state">Connection failed. ' +
@@ -358,10 +358,13 @@ function pick(L, btn) {
     });
 }
 
-function files(id) {
+/* 아카이브가 요청을 거절하면 잠시 쉬었다가 다시 묻는다.
+   끝내 실패해도 결과를 기억하지 않는다 — 기억하면 새로고침 전까지 계속 빈칸이 된다. */
+function files(id, tries) {
   if (cache[id]) return Promise.resolve(cache[id]);
+  tries = tries || 0;
   return fetch('https://archive.org/metadata/' + id)
-    .then(function (r) { return r.json(); })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (j) {
       var names = (j.files || []).filter(function (f) {
         return /\.pdf$/i.test(f.name) && (!f.source || f.source === 'original');
@@ -369,7 +372,26 @@ function files(id) {
       cache[id] = names;
       return names;
     })
-    .catch(function () { cache[id] = []; return []; });
+    .catch(function () {
+      if (tries < 5) {
+        return new Promise(function (ok) { setTimeout(ok, 400 * (tries + 1)); })
+          .then(function () { return files(id, tries + 1); });
+      }
+      return [];
+    });
+}
+
+/* 20개를 한꺼번에 물으면 아카이브가 일부를 거절한다. 4개씩 나눠 보낸다. */
+function filesAll(list) {
+  var out = new Array(list.length), i = 0;
+  function next() {
+    if (i >= list.length) return Promise.resolve();
+    var k = i++;
+    return files(list[k].id).then(function (n) { out[k] = n; return next(); });
+  }
+  var lanes = [];
+  for (var c = 0; c < 4; c++) lanes.push(next());
+  return Promise.all(lanes).then(function () { return out; });
 }
 
 /* 파일명에서 언어를 찾는다.
