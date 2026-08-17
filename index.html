@@ -170,6 +170,12 @@ footer a:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
      https://epic21korean.github.io/epic21/#two-hands
      https://epic21korean.github.io/epic21/#clinic
    ═══════════════════════════════════════════════════ */
+/* ── 파일 목록 스냅샷 ──────────────────────────────────────────
+   여기에 적어 두면 아카이브에 물어보지 않고 곧바로 내려받기 단추가 뜬다.
+   비어 있는 항목만 아카이브에 물어본다.
+   교재를 새로 올린 뒤에는 make_filelist.py 를 돌려 이 블록을 갈아 끼운다. */
+var FILES = {};
+
 var BOOKS = [
   { id:'epic21-essential-korean-grammar', slug:'grammar',
     ko:'한국어 필수 문법 완결판',
@@ -348,20 +354,32 @@ function pick(L, btn) {
   badgeEl.textContent = t[4];
   panelEl.dir = L[3] ? 'rtl' : 'ltr';
   panelEl.hidden = false;
-  booksEl.innerHTML = '<p class="state">…</p>';
 
-  filesAll(BOOKS)
-    .then(function (lists) { render(L, t, lists); })
-    .catch(function () {
-      booksEl.innerHTML = '<p class="state">Connection failed. ' +
-        '<a href="https://archive.org/details/@epic21korean">Open on Archive</a></p>';
-    });
+  filesAll(BOOKS, function (lists) { render(L, t, lists); });
 }
 
-/* 아카이브가 요청을 거절하면 잠시 쉬었다가 다시 묻는다.
-   끝내 실패해도 결과를 기억하지 않는다 — 기억하면 새로고침 전까지 계속 빈칸이 된다. */
+/* 한 번 알아낸 목록은 브라우저에 30일간 보관한다.
+   다음 방문 때는 아카이브에 묻지 않으므로 즉시 뜬다. */
+var STORE = 'epic21files', DAY30 = 2592000000;
+try {
+  var saved = JSON.parse(localStorage.getItem(STORE) || '{}');
+  for (var sid in saved) {
+    if (saved[sid] && saved[sid].t > Date.now() - DAY30) cache[sid] = saved[sid].n;
+  }
+} catch (e) {}
+
+function keep(id, names) {
+  cache[id] = names;
+  try {
+    var box = JSON.parse(localStorage.getItem(STORE) || '{}');
+    box[id] = { t: Date.now(), n: names };
+    localStorage.setItem(STORE, JSON.stringify(box));
+  } catch (e) {}
+}
+
 function files(id, tries) {
-  if (cache[id]) return Promise.resolve(cache[id]);
+  if (FILES[id] && FILES[id].length) return Promise.resolve(FILES[id]);
+  if (cache[id] && cache[id].length) return Promise.resolve(cache[id]);
   tries = tries || 0;
   return fetch('https://archive.org/metadata/' + id)
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -369,29 +387,39 @@ function files(id, tries) {
       var names = (j.files || []).filter(function (f) {
         return /\.pdf$/i.test(f.name) && (!f.source || f.source === 'original');
       }).map(function (f) { return f.name; });
-      cache[id] = names;
+      if (names.length) keep(id, names);
       return names;
     })
     .catch(function () {
-      if (tries < 5) {
-        return new Promise(function (ok) { setTimeout(ok, 400 * (tries + 1)); })
+      if (tries < 3) {
+        return new Promise(function (ok) { setTimeout(ok, 1200 * (tries + 1)); })
           .then(function () { return files(id, tries + 1); });
       }
-      return [];
+      return [];        /* 실패는 기억하지 않는다 */
     });
 }
 
-/* 20개를 한꺼번에 물으면 아카이브가 일부를 거절한다. 4개씩 나눠 보낸다. */
-function filesAll(list) {
-  var out = new Array(list.length), i = 0;
+/* 아는 것으로 먼저 그리고, 모르는 것만 뒤에서 채워 넣는다. */
+function filesAll(list, draw) {
+  var out = list.map(function (bk) {
+    return (FILES[bk.id] && FILES[bk.id].length) ? FILES[bk.id] : (cache[bk.id] || []);
+  });
+  draw(out);
+  var todo = [];
+  list.forEach(function (bk, i) { if (!out[i].length) todo.push(i); });
+  if (!todo.length) return;
+  var i = 0;
   function next() {
-    if (i >= list.length) return Promise.resolve();
-    var k = i++;
-    return files(list[k].id).then(function (n) { out[k] = n; return next(); });
+    if (i >= todo.length) return Promise.resolve();
+    var k = todo[i++];
+    return files(list[k].id).then(function (n) {
+      if (n.length) { out[k] = n; draw(out); }
+      return next();
+    });
   }
   var lanes = [];
-  for (var c = 0; c < 4; c++) lanes.push(next());
-  return Promise.all(lanes).then(function () { return out; });
+  for (var c = 0; c < 3; c++) lanes.push(next());
+  Promise.all(lanes);
 }
 
 /* 파일명에서 언어를 찾는다.
