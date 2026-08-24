@@ -90,6 +90,40 @@ h1{font-size:clamp(26px,6.4vw,44px);font-weight:900;line-height:1.25;letter-spac
 .otherlabel{font-size:12px;letter-spacing:.22em;text-transform:uppercase;
   color:var(--muted);font-weight:700;margin-bottom:6px}
 
+/* ── 접이식 묶음 ── */
+.grp{border-top:1px solid rgba(245,240,227,.13)}
+.grp:last-of-type{border-bottom:1px solid rgba(245,240,227,.13)}
+.ghead{display:flex;align-items:center;gap:12px;width:100%;padding:18px 2px;
+  background:none;border:0;color:inherit;font:inherit;text-align:start;cursor:pointer;
+  transition:background .12s ease}
+.ghead:hover{background:rgba(245,240,227,.05)}
+.ghead:focus-visible{outline:3px solid var(--amber);outline-offset:-3px;border-radius:6px}
+.gcaret{flex:none;width:26px;height:26px;border-radius:50%;
+  background:rgba(245,240,227,.12);display:flex;align-items:center;justify-content:center;
+  transition:transform .18s ease,background .12s ease}
+.gcaret svg{width:14px;height:14px}
+.ghead[aria-expanded="true"] .gcaret{transform:rotate(90deg);background:var(--amber);color:#231607}
+[dir="rtl"] .ghead[aria-expanded="true"] .gcaret{transform:rotate(-90deg)}
+[dir="rtl"] .gcaret svg{transform:scaleX(-1)}
+.gtext{flex:1 1 auto;min-width:0}
+.gko{display:block;font-size:17px;font-weight:700;line-height:1.35}
+.gen{display:block;font-size:12.5px;color:var(--muted);margin-top:2px}
+.gpeek{display:block;font-size:12.5px;color:var(--muted);margin-top:5px;opacity:.85;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ghead[aria-expanded="true"] .gpeek{display:none}
+.gcount{flex:none;display:inline-flex;align-items:center;gap:5px;
+  background:rgba(245,240,227,.12);color:var(--cream);border-radius:999px;
+  padding:4px 11px;font-size:13px;font-weight:700}
+.ghead[aria-expanded="true"] .gcount{background:rgba(232,145,60,.22);color:var(--amber)}
+.gbody{padding-bottom:6px}
+.gbody[hidden]{display:none}
+.gbody .book{border-top:1px dashed rgba(245,240,227,.10);padding:16px 0 16px 12px}
+[dir="rtl"] .gbody .book{padding:16px 12px 16px 0}
+.gbody .book:last-child{border-bottom:0}
+.hint{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;
+  margin:2px 0 10px}
+.hint svg{width:15px;height:15px;flex:none}
+
 .book{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;padding:20px 0;
   border-top:1px solid rgba(245,240,227,.13)}
 .book:last-child{border-bottom:1px solid rgba(245,240,227,.13)}
@@ -197,66 +231,79 @@ var FILES = {
   'epic21-topik1-mv-vol10-clinic': ['제10편_나_감기_걸렸나_봐_01_English.pdf', '제10편_나_감기_걸렸나_봐_02_Spanish.pdf', '제10편_나_감기_걸렸나_봐_03_French.pdf', '제10편_나_감기_걸렸나_봐_04_Portuguese.pdf', '제10편_나_감기_걸렸나_봐_05_Indonesian.pdf', '제10편_나_감기_걸렸나_봐_06_Vietnamese.pdf', '제10편_나_감기_걸렸나_봐_07_Tagalog.pdf', '제10편_나_감기_걸렸나_봐_08_Uzbek.pdf', '제10편_나_감기_걸렸나_봐_09_Russian.pdf', '제10편_나_감기_걸렸나_봐_10_Mongolian.pdf', '제10편_나_감기_걸렸나_봐_11_Japanese.pdf', '제10편_나_감기_걸렸나_봐_12_Chinese-Simplified.pdf', '제10편_나_감기_걸렸나_봐_13_Thai.pdf', '제10편_나_감기_걸렸나_봐_14_Khmer.pdf', '제10편_나_감기_걸렸나_봐_15_Burmese.pdf', '제10편_나_감기_걸렸나_봐_16_Nepali.pdf', '제10편_나_감기_걸렸나_봐_17_Bengali.pdf', '제10편_나_감기_걸렸나_봐_18_Sinhala.pdf', '제10편_나_감기_걸렸나_봐_19_Arabic.pdf', '제10편_나_감기_걸렸나_봐_20_Urdu.pdf'],
 };
 
+/* ── 교재 묶음 ─────────────────────────────────
+   새 교재를 넣을 때: BOOKS 에 한 줄 추가하면서 g 를 아래 키 중 하나로 적는다.
+   새 묶음이 필요하면 여기에 한 줄 더 만든다. 개수는 자동으로 세어 붙는다.
+   OPEN_BY_DEFAULT : 영상 이름표(#dialogue2 등) 없이 들어온 사람에게 열어 줄 묶음 */
+var GROUPS = [
+  { key:'core', ko:'한국어 필수 문법',            en:'Essential Korean Grammar' },
+  { key:'dlg',  ko:'대화로 배우는 TOPIK 어휘와 문법', en:'TOPIK Vocabulary & Grammar through Dialogue' },
+  { key:'wrt',  ko:'TOPIK II 쓰기',              en:'TOPIK II Writing' },
+  { key:'mv2',  ko:'뮤직비디오로 배우는 TOPIK II',  en:'Learn Korean through Music Videos — TOPIK II' },
+  { key:'mv1',  ko:'뮤직비디오로 배우는 TOPIK I',   en:'Learn Korean through Music Videos — TOPIK I' }
+];
+var OPEN_BY_DEFAULT = 'dlg';
+
 var BOOKS = [
-  { id:'epic21-essential-korean-grammar', slug:'grammar',
+  { id:'epic21-essential-korean-grammar', g:'core', slug:'grammar',
     ko:'한국어 필수 문법 완결판',
     en:'Essential Korean Grammar' },
-  { id:'epic21-topik-vocab-grammar-s1', slug:'dialogue1',
+  { id:'epic21-topik-vocab-grammar-s1', g:'dlg', slug:'dialogue1',
     ko:'대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1',
     en:'TOPIK Vocabulary & Grammar through Dialogue 1' },
-  { id:'epic21-topik-vocab-grammar-s2', slug:'dialogue2',
+  { id:'epic21-topik-vocab-grammar-s2', g:'dlg', slug:'dialogue2',
     ko:'대화로 배우는 TOPIK 어휘와 문법 · 시리즈 2',
     en:'TOPIK Vocabulary & Grammar through Dialogue 2' },
-  { id:'epic21-topik2-writing-master', slug:'writing',
+  { id:'epic21-topik2-writing-master', g:'wrt', slug:'writing',
     ko:'외국인 학습자를 위한 TOPIK II 쓰기 마스터',
     en:'TOPIK II Writing Master — Questions 51–54' },
-  { id:'epic21-topik2-mv-vol1-four-seasons', slug:'four-seasons',
+  { id:'epic21-topik2-mv-vol1-four-seasons', g:'mv2', slug:'four-seasons',
   ko:'뮤직비디오로 배우는 TOPIK II · 제1편 사계절',
   en:"Learn Korean through Music Videos — TOPIK II, Vol.1 'Four Seasons'" },
-{ id:'epic21-topik2-mv-vol2-black-coffee', slug:'black-coffee',
+{ id:'epic21-topik2-mv-vol2-black-coffee', g:'mv2', slug:'black-coffee',
 ko:'뮤직비디오로 배우는 TOPIK II · 제2편 블랙커피',
 en:"Learn Korean through Music Videos — TOPIK II, Vol.2 'Black Coffee'" },
-{ id:'epic21-topik2-mv-vol3-cola', slug:'cola',
+{ id:'epic21-topik2-mv-vol3-cola', g:'mv2', slug:'cola',
 ko:'뮤직비디오로 배우는 TOPIK II · 제3편 콜라',
 en:"Learn Korean through Music Videos — TOPIK II, Vol.3 'Cola'" },
-{ id:'epic21-topik2-mv-vol4-curious', slug:'curious',
+{ id:'epic21-topik2-mv-vol4-curious', g:'mv2', slug:'curious',
 ko:'뮤직비디오로 배우는 TOPIK II · 제4편 궁금해',
 en:"Learn Korean through Music Videos — TOPIK II, Vol.4 'Curious'" },
-{ id:'epic21-topik2-mv-vol5-parting', slug:'parting',
+{ id:'epic21-topik2-mv-vol5-parting', g:'mv2', slug:'parting',
 ko:'뮤직비디오로 배우는 TOPIK II · 제5편 회자정리',
 en:"Learn Korean through Music Videos — TOPIK II, Vol.5 'Those Who Meet Must Part'" },
-{ id:'epic21-topik2-mv-vol6-favorite-song', slug:'favorite-song',
+{ id:'epic21-topik2-mv-vol6-favorite-song', g:'mv2', slug:'favorite-song',
 ko:'뮤직비디오로 배우는 TOPIK II · 제6편 애창곡',
 en:"Learn Korean through Music Videos — TOPIK II, Vol.6 'My Favorite Song'" },
   /* ── 뮤직비디오로 배우는 TOPIK I (제1~10편) ── */
-  { id:'epic21-topik1-mv-vol1-two-hands', slug:'two-hands',
+  { id:'epic21-topik1-mv-vol1-two-hands', g:'mv1', slug:'two-hands',
     ko:'뮤직비디오로 배우는 TOPIK I · 제1편 두 손으로',
     en:"Learn Korean through a Music Video — TOPIK I, Vol.1 'With Both Hands'" },
-  { id:'epic21-topik1-mv-vol2-restroom', slug:'restroom',
+  { id:'epic21-topik1-mv-vol2-restroom', g:'mv1', slug:'restroom',
     ko:'뮤직비디오로 배우는 TOPIK I · 제2편 화장실이 어디예요?',
     en:"TOPIK I, Vol.2 'Where Is the Restroom?'" },
-  { id:'epic21-topik1-mv-vol3-americano', slug:'americano',
+  { id:'epic21-topik1-mv-vol3-americano', g:'mv1', slug:'americano',
     ko:'뮤직비디오로 배우는 TOPIK I · 제3편 아이스아메리카노 두 잔 주세요',
     en:"TOPIK I, Vol.3 'Two Iced Americanos, Please'" },
-  { id:'epic21-topik1-mv-vol4-wifi', slug:'wifi',
+  { id:'epic21-topik1-mv-vol4-wifi', g:'mv1', slug:'wifi',
     ko:'뮤직비디오로 배우는 TOPIK I · 제4편 여기 와이파이 돼요?',
     en:"TOPIK I, Vol.4 'Do You Have Wi-Fi Here?'" },
-  { id:'epic21-topik1-mv-vol5-myeongdong', slug:'myeongdong',
+  { id:'epic21-topik1-mv-vol5-myeongdong', g:'mv1', slug:'myeongdong',
     ko:'뮤직비디오로 배우는 TOPIK I · 제5편 명동역이 어디예요?',
     en:"TOPIK I, Vol.5 'Where Is Myeongdong Station?'" },
-  { id:'epic21-topik1-mv-vol6-transit-card', slug:'transitcard',
+  { id:'epic21-topik1-mv-vol6-transit-card', g:'mv1', slug:'transitcard',
     ko:'뮤직비디오로 배우는 TOPIK I · 제6편 교통 카드 좀 충전해 주세요',
     en:"TOPIK I, Vol.6 'Please Top Up My Transit Card'" },
-  { id:'epic21-topik1-mv-vol7-shopping', slug:'shopping',
+  { id:'epic21-topik1-mv-vol7-shopping', g:'mv1', slug:'shopping',
     ko:'뮤직비디오로 배우는 TOPIK I · 제7편 이거 입어 봐도 돼요?',
     en:"TOPIK I, Vol.7 'Can I Try This On?'" },
-  { id:'epic21-topik1-mv-vol8-samgyeopsal', slug:'samgyeopsal',
+  { id:'epic21-topik1-mv-vol8-samgyeopsal', g:'mv1', slug:'samgyeopsal',
     ko:'뮤직비디오로 배우는 TOPIK I · 제8편 우리 삼겹살 먹을까?',
     en:"TOPIK I, Vol.8 'Shall We Get Samgyeopsal?'" },
-  { id:'epic21-topik1-mv-vol9-chicken', slug:'chicken',
+  { id:'epic21-topik1-mv-vol9-chicken', g:'mv1', slug:'chicken',
     ko:'뮤직비디오로 배우는 TOPIK I · 제9편 오는 데 얼마나 걸려요?',
     en:"TOPIK I, Vol.9 'How Long Will It Take?'" },
-  { id:'epic21-topik1-mv-vol10-clinic', slug:'clinic',
+  { id:'epic21-topik1-mv-vol10-clinic', g:'mv1', slug:'clinic',
     ko:'뮤직비디오로 배우는 TOPIK I · 제10편 나 감기 걸렸나 봐',
     en:"TOPIK I, Vol.10 'I Think I Caught a Cold'" }
 ];
@@ -288,26 +335,26 @@ var LANGS = [
 /* 0 받기 · 1 언어 바꾸기 · 2 아직 없음 · 3 아카이브에서 열기
    4 가입/결제 없음 · 5 다른 교재 · 6 이 영상의 교재 */
 var UI = {
-  en:['Download','Change language','Not available yet','Open on Archive','No sign-up · No payment','Other textbooks','For this video'],
-  es:['Descargar','Cambiar idioma','Aún no disponible','Abrir en Archive','Sin registro · Sin pago','Otros libros','Para este video'],
-  fr:['Télécharger','Changer de langue','Pas encore disponible','Ouvrir sur Archive','Sans inscription · Sans paiement','Autres manuels','Pour cette vidéo'],
-  pt:['Baixar','Mudar de idioma','Ainda não disponível','Abrir no Archive','Sem cadastro · Sem pagamento','Outros livros','Para este vídeo'],
-  id:['Unduh','Ganti bahasa','Belum tersedia','Buka di Archive','Tanpa pendaftaran · Tanpa biaya','Buku lainnya','Untuk video ini'],
-  vi:['Tải về','Đổi ngôn ngữ','Chưa có','Mở trên Archive','Không đăng ký · Không trả phí','Các giáo trình khác','Cho video này'],
-  tl:['I-download','Palitan ang wika','Wala pa','Buksan sa Archive','Walang rehistro · Walang bayad','Iba pang aklat','Para sa video na ito'],
-  uz:['Yuklab olish','Tilni oʻzgartirish','Hozircha yoʻq','Archive’da ochish','Roʻyxatsiz · Toʻlovsiz','Boshqa darsliklar','Ushbu video uchun'],
-  ru:['Скачать','Сменить язык','Пока нет','Открыть на Archive','Без регистрации · Бесплатно','Другие учебники','Для этого видео'],
-  mn:['Татах','Хэл солих','Одоохондоо байхгүй','Archive дээр нээх','Бүртгэлгүй · Үнэгүй','Бусад сурах бичиг','Энэ видеоны сурах бичиг'],
-  ja:['ダウンロード','言語を変える','準備中','Archiveで開く','登録不要・無料','ほかの教材','この動画の教材'],
-  'zh-Hans':['下载','更换语言','暂无','在 Archive 打开','无需注册 · 完全免费','其他教材','本视频的教材'],
-  th:['ดาวน์โหลด','เปลี่ยนภาษา','ยังไม่มี','เปิดใน Archive','ไม่ต้องสมัคร · ฟรี','หนังสือเล่มอื่น','สำหรับวิดีโอนี้'],
-  km:['ទាញយក','ប្តូរភាសា','មិនទាន់មាន','បើកនៅ Archive','មិនចាំបាច់ចុះឈ្មោះ · ឥតគិតថ្លៃ','សៀវភៅផ្សេងទៀត','សម្រាប់វីដេអូនេះ'],
-  my:['ဒေါင်းလုဒ်','ဘာသာစကား ပြောင်းရန်','မရှိသေးပါ','Archive တွင် ဖွင့်ရန်','အကောင့်မလို · အခမဲ့','အခြားဖတ်စာအုပ်များ','ဤဗီဒီယိုအတွက်'],
-  ne:['डाउनलोड','भाषा बदल्नुहोस्','अहिले उपलब्ध छैन','Archive मा खोल्नुहोस्','दर्ता छैन · निःशुल्क','अन्य पाठ्यपुस्तक','यो भिडियोको लागि'],
-  bn:['ডাউনলোড','ভাষা বদলান','এখনও নেই','Archive-এ খুলুন','নিবন্ধন নেই · বিনামূল্যে','অন্যান্য পাঠ্যবই','এই ভিডিওর জন্য'],
-  si:['බාගන්න','භාෂාව වෙනස් කරන්න','තවම නැත','Archive හි විවෘත කරන්න','ලියාපදිංචියක් නැත · නොමිලේ','වෙනත් ග්‍රන්ථ','මෙම වීඩියෝව සඳහා'],
-  ar:['تحميل','تغيير اللغة','غير متوفر بعد','افتح في Archive','بدون تسجيل · مجانًا','كتب أخرى','لهذا الفيديو'],
-  ur:['ڈاؤن لوڈ','زبان بدلیں','ابھی دستیاب نہیں','Archive پر کھولیں','رجسٹریشن نہیں · مفت','دیگر کتابیں','اس ویڈیو کے لیے']
+  en:['Download','Change language','Not available yet','Open on Archive','No sign-up · No payment','Other textbooks','For this video','Tap a group to see the books inside'],
+  es:['Descargar','Cambiar idioma','Aún no disponible','Abrir en Archive','Sin registro · Sin pago','Otros libros','Para este video','Toca un grupo para ver los libros'],
+  fr:['Télécharger','Changer de langue','Pas encore disponible','Ouvrir sur Archive','Sans inscription · Sans paiement','Autres manuels','Pour cette vidéo','Touchez un groupe pour voir les manuels'],
+  pt:['Baixar','Mudar de idioma','Ainda não disponível','Abrir no Archive','Sem cadastro · Sem pagamento','Outros livros','Para este vídeo','Toque num grupo para ver os livros'],
+  id:['Unduh','Ganti bahasa','Belum tersedia','Buka di Archive','Tanpa pendaftaran · Tanpa biaya','Buku lainnya','Untuk video ini','Ketuk kelompok untuk melihat bukunya'],
+  vi:['Tải về','Đổi ngôn ngữ','Chưa có','Mở trên Archive','Không đăng ký · Không trả phí','Các giáo trình khác','Cho video này','Chạm vào nhóm để xem các giáo trình'],
+  tl:['I-download','Palitan ang wika','Wala pa','Buksan sa Archive','Walang rehistro · Walang bayad','Iba pang aklat','Para sa video na ito','Pindutin ang pangkat para makita ang mga aklat'],
+  uz:['Yuklab olish','Tilni oʻzgartirish','Hozircha yoʻq','Archive’da ochish','Roʻyxatsiz · Toʻlovsiz','Boshqa darsliklar','Ushbu video uchun','Kitoblarni koʻrish uchun boʻlimga bosing'],
+  ru:['Скачать','Сменить язык','Пока нет','Открыть на Archive','Без регистрации · Бесплатно','Другие учебники','Для этого видео','Нажмите на раздел, чтобы увидеть учебники'],
+  mn:['Татах','Хэл солих','Одоохондоо байхгүй','Archive дээр нээх','Бүртгэлгүй · Үнэгүй','Бусад сурах бичиг','Энэ видеоны сурах бичиг','Сурах бичгүүдийг харахын тулд бүлэг дээр дарна уу'],
+  ja:['ダウンロード','言語を変える','準備中','Archiveで開く','登録不要・無料','ほかの教材','この動画の教材','グループを押すと教材が開きます'],
+  'zh-Hans':['下载','更换语言','暂无','在 Archive 打开','无需注册 · 完全免费','其他教材','本视频的教材','点击分类即可查看教材'],
+  th:['ดาวน์โหลด','เปลี่ยนภาษา','ยังไม่มี','เปิดใน Archive','ไม่ต้องสมัคร · ฟรี','หนังสือเล่มอื่น','สำหรับวิดีโอนี้','แตะที่กลุ่มเพื่อดูหนังสือ'],
+  km:['ទាញយក','ប្តូរភាសា','មិនទាន់មាន','បើកនៅ Archive','មិនចាំបាច់ចុះឈ្មោះ · ឥតគិតថ្លៃ','សៀវភៅផ្សេងទៀត','សម្រាប់វីដេអូនេះ','ចុចលើក្រុម ដើម្បីមើលសៀវភៅ'],
+  my:['ဒေါင်းလုဒ်','ဘာသာစကား ပြောင်းရန်','မရှိသေးပါ','Archive တွင် ဖွင့်ရန်','အကောင့်မလို · အခမဲ့','အခြားဖတ်စာအုပ်များ','ဤဗီဒီယိုအတွက်','စာအုပ်များကြည့်ရန် အုပ်စုကို နှိပ်ပါ'],
+  ne:['डाउनलोड','भाषा बदल्नुहोस्','अहिले उपलब्ध छैन','Archive मा खोल्नुहोस्','दर्ता छैन · निःशुल्क','अन्य पाठ्यपुस्तक','यो भिडियोको लागि','पुस्तकहरू हेर्न समूहमा थिच्नुहोस्'],
+  bn:['ডাউনলোড','ভাষা বদলান','এখনও নেই','Archive-এ খুলুন','নিবন্ধন নেই · বিনামূল্যে','অন্যান্য পাঠ্যবই','এই ভিডিওর জন্য','বইগুলো দেখতে গ্রুপে চাপ দিন'],
+  si:['බාගන්න','භාෂාව වෙනස් කරන්න','තවම නැත','Archive හි විවෘත කරන්න','ලියාපදිංචියක් නැත · නොමිලේ','වෙනත් ග්‍රන්ථ','මෙම වීඩියෝව සඳහා','පොත් බැලීමට කාණ්ඩය ස්පර්ශ කරන්න'],
+  ar:['تحميل','تغيير اللغة','غير متوفر بعد','افتح في Archive','بدون تسجيل · مجانًا','كتب أخرى','لهذا الفيديو','اضغط على المجموعة لعرض الكتب'],
+  ur:['ڈاؤن لوڈ','زبان بدلیں','ابھی دستیاب نہیں','Archive پر کھولیں','رجسٹریشن نہیں · مفت','دیگر کتابیں','اس ویڈیو کے لیے','کتابیں دیکھنے کے لیے گروپ پر دبائیں']
 };
 
 var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>';
@@ -500,6 +547,33 @@ break;
     bk.id + '">' + t[2] + ' — ' + t[3] + '</a>';
 }
 
+var CARET = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>';
+var TAPICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V6a2 2 0 1 1 4 0v9"/><path d="M13 11a2 2 0 1 1 4 0v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5v-3a2 2 0 1 1 4 0"/></svg>';
+
+/* 어느 묶음을 펼쳐 둘지 정한다.
+   ① 영상 이름표로 들어왔으면 그 교재가 속한 묶음
+   ② 그냥 들어왔으면 OPEN_BY_DEFAULT 묶음
+   ③ 사람이 직접 열고 닫은 것은 그대로 기억한다 */
+var openState = {};
+var openInit = false;
+
+function initOpen() {
+  var f = featured();
+  var want = (f && f.g) || OPEN_BY_DEFAULT;
+  var found = false;
+  GROUPS.forEach(function (g) {
+    openState[g.key] = (g.key === want);
+    if (g.key === want) found = true;
+  });
+  /* 지정한 묶음이 없으면 첫 묶음이라도 연다 — 빈 화면을 만들지 않는다 */
+  if (!found && GROUPS.length) openState[GROUPS[0].key] = true;
+  openInit = true;
+}
+
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
 function render(L, t, lists) {
   var f = featured();
   var html = '';
@@ -515,15 +589,80 @@ function render(L, t, lists) {
       '<div class="otherlabel" lang="' + L[1] + '">' + t[5] + '</div>';
   }
 
-  BOOKS.forEach(function (bk, i) {
-    if (f && bk === f) return;
-    html += '<div class="book"><div class="bmeta">' +
-      '<div class="bko" lang="ko">' + bk.ko + '</div>' +
-      '<div class="ben" lang="en">' + bk.en + '</div></div>' +
-      action(bk, lists[i] || [], L, t, false) + '</div>';
+  if (!openInit) initOpen();
+
+  /* 눌러서 펼친다는 것을 글로도 알려 준다 */
+  if (t[7]) {
+    html += '<div class="hint" lang="' + L[1] + '">' + TAPICON +
+      '<span>' + t[7] + '</span></div>';
+  }
+
+  GROUPS.forEach(function (g) {
+    var items = [];
+    BOOKS.forEach(function (bk, i) {
+      if (bk.g !== g.key) return;
+      if (f && bk === f) return;      /* 위 큰 카드와 겹치지 않게 */
+      items.push({ bk: bk, list: lists[i] || [] });
+    });
+    if (!items.length) return;
+
+    var open = !!openState[g.key];
+    var peek = items.map(function (o) { return o.bk.ko.split('·').pop().trim(); }).join(' · ');
+
+    html += '<div class="grp">' +
+      '<button class="ghead" type="button" data-g="' + g.key + '" aria-expanded="' + open + '">' +
+        '<span class="gcaret">' + CARET + '</span>' +
+        '<span class="gtext">' +
+          '<span class="gko" lang="ko">' + esc(g.ko) + '</span>' +
+          '<span class="gen" lang="en">' + esc(g.en) + '</span>' +
+          '<span class="gpeek" lang="ko">' + esc(peek) + '</span>' +
+        '</span>' +
+        '<span class="gcount">' + items.length + '</span>' +
+      '</button>' +
+      '<div class="gbody"' + (open ? '' : ' hidden') + '>';
+
+    items.forEach(function (o) {
+      html += '<div class="book"><div class="bmeta">' +
+        '<div class="bko" lang="ko">' + o.bk.ko + '</div>' +
+        '<div class="ben" lang="en">' + o.bk.en + '</div></div>' +
+        action(o.bk, o.list, L, t, false) + '</div>';
+    });
+
+    html += '</div></div>';
   });
 
   booksEl.innerHTML = html;
+
+  /* 제목 줄 전체가 눌린다 */
+  var heads = booksEl.querySelectorAll('.ghead');
+  for (var h = 0; h < heads.length; h++) {
+    heads[h].addEventListener('click', function () {
+      var key = this.getAttribute('data-g');
+      var body = this.nextElementSibling;
+      var now = this.getAttribute('aria-expanded') !== 'true';
+      this.setAttribute('aria-expanded', now ? 'true' : 'false');
+      body.hidden = !now;
+      openState[key] = now;
+
+      /* 펼친 내용이 화면 아래로 밀려나 안 보이면 제목 줄을 위로 올려 준다.
+         목록 맨 끝 묶음을 열었을 때 아무 변화가 없어 보이는 것을 막는다. */
+      if (now) {
+        var head = this;
+        setTimeout(function () {
+          var vh = window.innerHeight || document.documentElement.clientHeight;
+          var hr = head.getBoundingClientRect();
+          var br = body.getBoundingClientRect();
+          if (hr.top < 0 || br.bottom > vh) {
+            var soft = !window.matchMedia ||
+              !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            try {
+              head.scrollIntoView({ behavior: soft ? 'smooth' : 'auto', block: 'start' });
+            } catch (e) { head.scrollIntoView(); }
+          }
+        }, 30);
+      }
+    });
+  }
 }
 </script>
 </body>
