@@ -359,8 +359,29 @@ LANGS.forEach(function (L) {
 
 changeEl.addEventListener('click', function () {
   gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  gridEl.querySelector('.cellbtn').focus();
+  /* 포커스가 화면을 다시 움직이면 언어표가 반쯤 걸린다.
+     preventScroll 을 지원하지 않는 옛 브라우저는 그냥 focus 한다. */
+  var first = gridEl.querySelector('.cellbtn');
+  try { first.focus({ preventScroll: true }); } catch (e) { first.focus(); }
 });
+
+/* 언어를 고르면 결과가 보이는 곳까지 화면을 내려 준다.
+   폰에서는 언어표가 화면을 가득 채워서, 안 내려 주면
+   눌러도 아무 일이 없는 것처럼 보인다. */
+function reveal() {
+  try {
+    var r = panelEl.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    /* 결과가 화면 아래쪽에 걸쳐 있거나 아예 안 보일 때만 움직인다 */
+    if (r.top > vh * 0.5 || r.bottom < 0) {
+      var soft = !window.matchMedia ||
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      panelEl.scrollIntoView({ behavior: soft ? 'smooth' : 'auto', block: 'start' });
+    }
+  } catch (e) {
+    try { panelEl.scrollIntoView(); } catch (e2) {}
+  }
+}
 
 function pick(L, btn) {
   current = [L, btn];
@@ -380,6 +401,13 @@ function pick(L, btn) {
   panelEl.hidden = false;
 
   filesAll(BOOKS, function (lists) { render(L, t, lists); });
+
+  /* 그려진 다음에 움직여야 위치가 정확하다 */
+  if (window.requestAnimationFrame) {
+    requestAnimationFrame(function () { requestAnimationFrame(reveal); });
+  } else {
+    setTimeout(reveal, 60);
+  }
 }
 
 /* 한 번 알아낸 목록은 브라우저에 30일간 보관한다.
