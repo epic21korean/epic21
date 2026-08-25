@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="{{ lang.code }}"{% if lang.rtl %} dir="rtl"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ t.title }}</title>
+<meta name="description" content="{{ t.desc }}">
+<link rel="canonical" href="{{ page_url }}">
+{%- for alt in alternates %}
+<link rel="alternate" hreflang="{{ alt.code }}" href="{{ alt.url }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site_url }}/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EPIC21">
+<meta property="og:title" content="{{ t.title }}">
+<meta property="og:description" content="{{ t.desc }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ og_locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ t.title }}">
+<meta name="twitter:description" content="{{ t.desc }}">
+<meta name="twitter:image" content="{{ og_image }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{{ jsonld }}</script>
+<style>
+/* ─────────────────────────────────────────────
+   EPIC21 · 교재 배포 허브 (build.py 가 template.html 로 생성)
+   색: 표지의 남색 / 원고지 크림 / 띠지 주황 / 채점 붉은선
+   ───────────────────────────────────────────── */
+:root{
+  --ink:#0E1730; --ink-2:#182648; --cream:#F5F0E3; --amber:#E8913C;
+  --rule:#C4695A; --muted:#8E9AB4; --paper-ink:#1D2740; --paper-muted:#7C6A57;
+  --cell:56px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);color:var(--cream);
+  font-family:"Noto Sans KR","Noto Sans","Noto Sans Arabic","Noto Sans Bengali","Noto Sans Devanagari",
+    "Noto Sans Khmer","Noto Sans Myanmar","Noto Sans Sinhala","Noto Sans Thai",
+    system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.6;min-height:100vh;
+  background-image:radial-gradient(120% 70% at 50% -10%, #1B2A4E 0%, transparent 60%);
+}
+a{color:inherit}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px 72px}
+
+/* 머리 */
+header{padding:44px 0 28px;text-align:center}
+.mark{font-size:13px;letter-spacing:.42em;font-weight:700;color:var(--amber);margin-bottom:18px}
+.mark a{text-decoration:none}
+h1{font-size:clamp(24px,5.6vw,40px);font-weight:900;line-height:1.25;{% if is_root %}letter-spacing:.34em;text-indent:.34em;{% endif %}}
+.sub{margin-top:12px;color:var(--muted);font-size:15px}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:20px}
+.count{display:inline-block;padding:7px 16px;border:1px solid rgba(232,145,60,.5);
+  border-radius:999px;color:var(--amber);font-size:13px;font-weight:700}
+.yt{display:inline-flex;align-items:center;gap:8px;padding:7px 16px;border-radius:999px;
+  background:rgba(245,240,227,.08);border:1px solid rgba(245,240,227,.22);
+  color:var(--cream);font-size:13px;font-weight:700;text-decoration:none;transition:background .14s}
+.yt:hover{background:rgba(245,240,227,.16)}
+.yt svg{width:16px;height:16px;fill:#FF4B4B}
+
+/* 이 영상의 교재 */
+.forvideo{margin:0 0 26px}
+.forvideo[hidden]{display:none}
+.forvideo .tag{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:10px}
+.forvideo .book{background:rgba(245,240,227,.06);border:1px solid rgba(232,145,60,.45);border-radius:6px;padding:16px}
+
+/* 원고지 언어표 (첫 화면) */
+.sheet{background:var(--cream);color:var(--paper-ink);border-radius:4px;padding:22px;
+  box-shadow:0 24px 60px rgba(0,0,0,.45);position:relative}
+.sheet::before{content:"";position:absolute;inset:10px;
+  border:1px solid rgba(196,105,90,.35);border-radius:2px;pointer-events:none}
+.sheet-label{color:var(--paper-muted);font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  margin-bottom:14px;font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));
+  border-top:1px solid rgba(196,105,90,.45);border-left:1px solid rgba(196,105,90,.45)}
+.cellbtn{display:flex;align-items:center;justify-content:center;
+  border-right:1px solid rgba(196,105,90,.45);border-bottom:1px solid rgba(196,105,90,.45);
+  min-height:var(--cell);padding:12px 10px;font-size:16px;font-weight:500;
+  color:var(--paper-ink);text-align:center;text-decoration:none;transition:background .14s,color .14s}
+.cellbtn:hover{background:rgba(232,145,60,.2)}
+.cellbtn:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
+.cellbtn[aria-current="page"]{background:var(--ink);color:var(--cream)}
+
+/* 책꽂이 */
+.shelf{margin-top:36px}
+.shelfhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:6px}
+.shelfhead h2{font-size:22px;font-weight:700}
+.shelfhead a{color:var(--muted);font-size:13px}
+.grp{margin-top:28px}
+.ghead{padding:0 0 10px;border-bottom:1px solid var(--rule)}
+.ghead h3{font-size:18px;font-weight:700;line-height:1.35}
+.ghead .gdesc{color:var(--muted);font-size:14px;margin-top:2px}
+.ghead .gko{color:var(--muted);font-size:12px;margin-top:2px}
+.book{display:grid;grid-template-columns:88px 1fr;grid-template-areas:"cover meta" "cover act";
+  gap:6px 16px;align-items:start;padding:16px 0;border-bottom:1px solid rgba(245,240,227,.1)}
+.book:last-child{border-bottom:0}
+.cover{grid-area:cover;width:88px;aspect-ratio:1/1.414;position:relative;
+  background:var(--ink-2);border-radius:3px;overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.5),inset 0 0 0 1px rgba(245,240,227,.08)}
+.cover img{display:block;width:100%;height:100%;object-fit:cover}
+.cover .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:26px;font-weight:900;color:rgba(245,240,227,.25);letter-spacing:.05em}
+.cover img:not([data-ok]){opacity:0}
+.cover img[data-ok]{opacity:1}
+.bmeta{grid-area:meta;min-width:0}
+.bname{font-size:17px;font-weight:700;line-height:1.35}
+.bname .vol{color:var(--amber);font-weight:700;margin-inline-end:.4em}
+.bsub{font-size:15px;color:var(--cream);opacity:.9;margin-top:2px}
+.bsmall{font-size:12px;color:var(--muted);margin-top:2px}
+.act{grid-area:act;margin-top:4px}
+.get{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:48px;padding:0 24px;background:var(--amber);color:var(--ink);
+  font-weight:700;font-size:16px;border-radius:6px;text-decoration:none;
+  transition:transform .08s,filter .14s}
+.get:hover{filter:brightness(1.06)}
+.get:active{transform:translateY(1px)}
+.get svg{width:20px;height:20px}
+.na{display:inline-block;padding:10px 0;color:var(--muted);font-size:14px}
+
+/* 다른 언어 */
+.others{margin-top:44px}
+.others h2{font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--amber);font-weight:700;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 14px;border:1px solid rgba(245,240,227,.22);border-radius:999px;
+  font-size:14px;text-decoration:none;color:var(--cream);transition:border-color .14s}
+.chip:hover{border-color:var(--amber)}
+.chip[aria-current="page"]{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+
+/* 소개 · 꼬리 */
+.about{margin-top:44px;padding-top:20px;border-top:1px solid rgba(245,240,227,.14);color:var(--muted);font-size:14px}
+.about b{display:block;color:var(--cream);font-size:12px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:6px}
+footer{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+
+@media (min-width:640px){
+  .book{grid-template-columns:96px 1fr auto;grid-template-areas:"cover meta act";align-items:center}
+  .cover{width:96px}
+  .act{margin-top:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">{% if is_root %}EPIC21{% else %}<a href="../">EPIC21</a>{% endif %}</div>
+  <h1>{{ t.h1 }}</h1>
+  <p class="sub">{% if is_root %}Free Korean textbooks in 20 languages · TOPIK I &amp; II{% else %}무료 한국어 교재 · Free Korean textbooks · TOPIK I &amp; II{% endif %}</p>
+  <div class="badges">
+    <span class="count">{{ t.ui.free }}</span>
+    <a class="yt" href="{{ youtube }}" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+      {{ t.ui.yt }}
+    </a>
+  </div>
+</header>
+
+<section class="forvideo" id="forvideo" hidden aria-live="polite">
+  <div class="tag">{{ t.ui.forvideo }}</div>
+  <div id="forvideo-slot"></div>
+</section>
+
+{% if is_root %}
+<section class="sheet" aria-labelledby="pickLabel">
+  <div class="sheet-label" id="pickLabel">언어를 고르세요 / Choose your language</div>
+  <nav class="grid" aria-labelledby="pickLabel">
+  {%- for L in langs %}
+    <a class="cellbtn" lang="{{ L.code }}"{% if L.rtl %} dir="rtl"{% endif %} href="{{ L.code }}/">{{ L.name }}</a>
+  {%- endfor %}
+  </nav>
+</section>
+{% endif %}
+
+<main class="shelf">
+  <div class="shelfhead">
+    <h2 lang="{{ lang.code }}">{{ t.ui.all }} · {{ book_count }}</h2>
+    {% if is_root %}<a href="en/">{{ t.ui.langpage }} →</a>{% endif %}
+  </div>
+
+  {%- for g in groups %}
+  <section class="grp" id="g-{{ g.key }}">
+    <div class="ghead">
+      <h3>{{ g.name }}</h3>
+      <div class="gdesc">{{ g.desc }}</div>
+      {% if lang.code != 'ko' %}<div class="gko" lang="ko">{{ g.ko }}</div>{% endif %}
+    </div>
+    {%- for b in g.books %}
+    <article class="book" data-slug="{{ b.slug }}">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">{{ b.vol or '' }}</span>
+        <img src="{{ b.cover }}" alt="" loading="lazy" width="96" height="136"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='{{ b.cover_fallback }}'}else{this.remove()}">
+      </div>
+      <div class="bmeta">
+        {%- if b.single %}
+        <div class="bname" lang="ko">{{ b.ko }}</div>
+        <div class="bsmall" lang="en">{{ b.en }}</div>
+        {%- else %}
+        <div class="bname">{% if b.vol_label %}<span class="vol">{{ b.vol_label }}</span>{% endif %}{{ b.name }}</div>
+        {% if b.ko_sub %}<div class="bsub" lang="ko">{{ b.ko_sub }}{% if b.en_sub and lang.code != 'en' %} <span class="bsmall" lang="en">· {{ b.en_sub }}</span>{% endif %}</div>{% endif %}
+        {% if not b.ko_sub and lang.code != 'ko' %}<div class="bsmall" lang="ko">{{ b.ko }}</div>{% endif %}
+        {%- endif %}
+      </div>
+      <div class="act">
+        {%- if b.pdf %}
+        <a class="get" href="{{ b.pdf }}" lang="{{ lang.code }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>{{ t.ui.dl }}</span>
+        </a>
+        {%- else %}
+        <a class="na" href="https://archive.org/details/{{ b.id }}">{{ t.ui.na }} — {{ t.ui.open }}</a>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+</main>
+
+<section class="others">
+  <h2>{{ t.ui.other }}</h2>
+  <nav class="chips">
+  {%- for L in langs %}
+    <a class="chip" lang="{{ L.code }}"{% if L.rtl %} dir="rtl"{% endif %} href="{{ base }}{{ L.code }}/"{% if L.code == lang.code %} aria-current="page"{% endif %}>{{ L.name }}</a>
+  {%- endfor %}
+  </nav>
+</section>
+
+<section class="about">
+  <b>{{ t.ui.about }}</b>
+  <p>{{ t.about }}</p>
+  {% if lang.code != 'ko' %}<p lang="ko" style="margin-top:6px">{{ about_ko }}</p>{% endif %}
+</section>
+
+<footer>
+  <a href="{{ youtube }}">YouTube · @EPIC21korean</a>
+  <a href="{{ archive_user }}">Internet Archive</a>
+  <span>{{ license }}</span>
+</footer>
+
+</div>
+
+<script>
+/* 주소 뒤 #slug 가 있으면 그 교재를 맨 위에 한 번 더 보여 준다.
+   예: {{ site_url }}/vi/#two-hands  */
+(function(){
+  function show(){
+    var s=(location.hash||'').replace('#','').toLowerCase();
+    var box=document.getElementById('forvideo'), slot=document.getElementById('forvideo-slot');
+    slot.innerHTML='';
+    if(!s){box.hidden=true;return;}
+    var src=document.querySelector('.book[data-slug="'+s+'"]');
+    if(!src){box.hidden=true;return;}
+    slot.appendChild(src.cloneNode(true));
+    box.hidden=false;
+  }
+  show();
+  window.addEventListener('hashchange',show);
+})();
+</script>
+</body>
+</html>

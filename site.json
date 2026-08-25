@@ -1,0 +1,1694 @@
+{
+ "site_url": "https://epic21korean.github.io/epic21",
+ "youtube": "https://www.youtube.com/@EPIC21korean",
+ "archive_user": "https://archive.org/details/@epic21korean",
+ "license": "CC BY-NC-ND 4.0",
+ "groups": [
+  {
+   "key": "core"
+  },
+  {
+   "key": "dlg"
+  },
+  {
+   "key": "wrt"
+  },
+  {
+   "key": "mv2"
+  },
+  {
+   "key": "mv1"
+  }
+ ],
+ "langs": [
+  {
+   "file": "English",
+   "code": "en",
+   "name": "English",
+   "rtl": false
+  },
+  {
+   "file": "Spanish",
+   "code": "es",
+   "name": "Español",
+   "rtl": false
+  },
+  {
+   "file": "French",
+   "code": "fr",
+   "name": "Français",
+   "rtl": false
+  },
+  {
+   "file": "Portuguese",
+   "code": "pt",
+   "name": "Português",
+   "rtl": false
+  },
+  {
+   "file": "Indonesian",
+   "code": "id",
+   "name": "Bahasa Indonesia",
+   "rtl": false
+  },
+  {
+   "file": "Vietnamese",
+   "code": "vi",
+   "name": "Tiếng Việt",
+   "rtl": false
+  },
+  {
+   "file": "Tagalog",
+   "code": "tl",
+   "name": "Tagalog",
+   "rtl": false
+  },
+  {
+   "file": "Uzbek",
+   "code": "uz",
+   "name": "Oʻzbekcha",
+   "rtl": false
+  },
+  {
+   "file": "Russian",
+   "code": "ru",
+   "name": "Русский",
+   "rtl": false
+  },
+  {
+   "file": "Mongolian",
+   "code": "mn",
+   "name": "Монгол",
+   "rtl": false
+  },
+  {
+   "file": "Japanese",
+   "code": "ja",
+   "name": "日本語",
+   "rtl": false
+  },
+  {
+   "file": "Chinese-Simplified",
+   "code": "zh-Hans",
+   "name": "简体中文",
+   "rtl": false
+  },
+  {
+   "file": "Thai",
+   "code": "th",
+   "name": "ภาษาไทย",
+   "rtl": false
+  },
+  {
+   "file": "Khmer",
+   "code": "km",
+   "name": "ភាសាខ្មែរ",
+   "rtl": false
+  },
+  {
+   "file": "Burmese",
+   "code": "my",
+   "name": "မြန်မာ",
+   "rtl": false
+  },
+  {
+   "file": "Nepali",
+   "code": "ne",
+   "name": "नेपाली",
+   "rtl": false
+  },
+  {
+   "file": "Bengali",
+   "code": "bn",
+   "name": "বাংলা",
+   "rtl": false
+  },
+  {
+   "file": "Sinhala",
+   "code": "si",
+   "name": "සිංහල",
+   "rtl": false
+  },
+  {
+   "file": "Arabic",
+   "code": "ar",
+   "name": "العربية",
+   "rtl": true
+  },
+  {
+   "file": "Urdu",
+   "code": "ur",
+   "name": "اردو",
+   "rtl": true
+  }
+ ],
+ "text": {
+  "ko": {
+   "title": "EPIC21 무료 한국어 교재 — 20개 언어, TOPIK I·II (PDF)",
+   "desc": "{count}권의 무료 PDF 한국어 교재를 20개 언어 해설판으로 제공합니다. TOPIK I·II 문법·어휘·쓰기. 가입도 결제도 없습니다.",
+   "h1": "무료 한국어 교재",
+   "about": "한국의 한국어 교사가 만들었습니다. 비영리 목적이라면 자유롭게 쓰고 나눌 수 있습니다 (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "한국어 필수 문법 완결판",
+     "desc": "TOPIK I·II 핵심 문법을 한 권에 담았습니다."
+    },
+    "dlg": {
+     "name": "대화로 배우는 TOPIK 어휘와 문법",
+     "desc": "실제 대화 속에서 TOPIK 어휘와 문법을 익힙니다."
+    },
+    "wrt": {
+     "name": "TOPIK II 쓰기",
+     "desc": "51~54번 쓰기 문항을 단계별로 연습합니다."
+    },
+    "mv2": {
+     "name": "뮤직비디오로 배우는 TOPIK II",
+     "desc": "EPIC21 뮤직비디오로 배우는 중급 문법과 어휘."
+    },
+    "mv1": {
+     "name": "뮤직비디오로 배우는 TOPIK I",
+     "desc": "카페·지하철·쇼핑 등 일상 장면으로 배우는 초급 한국어."
+    }
+   },
+   "ui": {
+    "dl": "PDF 받기",
+    "yt": "YouTube에서 보기",
+    "other": "다른 언어",
+    "vol": "제{n}편",
+    "about": "소개",
+    "free": "가입 없음 · 결제 없음",
+    "change": "언어 바꾸기",
+    "pick": "언어를 고르세요",
+    "na": "아직 없음",
+    "open": "아카이브에서 열기",
+    "forvideo": "이 영상의 교재",
+    "all": "모든 교재",
+    "langpage": "이 언어 페이지"
+   }
+  },
+  "en": {
+   "title": "Free Korean Textbooks in English — TOPIK I & II (PDF) | EPIC21",
+   "desc": "{count} free PDF textbooks for learning Korean with English explanations: TOPIK I & II grammar, vocabulary and writing. No sign-up, no payment.",
+   "h1": "Free Korean textbooks in English",
+   "about": "Created by a Korean language teacher in Korea. Free to use and share (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Essential Korean Grammar",
+     "desc": "Every core grammar point for TOPIK I & II in one book."
+    },
+    "dlg": {
+     "name": "TOPIK Vocabulary & Grammar through Dialogue",
+     "desc": "Learn TOPIK words and grammar inside real conversations."
+    },
+    "wrt": {
+     "name": "TOPIK II Writing",
+     "desc": "Step-by-step practice for writing questions 51–54."
+    },
+    "mv2": {
+     "name": "Learn Korean through Music Videos — TOPIK II",
+     "desc": "Intermediate grammar and vocabulary from EPIC21 music videos."
+    },
+    "mv1": {
+     "name": "Learn Korean through Music Videos — TOPIK I",
+     "desc": "Beginner Korean from everyday scenes: cafés, subway, shopping."
+    }
+   },
+   "ui": {
+    "dl": "Download PDF",
+    "yt": "Watch on YouTube",
+    "other": "Other languages",
+    "vol": "Vol. {n}",
+    "about": "About",
+    "free": "No sign-up · No payment",
+    "change": "Change language",
+    "pick": "Choose your language",
+    "na": "Not available yet",
+    "open": "Open on Archive",
+    "forvideo": "For this video",
+    "all": "All textbooks",
+    "langpage": "English page"
+   }
+  },
+  "es": {
+   "title": "Libros gratuitos de coreano en español — TOPIK I y II (PDF) | EPIC21",
+   "desc": "{count} libros PDF gratuitos para aprender coreano con explicaciones en español: gramática, vocabulario y escritura para TOPIK I y II. Sin registro ni pago.",
+   "h1": "Libros gratuitos de coreano en español",
+   "about": "Creado por un profesor de coreano en Corea. Uso y difusión gratuitos (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Gramática coreana esencial",
+     "desc": "Todos los puntos gramaticales clave de TOPIK I y II en un solo libro."
+    },
+    "dlg": {
+     "name": "Vocabulario y gramática TOPIK a través del diálogo",
+     "desc": "Aprende palabras y gramática de TOPIK dentro de conversaciones reales."
+    },
+    "wrt": {
+     "name": "Escritura TOPIK II",
+     "desc": "Práctica paso a paso para las preguntas de escritura 51–54."
+    },
+    "mv2": {
+     "name": "Aprende coreano con videos musicales — TOPIK II",
+     "desc": "Gramática y vocabulario intermedios a partir de los videos musicales de EPIC21."
+    },
+    "mv1": {
+     "name": "Aprende coreano con videos musicales — TOPIK I",
+     "desc": "Coreano para principiantes con escenas cotidianas: cafeterías, metro, compras."
+    }
+   },
+   "ui": {
+    "dl": "Descargar PDF",
+    "yt": "Ver en YouTube",
+    "other": "Otros idiomas",
+    "vol": "Vol. {n}",
+    "about": "Acerca de",
+    "free": "Sin registro · Sin pago",
+    "change": "Cambiar idioma",
+    "pick": "Elige tu idioma",
+    "na": "Aún no disponible",
+    "open": "Abrir en Archive",
+    "forvideo": "Para este video",
+    "all": "Todos los libros",
+    "langpage": "Página en español"
+   }
+  },
+  "fr": {
+   "title": "Manuels de coréen gratuits en français — TOPIK I et II (PDF) | EPIC21",
+   "desc": "{count} manuels PDF gratuits pour apprendre le coréen avec des explications en français : grammaire, vocabulaire et expression écrite TOPIK I et II. Sans inscription ni paiement.",
+   "h1": "Manuels de coréen gratuits en français",
+   "about": "Créé par un enseignant de coréen en Corée. Libre d'utilisation et de partage (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Grammaire coréenne essentielle",
+     "desc": "Tous les points de grammaire clés du TOPIK I et II en un seul livre."
+    },
+    "dlg": {
+     "name": "Vocabulaire et grammaire TOPIK par le dialogue",
+     "desc": "Apprenez les mots et la grammaire du TOPIK dans de vraies conversations."
+    },
+    "wrt": {
+     "name": "Expression écrite TOPIK II",
+     "desc": "Entraînement pas à pas aux questions d'écriture 51 à 54."
+    },
+    "mv2": {
+     "name": "Apprendre le coréen avec des clips musicaux — TOPIK II",
+     "desc": "Grammaire et vocabulaire intermédiaires tirés des clips EPIC21."
+    },
+    "mv1": {
+     "name": "Apprendre le coréen avec des clips musicaux — TOPIK I",
+     "desc": "Coréen pour débutants à partir de scènes du quotidien : café, métro, shopping."
+    }
+   },
+   "ui": {
+    "dl": "Télécharger le PDF",
+    "yt": "Voir sur YouTube",
+    "other": "Autres langues",
+    "vol": "Vol. {n}",
+    "about": "À propos",
+    "free": "Sans inscription · Sans paiement",
+    "change": "Changer de langue",
+    "pick": "Choisissez votre langue",
+    "na": "Pas encore disponible",
+    "open": "Ouvrir sur Archive",
+    "forvideo": "Pour cette vidéo",
+    "all": "Tous les manuels",
+    "langpage": "Page en français"
+   }
+  },
+  "pt": {
+   "title": "Livros gratuitos de coreano em português — TOPIK I e II (PDF) | EPIC21",
+   "desc": "{count} livros em PDF gratuitos para aprender coreano com explicações em português: gramática, vocabulário e escrita para TOPIK I e II. Sem cadastro, sem pagamento.",
+   "h1": "Livros gratuitos de coreano em português",
+   "about": "Criado por um professor de coreano na Coreia. Uso e compartilhamento gratuitos (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Gramática coreana essencial",
+     "desc": "Todos os pontos gramaticais essenciais do TOPIK I e II em um só livro."
+    },
+    "dlg": {
+     "name": "Vocabulário e gramática TOPIK por meio de diálogos",
+     "desc": "Aprenda palavras e gramática do TOPIK dentro de conversas reais."
+    },
+    "wrt": {
+     "name": "Escrita TOPIK II",
+     "desc": "Prática passo a passo para as questões de escrita 51–54."
+    },
+    "mv2": {
+     "name": "Aprenda coreano com videoclipes — TOPIK II",
+     "desc": "Gramática e vocabulário intermediários a partir dos videoclipes da EPIC21."
+    },
+    "mv1": {
+     "name": "Aprenda coreano com videoclipes — TOPIK I",
+     "desc": "Coreano para iniciantes com cenas do dia a dia: cafés, metrô, compras."
+    }
+   },
+   "ui": {
+    "dl": "Baixar PDF",
+    "yt": "Assistir no YouTube",
+    "other": "Outros idiomas",
+    "vol": "Vol. {n}",
+    "about": "Sobre",
+    "free": "Sem cadastro · Sem pagamento",
+    "change": "Mudar de idioma",
+    "pick": "Escolha seu idioma",
+    "na": "Ainda não disponível",
+    "open": "Abrir no Archive",
+    "forvideo": "Para este vídeo",
+    "all": "Todos os livros",
+    "langpage": "Página em português"
+   }
+  },
+  "id": {
+   "title": "Buku Belajar Bahasa Korea Gratis dalam Bahasa Indonesia — TOPIK I & II (PDF) | EPIC21",
+   "desc": "{count} buku PDF gratis untuk belajar bahasa Korea dengan penjelasan bahasa Indonesia: tata bahasa, kosakata, dan menulis TOPIK I & II. Tanpa daftar, tanpa bayar.",
+   "h1": "Buku bahasa Korea gratis dalam bahasa Indonesia",
+   "about": "Dibuat oleh guru bahasa Korea di Korea. Bebas digunakan dan dibagikan (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Tata Bahasa Korea Esensial",
+     "desc": "Semua poin tata bahasa inti TOPIK I & II dalam satu buku."
+    },
+    "dlg": {
+     "name": "Kosakata & Tata Bahasa TOPIK lewat Percakapan",
+     "desc": "Pelajari kata dan tata bahasa TOPIK di dalam percakapan nyata."
+    },
+    "wrt": {
+     "name": "Menulis TOPIK II",
+     "desc": "Latihan langkah demi langkah untuk soal menulis 51–54."
+    },
+    "mv2": {
+     "name": "Belajar Bahasa Korea lewat Video Musik — TOPIK II",
+     "desc": "Tata bahasa dan kosakata tingkat menengah dari video musik EPIC21."
+    },
+    "mv1": {
+     "name": "Belajar Bahasa Korea lewat Video Musik — TOPIK I",
+     "desc": "Bahasa Korea pemula dari adegan sehari-hari: kafe, subway, belanja."
+    }
+   },
+   "ui": {
+    "dl": "Unduh PDF",
+    "yt": "Tonton di YouTube",
+    "other": "Bahasa lain",
+    "vol": "Vol. {n}",
+    "about": "Tentang",
+    "free": "Tanpa daftar · Tanpa bayar",
+    "change": "Ganti bahasa",
+    "pick": "Pilih bahasa Anda",
+    "na": "Belum tersedia",
+    "open": "Buka di Archive",
+    "forvideo": "Untuk video ini",
+    "all": "Semua buku",
+    "langpage": "Halaman bahasa Indonesia"
+   }
+  },
+  "vi": {
+   "title": "Giáo trình tiếng Hàn miễn phí bằng tiếng Việt — TOPIK I & II (PDF) | EPIC21",
+   "desc": "{count} giáo trình PDF miễn phí học tiếng Hàn có giải thích bằng tiếng Việt: ngữ pháp, từ vựng, viết TOPIK I & II. Không đăng ký, không trả phí.",
+   "h1": "Giáo trình tiếng Hàn miễn phí bằng tiếng Việt",
+   "about": "Do một giáo viên tiếng Hàn tại Hàn Quốc biên soạn. Tự do sử dụng và chia sẻ (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Ngữ pháp tiếng Hàn thiết yếu",
+     "desc": "Toàn bộ ngữ pháp trọng tâm TOPIK I & II trong một cuốn."
+    },
+    "dlg": {
+     "name": "Từ vựng & Ngữ pháp TOPIK qua hội thoại",
+     "desc": "Học từ vựng và ngữ pháp TOPIK ngay trong các đoạn hội thoại thực tế."
+    },
+    "wrt": {
+     "name": "Viết TOPIK II",
+     "desc": "Luyện từng bước cho các câu viết 51–54."
+    },
+    "mv2": {
+     "name": "Học tiếng Hàn qua MV ca nhạc — TOPIK II",
+     "desc": "Ngữ pháp và từ vựng trung cấp từ các MV của EPIC21."
+    },
+    "mv1": {
+     "name": "Học tiếng Hàn qua MV ca nhạc — TOPIK I",
+     "desc": "Tiếng Hàn sơ cấp từ các tình huống hằng ngày: quán cà phê, tàu điện, mua sắm."
+    }
+   },
+   "ui": {
+    "dl": "Tải PDF",
+    "yt": "Xem trên YouTube",
+    "other": "Ngôn ngữ khác",
+    "vol": "Tập {n}",
+    "about": "Giới thiệu",
+    "free": "Không đăng ký · Không trả phí",
+    "change": "Đổi ngôn ngữ",
+    "pick": "Chọn ngôn ngữ của bạn",
+    "na": "Chưa có",
+    "open": "Mở trên Archive",
+    "forvideo": "Cho video này",
+    "all": "Tất cả giáo trình",
+    "langpage": "Trang tiếng Việt"
+   }
+  },
+  "tl": {
+   "title": "Libreng Aklat sa Pag-aaral ng Korean sa Tagalog — TOPIK I & II (PDF) | EPIC21",
+   "desc": "{count} libreng PDF na aklat para matuto ng Korean na may paliwanag sa Tagalog: grammar, bokabularyo, at pagsusulat para sa TOPIK I & II. Walang rehistro, walang bayad.",
+   "h1": "Libreng aklat ng Korean sa Tagalog",
+   "about": "Ginawa ng isang gurong Korean sa Korea. Libreng gamitin at ibahagi (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Mahahalagang Korean Grammar",
+     "desc": "Lahat ng pangunahing grammar ng TOPIK I & II sa isang aklat."
+    },
+    "dlg": {
+     "name": "TOPIK Bokabularyo at Grammar sa Pamamagitan ng Diyalogo",
+     "desc": "Matuto ng mga salita at grammar ng TOPIK sa loob ng tunay na usapan."
+    },
+    "wrt": {
+     "name": "Pagsusulat sa TOPIK II",
+     "desc": "Hakbang-hakbang na pagsasanay para sa mga tanong sa pagsusulat 51–54."
+    },
+    "mv2": {
+     "name": "Matuto ng Korean sa Music Video — TOPIK II",
+     "desc": "Intermediate na grammar at bokabularyo mula sa mga music video ng EPIC21."
+    },
+    "mv1": {
+     "name": "Matuto ng Korean sa Music Video — TOPIK I",
+     "desc": "Korean para sa baguhan mula sa pang-araw-araw na eksena: café, subway, pamimili."
+    }
+   },
+   "ui": {
+    "dl": "I-download ang PDF",
+    "yt": "Panoorin sa YouTube",
+    "other": "Iba pang wika",
+    "vol": "Vol. {n}",
+    "about": "Tungkol dito",
+    "free": "Walang rehistro · Walang bayad",
+    "change": "Palitan ang wika",
+    "pick": "Piliin ang iyong wika",
+    "na": "Wala pa",
+    "open": "Buksan sa Archive",
+    "forvideo": "Para sa video na ito",
+    "all": "Lahat ng aklat",
+    "langpage": "Pahinang Tagalog"
+   }
+  },
+  "uz": {
+   "title": "Oʻzbek tilida bepul koreys tili darsliklari — TOPIK I va II (PDF) | EPIC21",
+   "desc": "Oʻzbekcha izohli {count} ta bepul PDF darslik: TOPIK I va II grammatikasi, lugʻati va yozuvi. Roʻyxatdan oʻtish va toʻlovsiz.",
+   "h1": "Oʻzbek tilida bepul koreys tili darsliklari",
+   "about": "Koreyada koreys tili oʻqituvchisi tomonidan yaratilgan. Bepul foydalaning va ulashing (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Koreys tilining asosiy grammatikasi",
+     "desc": "TOPIK I va II ning barcha asosiy grammatik qoidalari bitta kitobda."
+    },
+    "dlg": {
+     "name": "Dialog orqali TOPIK lugʻati va grammatikasi",
+     "desc": "TOPIK soʻzlari va grammatikasini haqiqiy suhbatlar ichida oʻrganing."
+    },
+    "wrt": {
+     "name": "TOPIK II yozuv",
+     "desc": "51–54-yozuv savollari uchun bosqichma-bosqich mashqlar."
+    },
+    "mv2": {
+     "name": "Musiqiy kliplar orqali koreys tili — TOPIK II",
+     "desc": "EPIC21 kliplaridan oʻrta daraja grammatika va lugʻat."
+    },
+    "mv1": {
+     "name": "Musiqiy kliplar orqali koreys tili — TOPIK I",
+     "desc": "Kundalik sahnalardan boshlangʻich koreys tili: kafe, metro, xarid."
+    }
+   },
+   "ui": {
+    "dl": "PDF yuklab olish",
+    "yt": "YouTube’da koʻrish",
+    "other": "Boshqa tillar",
+    "vol": "{n}-jild",
+    "about": "Loyiha haqida",
+    "free": "Roʻyxatsiz · Toʻlovsiz",
+    "change": "Tilni oʻzgartirish",
+    "pick": "Tilingizni tanlang",
+    "na": "Hozircha yoʻq",
+    "open": "Archive’da ochish",
+    "forvideo": "Ushbu video uchun",
+    "all": "Barcha darsliklar",
+    "langpage": "Oʻzbekcha sahifa"
+   }
+  },
+  "ru": {
+   "title": "Бесплатные учебники корейского языка на русском — TOPIK I и II (PDF) | EPIC21",
+   "desc": "{count} бесплатных PDF-учебников корейского языка с объяснениями на русском: грамматика, лексика и письмо TOPIK I и II. Без регистрации и оплаты.",
+   "h1": "Бесплатные учебники корейского на русском",
+   "about": "Создано преподавателем корейского языка в Корее. Свободно для использования и распространения (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Основная грамматика корейского языка",
+     "desc": "Все ключевые грамматические темы TOPIK I и II в одной книге."
+    },
+    "dlg": {
+     "name": "Лексика и грамматика TOPIK через диалоги",
+     "desc": "Учите слова и грамматику TOPIK внутри живых диалогов."
+    },
+    "wrt": {
+     "name": "Письмо TOPIK II",
+     "desc": "Пошаговая подготовка к заданиям 51–54 по письму."
+    },
+    "mv2": {
+     "name": "Корейский по музыкальным клипам — TOPIK II",
+     "desc": "Грамматика и лексика среднего уровня из клипов EPIC21."
+    },
+    "mv1": {
+     "name": "Корейский по музыкальным клипам — TOPIK I",
+     "desc": "Корейский для начинающих на бытовых сценах: кафе, метро, покупки."
+    }
+   },
+   "ui": {
+    "dl": "Скачать PDF",
+    "yt": "Смотреть на YouTube",
+    "other": "Другие языки",
+    "vol": "Том {n}",
+    "about": "О проекте",
+    "free": "Без регистрации · Бесплатно",
+    "change": "Сменить язык",
+    "pick": "Выберите язык",
+    "na": "Пока нет",
+    "open": "Открыть на Archive",
+    "forvideo": "Для этого видео",
+    "all": "Все учебники",
+    "langpage": "Страница на русском"
+   }
+  },
+  "mn": {
+   "title": "Монгол хэл дээрх үнэгүй солонгос хэлний сурах бичиг — TOPIK I, II (PDF) | EPIC21",
+   "desc": "Монгол тайлбартай {count} үнэгүй PDF сурах бичиг: TOPIK I, II-ын дүрэм, үг хэллэг, бичих. Бүртгэлгүй, төлбөргүй.",
+   "h1": "Монгол хэл дээрх үнэгүй солонгос хэлний сурах бичиг",
+   "about": "Солонгост ажилладаг солонгос хэлний багш бүтээв. Чөлөөтэй ашиглаж, хуваалцаж болно (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "Солонгос хэлний үндсэн дүрэм",
+     "desc": "TOPIK I, II-ын бүх гол дүрэм нэг номонд."
+    },
+    "dlg": {
+     "name": "Харилцан яриагаар сурах TOPIK үг, дүрэм",
+     "desc": "TOPIK-ийн үг, дүрмийг бодит яриан дотроос сурна."
+    },
+    "wrt": {
+     "name": "TOPIK II бичих",
+     "desc": "51–54-р бичих даалгаварт алхам алхмаар бэлтгэнэ."
+    },
+    "mv2": {
+     "name": "Дууны клипээр солонгос хэл сурах — TOPIK II",
+     "desc": "EPIC21 клипүүдээс дунд түвшний дүрэм, үг хэллэг."
+    },
+    "mv1": {
+     "name": "Дууны клипээр солонгос хэл сурах — TOPIK I",
+     "desc": "Өдөр тутмын дүр зургаас анхан шатны солонгос хэл: кафе, метро, дэлгүүр."
+    }
+   },
+   "ui": {
+    "dl": "PDF татах",
+    "yt": "YouTube дээр үзэх",
+    "other": "Бусад хэл",
+    "vol": "{n}-р боть",
+    "about": "Тухай",
+    "free": "Бүртгэлгүй · Үнэгүй",
+    "change": "Хэл солих",
+    "pick": "Хэлээ сонгоно уу",
+    "na": "Одоохондоо байхгүй",
+    "open": "Archive дээр нээх",
+    "forvideo": "Энэ видеоны сурах бичиг",
+    "all": "Бүх сурах бичиг",
+    "langpage": "Монгол хуудас"
+   }
+  },
+  "ja": {
+   "title": "日本語で学ぶ無料の韓国語教材 — TOPIK I・II（PDF）| EPIC21",
+   "desc": "日本語解説付きの無料PDF韓国語教材{count}冊：TOPIK I・IIの文法・語彙・作文。登録不要・無料。",
+   "h1": "日本語で学ぶ無料の韓国語教材",
+   "about": "韓国在住の韓国語教師が制作。自由に利用・共有できます（CC BY-NC-ND 4.0）。",
+   "groups": {
+    "core": {
+     "name": "韓国語必須文法 完全版",
+     "desc": "TOPIK I・IIの重要文法をすべて一冊に。"
+    },
+    "dlg": {
+     "name": "会話で学ぶTOPIK語彙と文法",
+     "desc": "実際の会話の中でTOPIKの単語と文法を学ぶ。"
+    },
+    "wrt": {
+     "name": "TOPIK II 作文",
+     "desc": "作文問題51〜54番を段階的に練習。"
+    },
+    "mv2": {
+     "name": "ミュージックビデオで学ぶ韓国語 — TOPIK II",
+     "desc": "EPIC21のミュージックビデオから中級の文法と語彙を。"
+    },
+    "mv1": {
+     "name": "ミュージックビデオで学ぶ韓国語 — TOPIK I",
+     "desc": "カフェ・地下鉄・買い物など日常場面から学ぶ初級韓国語。"
+    }
+   },
+   "ui": {
+    "dl": "PDFをダウンロード",
+    "yt": "YouTubeで見る",
+    "other": "ほかの言語",
+    "vol": "第{n}編",
+    "about": "この教材について",
+    "free": "登録不要・無料",
+    "change": "言語を変える",
+    "pick": "言語を選んでください",
+    "na": "準備中",
+    "open": "Archiveで開く",
+    "forvideo": "この動画の教材",
+    "all": "すべての教材",
+    "langpage": "日本語ページ"
+   }
+  },
+  "zh-Hans": {
+   "title": "简体中文版免费韩语教材 — TOPIK I & II（PDF）| EPIC21",
+   "desc": "{count}本附简体中文讲解的免费PDF韩语教材：TOPIK I & II 语法、词汇、写作。无需注册，完全免费。",
+   "h1": "简体中文版免费韩语教材",
+   "about": "由韩国的韩语教师制作。可自由使用和分享（CC BY-NC-ND 4.0）。",
+   "groups": {
+    "core": {
+     "name": "韩语必备语法完全版",
+     "desc": "TOPIK I & II 全部核心语法，一本搞定。"
+    },
+    "dlg": {
+     "name": "通过对话学TOPIK词汇与语法",
+     "desc": "在真实对话中学习TOPIK单词和语法。"
+    },
+    "wrt": {
+     "name": "TOPIK II 写作",
+     "desc": "针对写作题51–54的分步练习。"
+    },
+    "mv2": {
+     "name": "通过音乐视频学韩语 — TOPIK II",
+     "desc": "从EPIC21音乐视频中学习中级语法和词汇。"
+    },
+    "mv1": {
+     "name": "通过音乐视频学韩语 — TOPIK I",
+     "desc": "从咖啡店、地铁、购物等日常场景学初级韩语。"
+    }
+   },
+   "ui": {
+    "dl": "下载PDF",
+    "yt": "在YouTube观看",
+    "other": "其他语言",
+    "vol": "第{n}册",
+    "about": "关于",
+    "free": "无需注册 · 完全免费",
+    "change": "更换语言",
+    "pick": "请选择语言",
+    "na": "暂无",
+    "open": "在 Archive 打开",
+    "forvideo": "本视频的教材",
+    "all": "全部教材",
+    "langpage": "简体中文页面"
+   }
+  },
+  "th": {
+   "title": "ตำราเรียนภาษาเกาหลีฟรี ภาษาไทย — TOPIK I & II (PDF) | EPIC21",
+   "desc": "ตำราเรียนภาษาเกาหลี PDF ฟรี {count} เล่ม พร้อมคำอธิบายภาษาไทย: ไวยากรณ์ คำศัพท์ และการเขียน TOPIK I & II ไม่ต้องสมัคร ไม่มีค่าใช้จ่าย",
+   "h1": "ตำราเรียนภาษาเกาหลีฟรี ภาษาไทย",
+   "about": "จัดทำโดยครูสอนภาษาเกาหลีในประเทศเกาหลี ใช้และแบ่งปันได้ฟรี (CC BY-NC-ND 4.0)",
+   "groups": {
+    "core": {
+     "name": "ไวยากรณ์เกาหลีที่จำเป็น ฉบับสมบูรณ์",
+     "desc": "ไวยากรณ์หลักทั้งหมดของ TOPIK I & II ในเล่มเดียว"
+    },
+    "dlg": {
+     "name": "คำศัพท์และไวยากรณ์ TOPIK ผ่านบทสนทนา",
+     "desc": "เรียนคำศัพท์และไวยากรณ์ TOPIK จากบทสนทนาจริง"
+    },
+    "wrt": {
+     "name": "การเขียน TOPIK II",
+     "desc": "ฝึกทีละขั้นสำหรับข้อเขียน 51–54"
+    },
+    "mv2": {
+     "name": "เรียนภาษาเกาหลีจากมิวสิกวิดีโอ — TOPIK II",
+     "desc": "ไวยากรณ์และคำศัพท์ระดับกลางจากมิวสิกวิดีโอของ EPIC21"
+    },
+    "mv1": {
+     "name": "เรียนภาษาเกาหลีจากมิวสิกวิดีโอ — TOPIK I",
+     "desc": "ภาษาเกาหลีระดับต้นจากฉากในชีวิตประจำวัน: คาเฟ่ รถไฟใต้ดิน ช้อปปิ้ง"
+    }
+   },
+   "ui": {
+    "dl": "ดาวน์โหลด PDF",
+    "yt": "ดูบน YouTube",
+    "other": "ภาษาอื่น",
+    "vol": "เล่ม {n}",
+    "about": "เกี่ยวกับ",
+    "free": "ไม่ต้องสมัคร · ฟรี",
+    "change": "เปลี่ยนภาษา",
+    "pick": "เลือกภาษาของคุณ",
+    "na": "ยังไม่มี",
+    "open": "เปิดใน Archive",
+    "forvideo": "สำหรับวิดีโอนี้",
+    "all": "ตำราทั้งหมด",
+    "langpage": "หน้าภาษาไทย"
+   }
+  },
+  "km": {
+   "title": "សៀវភៅរៀនភាសាកូរ៉េឥតគិតថ្លៃ ជាភាសាខ្មែរ — TOPIK I & II (PDF) | EPIC21",
+   "desc": "សៀវភៅ PDF រៀនភាសាកូរ៉េឥតគិតថ្លៃ {count} ក្បាល មានការពន្យល់ជាភាសាខ្មែរ៖ វេយ្យាករណ៍ វាក្យសព្ទ និងការសរសេរ TOPIK I & II។ មិនចាំបាច់ចុះឈ្មោះ ឥតគិតថ្លៃ។",
+   "h1": "សៀវភៅរៀនភាសាកូរ៉េឥតគិតថ្លៃ ជាភាសាខ្មែរ",
+   "about": "រៀបចំដោយគ្រូបង្រៀនភាសាកូរ៉េនៅប្រទេសកូរ៉េ។ អាចប្រើ និងចែករំលែកដោយសេរី (CC BY-NC-ND 4.0)។",
+   "groups": {
+    "core": {
+     "name": "វេយ្យាករណ៍កូរ៉េចាំបាច់ ពេញលេញ",
+     "desc": "វេយ្យាករណ៍សំខាន់ៗទាំងអស់នៃ TOPIK I & II ក្នុងសៀវភៅតែមួយ។"
+    },
+    "dlg": {
+     "name": "វាក្យសព្ទ និងវេយ្យាករណ៍ TOPIK តាមរយៈការសន្ទនា",
+     "desc": "រៀនពាក្យ និងវេយ្យាករណ៍ TOPIK នៅក្នុងការសន្ទនាពិត។"
+    },
+    "wrt": {
+     "name": "ការសរសេរ TOPIK II",
+     "desc": "លំហាត់មួយជំហានម្ដងៗ សម្រាប់សំណួរសរសេរ ៥១–៥៤។"
+    },
+    "mv2": {
+     "name": "រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK II",
+     "desc": "វេយ្យាករណ៍ និងវាក្យសព្ទកម្រិតមធ្យម ពីវីដេអូចម្រៀង EPIC21។"
+    },
+    "mv1": {
+     "name": "រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK I",
+     "desc": "ភាសាកូរ៉េកម្រិតដំបូង ពីឈុតឆាកប្រចាំថ្ងៃ៖ ហាងកាហ្វេ រថភ្លើងក្រោមដី ការទិញឥវ៉ាន់។"
+    }
+   },
+   "ui": {
+    "dl": "ទាញយក PDF",
+    "yt": "មើលនៅលើ YouTube",
+    "other": "ភាសាផ្សេងទៀត",
+    "vol": "ភាគ {n}",
+    "about": "អំពី",
+    "free": "មិនចាំបាច់ចុះឈ្មោះ · ឥតគិតថ្លៃ",
+    "change": "ប្តូរភាសា",
+    "pick": "ជ្រើសរើសភាសារបស់អ្នក",
+    "na": "មិនទាន់មាន",
+    "open": "បើកនៅ Archive",
+    "forvideo": "សម្រាប់វីដេអូនេះ",
+    "all": "សៀវភៅទាំងអស់",
+    "langpage": "ទំព័រភាសាខ្មែរ"
+   }
+  },
+  "my": {
+   "title": "မြန်မာဘာသာဖြင့် အခမဲ့ ကိုရီးယားစာ ဖတ်စာအုပ်များ — TOPIK I & II (PDF) | EPIC21",
+   "desc": "မြန်မာဘာသာ ရှင်းလင်းချက်ပါ အခမဲ့ PDF ကိုရီးယားစာ ဖတ်စာအုပ် {count} အုပ်။ TOPIK I & II သဒ္ဒါ၊ ဝေါဟာရ၊ အရေးအသား။ အကောင့်မလို၊ အခမဲ့။",
+   "h1": "မြန်မာဘာသာဖြင့် အခမဲ့ ကိုရီးယားစာ ဖတ်စာအုပ်များ",
+   "about": "ကိုရီးယားနိုင်ငံရှိ ကိုရီးယားစာဆရာက ရေးသားသည်။ အခမဲ့ အသုံးပြု၊ မျှဝေနိုင်သည် (CC BY-NC-ND 4.0)။",
+   "groups": {
+    "core": {
+     "name": "မရှိမဖြစ် ကိုရီးယားသဒ္ဒါ ပြည့်စုံစာအုပ်",
+     "desc": "TOPIK I & II ၏ အဓိက သဒ္ဒါအားလုံးကို စာအုပ်တစ်အုပ်တည်းတွင်။"
+    },
+    "dlg": {
+     "name": "စကားပြောဖြင့် လေ့လာသော TOPIK ဝေါဟာရနှင့် သဒ္ဒါ",
+     "desc": "TOPIK စကားလုံးနှင့် သဒ္ဒါကို အမှန်တကယ် စကားပြောများထဲမှ လေ့လာပါ။"
+    },
+    "wrt": {
+     "name": "TOPIK II အရေးအသား",
+     "desc": "အရေးအသားမေးခွန်း ၅၁–၅၄ အတွက် အဆင့်ဆင့် လေ့ကျင့်ခန်း။"
+    },
+    "mv2": {
+     "name": "ဂီတဗီဒီယိုဖြင့် ကိုရီးယားစာ လေ့လာခြင်း — TOPIK II",
+     "desc": "EPIC21 ဂီတဗီဒီယိုများမှ အလယ်အလတ်အဆင့် သဒ္ဒါနှင့် ဝေါဟာရ။"
+    },
+    "mv1": {
+     "name": "ဂီတဗီဒီယိုဖြင့် ကိုရီးယားစာ လေ့လာခြင်း — TOPIK I",
+     "desc": "နေ့စဉ်အခြေအနေများမှ အခြေခံ ကိုရီးယားစာ — ကော်ဖီဆိုင်၊ မြေအောက်ရထား၊ ဈေးဝယ်ခြင်း။"
+    }
+   },
+   "ui": {
+    "dl": "PDF ဒေါင်းလုဒ်",
+    "yt": "YouTube တွင် ကြည့်ရန်",
+    "other": "အခြားဘာသာစကားများ",
+    "vol": "အတွဲ {n}",
+    "about": "အကြောင်း",
+    "free": "အကောင့်မလို · အခမဲ့",
+    "change": "ဘာသာစကား ပြောင်းရန်",
+    "pick": "သင့်ဘာသာစကားကို ရွေးပါ",
+    "na": "မရှိသေးပါ",
+    "open": "Archive တွင် ဖွင့်ရန်",
+    "forvideo": "ဤဗီဒီယိုအတွက်",
+    "all": "ဖတ်စာအုပ်အားလုံး",
+    "langpage": "မြန်မာစာမျက်နှာ"
+   }
+  },
+  "ne": {
+   "title": "नेपालीमा निःशुल्क कोरियन भाषा पाठ्यपुस्तक — TOPIK I र II (PDF) | EPIC21",
+   "desc": "नेपाली व्याख्यासहित {count} वटा निःशुल्क PDF कोरियन पाठ्यपुस्तक: TOPIK I र II व्याकरण, शब्दावली, लेखन। दर्ता छैन, शुल्क छैन।",
+   "h1": "नेपालीमा निःशुल्क कोरियन पाठ्यपुस्तक",
+   "about": "कोरियामा रहेका कोरियन भाषा शिक्षकद्वारा निर्मित। निःशुल्क प्रयोग र साझा गर्न सकिन्छ (CC BY-NC-ND 4.0)।",
+   "groups": {
+    "core": {
+     "name": "अत्यावश्यक कोरियन व्याकरण पूर्ण संस्करण",
+     "desc": "TOPIK I र II का सबै मुख्य व्याकरण एउटै पुस्तकमा।"
+    },
+    "dlg": {
+     "name": "संवादबाट सिकिने TOPIK शब्दावली र व्याकरण",
+     "desc": "वास्तविक कुराकानीभित्रै TOPIK शब्द र व्याकरण सिक्नुहोस्।"
+    },
+    "wrt": {
+     "name": "TOPIK II लेखन",
+     "desc": "लेखन प्रश्न ५१–५४ का लागि चरणबद्ध अभ्यास।"
+    },
+    "mv2": {
+     "name": "म्युजिक भिडियोबाट कोरियन सिक्नुहोस् — TOPIK II",
+     "desc": "EPIC21 म्युजिक भिडियोबाट मध्यम स्तरको व्याकरण र शब्दावली।"
+    },
+    "mv1": {
+     "name": "म्युजिक भिडियोबाट कोरियन सिक्नुहोस् — TOPIK I",
+     "desc": "दैनिक दृश्यहरूबाट प्रारम्भिक कोरियन: क्याफे, सबवे, किनमेल।"
+    }
+   },
+   "ui": {
+    "dl": "PDF डाउनलोड",
+    "yt": "YouTube मा हेर्नुहोस्",
+    "other": "अन्य भाषा",
+    "vol": "भाग {n}",
+    "about": "बारेमा",
+    "free": "दर्ता छैन · निःशुल्क",
+    "change": "भाषा बदल्नुहोस्",
+    "pick": "आफ्नो भाषा छान्नुहोस्",
+    "na": "अहिले उपलब्ध छैन",
+    "open": "Archive मा खोल्नुहोस्",
+    "forvideo": "यो भिडियोको लागि",
+    "all": "सबै पाठ्यपुस्तक",
+    "langpage": "नेपाली पृष्ठ"
+   }
+  },
+  "bn": {
+   "title": "বাংলায় বিনামূল্যে কোরিয়ান ভাষার পাঠ্যবই — TOPIK I ও II (PDF) | EPIC21",
+   "desc": "বাংলা ব্যাখ্যাসহ {count}টি বিনামূল্যের PDF কোরিয়ান পাঠ্যবই: TOPIK I ও II ব্যাকরণ, শব্দভান্ডার, লেখা। নিবন্ধন নেই, খরচ নেই।",
+   "h1": "বাংলায় বিনামূল্যে কোরিয়ান পাঠ্যবই",
+   "about": "কোরিয়ায় কর্মরত একজন কোরিয়ান ভাষা শিক্ষকের তৈরি। বিনামূল্যে ব্যবহার ও শেয়ার করা যায় (CC BY-NC-ND 4.0)।",
+   "groups": {
+    "core": {
+     "name": "অপরিহার্য কোরিয়ান ব্যাকরণ সম্পূর্ণ সংস্করণ",
+     "desc": "TOPIK I ও II-এর সব মূল ব্যাকরণ এক বইয়ে।"
+    },
+    "dlg": {
+     "name": "সংলাপের মাধ্যমে TOPIK শব্দভান্ডার ও ব্যাকরণ",
+     "desc": "বাস্তব কথোপকথনের ভেতরে TOPIK শব্দ ও ব্যাকরণ শিখুন।"
+    },
+    "wrt": {
+     "name": "TOPIK II লেখা",
+     "desc": "লেখার প্রশ্ন ৫১–৫৪-এর জন্য ধাপে ধাপে অনুশীলন।"
+    },
+    "mv2": {
+     "name": "মিউজিক ভিডিও দিয়ে কোরিয়ান শিখুন — TOPIK II",
+     "desc": "EPIC21 মিউজিক ভিডিও থেকে মধ্যম স্তরের ব্যাকরণ ও শব্দভান্ডার।"
+    },
+    "mv1": {
+     "name": "মিউজিক ভিডিও দিয়ে কোরিয়ান শিখুন — TOPIK I",
+     "desc": "দৈনন্দিন দৃশ্য থেকে প্রাথমিক কোরিয়ান: ক্যাফে, সাবওয়ে, কেনাকাটা।"
+    }
+   },
+   "ui": {
+    "dl": "PDF ডাউনলোড",
+    "yt": "YouTube-এ দেখুন",
+    "other": "অন্যান্য ভাষা",
+    "vol": "খণ্ড {n}",
+    "about": "সম্পর্কে",
+    "free": "নিবন্ধন নেই · বিনামূল্যে",
+    "change": "ভাষা বদলান",
+    "pick": "আপনার ভাষা বেছে নিন",
+    "na": "এখনও নেই",
+    "open": "Archive-এ খুলুন",
+    "forvideo": "এই ভিডিওর জন্য",
+    "all": "সব পাঠ্যবই",
+    "langpage": "বাংলা পাতা"
+   }
+  },
+  "si": {
+   "title": "සිංහලෙන් නොමිලේ කොරියානු භාෂා පෙළපොත් — TOPIK I සහ II (PDF) | EPIC21",
+   "desc": "සිංහල පැහැදිලි කිරීම් සහිත නොමිලේ PDF කොරියානු පෙළපොත් {count}ක්: TOPIK I සහ II ව්‍යාකරණ, වචන මාලාව, ලිවීම. ලියාපදිංචියක් නැත, ගෙවීමක් නැත.",
+   "h1": "සිංහලෙන් නොමිලේ කොරියානු පෙළපොත්",
+   "about": "කොරියාවේ කොරියානු භාෂා ගුරුවරයෙකු විසින් සකස් කරන ලදී. නොමිලේ භාවිත කර බෙදාගත හැක (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "අත්‍යවශ්‍ය කොරියානු ව්‍යාකරණ සම්පූර්ණ සංස්කරණය",
+     "desc": "TOPIK I සහ II හි සියලුම ප්‍රධාන ව්‍යාකරණ එක් පොතක."
+    },
+    "dlg": {
+     "name": "සංවාද හරහා TOPIK වචන මාලාව සහ ව්‍යාකරණ",
+     "desc": "සැබෑ සංවාද තුළින් TOPIK වචන සහ ව්‍යාකරණ ඉගෙන ගන්න."
+    },
+    "wrt": {
+     "name": "TOPIK II ලිවීම",
+     "desc": "ලිවීමේ ප්‍රශ්න 51–54 සඳහා පියවරෙන් පියවර පුහුණුව."
+    },
+    "mv2": {
+     "name": "සංගීත වීඩියෝ හරහා කොරියානු ඉගෙන ගන්න — TOPIK II",
+     "desc": "EPIC21 සංගීත වීඩියෝ වලින් මධ්‍යම මට්ටමේ ව්‍යාකරණ සහ වචන මාලාව."
+    },
+    "mv1": {
+     "name": "සංගීත වීඩියෝ හරහා කොරියානු ඉගෙන ගන්න — TOPIK I",
+     "desc": "එදිනෙදා අවස්ථා වලින් ආරම්භක කොරියානු: කැෆේ, උමං දුම්රිය, සාප්පු සවාරි."
+    }
+   },
+   "ui": {
+    "dl": "PDF බාගන්න",
+    "yt": "YouTube හි බලන්න",
+    "other": "වෙනත් භාෂා",
+    "vol": "වෙළුම {n}",
+    "about": "පිළිබඳව",
+    "free": "ලියාපදිංචියක් නැත · නොමිලේ",
+    "change": "භාෂාව වෙනස් කරන්න",
+    "pick": "ඔබේ භාෂාව තෝරන්න",
+    "na": "තවම නැත",
+    "open": "Archive හි විවෘත කරන්න",
+    "forvideo": "මෙම වීඩියෝව සඳහා",
+    "all": "සියලුම පෙළපොත්",
+    "langpage": "සිංහල පිටුව"
+   }
+  },
+  "ar": {
+   "title": "كتب مجانية لتعلم اللغة الكورية بالعربية — TOPIK I و II (PDF) | EPIC21",
+   "desc": "{count} كتاب PDF مجاني لتعلم الكورية مع شرح بالعربية: قواعد ومفردات وكتابة TOPIK I و II. بدون تسجيل وبدون دفع.",
+   "h1": "كتب مجانية لتعلم الكورية بالعربية",
+   "about": "من إعداد معلّم لغة كورية في كوريا. مجاني للاستخدام والمشاركة (CC BY-NC-ND 4.0).",
+   "groups": {
+    "core": {
+     "name": "قواعد اللغة الكورية الأساسية — النسخة الكاملة",
+     "desc": "جميع القواعد الأساسية لـ TOPIK I و II في كتاب واحد."
+    },
+    "dlg": {
+     "name": "مفردات وقواعد TOPIK من خلال الحوار",
+     "desc": "تعلّم كلمات وقواعد TOPIK داخل محادثات حقيقية."
+    },
+    "wrt": {
+     "name": "كتابة TOPIK II",
+     "desc": "تدريب خطوة بخطوة على أسئلة الكتابة 51–54."
+    },
+    "mv2": {
+     "name": "تعلّم الكورية عبر الفيديوهات الموسيقية — TOPIK II",
+     "desc": "قواعد ومفردات المستوى المتوسط من فيديوهات EPIC21 الموسيقية."
+    },
+    "mv1": {
+     "name": "تعلّم الكورية عبر الفيديوهات الموسيقية — TOPIK I",
+     "desc": "الكورية للمبتدئين من مشاهد يومية: المقهى، المترو، التسوق."
+    }
+   },
+   "ui": {
+    "dl": "تحميل PDF",
+    "yt": "شاهد على YouTube",
+    "other": "لغات أخرى",
+    "vol": "المجلد {n}",
+    "about": "حول",
+    "free": "بدون تسجيل · مجانًا",
+    "change": "تغيير اللغة",
+    "pick": "اختر لغتك",
+    "na": "غير متوفر بعد",
+    "open": "افتح في Archive",
+    "forvideo": "لهذا الفيديو",
+    "all": "جميع الكتب",
+    "langpage": "الصفحة العربية"
+   }
+  },
+  "ur": {
+   "title": "اردو میں مفت کورین زبان کی کتابیں — TOPIK I اور II (PDF) | EPIC21",
+   "desc": "اردو وضاحت کے ساتھ {count} مفت PDF کورین کتابیں: TOPIK I اور II گرامر، الفاظ، تحریر۔ نہ رجسٹریشن، نہ ادائیگی۔",
+   "h1": "اردو میں مفت کورین کتابیں",
+   "about": "کوریا میں مقیم کورین زبان کے استاد کی تیار کردہ۔ مفت استعمال اور شیئر کریں (CC BY-NC-ND 4.0)۔",
+   "groups": {
+    "core": {
+     "name": "ضروری کورین گرامر — مکمل ایڈیشن",
+     "desc": "TOPIK I اور II کے تمام بنیادی گرامر ایک کتاب میں۔"
+    },
+    "dlg": {
+     "name": "مکالمے کے ذریعے TOPIK الفاظ اور گرامر",
+     "desc": "حقیقی گفتگو کے اندر TOPIK کے الفاظ اور گرامر سیکھیں۔"
+    },
+    "wrt": {
+     "name": "TOPIK II تحریر",
+     "desc": "تحریری سوالات 51–54 کے لیے مرحلہ وار مشق۔"
+    },
+    "mv2": {
+     "name": "میوزک ویڈیو سے کورین سیکھیں — TOPIK II",
+     "desc": "EPIC21 میوزک ویڈیوز سے درمیانی سطح کا گرامر اور الفاظ۔"
+    },
+    "mv1": {
+     "name": "میوزک ویڈیو سے کورین سیکھیں — TOPIK I",
+     "desc": "روزمرہ مناظر سے ابتدائی کورین: کیفے، سب وے، خریداری۔"
+    }
+   },
+   "ui": {
+    "dl": "PDF ڈاؤن لوڈ",
+    "yt": "YouTube پر دیکھیں",
+    "other": "دیگر زبانیں",
+    "vol": "جلد {n}",
+    "about": "تعارف",
+    "free": "رجسٹریشن نہیں · مفت",
+    "change": "زبان بدلیں",
+    "pick": "اپنی زبان منتخب کریں",
+    "na": "ابھی دستیاب نہیں",
+    "open": "Archive پر کھولیں",
+    "forvideo": "اس ویڈیو کے لیے",
+    "all": "تمام کتابیں",
+    "langpage": "اردو صفحہ"
+   }
+  }
+ },
+ "books": [
+  {
+   "id": "epic21-essential-korean-grammar",
+   "group": "core",
+   "slug": "grammar",
+   "ko": "한국어 필수 문법 완결판",
+   "en": "Essential Korean Grammar",
+   "vol": null,
+   "ko_sub": "",
+   "en_sub": ""
+  },
+  {
+   "id": "epic21-topik-vocab-grammar-s1",
+   "group": "dlg",
+   "slug": "dialogue1",
+   "ko": "대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1",
+   "en": "TOPIK Vocabulary & Grammar through Dialogue 1",
+   "vol": 1,
+   "ko_sub": "",
+   "en_sub": ""
+  },
+  {
+   "id": "epic21-topik-vocab-grammar-s2",
+   "group": "dlg",
+   "slug": "dialogue2",
+   "ko": "대화로 배우는 TOPIK 어휘와 문법 · 시리즈 2",
+   "en": "TOPIK Vocabulary & Grammar through Dialogue 2",
+   "vol": 2,
+   "ko_sub": "",
+   "en_sub": ""
+  },
+  {
+   "id": "epic21-topik2-writing-master",
+   "group": "wrt",
+   "slug": "writing",
+   "ko": "외국인 학습자를 위한 TOPIK II 쓰기 마스터",
+   "en": "TOPIK II Writing Master — Questions 51–54",
+   "vol": null,
+   "ko_sub": "",
+   "en_sub": ""
+  },
+  {
+   "id": "epic21-topik2-mv-vol1-four-seasons",
+   "group": "mv2",
+   "slug": "four-seasons",
+   "ko": "뮤직비디오로 배우는 TOPIK II · 제1편 사계절",
+   "en": "Learn Korean through Music Videos — TOPIK II, Vol.1 'Four Seasons'",
+   "vol": 1,
+   "ko_sub": "사계절",
+   "en_sub": "Four Seasons"
+  },
+  {
+   "id": "epic21-topik2-mv-vol2-black-coffee",
+   "group": "mv2",
+   "slug": "black-coffee",
+   "ko": "뮤직비디오로 배우는 TOPIK II · 제2편 블랙커피",
+   "en": "Learn Korean through Music Videos — TOPIK II, Vol.2 'Black Coffee'",
+   "vol": 2,
+   "ko_sub": "블랙커피",
+   "en_sub": "Black Coffee"
+  },
+  {
+   "id": "epic21-topik2-mv-vol3-cola",
+   "group": "mv2",
+   "slug": "cola",
+   "ko": "뮤직비디오로 배우는 TOPIK II · 제3편 콜라",
+   "en": "Learn Korean through Music Videos — TOPIK II, Vol.3 'Cola'",
+   "vol": 3,
+   "ko_sub": "콜라",
+   "en_sub": "Cola"
+  },
+  {
+   "id": "epic21-topik2-mv-vol4-curious",
+   "group": "mv2",
+   "slug": "curious",
+   "ko": "뮤직비디오로 배우는 TOPIK II · 제4편 궁금해",
+   "en": "Learn Korean through Music Videos — TOPIK II, Vol.4 'Curious'",
+   "vol": 4,
+   "ko_sub": "궁금해",
+   "en_sub": "Curious"
+  },
+  {
+   "id": "epic21-topik2-mv-vol5-parting",
+   "group": "mv2",
+   "slug": "parting",
+   "ko": "뮤직비디오로 배우는 TOPIK II · 제5편 회자정리",
+   "en": "Learn Korean through Music Videos — TOPIK II, Vol.5 'Those Who Meet Must Part'",
+   "vol": 5,
+   "ko_sub": "회자정리",
+   "en_sub": "Those Who Meet Must Part"
+  },
+  {
+   "id": "epic21-topik2-mv-vol6-favorite-song",
+   "group": "mv2",
+   "slug": "favorite-song",
+   "ko": "뮤직비디오로 배우는 TOPIK II · 제6편 애창곡",
+   "en": "Learn Korean through Music Videos — TOPIK II, Vol.6 'My Favorite Song'",
+   "vol": 6,
+   "ko_sub": "애창곡",
+   "en_sub": "My Favorite Song"
+  },
+  {
+   "id": "epic21-topik1-mv-vol1-two-hands",
+   "group": "mv1",
+   "slug": "two-hands",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제1편 두 손으로",
+   "en": "Learn Korean through a Music Video — TOPIK I, Vol.1 'With Both Hands'",
+   "vol": 1,
+   "ko_sub": "두 손으로",
+   "en_sub": "With Both Hands"
+  },
+  {
+   "id": "epic21-topik1-mv-vol2-restroom",
+   "group": "mv1",
+   "slug": "restroom",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제2편 화장실이 어디예요?",
+   "en": "TOPIK I, Vol.2 'Where Is the Restroom?'",
+   "vol": 2,
+   "ko_sub": "화장실이 어디예요?",
+   "en_sub": "Where Is the Restroom?"
+  },
+  {
+   "id": "epic21-topik1-mv-vol3-americano",
+   "group": "mv1",
+   "slug": "americano",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제3편 아이스아메리카노 두 잔 주세요",
+   "en": "TOPIK I, Vol.3 'Two Iced Americanos, Please'",
+   "vol": 3,
+   "ko_sub": "아이스아메리카노 두 잔 주세요",
+   "en_sub": "Two Iced Americanos, Please"
+  },
+  {
+   "id": "epic21-topik1-mv-vol4-wifi",
+   "group": "mv1",
+   "slug": "wifi",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제4편 여기 와이파이 돼요?",
+   "en": "TOPIK I, Vol.4 'Do You Have Wi-Fi Here?'",
+   "vol": 4,
+   "ko_sub": "여기 와이파이 돼요?",
+   "en_sub": "Do You Have Wi-Fi Here?"
+  },
+  {
+   "id": "epic21-topik1-mv-vol5-myeongdong",
+   "group": "mv1",
+   "slug": "myeongdong",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제5편 명동역이 어디예요?",
+   "en": "TOPIK I, Vol.5 'Where Is Myeongdong Station?'",
+   "vol": 5,
+   "ko_sub": "명동역이 어디예요?",
+   "en_sub": "Where Is Myeongdong Station?"
+  },
+  {
+   "id": "epic21-topik1-mv-vol6-transit-card",
+   "group": "mv1",
+   "slug": "transitcard",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제6편 교통 카드 좀 충전해 주세요",
+   "en": "TOPIK I, Vol.6 'Please Top Up My Transit Card'",
+   "vol": 6,
+   "ko_sub": "교통 카드 좀 충전해 주세요",
+   "en_sub": "Please Top Up My Transit Card"
+  },
+  {
+   "id": "epic21-topik1-mv-vol7-shopping",
+   "group": "mv1",
+   "slug": "shopping",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제7편 이거 입어 봐도 돼요?",
+   "en": "TOPIK I, Vol.7 'Can I Try This On?'",
+   "vol": 7,
+   "ko_sub": "이거 입어 봐도 돼요?",
+   "en_sub": "Can I Try This On?"
+  },
+  {
+   "id": "epic21-topik1-mv-vol8-samgyeopsal",
+   "group": "mv1",
+   "slug": "samgyeopsal",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제8편 우리 삼겹살 먹을까?",
+   "en": "TOPIK I, Vol.8 'Shall We Get Samgyeopsal?'",
+   "vol": 8,
+   "ko_sub": "우리 삼겹살 먹을까?",
+   "en_sub": "Shall We Get Samgyeopsal?"
+  },
+  {
+   "id": "epic21-topik1-mv-vol9-chicken",
+   "group": "mv1",
+   "slug": "chicken",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제9편 오는 데 얼마나 걸려요?",
+   "en": "TOPIK I, Vol.9 'How Long Will It Take?'",
+   "vol": 9,
+   "ko_sub": "오는 데 얼마나 걸려요?",
+   "en_sub": "How Long Will It Take?"
+  },
+  {
+   "id": "epic21-topik1-mv-vol10-clinic",
+   "group": "mv1",
+   "slug": "clinic",
+   "ko": "뮤직비디오로 배우는 TOPIK I · 제10편 나 감기 걸렸나 봐",
+   "en": "TOPIK I, Vol.10 'I Think I Caught a Cold'",
+   "vol": 10,
+   "ko_sub": "나 감기 걸렸나 봐",
+   "en_sub": "I Think I Caught a Cold"
+  }
+ ],
+ "files": {
+  "epic21-essential-korean-grammar": [
+   "00_EPIC21_EssentialKoreanGrammar_English_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Arabic_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Bengali_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Burmese_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Chinese-Simplified_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_French_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Indonesian_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Japanese_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Khmer_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Mongolian_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Nepali_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Portuguese_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Russian_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Sinhala_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Spanish_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Tagalog_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Thai_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Urdu_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Uzbek_Free.pdf",
+   "EPIC21_EssentialKoreanGrammar_Vietnamese_Free.pdf"
+  ],
+  "epic21-topik-vocab-grammar-s1": [
+   "EPIC21_TOPIK_VocabGrammar_S1_Arabic_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Bengali_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Burmese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Chinese-Simplified_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_English_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_French_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Indonesian_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Japanese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Khmer_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Mongolian_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Nepali_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Portuguese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Russian_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Sinhala_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Spanish_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Tagalog_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Thai_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Urdu_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Uzbek_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S1_Vietnamese_Free.pdf"
+  ],
+  "epic21-topik-vocab-grammar-s2": [
+   "EPIC21_TOPIK_VocabGrammar_S2_01_English_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_02_Spanish_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_03_French_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_04_Portuguese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_05_Indonesian_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_06_Vietnamese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_07_Tagalog_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_08_Uzbek_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_09_Russian_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_10_Mongolian_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_11_Japanese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_13_Thai_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_14_Khmer_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_15_Burmese_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_16_Nepali_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_17_Bengali_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_18_Sinhala_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_19_Arabic_Free.pdf",
+   "EPIC21_TOPIK_VocabGrammar_S2_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik2-writing-master": [
+   "EPIC21_TOPIK2_WritingMaster_Arabic_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Bengali_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Burmese_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_ChineseSimplified_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_English_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_French_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Indonesian_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Japanese_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Khmer_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Mongolian_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Nepali_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Portuguese_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Russian_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Sinhala_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Spanish_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Tagalog_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Thai_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Urdu_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Uzbek_Free.pdf",
+   "EPIC21_TOPIK2_WritingMaster_Vietnamese_Free.pdf"
+  ],
+  "epic21-topik2-mv-vol1-four-seasons": [
+   "EPIC21_FourSeasons_01_English_Free.pdf",
+   "EPIC21_FourSeasons_02_Spanish_Free.pdf",
+   "EPIC21_FourSeasons_03_French_Free.pdf",
+   "EPIC21_FourSeasons_04_Portuguese_Free.pdf",
+   "EPIC21_FourSeasons_05_Indonesian_Free.pdf",
+   "EPIC21_FourSeasons_06_Vietnamese_Free.pdf",
+   "EPIC21_FourSeasons_07_Tagalog_Free.pdf",
+   "EPIC21_FourSeasons_08_Uzbek_Free.pdf",
+   "EPIC21_FourSeasons_09_Russian_Free.pdf",
+   "EPIC21_FourSeasons_10_Mongolian_Free.pdf",
+   "EPIC21_FourSeasons_11_Japanese_Free.pdf",
+   "EPIC21_FourSeasons_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_FourSeasons_13_Thai_Free.pdf",
+   "EPIC21_FourSeasons_14_Khmer_Free.pdf",
+   "EPIC21_FourSeasons_15_Burmese_Free.pdf",
+   "EPIC21_FourSeasons_16_Nepali_Free.pdf",
+   "EPIC21_FourSeasons_17_Bengali_Free.pdf",
+   "EPIC21_FourSeasons_18_Sinhala_Free.pdf",
+   "EPIC21_FourSeasons_19_Arabic_Free.pdf",
+   "EPIC21_FourSeasons_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik2-mv-vol2-black-coffee": [
+   "EPIC21_BlackCoffee_01_English_Free.pdf",
+   "EPIC21_BlackCoffee_02_Spanish_Free.pdf",
+   "EPIC21_BlackCoffee_03_French_Free.pdf",
+   "EPIC21_BlackCoffee_04_Portuguese_Free.pdf",
+   "EPIC21_BlackCoffee_05_Indonesian_Free.pdf",
+   "EPIC21_BlackCoffee_06_Vietnamese_Free.pdf",
+   "EPIC21_BlackCoffee_07_Tagalog_Free.pdf",
+   "EPIC21_BlackCoffee_08_Uzbek_Free.pdf",
+   "EPIC21_BlackCoffee_09_Russian_Free.pdf",
+   "EPIC21_BlackCoffee_10_Mongolian_Free.pdf",
+   "EPIC21_BlackCoffee_11_Japanese_Free.pdf",
+   "EPIC21_BlackCoffee_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_BlackCoffee_13_Thai_Free.pdf",
+   "EPIC21_BlackCoffee_14_Khmer_Free.pdf",
+   "EPIC21_BlackCoffee_15_Burmese_Free.pdf",
+   "EPIC21_BlackCoffee_16_Nepali_Free.pdf",
+   "EPIC21_BlackCoffee_17_Bengali_Free.pdf",
+   "EPIC21_BlackCoffee_18_Sinhala_Free.pdf",
+   "EPIC21_BlackCoffee_19_Arabic_Free.pdf",
+   "EPIC21_BlackCoffee_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik2-mv-vol3-cola": [
+   "EPIC21_Cola_01_English_Free.pdf",
+   "EPIC21_Cola_02_Spanish_Free.pdf",
+   "EPIC21_Cola_03_French_Free.pdf",
+   "EPIC21_Cola_04_Portuguese_Free.pdf",
+   "EPIC21_Cola_05_Indonesian_Free.pdf",
+   "EPIC21_Cola_06_Vietnamese_Free.pdf",
+   "EPIC21_Cola_07_Tagalog_Free.pdf",
+   "EPIC21_Cola_08_Uzbek_Free.pdf",
+   "EPIC21_Cola_09_Russian_Free.pdf",
+   "EPIC21_Cola_10_Mongolian_Free.pdf",
+   "EPIC21_Cola_11_Japanese_Free.pdf",
+   "EPIC21_Cola_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_Cola_13_Thai_Free.pdf",
+   "EPIC21_Cola_14_Khmer_Free.pdf",
+   "EPIC21_Cola_15_Burmese_Free.pdf",
+   "EPIC21_Cola_16_Nepali_Free.pdf",
+   "EPIC21_Cola_17_Bengali_Free.pdf",
+   "EPIC21_Cola_18_Sinhala_Free.pdf",
+   "EPIC21_Cola_19_Arabic_Free.pdf",
+   "EPIC21_Cola_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik2-mv-vol4-curious": [
+   "EPIC21_Curious_01_English_Free.pdf",
+   "EPIC21_Curious_02_Spanish_Free.pdf",
+   "EPIC21_Curious_03_French_Free.pdf",
+   "EPIC21_Curious_04_Portuguese_Free.pdf",
+   "EPIC21_Curious_05_Indonesian_Free.pdf",
+   "EPIC21_Curious_06_Vietnamese_Free.pdf",
+   "EPIC21_Curious_07_Tagalog_Free.pdf",
+   "EPIC21_Curious_08_Uzbek_Free.pdf",
+   "EPIC21_Curious_09_Russian_Free.pdf",
+   "EPIC21_Curious_10_Mongolian_Free.pdf",
+   "EPIC21_Curious_11_Japanese_Free.pdf",
+   "EPIC21_Curious_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_Curious_13_Thai_Free.pdf",
+   "EPIC21_Curious_14_Khmer_Free.pdf",
+   "EPIC21_Curious_15_Burmese_Free.pdf",
+   "EPIC21_Curious_16_Nepali_Free.pdf",
+   "EPIC21_Curious_17_Bengali_Free.pdf",
+   "EPIC21_Curious_18_Sinhala_Free.pdf",
+   "EPIC21_Curious_19_Arabic_Free.pdf",
+   "EPIC21_Curious_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik2-mv-vol5-parting": [
+   "EPIC21_Parting_01_English_Free.pdf",
+   "EPIC21_Parting_02_Spanish_Free.pdf",
+   "EPIC21_Parting_03_French_Free.pdf",
+   "EPIC21_Parting_04_Portuguese_Free.pdf",
+   "EPIC21_Parting_05_Indonesian_Free.pdf",
+   "EPIC21_Parting_06_Vietnamese_Free.pdf",
+   "EPIC21_Parting_07_Tagalog_Free.pdf",
+   "EPIC21_Parting_08_Uzbek_Free.pdf",
+   "EPIC21_Parting_09_Russian_Free.pdf",
+   "EPIC21_Parting_10_Mongolian_Free.pdf",
+   "EPIC21_Parting_11_Japanese_Free.pdf",
+   "EPIC21_Parting_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_Parting_13_Thai_Free.pdf",
+   "EPIC21_Parting_14_Khmer_Free.pdf",
+   "EPIC21_Parting_15_Burmese_Free.pdf",
+   "EPIC21_Parting_16_Nepali_Free.pdf",
+   "EPIC21_Parting_17_Bengali_Free.pdf",
+   "EPIC21_Parting_18_Sinhala_Free.pdf",
+   "EPIC21_Parting_19_Arabic_Free.pdf",
+   "EPIC21_Parting_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik2-mv-vol6-favorite-song": [
+   "EPIC21_FavoriteSong_01_English_Free.pdf",
+   "EPIC21_FavoriteSong_02_Spanish_Free.pdf",
+   "EPIC21_FavoriteSong_03_French_Free.pdf",
+   "EPIC21_FavoriteSong_04_Portuguese_Free.pdf",
+   "EPIC21_FavoriteSong_05_Indonesian_Free.pdf",
+   "EPIC21_FavoriteSong_06_Vietnamese_Free.pdf",
+   "EPIC21_FavoriteSong_07_Tagalog_Free.pdf",
+   "EPIC21_FavoriteSong_08_Uzbek_Free.pdf",
+   "EPIC21_FavoriteSong_09_Russian_Free.pdf",
+   "EPIC21_FavoriteSong_10_Mongolian_Free.pdf",
+   "EPIC21_FavoriteSong_11_Japanese_Free.pdf",
+   "EPIC21_FavoriteSong_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_FavoriteSong_13_Thai_Free.pdf",
+   "EPIC21_FavoriteSong_14_Khmer_Free.pdf",
+   "EPIC21_FavoriteSong_15_Burmese_Free.pdf",
+   "EPIC21_FavoriteSong_16_Nepali_Free.pdf",
+   "EPIC21_FavoriteSong_17_Bengali_Free.pdf",
+   "EPIC21_FavoriteSong_18_Sinhala_Free.pdf",
+   "EPIC21_FavoriteSong_19_Arabic_Free.pdf",
+   "EPIC21_FavoriteSong_20_Urdu_Free.pdf"
+  ],
+  "epic21-topik1-mv-vol1-two-hands": [
+   "EPIC21_TOPIK1_Vol1_TwoHands_Arabic_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Bengali_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Burmese_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Chinese-Simplified_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_English_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_French_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Indonesian_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Japanese_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Khmer_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Mongolian_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Nepali_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Portuguese_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Russian_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Sinhala_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Spanish_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Tagalog_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Thai_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Urdu_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Uzbek_Free.pdf",
+   "EPIC21_TOPIK1_Vol1_TwoHands_Vietnamese_Free.pdf"
+  ],
+  "epic21-topik1-mv-vol2-restroom": [
+   "제2편_화장실이_어디예요_01_English.pdf",
+   "제2편_화장실이_어디예요_02_Spanish.pdf",
+   "제2편_화장실이_어디예요_03_French.pdf",
+   "제2편_화장실이_어디예요_04_Portuguese.pdf",
+   "제2편_화장실이_어디예요_05_Indonesian.pdf",
+   "제2편_화장실이_어디예요_06_Vietnamese.pdf",
+   "제2편_화장실이_어디예요_07_Tagalog.pdf",
+   "제2편_화장실이_어디예요_08_Uzbek.pdf",
+   "제2편_화장실이_어디예요_09_Russian.pdf",
+   "제2편_화장실이_어디예요_10_Mongolian.pdf",
+   "제2편_화장실이_어디예요_11_Japanese.pdf",
+   "제2편_화장실이_어디예요_12_Chinese-Simplified.pdf",
+   "제2편_화장실이_어디예요_13_Thai.pdf",
+   "제2편_화장실이_어디예요_14_Khmer.pdf",
+   "제2편_화장실이_어디예요_15_Burmese.pdf",
+   "제2편_화장실이_어디예요_16_Nepali.pdf",
+   "제2편_화장실이_어디예요_17_Bengali.pdf",
+   "제2편_화장실이_어디예요_18_Sinhala.pdf",
+   "제2편_화장실이_어디예요_19_Arabic.pdf",
+   "제2편_화장실이_어디예요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol3-americano": [
+   "제3편_아이스아메리카노_두_잔_주세요_01_English.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_02_Spanish.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_03_French.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_04_Portuguese.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_05_Indonesian.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_06_Vietnamese.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_07_Tagalog.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_08_Uzbek.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_09_Russian.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_10_Mongolian.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_11_Japanese.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_12_Chinese-Simplified.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_13_Thai.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_14_Khmer.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_15_Burmese.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_16_Nepali.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_17_Bengali.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_18_Sinhala.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_19_Arabic.pdf",
+   "제3편_아이스아메리카노_두_잔_주세요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol4-wifi": [
+   "제4편_여기_와이파이_돼요_01_English.pdf",
+   "제4편_여기_와이파이_돼요_02_Spanish.pdf",
+   "제4편_여기_와이파이_돼요_03_French.pdf",
+   "제4편_여기_와이파이_돼요_04_Portuguese.pdf",
+   "제4편_여기_와이파이_돼요_05_Indonesian.pdf",
+   "제4편_여기_와이파이_돼요_06_Vietnamese.pdf",
+   "제4편_여기_와이파이_돼요_07_Tagalog.pdf",
+   "제4편_여기_와이파이_돼요_08_Uzbek.pdf",
+   "제4편_여기_와이파이_돼요_09_Russian.pdf",
+   "제4편_여기_와이파이_돼요_10_Mongolian.pdf",
+   "제4편_여기_와이파이_돼요_11_Japanese.pdf",
+   "제4편_여기_와이파이_돼요_12_Chinese-Simplified.pdf",
+   "제4편_여기_와이파이_돼요_13_Thai.pdf",
+   "제4편_여기_와이파이_돼요_14_Khmer.pdf",
+   "제4편_여기_와이파이_돼요_15_Burmese.pdf",
+   "제4편_여기_와이파이_돼요_16_Nepali.pdf",
+   "제4편_여기_와이파이_돼요_17_Bengali.pdf",
+   "제4편_여기_와이파이_돼요_18_Sinhala.pdf",
+   "제4편_여기_와이파이_돼요_19_Arabic.pdf",
+   "제4편_여기_와이파이_돼요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol5-myeongdong": [
+   "제5편_명동역이_어디예요_01_English.pdf",
+   "제5편_명동역이_어디예요_02_Spanish.pdf",
+   "제5편_명동역이_어디예요_03_French.pdf",
+   "제5편_명동역이_어디예요_04_Portuguese.pdf",
+   "제5편_명동역이_어디예요_05_Indonesian.pdf",
+   "제5편_명동역이_어디예요_06_Vietnamese.pdf",
+   "제5편_명동역이_어디예요_07_Tagalog.pdf",
+   "제5편_명동역이_어디예요_08_Uzbek.pdf",
+   "제5편_명동역이_어디예요_09_Russian.pdf",
+   "제5편_명동역이_어디예요_10_Mongolian.pdf",
+   "제5편_명동역이_어디예요_11_Japanese.pdf",
+   "제5편_명동역이_어디예요_12_Chinese-Simplified.pdf",
+   "제5편_명동역이_어디예요_13_Thai.pdf",
+   "제5편_명동역이_어디예요_14_Khmer.pdf",
+   "제5편_명동역이_어디예요_15_Burmese.pdf",
+   "제5편_명동역이_어디예요_16_Nepali.pdf",
+   "제5편_명동역이_어디예요_17_Bengali.pdf",
+   "제5편_명동역이_어디예요_18_Sinhala.pdf",
+   "제5편_명동역이_어디예요_19_Arabic.pdf",
+   "제5편_명동역이_어디예요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol6-transit-card": [
+   "제6편_교통카드_충전해_주세요_01_English.pdf",
+   "제6편_교통카드_충전해_주세요_02_Spanish.pdf",
+   "제6편_교통카드_충전해_주세요_03_French.pdf",
+   "제6편_교통카드_충전해_주세요_04_Portuguese.pdf",
+   "제6편_교통카드_충전해_주세요_05_Indonesian.pdf",
+   "제6편_교통카드_충전해_주세요_06_Vietnamese.pdf",
+   "제6편_교통카드_충전해_주세요_07_Tagalog.pdf",
+   "제6편_교통카드_충전해_주세요_08_Uzbek.pdf",
+   "제6편_교통카드_충전해_주세요_09_Russian.pdf",
+   "제6편_교통카드_충전해_주세요_10_Mongolian.pdf",
+   "제6편_교통카드_충전해_주세요_11_Japanese.pdf",
+   "제6편_교통카드_충전해_주세요_12_Chinese-Simplified.pdf",
+   "제6편_교통카드_충전해_주세요_13_Thai.pdf",
+   "제6편_교통카드_충전해_주세요_14_Khmer.pdf",
+   "제6편_교통카드_충전해_주세요_15_Burmese.pdf",
+   "제6편_교통카드_충전해_주세요_16_Nepali.pdf",
+   "제6편_교통카드_충전해_주세요_17_Bengali.pdf",
+   "제6편_교통카드_충전해_주세요_18_Sinhala.pdf",
+   "제6편_교통카드_충전해_주세요_19_Arabic.pdf",
+   "제6편_교통카드_충전해_주세요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol7-shopping": [
+   "제7편_이거_입어_봐도_돼요_01_English.pdf",
+   "제7편_이거_입어_봐도_돼요_02_Spanish.pdf",
+   "제7편_이거_입어_봐도_돼요_03_French.pdf",
+   "제7편_이거_입어_봐도_돼요_04_Portuguese.pdf",
+   "제7편_이거_입어_봐도_돼요_05_Indonesian.pdf",
+   "제7편_이거_입어_봐도_돼요_06_Vietnamese.pdf",
+   "제7편_이거_입어_봐도_돼요_07_Tagalog.pdf",
+   "제7편_이거_입어_봐도_돼요_08_Uzbek.pdf",
+   "제7편_이거_입어_봐도_돼요_09_Russian.pdf",
+   "제7편_이거_입어_봐도_돼요_10_Mongolian.pdf",
+   "제7편_이거_입어_봐도_돼요_11_Japanese.pdf",
+   "제7편_이거_입어_봐도_돼요_12_Chinese-Simplified.pdf",
+   "제7편_이거_입어_봐도_돼요_13_Thai.pdf",
+   "제7편_이거_입어_봐도_돼요_14_Khmer.pdf",
+   "제7편_이거_입어_봐도_돼요_15_Burmese.pdf",
+   "제7편_이거_입어_봐도_돼요_16_Nepali.pdf",
+   "제7편_이거_입어_봐도_돼요_17_Bengali.pdf",
+   "제7편_이거_입어_봐도_돼요_18_Sinhala.pdf",
+   "제7편_이거_입어_봐도_돼요_19_Arabic.pdf",
+   "제7편_이거_입어_봐도_돼요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol8-samgyeopsal": [
+   "제8편_우리_삼겹살_먹을까_01_English.pdf",
+   "제8편_우리_삼겹살_먹을까_02_Spanish.pdf",
+   "제8편_우리_삼겹살_먹을까_03_French.pdf",
+   "제8편_우리_삼겹살_먹을까_04_Portuguese.pdf",
+   "제8편_우리_삼겹살_먹을까_05_Indonesian.pdf",
+   "제8편_우리_삼겹살_먹을까_06_Vietnamese.pdf",
+   "제8편_우리_삼겹살_먹을까_07_Tagalog.pdf",
+   "제8편_우리_삼겹살_먹을까_08_Uzbek.pdf",
+   "제8편_우리_삼겹살_먹을까_09_Russian.pdf",
+   "제8편_우리_삼겹살_먹을까_10_Mongolian.pdf",
+   "제8편_우리_삼겹살_먹을까_11_Japanese.pdf",
+   "제8편_우리_삼겹살_먹을까_12_Chinese-Simplified.pdf",
+   "제8편_우리_삼겹살_먹을까_13_Thai.pdf",
+   "제8편_우리_삼겹살_먹을까_14_Khmer.pdf",
+   "제8편_우리_삼겹살_먹을까_15_Burmese.pdf",
+   "제8편_우리_삼겹살_먹을까_16_Nepali.pdf",
+   "제8편_우리_삼겹살_먹을까_17_Bengali.pdf",
+   "제8편_우리_삼겹살_먹을까_18_Sinhala.pdf",
+   "제8편_우리_삼겹살_먹을까_19_Arabic.pdf",
+   "제8편_우리_삼겹살_먹을까_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol9-chicken": [
+   "제9편_오는_데_얼마나_걸려요_01_English.pdf",
+   "제9편_오는_데_얼마나_걸려요_02_Spanish.pdf",
+   "제9편_오는_데_얼마나_걸려요_03_French.pdf",
+   "제9편_오는_데_얼마나_걸려요_04_Portuguese.pdf",
+   "제9편_오는_데_얼마나_걸려요_05_Indonesian.pdf",
+   "제9편_오는_데_얼마나_걸려요_06_Vietnamese.pdf",
+   "제9편_오는_데_얼마나_걸려요_07_Tagalog.pdf",
+   "제9편_오는_데_얼마나_걸려요_08_Uzbek.pdf",
+   "제9편_오는_데_얼마나_걸려요_09_Russian.pdf",
+   "제9편_오는_데_얼마나_걸려요_10_Mongolian.pdf",
+   "제9편_오는_데_얼마나_걸려요_11_Japanese.pdf",
+   "제9편_오는_데_얼마나_걸려요_12_Chinese-Simplified.pdf",
+   "제9편_오는_데_얼마나_걸려요_13_Thai.pdf",
+   "제9편_오는_데_얼마나_걸려요_14_Khmer.pdf",
+   "제9편_오는_데_얼마나_걸려요_15_Burmese.pdf",
+   "제9편_오는_데_얼마나_걸려요_16_Nepali.pdf",
+   "제9편_오는_데_얼마나_걸려요_17_Bengali.pdf",
+   "제9편_오는_데_얼마나_걸려요_18_Sinhala.pdf",
+   "제9편_오는_데_얼마나_걸려요_19_Arabic.pdf",
+   "제9편_오는_데_얼마나_걸려요_20_Urdu.pdf"
+  ],
+  "epic21-topik1-mv-vol10-clinic": [
+   "제10편_나_감기_걸렸나_봐_01_English.pdf",
+   "제10편_나_감기_걸렸나_봐_02_Spanish.pdf",
+   "제10편_나_감기_걸렸나_봐_03_French.pdf",
+   "제10편_나_감기_걸렸나_봐_04_Portuguese.pdf",
+   "제10편_나_감기_걸렸나_봐_05_Indonesian.pdf",
+   "제10편_나_감기_걸렸나_봐_06_Vietnamese.pdf",
+   "제10편_나_감기_걸렸나_봐_07_Tagalog.pdf",
+   "제10편_나_감기_걸렸나_봐_08_Uzbek.pdf",
+   "제10편_나_감기_걸렸나_봐_09_Russian.pdf",
+   "제10편_나_감기_걸렸나_봐_10_Mongolian.pdf",
+   "제10편_나_감기_걸렸나_봐_11_Japanese.pdf",
+   "제10편_나_감기_걸렸나_봐_12_Chinese-Simplified.pdf",
+   "제10편_나_감기_걸렸나_봐_13_Thai.pdf",
+   "제10편_나_감기_걸렸나_봐_14_Khmer.pdf",
+   "제10편_나_감기_걸렸나_봐_15_Burmese.pdf",
+   "제10편_나_감기_걸렸나_봐_16_Nepali.pdf",
+   "제10편_나_감기_걸렸나_봐_17_Bengali.pdf",
+   "제10편_나_감기_걸렸나_봐_18_Sinhala.pdf",
+   "제10편_나_감기_걸렸나_봐_19_Arabic.pdf",
+   "제10편_나_감기_걸렸나_봐_20_Urdu.pdf"
+  ]
+ }
+}
