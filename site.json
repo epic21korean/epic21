@@ -8,6 +8,9 @@
    "key": "core"
   },
   {
+   "key": "cls"
+  },
+  {
    "key": "dlg"
   },
   {
@@ -168,6 +171,10 @@
     "mv1": {
      "name": "뮤직비디오로 배우는 TOPIK I",
      "desc": "카페·지하철·쇼핑 등 일상 장면으로 배우는 초급 한국어."
+    },
+    "cls": {
+     "name": "교실 한국어",
+     "desc": "수업에서 바로 쓰는 표현을 형태소·발음·문화까지 한 권에 담았습니다."
     }
    },
    "ui": {
@@ -211,6 +218,10 @@
     "mv1": {
      "name": "Learn Korean through Music Videos — TOPIK I",
      "desc": "Beginner Korean from everyday scenes: cafés, subway, shopping."
+    },
+    "cls": {
+     "name": "Classroom Korean",
+     "desc": "Expressions you hear in class, with morpheme breakdown, pronunciation and culture."
     }
    },
    "ui": {
@@ -254,6 +265,10 @@
     "mv1": {
      "name": "Aprende coreano con videos musicales — TOPIK I",
      "desc": "Coreano para principiantes con escenas cotidianas: cafeterías, metro, compras."
+    },
+    "cls": {
+     "name": "Coreano para el aula",
+     "desc": "Expresiones que se oyen en clase, con análisis de morfemas, pronunciación y cultura."
     }
    },
    "ui": {
@@ -297,6 +312,10 @@
     "mv1": {
      "name": "Apprendre le coréen avec des clips musicaux — TOPIK I",
      "desc": "Coréen pour débutants à partir de scènes du quotidien : café, métro, shopping."
+    },
+    "cls": {
+     "name": "Coréen en classe",
+     "desc": "Les expressions entendues en cours, avec morphèmes, prononciation et culture."
     }
    },
    "ui": {
@@ -340,6 +359,10 @@
     "mv1": {
      "name": "Aprenda coreano com videoclipes — TOPIK I",
      "desc": "Coreano para iniciantes com cenas do dia a dia: cafés, metrô, compras."
+    },
+    "cls": {
+     "name": "Coreano na sala de aula",
+     "desc": "Expressões que se ouvem na aula, com morfemas, pronúncia e cultura."
     }
    },
    "ui": {
@@ -383,6 +406,10 @@
     "mv1": {
      "name": "Belajar Bahasa Korea lewat Video Musik — TOPIK I",
      "desc": "Bahasa Korea pemula dari adegan sehari-hari: kafe, subway, belanja."
+    },
+    "cls": {
+     "name": "Bahasa Korea di Kelas",
+     "desc": "Ungkapan yang terdengar di kelas, lengkap dengan morfem, pelafalan, dan budaya."
     }
    },
    "ui": {
@@ -426,6 +453,10 @@
     "mv1": {
      "name": "Học tiếng Hàn qua MV ca nhạc — TOPIK I",
      "desc": "Tiếng Hàn sơ cấp từ các tình huống hằng ngày: quán cà phê, tàu điện, mua sắm."
+    },
+    "cls": {
+     "name": "Tiếng Hàn trong lớp học",
+     "desc": "Những câu nghe được trong lớp, kèm phân tích hình vị, phát âm và văn hóa."
     }
    },
    "ui": {
@@ -469,6 +500,10 @@
     "mv1": {
      "name": "Matuto ng Korean sa Music Video — TOPIK I",
      "desc": "Korean para sa baguhan mula sa pang-araw-araw na eksena: café, subway, pamimili."
+    },
+    "cls": {
+     "name": "Koreano sa Silid-aralan",
+     "desc": "Mga ekspresyong naririnig sa klase, may morpema, bigkas at kultura."
     }
    },
    "ui": {
@@ -512,6 +547,10 @@
     "mv1": {
      "name": "Musiqiy kliplar orqali koreys tili — TOPIK I",
      "desc": "Kundalik sahnalardan boshlangʻich koreys tili: kafe, metro, xarid."
+    },
+    "cls": {
+     "name": "Sinfda koreys tili",
+     "desc": "Darsda eshitiladigan iboralar — morfemalar, talaffuz va madaniyat bilan."
     }
    },
    "ui": {
@@ -555,6 +594,10 @@
     "mv1": {
      "name": "Корейский по музыкальным клипам — TOPIK I",
      "desc": "Корейский для начинающих на бытовых сценах: кафе, метро, покупки."
+    },
+    "cls": {
+     "name": "Корейский в аудитории",
+     "desc": "Выражения, которые звучат на занятии: морфемы, произношение и культура."
     }
    },
    "ui": {
@@ -598,6 +641,10 @@
     "mv1": {
      "name": "Дууны клипээр солонгос хэл сурах — TOPIK I",
      "desc": "Өдөр тутмын дүр зургаас анхан шатны солонгос хэл: кафе, метро, дэлгүүр."
+    },
+    "cls": {
+     "name": "Хичээлийн солонгос хэл",
+     "desc": "Хичээл дээр сонсогддог хэллэгүүд — морфем, дуудлага, соёлын хамт."
     }
    },
    "ui": {
@@ -641,6 +688,10 @@
     "mv1": {
      "name": "ミュージックビデオで学ぶ韓国語 — TOPIK I",
      "desc": "カフェ・地下鉄・買い物など日常場面から学ぶ初級韓国語。"
+    },
+    "cls": {
+     "name": "教室の韓国語",
+     "desc": "授業で耳にする表現を、形態素・発音・文化まで一冊に。"
     }
    },
    "ui": {
@@ -684,6 +735,10 @@
     "mv1": {
      "name": "通过音乐视频学韩语 — TOPIK I",
      "desc": "从咖啡店、地铁、购物等日常场景学初级韩语。"
+    },
+    "cls": {
+     "name": "课堂韩语",
+     "desc": "课堂上会听到的表达，附语素分解、发音与文化。"
     }
    },
    "ui": {
@@ -727,6 +782,10 @@
     "mv1": {
      "name": "เรียนภาษาเกาหลีจากมิวสิกวิดีโอ — TOPIK I",
      "desc": "ภาษาเกาหลีระดับต้นจากฉากในชีวิตประจำวัน: คาเฟ่ รถไฟใต้ดิน ช้อปปิ้ง"
+    },
+    "cls": {
+     "name": "ภาษาเกาหลีในห้องเรียน",
+     "desc": "สำนวนที่ได้ยินในชั้นเรียน พร้อมหน่วยคำ การออกเสียง และวัฒนธรรม"
     }
    },
    "ui": {
@@ -770,6 +829,10 @@
     "mv1": {
      "name": "រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK I",
      "desc": "ភាសាកូរ៉េកម្រិតដំបូង ពីឈុតឆាកប្រចាំថ្ងៃ៖ ហាងកាហ្វេ រថភ្លើងក្រោមដី ការទិញឥវ៉ាន់។"
+    },
+    "cls": {
+     "name": "ភាសាកូរ៉េក្នុងថ្នាក់រៀន",
+     "desc": "ឃ្លាដែលឮក្នុងថ្នាក់រៀន ជាមួយការវិភាគរូបវិទ្យា ការបញ្ចេញសំឡេង និងវប្បធម៌។"
     }
    },
    "ui": {
@@ -813,6 +876,10 @@
     "mv1": {
      "name": "ဂီတဗီဒီယိုဖြင့် ကိုရီးယားစာ လေ့လာခြင်း — TOPIK I",
      "desc": "နေ့စဉ်အခြေအနေများမှ အခြေခံ ကိုရီးယားစာ — ကော်ဖီဆိုင်၊ မြေအောက်ရထား၊ ဈေးဝယ်ခြင်း။"
+    },
+    "cls": {
+     "name": "စာသင်ခန်း ကိုရီးယားစာ",
+     "desc": "အတန်းထဲတွင် ကြားရသော အသုံးအနှုန်းများကို ရူပဗေဒ၊ အသံထွက်၊ ယဉ်ကျေးမှုနှင့်အတူ။"
     }
    },
    "ui": {
@@ -856,6 +923,10 @@
     "mv1": {
      "name": "म्युजिक भिडियोबाट कोरियन सिक्नुहोस् — TOPIK I",
      "desc": "दैनिक दृश्यहरूबाट प्रारम्भिक कोरियन: क्याफे, सबवे, किनमेल।"
+    },
+    "cls": {
+     "name": "कक्षाकोठाको कोरियाली",
+     "desc": "कक्षामा सुनिने अभिव्यक्तिहरू — रूपिम, उच्चारण र संस्कृतिसहित।"
     }
    },
    "ui": {
@@ -899,6 +970,10 @@
     "mv1": {
      "name": "মিউজিক ভিডিও দিয়ে কোরিয়ান শিখুন — TOPIK I",
      "desc": "দৈনন্দিন দৃশ্য থেকে প্রাথমিক কোরিয়ান: ক্যাফে, সাবওয়ে, কেনাকাটা।"
+    },
+    "cls": {
+     "name": "শ্রেণিকক্ষের কোরীয়",
+     "desc": "ক্লাসে শোনা যায় এমন অভিব্যক্তি, রূপমূল বিশ্লেষণ, উচ্চারণ ও সংস্কৃতিসহ।"
     }
    },
    "ui": {
@@ -942,6 +1017,10 @@
     "mv1": {
      "name": "සංගීත වීඩියෝ හරහා කොරියානු ඉගෙන ගන්න — TOPIK I",
      "desc": "එදිනෙදා අවස්ථා වලින් ආරම්භක කොරියානු: කැෆේ, උමං දුම්රිය, සාප්පු සවාරි."
+    },
+    "cls": {
+     "name": "පන්ති කාමර කොරියානු",
+     "desc": "පන්තියේදී ඇසෙන ප්‍රකාශන — රූප ඒකක, උච්චාරණය හා සංස්කෘතිය සමඟ."
     }
    },
    "ui": {
@@ -985,6 +1064,10 @@
     "mv1": {
      "name": "تعلّم الكورية عبر الفيديوهات الموسيقية — TOPIK I",
      "desc": "الكورية للمبتدئين من مشاهد يومية: المقهى، المترو، التسوق."
+    },
+    "cls": {
+     "name": "الكورية في الفصل",
+     "desc": "العبارات التي تُسمع في الصف، مع تحليل الصرف والنطق والثقافة."
     }
    },
    "ui": {
@@ -1028,6 +1111,10 @@
     "mv1": {
      "name": "میوزک ویڈیو سے کورین سیکھیں — TOPIK I",
      "desc": "روزمرہ مناظر سے ابتدائی کورین: کیفے، سب وے، خریداری۔"
+    },
+    "cls": {
+     "name": "کلاس روم کوریائی",
+     "desc": "کلاس میں سنی جانے والی عبارتیں — صرفیے، تلفظ اور ثقافت کے ساتھ۔"
     }
    },
    "ui": {
@@ -1057,6 +1144,16 @@
    "vol": null,
    "ko_sub": "",
    "en_sub": ""
+  },
+  {
+   "id": "epic21-classroom-korean-60",
+   "group": "cls",
+   "slug": "classroom",
+   "ko": "교실 한국어 필수 표현 60",
+   "en": "60 Essential Classroom Korean Expressions",
+   "vol": null,
+   "ko_sub": "수업이 들리는 첫걸음",
+   "en_sub": "Your first step to understanding class"
   },
   {
    "id": "epic21-topik-vocab-grammar-s1",
@@ -1689,6 +1786,28 @@
    "제10편_나_감기_걸렸나_봐_18_Sinhala.pdf",
    "제10편_나_감기_걸렸나_봐_19_Arabic.pdf",
    "제10편_나_감기_걸렸나_봐_20_Urdu.pdf"
+  ],
+  "epic21-classroom-korean-60": [
+   "00_EPIC21_ClassroomKorean60_01_English_Free.pdf",
+   "EPIC21_ClassroomKorean60_02_Spanish_Free.pdf",
+   "EPIC21_ClassroomKorean60_03_French_Free.pdf",
+   "EPIC21_ClassroomKorean60_04_Portuguese_Free.pdf",
+   "EPIC21_ClassroomKorean60_05_Indonesian_Free.pdf",
+   "EPIC21_ClassroomKorean60_06_Vietnamese_Free.pdf",
+   "EPIC21_ClassroomKorean60_07_Tagalog_Free.pdf",
+   "EPIC21_ClassroomKorean60_08_Uzbek_Free.pdf",
+   "EPIC21_ClassroomKorean60_09_Russian_Free.pdf",
+   "EPIC21_ClassroomKorean60_10_Mongolian_Free.pdf",
+   "EPIC21_ClassroomKorean60_11_Japanese_Free.pdf",
+   "EPIC21_ClassroomKorean60_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_ClassroomKorean60_13_Thai_Free.pdf",
+   "EPIC21_ClassroomKorean60_14_Khmer_Free.pdf",
+   "EPIC21_ClassroomKorean60_15_Burmese_Free.pdf",
+   "EPIC21_ClassroomKorean60_16_Nepali_Free.pdf",
+   "EPIC21_ClassroomKorean60_17_Bengali_Free.pdf",
+   "EPIC21_ClassroomKorean60_18_Sinhala_Free.pdf",
+   "EPIC21_ClassroomKorean60_19_Arabic_Free.pdf",
+   "EPIC21_ClassroomKorean60_20_Urdu_Free.pdf"
   ]
  }
 }
