@@ -1,0 +1,2 @@
+허브 저장소(epic21korean/epic21)에 덮어쓸 파일 — K-Song 매거진 01호 · 해녀를 허브 맨 위에 추가
+이 폴더 안의 모든 것을 GitHub Desktop의 epic21 저장소 폴더에 복사해 덮어쓰기 → Commit → Push origin
