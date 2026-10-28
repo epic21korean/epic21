@@ -112,14 +112,17 @@ def build_page(site, env, lang, is_root):
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"
                               + (f" — {b['ko_sub']}" if b.get('ko_sub') else ''),
-                              'inLanguage': ['ko', code], 'url': pdf, 'isAccessibleForFree': True,
+                              'inLanguage': ['ko', 'en' if code == '_root' else code], 'url': pdf, 'isAccessibleForFree': True,
                               'license': 'https://creativecommons.org/licenses/by-nc-nd/4.0/'})
         groups.append(dict(key=gk, name=gt['name'], desc=gt['desc'], ko=gko, books=books))
 
-    jsonld = {'@context': 'https://schema.org', '@type': 'ItemList', 'name': t['title'],
+    itemlist = {'@type': 'ItemList', 'name': t['title'],
               'url': page_url, 'numberOfItems': len(items),
               'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'item': it}
                                   for i, it in enumerate(items)]}
+    website = {'@type': 'WebSite', '@id': site_url + '/#website', 'name': 'EPIC21',
+               'alternateName': ['EPIC21 Korean', 'EPIC21 무료 한국어 교재'], 'url': site_url + '/'}
+    jsonld = {'@context': 'https://schema.org', '@graph': [website, itemlist]}
 
     alternates = [{'code': L['code'], 'url': f"{site_url}/{L['code']}/"} for L in site['langs']]
 
@@ -130,7 +133,7 @@ def build_page(site, env, lang, is_root):
         alternates=alternates, langs=site['langs'], groups=groups, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'],
-        jsonld=json.dumps(jsonld, ensure_ascii=False),
+        jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),
     )
 
 
