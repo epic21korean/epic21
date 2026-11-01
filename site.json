@@ -24,6 +24,9 @@
   },
   {
    "key": "mv1"
+  },
+  {
+   "key": "easy"
   }
  ],
  "langs": [
@@ -182,6 +185,10 @@
     "mag": {
      "name": "K-Song 매거진",
      "desc": "뮤직비디오 한 편과 짝을 이루는 잡지형 교재 — 화보·사진 단어·가사 병기로 재미있게 배우는 한국어."
+    },
+    "easy": {
+     "name": "쉬운 한국어 노래",
+     "desc": "초급 어휘를 노래로 배우는 뮤직비디오 짝 교재 — 사진, 가사, 놀이, 단어 카드."
     }
    },
    "ui": {
@@ -233,6 +240,10 @@
     "mag": {
      "name": "K-Song Magazine",
      "desc": "Magazine-style textbooks paired with one music video each — photo pages, words in pictures and lyrics side by side."
+    },
+    "easy": {
+     "name": "Easy Korean Songs",
+     "desc": "Beginner textbooks paired with music videos — learn basic words through songs, photos, games and word cards."
     }
    },
    "ui": {
@@ -284,6 +295,10 @@
     "mag": {
      "name": "Revista K-Song",
      "desc": "Libros con estilo de revista, cada uno con su videoclip: páginas de fotos, palabras en imágenes y letra bilingüe."
+    },
+    "easy": {
+     "name": "Canciones fáciles en coreano",
+     "desc": "Libros para principiantes con un videoclip cada uno: aprende palabras básicas con canciones, fotos, juegos y tarjetas."
     }
    },
    "ui": {
@@ -335,6 +350,10 @@
     "mag": {
      "name": "Magazine K-Song",
      "desc": "Des manuels façon magazine, chacun lié à un clip : pages photo, mots en images et paroles bilingues."
+    },
+    "easy": {
+     "name": "Chansons coréennes faciles",
+     "desc": "Manuels pour débutants, chacun avec un clip : apprends les mots de base avec des chansons, des photos, des jeux et des cartes."
     }
    },
    "ui": {
@@ -386,6 +405,10 @@
     "mag": {
      "name": "Revista K-Song",
      "desc": "Livros em estilo revista, cada um com seu videoclipe: páginas de fotos, palavras em imagens e letra bilíngue."
+    },
+    "easy": {
+     "name": "Músicas coreanas fáceis",
+     "desc": "Livros para iniciantes com um videoclipe cada: aprenda palavras básicas com músicas, fotos, jogos e cartões."
     }
    },
    "ui": {
@@ -437,6 +460,10 @@
     "mag": {
      "name": "Majalah K-Song",
      "desc": "Buku bergaya majalah, masing-masing dengan satu MV: halaman foto, kata bergambar, dan lirik dua bahasa."
+    },
+    "easy": {
+     "name": "Lagu Korea Mudah",
+     "desc": "Buku pemula yang masing-masing berpasangan dengan MV — belajar kosakata dasar lewat lagu, foto, permainan, dan kartu kata."
     }
    },
    "ui": {
@@ -488,6 +515,10 @@
     "mag": {
      "name": "Tạp chí K-Song",
      "desc": "Giáo trình kiểu tạp chí, mỗi số đi kèm một MV: trang ảnh, từ vựng bằng hình và lời bài hát song ngữ."
+    },
+    "easy": {
+     "name": "Bài hát tiếng Hàn dễ",
+     "desc": "Giáo trình sơ cấp đi kèm MV — học từ vựng cơ bản qua bài hát, ảnh, trò chơi và thẻ từ."
     }
    },
    "ui": {
@@ -539,6 +570,10 @@
     "mag": {
      "name": "K-Song Magazine",
      "desc": "Mga aklat na parang magasin, bawat isa may music video: mga pahina ng larawan, salita sa larawan at lyrics sa dalawang wika."
+    },
+    "easy": {
+     "name": "Madadaling Kantang Korean",
+     "desc": "Mga aklat para sa baguhan na may kasamang music video — matuto ng pangunahing salita sa kanta, larawan, laro at kard."
     }
    },
    "ui": {
@@ -590,6 +625,10 @@
     "mag": {
      "name": "K-Song jurnali",
      "desc": "Har biri bitta klipga bogʻlangan jurnal uslubidagi darsliklar: foto sahifalar, rasmli soʻzlar va ikki tilli qoʻshiq soʻzlari."
+    },
+    "easy": {
+     "name": "Oson koreyscha qo‘shiqlar",
+     "desc": "Har biri klip bilan juftlangan boshlang‘ich darsliklar — qo‘shiq, rasm, o‘yin va kartalar orqali asosiy so‘zlar."
     }
    },
    "ui": {
@@ -641,6 +680,10 @@
     "mag": {
      "name": "Журнал K-Song",
      "desc": "Учебники в стиле журнала, каждый к своему клипу: фотостраницы, слова в картинках и текст песни на двух языках."
+    },
+    "easy": {
+     "name": "Лёгкие корейские песни",
+     "desc": "Учебники для начинающих, каждый с клипом: базовые слова через песни, фото, игры и карточки."
     }
    },
    "ui": {
@@ -692,6 +735,10 @@
     "mag": {
      "name": "K-Song сэтгүүл",
      "desc": "Клип бүртэй хосолсон сэтгүүл маягийн сурах бичиг: зурагт хуудас, зурагтай үг, хоёр хэлээрх дууны үг."
+    },
+    "easy": {
+     "name": "Хялбар солонгос дуу",
+     "desc": "Клип бүртэй хосолсон анхан шатны сурах бичиг — дуу, зураг, тоглоом, картаар үндсэн үг сурна."
     }
    },
    "ui": {
@@ -743,6 +790,10 @@
     "mag": {
      "name": "K-Songマガジン",
      "desc": "MV1本と対になる雑誌スタイルのテキスト。フォトページ、写真で覚える単語、対訳歌詞。"
+    },
+    "easy": {
+     "name": "やさしい韓国語ソング",
+     "desc": "MVとセットの初級テキスト — 歌・写真・あそび・単語カードで基本の単語を覚えよう。"
     }
    },
    "ui": {
@@ -794,6 +845,10 @@
     "mag": {
      "name": "K-Song 杂志",
      "desc": "每期搭配一支 MV 的杂志式教材：照片页、看图单词、双语歌词。"
+    },
+    "easy": {
+     "name": "简单韩语歌曲",
+     "desc": "与MV配套的初级教材——通过歌曲、照片、游戏和单词卡学习基础词汇。"
     }
    },
    "ui": {
@@ -845,6 +900,10 @@
     "mag": {
      "name": "นิตยสาร K-Song",
      "desc": "ตำราสไตล์นิตยสารคู่กับ MV หนึ่งเพลง: หน้าภาพ คำศัพท์จากภาพ และเนื้อเพลงสองภาษา"
+    },
+    "easy": {
+     "name": "เพลงเกาหลีง่าย ๆ",
+     "desc": "ตำราระดับต้นคู่กับ MV — เรียนคำศัพท์พื้นฐานผ่านเพลง ภาพ เกม และบัตรคำ"
     }
    },
    "ui": {
@@ -896,6 +955,10 @@
     "mag": {
      "name": "ទស្សនាវដ្តី K-Song",
      "desc": "សៀវភៅបែបទស្សនាវដ្តី ភ្ជាប់នឹង MV មួយៗ៖ ទំព័ររូបថត ពាក្យជារូបភាព និងទំនុកច្រៀងពីរភាសា។"
+    },
+    "easy": {
+     "name": "ចម្រៀងកូរ៉េងាយៗ",
+     "desc": "សៀវភៅកម្រិតដំបូងភ្ជាប់ជាមួយ MV — រៀនពាក្យមូលដ្ឋានតាមចម្រៀង រូបថត ល្បែង និងកាតពាក្យ។"
     }
    },
    "ui": {
@@ -947,6 +1010,10 @@
     "mag": {
      "name": "K-Song မဂ္ဂဇင်း",
      "desc": "MV တစ်ပုဒ်ချင်းနှင့်တွဲသော မဂ္ဂဇင်းပုံစံ ဖတ်စာအုပ်: ဓာတ်ပုံစာမျက်နှာ၊ ပုံဖြင့်စကားလုံး၊ ဘာသာနှစ်မျိုး သီချင်းစာသား။"
+    },
+    "easy": {
+     "name": "လွယ်ကူသော ကိုရီးယားသီချင်း",
+     "desc": "MV နှင့်တွဲထားသော အခြေခံ စာအုပ်များ — သီချင်း၊ ဓာတ်ပုံ၊ ကစားနည်းနှင့် ကတ်များဖြင့် အခြေခံစကားလုံး လေ့လာပါ။"
     }
    },
    "ui": {
@@ -998,6 +1065,10 @@
     "mag": {
      "name": "K-Song पत्रिका",
      "desc": "हरेक म्युजिक भिडियोसँग जोडिएको पत्रिका-शैलीको पाठ्यपुस्तक: फोटो पृष्ठ, तस्बिरमा शब्द र दुई भाषाको गीत।"
+    },
+    "easy": {
+     "name": "सजिलो कोरियाली गीत",
+     "desc": "म्युजिक भिडियोसँगको सुरुवाती पाठ्यपुस्तक — गीत, तस्बिर, खेल र कार्डबाट आधारभूत शब्द सिक्नुहोस्।"
     }
    },
    "ui": {
@@ -1049,6 +1120,10 @@
     "mag": {
      "name": "K-Song ম্যাগাজিন",
      "desc": "প্রতিটি মিউজিক ভিডিওর সঙ্গে ম্যাগাজিন-ধাঁচের পাঠ্যবই: ছবির পাতা, ছবিতে শব্দ ও দ্বিভাষিক গানের কথা।"
+    },
+    "easy": {
+     "name": "সহজ কোরিয়ান গান",
+     "desc": "মিউজিক ভিডিওর সাথে প্রাথমিক পাঠ্যবই — গান, ছবি, খেলা ও কার্ডে মৌলিক শব্দ শিখুন।"
     }
    },
    "ui": {
@@ -1100,6 +1175,10 @@
     "mag": {
      "name": "K-Song සඟරාව",
      "desc": "එක් එක් MV එකට ගැළපෙන සඟරා-ශෛලියේ පෙළපොත්: ඡායාරූප පිටු, පින්තූරවලින් වචන සහ ද්විභාෂා ගීත පද."
+    },
+    "easy": {
+     "name": "පහසු කොරියානු ගීත",
+     "desc": "MV සමඟ ආරම්භක පෙළපොත් — ගීත, ඡායාරූප, ක්‍රීඩා සහ කාඩ්පත්වලින් මූලික වචන ඉගෙන ගන්න."
     }
    },
    "ui": {
@@ -1151,6 +1230,10 @@
     "mag": {
      "name": "مجلة K-Song",
      "desc": "كتب بأسلوب المجلات، لكل منها فيديو موسيقي: صفحات صور، كلمات بالصور، وكلمات الأغنية بلغتين."
+    },
+    "easy": {
+     "name": "أغانٍ كورية سهلة",
+     "desc": "كتب للمبتدئين مع فيديو موسيقي لكل منها — تعلّم الكلمات الأساسية بالأغاني والصور والألعاب والبطاقات."
     }
    },
    "ui": {
@@ -1202,6 +1285,10 @@
     "mag": {
      "name": "K-Song رسالہ",
      "desc": "ہر میوزک ویڈیو کے ساتھ رسالہ نما کتاب: تصویری صفحات، تصویروں میں الفاظ اور دو زبانوں میں بول۔"
+    },
+    "easy": {
+     "name": "آسان کوریائی گانے",
+     "desc": "میوزک ویڈیو کے ساتھ ابتدائی درسی کتابیں — گانوں، تصاویر، کھیلوں اور کارڈز سے بنیادی الفاظ سیکھیں۔"
     }
    },
    "ui": {
@@ -1441,6 +1528,16 @@
    "vol": 10,
    "ko_sub": "나 감기 걸렸나 봐",
    "en_sub": "I Think I Caught a Cold"
+  },
+  {
+   "id": "epic21-easysong-01-opposites1",
+   "group": "easy",
+   "slug": "easy-01",
+   "ko": "쉬운 한국어 노래 01 · 반대말 1",
+   "en": "Easy Korean Songs No. 01 — Opposites 1",
+   "vol": 1,
+   "ko_sub": "반대말 1",
+   "en_sub": "Opposites 1"
   }
  ],
  "files": {
@@ -1927,6 +2024,28 @@
    "EPIC21_DIVE01_Haenyeo_18_Sinhala_Free.pdf",
    "EPIC21_DIVE01_Haenyeo_19_Arabic_Free.pdf",
    "EPIC21_DIVE01_Haenyeo_20_Urdu_Free.pdf"
+  ],
+  "epic21-easysong-01-opposites1": [
+   "EPIC21_EasySong01_Opposites1_01_English_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_02_Spanish_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_03_French_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_04_Portuguese_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_05_Indonesian_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_06_Vietnamese_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_07_Tagalog_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_08_Uzbek_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_09_Russian_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_10_Mongolian_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_11_Japanese_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_13_Thai_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_14_Khmer_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_15_Burmese_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_16_Nepali_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_17_Bengali_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_18_Sinhala_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_19_Arabic_Free.pdf",
+   "EPIC21_EasySong01_Opposites1_20_Urdu_Free.pdf"
   ]
  }
 }
