@@ -33,14 +33,14 @@
 <meta property="og:title" content="नेपालीमा निःशुल्क कोरियन भाषा पाठ्यपुस्तक — TOPIK I र II (PDF) | EPIC21">
 <meta property="og:description" content="नेपाली व्याख्यासहित 23 वटा निःशुल्क PDF कोरियन पाठ्यपुस्तक: TOPIK I र II व्याकरण, शब्दावली, लेखन। दर्ता छैन, शुल्क छैन।">
 <meta property="og:url" content="https://epic21korean.github.io/epic21/ne/">
-<meta property="og:image" content="https://epic21korean.github.io/epic21/og/ne.png">
+<meta property="og:image" content="https://epic21korean.github.io/epic21/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ne_NP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="नेपालीमा निःशुल्क कोरियन भाषा पाठ्यपुस्तक — TOPIK I र II (PDF) | EPIC21">
 <meta name="twitter:description" content="नेपाली व्याख्यासहित 23 वटा निःशुल्क PDF कोरियन पाठ्यपुस्तक: TOPIK I र II व्याकरण, शब्दावली, लेखन। दर्ता छैन, शुल्क छैन।">
-<meta name="twitter:image" content="https://epic21korean.github.io/epic21/og/ne.png">
+<meta name="twitter:image" content="https://epic21korean.github.io/epic21/og.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -99,13 +99,19 @@ h1{font-size:clamp(24px,5.6vw,40px);font-weight:900;line-height:1.25;}
   margin-bottom:14px;font-weight:700}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));
   border-top:1px solid rgba(196,105,90,.45);border-left:1px solid rgba(196,105,90,.45)}
-.cellbtn{display:flex;align-items:center;justify-content:center;
+.cellbtn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
   border-right:1px solid rgba(196,105,90,.45);border-bottom:1px solid rgba(196,105,90,.45);
-  min-height:var(--cell);padding:12px 10px;font-size:16px;font-weight:500;
+  min-height:var(--cell);padding:12px 6px;font-size:16px;font-weight:500;
   color:var(--paper-ink);text-align:center;text-decoration:none;transition:background .14s,color .14s}
 .cellbtn:hover{background:rgba(232,145,60,.2)}
 .cellbtn:focus-visible{outline:3px solid var(--ink);outline-offset:-3px}
 .cellbtn[aria-current="page"]{background:var(--ink);color:var(--cream)}
+.cellbtn .nat{font-size:18px;font-weight:700;line-height:1.35}
+.cellbtn .gl{font-size:12px;font-weight:500;white-space:nowrap;letter-spacing:-.01em;color:var(--paper-muted);line-height:1.3}
+.cellbtn .gl b{color:#B4562A;font-weight:700}
+.cellbtn[aria-current="page"] .gl{color:var(--muted)}
+.chip .gl{font-size:12px;color:var(--muted);margin-inline-start:6px}
+.chip[aria-current="page"] .gl{color:var(--paper-muted)}
 
 /* 책꽂이 */
 .shelf{margin-top:36px}
@@ -688,25 +694,25 @@ footer a{color:var(--muted)}
   <h2>अन्य भाषा</h2>
   <nav class="chips">
     <a class="chip" lang="en" href="../en/">English</a>
-    <a class="chip" lang="es" href="../es/">Español</a>
-    <a class="chip" lang="fr" href="../fr/">Français</a>
-    <a class="chip" lang="pt" href="../pt/">Português</a>
-    <a class="chip" lang="id" href="../id/">Bahasa Indonesia</a>
-    <a class="chip" lang="vi" href="../vi/">Tiếng Việt</a>
-    <a class="chip" lang="tl" href="../tl/">Tagalog</a>
-    <a class="chip" lang="uz" href="../uz/">Oʻzbekcha</a>
-    <a class="chip" lang="ru" href="../ru/">Русский</a>
-    <a class="chip" lang="mn" href="../mn/">Монгол</a>
-    <a class="chip" lang="ja" href="../ja/">日本語</a>
-    <a class="chip" lang="zh-Hans" href="../zh-Hans/">简体中文</a>
-    <a class="chip" lang="th" href="../th/">ภาษาไทย</a>
-    <a class="chip" lang="km" href="../km/">ភាសាខ្មែរ</a>
-    <a class="chip" lang="my" href="../my/">မြန်မာ</a>
-    <a class="chip" lang="ne" href="../ne/" aria-current="page">नेपाली</a>
-    <a class="chip" lang="bn" href="../bn/">বাংলা</a>
-    <a class="chip" lang="si" href="../si/">සිංහල</a>
-    <a class="chip" lang="ar" dir="rtl" href="../ar/">العربية</a>
-    <a class="chip" lang="ur" dir="rtl" href="../ur/">اردو</a>
+    <a class="chip" lang="es" href="../es/">Español<span class="gl" lang="en" dir="ltr">Spanish</span></a>
+    <a class="chip" lang="fr" href="../fr/">Français<span class="gl" lang="en" dir="ltr">French</span></a>
+    <a class="chip" lang="pt" href="../pt/">Português<span class="gl" lang="en" dir="ltr">Portuguese</span></a>
+    <a class="chip" lang="id" href="../id/">Bahasa Indonesia<span class="gl" lang="en" dir="ltr">Indonesian</span></a>
+    <a class="chip" lang="vi" href="../vi/">Tiếng Việt<span class="gl" lang="en" dir="ltr">Vietnamese</span></a>
+    <a class="chip" lang="tl" href="../tl/">Tagalog<span class="gl" lang="en" dir="ltr">Filipino</span></a>
+    <a class="chip" lang="uz" href="../uz/">Oʻzbekcha<span class="gl" lang="en" dir="ltr">Uzbek</span></a>
+    <a class="chip" lang="ru" href="../ru/">Русский<span class="gl" lang="en" dir="ltr">Russian</span></a>
+    <a class="chip" lang="mn" href="../mn/">Монгол<span class="gl" lang="en" dir="ltr">Mongolian</span></a>
+    <a class="chip" lang="ja" href="../ja/">日本語<span class="gl" lang="en" dir="ltr">Japanese</span></a>
+    <a class="chip" lang="zh-Hans" href="../zh-Hans/">简体中文<span class="gl" lang="en" dir="ltr">Chinese</span></a>
+    <a class="chip" lang="th" href="../th/">ภาษาไทย<span class="gl" lang="en" dir="ltr">Thai</span></a>
+    <a class="chip" lang="km" href="../km/">ភាសាខ្មែរ<span class="gl" lang="en" dir="ltr">Khmer</span></a>
+    <a class="chip" lang="my" href="../my/">မြန်မာ<span class="gl" lang="en" dir="ltr">Burmese</span></a>
+    <a class="chip" lang="ne" href="../ne/" aria-current="page">नेपाली<span class="gl" lang="en" dir="ltr">Nepali</span></a>
+    <a class="chip" lang="bn" href="../bn/">বাংলা<span class="gl" lang="en" dir="ltr">Bengali</span></a>
+    <a class="chip" lang="si" href="../si/">සිංහල<span class="gl" lang="en" dir="ltr">Sinhala</span></a>
+    <a class="chip" lang="ar" dir="rtl" href="../ar/">العربية<span class="gl" lang="en" dir="ltr">Arabic</span></a>
+    <a class="chip" lang="ur" dir="rtl" href="../ur/">اردو<span class="gl" lang="en" dir="ltr">Urdu</span></a>
   </nav>
 </section>
 

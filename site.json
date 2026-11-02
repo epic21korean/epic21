@@ -34,121 +34,161 @@
    "file": "English",
    "code": "en",
    "name": "English",
-   "rtl": false
+   "rtl": false,
+   "en": "English",
+   "ko": "영어"
   },
   {
    "file": "Spanish",
    "code": "es",
    "name": "Español",
-   "rtl": false
+   "rtl": false,
+   "en": "Spanish",
+   "ko": "스페인어"
   },
   {
    "file": "French",
    "code": "fr",
    "name": "Français",
-   "rtl": false
+   "rtl": false,
+   "en": "French",
+   "ko": "프랑스어"
   },
   {
    "file": "Portuguese",
    "code": "pt",
    "name": "Português",
-   "rtl": false
+   "rtl": false,
+   "en": "Portuguese",
+   "ko": "포르투갈어"
   },
   {
    "file": "Indonesian",
    "code": "id",
    "name": "Bahasa Indonesia",
-   "rtl": false
+   "rtl": false,
+   "en": "Indonesian",
+   "ko": "인도네시아어"
   },
   {
    "file": "Vietnamese",
    "code": "vi",
    "name": "Tiếng Việt",
-   "rtl": false
+   "rtl": false,
+   "en": "Vietnamese",
+   "ko": "베트남어"
   },
   {
    "file": "Tagalog",
    "code": "tl",
    "name": "Tagalog",
-   "rtl": false
+   "rtl": false,
+   "en": "Filipino",
+   "ko": "타갈로그어"
   },
   {
    "file": "Uzbek",
    "code": "uz",
    "name": "Oʻzbekcha",
-   "rtl": false
+   "rtl": false,
+   "en": "Uzbek",
+   "ko": "우즈베크어"
   },
   {
    "file": "Russian",
    "code": "ru",
    "name": "Русский",
-   "rtl": false
+   "rtl": false,
+   "en": "Russian",
+   "ko": "러시아어"
   },
   {
    "file": "Mongolian",
    "code": "mn",
    "name": "Монгол",
-   "rtl": false
+   "rtl": false,
+   "en": "Mongolian",
+   "ko": "몽골어"
   },
   {
    "file": "Japanese",
    "code": "ja",
    "name": "日本語",
-   "rtl": false
+   "rtl": false,
+   "en": "Japanese",
+   "ko": "일본어"
   },
   {
    "file": "Chinese-Simplified",
    "code": "zh-Hans",
    "name": "简体中文",
-   "rtl": false
+   "rtl": false,
+   "en": "Chinese",
+   "ko": "중국어"
   },
   {
    "file": "Thai",
    "code": "th",
    "name": "ภาษาไทย",
-   "rtl": false
+   "rtl": false,
+   "en": "Thai",
+   "ko": "태국어"
   },
   {
    "file": "Khmer",
    "code": "km",
    "name": "ភាសាខ្មែរ",
-   "rtl": false
+   "rtl": false,
+   "en": "Khmer",
+   "ko": "캄보디아어"
   },
   {
    "file": "Burmese",
    "code": "my",
    "name": "မြန်မာ",
-   "rtl": false
+   "rtl": false,
+   "en": "Burmese",
+   "ko": "버마어"
   },
   {
    "file": "Nepali",
    "code": "ne",
    "name": "नेपाली",
-   "rtl": false
+   "rtl": false,
+   "en": "Nepali",
+   "ko": "네팔어"
   },
   {
    "file": "Bengali",
    "code": "bn",
    "name": "বাংলা",
-   "rtl": false
+   "rtl": false,
+   "en": "Bengali",
+   "ko": "벵골어"
   },
   {
    "file": "Sinhala",
    "code": "si",
    "name": "සිංහල",
-   "rtl": false
+   "rtl": false,
+   "en": "Sinhala",
+   "ko": "싱할라어"
   },
   {
    "file": "Arabic",
    "code": "ar",
    "name": "العربية",
-   "rtl": true
+   "rtl": true,
+   "en": "Arabic",
+   "ko": "아랍어"
   },
   {
    "file": "Urdu",
    "code": "ur",
    "name": "اردو",
-   "rtl": true
+   "rtl": true,
+   "en": "Urdu",
+   "ko": "우르두어"
   }
  ],
  "text": {
