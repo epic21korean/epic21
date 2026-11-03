@@ -27,6 +27,9 @@
   },
   {
    "key": "easy"
+  },
+  {
+   "key": "poem"
   }
  ],
  "langs": [
@@ -229,6 +232,10 @@
     "easy": {
      "name": "쉬운 한국어 노래",
      "desc": "초급 어휘를 노래로 배우는 뮤직비디오 짝 교재 — 사진, 가사, 놀이, 단어 카드."
+    },
+    "poem": {
+     "name": "시로 배우는 한국어",
+     "desc": "중고급 학습자를 위한 창작시 교재 — 시 한 편, 낱말·문법, TOPIK II 유형 문제와 원고지."
     }
    },
    "ui": {
@@ -284,6 +291,10 @@
     "easy": {
      "name": "Easy Korean Songs",
      "desc": "Beginner textbooks paired with music videos — learn basic words through songs, photos, games and word cards."
+    },
+    "poem": {
+     "name": "Learn Korean with Poetry",
+     "desc": "Intermediate–advanced textbooks built on one original poem — words, grammar, TOPIK II-style questions and manuscript paper."
     }
    },
    "ui": {
@@ -339,6 +350,10 @@
     "easy": {
      "name": "Canciones fáciles en coreano",
      "desc": "Libros para principiantes con un videoclip cada uno: aprende palabras básicas con canciones, fotos, juegos y tarjetas."
+    },
+    "poem": {
+     "name": "Aprende coreano con poesía",
+     "desc": "Libros de nivel intermedio-avanzado basados en un poema original: vocabulario, gramática, preguntas tipo TOPIK II y papel de manuscrito."
     }
    },
    "ui": {
@@ -394,6 +409,10 @@
     "easy": {
      "name": "Chansons coréennes faciles",
      "desc": "Manuels pour débutants, chacun avec un clip : apprends les mots de base avec des chansons, des photos, des jeux et des cartes."
+    },
+    "poem": {
+     "name": "Apprendre le coréen par la poésie",
+     "desc": "Manuels intermédiaire-avancé autour d'un poème original : vocabulaire, grammaire, questions type TOPIK II et papier manuscrit."
     }
    },
    "ui": {
@@ -449,6 +468,10 @@
     "easy": {
      "name": "Músicas coreanas fáceis",
      "desc": "Livros para iniciantes com um videoclipe cada: aprenda palavras básicas com músicas, fotos, jogos e cartões."
+    },
+    "poem": {
+     "name": "Aprenda coreano com poesia",
+     "desc": "Livros de nível intermediário-avançado com um poema original: vocabulário, gramática, questões estilo TOPIK II e folha de redação."
     }
    },
    "ui": {
@@ -504,6 +527,10 @@
     "easy": {
      "name": "Lagu Korea Mudah",
      "desc": "Buku pemula yang masing-masing berpasangan dengan MV — belajar kosakata dasar lewat lagu, foto, permainan, dan kartu kata."
+    },
+    "poem": {
+     "name": "Belajar bahasa Korea lewat puisi",
+     "desc": "Buku tingkat menengah-mahir dari satu puisi asli — kosakata, tata bahasa, soal gaya TOPIK II dan kertas naskah."
     }
    },
    "ui": {
@@ -559,6 +586,10 @@
     "easy": {
      "name": "Bài hát tiếng Hàn dễ",
      "desc": "Giáo trình sơ cấp đi kèm MV — học từ vựng cơ bản qua bài hát, ảnh, trò chơi và thẻ từ."
+    },
+    "poem": {
+     "name": "Học tiếng Hàn qua thơ",
+     "desc": "Giáo trình trung–cao cấp xoay quanh một bài thơ sáng tác — từ vựng, ngữ pháp, câu hỏi dạng TOPIK II và giấy kẻ ô."
     }
    },
    "ui": {
@@ -614,6 +645,10 @@
     "easy": {
      "name": "Madadaling Kantang Korean",
      "desc": "Mga aklat para sa baguhan na may kasamang music video — matuto ng pangunahing salita sa kanta, larawan, laro at kard."
+    },
+    "poem": {
+     "name": "Matuto ng Korean sa tula",
+     "desc": "Aklat para sa intermediate–advanced mula sa isang orihinal na tula — salita, gramatika, tanong na parang TOPIK II at manuscript paper."
     }
    },
    "ui": {
@@ -669,6 +704,10 @@
     "easy": {
      "name": "Oson koreyscha qo‘shiqlar",
      "desc": "Har biri klip bilan juftlangan boshlang‘ich darsliklar — qo‘shiq, rasm, o‘yin va kartalar orqali asosiy so‘zlar."
+    },
+    "poem": {
+     "name": "She’r orqali koreys tili",
+     "desc": "O‘rta–yuqori darajadagi darsliklar: bitta asl she’r, so‘zlar, grammatika, TOPIK II uslubidagi savollar va katakli qog‘oz."
     }
    },
    "ui": {
@@ -724,6 +763,10 @@
     "easy": {
      "name": "Лёгкие корейские песни",
      "desc": "Учебники для начинающих, каждый с клипом: базовые слова через песни, фото, игры и карточки."
+    },
+    "poem": {
+     "name": "Корейский по стихам",
+     "desc": "Учебники среднего и продвинутого уровня по одному авторскому стихотворению: слова, грамматика, задания в формате TOPIK II и бланк для письма."
     }
    },
    "ui": {
@@ -779,6 +822,10 @@
     "easy": {
      "name": "Хялбар солонгос дуу",
      "desc": "Клип бүртэй хосолсон анхан шатны сурах бичиг — дуу, зураг, тоглоом, картаар үндсэн үг сурна."
+    },
+    "poem": {
+     "name": "Шүлгээр солонгос хэл",
+     "desc": "Дунд–ахисан түвшний сурах бичиг: нэг эх шүлэг, үг, дүрэм, TOPIK II маягийн даалгавар, нүдэн цаас."
     }
    },
    "ui": {
@@ -834,6 +881,10 @@
     "easy": {
      "name": "やさしい韓国語ソング",
      "desc": "MVとセットの初級テキスト — 歌・写真・あそび・単語カードで基本の単語を覚えよう。"
+    },
+    "poem": {
+     "name": "詩で学ぶ韓国語",
+     "desc": "中上級者向け、オリジナルの詩1編で学ぶテキスト ― 単語・文法・TOPIK II形式の問題・原稿用紙。"
     }
    },
    "ui": {
@@ -889,6 +940,10 @@
     "easy": {
      "name": "简单韩语歌曲",
      "desc": "与MV配套的初级教材——通过歌曲、照片、游戏和单词卡学习基础词汇。"
+    },
+    "poem": {
+     "name": "用诗学韩语",
+     "desc": "中高级教材，围绕一首原创诗——词汇、语法、TOPIK II题型练习和稿纸。"
     }
    },
    "ui": {
@@ -944,6 +999,10 @@
     "easy": {
      "name": "เพลงเกาหลีง่าย ๆ",
      "desc": "ตำราระดับต้นคู่กับ MV — เรียนคำศัพท์พื้นฐานผ่านเพลง ภาพ เกม และบัตรคำ"
+    },
+    "poem": {
+     "name": "เรียนภาษาเกาหลีผ่านบทกวี",
+     "desc": "ตำราระดับกลาง–สูงจากบทกวีต้นฉบับหนึ่งบท — คำศัพท์ ไวยากรณ์ โจทย์แบบ TOPIK II และกระดาษตาราง"
     }
    },
    "ui": {
@@ -999,6 +1058,10 @@
     "easy": {
      "name": "ចម្រៀងកូរ៉េងាយៗ",
      "desc": "សៀវភៅកម្រិតដំបូងភ្ជាប់ជាមួយ MV — រៀនពាក្យមូលដ្ឋានតាមចម្រៀង រូបថត ល្បែង និងកាតពាក្យ។"
+    },
+    "poem": {
+     "name": "រៀនភាសាកូរ៉េតាមកំណាព្យ",
+     "desc": "សៀវភៅកម្រិតមធ្យម–ខ្ពស់ ផ្អែកលើកំណាព្យដើមមួយ — ពាក្យ វេយ្យាករណ៍ លំហាត់បែប TOPIK II និងក្រដាសក្រឡា។"
     }
    },
    "ui": {
@@ -1054,6 +1117,10 @@
     "easy": {
      "name": "လွယ်ကူသော ကိုရီးယားသီချင်း",
      "desc": "MV နှင့်တွဲထားသော အခြေခံ စာအုပ်များ — သီချင်း၊ ဓာတ်ပုံ၊ ကစားနည်းနှင့် ကတ်များဖြင့် အခြေခံစကားလုံး လေ့လာပါ။"
+    },
+    "poem": {
+     "name": "ကဗျာဖြင့် ကိုရီးယားစကား",
+     "desc": "အလယ်–အဆင့်မြင့် ဖတ်စာ — မူရင်းကဗျာတစ်ပုဒ်၊ စကားလုံး၊ သဒ္ဒါ၊ TOPIK II ပုံစံမေးခွန်းနှင့် အကွက်စာရွက်။"
     }
    },
    "ui": {
@@ -1109,6 +1176,10 @@
     "easy": {
      "name": "सजिलो कोरियाली गीत",
      "desc": "म्युजिक भिडियोसँगको सुरुवाती पाठ्यपुस्तक — गीत, तस्बिर, खेल र कार्डबाट आधारभूत शब्द सिक्नुहोस्।"
+    },
+    "poem": {
+     "name": "कविताबाट कोरियाली",
+     "desc": "मध्यम–उच्च तहका पाठ्यपुस्तक — एउटा मौलिक कविता, शब्द, व्याकरण, TOPIK II शैलीका प्रश्न र कोठे कागज।"
     }
    },
    "ui": {
@@ -1164,6 +1235,10 @@
     "easy": {
      "name": "সহজ কোরিয়ান গান",
      "desc": "মিউজিক ভিডিওর সাথে প্রাথমিক পাঠ্যবই — গান, ছবি, খেলা ও কার্ডে মৌলিক শব্দ শিখুন।"
+    },
+    "poem": {
+     "name": "কবিতায় কোরিয়ান",
+     "desc": "মধ্যম–উচ্চ স্তরের পাঠ্যবই — একটি মৌলিক কবিতা, শব্দ, ব্যাকরণ, TOPIK II ধাঁচের প্রশ্ন ও ঘরকাটা কাগজ।"
     }
    },
    "ui": {
@@ -1219,6 +1294,10 @@
     "easy": {
      "name": "පහසු කොරියානු ගීත",
      "desc": "MV සමඟ ආරම්භක පෙළපොත් — ගීත, ඡායාරූප, ක්‍රීඩා සහ කාඩ්පත්වලින් මූලික වචන ඉගෙන ගන්න."
+    },
+    "poem": {
+     "name": "කවියෙන් කොරියානු",
+     "desc": "මධ්‍යම–උසස් පෙළපොත් — එක් මුල් කවියක්, වචන, ව්‍යාකරණ, TOPIK II ආකෘති ප්‍රශ්න සහ කොටු කඩදාසි."
     }
    },
    "ui": {
@@ -1274,6 +1353,10 @@
     "easy": {
      "name": "أغانٍ كورية سهلة",
      "desc": "كتب للمبتدئين مع فيديو موسيقي لكل منها — تعلّم الكلمات الأساسية بالأغاني والصور والألعاب والبطاقات."
+    },
+    "poem": {
+     "name": "تعلّم الكورية بالشعر",
+     "desc": "كتب للمستوى المتوسط والمتقدم حول قصيدة أصلية — مفردات وقواعد وأسئلة على نمط TOPIK II وورق مربعات للكتابة."
     }
    },
    "ui": {
@@ -1329,6 +1412,10 @@
     "easy": {
      "name": "آسان کوریائی گانے",
      "desc": "میوزک ویڈیو کے ساتھ ابتدائی درسی کتابیں — گانوں، تصاویر، کھیلوں اور کارڈز سے بنیادی الفاظ سیکھیں۔"
+    },
+    "poem": {
+     "name": "شاعری سے کوریائی",
+     "desc": "درمیانی تا اعلیٰ سطح کی کتابیں، ایک اصل نظم پر — الفاظ، گرامر، TOPIK II طرز کے سوالات اور خانوں والا کاغذ۔"
     }
    },
    "ui": {
@@ -1578,6 +1665,16 @@
    "vol": 1,
    "ko_sub": "반대말 1",
    "en_sub": "Opposites 1"
+  },
+  {
+   "id": "epic21-poem-01-first-payday",
+   "group": "poem",
+   "slug": "poem-01",
+   "ko": "시로 배우는 한국어 01 · 첫 월급날",
+   "en": "Learn Korean with Poetry No. 01 — First Payday",
+   "vol": 1,
+   "ko_sub": "첫 월급날",
+   "en_sub": "First Payday"
   }
  ],
  "files": {
@@ -2086,6 +2183,28 @@
    "EPIC21_EasySong01_Opposites1_18_Sinhala_Free.pdf",
    "EPIC21_EasySong01_Opposites1_19_Arabic_Free.pdf",
    "EPIC21_EasySong01_Opposites1_20_Urdu_Free.pdf"
+  ],
+  "epic21-poem-01-first-payday": [
+   "EPIC21_Poem01_FirstPayday_01_English_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_02_Spanish_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_03_French_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_04_Portuguese_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_05_Indonesian_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_06_Vietnamese_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_07_Tagalog_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_08_Uzbek_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_09_Russian_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_10_Mongolian_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_11_Japanese_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_13_Thai_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_14_Khmer_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_15_Burmese_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_16_Nepali_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_17_Bengali_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_18_Sinhala_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_19_Arabic_Free.pdf",
+   "EPIC21_Poem01_FirstPayday_20_Urdu_Free.pdf"
   ]
  }
 }
