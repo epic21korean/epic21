@@ -30,6 +30,9 @@
   },
   {
    "key": "poem"
+  },
+  {
+   "key": "ttg"
   }
  ],
  "langs": [
@@ -236,6 +239,10 @@
     "poem": {
      "name": "시로 배우는 한국어",
      "desc": "중고급 학습자를 위한 창작시 교재 — 시 한 편, 낱말·문법, TOPIK II 유형 문제와 원고지."
+    },
+    "ttg": {
+     "name": "유튜브 쇼츠로 배우는 한국어",
+     "desc": "『30년 후』 쇼츠와 짝을 이루는 2056 시간여행 가이드북 — 2026과 2056을 비교하며 초급·중급·고급 어휘와 표현, 정답 포함."
     }
    },
    "ui": {
@@ -295,6 +302,10 @@
     "poem": {
      "name": "Learn Korean with Poetry",
      "desc": "Intermediate–advanced textbooks built on one original poem — words, grammar, TOPIK II-style questions and manuscript paper."
+    },
+    "ttg": {
+     "name": "Learn Korean with YouTube Shorts",
+     "desc": "Time Travel Guide 2056, paired with the \"30 Years Later\" Shorts — compare 2026 and 2056 and learn beginner to advanced words and expressions. Answer key included."
     }
    },
    "ui": {
@@ -354,6 +365,10 @@
     "poem": {
      "name": "Aprende coreano con poesía",
      "desc": "Libros de nivel intermedio-avanzado basados en un poema original: vocabulario, gramática, preguntas tipo TOPIK II y papel de manuscrito."
+    },
+    "ttg": {
+     "name": "Aprende coreano con YouTube Shorts",
+     "desc": "Guía de viaje en el tiempo 2056, junto a los Shorts «30 años después»: compara 2026 y 2056 y aprende vocabulario y expresiones de nivel inicial a avanzado. Con respuestas."
     }
    },
    "ui": {
@@ -413,6 +428,10 @@
     "poem": {
      "name": "Apprendre le coréen par la poésie",
      "desc": "Manuels intermédiaire-avancé autour d'un poème original : vocabulaire, grammaire, questions type TOPIK II et papier manuscrit."
+    },
+    "ttg": {
+     "name": "Apprendre le coréen avec YouTube Shorts",
+     "desc": "Guide du voyage dans le temps 2056, avec les Shorts « Dans 30 ans » : comparez 2026 et 2056 et apprenez mots et expressions du niveau débutant à avancé. Corrigés inclus."
     }
    },
    "ui": {
@@ -472,6 +491,10 @@
     "poem": {
      "name": "Aprenda coreano com poesia",
      "desc": "Livros de nível intermediário-avançado com um poema original: vocabulário, gramática, questões estilo TOPIK II e folha de redação."
+    },
+    "ttg": {
+     "name": "Aprenda coreano com YouTube Shorts",
+     "desc": "Guia de Viagem no Tempo 2056, com os Shorts «30 anos depois»: compare 2026 e 2056 e aprenda vocabulário e expressões do nível básico ao avançado. Com gabarito."
     }
    },
    "ui": {
@@ -531,6 +554,10 @@
     "poem": {
      "name": "Belajar bahasa Korea lewat puisi",
      "desc": "Buku tingkat menengah-mahir dari satu puisi asli — kosakata, tata bahasa, soal gaya TOPIK II dan kertas naskah."
+    },
+    "ttg": {
+     "name": "Belajar Bahasa Korea dengan YouTube Shorts",
+     "desc": "Panduan Perjalanan Waktu 2056, pasangan Shorts \"30 Tahun Lagi\" — bandingkan 2026 dan 2056, pelajari kosakata dan ungkapan tingkat dasar hingga mahir. Dengan kunci jawaban."
     }
    },
    "ui": {
@@ -590,6 +617,10 @@
     "poem": {
      "name": "Học tiếng Hàn qua thơ",
      "desc": "Giáo trình trung–cao cấp xoay quanh một bài thơ sáng tác — từ vựng, ngữ pháp, câu hỏi dạng TOPIK II và giấy kẻ ô."
+    },
+    "ttg": {
+     "name": "Học tiếng Hàn qua YouTube Shorts",
+     "desc": "Cẩm nang du hành thời gian 2056, đi kèm Shorts \"30 năm sau\" — so sánh 2026 và 2056, học từ vựng và biểu hiện từ sơ cấp đến cao cấp. Có đáp án."
     }
    },
    "ui": {
@@ -649,6 +680,10 @@
     "poem": {
      "name": "Matuto ng Korean sa tula",
      "desc": "Aklat para sa intermediate–advanced mula sa isang orihinal na tula — salita, gramatika, tanong na parang TOPIK II at manuscript paper."
+    },
+    "ttg": {
+     "name": "Matuto ng Korean sa YouTube Shorts",
+     "desc": "Time Travel Guide 2056, kapares ng Shorts na \"30 Taon Mula Ngayon\" — paghambingin ang 2026 at 2056 at matuto ng mga salita at ekspresyon mula baguhan hanggang mataas na antas. May sagot."
     }
    },
    "ui": {
@@ -708,6 +743,10 @@
     "poem": {
      "name": "She’r orqali koreys tili",
      "desc": "O‘rta–yuqori darajadagi darsliklar: bitta asl she’r, so‘zlar, grammatika, TOPIK II uslubidagi savollar va katakli qog‘oz."
+    },
+    "ttg": {
+     "name": "YouTube Shorts orqali koreys tilini o‘rganing",
+     "desc": "2056-yil vaqt sayohati qo‘llanmasi, «30 yildan keyin» Shorts bilan — 2026 va 2056 ni solishtirib, boshlang‘ichdan yuqori darajagacha so‘z va iboralarni o‘rganing. Javoblar bilan."
     }
    },
    "ui": {
@@ -767,6 +806,10 @@
     "poem": {
      "name": "Корейский по стихам",
      "desc": "Учебники среднего и продвинутого уровня по одному авторскому стихотворению: слова, грамматика, задания в формате TOPIK II и бланк для письма."
+    },
+    "ttg": {
+     "name": "Корейский по YouTube Shorts",
+     "desc": "Путеводитель во времени 2056 к Shorts «Через 30 лет» — сравнивайте 2026 и 2056 и учите слова и выражения от начального до продвинутого уровня. С ответами."
     }
    },
    "ui": {
@@ -826,6 +869,10 @@
     "poem": {
      "name": "Шүлгээр солонгос хэл",
      "desc": "Дунд–ахисан түвшний сурах бичиг: нэг эх шүлэг, үг, дүрэм, TOPIK II маягийн даалгавар, нүдэн цаас."
+    },
+    "ttg": {
+     "name": "YouTube Shorts-оор солонгос хэл сур",
+     "desc": "«30 жилийн дараа» Shorts-тай хосолсон 2056 цаг хугацааны аяллын хөтөч — 2026 ба 2056-г харьцуулан анхан шатнаас ахисан түвшний үг, хэллэг сур. Хариутай."
     }
    },
    "ui": {
@@ -885,6 +932,10 @@
     "poem": {
      "name": "詩で学ぶ韓国語",
      "desc": "中上級者向け、オリジナルの詩1編で学ぶテキスト ― 単語・文法・TOPIK II形式の問題・原稿用紙。"
+    },
+    "ttg": {
+     "name": "YouTubeショートで学ぶ韓国語",
+     "desc": "ショート「30年後」とセットの2056タイムトラベルガイド — 2026年と2056年を比べながら初級〜上級の語彙と表現を学びます。解答付き。"
     }
    },
    "ui": {
@@ -944,6 +995,10 @@
     "poem": {
      "name": "用诗学韩语",
      "desc": "中高级教材，围绕一首原创诗——词汇、语法、TOPIK II题型练习和稿纸。"
+    },
+    "ttg": {
+     "name": "看YouTube短视频学韩语",
+     "desc": "与短视频《30年后》配套的《2056时间旅行指南》——对比2026年与2056年，学习初级到高级的词汇和表达。附答案。"
     }
    },
    "ui": {
@@ -1003,6 +1058,10 @@
     "poem": {
      "name": "เรียนภาษาเกาหลีผ่านบทกวี",
      "desc": "ตำราระดับกลาง–สูงจากบทกวีต้นฉบับหนึ่งบท — คำศัพท์ ไวยากรณ์ โจทย์แบบ TOPIK II และกระดาษตาราง"
+    },
+    "ttg": {
+     "name": "เรียนภาษาเกาหลีกับ YouTube Shorts",
+     "desc": "คู่มือเดินทางข้ามเวลา 2056 คู่กับ Shorts \"อีก 30 ปีข้างหน้า\" — เปรียบเทียบปี 2026 กับ 2056 เรียนคำศัพท์และสำนวนระดับต้นถึงระดับสูง มีเฉลย"
     }
    },
    "ui": {
@@ -1062,6 +1121,10 @@
     "poem": {
      "name": "រៀនភាសាកូរ៉េតាមកំណាព្យ",
      "desc": "សៀវភៅកម្រិតមធ្យម–ខ្ពស់ ផ្អែកលើកំណាព្យដើមមួយ — ពាក្យ វេយ្យាករណ៍ លំហាត់បែប TOPIK II និងក្រដាសក្រឡា។"
+    },
+    "ttg": {
+     "name": "រៀនភាសាកូរ៉េតាម YouTube Shorts",
+     "desc": "សៀវភៅណែនាំការធ្វើដំណើរឆ្លងពេលវេលា 2056 ភ្ជាប់ជាមួយ Shorts «30 ឆ្នាំក្រោយ» — ប្រៀបធៀប 2026 និង 2056 ហើយរៀនពាក្យ និងកន្សោមពីកម្រិតដំបូងដល់កម្រិតខ្ពស់។ មានចម្លើយ។"
     }
    },
    "ui": {
@@ -1121,6 +1184,10 @@
     "poem": {
      "name": "ကဗျာဖြင့် ကိုရီးယားစကား",
      "desc": "အလယ်–အဆင့်မြင့် ဖတ်စာ — မူရင်းကဗျာတစ်ပုဒ်၊ စကားလုံး၊ သဒ္ဒါ၊ TOPIK II ပုံစံမေးခွန်းနှင့် အကွက်စာရွက်။"
+    },
+    "ttg": {
+     "name": "YouTube Shorts ဖြင့် ကိုရီးယားစာ လေ့လာပါ",
+     "desc": "«နောက် နှစ် ၃၀» Shorts နှင့် တွဲထားသော ၂၀၅၆ အချိန်ခရီး လမ်းညွှန် — ၂၀၂၆ နှင့် ၂၀၅၆ ကို နှိုင်းယှဉ်ပြီး အခြေခံမှ အဆင့်မြင့်အထိ စကားလုံးနှင့် အသုံးအနှုန်းများ လေ့လာပါ။ အဖြေပါဝင်သည်။"
     }
    },
    "ui": {
@@ -1180,6 +1247,10 @@
     "poem": {
      "name": "कविताबाट कोरियाली",
      "desc": "मध्यम–उच्च तहका पाठ्यपुस्तक — एउटा मौलिक कविता, शब्द, व्याकरण, TOPIK II शैलीका प्रश्न र कोठे कागज।"
+    },
+    "ttg": {
+     "name": "YouTube Shorts बाट कोरियाली भाषा सिक्नुहोस्",
+     "desc": "«३० वर्षपछि» Shorts सँगको २०५६ समय-यात्रा गाइड — २०२६ र २०५६ तुलना गर्दै सुरुदेखि उच्च तहसम्मका शब्द र अभिव्यक्ति सिक्नुहोस्। उत्तरसहित।"
     }
    },
    "ui": {
@@ -1239,6 +1310,10 @@
     "poem": {
      "name": "কবিতায় কোরিয়ান",
      "desc": "মধ্যম–উচ্চ স্তরের পাঠ্যবই — একটি মৌলিক কবিতা, শব্দ, ব্যাকরণ, TOPIK II ধাঁচের প্রশ্ন ও ঘরকাটা কাগজ।"
+    },
+    "ttg": {
+     "name": "YouTube Shorts দিয়ে কোরীয় শিখুন",
+     "desc": "«৩০ বছর পর» Shorts-এর সঙ্গী ২০৫৬ টাইম ট্রাভেল গাইড — ২০২৬ ও ২০৫৬ তুলনা করে প্রাথমিক থেকে উচ্চ স্তরের শব্দ ও অভিব্যক্তি শিখুন। উত্তরসহ।"
     }
    },
    "ui": {
@@ -1298,6 +1373,10 @@
     "poem": {
      "name": "කවියෙන් කොරියානු",
      "desc": "මධ්‍යම–උසස් පෙළපොත් — එක් මුල් කවියක්, වචන, ව්‍යාකරණ, TOPIK II ආකෘති ප්‍රශ්න සහ කොටු කඩදාසි."
+    },
+    "ttg": {
+     "name": "YouTube Shorts මගින් කොරියානු ඉගෙන ගන්න",
+     "desc": "«අවුරුදු 30කට පසු» Shorts සමඟ 2056 කාල සංචාර මාර්ගෝපදේශය — 2026 සහ 2056 සසඳමින් මූලික සිට උසස් මට්ටම දක්වා වචන හා යෙදුම් ඉගෙන ගන්න. පිළිතුරු සහිතයි."
     }
    },
    "ui": {
@@ -1357,6 +1436,10 @@
     "poem": {
      "name": "تعلّم الكورية بالشعر",
      "desc": "كتب للمستوى المتوسط والمتقدم حول قصيدة أصلية — مفردات وقواعد وأسئلة على نمط TOPIK II وورق مربعات للكتابة."
+    },
+    "ttg": {
+     "name": "تعلّم الكورية مع YouTube Shorts",
+     "desc": "دليل السفر عبر الزمن 2056 المرافق لمقاطع «بعد 30 عامًا» — قارن بين 2026 و2056 وتعلّم المفردات والتعابير من المستوى المبتدئ إلى المتقدم. مع الإجابات."
     }
    },
    "ui": {
@@ -1416,6 +1499,10 @@
     "poem": {
      "name": "شاعری سے کوریائی",
      "desc": "درمیانی تا اعلیٰ سطح کی کتابیں، ایک اصل نظم پر — الفاظ، گرامر، TOPIK II طرز کے سوالات اور خانوں والا کاغذ۔"
+    },
+    "ttg": {
+     "name": "YouTube Shorts کے ساتھ کوریائی سیکھیں",
+     "desc": "«30 سال بعد» Shorts کے ساتھ 2056 ٹائم ٹریول گائیڈ — 2026 اور 2056 کا موازنہ کرتے ہوئے ابتدائی سے اعلیٰ سطح تک الفاظ اور اظہار سیکھیں۔ جوابات شامل ہیں۔"
     }
    },
    "ui": {
@@ -1675,6 +1762,26 @@
    "vol": 1,
    "ko_sub": "첫 월급날",
    "en_sub": "First Payday"
+  },
+  {
+   "id": "epic21-ttg2056-s1",
+   "group": "ttg",
+   "slug": "ttg-s1",
+   "ko": "2056 시간여행 가이드북 시리즈 1 (#01~#10)",
+   "en": "Time Travel Guide 2056 · Series 1 (#01–#10)",
+   "vol": 1,
+   "ko_sub": "시리즈 1",
+   "en_sub": "Series 1"
+  },
+  {
+   "id": "epic21-ttg2056-s2",
+   "group": "ttg",
+   "slug": "ttg-s2",
+   "ko": "2056 시간여행 가이드북 시리즈 2 (#11~#20)",
+   "en": "Time Travel Guide 2056 · Series 2 (#11–#20)",
+   "vol": 2,
+   "ko_sub": "시리즈 2",
+   "en_sub": "Series 2"
   }
  ],
  "files": {
@@ -2205,6 +2312,50 @@
    "EPIC21_Poem01_FirstPayday_18_Sinhala_Free.pdf",
    "EPIC21_Poem01_FirstPayday_19_Arabic_Free.pdf",
    "EPIC21_Poem01_FirstPayday_20_Urdu_Free.pdf"
+  ],
+  "epic21-ttg2056-s1": [
+   "EPIC21_TTG2056_S1_01_English_Free.pdf",
+   "EPIC21_TTG2056_S1_02_Spanish_Free.pdf",
+   "EPIC21_TTG2056_S1_03_French_Free.pdf",
+   "EPIC21_TTG2056_S1_04_Portuguese_Free.pdf",
+   "EPIC21_TTG2056_S1_05_Indonesian_Free.pdf",
+   "EPIC21_TTG2056_S1_06_Vietnamese_Free.pdf",
+   "EPIC21_TTG2056_S1_07_Tagalog_Free.pdf",
+   "EPIC21_TTG2056_S1_08_Uzbek_Free.pdf",
+   "EPIC21_TTG2056_S1_09_Russian_Free.pdf",
+   "EPIC21_TTG2056_S1_10_Mongolian_Free.pdf",
+   "EPIC21_TTG2056_S1_11_Japanese_Free.pdf",
+   "EPIC21_TTG2056_S1_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_TTG2056_S1_13_Thai_Free.pdf",
+   "EPIC21_TTG2056_S1_14_Khmer_Free.pdf",
+   "EPIC21_TTG2056_S1_15_Burmese_Free.pdf",
+   "EPIC21_TTG2056_S1_16_Nepali_Free.pdf",
+   "EPIC21_TTG2056_S1_17_Bengali_Free.pdf",
+   "EPIC21_TTG2056_S1_18_Sinhala_Free.pdf",
+   "EPIC21_TTG2056_S1_19_Arabic_Free.pdf",
+   "EPIC21_TTG2056_S1_20_Urdu_Free.pdf"
+  ],
+  "epic21-ttg2056-s2": [
+   "EPIC21_TTG2056_S2_01_English_Free.pdf",
+   "EPIC21_TTG2056_S2_02_Spanish_Free.pdf",
+   "EPIC21_TTG2056_S2_03_French_Free.pdf",
+   "EPIC21_TTG2056_S2_04_Portuguese_Free.pdf",
+   "EPIC21_TTG2056_S2_05_Indonesian_Free.pdf",
+   "EPIC21_TTG2056_S2_06_Vietnamese_Free.pdf",
+   "EPIC21_TTG2056_S2_07_Tagalog_Free.pdf",
+   "EPIC21_TTG2056_S2_08_Uzbek_Free.pdf",
+   "EPIC21_TTG2056_S2_09_Russian_Free.pdf",
+   "EPIC21_TTG2056_S2_10_Mongolian_Free.pdf",
+   "EPIC21_TTG2056_S2_11_Japanese_Free.pdf",
+   "EPIC21_TTG2056_S2_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_TTG2056_S2_13_Thai_Free.pdf",
+   "EPIC21_TTG2056_S2_14_Khmer_Free.pdf",
+   "EPIC21_TTG2056_S2_15_Burmese_Free.pdf",
+   "EPIC21_TTG2056_S2_16_Nepali_Free.pdf",
+   "EPIC21_TTG2056_S2_17_Bengali_Free.pdf",
+   "EPIC21_TTG2056_S2_18_Sinhala_Free.pdf",
+   "EPIC21_TTG2056_S2_19_Arabic_Free.pdf",
+   "EPIC21_TTG2056_S2_20_Urdu_Free.pdf"
   ]
  }
 }
