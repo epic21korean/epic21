@@ -1782,6 +1782,16 @@
    "vol": 2,
    "ko_sub": "시리즈 2",
    "en_sub": "Series 2"
+  },
+  {
+   "id": "epic21-ttg2056-s3",
+   "group": "ttg",
+   "slug": "ttg-s3",
+   "ko": "2056 시간여행 가이드북 시리즈 3 (#21~#30)",
+   "en": "Time Travel Guide 2056 · Series 3 (#21–#30)",
+   "vol": 3,
+   "ko_sub": "시리즈 3",
+   "en_sub": "Series 3"
   }
  ],
  "files": {
@@ -2356,6 +2366,28 @@
    "EPIC21_TTG2056_S2_18_Sinhala_Free.pdf",
    "EPIC21_TTG2056_S2_19_Arabic_Free.pdf",
    "EPIC21_TTG2056_S2_20_Urdu_Free.pdf"
+  ],
+  "epic21-ttg2056-s3": [
+   "EPIC21_TTG2056_S3_01_English_Free.pdf",
+   "EPIC21_TTG2056_S3_02_Spanish_Free.pdf",
+   "EPIC21_TTG2056_S3_03_French_Free.pdf",
+   "EPIC21_TTG2056_S3_04_Portuguese_Free.pdf",
+   "EPIC21_TTG2056_S3_05_Indonesian_Free.pdf",
+   "EPIC21_TTG2056_S3_06_Vietnamese_Free.pdf",
+   "EPIC21_TTG2056_S3_07_Tagalog_Free.pdf",
+   "EPIC21_TTG2056_S3_08_Uzbek_Free.pdf",
+   "EPIC21_TTG2056_S3_09_Russian_Free.pdf",
+   "EPIC21_TTG2056_S3_10_Mongolian_Free.pdf",
+   "EPIC21_TTG2056_S3_11_Japanese_Free.pdf",
+   "EPIC21_TTG2056_S3_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_TTG2056_S3_13_Thai_Free.pdf",
+   "EPIC21_TTG2056_S3_14_Khmer_Free.pdf",
+   "EPIC21_TTG2056_S3_15_Burmese_Free.pdf",
+   "EPIC21_TTG2056_S3_16_Nepali_Free.pdf",
+   "EPIC21_TTG2056_S3_17_Bengali_Free.pdf",
+   "EPIC21_TTG2056_S3_18_Sinhala_Free.pdf",
+   "EPIC21_TTG2056_S3_19_Arabic_Free.pdf",
+   "EPIC21_TTG2056_S3_20_Urdu_Free.pdf"
   ]
  }
 }
