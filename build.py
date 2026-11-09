@@ -24,6 +24,41 @@ OG_LOCALE = {'en':'en_US','es':'es_ES','fr':'fr_FR','pt':'pt_BR','id':'id_ID','v
              'my':'my_MM','ne':'ne_NP','bn':'bn_BD','si':'si_LK','ar':'ar_AR','ur':'ur_PK','ko':'ko_KR'}
 
 
+# 수준 표시 (영상 제목과 같은 4단계 + 초급~고급) — 2026-11-10
+LEVEL_KEY = {'입문': 'start', '초급': 'beg', '중급': 'int', '고급': 'adv', '전체': 'all'}
+LEVEL_KO = {'입문': '입문', '초급': '초급', '중급': '중급', '고급': '고급', '전체': '초급~고급'}
+LEVEL_IDX = {'입문': 0, '초급': 1, '중급': 2, '고급': 3, '전체': 4}
+LEVEL_WORDS = {
+    'en': ['Starter', 'Beginner', 'Intermediate', 'Advanced', 'All Levels'],
+    'ne': ['सुरुवात', 'प्रारम्भिक', 'मध्यम', 'उच्च', 'सबै स्तर'],
+    'ru': ['Вводный', 'Начальный', 'Средний', 'Продвинутый', 'Все уровни'],
+    'mn': ['Эхлэл', 'Анхан шат', 'Дунд шат', 'Ахисан шат', 'Бүх түвшин'],
+    'my': ['အစပြု', 'အခြေခံ', 'အလယ်အလတ်', 'အဆင့်မြင့်', 'အဆင့်အားလုံး'],
+    'vi': ['Nhập môn', 'Sơ cấp', 'Trung cấp', 'Cao cấp', 'Mọi trình độ'],
+    'bn': ['সূচনা', 'প্রাথমিক', 'মধ্যবর্তী', 'উচ্চতর', 'সব স্তর'],
+    'es': ['Introductorio', 'Principiante', 'Intermedio', 'Avanzado', 'Todos los niveles'],
+    'si': ['හැඳින්වීම', 'ආරම්භක', 'මධ්‍යම', 'උසස්', 'සියලු මට්ටම්'],
+    'ar': ['تمهيدي', 'مبتدئ', 'متوسط', 'متقدم', 'جميع المستويات'],
+    'ur': ['تعارفی', 'ابتدائی', 'درمیانہ', 'اعلیٰ', 'تمام سطحیں'],
+    'uz': ['Kirish', 'Boshlang‘ich', 'O‘rta', 'Yuqori', 'Barcha darajalar'],
+    'id': ['Pengenalan', 'Pemula', 'Menengah', 'Mahir', 'Semua Level'],
+    'ja': ['入門', '初級', '中級', '上級', '全レベル'],
+    'zh-Hans': ['入门', '初级', '中级', '高级', '全级别'],
+    'km': ['ចាប់ផ្ដើម', 'កម្រិតដំបូង', 'កម្រិតមធ្យម', 'កម្រិតខ្ពស់', 'គ្រប់កម្រិត'],
+    'tl': ['Panimula', 'Baguhan', 'Katamtaman', 'Mataas', 'Lahat ng Antas'],
+    'th': ['เบื้องต้น', 'ระดับต้น', 'ระดับกลาง', 'ระดับสูง', 'ทุกระดับ'],
+    'pt': ['Introdutório', 'Iniciante', 'Intermediário', 'Avançado', 'Todos os níveis'],
+    'fr': ['Découverte', 'Débutant', 'Intermédiaire', 'Avancé', 'Tous niveaux'],
+}
+
+
+def level_info(level, code):
+    if level not in LEVEL_KEY:
+        return None
+    words = LEVEL_WORDS.get(code, LEVEL_WORDS['en'])
+    return {'key': LEVEL_KEY[level], 'ko': LEVEL_KO[level], 'word': words[LEVEL_IDX[level]]}
+
+
 def load():
     with open(SITE, encoding='utf-8') as f:
         return json.load(f)
@@ -107,7 +142,8 @@ def build_page(site, env, lang, is_root):
                 name = b['ko']
                 vol_label = ''
             single = sum(1 for x in site['books'] if x['group'] == gk) == 1
-            bk = dict(b, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single)
+            lv = level_info(b.get('level'), 'en' if code == '_root' else code)
+            bk = dict(b, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"

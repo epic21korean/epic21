@@ -1526,6 +1526,7 @@
   {
    "id": "epic21-dive-01-haenyeo",
    "group": "mag",
+   "level": "고급",
    "slug": "dive-01",
    "ko": "K-Song 매거진 01호 · 해녀",
    "en": "K-Song Magazine No. 01 — Haenyeo",
@@ -1536,6 +1537,7 @@
   {
    "id": "epic21-essential-korean-grammar",
    "group": "core",
+   "level": "초급",
    "slug": "grammar",
    "ko": "한국어 필수 문법 완결판",
    "en": "Essential Korean Grammar",
@@ -1546,6 +1548,7 @@
   {
    "id": "epic21-classroom-korean-60",
    "group": "cls",
+   "level": "초급",
    "slug": "classroom",
    "ko": "교실 한국어 필수 표현 60",
    "en": "60 Essential Classroom Korean Expressions",
@@ -1556,6 +1559,7 @@
   {
    "id": "epic21-topik-vocab-grammar-s1",
    "group": "dlg",
+   "level": "초급",
    "slug": "dialogue1",
    "ko": "대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1",
    "en": "TOPIK Vocabulary & Grammar through Dialogue 1",
@@ -1566,6 +1570,7 @@
   {
    "id": "epic21-topik-vocab-grammar-s2",
    "group": "dlg",
+   "level": "초급",
    "slug": "dialogue2",
    "ko": "대화로 배우는 TOPIK 어휘와 문법 · 시리즈 2",
    "en": "TOPIK Vocabulary & Grammar through Dialogue 2",
@@ -1576,6 +1581,7 @@
   {
    "id": "epic21-topik2-writing-master",
    "group": "wrt",
+   "level": "고급",
    "slug": "writing",
    "ko": "외국인 학습자를 위한 TOPIK II 쓰기 마스터",
    "en": "TOPIK II Writing Master — Questions 51–54",
@@ -1586,6 +1592,7 @@
   {
    "id": "epic21-topik2-mv-vol1-four-seasons",
    "group": "mv2",
+   "level": "중급",
    "slug": "four-seasons",
    "ko": "뮤직비디오로 배우는 TOPIK II · 제1편 사계절",
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.1 'Four Seasons'",
@@ -1596,6 +1603,7 @@
   {
    "id": "epic21-topik2-mv-vol2-black-coffee",
    "group": "mv2",
+   "level": "중급",
    "slug": "black-coffee",
    "ko": "뮤직비디오로 배우는 TOPIK II · 제2편 블랙커피",
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.2 'Black Coffee'",
@@ -1606,6 +1614,7 @@
   {
    "id": "epic21-topik2-mv-vol3-cola",
    "group": "mv2",
+   "level": "중급",
    "slug": "cola",
    "ko": "뮤직비디오로 배우는 TOPIK II · 제3편 콜라",
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.3 'Cola'",
@@ -1616,6 +1625,7 @@
   {
    "id": "epic21-topik2-mv-vol4-curious",
    "group": "mv2",
+   "level": "중급",
    "slug": "curious",
    "ko": "뮤직비디오로 배우는 TOPIK II · 제4편 궁금해",
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.4 'Curious'",
@@ -1626,6 +1636,7 @@
   {
    "id": "epic21-topik2-mv-vol5-parting",
    "group": "mv2",
+   "level": "중급",
    "slug": "parting",
    "ko": "뮤직비디오로 배우는 TOPIK II · 제5편 회자정리",
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.5 'Those Who Meet Must Part'",
@@ -1636,6 +1647,7 @@
   {
    "id": "epic21-topik2-mv-vol6-favorite-song",
    "group": "mv2",
+   "level": "중급",
    "slug": "favorite-song",
    "ko": "뮤직비디오로 배우는 TOPIK II · 제6편 애창곡",
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.6 'My Favorite Song'",
@@ -1646,6 +1658,7 @@
   {
    "id": "epic21-topik1-mv-vol1-two-hands",
    "group": "mv1",
+   "level": "초급",
    "slug": "two-hands",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제1편 두 손으로",
    "en": "Learn Korean through a Music Video — TOPIK I, Vol.1 'With Both Hands'",
@@ -1656,6 +1669,7 @@
   {
    "id": "epic21-topik1-mv-vol2-restroom",
    "group": "mv1",
+   "level": "초급",
    "slug": "restroom",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제2편 화장실이 어디예요?",
    "en": "TOPIK I, Vol.2 'Where Is the Restroom?'",
@@ -1666,6 +1680,7 @@
   {
    "id": "epic21-topik1-mv-vol3-americano",
    "group": "mv1",
+   "level": "초급",
    "slug": "americano",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제3편 아이스아메리카노 두 잔 주세요",
    "en": "TOPIK I, Vol.3 'Two Iced Americanos, Please'",
@@ -1676,6 +1691,7 @@
   {
    "id": "epic21-topik1-mv-vol4-wifi",
    "group": "mv1",
+   "level": "초급",
    "slug": "wifi",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제4편 여기 와이파이 돼요?",
    "en": "TOPIK I, Vol.4 'Do You Have Wi-Fi Here?'",
@@ -1686,6 +1702,7 @@
   {
    "id": "epic21-topik1-mv-vol5-myeongdong",
    "group": "mv1",
+   "level": "초급",
    "slug": "myeongdong",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제5편 명동역이 어디예요?",
    "en": "TOPIK I, Vol.5 'Where Is Myeongdong Station?'",
@@ -1696,6 +1713,7 @@
   {
    "id": "epic21-topik1-mv-vol6-transit-card",
    "group": "mv1",
+   "level": "초급",
    "slug": "transitcard",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제6편 교통 카드 좀 충전해 주세요",
    "en": "TOPIK I, Vol.6 'Please Top Up My Transit Card'",
@@ -1706,6 +1724,7 @@
   {
    "id": "epic21-topik1-mv-vol7-shopping",
    "group": "mv1",
+   "level": "초급",
    "slug": "shopping",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제7편 이거 입어 봐도 돼요?",
    "en": "TOPIK I, Vol.7 'Can I Try This On?'",
@@ -1716,6 +1735,7 @@
   {
    "id": "epic21-topik1-mv-vol8-samgyeopsal",
    "group": "mv1",
+   "level": "초급",
    "slug": "samgyeopsal",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제8편 우리 삼겹살 먹을까?",
    "en": "TOPIK I, Vol.8 'Shall We Get Samgyeopsal?'",
@@ -1726,6 +1746,7 @@
   {
    "id": "epic21-topik1-mv-vol9-chicken",
    "group": "mv1",
+   "level": "초급",
    "slug": "chicken",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제9편 오는 데 얼마나 걸려요?",
    "en": "TOPIK I, Vol.9 'How Long Will It Take?'",
@@ -1736,6 +1757,7 @@
   {
    "id": "epic21-topik1-mv-vol10-clinic",
    "group": "mv1",
+   "level": "초급",
    "slug": "clinic",
    "ko": "뮤직비디오로 배우는 TOPIK I · 제10편 나 감기 걸렸나 봐",
    "en": "TOPIK I, Vol.10 'I Think I Caught a Cold'",
@@ -1746,6 +1768,7 @@
   {
    "id": "epic21-easysong-01-opposites1",
    "group": "easy",
+   "level": "초급",
    "slug": "easy-01",
    "ko": "쉬운 한국어 노래 01 · 반대말 1",
    "en": "Easy Korean Songs No. 01 — Opposites 1",
@@ -1756,6 +1779,7 @@
   {
    "id": "epic21-poem-01-first-payday",
    "group": "poem",
+   "level": "고급",
    "slug": "poem-01",
    "ko": "시로 배우는 한국어 01 · 첫 월급날",
    "en": "Learn Korean with Poetry No. 01 — First Payday",
@@ -1766,6 +1790,7 @@
   {
    "id": "epic21-ttg2056-s1",
    "group": "ttg",
+   "level": "전체",
    "slug": "ttg-s1",
    "ko": "2056 시간여행 가이드북 시리즈 1 (#01~#10)",
    "en": "Time Travel Guide 2056 · Series 1 (#01–#10)",
@@ -1776,6 +1801,7 @@
   {
    "id": "epic21-ttg2056-s2",
    "group": "ttg",
+   "level": "전체",
    "slug": "ttg-s2",
    "ko": "2056 시간여행 가이드북 시리즈 2 (#11~#20)",
    "en": "Time Travel Guide 2056 · Series 2 (#11–#20)",
@@ -1786,6 +1812,7 @@
   {
    "id": "epic21-ttg2056-s3",
    "group": "ttg",
+   "level": "전체",
    "slug": "ttg-s3",
    "ko": "2056 시간여행 가이드북 시리즈 3 (#21~#30)",
    "en": "Time Travel Guide 2056 · Series 3 (#21–#30)",
