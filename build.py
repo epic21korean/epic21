@@ -52,6 +52,26 @@ LEVEL_WORDS = {
 }
 
 
+# 허브 v3 새 문구 — 언어별 번역이 site.json text.<코드>.ui 에 없으면 영어로 채운다
+UI_NEW = {
+    'en': {'lede': 'Korean textbooks explained in your language, each paired with an EPIC21 video. Download the PDF and study for free.',
+           'books': 'textbooks', 'languages': 'languages', 'search': 'Search textbooks', 'level': 'Level',
+           'alllv': 'All levels', 'series': 'Series', 'saved': 'Saved', 'save': 'Save this textbook',
+           'saved_toast': 'Saved', 'unsaved_toast': 'Removed from saved', 'recent': 'Recently downloaded',
+           'watch': 'Watch the video', 'share': 'Share', 'copied': 'Link copied', 'theme': 'Light or dark screen',
+           'close': 'Close', 'none': 'No textbooks match.', 'reset': 'Show all textbooks', 'count': '{n} textbooks',
+           'dl_short': 'PDF', 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
+    'ko': {'lede': '여러분의 언어로 설명한 한국어 교재입니다. 교재마다 EPIC21 영상이 짝으로 있습니다. PDF를 받아 무료로 공부하세요.',
+           'books': '권', 'languages': '개 언어', 'search': '교재 찾기', 'level': '수준',
+           'alllv': '모든 수준', 'series': '시리즈', 'saved': '담은 교재', 'save': '이 교재 담기',
+           'saved_toast': '담았습니다', 'unsaved_toast': '담기를 뺐습니다', 'recent': '최근 받은 교재',
+           'watch': '영상 보기', 'share': '공유', 'copied': '주소를 복사했습니다', 'theme': '밝은 화면·어두운 화면',
+           'close': '닫기', 'none': '맞는 교재가 없습니다.', 'reset': '모든 교재 보기', 'count': '교재 {n}권',
+           'dl_short': 'PDF', 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
+}
+LEVEL_ORDER = ['입문', '초급', '중급', '고급']
+
+
 def level_info(level, code):
     if level not in LEVEL_KEY:
         return None
@@ -110,6 +130,7 @@ def build_page(site, env, lang, is_root):
     t = T.get(code, T['en'])
     count = len(site['books'])
     t = json.loads(json.dumps(t))  # 복사
+    ui = dict(UI_NEW['en']); ui.update(UI_NEW.get(code, {})); ui.update(t['ui']); t['ui'] = ui
     for k in ('title', 'desc'):
         t[k] = t[k].replace('{count}', str(count))
 
@@ -143,7 +164,13 @@ def build_page(site, env, lang, is_root):
                 vol_label = ''
             single = sum(1 for x in site['books'] if x['group'] == gk) == 1
             lv = level_info(b.get('level'), 'en' if code == '_root' else code)
-            bk = dict(b, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
+            vid = b.get('video') or ''
+            q = b.get('ko_sub') or b['ko'].split('·')[-1].strip()
+            video_url = (f"https://www.youtube.com/watch?v={vid}" if vid
+                         else site['youtube'].rstrip('/') + '/search?query=' + quote(q))
+            search = ' '.join(x for x in [b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
+                                         gt['name'], b.get('slug', '')] if x).lower()
+            bk = dict(b, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"
@@ -162,13 +189,18 @@ def build_page(site, env, lang, is_root):
 
     alternates = [{'code': L['code'], 'url': f"{site_url}/{L['code']}/"} for L in site['langs']]
 
+    lv_code = 'en' if code == '_root' else code
+    levels = [level_info(L, lv_code) for L in LEVEL_ORDER
+              if any(x.get('level') == L for x in site['books'])]
+    lang_names = {L['code'].split('-')[0] if L['code'] != 'zh-Hans' else 'zh-Hans': L['name'] for L in site['langs']}
+
     tpl = env.get_template('template.html')
     return tpl.render(
         lang=lang, t=t, is_root=is_root, base=base, page_url=page_url, site_url=site_url,
         og_image=og_image, og_locale=OG_LOCALE.get(code, 'en_US'),
         alternates=alternates, langs=site['langs'], groups=groups, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
-        about_ko=T['ko']['about'],
+        about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
         jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),
     )
 
