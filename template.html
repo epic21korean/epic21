@@ -106,7 +106,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ibtn[hidden]{display:none}
 #installBtn{border-color:var(--band)}
 #openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
-@media (max-width:400px){ #openLangs span{max-width:5.5em}.tools{gap:4px}.ibtn{padding:0 10px}}
+@media (max-width:420px){ #openLangs span{display:none}.tools{gap:4px}.ibtn{padding:0 10px}}
 @media (max-width:560px){.ibtn .lbl{display:none}}
 
 /* ── 원고지 제목 ── */
@@ -225,6 +225,8 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .books{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:26px 14px}
 .book{display:flex;flex-direction:column;min-width:0;border-radius:8px;transition:background .2s}
 .book[hidden]{display:none}
+.book{container-type:inline-size}
+@container (max-width:210px){.acts{flex-wrap:wrap}.acts .get{flex:1 1 100%}.acts .sq{flex:1 1 0;width:auto}}
 .books.solo{grid-template-columns:1fr}
 .solo .book{display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:1fr auto;grid-template-areas:"cover meta" "cover acts";gap:0 18px}
 .solo .cover{grid-area:cover}.solo .bmeta{grid-area:meta;align-self:end}.solo .acts{grid-area:acts;max-width:300px}
@@ -285,6 +287,52 @@ dialog.vdlg::backdrop{background:rgba(0,0,0,.8)}
 .totop{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:46px;height:46px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;background:var(--chip-on);color:var(--chip-on-ink);box-shadow:0 6px 18px rgba(0,0,0,.3)}
 .totop[hidden]{display:none}.totop svg{width:22px;height:22px}
+/* 어디서부터 */
+.startbtn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;min-height:46px;padding:0 18px;border-radius:999px;
+  background:var(--chip-on);color:var(--chip-on-ink);font-weight:700;font-size:15px}
+.startbtn b{font-weight:400}
+[dir=rtl] .startbtn b{transform:scaleX(-1)}
+.guide{max-width:min(520px,calc(100vw - 24px))}
+.gstep[hidden]{display:none}
+.gq{font-size:19px;font-weight:700;line-height:1.45;margin:6px 0 16px}
+.gans{display:flex;flex-wrap:wrap;gap:10px}
+.gbtn{min-height:48px;padding:0 22px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;font-size:16px}
+.gbtn:hover{border-color:var(--band)}
+.gmain{background:var(--band);color:var(--band-ink);border-color:var(--band)}
+.glink{text-decoration:underline;color:var(--ink-soft);padding:0 8px}
+.gresmark .gm-big{--s:34px}
+/* QR */
+.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
+.qrdlg img{display:block;margin:4px auto 10px;width:min(280px,70vw);height:auto;background:#fff;border-radius:8px;padding:6px}
+.qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
+/* 공부 끝 */
+.done{position:absolute;z-index:2;inset-inline-start:6px;bottom:6px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(15,26,54,.55);color:#fff}
+.done svg{width:20px;height:20px}
+.done[aria-pressed="true"]{background:#1F9A44}
+.stamp{position:absolute;z-index:2;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-12deg);padding:4px 12px;border:3px solid #1F9A44;border-radius:6px;
+  color:#1F9A44;background:rgba(255,255,255,.92);font-weight:900;font-size:15px;white-space:nowrap;display:none}
+.book.studied .stamp{display:block}
+.book.studied .cover img{filter:saturate(.35) brightness(.9)}
+.prog{font-weight:700;color:#1F9A44}
+.prog[hidden]{display:none}
+/* 새 교재 */
+.newtag{display:inline-block;padding:1px 7px;border-radius:4px;background:#D9213A;color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;vertical-align:2px}
+.cover .newtag{position:absolute;z-index:2;inset-inline-end:6px;top:6px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.strip a{position:relative}
+/* 구독 권유 */
+.subsheet{position:fixed;z-index:60;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));margin:0 auto;max-width:560px;
+  display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center;padding:14px 16px;border-radius:14px;
+  background:var(--surface);color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.35);border:1px solid var(--line);animation:up .25s ease-out}
+.subsheet[hidden]{display:none}
+@keyframes up{from{transform:translateY(20px);opacity:0}}
+.subsheet img{border-radius:50%}
+.subtxt{display:grid;gap:2px;font-size:14px;color:var(--ink-soft)}
+.subtxt b{color:var(--ink);font-size:15px}
+.subacts{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;align-items:center}
+.subgo{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;background:#E62117;color:#fff;font-weight:800;text-decoration:none}
+.subgo svg{width:20px;height:20px}
+.sublater{min-height:44px;padding:0 12px;color:var(--ink-soft)}
 /* 알림 */
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;
   padding:10px 18px;border-radius:999px;background:var(--chip-on);color:var(--chip-on-ink);font-size:14px;font-weight:500;
@@ -315,6 +363,9 @@ footer a{color:var(--muted)}
 </style>
 </head>
 <body>
+{% macro gm(key, step, cls='') -%}
+<span class="gm {{ cls }} gm-{{ key }}" aria-hidden="true">{% for i in range(4) %}<i class="{{ 'on' if (key == 'all' and i >= 1) or (key != 'all' and i <= step) else '' }} c{{ i }}"></i>{% endfor %}</span>
+{%- endmacro %}
 <div class="wrap">
 
 <div class="top">
@@ -330,6 +381,9 @@ footer a{color:var(--muted)}
       <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span class="lbl">{{ t.ui.yt }}</span>
     </a>
+    <button class="ibtn" id="qrBtn" type="button" aria-haspopup="dialog" aria-label="{{ t.ui.qr }}" title="{{ t.ui.qr }}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>
+    </button>
     <button class="ibtn" id="installBtn" type="button" hidden>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7m0 0-3-3m3 3 3-3"/></svg>
       <span class="lbl">{{ t.ui.install }}</span>
@@ -355,6 +409,9 @@ footer a{color:var(--muted)}
     <span>TOPIK I · II</span>
     <span>{{ t.ui.free }}</span>
   </div>
+  <button class="startbtn" id="startBtn" type="button" aria-haspopup="dialog">
+    {{ gm('beg', 1, 'gm-sm') }}<span>{{ t.ui.start }}</span><b aria-hidden="true">→</b>
+  </button>
   {% if is_root %}
   <div class="suggest" id="suggest" hidden></div>
   {% endif %}
@@ -365,9 +422,7 @@ footer a{color:var(--muted)}
   <div id="forvideo-slot"></div>
 </section>
 
-{% macro gm(key, step, cls='') -%}
-<span class="gm {{ cls }} gm-{{ key }}" aria-hidden="true">{% for i in range(4) %}<i class="{{ 'on' if (key == 'all' and i >= 1) or (key != 'all' and i <= step) else '' }} c{{ i }}"></i>{% endfor %}</span>
-{%- endmacro %}
+
 {% macro langgrid(cur) -%}
 <nav class="lgrid">
 {%- for L in langs %}
@@ -413,6 +468,11 @@ footer a{color:var(--muted)}
     <button class="chip" type="button" data-g="__fav" aria-pressed="false">♥ {{ t.ui.saved }}</button>
   </div>
 
+<section class="mine" id="newbox" hidden>
+  <h2><span class="newtag">NEW</span> {{ t.ui.new_title }}</h2>
+  <div class="strip" id="newStrip"></div>
+</section>
+
 <section class="mine" id="recent" hidden>
   <h2>{{ t.ui.recent }}</h2>
   <div class="strip" id="recentStrip"></div>
@@ -424,7 +484,7 @@ footer a{color:var(--muted)}
     <header class="thead">
       {{ gm(T.key, T.step, 'gm-big') }}
       <h2 class="tname" id="lvh-{{ T.key }}"><span lang="ko">{{ T.ko }}</span>{% if lang.code != 'ko' %}<span class="tword" lang="{{ 'en' if is_root else lang.code }}">{{ T.word }}</span>{% endif %}</h2>
-      <p class="tmeta"><span class="topik" dir="ltr">{{ T.topik }}</span><span>{{ t.ui.count.replace('{n}', T.n|string) }}</span></p>
+      <p class="tmeta"><span class="topik" dir="ltr">{{ T.topik }}</span><span>{{ t.ui.count.replace('{n}', T.n|string) }}</span><span class="prog" data-n="{{ T.n }}" hidden></span></p>
     </header>
     {%- for g in T.groups %}
     <section class="grp" id="g-{{ g.key }}-{{ T.key }}" data-g="{{ g.key }}">
@@ -435,7 +495,7 @@ footer a{color:var(--muted)}
       </div>
       <div class="books{% if g.books|length == 1 %} solo{% endif %}">
       {%- for b in g.books %}
-    <article class="book" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
+    <article class="book" data-added="{{ b.added }}" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
       <div class="cover">
         <span class="ph" aria-hidden="true">{{ b.vol or '' }}</span>
         <img src="{{ b.cover }}" alt="" loading="lazy" width="180" height="254"
@@ -444,6 +504,10 @@ footer a{color:var(--muted)}
         {%- if b.lv %}
         <span class="lv lv-{{ b.lv.key }}">{{ gm(b.lv.key, b.lv.step, 'gm-xs') }}<b lang="ko">{{ b.lv.ko }}</b>{% if lang.code != 'ko' %}<span lang="{{ 'en' if is_root else lang.code }}">{{ b.lv.word }}</span>{% endif %}</span>
         {%- endif %}
+        <button class="done" type="button" aria-pressed="false" aria-label="{{ t.ui.done }}" title="{{ t.ui.done }}" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">{{ t.ui.done }}</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="{{ t.ui.save }}" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -460,7 +524,7 @@ footer a{color:var(--muted)}
       </div>
       <div class="acts">
         {%- if b.pdf %}
-        <a class="get" href="{{ b.pdf }}" data-get>
+        <a class="get" href="{{ b.pdf }}" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>{{ t.ui.dl_short }}</span>{% if b.size %}<small class="sz" dir="ltr">{{ b.size }}</small>{% endif %}
         </a>
@@ -504,12 +568,39 @@ footer a{color:var(--muted)}
   <div class="vbar"><a id="vlink" href="{{ youtube }}" rel="noopener">{{ t.ui.yt }}</a><button type="button" data-close>{{ t.ui.close }} ✕</button></div>
 </dialog>
 <a class="totop" id="totop" href="#" aria-label="{{ t.ui.top }}" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg></a>
+<dialog class="ldlg guide" id="guideDlg" aria-labelledby="guideT">
+  <div class="ldlg-head"><h2 id="guideT">{{ t.ui.start }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  <div class="gstep" data-step="1"><p class="gq">{{ t.ui.q1 }}</p><div class="gans"><button type="button" class="gbtn" data-go="2">{{ t.ui.yes }}</button><button type="button" class="gbtn" data-res="hangul">{{ t.ui.no }}</button></div></div>
+  <div class="gstep" data-step="2" hidden><p class="gq">{{ t.ui.q2 }}</p><div class="gans"><button type="button" class="gbtn" data-go="3">{{ t.ui.yes }}</button><button type="button" class="gbtn" data-res="beg">{{ t.ui.no }}</button></div></div>
+  <div class="gstep" data-step="3" hidden><p class="gq">{{ t.ui.q3 }}</p><div class="gans"><button type="button" class="gbtn" data-res="adv">{{ t.ui.yes }}</button><button type="button" class="gbtn" data-res="int">{{ t.ui.no }}</button></div></div>
+  <div class="gstep gres" data-step="res" hidden>
+    <div class="gresmark" id="gresMark"></div>
+    <p class="gq" id="gresText"></p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="gShow">{{ t.ui.show }}</button><button type="button" class="glink" id="gAgain">{{ t.ui.again }}</button></div>
+  </div>
+</dialog>
+
+<dialog class="ldlg qrdlg" id="qrDlg" aria-labelledby="qrT">
+  <div class="ldlg-head"><h2 id="qrT">{{ t.ui.qr }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  <img src="{{ base }}qr/{{ qrname }}.svg" alt="{{ page_url }}" width="280" height="280" loading="lazy">
+  <p>{{ t.ui.qr_text }}</p>
+  <p class="qrurl" dir="ltr">{{ page_url }}</p>
+</dialog>
+
+<div class="subsheet" id="subSheet" role="dialog" aria-labelledby="subT" hidden>
+  <img src="{{ base }}icons/icon-192.png" alt="" width="52" height="52">
+  <div class="subtxt"><b id="subT">{{ t.ui.sub_title }}</b><span>{{ t.ui.sub_text }}</span></div>
+  <div class="subacts">
+    <a class="subgo" id="subGo" href="{{ youtube_sub }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>{{ t.ui.sub_btn }}</a>
+    <button type="button" class="sublater" id="subLater">{{ t.ui.later }}</button>
+  </div>
+</div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
 (function(){
   var UI={copied:{{ t.ui.copied|tojson }},saved:{{ t.ui.saved_toast|tojson }},unsaved:{{ t.ui.unsaved_toast|tojson }},
-          count:{{ t.ui.count|tojson }},go:{{ t.ui.go|tojson }},dismiss:{{ t.ui.dismiss|tojson }}};
+          count:{{ t.ui.count|tojson }},donecount:{{ t.ui.done_count|tojson }},rhangul:{{ t.ui.r_hangul|tojson }},rlevel:{{ t.ui.r_level|tojson }},go:{{ t.ui.go|tojson }},dismiss:{{ t.ui.dismiss|tojson }}};
   var PAGE={{ lang.code|tojson }}, ROOT={{ 'true' if is_root else 'false' }};
   var LANGS={{ lang_names|tojson }};
   var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
@@ -646,6 +737,77 @@ footer a{color:var(--muted)}
   window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;ib.hidden=false});
   ib.addEventListener('click',function(){if(!deferred)return;deferred.prompt();deferred.userChoice.finally(function(){deferred=null;ib.hidden=true})});
   window.addEventListener('appinstalled',function(){ib.hidden=true});
+  var NOW=Date.now(), DAY=864e5;
+  /* 새 교재 (30일 이내) */
+  function paintNew(){
+    var strip=$('#newStrip'); strip.innerHTML='';
+    books.forEach(function(b){
+      var a=b.dataset.added; if(!a)return;
+      var age=(NOW-new Date(a+'T00:00:00').getTime())/DAY; if(age<0||age>30)return;
+      var c=$('.cover',b); if(!$('.newtag',c)){var t=document.createElement('span');t.className='newtag';t.textContent='NEW';c.appendChild(t)}
+      var x=document.createElement('a'); x.href='#'+b.dataset.slug; x.dataset.slug=b.dataset.slug;
+      var im=$('.cover img',b); x.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
+      x.lastChild.textContent=$('.bname',b).textContent.trim(); strip.appendChild(x);
+    });
+    $('#newbox').hidden=!strip.children.length;
+  }
+  $('#newStrip').addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;e.preventDefault();jump(a.dataset.slug)});
+  function jump(slug){
+    var b=$('.book[data-slug="'+slug+'"]',$('#shelf')); if(!b)return;
+    if(b.hidden){$('#reset').click()}
+    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+  }
+
+  /* 공부 끝 */
+  var done=store('epic21-done')||[];
+  function paintDone(){
+    $$('.book').forEach(function(b){var on=done.indexOf(b.dataset.slug)>-1;b.classList.toggle('studied',on);var d=$('[data-done]',b);if(d)d.setAttribute('aria-pressed',on?'true':'false')});
+    $$('.tier').forEach(function(t){
+      var p=$('.prog',t), n=0; $$('.book',t).forEach(function(b){if(done.indexOf(b.dataset.slug)>-1)n++});
+      p.hidden=!n; p.textContent='✓ '+UI.donecount.replace('{d}',n).replace('{n}',p.dataset.n);
+    });
+  }
+  document.addEventListener('click',function(e){
+    var d=e.target.closest('[data-done]'); if(!d)return;
+    var s=d.closest('.book').dataset.slug, i=done.indexOf(s);
+    if(i>-1)done.splice(i,1); else {done.push(s); track('done/'+s,'공부 끝 '+s)}
+    store('epic21-done',done); paintDone();
+  });
+
+  /* 어디서부터 시작할까 */
+  var gd=$('#guideDlg'), LV={{ level_names|tojson }}, gres='';
+  function gstep(n){$$('.gstep',gd).forEach(function(x){x.hidden=x.dataset.step!==String(n)})}
+  $('#startBtn').addEventListener('click',function(){gstep(1);gd.showModal();track('guide/open','수준 찾기 열기')});
+  gd.addEventListener('click',function(e){
+    var g=e.target.closest('[data-go]'); if(g){gstep(g.dataset.go);return}
+    var r=e.target.closest('[data-res]'); if(!r)return;
+    gres=r.dataset.res; var key=gres==='hangul'?'beg':gres;
+    $('#gresMark').innerHTML=$('.tier-'+key+' .gm-big')?$('.tier-'+key+' .gm-big').outerHTML:'';
+    $('#gresText').textContent=gres==='hangul'?UI.rhangul:UI.rlevel.replace('{level}',LV[key]||key);
+    gstep('res'); track('guide/'+gres,'수준 찾기 결과 '+gres);
+  });
+  $('#gAgain').addEventListener('click',function(){gstep(1)});
+  $('#gShow').addEventListener('click',function(){
+    gd.close(); var key=gres==='hangul'?'beg':gres;
+    var chip=$('#lvs [data-lv="'+key+'"]'); if(chip)chip.click();
+    var target=gres==='hangul'?($('.grp[data-g="easy"]')||$('#lv-beg')):$('#lv-'+key);
+    if(target)setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'})},60);
+  });
+
+  /* QR */
+  $('#qrBtn').addEventListener('click',function(){$('#qrDlg').showModal();track('qr/'+PAGE,'QR 열기')});
+
+  /* PDF 받은 뒤 구독 권유: 구독을 누르면 다시 안 뜨고, 나중에는 7일 동안 안 뜬다 */
+  var sheet=$('#subSheet');
+  function maybeSub(){
+    var st=store('epic21-sub'); if(st==='yes'||(typeof st==='number'&&NOW-st<7*DAY))return;
+    setTimeout(function(){sheet.hidden=false},500);
+  }
+  $('#subGo').addEventListener('click',function(){store('epic21-sub','yes');sheet.hidden=true;track('subscribe/'+PAGE,'구독 누름')});
+  $('#subLater').addEventListener('click',function(){store('epic21-sub',Date.now());sheet.hidden=true});
+  document.addEventListener('click',function(e){if(e.target.closest('[data-get]'))maybeSub()});
+
+  paintNew(); paintDone();
   paintFav(); paintRecent(); apply(); show();
   window.addEventListener('hashchange',show);
 })();

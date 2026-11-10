@@ -123,7 +123,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ibtn[hidden]{display:none}
 #installBtn{border-color:var(--band)}
 #openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
-@media (max-width:400px){ #openLangs span{max-width:5.5em}.tools{gap:4px}.ibtn{padding:0 10px}}
+@media (max-width:420px){ #openLangs span{display:none}.tools{gap:4px}.ibtn{padding:0 10px}}
 @media (max-width:560px){.ibtn .lbl{display:none}}
 
 /* ── 원고지 제목 ── */
@@ -242,6 +242,8 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .books{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:26px 14px}
 .book{display:flex;flex-direction:column;min-width:0;border-radius:8px;transition:background .2s}
 .book[hidden]{display:none}
+.book{container-type:inline-size}
+@container (max-width:210px){.acts{flex-wrap:wrap}.acts .get{flex:1 1 100%}.acts .sq{flex:1 1 0;width:auto}}
 .books.solo{grid-template-columns:1fr}
 .solo .book{display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:1fr auto;grid-template-areas:"cover meta" "cover acts";gap:0 18px}
 .solo .cover{grid-area:cover}.solo .bmeta{grid-area:meta;align-self:end}.solo .acts{grid-area:acts;max-width:300px}
@@ -302,6 +304,52 @@ dialog.vdlg::backdrop{background:rgba(0,0,0,.8)}
 .totop{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:46px;height:46px;border-radius:50%;
   display:flex;align-items:center;justify-content:center;background:var(--chip-on);color:var(--chip-on-ink);box-shadow:0 6px 18px rgba(0,0,0,.3)}
 .totop[hidden]{display:none}.totop svg{width:22px;height:22px}
+/* 어디서부터 */
+.startbtn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;min-height:46px;padding:0 18px;border-radius:999px;
+  background:var(--chip-on);color:var(--chip-on-ink);font-weight:700;font-size:15px}
+.startbtn b{font-weight:400}
+[dir=rtl] .startbtn b{transform:scaleX(-1)}
+.guide{max-width:min(520px,calc(100vw - 24px))}
+.gstep[hidden]{display:none}
+.gq{font-size:19px;font-weight:700;line-height:1.45;margin:6px 0 16px}
+.gans{display:flex;flex-wrap:wrap;gap:10px}
+.gbtn{min-height:48px;padding:0 22px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;font-size:16px}
+.gbtn:hover{border-color:var(--band)}
+.gmain{background:var(--band);color:var(--band-ink);border-color:var(--band)}
+.glink{text-decoration:underline;color:var(--ink-soft);padding:0 8px}
+.gresmark .gm-big{--s:34px}
+/* QR */
+.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
+.qrdlg img{display:block;margin:4px auto 10px;width:min(280px,70vw);height:auto;background:#fff;border-radius:8px;padding:6px}
+.qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
+/* 공부 끝 */
+.done{position:absolute;z-index:2;inset-inline-start:6px;bottom:6px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(15,26,54,.55);color:#fff}
+.done svg{width:20px;height:20px}
+.done[aria-pressed="true"]{background:#1F9A44}
+.stamp{position:absolute;z-index:2;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-12deg);padding:4px 12px;border:3px solid #1F9A44;border-radius:6px;
+  color:#1F9A44;background:rgba(255,255,255,.92);font-weight:900;font-size:15px;white-space:nowrap;display:none}
+.book.studied .stamp{display:block}
+.book.studied .cover img{filter:saturate(.35) brightness(.9)}
+.prog{font-weight:700;color:#1F9A44}
+.prog[hidden]{display:none}
+/* 새 교재 */
+.newtag{display:inline-block;padding:1px 7px;border-radius:4px;background:#D9213A;color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;vertical-align:2px}
+.cover .newtag{position:absolute;z-index:2;inset-inline-end:6px;top:6px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.strip a{position:relative}
+/* 구독 권유 */
+.subsheet{position:fixed;z-index:60;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));margin:0 auto;max-width:560px;
+  display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center;padding:14px 16px;border-radius:14px;
+  background:var(--surface);color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.35);border:1px solid var(--line);animation:up .25s ease-out}
+.subsheet[hidden]{display:none}
+@keyframes up{from{transform:translateY(20px);opacity:0}}
+.subsheet img{border-radius:50%}
+.subtxt{display:grid;gap:2px;font-size:14px;color:var(--ink-soft)}
+.subtxt b{color:var(--ink);font-size:15px}
+.subacts{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;align-items:center}
+.subgo{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;background:#E62117;color:#fff;font-weight:800;text-decoration:none}
+.subgo svg{width:20px;height:20px}
+.sublater{min-height:44px;padding:0 12px;color:var(--ink-soft)}
 /* 알림 */
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;
   padding:10px 18px;border-radius:999px;background:var(--chip-on);color:var(--chip-on-ink);font-size:14px;font-weight:500;
@@ -332,6 +380,7 @@ footer a{color:var(--muted)}
 </style>
 </head>
 <body>
+
 <div class="wrap">
 
 <div class="top">
@@ -342,6 +391,9 @@ footer a{color:var(--muted)}
       <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span class="lbl">Watch on YouTube</span>
     </a>
+    <button class="ibtn" id="qrBtn" type="button" aria-haspopup="dialog" aria-label="QR code" title="QR code">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>
+    </button>
     <button class="ibtn" id="installBtn" type="button" hidden>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7m0 0-3-3m3 3 3-3"/></svg>
       <span class="lbl">Install app</span>
@@ -364,6 +416,9 @@ footer a{color:var(--muted)}
     <span>TOPIK I · II</span>
     <span>No sign-up · No payment</span>
   </div>
+  <button class="startbtn" id="startBtn" type="button" aria-haspopup="dialog">
+    <span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><span>Where should I start?</span><b aria-hidden="true">→</b>
+  </button>
   
   <div class="suggest" id="suggest" hidden></div>
   
@@ -437,6 +492,11 @@ footer a{color:var(--muted)}
     <button class="chip" type="button" data-g="__fav" aria-pressed="false">♥ Saved</button>
   </div>
 
+<section class="mine" id="newbox" hidden>
+  <h2><span class="newtag">NEW</span> New textbooks</h2>
+  <div class="strip" id="newStrip"></div>
+</section>
+
 <section class="mine" id="recent" hidden>
   <h2>Recently downloaded</h2>
   <div class="strip" id="recentStrip"></div>
@@ -447,7 +507,7 @@ footer a{color:var(--muted)}
     <header class="thead">
       <span class="gm gm-big gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>
       <h2 class="tname" id="lvh-beg"><span lang="ko">초급</span><span class="tword" lang="en">Beginner</span></h2>
-      <p class="tmeta"><span class="topik" dir="ltr">TOPIK I · 1–2</span><span>15 textbooks</span></p>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK I · 1–2</span><span>15 textbooks</span><span class="prog" data-n="15" hidden></span></p>
     </header>
     <section class="grp" id="g-core-beg" data-g="core">
       <div class="ghead">
@@ -456,13 +516,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">한국어 필수 문법 완결판</p>
       </div>
       <div class="books solo">
-    <article class="book" data-slug="grammar" data-lv="beg" data-q="한국어 필수 문법 완결판 essential korean grammar essential korean grammar grammar">
+    <article class="book" data-added="2026-08-07" data-slug="grammar" data-lv="beg" data-q="한국어 필수 문법 완결판 essential korean grammar essential korean grammar grammar">
       <div class="cover">
         <span class="ph" aria-hidden="true"></span>
         <img src="covers/epic21-essential-korean-grammar/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-essential-korean-grammar'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -472,7 +536,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Essential Korean Grammar</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-essential-korean-grammar/00_EPIC21_EssentialKoreanGrammar_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-essential-korean-grammar/00_EPIC21_EssentialKoreanGrammar_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">7.3 MB</small>
         </a>
@@ -493,13 +557,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">교실 한국어</p>
       </div>
       <div class="books solo">
-    <article class="book" data-slug="classroom" data-lv="beg" data-q="교실 한국어 필수 표현 60 60 essential classroom korean expressions 수업이 들리는 첫걸음 your first step to understanding class classroom korean classroom">
+    <article class="book" data-added="2026-08-31" data-slug="classroom" data-lv="beg" data-q="교실 한국어 필수 표현 60 60 essential classroom korean expressions 수업이 들리는 첫걸음 your first step to understanding class classroom korean classroom">
       <div class="cover">
         <span class="ph" aria-hidden="true"></span>
         <img src="covers/epic21-classroom-korean-60/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-classroom-korean-60'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -509,7 +577,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">60 Essential Classroom Korean Expressions</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-classroom-korean-60/00_EPIC21_ClassroomKorean60_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-classroom-korean-60/00_EPIC21_ClassroomKorean60_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">5.1 MB</small>
         </a>
@@ -530,13 +598,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</p>
       </div>
       <div class="books">
-    <article class="book" data-slug="dialogue1" data-lv="beg" data-q="대화로 배우는 topik 어휘와 문법 · 시리즈 1 topik vocabulary &amp; grammar through dialogue 1 dialogues 1–20 topik vocabulary &amp; grammar through dialogue dialogue1">
+    <article class="book" data-added="2026-08-07" data-slug="dialogue1" data-lv="beg" data-q="대화로 배우는 topik 어휘와 문법 · 시리즈 1 topik vocabulary &amp; grammar through dialogue 1 dialogues 1–20 topik vocabulary &amp; grammar through dialogue dialogue1">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-topik-vocab-grammar-s1/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik-vocab-grammar-s1'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -547,7 +619,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Dialogues 1–20</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik-vocab-grammar-s1/EPIC21_TOPIK_VocabGrammar_S1_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik-vocab-grammar-s1/EPIC21_TOPIK_VocabGrammar_S1_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">5.3 MB</small>
         </a>
@@ -559,13 +631,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="dialogue2" data-lv="beg" data-q="대화로 배우는 topik 어휘와 문법 · 시리즈 2 topik vocabulary &amp; grammar through dialogue 2 dialogues 21–40 topik vocabulary &amp; grammar through dialogue dialogue2">
+    <article class="book" data-added="2026-08-24" data-slug="dialogue2" data-lv="beg" data-q="대화로 배우는 topik 어휘와 문법 · 시리즈 2 topik vocabulary &amp; grammar through dialogue 2 dialogues 21–40 topik vocabulary &amp; grammar through dialogue dialogue2">
       <div class="cover">
         <span class="ph" aria-hidden="true">2</span>
         <img src="covers/epic21-topik-vocab-grammar-s2/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik-vocab-grammar-s2'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -576,7 +652,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Dialogues 21–40</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik-vocab-grammar-s2/EPIC21_TOPIK_VocabGrammar_S2_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik-vocab-grammar-s2/EPIC21_TOPIK_VocabGrammar_S2_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.7 MB</small>
         </a>
@@ -597,13 +673,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</p>
       </div>
       <div class="books">
-    <article class="book" data-slug="two-hands" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제1편 두 손으로 learn korean through a music video — topik i, vol.1 &#39;with both hands&#39; 두 손으로 with both hands learn korean through music videos — topik i two-hands">
+    <article class="book" data-added="2026-08-07" data-slug="two-hands" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제1편 두 손으로 learn korean through a music video — topik i, vol.1 &#39;with both hands&#39; 두 손으로 with both hands learn korean through music videos — topik i two-hands">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-topik1-mv-vol1-two-hands/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol1-two-hands'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -614,7 +694,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">With Both Hands</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol1-two-hands/EPIC21_TOPIK1_Vol1_TwoHands_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol1-two-hands/EPIC21_TOPIK1_Vol1_TwoHands_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">3.7 MB</small>
         </a>
@@ -626,13 +706,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="restroom" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제2편 화장실이 어디예요? topik i, vol.2 &#39;where is the restroom?&#39; 화장실이 어디예요? where is the restroom? learn korean through music videos — topik i restroom">
+    <article class="book" data-added="2026-08-12" data-slug="restroom" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제2편 화장실이 어디예요? topik i, vol.2 &#39;where is the restroom?&#39; 화장실이 어디예요? where is the restroom? learn korean through music videos — topik i restroom">
       <div class="cover">
         <span class="ph" aria-hidden="true">2</span>
         <img src="covers/epic21-topik1-mv-vol2-restroom/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol2-restroom'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -643,7 +727,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Where Is the Restroom?</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol2-restroom/%EC%A0%9C2%ED%8E%B8_%ED%99%94%EC%9E%A5%EC%8B%A4%EC%9D%B4_%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol2-restroom/%EC%A0%9C2%ED%8E%B8_%ED%99%94%EC%9E%A5%EC%8B%A4%EC%9D%B4_%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -655,13 +739,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="americano" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제3편 아이스아메리카노 두 잔 주세요 topik i, vol.3 &#39;two iced americanos, please&#39; 아이스아메리카노 두 잔 주세요 two iced americanos, please learn korean through music videos — topik i americano">
+    <article class="book" data-added="2026-08-12" data-slug="americano" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제3편 아이스아메리카노 두 잔 주세요 topik i, vol.3 &#39;two iced americanos, please&#39; 아이스아메리카노 두 잔 주세요 two iced americanos, please learn korean through music videos — topik i americano">
       <div class="cover">
         <span class="ph" aria-hidden="true">3</span>
         <img src="covers/epic21-topik1-mv-vol3-americano/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol3-americano'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -672,7 +760,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Two Iced Americanos, Please</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol3-americano/%EC%A0%9C3%ED%8E%B8_%EC%95%84%EC%9D%B4%EC%8A%A4%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8_%EB%91%90_%EC%9E%94_%EC%A3%BC%EC%84%B8%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol3-americano/%EC%A0%9C3%ED%8E%B8_%EC%95%84%EC%9D%B4%EC%8A%A4%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8_%EB%91%90_%EC%9E%94_%EC%A3%BC%EC%84%B8%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -684,13 +772,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="wifi" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제4편 여기 와이파이 돼요? topik i, vol.4 &#39;do you have wi-fi here?&#39; 여기 와이파이 돼요? do you have wi-fi here? learn korean through music videos — topik i wifi">
+    <article class="book" data-added="2026-08-12" data-slug="wifi" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제4편 여기 와이파이 돼요? topik i, vol.4 &#39;do you have wi-fi here?&#39; 여기 와이파이 돼요? do you have wi-fi here? learn korean through music videos — topik i wifi">
       <div class="cover">
         <span class="ph" aria-hidden="true">4</span>
         <img src="covers/epic21-topik1-mv-vol4-wifi/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol4-wifi'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -701,7 +793,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Do You Have Wi-Fi Here?</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol4-wifi/%EC%A0%9C4%ED%8E%B8_%EC%97%AC%EA%B8%B0_%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4_%EB%8F%BC%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol4-wifi/%EC%A0%9C4%ED%8E%B8_%EC%97%AC%EA%B8%B0_%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4_%EB%8F%BC%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -713,13 +805,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="myeongdong" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제5편 명동역이 어디예요? topik i, vol.5 &#39;where is myeongdong station?&#39; 명동역이 어디예요? where is myeongdong station? learn korean through music videos — topik i myeongdong">
+    <article class="book" data-added="2026-08-12" data-slug="myeongdong" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제5편 명동역이 어디예요? topik i, vol.5 &#39;where is myeongdong station?&#39; 명동역이 어디예요? where is myeongdong station? learn korean through music videos — topik i myeongdong">
       <div class="cover">
         <span class="ph" aria-hidden="true">5</span>
         <img src="covers/epic21-topik1-mv-vol5-myeongdong/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol5-myeongdong'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -730,7 +826,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Where Is Myeongdong Station?</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol5-myeongdong/%EC%A0%9C5%ED%8E%B8_%EB%AA%85%EB%8F%99%EC%97%AD%EC%9D%B4_%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol5-myeongdong/%EC%A0%9C5%ED%8E%B8_%EB%AA%85%EB%8F%99%EC%97%AD%EC%9D%B4_%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -742,13 +838,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="transitcard" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제6편 교통 카드 좀 충전해 주세요 topik i, vol.6 &#39;please top up my transit card&#39; 교통 카드 좀 충전해 주세요 please top up my transit card learn korean through music videos — topik i transitcard">
+    <article class="book" data-added="2026-08-12" data-slug="transitcard" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제6편 교통 카드 좀 충전해 주세요 topik i, vol.6 &#39;please top up my transit card&#39; 교통 카드 좀 충전해 주세요 please top up my transit card learn korean through music videos — topik i transitcard">
       <div class="cover">
         <span class="ph" aria-hidden="true">6</span>
         <img src="covers/epic21-topik1-mv-vol6-transit-card/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol6-transit-card'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -759,7 +859,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Please Top Up My Transit Card</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol6-transit-card/%EC%A0%9C6%ED%8E%B8_%EA%B5%90%ED%86%B5%EC%B9%B4%EB%93%9C_%EC%B6%A9%EC%A0%84%ED%95%B4_%EC%A3%BC%EC%84%B8%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol6-transit-card/%EC%A0%9C6%ED%8E%B8_%EA%B5%90%ED%86%B5%EC%B9%B4%EB%93%9C_%EC%B6%A9%EC%A0%84%ED%95%B4_%EC%A3%BC%EC%84%B8%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -771,13 +871,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="shopping" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제7편 이거 입어 봐도 돼요? topik i, vol.7 &#39;can i try this on?&#39; 이거 입어 봐도 돼요? can i try this on? learn korean through music videos — topik i shopping">
+    <article class="book" data-added="2026-08-12" data-slug="shopping" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제7편 이거 입어 봐도 돼요? topik i, vol.7 &#39;can i try this on?&#39; 이거 입어 봐도 돼요? can i try this on? learn korean through music videos — topik i shopping">
       <div class="cover">
         <span class="ph" aria-hidden="true">7</span>
         <img src="covers/epic21-topik1-mv-vol7-shopping/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol7-shopping'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -788,7 +892,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Can I Try This On?</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol7-shopping/%EC%A0%9C7%ED%8E%B8_%EC%9D%B4%EA%B1%B0_%EC%9E%85%EC%96%B4_%EB%B4%90%EB%8F%84_%EB%8F%BC%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol7-shopping/%EC%A0%9C7%ED%8E%B8_%EC%9D%B4%EA%B1%B0_%EC%9E%85%EC%96%B4_%EB%B4%90%EB%8F%84_%EB%8F%BC%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -800,13 +904,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="samgyeopsal" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제8편 우리 삼겹살 먹을까? topik i, vol.8 &#39;shall we get samgyeopsal?&#39; 우리 삼겹살 먹을까? shall we get samgyeopsal? learn korean through music videos — topik i samgyeopsal">
+    <article class="book" data-added="2026-08-12" data-slug="samgyeopsal" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제8편 우리 삼겹살 먹을까? topik i, vol.8 &#39;shall we get samgyeopsal?&#39; 우리 삼겹살 먹을까? shall we get samgyeopsal? learn korean through music videos — topik i samgyeopsal">
       <div class="cover">
         <span class="ph" aria-hidden="true">8</span>
         <img src="covers/epic21-topik1-mv-vol8-samgyeopsal/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol8-samgyeopsal'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -817,7 +925,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Shall We Get Samgyeopsal?</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol8-samgyeopsal/%EC%A0%9C8%ED%8E%B8_%EC%9A%B0%EB%A6%AC_%EC%82%BC%EA%B2%B9%EC%82%B4_%EB%A8%B9%EC%9D%84%EA%B9%8C_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol8-samgyeopsal/%EC%A0%9C8%ED%8E%B8_%EC%9A%B0%EB%A6%AC_%EC%82%BC%EA%B2%B9%EC%82%B4_%EB%A8%B9%EC%9D%84%EA%B9%8C_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -829,13 +937,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="chicken" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제9편 오는 데 얼마나 걸려요? topik i, vol.9 &#39;how long will it take?&#39; 오는 데 얼마나 걸려요? how long will it take? learn korean through music videos — topik i chicken">
+    <article class="book" data-added="2026-08-12" data-slug="chicken" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제9편 오는 데 얼마나 걸려요? topik i, vol.9 &#39;how long will it take?&#39; 오는 데 얼마나 걸려요? how long will it take? learn korean through music videos — topik i chicken">
       <div class="cover">
         <span class="ph" aria-hidden="true">9</span>
         <img src="covers/epic21-topik1-mv-vol9-chicken/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol9-chicken'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -846,7 +958,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">How Long Will It Take?</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol9-chicken/%EC%A0%9C9%ED%8E%B8_%EC%98%A4%EB%8A%94_%EB%8D%B0_%EC%96%BC%EB%A7%88%EB%82%98_%EA%B1%B8%EB%A0%A4%EC%9A%94_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol9-chicken/%EC%A0%9C9%ED%8E%B8_%EC%98%A4%EB%8A%94_%EB%8D%B0_%EC%96%BC%EB%A7%88%EB%82%98_%EA%B1%B8%EB%A0%A4%EC%9A%94_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -858,13 +970,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="clinic" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제10편 나 감기 걸렸나 봐 topik i, vol.10 &#39;i think i caught a cold&#39; 나 감기 걸렸나 봐 i think i caught a cold learn korean through music videos — topik i clinic">
+    <article class="book" data-added="2026-08-12" data-slug="clinic" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제10편 나 감기 걸렸나 봐 topik i, vol.10 &#39;i think i caught a cold&#39; 나 감기 걸렸나 봐 i think i caught a cold learn korean through music videos — topik i clinic">
       <div class="cover">
         <span class="ph" aria-hidden="true">10</span>
         <img src="covers/epic21-topik1-mv-vol10-clinic/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol10-clinic'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -875,7 +991,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">I Think I Caught a Cold</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol10-clinic/%EC%A0%9C10%ED%8E%B8_%EB%82%98_%EA%B0%90%EA%B8%B0_%EA%B1%B8%EB%A0%B8%EB%82%98_%EB%B4%90_01_English.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol10-clinic/%EC%A0%9C10%ED%8E%B8_%EB%82%98_%EA%B0%90%EA%B8%B0_%EA%B1%B8%EB%A0%B8%EB%82%98_%EB%B4%90_01_English.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
@@ -896,13 +1012,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">쉬운 한국어 노래</p>
       </div>
       <div class="books solo">
-    <article class="book" data-slug="easy-01" data-lv="beg" data-q="쉬운 한국어 노래 01 · 반대말 1 easy korean songs no. 01 — opposites 1 반대말 1 opposites 1 easy korean songs easy-01">
+    <article class="book" data-added="2026-11-01" data-slug="easy-01" data-lv="beg" data-q="쉬운 한국어 노래 01 · 반대말 1 easy korean songs no. 01 — opposites 1 반대말 1 opposites 1 easy korean songs easy-01">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-easysong-01-opposites1/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-easysong-01-opposites1'}else{this.remove()}">
         <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="en">Beginner</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -912,7 +1032,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Easy Korean Songs No. 01 — Opposites 1</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-easysong-01-opposites1/EPIC21_EasySong01_Opposites1_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-easysong-01-opposites1/EPIC21_EasySong01_Opposites1_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">4.9 MB</small>
         </a>
@@ -931,7 +1051,7 @@ footer a{color:var(--muted)}
     <header class="thead">
       <span class="gm gm-big gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span>
       <h2 class="tname" id="lvh-int"><span lang="ko">중급</span><span class="tword" lang="en">Intermediate</span></h2>
-      <p class="tmeta"><span class="topik" dir="ltr">TOPIK II · 3–4</span><span>6 textbooks</span></p>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK II · 3–4</span><span>6 textbooks</span><span class="prog" data-n="6" hidden></span></p>
     </header>
     <section class="grp" id="g-mv2-int" data-g="mv2">
       <div class="ghead">
@@ -940,13 +1060,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</p>
       </div>
       <div class="books">
-    <article class="book" data-slug="four-seasons" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제1편 사계절 learn korean through music videos — topik ii, vol.1 &#39;four seasons&#39; 사계절 four seasons learn korean through music videos — topik ii four-seasons">
+    <article class="book" data-added="2026-08-09" data-slug="four-seasons" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제1편 사계절 learn korean through music videos — topik ii, vol.1 &#39;four seasons&#39; 사계절 four seasons learn korean through music videos — topik ii four-seasons">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-topik2-mv-vol1-four-seasons/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol1-four-seasons'}else{this.remove()}">
         <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="en">Intermediate</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -957,7 +1081,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Four Seasons</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol1-four-seasons/EPIC21_FourSeasons_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol1-four-seasons/EPIC21_FourSeasons_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.7 MB</small>
         </a>
@@ -969,13 +1093,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="black-coffee" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제2편 블랙커피 learn korean through music videos — topik ii, vol.2 &#39;black coffee&#39; 블랙커피 black coffee learn korean through music videos — topik ii black-coffee">
+    <article class="book" data-added="2026-08-15" data-slug="black-coffee" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제2편 블랙커피 learn korean through music videos — topik ii, vol.2 &#39;black coffee&#39; 블랙커피 black coffee learn korean through music videos — topik ii black-coffee">
       <div class="cover">
         <span class="ph" aria-hidden="true">2</span>
         <img src="covers/epic21-topik2-mv-vol2-black-coffee/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol2-black-coffee'}else{this.remove()}">
         <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="en">Intermediate</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -986,7 +1114,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Black Coffee</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol2-black-coffee/EPIC21_BlackCoffee_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol2-black-coffee/EPIC21_BlackCoffee_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
@@ -998,13 +1126,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="cola" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제3편 콜라 learn korean through music videos — topik ii, vol.3 &#39;cola&#39; 콜라 cola learn korean through music videos — topik ii cola">
+    <article class="book" data-added="2026-08-15" data-slug="cola" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제3편 콜라 learn korean through music videos — topik ii, vol.3 &#39;cola&#39; 콜라 cola learn korean through music videos — topik ii cola">
       <div class="cover">
         <span class="ph" aria-hidden="true">3</span>
         <img src="covers/epic21-topik2-mv-vol3-cola/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol3-cola'}else{this.remove()}">
         <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="en">Intermediate</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1015,7 +1147,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Cola</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol3-cola/EPIC21_Cola_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol3-cola/EPIC21_Cola_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
@@ -1027,13 +1159,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="curious" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제4편 궁금해 learn korean through music videos — topik ii, vol.4 &#39;curious&#39; 궁금해 curious learn korean through music videos — topik ii curious">
+    <article class="book" data-added="2026-08-15" data-slug="curious" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제4편 궁금해 learn korean through music videos — topik ii, vol.4 &#39;curious&#39; 궁금해 curious learn korean through music videos — topik ii curious">
       <div class="cover">
         <span class="ph" aria-hidden="true">4</span>
         <img src="covers/epic21-topik2-mv-vol4-curious/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol4-curious'}else{this.remove()}">
         <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="en">Intermediate</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1044,7 +1180,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Curious</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol4-curious/EPIC21_Curious_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol4-curious/EPIC21_Curious_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">28 MB</small>
         </a>
@@ -1056,13 +1192,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="parting" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제5편 회자정리 learn korean through music videos — topik ii, vol.5 &#39;those who meet must part&#39; 회자정리 those who meet must part learn korean through music videos — topik ii parting">
+    <article class="book" data-added="2026-08-15" data-slug="parting" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제5편 회자정리 learn korean through music videos — topik ii, vol.5 &#39;those who meet must part&#39; 회자정리 those who meet must part learn korean through music videos — topik ii parting">
       <div class="cover">
         <span class="ph" aria-hidden="true">5</span>
         <img src="covers/epic21-topik2-mv-vol5-parting/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol5-parting'}else{this.remove()}">
         <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="en">Intermediate</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1073,7 +1213,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Those Who Meet Must Part</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol5-parting/EPIC21_Parting_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol5-parting/EPIC21_Parting_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.2 MB</small>
         </a>
@@ -1085,13 +1225,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="favorite-song" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제6편 애창곡 learn korean through music videos — topik ii, vol.6 &#39;my favorite song&#39; 애창곡 my favorite song learn korean through music videos — topik ii favorite-song">
+    <article class="book" data-added="2026-08-15" data-slug="favorite-song" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제6편 애창곡 learn korean through music videos — topik ii, vol.6 &#39;my favorite song&#39; 애창곡 my favorite song learn korean through music videos — topik ii favorite-song">
       <div class="cover">
         <span class="ph" aria-hidden="true">6</span>
         <img src="covers/epic21-topik2-mv-vol6-favorite-song/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol6-favorite-song'}else{this.remove()}">
         <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="en">Intermediate</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1102,7 +1246,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">My Favorite Song</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol6-favorite-song/EPIC21_FavoriteSong_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol6-favorite-song/EPIC21_FavoriteSong_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.1 MB</small>
         </a>
@@ -1121,7 +1265,7 @@ footer a{color:var(--muted)}
     <header class="thead">
       <span class="gm gm-big gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>
       <h2 class="tname" id="lvh-adv"><span lang="ko">고급</span><span class="tword" lang="en">Advanced</span></h2>
-      <p class="tmeta"><span class="topik" dir="ltr">TOPIK II · 5–6</span><span>3 textbooks</span></p>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK II · 5–6</span><span>3 textbooks</span><span class="prog" data-n="3" hidden></span></p>
     </header>
     <section class="grp" id="g-mag-adv" data-g="mag">
       <div class="ghead">
@@ -1130,13 +1274,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">K-Song 매거진</p>
       </div>
       <div class="books solo">
-    <article class="book" data-slug="dive-01" data-lv="adv" data-q="k-song 매거진 01호 · 해녀 k-song magazine no. 01 — haenyeo 해녀 haenyeo k-song magazine dive-01">
+    <article class="book" data-added="2026-10-27" data-slug="dive-01" data-lv="adv" data-q="k-song 매거진 01호 · 해녀 k-song magazine no. 01 — haenyeo 해녀 haenyeo k-song magazine dive-01">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-dive-01-haenyeo/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-dive-01-haenyeo'}else{this.remove()}">
         <span class="lv lv-adv"><span class="gm gm-xs gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">고급</b><span lang="en">Advanced</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1146,7 +1294,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">K-Song Magazine No. 01 — Haenyeo</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-dive-01-haenyeo/EPIC21_DIVE01_Haenyeo_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-dive-01-haenyeo/EPIC21_DIVE01_Haenyeo_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">11 MB</small>
         </a>
@@ -1167,13 +1315,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">TOPIK II 쓰기</p>
       </div>
       <div class="books solo">
-    <article class="book" data-slug="writing" data-lv="adv" data-q="외국인 학습자를 위한 topik ii 쓰기 마스터 topik ii writing master — questions 51–54 topik ii writing writing">
+    <article class="book" data-added="2026-08-07" data-slug="writing" data-lv="adv" data-q="외국인 학습자를 위한 topik ii 쓰기 마스터 topik ii writing master — questions 51–54 topik ii writing writing">
       <div class="cover">
         <span class="ph" aria-hidden="true"></span>
         <img src="covers/epic21-topik2-writing-master/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-writing-master'}else{this.remove()}">
         <span class="lv lv-adv"><span class="gm gm-xs gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">고급</b><span lang="en">Advanced</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1183,7 +1335,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">TOPIK II Writing Master — Questions 51–54</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-writing-master/EPIC21_TOPIK2_WritingMaster_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-topik2-writing-master/EPIC21_TOPIK2_WritingMaster_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">3.1 MB</small>
         </a>
@@ -1204,13 +1356,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">시로 배우는 한국어</p>
       </div>
       <div class="books solo">
-    <article class="book" data-slug="poem-01" data-lv="adv" data-q="시로 배우는 한국어 01 · 첫 월급날 learn korean with poetry no. 01 — first payday 첫 월급날 first payday learn korean with poetry poem-01">
+    <article class="book" data-added="2026-11-03" data-slug="poem-01" data-lv="adv" data-q="시로 배우는 한국어 01 · 첫 월급날 learn korean with poetry no. 01 — first payday 첫 월급날 first payday learn korean with poetry poem-01">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-poem-01-first-payday/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-poem-01-first-payday'}else{this.remove()}">
         <span class="lv lv-adv"><span class="gm gm-xs gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">고급</b><span lang="en">Advanced</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1220,7 +1376,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">Learn Korean with Poetry No. 01 — First Payday</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-poem-01-first-payday/EPIC21_Poem01_FirstPayday_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-poem-01-first-payday/EPIC21_Poem01_FirstPayday_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">6.4 MB</small>
         </a>
@@ -1239,7 +1395,7 @@ footer a{color:var(--muted)}
     <header class="thead">
       <span class="gm gm-big gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>
       <h2 class="tname" id="lvh-all"><span lang="ko">초급~고급</span><span class="tword" lang="en">All Levels</span></h2>
-      <p class="tmeta"><span class="topik" dir="ltr">TOPIK I – II</span><span>3 textbooks</span></p>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK I – II</span><span>3 textbooks</span><span class="prog" data-n="3" hidden></span></p>
     </header>
     <section class="grp" id="g-ttg-all" data-g="ttg">
       <div class="ghead">
@@ -1248,13 +1404,17 @@ footer a{color:var(--muted)}
         <p class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</p>
       </div>
       <div class="books">
-    <article class="book" data-slug="ttg-s1" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 1 (#01~#10) time travel guide 2056 · series 1 (#01–#10) 시리즈 1 #01–#10 learn korean with youtube shorts ttg-s1">
+    <article class="book" data-added="2026-11-09" data-slug="ttg-s1" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 1 (#01~#10) time travel guide 2056 · series 1 (#01–#10) 시리즈 1 #01–#10 learn korean with youtube shorts ttg-s1">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="covers/epic21-ttg2056-s1/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-ttg2056-s1'}else{this.remove()}">
         <span class="lv lv-all"><span class="gm gm-xs gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">초급~고급</b><span lang="en">All Levels</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1265,7 +1425,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">#01–#10</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-ttg2056-s1/EPIC21_TTG2056_S1_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-ttg2056-s1/EPIC21_TTG2056_S1_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">24 MB</small>
         </a>
@@ -1277,13 +1437,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="ttg-s2" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 2 (#11~#20) time travel guide 2056 · series 2 (#11–#20) 시리즈 2 #11–#20 learn korean with youtube shorts ttg-s2">
+    <article class="book" data-added="2026-11-09" data-slug="ttg-s2" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 2 (#11~#20) time travel guide 2056 · series 2 (#11–#20) 시리즈 2 #11–#20 learn korean with youtube shorts ttg-s2">
       <div class="cover">
         <span class="ph" aria-hidden="true">2</span>
         <img src="covers/epic21-ttg2056-s2/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-ttg2056-s2'}else{this.remove()}">
         <span class="lv lv-all"><span class="gm gm-xs gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">초급~고급</b><span lang="en">All Levels</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1294,7 +1458,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">#11–#20</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-ttg2056-s2/EPIC21_TTG2056_S2_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-ttg2056-s2/EPIC21_TTG2056_S2_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">25 MB</small>
         </a>
@@ -1306,13 +1470,17 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    <article class="book" data-slug="ttg-s3" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 3 (#21~#30) time travel guide 2056 · series 3 (#21–#30) 시리즈 3 #21–#30 learn korean with youtube shorts ttg-s3">
+    <article class="book" data-added="2026-11-09" data-slug="ttg-s3" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 3 (#21~#30) time travel guide 2056 · series 3 (#21–#30) 시리즈 3 #21–#30 learn korean with youtube shorts ttg-s3">
       <div class="cover">
         <span class="ph" aria-hidden="true">3</span>
         <img src="covers/epic21-ttg2056-s3/English.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-ttg2056-s3'}else{this.remove()}">
         <span class="lv lv-all"><span class="gm gm-xs gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">초급~고급</b><span lang="en">All Levels</span></span>
+        <button class="done" type="button" aria-pressed="false" aria-label="Studied" title="Studied" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">Studied</span>
         <button class="fav" type="button" aria-pressed="false" aria-label="Save this textbook" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
@@ -1323,7 +1491,7 @@ footer a{color:var(--muted)}
         <p class="bsub" lang="en">#21–#30</p>
       </div>
       <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-ttg2056-s3/EPIC21_TTG2056_S3_01_English_Free.pdf" data-get>
+        <a class="get" href="https://archive.org/download/epic21-ttg2056-s3/EPIC21_TTG2056_S3_01_English_Free.pdf" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">31 MB</small>
         </a>
@@ -1361,12 +1529,39 @@ footer a{color:var(--muted)}
   <div class="vbar"><a id="vlink" href="https://www.youtube.com/@EPIC21korean" rel="noopener">Watch on YouTube</a><button type="button" data-close>Close ✕</button></div>
 </dialog>
 <a class="totop" id="totop" href="#" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg></a>
+<dialog class="ldlg guide" id="guideDlg" aria-labelledby="guideT">
+  <div class="ldlg-head"><h2 id="guideT">Where should I start?</h2><button class="ibtn" type="button" data-close aria-label="Close">✕</button></div>
+  <div class="gstep" data-step="1"><p class="gq">Can you read Hangul (한글)?</p><div class="gans"><button type="button" class="gbtn" data-go="2">Yes</button><button type="button" class="gbtn" data-res="hangul">Not yet</button></div></div>
+  <div class="gstep" data-step="2" hidden><p class="gq">Can you introduce yourself and order at a café in Korean?</p><div class="gans"><button type="button" class="gbtn" data-go="3">Yes</button><button type="button" class="gbtn" data-res="beg">Not yet</button></div></div>
+  <div class="gstep" data-step="3" hidden><p class="gq">Can you read TOPIK II passages or Korean news?</p><div class="gans"><button type="button" class="gbtn" data-res="adv">Yes</button><button type="button" class="gbtn" data-res="int">Not yet</button></div></div>
+  <div class="gstep gres" data-step="res" hidden>
+    <div class="gresmark" id="gresMark"></div>
+    <p class="gq" id="gresText"></p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="gShow">Show these textbooks</button><button type="button" class="glink" id="gAgain">Start over</button></div>
+  </div>
+</dialog>
+
+<dialog class="ldlg qrdlg" id="qrDlg" aria-labelledby="qrT">
+  <div class="ldlg-head"><h2 id="qrT">QR code</h2><button class="ibtn" type="button" data-close aria-label="Close">✕</button></div>
+  <img src="qr/root.svg" alt="https://epic21korean.github.io/epic21/" width="280" height="280" loading="lazy">
+  <p>Scan to open this page on a phone.</p>
+  <p class="qrurl" dir="ltr">https://epic21korean.github.io/epic21/</p>
+</dialog>
+
+<div class="subsheet" id="subSheet" role="dialog" aria-labelledby="subT" hidden>
+  <img src="icons/icon-192.png" alt="" width="52" height="52">
+  <div class="subtxt"><b id="subT">Your PDF is opening in a new tab</b><span>Subscribe to EPIC21 on YouTube to get new free textbooks and videos.</span></div>
+  <div class="subacts">
+    <a class="subgo" id="subGo" href="https://www.youtube.com/@EPIC21korean?sub_confirmation=1" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>Subscribe</a>
+    <button type="button" class="sublater" id="subLater">Later</button>
+  </div>
+</div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
 (function(){
   var UI={copied:"Link copied",saved:"Saved",unsaved:"Removed from saved",
-          count:"{n} textbooks",go:"Open the {lang} page",dismiss:"No thanks"};
+          count:"{n} textbooks",donecount:"{d} / {n} studied",rhangul:"Start with Easy Korean Songs and the music-video textbooks, and learn Hangul on our YouTube channel.",rlevel:"Your level: {level}",go:"Open the {lang} page",dismiss:"No thanks"};
   var PAGE="_root", ROOT=true;
   var LANGS={"ar": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629", "bn": "\u09ac\u09be\u0982\u09b2\u09be", "en": "English", "es": "Espa\u00f1ol", "fr": "Fran\u00e7ais", "id": "Bahasa Indonesia", "ja": "\u65e5\u672c\u8a9e", "km": "\u1797\u17b6\u179f\u17b6\u1781\u17d2\u1798\u17c2\u179a", "mn": "\u041c\u043e\u043d\u0433\u043e\u043b", "my": "\u1019\u103c\u1014\u103a\u1019\u102c", "ne": "\u0928\u0947\u092a\u093e\u0932\u0940", "pt": "Portugu\u00eas", "ru": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", "si": "\u0dc3\u0dd2\u0d82\u0dc4\u0dbd", "th": "\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22", "tl": "Tagalog", "ur": "\u0627\u0631\u062f\u0648", "uz": "O\u02bbzbekcha", "vi": "Ti\u1ebfng Vi\u1ec7t", "zh-Hans": "\u7b80\u4f53\u4e2d\u6587"};
   var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
@@ -1503,6 +1698,77 @@ footer a{color:var(--muted)}
   window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;ib.hidden=false});
   ib.addEventListener('click',function(){if(!deferred)return;deferred.prompt();deferred.userChoice.finally(function(){deferred=null;ib.hidden=true})});
   window.addEventListener('appinstalled',function(){ib.hidden=true});
+  var NOW=Date.now(), DAY=864e5;
+  /* 새 교재 (30일 이내) */
+  function paintNew(){
+    var strip=$('#newStrip'); strip.innerHTML='';
+    books.forEach(function(b){
+      var a=b.dataset.added; if(!a)return;
+      var age=(NOW-new Date(a+'T00:00:00').getTime())/DAY; if(age<0||age>30)return;
+      var c=$('.cover',b); if(!$('.newtag',c)){var t=document.createElement('span');t.className='newtag';t.textContent='NEW';c.appendChild(t)}
+      var x=document.createElement('a'); x.href='#'+b.dataset.slug; x.dataset.slug=b.dataset.slug;
+      var im=$('.cover img',b); x.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
+      x.lastChild.textContent=$('.bname',b).textContent.trim(); strip.appendChild(x);
+    });
+    $('#newbox').hidden=!strip.children.length;
+  }
+  $('#newStrip').addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;e.preventDefault();jump(a.dataset.slug)});
+  function jump(slug){
+    var b=$('.book[data-slug="'+slug+'"]',$('#shelf')); if(!b)return;
+    if(b.hidden){$('#reset').click()}
+    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+  }
+
+  /* 공부 끝 */
+  var done=store('epic21-done')||[];
+  function paintDone(){
+    $$('.book').forEach(function(b){var on=done.indexOf(b.dataset.slug)>-1;b.classList.toggle('studied',on);var d=$('[data-done]',b);if(d)d.setAttribute('aria-pressed',on?'true':'false')});
+    $$('.tier').forEach(function(t){
+      var p=$('.prog',t), n=0; $$('.book',t).forEach(function(b){if(done.indexOf(b.dataset.slug)>-1)n++});
+      p.hidden=!n; p.textContent='✓ '+UI.donecount.replace('{d}',n).replace('{n}',p.dataset.n);
+    });
+  }
+  document.addEventListener('click',function(e){
+    var d=e.target.closest('[data-done]'); if(!d)return;
+    var s=d.closest('.book').dataset.slug, i=done.indexOf(s);
+    if(i>-1)done.splice(i,1); else {done.push(s); track('done/'+s,'공부 끝 '+s)}
+    store('epic21-done',done); paintDone();
+  });
+
+  /* 어디서부터 시작할까 */
+  var gd=$('#guideDlg'), LV={"adv": "\uace0\uae09 Advanced", "beg": "\ucd08\uae09 Beginner", "int": "\uc911\uae09 Intermediate"}, gres='';
+  function gstep(n){$$('.gstep',gd).forEach(function(x){x.hidden=x.dataset.step!==String(n)})}
+  $('#startBtn').addEventListener('click',function(){gstep(1);gd.showModal();track('guide/open','수준 찾기 열기')});
+  gd.addEventListener('click',function(e){
+    var g=e.target.closest('[data-go]'); if(g){gstep(g.dataset.go);return}
+    var r=e.target.closest('[data-res]'); if(!r)return;
+    gres=r.dataset.res; var key=gres==='hangul'?'beg':gres;
+    $('#gresMark').innerHTML=$('.tier-'+key+' .gm-big')?$('.tier-'+key+' .gm-big').outerHTML:'';
+    $('#gresText').textContent=gres==='hangul'?UI.rhangul:UI.rlevel.replace('{level}',LV[key]||key);
+    gstep('res'); track('guide/'+gres,'수준 찾기 결과 '+gres);
+  });
+  $('#gAgain').addEventListener('click',function(){gstep(1)});
+  $('#gShow').addEventListener('click',function(){
+    gd.close(); var key=gres==='hangul'?'beg':gres;
+    var chip=$('#lvs [data-lv="'+key+'"]'); if(chip)chip.click();
+    var target=gres==='hangul'?($('.grp[data-g="easy"]')||$('#lv-beg')):$('#lv-'+key);
+    if(target)setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'})},60);
+  });
+
+  /* QR */
+  $('#qrBtn').addEventListener('click',function(){$('#qrDlg').showModal();track('qr/'+PAGE,'QR 열기')});
+
+  /* PDF 받은 뒤 구독 권유: 구독을 누르면 다시 안 뜨고, 나중에는 7일 동안 안 뜬다 */
+  var sheet=$('#subSheet');
+  function maybeSub(){
+    var st=store('epic21-sub'); if(st==='yes'||(typeof st==='number'&&NOW-st<7*DAY))return;
+    setTimeout(function(){sheet.hidden=false},500);
+  }
+  $('#subGo').addEventListener('click',function(){store('epic21-sub','yes');sheet.hidden=true;track('subscribe/'+PAGE,'구독 누름')});
+  $('#subLater').addEventListener('click',function(){store('epic21-sub',Date.now());sheet.hidden=true});
+  document.addEventListener('click',function(e){if(e.target.closest('[data-get]'))maybeSub()});
+
+  paintNew(); paintDone();
   paintFav(); paintRecent(); apply(); show();
   window.addEventListener('hashchange',show);
 })();

@@ -60,14 +60,14 @@ UI_NEW = {
            'saved_toast': 'Saved', 'unsaved_toast': 'Removed from saved', 'recent': 'Recently downloaded',
            'watch': 'Watch the video', 'share': 'Share', 'copied': 'Link copied', 'theme': 'Light or dark screen',
            'close': 'Close', 'none': 'No textbooks match.', 'reset': 'Show all textbooks', 'count': '{n} textbooks',
-           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
+           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'sub_title': "Your PDF is opening in a new tab", 'sub_text': "Subscribe to EPIC21 on YouTube to get new free textbooks and videos.", 'sub_btn': "Subscribe", 'later': "Later", 'start': "Where should I start?", 'q1': "Can you read Hangul (한글)?", 'q2': "Can you introduce yourself and order at a café in Korean?", 'q3': "Can you read TOPIK II passages or Korean news?", 'yes': "Yes", 'no': "Not yet", 'r_hangul': "Start with Easy Korean Songs and the music-video textbooks, and learn Hangul on our YouTube channel.", 'r_level': "Your level: {level}", 'show': "Show these textbooks", 'again': "Start over", 'new_title': "New textbooks", 'done': "Studied", 'done_count': "{d} / {n} studied", 'qr': "QR code", 'qr_text': "Scan to open this page on a phone.", 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
     'ko': {'lede': '여러분의 언어로 설명한 한국어 교재입니다. 교재마다 EPIC21 영상이 짝으로 있습니다. PDF를 받아 무료로 공부하세요.',
            'books': '권', 'languages': '개 언어', 'search': '교재 찾기', 'level': '수준',
            'alllv': '모든 수준', 'series': '시리즈', 'saved': '담은 교재', 'save': '이 교재 담기',
            'saved_toast': '담았습니다', 'unsaved_toast': '담기를 뺐습니다', 'recent': '최근 받은 교재',
            'watch': '영상 보기', 'share': '공유', 'copied': '주소를 복사했습니다', 'theme': '밝은 화면·어두운 화면',
            'close': '닫기', 'none': '맞는 교재가 없습니다.', 'reset': '모든 교재 보기', 'count': '교재 {n}권',
-           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
+           'dl_short': 'PDF', 'top': '맨 위로', 'install': '앱으로 설치', 'sub_title': "PDF가 새 탭에서 열리고 있어요", 'sub_text': "유튜브에서 EPIC21을 구독하면 새 무료 교재와 영상 소식을 받을 수 있어요.", 'sub_btn': "구독하기", 'later': "나중에", 'start': "어디서부터 시작할까요?", 'q1': "한글을 읽을 수 있나요?", 'q2': "한국어로 자기소개를 하고 카페에서 주문할 수 있나요?", 'q3': "TOPIK II 지문이나 한국어 뉴스를 읽을 수 있나요?", 'yes': "네", 'no': "아직요", 'r_hangul': "쉬운 한국어 노래와 뮤직비디오 교재부터 시작하고, 한글은 유튜브 채널에서 배워 보세요.", 'r_level': "추천 수준: {level}", 'show': "이 교재 보기", 'again': "처음부터 다시", 'new_title': "새 교재", 'done': "공부 끝", 'done_count': "{d} / {n}권 공부 끝", 'qr': "QR 코드", 'qr_text': "휴대폰으로 찍으면 이 페이지가 열려요.", 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
 }
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
 
@@ -105,6 +105,9 @@ def refresh_files(site):
         names = sorted(f['name'] for f in pdfs)
         site['files'][b['id']] = names
         site.setdefault('sizes', {})[b['id']] = {f['name']: int(f.get('size', 0)) for f in pdfs}
+        md = j.get('metadata', {})
+        if md.get('publicdate') or md.get('addeddate'):
+            site.setdefault('added', {})[b['id']] = (md.get('publicdate') or md.get('addeddate'))[:10]
         print('  ', b['id'], len(names))
     save(site)
 
@@ -180,7 +183,7 @@ def build_page(site, env, lang, is_root):
                          else site['youtube'].rstrip('/') + '/search?query=' + quote(q))
             search = ' '.join(x for x in [tr or '', b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
-            bk = dict(b, sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
+            bk = dict(b, added=site.get('added', {}).get(b['id'], ''), sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"
@@ -223,7 +226,7 @@ def build_page(site, env, lang, is_root):
     return tpl.render(
         lang=lang, t=t, is_root=is_root, base=base, page_url=page_url, site_url=site_url,
         og_image=og_image, og_locale=OG_LOCALE.get(code, 'en_US'),
-        goatcounter=site.get('goatcounter', ''), alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
+        level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
         jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),
@@ -291,6 +294,27 @@ def main():
         with open(os.path.join(HERE, L['code'], 'manifest.webmanifest'), 'w', encoding='utf-8') as f:
             json.dump(manifest('./', '../', L['code'], site['text'][L['code']]['desc'].replace('{count}', str(len(site['books'])))), f, ensure_ascii=False, indent=1)
     print('manifest.webmanifest (+20)')
+
+    # QR 코드: 페이지마다 qr/<코드>.svg (segno 가 있을 때만 새로 만든다 — pip install segno)
+    try:
+        import segno
+        os.makedirs(os.path.join(HERE, 'qr'), exist_ok=True)
+        for code, url in [('root', site_url + '/')] + [(L['code'], f"{site_url}/{L['code']}/") for L in site['langs']]:
+            segno.make(url, error='m').save(os.path.join(HERE, 'qr', f'{code}.svg'), scale=8, border=2, dark='#0F1A36')
+        print('qr/*.svg')
+    except ImportError:
+        print('segno 없음 — QR 은 그대로 둔다')
+
+    # 저장본 버전: 만들 때마다 바뀌어 옛 표지·페이지 저장본이 비워진다
+    import hashlib
+    sw_path = os.path.join(HERE, 'sw.js')
+    if os.path.exists(sw_path):
+        covers = sorted((r, f, os.path.getsize(os.path.join(r, f))) for r, _, fs in os.walk(os.path.join(HERE, 'covers')) for f in fs)
+        tpl_txt = open(os.path.join(HERE, 'template.html'), encoding='utf-8').read()
+        sig = hashlib.md5((json.dumps(site, sort_keys=True, ensure_ascii=False) + str(covers) + tpl_txt).encode()).hexdigest()[:8]
+        sw = re.sub(r"const V = '[^']*';", f"const V = 'epic21-{sig}';", open(sw_path, encoding='utf-8').read())
+        open(sw_path, 'w', encoding='utf-8').write(sw)
+        print('sw.js 버전', sig)
     print('sitemap.xml robots.txt .nojekyll')
 
 

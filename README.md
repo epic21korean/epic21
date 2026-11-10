@@ -51,3 +51,9 @@ git add -A && git commit -m "hub v2" && git push
   넣으면 ▶ 버튼이 허브 안에서 바로 재생되고, 없으면 채널 검색으로 연결된다.
 - 홈 화면 앱: `icons/`(새 로고로 만든 아이콘), `sw.js`(저장본), 각 폴더의 `manifest.webmanifest`(build.py 가 만듦).
 - 방문 통계: site.json `"goatcounter": "epic21korean"` → https://epic21korean.goatcounter.com 에서 본다. PDF 받기는 `pdf/교재/언어`, 영상 버튼은 `video/교재` 로 센다.
+- 구독 권유: PDF 버튼을 누르면 아래에 구독 카드가 뜬다(구독 누르면 다시 안 뜸, 나중에 누르면 7일 뒤). PDF는 새 탭으로 열린다.
+- 어디서부터 시작할까요?: 질문 2~3개로 수준을 골라 준다.
+- NEW: 아카이브 공개일(site.json "added", --refresh-files 때 갱신)이 30일 이내인 교재.
+- 공부 끝 체크: 표지 왼쪽 아래 ✓, 층 머리에 진도 표시(학습자 휴대폰에만 저장).
+- QR: 위쪽 QR 버튼. `qr/<언어>.svg` 는 segno 가 있으면 build 때 새로 만든다(`pip install segno`), 없으면 있던 파일을 그대로 쓴다.
+- 통계 행사 이름: pdf/교재/언어, video/교재, subscribe/언어, guide/결과, done/교재, qr/언어.
