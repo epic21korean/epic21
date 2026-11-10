@@ -429,7 +429,8 @@
     "intro_title": "Primeros pasos en hangul",
     "intro_desc": "Aprende a leer las letras coreanas desde cero con este curso de video gratis.",
     "ep_vowels": "Vocales básicas",
-    "next_ep": "¡Espera el próximo episodio!"
+    "next_ep": "¡Espera el próximo episodio!",
+    "ep_consonants": "Consonantes básicas"
    }
   },
   "fr": {
@@ -537,7 +538,8 @@
     "intro_title": "Premiers pas en hangeul",
     "intro_desc": "Apprenez à lire l’alphabet coréen à partir de zéro avec ce cours vidéo gratuit.",
     "ep_vowels": "Voyelles de base",
-    "next_ep": "Le prochain épisode arrive bientôt !"
+    "next_ep": "Le prochain épisode arrive bientôt !",
+    "ep_consonants": "Consonnes de base"
    }
   },
   "pt": {
@@ -645,7 +647,8 @@
     "intro_title": "Primeiros passos no hangul",
     "intro_desc": "Aprenda a ler as letras coreanas do zero com este curso em vídeo gratuito.",
     "ep_vowels": "Vogais básicas",
-    "next_ep": "Aguarde o próximo episódio!"
+    "next_ep": "Aguarde o próximo episódio!",
+    "ep_consonants": "Consoantes básicas"
    }
   },
   "id": {
@@ -753,7 +756,8 @@
     "intro_title": "Langkah Pertama Hangul",
     "intro_desc": "Belajar membaca huruf Korea dari nol lewat kursus video gratis ini.",
     "ep_vowels": "Vokal dasar",
-    "next_ep": "Nantikan episode berikutnya!"
+    "next_ep": "Nantikan episode berikutnya!",
+    "ep_consonants": "Konsonan dasar"
    }
   },
   "vi": {
@@ -861,7 +865,8 @@
     "intro_title": "Bước đầu học Hangul",
     "intro_desc": "Khóa học video miễn phí giúp bạn đọc được chữ Hàn từ con số 0.",
     "ep_vowels": "Nguyên âm cơ bản",
-    "next_ep": "Hãy đón chờ tập tiếp theo!"
+    "next_ep": "Hãy đón chờ tập tiếp theo!",
+    "ep_consonants": "Phụ âm cơ bản"
    }
   },
   "tl": {
@@ -969,7 +974,8 @@
     "intro_title": "Unang Hakbang sa Hangul",
     "intro_desc": "Libreng video course para matutong bumasa ng letrang Korean mula sa simula.",
     "ep_vowels": "Mga pangunahing patinig",
-    "next_ep": "Abangan ang susunod na episode!"
+    "next_ep": "Abangan ang susunod na episode!",
+    "ep_consonants": "Mga pangunahing katinig"
    }
   },
   "uz": {
@@ -1077,7 +1083,8 @@
     "intro_title": "Hangulga ilk qadam",
     "intro_desc": "Koreys harflarini noldan o‘qishni o‘rgatadigan bepul video kurs.",
     "ep_vowels": "Asosiy unlilar",
-    "next_ep": "Keyingi qismni kuting!"
+    "next_ep": "Keyingi qismni kuting!",
+    "ep_consonants": "Asosiy undoshlar"
    }
   },
   "ru": {
@@ -1185,7 +1192,8 @@
     "intro_title": "Первые шаги в хангыле",
     "intro_desc": "Бесплатный видеокурс: учимся читать корейские буквы с нуля.",
     "ep_vowels": "Основные гласные",
-    "next_ep": "Ждите следующую серию!"
+    "next_ep": "Ждите следующую серию!",
+    "ep_consonants": "Основные согласные"
    }
   },
   "mn": {
@@ -1293,7 +1301,8 @@
     "intro_title": "Хангылийн анхны алхам",
     "intro_desc": "Солонгос үсгийг тэгээс уншиж сурах үнэгүй видео хичээл.",
     "ep_vowels": "Үндсэн эгшиг",
-    "next_ep": "Дараагийн ангийг хүлээж байгаарай!"
+    "next_ep": "Дараагийн ангийг хүлээж байгаарай!",
+    "ep_consonants": "Үндсэн гийгүүлэгч"
    }
   },
   "ja": {
@@ -1401,7 +1410,8 @@
     "intro_title": "ハングルはじめの一歩",
     "intro_desc": "ゼロから韓国語の文字が読めるようになる無料動画講座です。",
     "ep_vowels": "基本母音",
-    "next_ep": "次回もお楽しみに！"
+    "next_ep": "次回もお楽しみに！",
+    "ep_consonants": "基本子音"
    }
   },
   "zh-Hans": {
@@ -1509,7 +1519,8 @@
     "intro_title": "韩文入门第一步",
     "intro_desc": "从零开始学会读韩文字母的免费视频课程。",
     "ep_vowels": "基本元音",
-    "next_ep": "敬请期待下一集！"
+    "next_ep": "敬请期待下一集！",
+    "ep_consonants": "基本辅音"
    }
   },
   "th": {
@@ -1617,7 +1628,8 @@
     "intro_title": "ก้าวแรกสู่ฮันกึล",
     "intro_desc": "คอร์สวิดีโอฟรี เรียนอ่านตัวอักษรเกาหลีตั้งแต่เริ่มต้น",
     "ep_vowels": "สระพื้นฐาน",
-    "next_ep": "รอติดตามตอนต่อไป!"
+    "next_ep": "รอติดตามตอนต่อไป!",
+    "ep_consonants": "พยัญชนะพื้นฐาน"
    }
   },
   "km": {
@@ -1725,7 +1737,8 @@
     "intro_title": "ជំហានដំបូងនៃហាន់គុល",
     "intro_desc": "វគ្គវីដេអូឥតគិតថ្លៃ រៀនអានអក្សរកូរ៉េពីសូន្យ។",
     "ep_vowels": "ស្រៈមូលដ្ឋាន",
-    "next_ep": "សូមរង់ចាំភាគបន្ទាប់!"
+    "next_ep": "សូមរង់ចាំភាគបន្ទាប់!",
+    "ep_consonants": "ព្យញ្ជនៈមូលដ្ឋាន"
    }
   },
   "my": {
@@ -1833,7 +1846,8 @@
     "intro_title": "ဟန်ဂူလ် ပထမခြေလှမ်း",
     "intro_desc": "ကိုရီးယား စာလုံးများကို အစမှ ဖတ်တတ်အောင် သင်ပေးသော အခမဲ့ ဗီဒီယို သင်တန်း။",
     "ep_vowels": "အခြေခံ သရ",
-    "next_ep": "နောက်အပိုင်းကို မျှော်လင့်ထားပါ!"
+    "next_ep": "နောက်အပိုင်းကို မျှော်လင့်ထားပါ!",
+    "ep_consonants": "အခြေခံ ဗျည်း"
    }
   },
   "ne": {
@@ -1941,7 +1955,8 @@
     "intro_title": "हान्गुलको पहिलो पाइला",
     "intro_desc": "कोरियन अक्षर सुरुदेखि पढ्न सिकाउने निःशुल्क भिडियो कोर्स।",
     "ep_vowels": "आधारभूत स्वर",
-    "next_ep": "अर्को भागको प्रतीक्षा गर्नुहोस्!"
+    "next_ep": "अर्को भागको प्रतीक्षा गर्नुहोस्!",
+    "ep_consonants": "आधारभूत व्यञ्जन"
    }
   },
   "bn": {
@@ -2049,7 +2064,8 @@
     "intro_title": "হানগুলের প্রথম ধাপ",
     "intro_desc": "শুরু থেকে কোরিয়ান অক্ষর পড়া শেখার বিনামূল্যের ভিডিও কোর্স।",
     "ep_vowels": "মৌলিক স্বরবর্ণ",
-    "next_ep": "পরের পর্বের অপেক্ষায় থাকুন!"
+    "next_ep": "পরের পর্বের অপেক্ষায় থাকুন!",
+    "ep_consonants": "মৌলিক ব্যঞ্জনবর্ণ"
    }
   },
   "si": {
@@ -2157,7 +2173,8 @@
     "intro_title": "හංගුල් පළමු පියවර",
     "intro_desc": "මුල සිටම කොරියානු අකුරු කියවීමට ඉගැන්වෙන නොමිලේ වීඩියෝ පාඨමාලාව.",
     "ep_vowels": "මූලික ස්වර",
-    "next_ep": "ඊළඟ කොටස බලාපොරොත්තුවෙන් සිටින්න!"
+    "next_ep": "ඊළඟ කොටස බලාපොරොත්තුවෙන් සිටින්න!",
+    "ep_consonants": "මූලික ව්‍යඤ්ජන"
    }
   },
   "ar": {
@@ -2265,7 +2282,8 @@
     "intro_title": "الخطوات الأولى في الهانغول",
     "intro_desc": "دورة فيديو مجانية لتعلّم قراءة الحروف الكورية من الصفر.",
     "ep_vowels": "الحروف المتحركة الأساسية",
-    "next_ep": "ترقّبوا الحلقة القادمة!"
+    "next_ep": "ترقّبوا الحلقة القادمة!",
+    "ep_consonants": "الحروف الساكنة الأساسية"
    }
   },
   "ur": {
@@ -2373,7 +2391,8 @@
     "intro_title": "ہنگل کے پہلے قدم",
     "intro_desc": "شروع سے کورین حروف پڑھنا سیکھنے کا مفت ویڈیو کورس۔",
     "ep_vowels": "بنیادی حروفِ علت",
-    "next_ep": "اگلی قسط کا انتظار کریں!"
+    "next_ep": "اگلی قسط کا انتظار کریں!",
+    "ep_consonants": "بنیادی حروفِ صحیح"
    }
   }
  },
@@ -4434,6 +4453,12 @@
    "id": "Tnutyr3SC14",
    "ko": "기본 모음",
    "key": "ep_vowels"
+  },
+  {
+   "no": 2,
+   "id": "dbgBSaflk1g",
+   "ko": "기본 자음",
+   "key": "ep_consonants"
   }
  ]
 }
