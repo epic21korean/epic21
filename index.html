@@ -62,7 +62,7 @@ try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')docume
 :root{
   --bg:#F7F4EC; --surface:#FFFFFF; --ink:#13203F; --ink-soft:#4A5674; --muted:#7A8399;
   --line:rgba(19,32,63,.12); --grid:#D45B47; --grid-soft:rgba(212,91,71,.38);
-  --band:#F07A1A; --band-ink:#1A1206; --chip:#ECE7DA; --chip-on:#13203F; --chip-on-ink:#F7F4EC;
+  --band:#F07A1A; --band-ink:#1A1206; --vol:#A85500; --chip:#ECE7DA; --chip-on:#13203F; --chip-on-ink:#F7F4EC;
   --shadow:0 10px 24px -12px rgba(19,32,63,.45);
   --hl:rgba(240,122,26,.16);
   color-scheme:light;
@@ -74,7 +74,7 @@ try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')docume
   :root:not([data-theme="light"]){
     --bg:#0F1A36; --surface:#17244A; --ink:#F3EEE1; --ink-soft:#C5CBDC; --muted:#8D98B5;
     --line:rgba(243,238,225,.12); --grid:#E87A66; --grid-soft:rgba(232,122,102,.4);
-    --band:#F28A2E; --chip:#1D2B55; --chip-on:#F3EEE1; --chip-on-ink:#0F1A36;
+    --band:#F28A2E; --vol:#F5A65B; --chip:#1D2B55; --chip-on:#F3EEE1; --chip-on-ink:#0F1A36;
     --shadow:0 14px 30px -12px rgba(0,0,0,.7); --hl:rgba(242,138,46,.18);
     color-scheme:dark;
   }
@@ -82,7 +82,7 @@ try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')docume
 :root[data-theme="dark"]{
   --bg:#0F1A36; --surface:#17244A; --ink:#F3EEE1; --ink-soft:#C5CBDC; --muted:#8D98B5;
   --line:rgba(243,238,225,.12); --grid:#E87A66; --grid-soft:rgba(232,122,102,.4);
-  --band:#F28A2E; --chip:#1D2B55; --chip-on:#F3EEE1; --chip-on-ink:#0F1A36;
+  --band:#F28A2E; --vol:#F5A65B; --chip:#1D2B55; --chip-on:#F3EEE1; --chip-on-ink:#0F1A36;
   --shadow:0 14px 30px -12px rgba(0,0,0,.7); --hl:rgba(242,138,46,.18);
   color-scheme:dark;
 }
@@ -112,6 +112,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ibtn svg{width:18px;height:18px}
 .ibtn .yt{fill:#FF3B30}
 .ibtn span{white-space:nowrap}
+#openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:400px){ #openLangs span{max-width:5.5em}.tools{gap:4px}.ibtn{padding:0 10px}}
 @media (max-width:560px){.ibtn .lbl{display:none}}
 
 /* ── 원고지 제목 ── */
@@ -182,15 +184,17 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .search svg{width:18px;height:18px;flex:none;color:var(--muted)}
 .search input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:16px;color:var(--ink);outline:none}
 .lvs{display:flex;gap:6px;flex-wrap:wrap}
-.chip{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 14px;border-radius:999px;background:var(--chip);
+@media (max-width:640px){.lvs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;min-width:0;flex:1 1 100%}.lvs::-webkit-scrollbar{display:none}.finder{padding-top:calc(8px + env(safe-area-inset-top,0px));padding-bottom:6px}.frow{gap:8px}.search{min-height:42px}}
+.chip{position:relative;display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 14px;border-radius:999px;background:var(--chip);
   font-size:14px;font-weight:500;white-space:nowrap;border:1.5px solid transparent}
 .chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
 .chip .dot{width:10px;height:10px;border-radius:50%}
-.cats{display:flex;gap:6px;overflow-x:auto;margin-top:10px;padding-bottom:4px;scrollbar-width:none}
+.cats{display:flex;gap:6px;overflow-x:auto;margin-top:14px;padding-bottom:4px;scrollbar-width:none}
 .cats::-webkit-scrollbar{display:none}
 .cats{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);padding-inline-end:40px}
 [dir=rtl] .cats{-webkit-mask-image:linear-gradient(270deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(270deg,#000 calc(100% - 40px),transparent)}
-.result{margin-top:8px;font-size:13px;color:var(--muted)}
+.result{margin-top:6px;font-size:13px;color:var(--muted)}
+.result:empty{display:none}
 
 /* ── 담은 교재 / 최근 ── */
 .mine{margin-top:26px}
@@ -204,17 +208,19 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 /* 수준별 층 */
 .tier{--lc:var(--muted);position:relative;margin-top:56px;padding-inline-start:14px;border-inline-start:6px solid var(--lc)}
 .tier[hidden]{display:none}
-.tier-start{--lc:#1F9A44}.tier-beg{--lc:#1E6FFF}.tier-int{--lc:#E57A00}.tier-adv{--lc:#D9213A}
+.tier-start{--lc:#1F9A44;--lt:#17773A}.tier-beg{--lc:#1E6FFF;--lt:#1557D6}.tier-int{--lc:#E57A00;--lt:#A85500}.tier-adv{--lc:#D9213A;--lt:#B81B31}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tier{--lt:var(--lc)}}
+:root[data-theme="dark"] .tier{--lt:var(--lc)}
 .tier-all{--lc:#8B5CF6;border-image:linear-gradient(180deg,#1E6FFF,#E57A00,#D9213A) 1}
 .thead{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"st name" "st meta";gap:4px 18px;align-items:center;
   margin-inline-start:-14px;padding:18px 14px;background:color-mix(in srgb,var(--lc) 11%,transparent)}
 .tier-all .thead{background:linear-gradient(90deg,rgba(30,111,255,.1),rgba(229,122,0,.1),rgba(217,33,58,.1))}
 .thead .gm-big{grid-area:st}
-.tname{grid-area:name;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-size:clamp(30px,6vw,44px);font-weight:900;line-height:1.1;color:var(--lc)}
+.tname{grid-area:name;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-size:clamp(30px,6vw,44px);font-weight:900;line-height:1.1;color:var(--lt,var(--lc))}
 .tier-all .tname{color:var(--ink)}
 .tword{font-size:clamp(16px,2.6vw,20px);font-weight:700;color:var(--ink-soft)}
 .tmeta{grid-area:meta;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:14px;color:var(--ink-soft)}
-.topik{padding:2px 10px;border-radius:999px;background:var(--lc);color:#fff;font-weight:700;font-size:13px}
+.topik{padding:2px 10px;border-radius:999px;background:var(--lt,var(--lc));color:#fff;font-weight:700;font-size:13px}
 .tier-all .topik{background:linear-gradient(90deg,#1E6FFF,#E57A00,#D9213A)}
 .cover{border-bottom:5px solid var(--lc)}
 .grp{margin-top:36px}
@@ -227,7 +233,7 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .book{display:flex;flex-direction:column;min-width:0;border-radius:8px;transition:background .2s}
 .book[hidden]{display:none}
 .books.solo{grid-template-columns:1fr}
-.solo .book{display:grid;grid-template-columns:132px 1fr;grid-template-rows:1fr auto;grid-template-areas:"cover meta" "cover acts";gap:0 18px}
+.solo .book{display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:1fr auto;grid-template-areas:"cover meta" "cover acts";gap:0 18px}
 .solo .cover{grid-area:cover}.solo .bmeta{grid-area:meta;align-self:end}.solo .acts{grid-area:acts;max-width:300px}
 .book.flash{background:var(--hl);box-shadow:0 0 0 8px var(--hl)}
 .cover{position:relative;aspect-ratio:1/1.414;border-radius:3px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
@@ -253,14 +259,19 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .fav svg{width:20px;height:20px}
 .fav[aria-pressed="true"] svg{fill:#FF5A5A;stroke:#FF5A5A}
 .bmeta{margin-top:12px;flex:1}
-.bvol{font-size:13px;font-weight:700;color:var(--band)}
+.bvol{font-size:13px;font-weight:700;color:var(--vol)}
 .bname{font-size:16px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
 .bsub{font-size:13px;color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
-.acts{display:flex;gap:6px;margin-top:12px;align-items:center}
+.acts{display:flex;gap:6px;margin-top:12px;align-items:center;min-width:0}
 .get{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 12px;
   background:var(--band);color:var(--band-ink);font-weight:700;font-size:15px;border-radius:6px;text-decoration:none}
 .get:hover{filter:brightness(1.07)}
 .get svg{width:18px;height:18px;flex:none}
+.get .sz{font-size:12px;font-weight:500;opacity:.75;white-space:nowrap}
+.lv{white-space:nowrap;max-width:calc(100% - 16px);overflow:hidden}
+.solo .lv>span:last-child{display:none}
+@media (max-width:400px){.books:not(.solo) .lv>span:last-child{display:none}}
+.get{min-width:0}
 .sq{flex:none;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;border:1.5px solid var(--line);text-decoration:none}
 .sq:hover{border-color:var(--band)}
 .sq svg{width:20px;height:20px}
@@ -278,6 +289,9 @@ dialog.vdlg::backdrop{background:rgba(0,0,0,.8)}
 .vbar{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:#0F1A36;color:#F3EEE1;font-size:14px}
 .vbar a,.vbar button{color:#F3EEE1}
 
+.totop{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--chip-on);color:var(--chip-on-ink);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.totop[hidden]{display:none}.totop svg{width:22px;height:22px}
 /* 알림 */
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;
   padding:10px 18px;border-radius:999px;background:var(--chip-on);color:var(--chip-on-ink);font-size:14px;font-weight:500;
@@ -391,7 +405,10 @@ footer a{color:var(--muted)}
       <button class="chip" type="button" data-lv="adv" aria-pressed="false"><span class="gm gm-sm gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><span lang="ko">고급</span><span class="vh"> Advanced</span></button>
     </div>
   </div>
-  <div class="cats" id="cats" role="group" aria-label="Series">
+
+  <p class="result" id="result" aria-live="polite"></p>
+</div>
+<div class="cats" id="cats" role="group" aria-label="Series">
     <button class="chip" type="button" data-g="" aria-pressed="true">All textbooks</button>
     <button class="chip" type="button" data-g="core" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>Essential Korean Grammar</button>
     <button class="chip" type="button" data-g="cls" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>Classroom Korean</button>
@@ -405,8 +422,6 @@ footer a{color:var(--muted)}
     <button class="chip" type="button" data-g="ttg" aria-pressed="false"><span class="gm gm-sm gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>Learn Korean with YouTube Shorts</button>
     <button class="chip" type="button" data-g="__fav" aria-pressed="false">♥ Saved</button>
   </div>
-  <p class="result" id="result" aria-live="polite"></p>
-</div>
 
 <section class="mine" id="recent" hidden>
   <h2>Recently downloaded</h2>
@@ -445,7 +460,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-essential-korean-grammar/00_EPIC21_EssentialKoreanGrammar_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">7.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%9C%EA%B5%AD%EC%96%B4%20%ED%95%84%EC%88%98%20%EB%AC%B8%EB%B2%95%20%EC%99%84%EA%B2%B0%ED%8C%90" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -482,7 +497,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-classroom-korean-60/00_EPIC21_ClassroomKorean60_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">5.1 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%88%98%EC%97%85%EC%9D%B4%20%EB%93%A4%EB%A6%AC%EB%8A%94%20%EC%B2%AB%EA%B1%B8%EC%9D%8C" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -514,13 +529,13 @@ footer a{color:var(--muted)}
       </div>
       <div class="bmeta">
         <p class="bvol">Vol. 1</p>
-        <h4 class="bname" lang="ko">대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1</h4>
+        <h4 class="bname" lang="ko">시리즈 1</h4>
         
       </div>
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik-vocab-grammar-s1/EPIC21_TOPIK_VocabGrammar_S1_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">5.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%201" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -543,13 +558,13 @@ footer a{color:var(--muted)}
       </div>
       <div class="bmeta">
         <p class="bvol">Vol. 2</p>
-        <h4 class="bname" lang="ko">대화로 배우는 TOPIK 어휘와 문법 · 시리즈 2</h4>
+        <h4 class="bname" lang="ko">시리즈 2</h4>
         
       </div>
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik-vocab-grammar-s2/EPIC21_TOPIK_VocabGrammar_S2_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.7 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%202" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -587,7 +602,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol1-two-hands/EPIC21_TOPIK1_Vol1_TwoHands_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">3.7 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%91%90%20%EC%86%90%EC%9C%BC%EB%A1%9C" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -616,7 +631,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol2-restroom/%EC%A0%9C2%ED%8E%B8_%ED%99%94%EC%9E%A5%EC%8B%A4%EC%9D%B4_%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%99%94%EC%9E%A5%EC%8B%A4%EC%9D%B4%20%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94%3F" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -645,7 +660,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol3-americano/%EC%A0%9C3%ED%8E%B8_%EC%95%84%EC%9D%B4%EC%8A%A4%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8_%EB%91%90_%EC%9E%94_%EC%A3%BC%EC%84%B8%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%95%84%EC%9D%B4%EC%8A%A4%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8%20%EB%91%90%20%EC%9E%94%20%EC%A3%BC%EC%84%B8%EC%9A%94" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -674,7 +689,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol4-wifi/%EC%A0%9C4%ED%8E%B8_%EC%97%AC%EA%B8%B0_%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4_%EB%8F%BC%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%97%AC%EA%B8%B0%20%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4%20%EB%8F%BC%EC%9A%94%3F" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -703,7 +718,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol5-myeongdong/%EC%A0%9C5%ED%8E%B8_%EB%AA%85%EB%8F%99%EC%97%AD%EC%9D%B4_%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%AA%85%EB%8F%99%EC%97%AD%EC%9D%B4%20%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94%3F" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -732,7 +747,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol6-transit-card/%EC%A0%9C6%ED%8E%B8_%EA%B5%90%ED%86%B5%EC%B9%B4%EB%93%9C_%EC%B6%A9%EC%A0%84%ED%95%B4_%EC%A3%BC%EC%84%B8%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EA%B5%90%ED%86%B5%20%EC%B9%B4%EB%93%9C%20%EC%A2%80%20%EC%B6%A9%EC%A0%84%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -761,7 +776,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol7-shopping/%EC%A0%9C7%ED%8E%B8_%EC%9D%B4%EA%B1%B0_%EC%9E%85%EC%96%B4_%EB%B4%90%EB%8F%84_%EB%8F%BC%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%9D%B4%EA%B1%B0%20%EC%9E%85%EC%96%B4%20%EB%B4%90%EB%8F%84%20%EB%8F%BC%EC%9A%94%3F" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -790,7 +805,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol8-samgyeopsal/%EC%A0%9C8%ED%8E%B8_%EC%9A%B0%EB%A6%AC_%EC%82%BC%EA%B2%B9%EC%82%B4_%EB%A8%B9%EC%9D%84%EA%B9%8C_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%9A%B0%EB%A6%AC%20%EC%82%BC%EA%B2%B9%EC%82%B4%20%EB%A8%B9%EC%9D%84%EA%B9%8C%3F" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -819,7 +834,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol9-chicken/%EC%A0%9C9%ED%8E%B8_%EC%98%A4%EB%8A%94_%EB%8D%B0_%EC%96%BC%EB%A7%88%EB%82%98_%EA%B1%B8%EB%A0%A4%EC%9A%94_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%98%A4%EB%8A%94%20%EB%8D%B0%20%EC%96%BC%EB%A7%88%EB%82%98%20%EA%B1%B8%EB%A0%A4%EC%9A%94%3F" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -848,7 +863,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik1-mv-vol10-clinic/%EC%A0%9C10%ED%8E%B8_%EB%82%98_%EA%B0%90%EA%B8%B0_%EA%B1%B8%EB%A0%B8%EB%82%98_%EB%B4%90_01_English.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%82%98%20%EA%B0%90%EA%B8%B0%20%EA%B1%B8%EB%A0%B8%EB%82%98%20%EB%B4%90" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -885,7 +900,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-easysong-01-opposites1/EPIC21_EasySong01_Opposites1_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">4.9 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%B0%98%EB%8C%80%EB%A7%90%201" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -930,7 +945,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol1-four-seasons/EPIC21_FourSeasons_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.7 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%82%AC%EA%B3%84%EC%A0%88" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -959,7 +974,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol2-black-coffee/EPIC21_BlackCoffee_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -988,7 +1003,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol3-cola/EPIC21_Cola_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%BD%9C%EB%9D%BC" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1017,7 +1032,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol4-curious/EPIC21_Curious_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">28 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EA%B6%81%EA%B8%88%ED%95%B4" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1046,7 +1061,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol5-parting/EPIC21_Parting_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.2 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%9A%8C%EC%9E%90%EC%A0%95%EB%A6%AC" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1075,7 +1090,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol6-favorite-song/EPIC21_FavoriteSong_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">1.1 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%95%A0%EC%B0%BD%EA%B3%A1" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1119,7 +1134,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-dive-01-haenyeo/EPIC21_DIVE01_Haenyeo_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">11 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%B4%EB%85%80" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1156,7 +1171,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-topik2-writing-master/EPIC21_TOPIK2_WritingMaster_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">3.1 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20TOPIK%20II%20%EC%93%B0%EA%B8%B0%20%EB%A7%88%EC%8A%A4%ED%84%B0" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1193,7 +1208,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-poem-01-first-payday/EPIC21_Poem01_FirstPayday_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">6.4 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%B2%AB%20%EC%9B%94%EA%B8%89%EB%82%A0" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1238,7 +1253,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-ttg2056-s1/EPIC21_TTG2056_S1_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">24 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%201" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1267,7 +1282,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-ttg2056-s2/EPIC21_TTG2056_S2_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">25 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%202" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1296,7 +1311,7 @@ footer a{color:var(--muted)}
       <div class="acts">
         <a class="get" href="https://archive.org/download/epic21-ttg2056-s3/EPIC21_TTG2056_S3_01_English_Free.pdf" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
+          <span>PDF</span><small class="sz" dir="ltr">31 MB</small>
         </a>
         <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%203" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
@@ -1331,6 +1346,7 @@ footer a{color:var(--muted)}
   <div class="vbox" id="vbox"></div>
   <div class="vbar"><a id="vlink" href="https://www.youtube.com/@EPIC21korean" rel="noopener">Watch on YouTube</a><button type="button" data-close>Close ✕</button></div>
 </dialog>
+<a class="totop" id="totop" href="#" aria-label="Back to top" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg></a>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -1346,7 +1362,7 @@ footer a{color:var(--muted)}
   /* 화면 모드 */
   $('#themeBtn').addEventListener('click',function(){
     var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-    var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);
+    var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);this.setAttribute('aria-pressed',next==='dark'?'true':'false');
     try{localStorage.setItem('epic21-theme',next)}catch(e){}
   });
 
@@ -1437,7 +1453,7 @@ footer a{color:var(--muted)}
     var r=store('epic21-recent')||[], strip=$('#recentStrip'); strip.innerHTML='';
     r.forEach(function(s){
       var b=$('.book[data-slug="'+s+'"]',$('#shelf')); if(!b)return;
-      var a=document.createElement('a'); a.href='#'+s;
+      var a=document.createElement('a'); a.href='#'+s; a.dataset.slug=s;
       var im=$('.cover img',b); a.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
       a.lastChild.textContent=$('.bname',b).textContent.trim(); strip.appendChild(a);
     });
@@ -1454,6 +1470,15 @@ footer a{color:var(--muted)}
     var c=src.cloneNode(true); c.hidden=false; slot.appendChild(c); box.hidden=false;
     box.scrollIntoView({block:'start'});
   }
+  var tt=$('#totop');
+  window.addEventListener('scroll',function(){tt.hidden=scrollY<900},{passive:true});
+  tt.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});
+  $('#recentStrip').addEventListener('click',function(e){
+    var a=e.target.closest('a'); if(!a)return; e.preventDefault();
+    var b=$('.book[data-slug="'+a.dataset.slug+'"]',$('#shelf')); if(!b)return;
+    if(b.hidden){$('#reset').click()}
+    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+  });
   paintFav(); paintRecent(); apply(); show();
   window.addEventListener('hashchange',show);
 })();

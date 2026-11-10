@@ -60,14 +60,14 @@ UI_NEW = {
            'saved_toast': 'Saved', 'unsaved_toast': 'Removed from saved', 'recent': 'Recently downloaded',
            'watch': 'Watch the video', 'share': 'Share', 'copied': 'Link copied', 'theme': 'Light or dark screen',
            'close': 'Close', 'none': 'No textbooks match.', 'reset': 'Show all textbooks', 'count': '{n} textbooks',
-           'dl_short': 'PDF', 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
+           'dl_short': 'PDF', 'top': 'Back to top', 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
     'ko': {'lede': '여러분의 언어로 설명한 한국어 교재입니다. 교재마다 EPIC21 영상이 짝으로 있습니다. PDF를 받아 무료로 공부하세요.',
            'books': '권', 'languages': '개 언어', 'search': '교재 찾기', 'level': '수준',
            'alllv': '모든 수준', 'series': '시리즈', 'saved': '담은 교재', 'save': '이 교재 담기',
            'saved_toast': '담았습니다', 'unsaved_toast': '담기를 뺐습니다', 'recent': '최근 받은 교재',
            'watch': '영상 보기', 'share': '공유', 'copied': '주소를 복사했습니다', 'theme': '밝은 화면·어두운 화면',
            'close': '닫기', 'none': '맞는 교재가 없습니다.', 'reset': '모든 교재 보기', 'count': '교재 {n}권',
-           'dl_short': 'PDF', 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
+           'dl_short': 'PDF', 'top': 'Back to top', 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
 }
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
 
@@ -100,9 +100,11 @@ def refresh_files(site):
         except Exception as e:
             print('  !', b['id'], e)
             continue
-        names = sorted(f['name'] for f in j.get('files', [])
-                       if f['name'].lower().endswith('.pdf') and f.get('source', 'original') == 'original')
+        pdfs = [f for f in j.get('files', [])
+                if f['name'].lower().endswith('.pdf') and f.get('source', 'original') == 'original']
+        names = sorted(f['name'] for f in pdfs)
         site['files'][b['id']] = names
+        site.setdefault('sizes', {})[b['id']] = {f['name']: int(f.get('size', 0)) for f in pdfs}
         print('  ', b['id'], len(names))
     save(site)
 
@@ -154,6 +156,9 @@ def build_page(site, env, lang, is_root):
             names = site['files'].get(b['id'], [])
             hit = match_pdf(names, lang['file'])
             pdf = f"https://archive.org/download/{b['id']}/{quote(hit)}" if hit else None
+            nbytes = site.get('sizes', {}).get(b['id'], {}).get(hit, 0) if hit else 0
+            mb = nbytes / 1048576
+            size = (f"{mb:.0f} MB" if mb >= 10 else f"{mb:.1f} MB") if nbytes else ''
             # 표지: 로컬 → 아카이브 아이템 썸네일
             cover = f"{base}covers/{b['id']}/{lang['file']}.jpg"
             cover_fallback = f"https://archive.org/services/img/{b['id']}"
@@ -170,7 +175,8 @@ def build_page(site, env, lang, is_root):
                          else site['youtube'].rstrip('/') + '/search?query=' + quote(q))
             search = ' '.join(x for x in [b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
-            bk = dict(b, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
+            short = b['ko'].split('·')[-1].strip() if '·' in b['ko'] else b['ko']
+            bk = dict(b, size=size, short=short, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"
