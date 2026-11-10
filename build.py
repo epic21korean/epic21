@@ -167,16 +167,20 @@ def build_page(site, env, lang, is_root):
             if code == 'ko' and b.get('vol') and b['group'] == 'dlg':
                 name = b['ko']
                 vol_label = ''
-            single = sum(1 for x in site['books'] if x['group'] == gk) == 1
             lv = level_info(b.get('level'), 'en' if code == '_root' else code)
+            single = sum(1 for x in site['books'] if x['group'] == gk) == 1
+            short = b['ko'].split('·')[-1].strip() if '·' in b['ko'] else b['ko']
+            # 부제: 그 언어 번역(tr) → 없으면 영어 (한 권짜리 시리즈는 en, 여러 권은 en_sub)
+            en_line = b['en'] if single else b.get('en_sub', '')
+            tr = (b.get('tr') or {}).get(code)
+            sub, sub_lang = (tr, code) if tr else (en_line, 'en')
             vid = b.get('video') or ''
             q = b.get('ko_sub') or b['ko'].split('·')[-1].strip()
             video_url = (f"https://www.youtube.com/watch?v={vid}" if vid
                          else site['youtube'].rstrip('/') + '/search?query=' + quote(q))
-            search = ' '.join(x for x in [b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
+            search = ' '.join(x for x in [tr or '', b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
-            short = b['ko'].split('·')[-1].strip() if '·' in b['ko'] else b['ko']
-            bk = dict(b, size=size, short=short, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
+            bk = dict(b, sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"

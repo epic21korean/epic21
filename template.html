@@ -437,11 +437,11 @@ footer a{color:var(--muted)}
       <div class="bmeta">
         {%- if b.single %}
         <h4 class="bname" lang="ko">{{ b.ko }}</h4>
-        {% if lang.code != 'ko' %}<p class="bsub" lang="en">{{ b.en }}</p>{% endif %}
+        {% if lang.code != 'ko' and b.sub %}<p class="bsub" lang="{{ b.sub_lang }}">{{ b.sub }}</p>{% endif %}
         {%- else %}
         {% if b.vol_label %}<p class="bvol">{{ b.vol_label }}</p>{% endif %}
         <h4 class="bname" lang="ko">{{ b.ko_sub or b.short }}</h4>
-        {% if b.en_sub and lang.code != 'ko' %}<p class="bsub" lang="en">{{ b.en_sub }}</p>{% endif %}
+        {% if b.sub and lang.code != 'ko' %}<p class="bsub" lang="{{ b.sub_lang }}">{{ b.sub }}</p>{% endif %}
         {%- endif %}
       </div>
       <div class="acts">

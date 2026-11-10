@@ -1931,7 +1931,28 @@
    "en": "K-Song Magazine No. 01 — Haenyeo",
    "vol": 1,
    "ko_sub": "해녀",
-   "en_sub": "Haenyeo"
+   "en_sub": "Haenyeo",
+   "tr": {
+    "es": "Revista K-Song n.º 01 — Haenyeo (las mujeres del mar)",
+    "fr": "K-Song Magazine n° 01 — Haenyeo (les femmes de la mer)",
+    "pt": "Revista K-Song nº 01 — Haenyeo (as mulheres do mar)",
+    "id": "Majalah K-Song No. 01 — Haenyeo (perempuan penyelam)",
+    "vi": "Tạp chí K-Song số 01 — Haenyeo (những người phụ nữ của biển)",
+    "tl": "K-Song Magazine Blg. 01 — Haenyeo (mga babae ng dagat)",
+    "uz": "K-Song jurnali № 01 — Haenyeo (dengiz ayollari)",
+    "ru": "Журнал K-Song № 01 — Хэнё (женщины моря)",
+    "mn": "K-Song сэтгүүл № 01 — Хэнё (далайн эмэгтэйчүүд)",
+    "ja": "K-Song マガジン No.01 — 海女",
+    "zh-Hans": "K-Song 杂志 第01期 — 海女",
+    "th": "นิตยสาร K-Song ฉบับที่ 01 — แฮนยอ (หญิงแห่งท้องทะเล)",
+    "km": "ទស្សនាវដ្ដី K-Song លេខ 01 — ហែញ៉ូ (ស្ត្រីសមុទ្រ)",
+    "my": "K-Song မဂ္ဂဇင်း အမှတ် 01 — ဟဲညော (ပင်လယ်အမျိုးသမီးများ)",
+    "ne": "K-Song पत्रिका अंक 01 — हेन्यो (समुद्रका महिलाहरू)",
+    "bn": "K-Song ম্যাগাজিন সংখ্যা 01 — হেনিও (সমুদ্রের নারীরা)",
+    "si": "K-Song සඟරාව අංක 01 — හෙන්යෝ (මුහුදේ කාන්තාවන්)",
+    "ar": "مجلة K-Song العدد 01 — هينيو (نساء البحر)",
+    "ur": "K-Song میگزین شمارہ 01 — ہینیو (سمندر کی عورتیں)"
+   }
   },
   {
    "id": "epic21-essential-korean-grammar",
@@ -1942,7 +1963,28 @@
    "en": "Essential Korean Grammar",
    "vol": null,
    "ko_sub": "",
-   "en_sub": ""
+   "en_sub": "",
+   "tr": {
+    "es": "Gramática coreana esencial",
+    "fr": "Grammaire coréenne essentielle",
+    "pt": "Gramática coreana essencial",
+    "id": "Tata Bahasa Korea Esensial",
+    "vi": "Ngữ pháp tiếng Hàn thiết yếu",
+    "tl": "Mahahalagang Gramatika ng Korean",
+    "uz": "Koreys tilining asosiy grammatikasi",
+    "ru": "Основы корейской грамматики",
+    "mn": "Солонгос хэлний үндсэн дүрэм",
+    "ja": "必須韓国語文法 完全版",
+    "zh-Hans": "韩语必备语法大全",
+    "th": "ไวยากรณ์ภาษาเกาหลีที่จำเป็น",
+    "km": "វេយ្យាករណ៍ភាសាកូរ៉េសំខាន់ៗ",
+    "my": "မရှိမဖြစ် ကိုရီးယား သဒ္ဒါ",
+    "ne": "अत्यावश्यक कोरियन व्याकरण",
+    "bn": "প্রয়োজনীয় কোরিয়ান ব্যাকরণ",
+    "si": "අත්‍යවශ්‍ය කොරියානු ව්‍යාකරණ",
+    "ar": "القواعد الأساسية للغة الكورية",
+    "ur": "کورین زبان کی بنیادی گرامر"
+   }
   },
   {
    "id": "epic21-classroom-korean-60",
@@ -1953,7 +1995,28 @@
    "en": "60 Essential Classroom Korean Expressions",
    "vol": null,
    "ko_sub": "수업이 들리는 첫걸음",
-   "en_sub": "Your first step to understanding class"
+   "en_sub": "Your first step to understanding class",
+   "tr": {
+    "es": "60 expresiones esenciales del coreano en clase",
+    "fr": "60 expressions essentielles du coréen en classe",
+    "pt": "60 expressões essenciais do coreano em sala de aula",
+    "id": "60 Ungkapan Penting Bahasa Korea di Kelas",
+    "vi": "60 mẫu câu tiếng Hàn thiết yếu trong lớp học",
+    "tl": "60 Mahahalagang Pahayag sa Korean sa Klase",
+    "uz": "Darsda kerak bo‘ladigan 60 ta muhim koreyscha ibora",
+    "ru": "60 главных фраз корейского на уроке",
+    "mn": "Хичээл дээр хэрэгтэй солонгос хэлний 60 хэллэг",
+    "ja": "教室で使う韓国語 必須表現60",
+    "zh-Hans": "课堂韩语必备表达60句",
+    "th": "60 สำนวนภาษาเกาหลีที่จำเป็นในห้องเรียน",
+    "km": "ឃ្លាភាសាកូរ៉េសំខាន់ៗ 60 ក្នុងថ្នាក់រៀន",
+    "my": "စာသင်ခန်းသုံး မရှိမဖြစ် ကိုရီးယား စကားစု 60",
+    "ne": "कक्षामा चाहिने 60 कोरियन अभिव्यक्ति",
+    "bn": "ক্লাসে দরকারি 60টি কোরিয়ান অভিব্যক্তি",
+    "si": "පන්තියේ අත්‍යවශ්‍ය කොරියානු ප්‍රකාශන 60",
+    "ar": "60 تعبيرًا كوريًا أساسيًا في الفصل",
+    "ur": "کلاس میں کام آنے والے 60 اہم کورین جملے"
+   }
   },
   {
    "id": "epic21-topik-vocab-grammar-s1",
@@ -1964,7 +2027,28 @@
    "en": "TOPIK Vocabulary & Grammar through Dialogue 1",
    "vol": 1,
    "ko_sub": "",
-   "en_sub": ""
+   "en_sub": "Dialogues 1–20",
+   "tr": {
+    "es": "Diálogos 1–20",
+    "fr": "Dialogues 1–20",
+    "pt": "Diálogos 1–20",
+    "id": "Dialog 1–20",
+    "vi": "Hội thoại 1–20",
+    "tl": "Mga Dayalogo 1–20",
+    "uz": "Dialoglar 1–20",
+    "ru": "Диалоги 1–20",
+    "mn": "Харилцан яриа 1–20",
+    "ja": "会話 1–20",
+    "zh-Hans": "对话 1–20",
+    "th": "บทสนทนา 1–20",
+    "km": "ការសន្ទនា 1–20",
+    "my": "စကားပြော 1–20",
+    "ne": "संवाद 1–20",
+    "bn": "সংলাপ 1–20",
+    "si": "සංවාද 1–20",
+    "ar": "حوارات 1–20",
+    "ur": "مکالمے 1–20"
+   }
   },
   {
    "id": "epic21-topik-vocab-grammar-s2",
@@ -1975,7 +2059,28 @@
    "en": "TOPIK Vocabulary & Grammar through Dialogue 2",
    "vol": 2,
    "ko_sub": "",
-   "en_sub": ""
+   "en_sub": "Dialogues 21–40",
+   "tr": {
+    "es": "Diálogos 21–40",
+    "fr": "Dialogues 21–40",
+    "pt": "Diálogos 21–40",
+    "id": "Dialog 21–40",
+    "vi": "Hội thoại 21–40",
+    "tl": "Mga Dayalogo 21–40",
+    "uz": "Dialoglar 21–40",
+    "ru": "Диалоги 21–40",
+    "mn": "Харилцан яриа 21–40",
+    "ja": "会話 21–40",
+    "zh-Hans": "对话 21–40",
+    "th": "บทสนทนา 21–40",
+    "km": "ការសន្ទនា 21–40",
+    "my": "စကားပြော 21–40",
+    "ne": "संवाद 21–40",
+    "bn": "সংলাপ 21–40",
+    "si": "සංවාද 21–40",
+    "ar": "حوارات 21–40",
+    "ur": "مکالمے 21–40"
+   }
   },
   {
    "id": "epic21-topik2-writing-master",
@@ -1986,7 +2091,28 @@
    "en": "TOPIK II Writing Master — Questions 51–54",
    "vol": null,
    "ko_sub": "",
-   "en_sub": ""
+   "en_sub": "",
+   "tr": {
+    "es": "Maestría en escritura TOPIK II — preguntas 51–54",
+    "fr": "Maîtriser l’écrit du TOPIK II — questions 51 à 54",
+    "pt": "Domínio da escrita do TOPIK II — questões 51–54",
+    "id": "Mahir Menulis TOPIK II — Soal 51–54",
+    "vi": "Chinh phục kỹ năng viết TOPIK II — Câu 51–54",
+    "tl": "Master sa Pagsulat ng TOPIK II — Tanong 51–54",
+    "uz": "TOPIK II yozish ustasi — 51–54-savollar",
+    "ru": "Мастер письма TOPIK II — задания 51–54",
+    "mn": "TOPIK II бичгийн мастер — 51–54-р даалгавар",
+    "ja": "TOPIK II 作文マスター — 問題51～54",
+    "zh-Hans": "TOPIK II 写作大师 — 第51～54题",
+    "th": "สุดยอดการเขียน TOPIK II — ข้อ 51–54",
+    "km": "ជំនាញសរសេរ TOPIK II — សំណួរ 51–54",
+    "my": "TOPIK II အရေးအသား ကျွမ်းကျင်ရေး — မေးခွန်း 51–54",
+    "ne": "TOPIK II लेखन मास्टर — प्रश्न 51–54",
+    "bn": "TOPIK II লেখা মাস্টার — প্রশ্ন 51–54",
+    "si": "TOPIK II ලේඛන ප්‍රවීණ — ප්‍රශ්න 51–54",
+    "ar": "إتقان الكتابة في TOPIK II — الأسئلة 51–54",
+    "ur": "TOPIK II لکھائی ماسٹر — سوالات 51–54"
+   }
   },
   {
    "id": "epic21-topik2-mv-vol1-four-seasons",
@@ -1997,7 +2123,28 @@
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.1 'Four Seasons'",
    "vol": 1,
    "ko_sub": "사계절",
-   "en_sub": "Four Seasons"
+   "en_sub": "Four Seasons",
+   "tr": {
+    "es": "Las cuatro estaciones",
+    "fr": "Les quatre saisons",
+    "pt": "As quatro estações",
+    "id": "Empat Musim",
+    "vi": "Bốn mùa",
+    "tl": "Apat na Panahon",
+    "uz": "To‘rt fasl",
+    "ru": "Четыре времени года",
+    "mn": "Дөрвөн улирал",
+    "ja": "四季",
+    "zh-Hans": "四季",
+    "th": "สี่ฤดู",
+    "km": "រដូវទាំងបួន",
+    "my": "ရာသီလေးပါး",
+    "ne": "चार ऋतु",
+    "bn": "চার ঋতু",
+    "si": "සෘතු හතර",
+    "ar": "الفصول الأربعة",
+    "ur": "چار موسم"
+   }
   },
   {
    "id": "epic21-topik2-mv-vol2-black-coffee",
@@ -2008,7 +2155,28 @@
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.2 'Black Coffee'",
    "vol": 2,
    "ko_sub": "블랙커피",
-   "en_sub": "Black Coffee"
+   "en_sub": "Black Coffee",
+   "tr": {
+    "es": "Café solo",
+    "fr": "Café noir",
+    "pt": "Café preto",
+    "id": "Kopi Hitam",
+    "vi": "Cà phê đen",
+    "tl": "Itim na Kape",
+    "uz": "Qora qahva",
+    "ru": "Чёрный кофе",
+    "mn": "Хар кофе",
+    "ja": "ブラックコーヒー",
+    "zh-Hans": "黑咖啡",
+    "th": "กาแฟดำ",
+    "km": "កាហ្វេខ្មៅ",
+    "my": "ကော်ဖီမဲ",
+    "ne": "कालो कफी",
+    "bn": "কালো কফি",
+    "si": "කළු කෝපි",
+    "ar": "قهوة سوداء",
+    "ur": "بلیک کافی"
+   }
   },
   {
    "id": "epic21-topik2-mv-vol3-cola",
@@ -2019,7 +2187,28 @@
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.3 'Cola'",
    "vol": 3,
    "ko_sub": "콜라",
-   "en_sub": "Cola"
+   "en_sub": "Cola",
+   "tr": {
+    "es": "Cola",
+    "fr": "Cola",
+    "pt": "Cola",
+    "id": "Kola",
+    "vi": "Cô-la",
+    "tl": "Cola",
+    "uz": "Kola",
+    "ru": "Кола",
+    "mn": "Кола",
+    "ja": "コーラ",
+    "zh-Hans": "可乐",
+    "th": "โคล่า",
+    "km": "កូឡា",
+    "my": "ကိုလာ",
+    "ne": "कोला",
+    "bn": "কোলা",
+    "si": "කෝලා",
+    "ar": "كولا",
+    "ur": "کولا"
+   }
   },
   {
    "id": "epic21-topik2-mv-vol4-curious",
@@ -2030,7 +2219,28 @@
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.4 'Curious'",
    "vol": 4,
    "ko_sub": "궁금해",
-   "en_sub": "Curious"
+   "en_sub": "Curious",
+   "tr": {
+    "es": "Tengo curiosidad",
+    "fr": "Curieux",
+    "pt": "Curioso",
+    "id": "Penasaran",
+    "vi": "Tò mò",
+    "tl": "Gusto Kong Malaman",
+    "uz": "Qiziq",
+    "ru": "Интересно",
+    "mn": "Сонин байна",
+    "ja": "気になる",
+    "zh-Hans": "好奇",
+    "th": "อยากรู้",
+    "km": "ចង់ដឹង",
+    "my": "သိချင်တယ်",
+    "ne": "जिज्ञासा",
+    "bn": "কৌতূহল",
+    "si": "කුතුහලයි",
+    "ar": "فضول",
+    "ur": "تجسس"
+   }
   },
   {
    "id": "epic21-topik2-mv-vol5-parting",
@@ -2041,7 +2251,28 @@
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.5 'Those Who Meet Must Part'",
    "vol": 5,
    "ko_sub": "회자정리",
-   "en_sub": "Those Who Meet Must Part"
+   "en_sub": "Those Who Meet Must Part",
+   "tr": {
+    "es": "Quienes se encuentran deben separarse",
+    "fr": "Ceux qui se rencontrent doivent se séparer",
+    "pt": "Quem se encontra deve se separar",
+    "id": "Yang Bertemu Pasti Berpisah",
+    "vi": "Hợp rồi sẽ tan",
+    "tl": "Ang Nagkikita ay Naghihiwalay",
+    "uz": "Uchrashganlar ayriladi",
+    "ru": "Встретившиеся расстаются",
+    "mn": "Уулзсан хүмүүс салдаг",
+    "ja": "会者定離",
+    "zh-Hans": "会者定离",
+    "th": "พบกันย่อมต้องจากกัน",
+    "km": "ជួបគ្នាហើយត្រូវបែកគ្នា",
+    "my": "ဆုံရင် ခွဲရမယ်",
+    "ne": "भेटिनेहरू छुट्टिन्छन्",
+    "bn": "যারা মেলে তারা বিচ্ছিন্ন হয়",
+    "si": "හමුවන අය වෙන්වෙති",
+    "ar": "من يلتقون لا بد أن يفترقوا",
+    "ur": "جو ملتے ہیں وہ بچھڑتے ہیں"
+   }
   },
   {
    "id": "epic21-topik2-mv-vol6-favorite-song",
@@ -2052,7 +2283,28 @@
    "en": "Learn Korean through Music Videos — TOPIK II, Vol.6 'My Favorite Song'",
    "vol": 6,
    "ko_sub": "애창곡",
-   "en_sub": "My Favorite Song"
+   "en_sub": "My Favorite Song",
+   "tr": {
+    "es": "Mi canción favorita",
+    "fr": "Ma chanson préférée",
+    "pt": "Minha música favorita",
+    "id": "Lagu Favoritku",
+    "vi": "Bài hát tôi yêu thích",
+    "tl": "Paborito Kong Kanta",
+    "uz": "Sevimli qo‘shig‘im",
+    "ru": "Моя любимая песня",
+    "mn": "Миний дуртай дуу",
+    "ja": "愛唱歌",
+    "zh-Hans": "我最爱唱的歌",
+    "th": "เพลงโปรดของฉัน",
+    "km": "បទចម្រៀងដែលខ្ញុំចូលចិត្ត",
+    "my": "ကျွန်ုပ် အကြိုက်ဆုံး သီချင်း",
+    "ne": "मेरो मनपर्ने गीत",
+    "bn": "আমার প্রিয় গান",
+    "si": "මගේ ප්‍රියතම ගීතය",
+    "ar": "أغنيتي المفضلة",
+    "ur": "میرا پسندیدہ گانا"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol1-two-hands",
@@ -2063,7 +2315,28 @@
    "en": "Learn Korean through a Music Video — TOPIK I, Vol.1 'With Both Hands'",
    "vol": 1,
    "ko_sub": "두 손으로",
-   "en_sub": "With Both Hands"
+   "en_sub": "With Both Hands",
+   "tr": {
+    "es": "Con las dos manos",
+    "fr": "Avec les deux mains",
+    "pt": "Com as duas mãos",
+    "id": "Dengan Kedua Tangan",
+    "vi": "Bằng hai tay",
+    "tl": "Gamit ang Dalawang Kamay",
+    "uz": "Ikki qo‘l bilan",
+    "ru": "Двумя руками",
+    "mn": "Хоёр гараараа",
+    "ja": "両手で",
+    "zh-Hans": "用双手",
+    "th": "ด้วยสองมือ",
+    "km": "ដោយដៃទាំងពីរ",
+    "my": "လက်နှစ်ဖက်နဲ့",
+    "ne": "दुवै हातले",
+    "bn": "দুই হাতে",
+    "si": "දෑතින්ම",
+    "ar": "باليدين",
+    "ur": "دونوں ہاتھوں سے"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol2-restroom",
@@ -2074,7 +2347,28 @@
    "en": "TOPIK I, Vol.2 'Where Is the Restroom?'",
    "vol": 2,
    "ko_sub": "화장실이 어디예요?",
-   "en_sub": "Where Is the Restroom?"
+   "en_sub": "Where Is the Restroom?",
+   "tr": {
+    "es": "¿Dónde está el baño?",
+    "fr": "Où sont les toilettes ?",
+    "pt": "Onde fica o banheiro?",
+    "id": "Toiletnya di mana?",
+    "vi": "Nhà vệ sinh ở đâu?",
+    "tl": "Nasaan ang CR?",
+    "uz": "Hojatxona qayerda?",
+    "ru": "Где туалет?",
+    "mn": "Ариун цэврийн өрөө хаана байна вэ?",
+    "ja": "トイレはどこですか？",
+    "zh-Hans": "洗手间在哪里？",
+    "th": "ห้องน้ำอยู่ที่ไหน",
+    "km": "បន្ទប់ទឹកនៅឯណា?",
+    "my": "အိမ်သာ ဘယ်မှာလဲ",
+    "ne": "शौचालय कहाँ छ?",
+    "bn": "টয়লেট কোথায়?",
+    "si": "වැසිකිළිය කොහෙද?",
+    "ar": "أين دورة المياه؟",
+    "ur": "بیت الخلا کہاں ہے؟"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol3-americano",
@@ -2085,7 +2379,28 @@
    "en": "TOPIK I, Vol.3 'Two Iced Americanos, Please'",
    "vol": 3,
    "ko_sub": "아이스아메리카노 두 잔 주세요",
-   "en_sub": "Two Iced Americanos, Please"
+   "en_sub": "Two Iced Americanos, Please",
+   "tr": {
+    "es": "Dos americanos con hielo, por favor",
+    "fr": "Deux americanos glacés, s’il vous plaît",
+    "pt": "Dois americanos gelados, por favor",
+    "id": "Dua Es Americano, ya",
+    "vi": "Cho tôi hai ly Americano đá",
+    "tl": "Dalawang Iced Americano, please",
+    "uz": "Ikkita muzli amerikano bering",
+    "ru": "Два холодных американо, пожалуйста",
+    "mn": "Хоёр мөстэй американо өгөөч",
+    "ja": "アイスアメリカーノ2つください",
+    "zh-Hans": "请给我两杯冰美式",
+    "th": "ขออเมริกาโน่เย็นสองแก้ว",
+    "km": "សុំអាមេរិកាណូទឹកកកពីរកែវ",
+    "my": "ရေခဲ အမေရိကာနို နှစ်ခွက် ပေးပါ",
+    "ne": "दुई कप आइस्ड अमेरिकानो दिनुहोस्",
+    "bn": "দুটি আইসড আমেরিকানো দিন",
+    "si": "අයිස් ඇමරිකානෝ දෙකක් දෙන්න",
+    "ar": "كوبان من الأمريكانو المثلج من فضلك",
+    "ur": "دو آئسڈ امریکانو دیجیے"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol4-wifi",
@@ -2096,7 +2411,28 @@
    "en": "TOPIK I, Vol.4 'Do You Have Wi-Fi Here?'",
    "vol": 4,
    "ko_sub": "여기 와이파이 돼요?",
-   "en_sub": "Do You Have Wi-Fi Here?"
+   "en_sub": "Do You Have Wi-Fi Here?",
+   "tr": {
+    "es": "¿Hay wifi aquí?",
+    "fr": "Il y a du wifi ici ?",
+    "pt": "Tem Wi-Fi aqui?",
+    "id": "Di sini ada Wi-Fi?",
+    "vi": "Ở đây có Wi-Fi không?",
+    "tl": "May Wi-Fi ba rito?",
+    "uz": "Bu yerda Wi-Fi bormi?",
+    "ru": "Здесь есть Wi-Fi?",
+    "mn": "Энд Wi-Fi байна уу?",
+    "ja": "ここWi-Fi使えますか？",
+    "zh-Hans": "这里有Wi-Fi吗？",
+    "th": "ที่นี่มี Wi-Fi ไหม",
+    "km": "នៅទីនេះមាន Wi-Fi ទេ?",
+    "my": "ဒီမှာ Wi-Fi ရလား",
+    "ne": "यहाँ Wi-Fi छ?",
+    "bn": "এখানে কি Wi-Fi আছে?",
+    "si": "මෙතන Wi-Fi තියෙනවද?",
+    "ar": "هل يوجد واي فاي هنا؟",
+    "ur": "کیا یہاں وائی فائی ہے؟"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol5-myeongdong",
@@ -2107,7 +2443,28 @@
    "en": "TOPIK I, Vol.5 'Where Is Myeongdong Station?'",
    "vol": 5,
    "ko_sub": "명동역이 어디예요?",
-   "en_sub": "Where Is Myeongdong Station?"
+   "en_sub": "Where Is Myeongdong Station?",
+   "tr": {
+    "es": "¿Dónde está la estación de Myeongdong?",
+    "fr": "Où est la station Myeongdong ?",
+    "pt": "Onde fica a estação Myeongdong?",
+    "id": "Stasiun Myeongdong di mana?",
+    "vi": "Ga Myeongdong ở đâu?",
+    "tl": "Nasaan ang Myeongdong Station?",
+    "uz": "Myondong bekati qayerda?",
+    "ru": "Где станция Мёндон?",
+    "mn": "Мёндон буудал хаана байна вэ?",
+    "ja": "明洞駅はどこですか？",
+    "zh-Hans": "明洞站在哪里？",
+    "th": "สถานีมย็องดงอยู่ที่ไหน",
+    "km": "ស្ថានីយ៍ម្យ៉ងដុងនៅឯណា?",
+    "my": "မြောင်ဒုံ ဘူတာ ဘယ်မှာလဲ",
+    "ne": "म्योङदोङ स्टेसन कहाँ छ?",
+    "bn": "মিয়ংদং স্টেশন কোথায়?",
+    "si": "මියොංදොං දුම්රිය ස්ථානය කොහෙද?",
+    "ar": "أين محطة ميونغدونغ؟",
+    "ur": "میونگ دونگ اسٹیشن کہاں ہے؟"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol6-transit-card",
@@ -2118,7 +2475,28 @@
    "en": "TOPIK I, Vol.6 'Please Top Up My Transit Card'",
    "vol": 6,
    "ko_sub": "교통 카드 좀 충전해 주세요",
-   "en_sub": "Please Top Up My Transit Card"
+   "en_sub": "Please Top Up My Transit Card",
+   "tr": {
+    "es": "Recárgueme la tarjeta de transporte, por favor",
+    "fr": "Rechargez ma carte de transport, s’il vous plaît",
+    "pt": "Recarregue meu cartão de transporte, por favor",
+    "id": "Tolong isi ulang kartu transportasi saya",
+    "vi": "Nạp tiền thẻ giao thông giúp tôi",
+    "tl": "Pakikargahan po ang transit card ko",
+    "uz": "Transport kartamni to‘ldirib bering",
+    "ru": "Пополните, пожалуйста, транспортную карту",
+    "mn": "Тээврийн картаа цэнэглүүлмээр байна",
+    "ja": "交通カードをチャージしてください",
+    "zh-Hans": "请帮我给交通卡充值",
+    "th": "ช่วยเติมเงินบัตรโดยสารให้หน่อย",
+    "km": "សូមបញ្ចូលលុយកាតធ្វើដំណើរឱ្យខ្ញុំ",
+    "my": "ခရီးသွားကတ် ငွေဖြည့်ပေးပါ",
+    "ne": "मेरो ट्रान्जिट कार्ड रिचार्ज गरिदिनुहोस्",
+    "bn": "আমার ট্রানজিট কার্ড রিচার্জ করে দিন",
+    "si": "මගේ ප්‍රවාහන කාඩ්පත රීචාර්ජ් කරන්න",
+    "ar": "اشحن بطاقة المواصلات من فضلك",
+    "ur": "میرا ٹرانزٹ کارڈ ری چارج کر دیجیے"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol7-shopping",
@@ -2129,7 +2507,28 @@
    "en": "TOPIK I, Vol.7 'Can I Try This On?'",
    "vol": 7,
    "ko_sub": "이거 입어 봐도 돼요?",
-   "en_sub": "Can I Try This On?"
+   "en_sub": "Can I Try This On?",
+   "tr": {
+    "es": "¿Me lo puedo probar?",
+    "fr": "Je peux l’essayer ?",
+    "pt": "Posso experimentar isto?",
+    "id": "Boleh saya coba ini?",
+    "vi": "Tôi mặc thử cái này được không?",
+    "tl": "Puwede ko bang isukat ito?",
+    "uz": "Buni kiyib ko‘rsam bo‘ladimi?",
+    "ru": "Можно это примерить?",
+    "mn": "Үүнийг өмсөөд үзэж болох уу?",
+    "ja": "これ、試着してもいいですか？",
+    "zh-Hans": "这件可以试穿吗？",
+    "th": "ขอลองชุดนี้ได้ไหม",
+    "km": "ខ្ញុំអាចសាកពាក់អាវនេះបានទេ?",
+    "my": "ဒါ ဝတ်ကြည့်လို့ ရမလား",
+    "ne": "यो लगाएर हेर्न मिल्छ?",
+    "bn": "এটা কি পরে দেখতে পারি?",
+    "si": "මට මේක ඇඳලා බලන්න පුළුවන්ද?",
+    "ar": "هل يمكنني تجربة هذا؟",
+    "ur": "کیا میں اسے پہن کر دیکھ سکتا ہوں؟"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol8-samgyeopsal",
@@ -2140,7 +2539,28 @@
    "en": "TOPIK I, Vol.8 'Shall We Get Samgyeopsal?'",
    "vol": 8,
    "ko_sub": "우리 삼겹살 먹을까?",
-   "en_sub": "Shall We Get Samgyeopsal?"
+   "en_sub": "Shall We Get Samgyeopsal?",
+   "tr": {
+    "es": "¿Comemos samgyeopsal?",
+    "fr": "On mange du samgyeopsal ?",
+    "pt": "Vamos comer samgyeopsal?",
+    "id": "Makan samgyeopsal, yuk?",
+    "vi": "Mình ăn samgyeopsal nhé?",
+    "tl": "Kain tayo ng samgyeopsal?",
+    "uz": "Samgyopsal yeymizmi?",
+    "ru": "Пойдём есть самгёпсаль?",
+    "mn": "Самгёпсал идэх үү?",
+    "ja": "サムギョプサル食べようか？",
+    "zh-Hans": "我们去吃五花肉吧？",
+    "th": "ไปกินหมูสามชั้นกันไหม",
+    "km": "យើងទៅញ៉ាំសាច់ជ្រូកបីជាន់ទេ?",
+    "my": "ဆမ်ဂျော့ဆယ် စားကြမလား",
+    "ne": "सामग्योप्सल खाने हो?",
+    "bn": "চলো সামগিয়প্সাল খাই?",
+    "si": "අපි සම්ග්‍යොප්සල් කමුද?",
+    "ar": "هل نأكل السامغيوبسال؟",
+    "ur": "سامگیوپسال کھائیں؟"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol9-chicken",
@@ -2151,7 +2571,28 @@
    "en": "TOPIK I, Vol.9 'How Long Will It Take?'",
    "vol": 9,
    "ko_sub": "오는 데 얼마나 걸려요?",
-   "en_sub": "How Long Will It Take?"
+   "en_sub": "How Long Will It Take?",
+   "tr": {
+    "es": "¿Cuánto tardas en llegar?",
+    "fr": "Tu mets combien de temps pour venir ?",
+    "pt": "Quanto tempo você leva para chegar?",
+    "id": "Berapa lama perjalananmu ke sini?",
+    "vi": "Đến đây mất bao lâu?",
+    "tl": "Gaano katagal bago ka makarating?",
+    "uz": "Kelishingga qancha vaqt ketadi?",
+    "ru": "Сколько времени займёт дорога?",
+    "mn": "Ирэхэд хэр удах вэ?",
+    "ja": "来るのにどのくらいかかりますか？",
+    "zh-Hans": "过来要多久？",
+    "th": "มาถึงนี่ใช้เวลานานแค่ไหน",
+    "km": "មកដល់ទីនេះចំណាយពេលប៉ុន្មាន?",
+    "my": "လာဖို့ ဘယ်လောက်ကြာမလဲ",
+    "ne": "आउन कति समय लाग्छ?",
+    "bn": "আসতে কত সময় লাগবে?",
+    "si": "එන්න කොච්චර වෙලා යයිද?",
+    "ar": "كم يستغرق المجيء؟",
+    "ur": "آنے میں کتنا وقت لگے گا؟"
+   }
   },
   {
    "id": "epic21-topik1-mv-vol10-clinic",
@@ -2162,7 +2603,28 @@
    "en": "TOPIK I, Vol.10 'I Think I Caught a Cold'",
    "vol": 10,
    "ko_sub": "나 감기 걸렸나 봐",
-   "en_sub": "I Think I Caught a Cold"
+   "en_sub": "I Think I Caught a Cold",
+   "tr": {
+    "es": "Creo que me he resfriado",
+    "fr": "Je crois que j’ai attrapé un rhume",
+    "pt": "Acho que peguei um resfriado",
+    "id": "Sepertinya aku masuk angin",
+    "vi": "Hình như tôi bị cảm rồi",
+    "tl": "Mukhang sinipon ako",
+    "uz": "Shamollab qolganga o‘xshayman",
+    "ru": "Кажется, я простудился",
+    "mn": "Би ханиад хүрсэн бололтой",
+    "ja": "風邪ひいたみたい",
+    "zh-Hans": "我好像感冒了",
+    "th": "ดูเหมือนฉันจะเป็นหวัด",
+    "km": "ខ្ញុំប្រហែលជាផ្ដាសាយហើយ",
+    "my": "အအေးမိသွားပုံရတယ်",
+    "ne": "मलाई रुघा लागेजस्तो छ",
+    "bn": "মনে হয় আমার ঠান্ডা লেগেছে",
+    "si": "මට හෙම්බිරිස්සාව හැදිලා වගේ",
+    "ar": "يبدو أنني أصبت بالزكام",
+    "ur": "لگتا ہے مجھے زکام ہو گیا ہے"
+   }
   },
   {
    "id": "epic21-easysong-01-opposites1",
@@ -2173,7 +2635,28 @@
    "en": "Easy Korean Songs No. 01 — Opposites 1",
    "vol": 1,
    "ko_sub": "반대말 1",
-   "en_sub": "Opposites 1"
+   "en_sub": "Opposites 1",
+   "tr": {
+    "es": "Canciones fáciles en coreano n.º 01 — Opuestos 1",
+    "fr": "Chansons coréennes faciles n° 01 — Contraires 1",
+    "pt": "Músicas fáceis em coreano nº 01 — Opostos 1",
+    "id": "Lagu Korea Mudah No. 01 — Lawan Kata 1",
+    "vi": "Bài hát tiếng Hàn dễ số 01 — Từ trái nghĩa 1",
+    "tl": "Madadaling Kantang Korean Blg. 01 — Magkasalungat 1",
+    "uz": "Oson koreyscha qo‘shiqlar № 01 — Qarama-qarshi so‘zlar 1",
+    "ru": "Простые корейские песни № 01 — Антонимы 1",
+    "mn": "Хялбар солонгос дуу № 01 — Эсрэг утгатай үг 1",
+    "ja": "やさしい韓国語の歌 No.01 — 反対語1",
+    "zh-Hans": "简单韩语歌曲 第01首 — 反义词1",
+    "th": "เพลงภาษาเกาหลีง่าย ๆ ลำดับที่ 01 — คำตรงข้าม 1",
+    "km": "ចម្រៀងកូរ៉េងាយៗ លេខ 01 — ពាក្យផ្ទុយ 1",
+    "my": "လွယ်ကူသော ကိုရီးယား သီချင်း အမှတ် 01 — ဆန့်ကျင်ဘက် စကားလုံး 1",
+    "ne": "सजिलो कोरियन गीत अंक 01 — विपरीतार्थी शब्द 1",
+    "bn": "সহজ কোরিয়ান গান সংখ্যা 01 — বিপরীত শব্দ 1",
+    "si": "පහසු කොරියානු ගීත අංක 01 — විරුද්ධ පද 1",
+    "ar": "أغانٍ كورية سهلة رقم 01 — الأضداد 1",
+    "ur": "آسان کورین گانے شمارہ 01 — متضاد الفاظ 1"
+   }
   },
   {
    "id": "epic21-poem-01-first-payday",
@@ -2184,7 +2667,28 @@
    "en": "Learn Korean with Poetry No. 01 — First Payday",
    "vol": 1,
    "ko_sub": "첫 월급날",
-   "en_sub": "First Payday"
+   "en_sub": "First Payday",
+   "tr": {
+    "es": "Aprende coreano con poesía n.º 01 — Primer sueldo",
+    "fr": "Apprendre le coréen par la poésie n° 01 — Premier salaire",
+    "pt": "Aprenda coreano com poesia nº 01 — Primeiro salário",
+    "id": "Belajar Bahasa Korea lewat Puisi No. 01 — Gaji Pertama",
+    "vi": "Học tiếng Hàn qua thơ số 01 — Ngày lĩnh lương đầu tiên",
+    "tl": "Matuto ng Korean sa Tula Blg. 01 — Unang Sahod",
+    "uz": "She’riyat orqali koreys tili № 01 — Birinchi maosh",
+    "ru": "Корейский через поэзию № 01 — Первая зарплата",
+    "mn": "Шүлгээр солонгос хэл сурах № 01 — Анхны цалин",
+    "ja": "詩で学ぶ韓国語 No.01 — 初めての給料日",
+    "zh-Hans": "用诗学韩语 第01篇 — 第一次发工资",
+    "th": "เรียนภาษาเกาหลีผ่านบทกวี ลำดับที่ 01 — วันเงินเดือนออกครั้งแรก",
+    "km": "រៀនភាសាកូរ៉េតាមកំណាព្យ លេខ 01 — ថ្ងៃបើកប្រាក់ខែដំបូង",
+    "my": "ကဗျာဖြင့် ကိုရီးယားစာ လေ့လာခြင်း အမှတ် 01 — ပထမဆုံး လစာထုတ်ရက်",
+    "ne": "कविताबाट कोरियन सिकौं अंक 01 — पहिलो तलबको दिन",
+    "bn": "কবিতায় কোরিয়ান শিখি সংখ্যা 01 — প্রথম বেতনের দিন",
+    "si": "කවියෙන් කොරියානු ඉගෙනගමු අංක 01 — පළමු වැටුප් දිනය",
+    "ar": "تعلّم الكورية بالشعر رقم 01 — يوم الراتب الأول",
+    "ur": "شاعری سے کورین سیکھیں شمارہ 01 — پہلی تنخواہ کا دن"
+   }
   },
   {
    "id": "epic21-ttg2056-s1",
@@ -2195,7 +2699,7 @@
    "en": "Time Travel Guide 2056 · Series 1 (#01–#10)",
    "vol": 1,
    "ko_sub": "시리즈 1",
-   "en_sub": "Series 1"
+   "en_sub": "#01–#10"
   },
   {
    "id": "epic21-ttg2056-s2",
@@ -2206,7 +2710,7 @@
    "en": "Time Travel Guide 2056 · Series 2 (#11–#20)",
    "vol": 2,
    "ko_sub": "시리즈 2",
-   "en_sub": "Series 2"
+   "en_sub": "#11–#20"
   },
   {
    "id": "epic21-ttg2056-s3",
@@ -2217,7 +2721,7 @@
    "en": "Time Travel Guide 2056 · Series 3 (#21–#30)",
    "vol": 3,
    "ko_sub": "시리즈 3",
-   "en_sub": "Series 3"
+   "en_sub": "#21–#30"
   }
  ],
  "files": {
