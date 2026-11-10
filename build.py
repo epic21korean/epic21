@@ -76,7 +76,7 @@ def level_info(level, code):
     if level not in LEVEL_KEY:
         return None
     words = LEVEL_WORDS.get(code, LEVEL_WORDS['en'])
-    return {'key': LEVEL_KEY[level], 'ko': LEVEL_KO[level], 'word': words[LEVEL_IDX[level]]}
+    return {'key': LEVEL_KEY[level], 'ko': LEVEL_KO[level], 'word': words[LEVEL_IDX[level]], 'step': LEVEL_IDX[level]}
 
 
 def load():
@@ -179,6 +179,22 @@ def build_page(site, env, lang, is_root):
                               'license': 'https://creativecommons.org/licenses/by-nc-nd/4.0/'})
         groups.append(dict(key=gk, name=gt['name'], desc=gt['desc'], ko=gko, books=books))
 
+    # 수준별 층: 입문 → 초급 → 중급 → 고급 → 모든 수준(전체). 수준이 없는 교재는 '전체'에 둔다.
+    lv_code = 'en' if code == '_root' else code
+    TOPIK_LBL = {'입문': 'Pre-TOPIK', '초급': 'TOPIK I · 1–2', '중급': 'TOPIK II · 3–4',
+                 '고급': 'TOPIK II · 5–6', '전체': 'TOPIK I – II'}
+    tiers = []
+    for L in LEVEL_ORDER + ['전체']:
+        subs = []
+        for g in groups:
+            bs = [b for b in g['books'] if (b.get('level') if b.get('level') in LEVEL_KEY else '전체') == L]
+            if bs:
+                subs.append(dict(g, books=bs))
+        if subs:
+            info = level_info(L, lv_code)
+            tiers.append(dict(info, topik=TOPIK_LBL[L], groups=subs,
+                              n=sum(len(x['books']) for x in subs)))
+
     itemlist = {'@type': 'ItemList', 'name': t['title'],
               'url': page_url, 'numberOfItems': len(items),
               'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'item': it}
@@ -189,7 +205,6 @@ def build_page(site, env, lang, is_root):
 
     alternates = [{'code': L['code'], 'url': f"{site_url}/{L['code']}/"} for L in site['langs']]
 
-    lv_code = 'en' if code == '_root' else code
     levels = [level_info(L, lv_code) for L in LEVEL_ORDER
               if any(x.get('level') == L for x in site['books'])]
     lang_names = {L['code'].split('-')[0] if L['code'] != 'zh-Hans' else 'zh-Hans': L['name'] for L in site['langs']}
@@ -198,7 +213,7 @@ def build_page(site, env, lang, is_root):
     return tpl.render(
         lang=lang, t=t, is_root=is_root, base=base, page_url=page_url, site_url=site_url,
         og_image=og_image, og_locale=OG_LOCALE.get(code, 'en_US'),
-        alternates=alternates, langs=site['langs'], groups=groups, book_count=count,
+        alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
         jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),

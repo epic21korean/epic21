@@ -201,13 +201,29 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .strip img{display:block;width:92px;aspect-ratio:1/1.414;object-fit:cover;border-radius:3px;box-shadow:var(--shadow);margin-bottom:6px;background:var(--surface)}
 
 /* ── 책꽂이 ── */
-.grp{margin-top:44px}
+/* 수준별 층 */
+.tier{--lc:var(--muted);position:relative;margin-top:56px;padding-inline-start:14px;border-inline-start:6px solid var(--lc)}
+.tier[hidden]{display:none}
+.tier-start{--lc:#1F9A44}.tier-beg{--lc:#1E6FFF}.tier-int{--lc:#E57A00}.tier-adv{--lc:#D9213A}
+.tier-all{--lc:#8B5CF6;border-image:linear-gradient(180deg,#1E6FFF,#E57A00,#D9213A) 1}
+.thead{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"st name" "st meta";gap:4px 18px;align-items:center;
+  margin-inline-start:-14px;padding:18px 14px;background:color-mix(in srgb,var(--lc) 11%,transparent)}
+.tier-all .thead{background:linear-gradient(90deg,rgba(30,111,255,.1),rgba(229,122,0,.1),rgba(217,33,58,.1))}
+.thead .gm-big{grid-area:st}
+.tname{grid-area:name;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-size:clamp(30px,6vw,44px);font-weight:900;line-height:1.1;color:var(--lc)}
+.tier-all .tname{color:var(--ink)}
+.tword{font-size:clamp(16px,2.6vw,20px);font-weight:700;color:var(--ink-soft)}
+.tmeta{grid-area:meta;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:14px;color:var(--ink-soft)}
+.topik{padding:2px 10px;border-radius:999px;background:var(--lc);color:#fff;font-weight:700;font-size:13px}
+.tier-all .topik{background:linear-gradient(90deg,#1E6FFF,#E57A00,#D9213A)}
+.cover{border-bottom:5px solid var(--lc)}
+.grp{margin-top:36px}
 .grp[hidden]{display:none}
 .ghead{display:grid;gap:2px;padding-bottom:12px;margin-bottom:18px;border-bottom:1.5px solid var(--grid-soft)}
-.ghead h2{font-size:22px;font-weight:900;line-height:1.3}
+.ghead h3{font-size:20px;font-weight:800;line-height:1.3}
 .ghead .gdesc{color:var(--ink-soft);font-size:15px;max-width:48em}
 .ghead .gko{color:var(--muted);font-size:13px}
-.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:28px 20px}
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:26px 14px}
 .book{display:flex;flex-direction:column;min-width:0;border-radius:8px;transition:background .2s}
 .book[hidden]{display:none}
 .books.solo{grid-template-columns:1fr}
@@ -218,11 +234,20 @@ dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
 .cover img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover}
 .cover img:not([data-ok]){opacity:0}
 .cover .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;color:var(--muted)}
-.lv{position:absolute;z-index:2;inset-inline-start:8px;top:8px;display:inline-flex;align-items:baseline;gap:5px;padding:2px 9px;border-radius:999px;
-  font-size:11px;font-weight:600;color:#fff;box-shadow:0 2px 8px rgba(0,0,0,.35);line-height:1.5}
+/* 원고지 칸 수준 표시: 입문 1칸 · 초급 2칸 · 중급 3칸 · 고급 4칸, 칸 색 = 수준 색 */
+.gm{--s:10px;--gc:var(--grid-soft);display:inline-grid;grid-template-columns:repeat(4,var(--s));flex:none;
+  border-top:1px solid var(--gc);border-inline-start:1px solid var(--gc);vertical-align:middle}
+.gm i{width:var(--s);height:var(--s);background:var(--surface);border-bottom:1px solid var(--gc);border-inline-end:1px solid var(--gc)}
+.gm-start i.on{background:#1F9A44}.gm-beg i.on{background:#1E6FFF}.gm-int i.on{background:#E57A00}.gm-adv i.on{background:#D9213A}
+.gm-all i.c1{background:#1E6FFF}.gm-all i.c2{background:#E57A00}.gm-all i.c3{background:#D9213A}
+.gm-big{--s:22px;border-width:1.5px}
+@media (min-width:720px){.gm-big{--s:30px}}.gm-big i{border-width:1.5px}
+.gm-sm{--s:8px}
+.gm-xs{--s:9px;--gc:rgba(212,91,71,.55)}
+.gm-xs i{background:#fff}
+.lv{position:absolute;z-index:2;inset-inline-start:8px;top:8px;display:inline-flex;align-items:center;gap:6px;padding:4px 9px 4px 6px;border-radius:4px;
+  font-size:11px;font-weight:600;color:#13203F;background:#FBF8F0;box-shadow:0 2px 10px rgba(0,0,0,.35);line-height:1.3}
 .lv b{font-size:13px;font-weight:800}
-.lv-start{background:#1F9A44}.lv-beg{background:#1E6FFF}.lv-int{background:#E57A00}.lv-adv{background:#D9213A}
-.lv-all{background:linear-gradient(90deg,#1E6FFF,#E57A00,#D9213A)}
 .fav{position:absolute;z-index:2;inset-inline-end:6px;bottom:6px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   background:rgba(15,26,54,.55);color:#fff}
 .fav svg{width:20px;height:20px}
@@ -271,10 +296,12 @@ footer a{color:var(--muted)}
   .hero{padding-top:44px}
 }
 @media (min-width:960px){
-  .grp{display:grid;grid-template-columns:260px 1fr;gap:32px;margin-top:0;padding:40px 0;border-top:1.5px solid var(--grid-soft)}
-  .grp:first-of-type{border-top:0}
+  .tier{padding-inline-start:28px}
+  .thead{margin-inline-start:-28px;padding:24px 28px}
+  .grp{display:grid;grid-template-columns:240px 1fr;gap:32px;margin-top:0;padding:32px 0;border-top:1.5px solid var(--line)}
+  .thead + .grp{border-top:0}
   .ghead{border-bottom:0;margin-bottom:0;padding-bottom:0;align-content:start;position:sticky;top:150px}
-  .ghead h2{font-size:21px}
+  .ghead h3{font-size:19px}
   .ghead .gdesc{font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -325,6 +352,7 @@ footer a{color:var(--muted)}
 
 
 
+
 <dialog class="ldlg" id="langDlg" aria-labelledby="ldlgT">
   <div class="ldlg-head"><h2 id="ldlgT">ជ្រើសរើសភាសារបស់អ្នក</h2><button class="ibtn" type="button" data-close aria-label="បិទ">✕</button></div>
   <nav class="lgrid">
@@ -361,23 +389,23 @@ footer a{color:var(--muted)}
     </label>
     <div class="lvs" id="lvs" role="group" aria-label="កម្រិត">
       <button class="chip" type="button" data-lv="" aria-pressed="true">គ្រប់កម្រិត</button>
-      <button class="chip" type="button" data-lv="beg" aria-pressed="false"><span class="dot lv-beg" aria-hidden="true"></span><span lang="ko">초급</span><span class="vh"> កម្រិតដំបូង</span></button>
-      <button class="chip" type="button" data-lv="int" aria-pressed="false"><span class="dot lv-int" aria-hidden="true"></span><span lang="ko">중급</span><span class="vh"> កម្រិតមធ្យម</span></button>
-      <button class="chip" type="button" data-lv="adv" aria-pressed="false"><span class="dot lv-adv" aria-hidden="true"></span><span lang="ko">고급</span><span class="vh"> កម្រិតខ្ពស់</span></button>
+      <button class="chip" type="button" data-lv="beg" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><span lang="ko">초급</span><span class="vh"> កម្រិតដំបូង</span></button>
+      <button class="chip" type="button" data-lv="int" aria-pressed="false"><span class="gm gm-sm gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><span lang="ko">중급</span><span class="vh"> កម្រិតមធ្យម</span></button>
+      <button class="chip" type="button" data-lv="adv" aria-pressed="false"><span class="gm gm-sm gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><span lang="ko">고급</span><span class="vh"> កម្រិតខ្ពស់</span></button>
     </div>
   </div>
   <div class="cats" id="cats" role="group" aria-label="ស៊េរី">
     <button class="chip" type="button" data-g="" aria-pressed="true">សៀវភៅទាំងអស់</button>
-    <button class="chip" type="button" data-g="mag" aria-pressed="false">ទស្សនាវដ្តី K-Song</button>
-    <button class="chip" type="button" data-g="core" aria-pressed="false">វេយ្យាករណ៍កូរ៉េចាំបាច់ ពេញលេញ</button>
-    <button class="chip" type="button" data-g="cls" aria-pressed="false">ភាសាកូរ៉េក្នុងថ្នាក់រៀន</button>
-    <button class="chip" type="button" data-g="dlg" aria-pressed="false">វាក្យសព្ទ និងវេយ្យាករណ៍ TOPIK តាមរយៈការសន្ទនា</button>
-    <button class="chip" type="button" data-g="wrt" aria-pressed="false">ការសរសេរ TOPIK II</button>
-    <button class="chip" type="button" data-g="mv2" aria-pressed="false">រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK II</button>
-    <button class="chip" type="button" data-g="mv1" aria-pressed="false">រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK I</button>
-    <button class="chip" type="button" data-g="easy" aria-pressed="false">ចម្រៀងកូរ៉េងាយៗ</button>
-    <button class="chip" type="button" data-g="poem" aria-pressed="false">រៀនភាសាកូរ៉េតាមកំណាព្យ</button>
-    <button class="chip" type="button" data-g="ttg" aria-pressed="false">រៀនភាសាកូរ៉េតាម YouTube Shorts</button>
+    <button class="chip" type="button" data-g="core" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>វេយ្យាករណ៍កូរ៉េចាំបាច់ ពេញលេញ</button>
+    <button class="chip" type="button" data-g="cls" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>ភាសាកូរ៉េក្នុងថ្នាក់រៀន</button>
+    <button class="chip" type="button" data-g="dlg" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>វាក្យសព្ទ និងវេយ្យាករណ៍ TOPIK តាមរយៈការសន្ទនា</button>
+    <button class="chip" type="button" data-g="mv1" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK I</button>
+    <button class="chip" type="button" data-g="easy" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>ចម្រៀងកូរ៉េងាយៗ</button>
+    <button class="chip" type="button" data-g="mv2" aria-pressed="false"><span class="gm gm-sm gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span>រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK II</button>
+    <button class="chip" type="button" data-g="mag" aria-pressed="false"><span class="gm gm-sm gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>ទស្សនាវដ្តី K-Song</button>
+    <button class="chip" type="button" data-g="wrt" aria-pressed="false"><span class="gm gm-sm gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>ការសរសេរ TOPIK II</button>
+    <button class="chip" type="button" data-g="poem" aria-pressed="false"><span class="gm gm-sm gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>រៀនភាសាកូរ៉េតាមកំណាព្យ</button>
+    <button class="chip" type="button" data-g="ttg" aria-pressed="false"><span class="gm gm-sm gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>រៀនភាសាកូរ៉េតាម YouTube Shorts</button>
     <button class="chip" type="button" data-g="__fav" aria-pressed="false">♥ បានរក្សាទុក</button>
   </div>
   <p class="result" id="result" aria-live="polite"></p>
@@ -389,63 +417,32 @@ footer a{color:var(--muted)}
 </section>
 
 <main id="shelf">
-  <section class="grp" id="g-mag" data-g="mag">
-    <div class="ghead">
-      <h2>ទស្សនាវដ្តី K-Song</h2>
-      <p class="gdesc">សៀវភៅបែបទស្សនាវដ្តី ភ្ជាប់នឹង MV មួយៗ៖ ទំព័ររូបថត ពាក្យជារូបភាព និងទំនុកច្រៀងពីរភាសា។</p>
-      <p class="gko" lang="ko">K-Song 매거진</p>
-    </div>
-    <div class="books solo">
-    <article class="book" data-slug="dive-01" data-lv="adv" data-q="k-song 매거진 01호 · 해녀 k-song magazine no. 01 — haenyeo 해녀 haenyeo ទស្សនាវដ្តី k-song dive-01">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">1</span>
-        <img src="../covers/epic21-dive-01-haenyeo/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-dive-01-haenyeo'}else{this.remove()}">
-        <span class="lv lv-adv"><b lang="ko">고급</b><span lang="km">កម្រិតខ្ពស់</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
+  <section class="tier tier-beg" id="lv-beg" data-tier="beg" aria-labelledby="lvh-beg">
+    <header class="thead">
+      <span class="gm gm-big gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>
+      <h2 class="tname" id="lvh-beg"><span lang="ko">초급</span><span class="tword" lang="km">កម្រិតដំបូង</span></h2>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK I · 1–2</span><span>សៀវភៅ 15 ក្បាល</span></p>
+    </header>
+    <section class="grp" id="g-core-beg" data-g="core">
+      <div class="ghead">
+        <h3>វេយ្យាករណ៍កូរ៉េចាំបាច់ ពេញលេញ</h3>
+        <p class="gdesc">វេយ្យាករណ៍សំខាន់ៗទាំងអស់នៃ TOPIK I &amp; II ក្នុងសៀវភៅតែមួយ។</p>
+        <p class="gko" lang="ko">한국어 필수 문법 완결판</p>
       </div>
-      <div class="bmeta">
-        <h3 class="bname" lang="ko">K-Song 매거진 01호 · 해녀</h3>
-        <p class="bsub" lang="en">K-Song Magazine No. 01 — Haenyeo</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-dive-01-haenyeo/EPIC21_DIVE01_Haenyeo_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%B4%EB%85%80" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    </div>
-  </section>
-  <section class="grp" id="g-core" data-g="core">
-    <div class="ghead">
-      <h2>វេយ្យាករណ៍កូរ៉េចាំបាច់ ពេញលេញ</h2>
-      <p class="gdesc">វេយ្យាករណ៍សំខាន់ៗទាំងអស់នៃ TOPIK I &amp; II ក្នុងសៀវភៅតែមួយ។</p>
-      <p class="gko" lang="ko">한국어 필수 문법 완결판</p>
-    </div>
-    <div class="books solo">
+      <div class="books solo">
     <article class="book" data-slug="grammar" data-lv="beg" data-q="한국어 필수 문법 완결판 essential korean grammar វេយ្យាករណ៍កូរ៉េចាំបាច់ ពេញលេញ grammar">
       <div class="cover">
         <span class="ph" aria-hidden="true"></span>
         <img src="../covers/epic21-essential-korean-grammar/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-essential-korean-grammar'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
-        <h3 class="bname" lang="ko">한국어 필수 문법 완결판</h3>
+        <h4 class="bname" lang="ko">한국어 필수 문법 완결판</h4>
         <p class="bsub" lang="en">Essential Korean Grammar</p>
       </div>
       <div class="acts">
@@ -461,28 +458,28 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
-  </section>
-  <section class="grp" id="g-cls" data-g="cls">
-    <div class="ghead">
-      <h2>ភាសាកូរ៉េក្នុងថ្នាក់រៀន</h2>
-      <p class="gdesc">ឃ្លាដែលឮក្នុងថ្នាក់រៀន ជាមួយការវិភាគរូបវិទ្យា ការបញ្ចេញសំឡេង និងវប្បធម៌។</p>
-      <p class="gko" lang="ko">교실 한국어</p>
-    </div>
-    <div class="books solo">
+      </div>
+    </section>
+    <section class="grp" id="g-cls-beg" data-g="cls">
+      <div class="ghead">
+        <h3>ភាសាកូរ៉េក្នុងថ្នាក់រៀន</h3>
+        <p class="gdesc">ឃ្លាដែលឮក្នុងថ្នាក់រៀន ជាមួយការវិភាគរូបវិទ្យា ការបញ្ចេញសំឡេង និងវប្បធម៌។</p>
+        <p class="gko" lang="ko">교실 한국어</p>
+      </div>
+      <div class="books solo">
     <article class="book" data-slug="classroom" data-lv="beg" data-q="교실 한국어 필수 표현 60 60 essential classroom korean expressions 수업이 들리는 첫걸음 your first step to understanding class ភាសាកូរ៉េក្នុងថ្នាក់រៀន classroom">
       <div class="cover">
         <span class="ph" aria-hidden="true"></span>
         <img src="../covers/epic21-classroom-korean-60/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-classroom-korean-60'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
-        <h3 class="bname" lang="ko">교실 한국어 필수 표현 60</h3>
+        <h4 class="bname" lang="ko">교실 한국어 필수 표현 60</h4>
         <p class="bsub" lang="en">60 Essential Classroom Korean Expressions</p>
       </div>
       <div class="acts">
@@ -498,29 +495,29 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
-  </section>
-  <section class="grp" id="g-dlg" data-g="dlg">
-    <div class="ghead">
-      <h2>វាក្យសព្ទ និងវេយ្យាករណ៍ TOPIK តាមរយៈការសន្ទនា</h2>
-      <p class="gdesc">រៀនពាក្យ និងវេយ្យាករណ៍ TOPIK នៅក្នុងការសន្ទនាពិត។</p>
-      <p class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</p>
-    </div>
-    <div class="books">
+      </div>
+    </section>
+    <section class="grp" id="g-dlg-beg" data-g="dlg">
+      <div class="ghead">
+        <h3>វាក្យសព្ទ និងវេយ្យាករណ៍ TOPIK តាមរយៈការសន្ទនា</h3>
+        <p class="gdesc">រៀនពាក្យ និងវេយ្យាករណ៍ TOPIK នៅក្នុងការសន្ទនាពិត។</p>
+        <p class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</p>
+      </div>
+      <div class="books">
     <article class="book" data-slug="dialogue1" data-lv="beg" data-q="대화로 배우는 topik 어휘와 문법 · 시리즈 1 topik vocabulary &amp; grammar through dialogue 1 វាក្យសព្ទ និងវេយ្យាករណ៍ topik តាមរយៈការសន្ទនា dialogue1">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="../covers/epic21-topik-vocab-grammar-s1/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik-vocab-grammar-s1'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 1</p>
-        <h3 class="bname" lang="ko">대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1</h3>
+        <h4 class="bname" lang="ko">대화로 배우는 TOPIK 어휘와 문법 · 시리즈 1</h4>
         
       </div>
       <div class="acts">
@@ -542,14 +539,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik-vocab-grammar-s2/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik-vocab-grammar-s2'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 2</p>
-        <h3 class="bname" lang="ko">대화로 배우는 TOPIK 어휘와 문법 · 시리즈 2</h3>
+        <h4 class="bname" lang="ko">대화로 배우는 TOPIK 어휘와 문법 · 시리즈 2</h4>
         
       </div>
       <div class="acts">
@@ -565,249 +562,29 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
-  </section>
-  <section class="grp" id="g-wrt" data-g="wrt">
-    <div class="ghead">
-      <h2>ការសរសេរ TOPIK II</h2>
-      <p class="gdesc">លំហាត់មួយជំហានម្ដងៗ សម្រាប់សំណួរសរសេរ ៥១–៥៤។</p>
-      <p class="gko" lang="ko">TOPIK II 쓰기</p>
-    </div>
-    <div class="books solo">
-    <article class="book" data-slug="writing" data-lv="adv" data-q="외국인 학습자를 위한 topik ii 쓰기 마스터 topik ii writing master — questions 51–54 ការសរសេរ topik ii writing">
-      <div class="cover">
-        <span class="ph" aria-hidden="true"></span>
-        <img src="../covers/epic21-topik2-writing-master/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-writing-master'}else{this.remove()}">
-        <span class="lv lv-adv"><b lang="ko">고급</b><span lang="km">កម្រិតខ្ពស់</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
       </div>
-      <div class="bmeta">
-        <h3 class="bname" lang="ko">외국인 학습자를 위한 TOPIK II 쓰기 마스터</h3>
-        <p class="bsub" lang="en">TOPIK II Writing Master — Questions 51–54</p>
+    </section>
+    <section class="grp" id="g-mv1-beg" data-g="mv1">
+      <div class="ghead">
+        <h3>រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK I</h3>
+        <p class="gdesc">ភាសាកូរ៉េកម្រិតដំបូង ពីឈុតឆាកប្រចាំថ្ងៃ៖ ហាងកាហ្វេ រថភ្លើងក្រោមដី ការទិញឥវ៉ាន់។</p>
+        <p class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</p>
       </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-writing-master/EPIC21_TOPIK2_WritingMaster_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20TOPIK%20II%20%EC%93%B0%EA%B8%B0%20%EB%A7%88%EC%8A%A4%ED%84%B0" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    </div>
-  </section>
-  <section class="grp" id="g-mv2" data-g="mv2">
-    <div class="ghead">
-      <h2>រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK II</h2>
-      <p class="gdesc">វេយ្យាករណ៍ និងវាក្យសព្ទកម្រិតមធ្យម ពីវីដេអូចម្រៀង EPIC21។</p>
-      <p class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</p>
-    </div>
-    <div class="books">
-    <article class="book" data-slug="four-seasons" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제1편 사계절 learn korean through music videos — topik ii, vol.1 &#39;four seasons&#39; 사계절 four seasons រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii four-seasons">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">1</span>
-        <img src="../covers/epic21-topik2-mv-vol1-four-seasons/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol1-four-seasons'}else{this.remove()}">
-        <span class="lv lv-int"><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
-      </div>
-      <div class="bmeta">
-        <p class="bvol">ភាគ 1</p>
-        <h3 class="bname" lang="ko">사계절</h3>
-        <p class="bsub" lang="en">Four Seasons</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol1-four-seasons/EPIC21_FourSeasons_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%82%AC%EA%B3%84%EC%A0%88" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    <article class="book" data-slug="black-coffee" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제2편 블랙커피 learn korean through music videos — topik ii, vol.2 &#39;black coffee&#39; 블랙커피 black coffee រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii black-coffee">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">2</span>
-        <img src="../covers/epic21-topik2-mv-vol2-black-coffee/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol2-black-coffee'}else{this.remove()}">
-        <span class="lv lv-int"><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
-      </div>
-      <div class="bmeta">
-        <p class="bvol">ភាគ 2</p>
-        <h3 class="bname" lang="ko">블랙커피</h3>
-        <p class="bsub" lang="en">Black Coffee</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol2-black-coffee/EPIC21_BlackCoffee_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    <article class="book" data-slug="cola" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제3편 콜라 learn korean through music videos — topik ii, vol.3 &#39;cola&#39; 콜라 cola រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii cola">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">3</span>
-        <img src="../covers/epic21-topik2-mv-vol3-cola/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol3-cola'}else{this.remove()}">
-        <span class="lv lv-int"><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
-      </div>
-      <div class="bmeta">
-        <p class="bvol">ភាគ 3</p>
-        <h3 class="bname" lang="ko">콜라</h3>
-        <p class="bsub" lang="en">Cola</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol3-cola/EPIC21_Cola_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%BD%9C%EB%9D%BC" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    <article class="book" data-slug="curious" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제4편 궁금해 learn korean through music videos — topik ii, vol.4 &#39;curious&#39; 궁금해 curious រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii curious">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">4</span>
-        <img src="../covers/epic21-topik2-mv-vol4-curious/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol4-curious'}else{this.remove()}">
-        <span class="lv lv-int"><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
-      </div>
-      <div class="bmeta">
-        <p class="bvol">ភាគ 4</p>
-        <h3 class="bname" lang="ko">궁금해</h3>
-        <p class="bsub" lang="en">Curious</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol4-curious/EPIC21_Curious_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EA%B6%81%EA%B8%88%ED%95%B4" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    <article class="book" data-slug="parting" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제5편 회자정리 learn korean through music videos — topik ii, vol.5 &#39;those who meet must part&#39; 회자정리 those who meet must part រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii parting">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">5</span>
-        <img src="../covers/epic21-topik2-mv-vol5-parting/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol5-parting'}else{this.remove()}">
-        <span class="lv lv-int"><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
-      </div>
-      <div class="bmeta">
-        <p class="bvol">ភាគ 5</p>
-        <h3 class="bname" lang="ko">회자정리</h3>
-        <p class="bsub" lang="en">Those Who Meet Must Part</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol5-parting/EPIC21_Parting_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%9A%8C%EC%9E%90%EC%A0%95%EB%A6%AC" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    <article class="book" data-slug="favorite-song" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제6편 애창곡 learn korean through music videos — topik ii, vol.6 &#39;my favorite song&#39; 애창곡 my favorite song រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii favorite-song">
-      <div class="cover">
-        <span class="ph" aria-hidden="true">6</span>
-        <img src="../covers/epic21-topik2-mv-vol6-favorite-song/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
-             onload="this.setAttribute('data-ok','1')"
-             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol6-favorite-song'}else{this.remove()}">
-        <span class="lv lv-int"><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
-        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
-        </button>
-      </div>
-      <div class="bmeta">
-        <p class="bvol">ភាគ 6</p>
-        <h3 class="bname" lang="ko">애창곡</h3>
-        <p class="bsub" lang="en">My Favorite Song</p>
-      </div>
-      <div class="acts">
-        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol6-favorite-song/EPIC21_FavoriteSong_14_Khmer_Free.pdf" data-get>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
-          <span>PDF</span>
-        </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%95%A0%EC%B0%BD%EA%B3%A1" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
-        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-        </button>
-      </div>
-    </article>
-    </div>
-  </section>
-  <section class="grp" id="g-mv1" data-g="mv1">
-    <div class="ghead">
-      <h2>រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK I</h2>
-      <p class="gdesc">ភាសាកូរ៉េកម្រិតដំបូង ពីឈុតឆាកប្រចាំថ្ងៃ៖ ហាងកាហ្វេ រថភ្លើងក្រោមដី ការទិញឥវ៉ាន់។</p>
-      <p class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</p>
-    </div>
-    <div class="books">
+      <div class="books">
     <article class="book" data-slug="two-hands" data-lv="beg" data-q="뮤직비디오로 배우는 topik i · 제1편 두 손으로 learn korean through a music video — topik i, vol.1 &#39;with both hands&#39; 두 손으로 with both hands រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik i two-hands">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="../covers/epic21-topik1-mv-vol1-two-hands/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol1-two-hands'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 1</p>
-        <h3 class="bname" lang="ko">두 손으로</h3>
+        <h4 class="bname" lang="ko">두 손으로</h4>
         <p class="bsub" lang="en">With Both Hands</p>
       </div>
       <div class="acts">
@@ -829,14 +606,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol2-restroom/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol2-restroom'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 2</p>
-        <h3 class="bname" lang="ko">화장실이 어디예요?</h3>
+        <h4 class="bname" lang="ko">화장실이 어디예요?</h4>
         <p class="bsub" lang="en">Where Is the Restroom?</p>
       </div>
       <div class="acts">
@@ -858,14 +635,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol3-americano/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol3-americano'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 3</p>
-        <h3 class="bname" lang="ko">아이스아메리카노 두 잔 주세요</h3>
+        <h4 class="bname" lang="ko">아이스아메리카노 두 잔 주세요</h4>
         <p class="bsub" lang="en">Two Iced Americanos, Please</p>
       </div>
       <div class="acts">
@@ -887,14 +664,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol4-wifi/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol4-wifi'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 4</p>
-        <h3 class="bname" lang="ko">여기 와이파이 돼요?</h3>
+        <h4 class="bname" lang="ko">여기 와이파이 돼요?</h4>
         <p class="bsub" lang="en">Do You Have Wi-Fi Here?</p>
       </div>
       <div class="acts">
@@ -916,14 +693,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol5-myeongdong/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol5-myeongdong'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 5</p>
-        <h3 class="bname" lang="ko">명동역이 어디예요?</h3>
+        <h4 class="bname" lang="ko">명동역이 어디예요?</h4>
         <p class="bsub" lang="en">Where Is Myeongdong Station?</p>
       </div>
       <div class="acts">
@@ -945,14 +722,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol6-transit-card/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol6-transit-card'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 6</p>
-        <h3 class="bname" lang="ko">교통 카드 좀 충전해 주세요</h3>
+        <h4 class="bname" lang="ko">교통 카드 좀 충전해 주세요</h4>
         <p class="bsub" lang="en">Please Top Up My Transit Card</p>
       </div>
       <div class="acts">
@@ -974,14 +751,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol7-shopping/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol7-shopping'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 7</p>
-        <h3 class="bname" lang="ko">이거 입어 봐도 돼요?</h3>
+        <h4 class="bname" lang="ko">이거 입어 봐도 돼요?</h4>
         <p class="bsub" lang="en">Can I Try This On?</p>
       </div>
       <div class="acts">
@@ -1003,14 +780,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol8-samgyeopsal/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol8-samgyeopsal'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 8</p>
-        <h3 class="bname" lang="ko">우리 삼겹살 먹을까?</h3>
+        <h4 class="bname" lang="ko">우리 삼겹살 먹을까?</h4>
         <p class="bsub" lang="en">Shall We Get Samgyeopsal?</p>
       </div>
       <div class="acts">
@@ -1032,14 +809,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol9-chicken/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol9-chicken'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 9</p>
-        <h3 class="bname" lang="ko">오는 데 얼마나 걸려요?</h3>
+        <h4 class="bname" lang="ko">오는 데 얼마나 걸려요?</h4>
         <p class="bsub" lang="en">How Long Will It Take?</p>
       </div>
       <div class="acts">
@@ -1061,14 +838,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-topik1-mv-vol10-clinic/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik1-mv-vol10-clinic'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 10</p>
-        <h3 class="bname" lang="ko">나 감기 걸렸나 봐</h3>
+        <h4 class="bname" lang="ko">나 감기 걸렸나 봐</h4>
         <p class="bsub" lang="en">I Think I Caught a Cold</p>
       </div>
       <div class="acts">
@@ -1084,28 +861,28 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
-  </section>
-  <section class="grp" id="g-easy" data-g="easy">
-    <div class="ghead">
-      <h2>ចម្រៀងកូរ៉េងាយៗ</h2>
-      <p class="gdesc">សៀវភៅកម្រិតដំបូងភ្ជាប់ជាមួយ MV — រៀនពាក្យមូលដ្ឋានតាមចម្រៀង រូបថត ល្បែង និងកាតពាក្យ។</p>
-      <p class="gko" lang="ko">쉬운 한국어 노래</p>
-    </div>
-    <div class="books solo">
+      </div>
+    </section>
+    <section class="grp" id="g-easy-beg" data-g="easy">
+      <div class="ghead">
+        <h3>ចម្រៀងកូរ៉េងាយៗ</h3>
+        <p class="gdesc">សៀវភៅកម្រិតដំបូងភ្ជាប់ជាមួយ MV — រៀនពាក្យមូលដ្ឋានតាមចម្រៀង រូបថត ល្បែង និងកាតពាក្យ។</p>
+        <p class="gko" lang="ko">쉬운 한국어 노래</p>
+      </div>
+      <div class="books solo">
     <article class="book" data-slug="easy-01" data-lv="beg" data-q="쉬운 한국어 노래 01 · 반대말 1 easy korean songs no. 01 — opposites 1 반대말 1 opposites 1 ចម្រៀងកូរ៉េងាយៗ easy-01">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="../covers/epic21-easysong-01-opposites1/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-easysong-01-opposites1'}else{this.remove()}">
-        <span class="lv lv-beg"><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
+        <span class="lv lv-beg"><span class="gm gm-xs gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><b lang="ko">초급</b><span lang="km">កម្រិតដំបូង</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
-        <h3 class="bname" lang="ko">쉬운 한국어 노래 01 · 반대말 1</h3>
+        <h4 class="bname" lang="ko">쉬운 한국어 노래 01 · 반대말 1</h4>
         <p class="bsub" lang="en">Easy Korean Songs No. 01 — Opposites 1</p>
       </div>
       <div class="acts">
@@ -1121,28 +898,299 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
+      </div>
+    </section>
   </section>
-  <section class="grp" id="g-poem" data-g="poem">
-    <div class="ghead">
-      <h2>រៀនភាសាកូរ៉េតាមកំណាព្យ</h2>
-      <p class="gdesc">សៀវភៅកម្រិតមធ្យម–ខ្ពស់ ផ្អែកលើកំណាព្យដើមមួយ — ពាក្យ វេយ្យាករណ៍ លំហាត់បែប TOPIK II និងក្រដាសក្រឡា។</p>
-      <p class="gko" lang="ko">시로 배우는 한국어</p>
-    </div>
-    <div class="books solo">
+  <section class="tier tier-int" id="lv-int" data-tier="int" aria-labelledby="lvh-int">
+    <header class="thead">
+      <span class="gm gm-big gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span>
+      <h2 class="tname" id="lvh-int"><span lang="ko">중급</span><span class="tword" lang="km">កម្រិតមធ្យម</span></h2>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK II · 3–4</span><span>សៀវភៅ 6 ក្បាល</span></p>
+    </header>
+    <section class="grp" id="g-mv2-int" data-g="mv2">
+      <div class="ghead">
+        <h3>រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — TOPIK II</h3>
+        <p class="gdesc">វេយ្យាករណ៍ និងវាក្យសព្ទកម្រិតមធ្យម ពីវីដេអូចម្រៀង EPIC21។</p>
+        <p class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</p>
+      </div>
+      <div class="books">
+    <article class="book" data-slug="four-seasons" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제1편 사계절 learn korean through music videos — topik ii, vol.1 &#39;four seasons&#39; 사계절 four seasons រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii four-seasons">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">1</span>
+        <img src="../covers/epic21-topik2-mv-vol1-four-seasons/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol1-four-seasons'}else{this.remove()}">
+        <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <p class="bvol">ភាគ 1</p>
+        <h4 class="bname" lang="ko">사계절</h4>
+        <p class="bsub" lang="en">Four Seasons</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol1-four-seasons/EPIC21_FourSeasons_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%82%AC%EA%B3%84%EC%A0%88" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+    <article class="book" data-slug="black-coffee" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제2편 블랙커피 learn korean through music videos — topik ii, vol.2 &#39;black coffee&#39; 블랙커피 black coffee រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii black-coffee">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">2</span>
+        <img src="../covers/epic21-topik2-mv-vol2-black-coffee/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol2-black-coffee'}else{this.remove()}">
+        <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <p class="bvol">ភាគ 2</p>
+        <h4 class="bname" lang="ko">블랙커피</h4>
+        <p class="bsub" lang="en">Black Coffee</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol2-black-coffee/EPIC21_BlackCoffee_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+    <article class="book" data-slug="cola" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제3편 콜라 learn korean through music videos — topik ii, vol.3 &#39;cola&#39; 콜라 cola រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii cola">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">3</span>
+        <img src="../covers/epic21-topik2-mv-vol3-cola/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol3-cola'}else{this.remove()}">
+        <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <p class="bvol">ភាគ 3</p>
+        <h4 class="bname" lang="ko">콜라</h4>
+        <p class="bsub" lang="en">Cola</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol3-cola/EPIC21_Cola_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%BD%9C%EB%9D%BC" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+    <article class="book" data-slug="curious" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제4편 궁금해 learn korean through music videos — topik ii, vol.4 &#39;curious&#39; 궁금해 curious រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii curious">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">4</span>
+        <img src="../covers/epic21-topik2-mv-vol4-curious/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol4-curious'}else{this.remove()}">
+        <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <p class="bvol">ភាគ 4</p>
+        <h4 class="bname" lang="ko">궁금해</h4>
+        <p class="bsub" lang="en">Curious</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol4-curious/EPIC21_Curious_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EA%B6%81%EA%B8%88%ED%95%B4" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+    <article class="book" data-slug="parting" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제5편 회자정리 learn korean through music videos — topik ii, vol.5 &#39;those who meet must part&#39; 회자정리 those who meet must part រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii parting">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">5</span>
+        <img src="../covers/epic21-topik2-mv-vol5-parting/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol5-parting'}else{this.remove()}">
+        <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <p class="bvol">ភាគ 5</p>
+        <h4 class="bname" lang="ko">회자정리</h4>
+        <p class="bsub" lang="en">Those Who Meet Must Part</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol5-parting/EPIC21_Parting_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%9A%8C%EC%9E%90%EC%A0%95%EB%A6%AC" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+    <article class="book" data-slug="favorite-song" data-lv="int" data-q="뮤직비디오로 배우는 topik ii · 제6편 애창곡 learn korean through music videos — topik ii, vol.6 &#39;my favorite song&#39; 애창곡 my favorite song រៀនភាសាកូរ៉េតាមវីដេអូចម្រៀង — topik ii favorite-song">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">6</span>
+        <img src="../covers/epic21-topik2-mv-vol6-favorite-song/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-mv-vol6-favorite-song'}else{this.remove()}">
+        <span class="lv lv-int"><span class="gm gm-xs gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><b lang="ko">중급</b><span lang="km">កម្រិតមធ្យម</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <p class="bvol">ភាគ 6</p>
+        <h4 class="bname" lang="ko">애창곡</h4>
+        <p class="bsub" lang="en">My Favorite Song</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-mv-vol6-favorite-song/EPIC21_FavoriteSong_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%95%A0%EC%B0%BD%EA%B3%A1" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+      </div>
+    </section>
+  </section>
+  <section class="tier tier-adv" id="lv-adv" data-tier="adv" aria-labelledby="lvh-adv">
+    <header class="thead">
+      <span class="gm gm-big gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>
+      <h2 class="tname" id="lvh-adv"><span lang="ko">고급</span><span class="tword" lang="km">កម្រិតខ្ពស់</span></h2>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK II · 5–6</span><span>សៀវភៅ 3 ក្បាល</span></p>
+    </header>
+    <section class="grp" id="g-mag-adv" data-g="mag">
+      <div class="ghead">
+        <h3>ទស្សនាវដ្តី K-Song</h3>
+        <p class="gdesc">សៀវភៅបែបទស្សនាវដ្តី ភ្ជាប់នឹង MV មួយៗ៖ ទំព័ររូបថត ពាក្យជារូបភាព និងទំនុកច្រៀងពីរភាសា។</p>
+        <p class="gko" lang="ko">K-Song 매거진</p>
+      </div>
+      <div class="books solo">
+    <article class="book" data-slug="dive-01" data-lv="adv" data-q="k-song 매거진 01호 · 해녀 k-song magazine no. 01 — haenyeo 해녀 haenyeo ទស្សនាវដ្តី k-song dive-01">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">1</span>
+        <img src="../covers/epic21-dive-01-haenyeo/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-dive-01-haenyeo'}else{this.remove()}">
+        <span class="lv lv-adv"><span class="gm gm-xs gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">고급</b><span lang="km">កម្រិតខ្ពស់</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <h4 class="bname" lang="ko">K-Song 매거진 01호 · 해녀</h4>
+        <p class="bsub" lang="en">K-Song Magazine No. 01 — Haenyeo</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-dive-01-haenyeo/EPIC21_DIVE01_Haenyeo_14_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%B4%EB%85%80" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+      </div>
+    </section>
+    <section class="grp" id="g-wrt-adv" data-g="wrt">
+      <div class="ghead">
+        <h3>ការសរសេរ TOPIK II</h3>
+        <p class="gdesc">លំហាត់មួយជំហានម្ដងៗ សម្រាប់សំណួរសរសេរ ៥១–៥៤។</p>
+        <p class="gko" lang="ko">TOPIK II 쓰기</p>
+      </div>
+      <div class="books solo">
+    <article class="book" data-slug="writing" data-lv="adv" data-q="외국인 학습자를 위한 topik ii 쓰기 마스터 topik ii writing master — questions 51–54 ការសរសេរ topik ii writing">
+      <div class="cover">
+        <span class="ph" aria-hidden="true"></span>
+        <img src="../covers/epic21-topik2-writing-master/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-topik2-writing-master'}else{this.remove()}">
+        <span class="lv lv-adv"><span class="gm gm-xs gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">고급</b><span lang="km">កម្រិតខ្ពស់</span></span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        <h4 class="bname" lang="ko">외국인 학습자를 위한 TOPIK II 쓰기 마스터</h4>
+        <p class="bsub" lang="en">TOPIK II Writing Master — Questions 51–54</p>
+      </div>
+      <div class="acts">
+        <a class="get" href="https://archive.org/download/epic21-topik2-writing-master/EPIC21_TOPIK2_WritingMaster_Khmer_Free.pdf" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>PDF</span>
+        </a>
+        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20TOPIK%20II%20%EC%93%B0%EA%B8%B0%20%EB%A7%88%EC%8A%A4%ED%84%B0" rel="noopener" aria-label="មើលវីដេអូ" title="មើលវីដេអូ">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="ចែករំលែក" title="ចែករំលែក">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+      </div>
+    </section>
+    <section class="grp" id="g-poem-adv" data-g="poem">
+      <div class="ghead">
+        <h3>រៀនភាសាកូរ៉េតាមកំណាព្យ</h3>
+        <p class="gdesc">សៀវភៅកម្រិតមធ្យម–ខ្ពស់ ផ្អែកលើកំណាព្យដើមមួយ — ពាក្យ វេយ្យាករណ៍ លំហាត់បែប TOPIK II និងក្រដាសក្រឡា។</p>
+        <p class="gko" lang="ko">시로 배우는 한국어</p>
+      </div>
+      <div class="books solo">
     <article class="book" data-slug="poem-01" data-lv="adv" data-q="시로 배우는 한국어 01 · 첫 월급날 learn korean with poetry no. 01 — first payday 첫 월급날 first payday រៀនភាសាកូរ៉េតាមកំណាព្យ poem-01">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="../covers/epic21-poem-01-first-payday/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-poem-01-first-payday'}else{this.remove()}">
-        <span class="lv lv-adv"><b lang="ko">고급</b><span lang="km">កម្រិតខ្ពស់</span></span>
+        <span class="lv lv-adv"><span class="gm gm-xs gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">고급</b><span lang="km">កម្រិតខ្ពស់</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
-        <h3 class="bname" lang="ko">시로 배우는 한국어 01 · 첫 월급날</h3>
+        <h4 class="bname" lang="ko">시로 배우는 한국어 01 · 첫 월급날</h4>
         <p class="bsub" lang="en">Learn Korean with Poetry No. 01 — First Payday</p>
       </div>
       <div class="acts">
@@ -1158,29 +1206,36 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
+      </div>
+    </section>
   </section>
-  <section class="grp" id="g-ttg" data-g="ttg">
-    <div class="ghead">
-      <h2>រៀនភាសាកូរ៉េតាម YouTube Shorts</h2>
-      <p class="gdesc">សៀវភៅណែនាំការធ្វើដំណើរឆ្លងពេលវេលា 2056 ភ្ជាប់ជាមួយ Shorts «30 ឆ្នាំក្រោយ» — ប្រៀបធៀប 2026 និង 2056 ហើយរៀនពាក្យ និងកន្សោមពីកម្រិតដំបូងដល់កម្រិតខ្ពស់។ មានចម្លើយ។</p>
-      <p class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</p>
-    </div>
-    <div class="books">
+  <section class="tier tier-all" id="lv-all" data-tier="all" aria-labelledby="lvh-all">
+    <header class="thead">
+      <span class="gm gm-big gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span>
+      <h2 class="tname" id="lvh-all"><span lang="ko">초급~고급</span><span class="tword" lang="km">គ្រប់កម្រិត</span></h2>
+      <p class="tmeta"><span class="topik" dir="ltr">TOPIK I – II</span><span>សៀវភៅ 3 ក្បាល</span></p>
+    </header>
+    <section class="grp" id="g-ttg-all" data-g="ttg">
+      <div class="ghead">
+        <h3>រៀនភាសាកូរ៉េតាម YouTube Shorts</h3>
+        <p class="gdesc">សៀវភៅណែនាំការធ្វើដំណើរឆ្លងពេលវេលា 2056 ភ្ជាប់ជាមួយ Shorts «30 ឆ្នាំក្រោយ» — ប្រៀបធៀប 2026 និង 2056 ហើយរៀនពាក្យ និងកន្សោមពីកម្រិតដំបូងដល់កម្រិតខ្ពស់។ មានចម្លើយ។</p>
+        <p class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</p>
+      </div>
+      <div class="books">
     <article class="book" data-slug="ttg-s1" data-lv="all" data-q="2056 시간여행 가이드북 시리즈 1 (#01~#10) time travel guide 2056 · series 1 (#01–#10) 시리즈 1 series 1 រៀនភាសាកូរ៉េតាម youtube shorts ttg-s1">
       <div class="cover">
         <span class="ph" aria-hidden="true">1</span>
         <img src="../covers/epic21-ttg2056-s1/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-ttg2056-s1'}else{this.remove()}">
-        <span class="lv lv-all"><b lang="ko">초급~고급</b><span lang="km">គ្រប់កម្រិត</span></span>
+        <span class="lv lv-all"><span class="gm gm-xs gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">초급~고급</b><span lang="km">គ្រប់កម្រិត</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 1</p>
-        <h3 class="bname" lang="ko">시리즈 1</h3>
+        <h4 class="bname" lang="ko">시리즈 1</h4>
         <p class="bsub" lang="en">Series 1</p>
       </div>
       <div class="acts">
@@ -1202,14 +1257,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-ttg2056-s2/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-ttg2056-s2'}else{this.remove()}">
-        <span class="lv lv-all"><b lang="ko">초급~고급</b><span lang="km">គ្រប់កម្រិត</span></span>
+        <span class="lv lv-all"><span class="gm gm-xs gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">초급~고급</b><span lang="km">គ្រប់កម្រិត</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 2</p>
-        <h3 class="bname" lang="ko">시리즈 2</h3>
+        <h4 class="bname" lang="ko">시리즈 2</h4>
         <p class="bsub" lang="en">Series 2</p>
       </div>
       <div class="acts">
@@ -1231,14 +1286,14 @@ footer a{color:var(--muted)}
         <img src="../covers/epic21-ttg2056-s3/Khmer.jpg" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://archive.org/services/img/epic21-ttg2056-s3'}else{this.remove()}">
-        <span class="lv lv-all"><b lang="ko">초급~고급</b><span lang="km">គ្រប់កម្រិត</span></span>
+        <span class="lv lv-all"><span class="gm gm-xs gm-all" aria-hidden="true"><i class=" c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><b lang="ko">초급~고급</b><span lang="km">គ្រប់កម្រិត</span></span>
         <button class="fav" type="button" aria-pressed="false" aria-label="រក្សាទុកសៀវភៅនេះ" data-fav>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
         </button>
       </div>
       <div class="bmeta">
         <p class="bvol">ភាគ 3</p>
-        <h3 class="bname" lang="ko">시리즈 3</h3>
+        <h4 class="bname" lang="ko">시리즈 3</h4>
         <p class="bsub" lang="en">Series 3</p>
       </div>
       <div class="acts">
@@ -1254,7 +1309,8 @@ footer a{color:var(--muted)}
         </button>
       </div>
     </article>
-    </div>
+      </div>
+    </section>
   </section>
   <div class="empty" id="empty" hidden><p>មិនមានសៀវភៅត្រូវគ្នាទេ។</p><button type="button" id="reset">បង្ហាញសៀវភៅទាំងអស់</button></div>
 </main>
@@ -1333,6 +1389,7 @@ footer a{color:var(--muted)}
       b.hidden=!ok; if(ok)n++;
     });
     $$('.grp').forEach(function(s){s.hidden=!$$('.book',s).some(function(b){return !b.hidden})});
+    $$('.tier').forEach(function(s){s.hidden=!$$('.grp',s).some(function(g){return !g.hidden})});
     $('#empty').hidden=n>0;
     var filtered=state.q||state.lv||state.g;
     $('#result').textContent=filtered?UI.count.replace('{n}',n):'';
