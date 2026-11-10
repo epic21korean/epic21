@@ -495,7 +495,7 @@ footer a{color:var(--muted)}
       </div>
       <div class="books{% if g.books|length == 1 %} solo{% endif %}">
       {%- for b in g.books %}
-    <article class="book" data-added="{{ b.added }}" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
+    <article class="book" data-full="{{ b.ko }}" data-added="{{ b.added }}" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
       <div class="cover">
         <span class="ph" aria-hidden="true">{{ b.vol or '' }}</span>
         <img src="{{ b.cover }}" alt="" loading="lazy" width="180" height="254"
@@ -707,7 +707,7 @@ footer a{color:var(--muted)}
       var b=$('.book[data-slug="'+s+'"]',$('#shelf')); if(!b)return;
       var a=document.createElement('a'); a.href='#'+s; a.dataset.slug=s;
       var im=$('.cover img',b); a.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
-      a.lastChild.textContent=$('.bname',b).textContent.trim(); strip.appendChild(a);
+      a.lastChild.textContent=b.dataset.full||$('.bname',b).textContent.trim(); strip.appendChild(a);
     });
     $('#recent').hidden=!strip.children.length;
   }
@@ -747,7 +747,7 @@ footer a{color:var(--muted)}
       var c=$('.cover',b); if(!$('.newtag',c)){var t=document.createElement('span');t.className='newtag';t.textContent='NEW';c.appendChild(t)}
       var x=document.createElement('a'); x.href='#'+b.dataset.slug; x.dataset.slug=b.dataset.slug;
       var im=$('.cover img',b); x.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
-      x.lastChild.textContent=$('.bname',b).textContent.trim(); strip.appendChild(x);
+      x.lastChild.textContent=b.dataset.full||$('.bname',b).textContent.trim(); strip.appendChild(x);
     });
     $('#newbox').hidden=!strip.children.length;
   }
