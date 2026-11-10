@@ -47,6 +47,7 @@ git add -A && git commit -m "hub v2" && git push
 - 새 문구는 `site.json` → `text.<코드>.ui` 에 들어 있다 (없으면 `build.py` 의 `UI_NEW` 영어로 채운다).
 - 교재 부제는 site.json 각 교재의 "tr": {"vi": "…", …} 에 언어별로 넣는다(없으면 영어).
 - PDF 용량은 `python build.py --refresh-files` 때 아카이브에서 함께 읽어 site.json "sizes" 에 저장되고 버튼에 표시된다.
+- 입문 층: site.json "intro" 에 한글 첫걸음 영상 편을 추가하면(no·id·ko·key) 영상 칸이 늘어난다. 편 제목 번역은 text.<코드>.ui 의 key(예: ep_vowels)에 넣는다.
 - 짝 영상 26권 연결(2026-11-10, videos.json 기준). 『한국어 필수 문법 완결판』은 짝 영상이 없어 채널 검색으로 연결.
 - 교재에 짝 영상을 붙이려면 `site.json` 의 그 교재 덩어리에 `"video": "유튜브영상ID"` 한 줄을 넣고 `python build.py`.
   넣으면 ▶ 버튼이 허브 안에서 바로 재생되고, 없으면 채널 검색으로 연결된다.
