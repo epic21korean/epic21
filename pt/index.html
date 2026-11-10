@@ -485,6 +485,7 @@ footer a{color:var(--muted)}
     </label>
     <div class="lvs" id="lvs" role="group" aria-label="Nível">
       <button class="chip" type="button" data-lv="" aria-pressed="true">Todos os níveis</button>
+      <button class="chip" type="button" data-lv="start" aria-pressed="false"><span class="gm gm-sm gm-start" aria-hidden="true"><i class="on c0"></i><i class=" c1"></i><i class=" c2"></i><i class=" c3"></i></span><span lang="ko">입문</span><span class="vh"> Introdutório</span></button>
       <button class="chip" type="button" data-lv="beg" aria-pressed="false"><span class="gm gm-sm gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span><span lang="ko">초급</span><span class="vh"> Iniciante</span></button>
       <button class="chip" type="button" data-lv="int" aria-pressed="false"><span class="gm gm-sm gm-int" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class=" c3"></i></span><span lang="ko">중급</span><span class="vh"> Intermediário</span></button>
       <button class="chip" type="button" data-lv="adv" aria-pressed="false"><span class="gm gm-sm gm-adv" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class="on c2"></i><i class="on c3"></i></span><span lang="ko">고급</span><span class="vh"> Avançado</span></button>
@@ -519,6 +520,35 @@ footer a{color:var(--muted)}
 </section>
 
 <main id="shelf">
+  <section class="tier tier-start intro" id="lv-start" data-tier="start" data-q="hangul 한글 모음 자음 vowel consonant primeiros passos no hangul vogais básicas consoantes básicas" aria-labelledby="lvh-start">
+    <header class="thead">
+      <span class="gm gm-big gm-start" aria-hidden="true"><i class="on c0"></i><i class=" c1"></i><i class=" c2"></i><i class=" c3"></i></span>
+      <h2 class="tname" id="lvh-start"><span lang="ko">입문</span><span class="tword" lang="pt">Introdutório</span></h2>
+      <p class="tmeta"><span class="topik" dir="ltr">Pre-TOPIK</span></p>
+    </header>
+    <section class="grp" data-g="__intro">
+      <div class="ghead">
+        <h3 lang="ko">한글 첫걸음</h3>
+        <p class="gko" lang="pt">Primeiros passos no hangul</p>
+        <p class="gdesc">Aprenda a ler as letras coreanas do zero com este curso em vídeo gratuito.</p>
+      </div>
+      <div class="eps">
+        <a class="ep" href="https://www.youtube.com/watch?v=Tnutyr3SC14" rel="noopener" data-video="Tnutyr3SC14" data-ep="1">
+          <span class="ethumb"><img src="https://i.ytimg.com/vi/Tnutyr3SC14/hqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span class="eplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13l11-6.5z"/></svg></span></span>
+          <span class="evol">Vol. 1</span>
+          <span class="ename" lang="ko">기본 모음</span>
+          <span class="bsub" lang="pt">Vogais básicas</span>
+        </a>
+        <a class="ep" href="https://www.youtube.com/watch?v=dbgBSaflk1g" rel="noopener" data-video="dbgBSaflk1g" data-ep="2">
+          <span class="ethumb"><img src="https://i.ytimg.com/vi/dbgBSaflk1g/hqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span class="eplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13l11-6.5z"/></svg></span></span>
+          <span class="evol">Vol. 2</span>
+          <span class="ename" lang="ko">기본 자음</span>
+          <span class="bsub" lang="pt">Consoantes básicas</span>
+        </a>
+        <div class="ep epnext" aria-hidden="false"><span class="enext"><span class="gm gm-sm gm-start" aria-hidden="true"><i class="on c0"></i><i class=" c1"></i><i class=" c2"></i><i class=" c3"></i></span><span>Aguarde o próximo episódio!</span></span></div>
+      </div>
+    </section>
+  </section>
   <section class="tier tier-beg" id="lv-beg" data-tier="beg" aria-labelledby="lvh-beg">
     <header class="thead">
       <span class="gm gm-big gm-beg" aria-hidden="true"><i class="on c0"></i><i class="on c1"></i><i class=" c2"></i><i class=" c3"></i></span>
@@ -597,7 +627,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">5.1 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%88%98%EC%97%85%EC%9D%B4%20%EB%93%A4%EB%A6%AC%EB%8A%94%20%EC%B2%AB%EA%B1%B8%EC%9D%8C" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=1stufhsRTrQ" rel="noopener" data-video="1stufhsRTrQ" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -639,7 +669,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">5.4 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%201" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=YSfsFTqBv2A" rel="noopener" data-video="YSfsFTqBv2A" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -672,7 +702,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.7 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%202" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=mAZlFrOf7Qw" rel="noopener" data-video="mAZlFrOf7Qw" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -714,7 +744,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">3.7 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%91%90%20%EC%86%90%EC%9C%BC%EB%A1%9C" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=YBzcI5MTbRc" rel="noopener" data-video="YBzcI5MTbRc" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -747,7 +777,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%99%94%EC%9E%A5%EC%8B%A4%EC%9D%B4%20%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94%3F" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=ej3zFVwIrlo" rel="noopener" data-video="ej3zFVwIrlo" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -780,7 +810,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%95%84%EC%9D%B4%EC%8A%A4%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%85%B8%20%EB%91%90%20%EC%9E%94%20%EC%A3%BC%EC%84%B8%EC%9A%94" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=k1P2Wc0CnXk" rel="noopener" data-video="k1P2Wc0CnXk" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -813,7 +843,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%97%AC%EA%B8%B0%20%EC%99%80%EC%9D%B4%ED%8C%8C%EC%9D%B4%20%EB%8F%BC%EC%9A%94%3F" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=hutSJWK0lao" rel="noopener" data-video="hutSJWK0lao" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -846,7 +876,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%AA%85%EB%8F%99%EC%97%AD%EC%9D%B4%20%EC%96%B4%EB%94%94%EC%98%88%EC%9A%94%3F" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=HqrqKyLNbzo" rel="noopener" data-video="HqrqKyLNbzo" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -879,7 +909,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EA%B5%90%ED%86%B5%20%EC%B9%B4%EB%93%9C%20%EC%A2%80%20%EC%B6%A9%EC%A0%84%ED%95%B4%20%EC%A3%BC%EC%84%B8%EC%9A%94" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=3ZrFmOvBXJg" rel="noopener" data-video="3ZrFmOvBXJg" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -912,7 +942,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%9D%B4%EA%B1%B0%20%EC%9E%85%EC%96%B4%20%EB%B4%90%EB%8F%84%20%EB%8F%BC%EC%9A%94%3F" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=QadQiS4Uejc" rel="noopener" data-video="QadQiS4Uejc" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -945,7 +975,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%9A%B0%EB%A6%AC%20%EC%82%BC%EA%B2%B9%EC%82%B4%20%EB%A8%B9%EC%9D%84%EA%B9%8C%3F" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=3mDs6-IhEx0" rel="noopener" data-video="3mDs6-IhEx0" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -978,7 +1008,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%98%A4%EB%8A%94%20%EB%8D%B0%20%EC%96%BC%EB%A7%88%EB%82%98%20%EA%B1%B8%EB%A0%A4%EC%9A%94%3F" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=tSus1euih3U" rel="noopener" data-video="tSus1euih3U" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1011,7 +1041,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.3 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%82%98%20%EA%B0%90%EA%B8%B0%20%EA%B1%B8%EB%A0%B8%EB%82%98%20%EB%B4%90" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=Lo6VbrJp8OM" rel="noopener" data-video="Lo6VbrJp8OM" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1052,7 +1082,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">4.9 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%B0%98%EB%8C%80%EB%A7%90%201" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=gAkK4gAnRDM" rel="noopener" data-video="gAkK4gAnRDM" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1101,7 +1131,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.5 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%82%AC%EA%B3%84%EC%A0%88" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=Wm0RgkqGXbQ" rel="noopener" data-video="Wm0RgkqGXbQ" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1134,7 +1164,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.4 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EB%B8%94%EB%9E%99%EC%BB%A4%ED%94%BC" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=bi_DYUO-vm0" rel="noopener" data-video="bi_DYUO-vm0" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1167,7 +1197,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.1 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%BD%9C%EB%9D%BC" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=JrpbJ5-cV1k" rel="noopener" data-video="JrpbJ5-cV1k" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1200,7 +1230,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.1 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EA%B6%81%EA%B8%88%ED%95%B4" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=7hCXLxdtFr8" rel="noopener" data-video="7hCXLxdtFr8" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1233,7 +1263,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.1 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%9A%8C%EC%9E%90%EC%A0%95%EB%A6%AC" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=Wq_7znHINcQ" rel="noopener" data-video="Wq_7znHINcQ" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1266,7 +1296,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">1.1 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%95%A0%EC%B0%BD%EA%B3%A1" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=ElHKiQNGOfM" rel="noopener" data-video="ElHKiQNGOfM" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1314,7 +1344,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">11 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%B4%EB%85%80" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=kwgbljJOtjc" rel="noopener" data-video="kwgbljJOtjc" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1355,7 +1385,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">3.1 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%99%B8%EA%B5%AD%EC%9D%B8%20%ED%95%99%EC%8A%B5%EC%9E%90%EB%A5%BC%20%EC%9C%84%ED%95%9C%20TOPIK%20II%20%EC%93%B0%EA%B8%B0%20%EB%A7%88%EC%8A%A4%ED%84%B0" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=Zk1wP2trSnw" rel="noopener" data-video="Zk1wP2trSnw" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1396,7 +1426,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">6.4 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%B2%AB%20%EC%9B%94%EA%B8%89%EB%82%A0" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=2WyrZ2bQGes" rel="noopener" data-video="2WyrZ2bQGes" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1445,7 +1475,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">24 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%201" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=5mWymAi3eFg" rel="noopener" data-video="5mWymAi3eFg" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1478,7 +1508,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">25 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%202" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=NJsQvsHVX2E" rel="noopener" data-video="NJsQvsHVX2E" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1511,7 +1541,7 @@ footer a{color:var(--muted)}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
           <span>PDF</span><small class="sz" dir="ltr">31 MB</small>
         </a>
-        <a class="sq" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%8B%9C%EB%A6%AC%EC%A6%88%203" rel="noopener" aria-label="Ver o vídeo" title="Ver o vídeo">
+        <a class="sq" href="https://www.youtube.com/watch?v=f2WTAx2mJ-g" rel="noopener" data-video="f2WTAx2mJ-g" aria-label="Ver o vídeo" title="Ver o vídeo">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
         </a>
         <button class="sq" type="button" data-share aria-label="Compartilhar" title="Compartilhar">
@@ -1610,7 +1640,7 @@ footer a{color:var(--muted)}
 <script>
 (function(){
   var UI={copied:"Link copiado",saved:"Salvo",unsaved:"Removido dos salvos",
-          count:"{n} livros",donecount:"{d} / {n} estudados",rhangul:"Comece pelas M\u00fasicas f\u00e1ceis em coreano e pelos livros de videoclipes, e aprenda hangul no nosso canal do YouTube.",rlevel:"Seu n\u00edvel: {level}",watch:"\u25b6 Ver o v\u00eddeo",show:"Ver estes livros",go:"Open the {lang} page",dismiss:"No thanks"};
+          count:"{n} livros",donecount:"{d} / {n} estudados",rhangul:"Comece com Primeiros passos no hangul, nosso curso em v\u00eddeo gratuito para aprender a ler as letras coreanas.",rlevel:"Seu n\u00edvel: {level}",watch:"\u25b6 Ver o v\u00eddeo",show:"Ver estes livros",go:"Open the {lang} page",dismiss:"No thanks"};
   var PAGE="pt", ROOT=false;
   var LANGS={"ar": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629", "bn": "\u09ac\u09be\u0982\u09b2\u09be", "en": "English", "es": "Espa\u00f1ol", "fr": "Fran\u00e7ais", "id": "Bahasa Indonesia", "ja": "\u65e5\u672c\u8a9e", "km": "\u1797\u17b6\u179f\u17b6\u1781\u17d2\u1798\u17c2\u179a", "mn": "\u041c\u043e\u043d\u0433\u043e\u043b", "my": "\u1019\u103c\u1014\u103a\u1019\u102c", "ne": "\u0928\u0947\u092a\u093e\u0932\u0940", "pt": "Portugu\u00eas", "ru": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439", "si": "\u0dc3\u0dd2\u0d82\u0dc4\u0dbd", "th": "\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22", "tl": "Tagalog", "ur": "\u0627\u0631\u062f\u0648", "uz": "O\u02bbzbekcha", "vi": "Ti\u1ebfng Vi\u1ec7t", "zh-Hans": "\u7b80\u4f53\u4e2d\u6587"};
   var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
@@ -1786,7 +1816,7 @@ footer a{color:var(--muted)}
   });
 
   /* 어디서부터 시작할까 */
-  var gd=$('#guideDlg'), LV={"adv": "\uace0\uae09 Avan\u00e7ado", "beg": "\ucd08\uae09 Iniciante", "int": "\uc911\uae09 Intermedi\u00e1rio"}, gres='';
+  var gd=$('#guideDlg'), LV={"adv": "\uace0\uae09 Avan\u00e7ado", "beg": "\ucd08\uae09 Iniciante", "int": "\uc911\uae09 Intermedi\u00e1rio", "start": "\uc785\ubb38 Introdut\u00f3rio"}, gres='';
   function gstep(n){$$('.gstep',gd).forEach(function(x){x.hidden=x.dataset.step!==String(n)})}
   $('#startBtn').addEventListener('click',function(){gstep(1);gd.showModal();track('guide/open','수준 찾기 열기')});
   gd.addEventListener('click',function(e){

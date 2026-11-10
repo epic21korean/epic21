@@ -417,7 +417,7 @@
     "q3": "¿Puedes leer textos del TOPIK II o noticias en coreano?",
     "yes": "Sí",
     "no": "Todavía no",
-    "r_hangul": "Empieza con Canciones fáciles en coreano y los libros de videos musicales, y aprende hangul en nuestro canal de YouTube.",
+    "r_hangul": "Empieza con Primeros pasos en hangul, nuestro curso de video gratis para aprender a leer las letras coreanas.",
     "r_level": "Tu nivel: {level}",
     "show": "Ver estos libros",
     "again": "Empezar de nuevo",
@@ -425,7 +425,12 @@
     "done": "Estudiado",
     "done_count": "{d} / {n} estudiados",
     "qr": "Código QR",
-    "qr_text": "Escanéalo para abrir esta página en el móvil."
+    "qr_text": "Escanéalo para abrir esta página en el móvil.",
+    "intro_title": "Primeros pasos en hangul",
+    "intro_desc": "Aprende a leer las letras coreanas desde cero con este curso de video gratis.",
+    "ep_vowels": "Vocales básicas",
+    "next_ep": "¡Espera el próximo episodio!",
+    "ep_consonants": "Consonantes básicas"
    }
   },
   "fr": {
@@ -521,7 +526,7 @@
     "q3": "Savez-vous lire des textes du TOPIK II ou l’actualité en coréen ?",
     "yes": "Oui",
     "no": "Pas encore",
-    "r_hangul": "Commencez par les Chansons coréennes faciles et les manuels de clips, et apprenez le hangeul sur notre chaîne YouTube.",
+    "r_hangul": "Commencez par Premiers pas en hangeul, notre cours vidéo gratuit pour apprendre à lire l’alphabet coréen.",
     "r_level": "Votre niveau : {level}",
     "show": "Voir ces manuels",
     "again": "Recommencer",
@@ -529,7 +534,12 @@
     "done": "Étudié",
     "done_count": "{d} / {n} étudiés",
     "qr": "Code QR",
-    "qr_text": "Scannez pour ouvrir cette page sur un téléphone."
+    "qr_text": "Scannez pour ouvrir cette page sur un téléphone.",
+    "intro_title": "Premiers pas en hangeul",
+    "intro_desc": "Apprenez à lire l’alphabet coréen à partir de zéro avec ce cours vidéo gratuit.",
+    "ep_vowels": "Voyelles de base",
+    "next_ep": "Le prochain épisode arrive bientôt !",
+    "ep_consonants": "Consonnes de base"
    }
   },
   "pt": {
@@ -625,7 +635,7 @@
     "q3": "Você consegue ler textos do TOPIK II ou notícias em coreano?",
     "yes": "Sim",
     "no": "Ainda não",
-    "r_hangul": "Comece pelas Músicas fáceis em coreano e pelos livros de videoclipes, e aprenda hangul no nosso canal do YouTube.",
+    "r_hangul": "Comece com Primeiros passos no hangul, nosso curso em vídeo gratuito para aprender a ler as letras coreanas.",
     "r_level": "Seu nível: {level}",
     "show": "Ver estes livros",
     "again": "Recomeçar",
@@ -633,7 +643,12 @@
     "done": "Estudado",
     "done_count": "{d} / {n} estudados",
     "qr": "Código QR",
-    "qr_text": "Escaneie para abrir esta página no celular."
+    "qr_text": "Escaneie para abrir esta página no celular.",
+    "intro_title": "Primeiros passos no hangul",
+    "intro_desc": "Aprenda a ler as letras coreanas do zero com este curso em vídeo gratuito.",
+    "ep_vowels": "Vogais básicas",
+    "next_ep": "Aguarde o próximo episódio!",
+    "ep_consonants": "Consoantes básicas"
    }
   },
   "id": {
@@ -729,7 +744,7 @@
     "q3": "Apakah kamu bisa membaca soal TOPIK II atau berita Korea?",
     "yes": "Ya",
     "no": "Belum",
-    "r_hangul": "Mulailah dengan Lagu Korea Mudah dan buku video musik, lalu belajar Hangul di kanal YouTube kami.",
+    "r_hangul": "Mulailah dengan Langkah Pertama Hangul, kursus video gratis kami untuk belajar membaca huruf Korea.",
     "r_level": "Level kamu: {level}",
     "show": "Tampilkan buku ini",
     "again": "Ulangi",
@@ -737,7 +752,12 @@
     "done": "Sudah dipelajari",
     "done_count": "{d} / {n} sudah dipelajari",
     "qr": "Kode QR",
-    "qr_text": "Pindai untuk membuka halaman ini di ponsel."
+    "qr_text": "Pindai untuk membuka halaman ini di ponsel.",
+    "intro_title": "Langkah Pertama Hangul",
+    "intro_desc": "Belajar membaca huruf Korea dari nol lewat kursus video gratis ini.",
+    "ep_vowels": "Vokal dasar",
+    "next_ep": "Nantikan episode berikutnya!",
+    "ep_consonants": "Konsonan dasar"
    }
   },
   "vi": {
@@ -833,7 +853,7 @@
     "q3": "Bạn có đọc được bài TOPIK II hoặc tin tức tiếng Hàn không?",
     "yes": "Có",
     "no": "Chưa",
-    "r_hangul": "Hãy bắt đầu với Bài hát tiếng Hàn dễ và giáo trình MV, và học Hangul trên kênh YouTube của chúng tôi.",
+    "r_hangul": "Hãy bắt đầu với Bước đầu học Hangul, khóa học video miễn phí giúp bạn đọc được chữ Hàn.",
     "r_level": "Trình độ của bạn: {level}",
     "show": "Xem các giáo trình này",
     "again": "Làm lại",
@@ -841,7 +861,12 @@
     "done": "Đã học xong",
     "done_count": "Đã học {d} / {n}",
     "qr": "Mã QR",
-    "qr_text": "Quét để mở trang này trên điện thoại."
+    "qr_text": "Quét để mở trang này trên điện thoại.",
+    "intro_title": "Bước đầu học Hangul",
+    "intro_desc": "Khóa học video miễn phí giúp bạn đọc được chữ Hàn từ con số 0.",
+    "ep_vowels": "Nguyên âm cơ bản",
+    "next_ep": "Hãy đón chờ tập tiếp theo!",
+    "ep_consonants": "Phụ âm cơ bản"
    }
   },
   "tl": {
@@ -937,7 +962,7 @@
     "q3": "Kaya mo bang magbasa ng teksto sa TOPIK II o balita sa Korean?",
     "yes": "Oo",
     "no": "Hindi pa",
-    "r_hangul": "Magsimula sa Madadaling Kantang Korean at sa mga aklat ng music video, at matuto ng Hangul sa aming YouTube channel.",
+    "r_hangul": "Magsimula sa Unang Hakbang sa Hangul, ang aming libreng video course para matutong bumasa ng letrang Korean.",
     "r_level": "Antas mo: {level}",
     "show": "Ipakita ang mga aklat na ito",
     "again": "Ulitin",
@@ -945,7 +970,12 @@
     "done": "Napag-aralan na",
     "done_count": "{d} / {n} napag-aralan",
     "qr": "QR code",
-    "qr_text": "I-scan para buksan ang pahinang ito sa telepono."
+    "qr_text": "I-scan para buksan ang pahinang ito sa telepono.",
+    "intro_title": "Unang Hakbang sa Hangul",
+    "intro_desc": "Libreng video course para matutong bumasa ng letrang Korean mula sa simula.",
+    "ep_vowels": "Mga pangunahing patinig",
+    "next_ep": "Abangan ang susunod na episode!",
+    "ep_consonants": "Mga pangunahing katinig"
    }
   },
   "uz": {
@@ -1041,7 +1071,7 @@
     "q3": "TOPIK II matnlari yoki koreyscha yangiliklarni o‘qiy olasizmi?",
     "yes": "Ha",
     "no": "Hali yo‘q",
-    "r_hangul": "Oson koreyscha qo‘shiqlar va klip darsliklaridan boshlang, Hangulni esa YouTube kanalimizda o‘rganing.",
+    "r_hangul": "Hangulga ilk qadam bepul video kursimizdan boshlang — u koreys harflarini o‘qishni o‘rgatadi.",
     "r_level": "Darajangiz: {level}",
     "show": "Shu darsliklarni ko‘rsatish",
     "again": "Qaytadan",
@@ -1049,7 +1079,12 @@
     "done": "O‘rganildi",
     "done_count": "{d} / {n} o‘rganildi",
     "qr": "QR kod",
-    "qr_text": "Bu sahifani telefonda ochish uchun skanerlang."
+    "qr_text": "Bu sahifani telefonda ochish uchun skanerlang.",
+    "intro_title": "Hangulga ilk qadam",
+    "intro_desc": "Koreys harflarini noldan o‘qishni o‘rgatadigan bepul video kurs.",
+    "ep_vowels": "Asosiy unlilar",
+    "next_ep": "Keyingi qismni kuting!",
+    "ep_consonants": "Asosiy undoshlar"
    }
   },
   "ru": {
@@ -1145,7 +1180,7 @@
     "q3": "Можете читать тексты TOPIK II или корейские новости?",
     "yes": "Да",
     "no": "Пока нет",
-    "r_hangul": "Начните с «Простых корейских песен» и учебников по клипам, а хангыль изучите на нашем YouTube-канале.",
+    "r_hangul": "Начните с бесплатного видеокурса «Первые шаги в хангыле» — он научит читать корейские буквы.",
     "r_level": "Ваш уровень: {level}",
     "show": "Показать эти учебники",
     "again": "Начать заново",
@@ -1153,7 +1188,12 @@
     "done": "Изучено",
     "done_count": "Изучено {d} из {n}",
     "qr": "QR-код",
-    "qr_text": "Отсканируйте, чтобы открыть страницу на телефоне."
+    "qr_text": "Отсканируйте, чтобы открыть страницу на телефоне.",
+    "intro_title": "Первые шаги в хангыле",
+    "intro_desc": "Бесплатный видеокурс: учимся читать корейские буквы с нуля.",
+    "ep_vowels": "Основные гласные",
+    "next_ep": "Ждите следующую серию!",
+    "ep_consonants": "Основные согласные"
    }
   },
   "mn": {
@@ -1249,7 +1289,7 @@
     "q3": "TOPIK II-ын текст эсвэл солонгос мэдээ уншиж чадах уу?",
     "yes": "Тийм",
     "no": "Хараахан үгүй",
-    "r_hangul": "Хялбар солонгос дуу болон клипийн сурах бичгээс эхэлж, хангылийг манай YouTube сувгаас сураарай.",
+    "r_hangul": "«Хангылийн анхны алхам» үнэгүй видео хичээлээс эхлээрэй — солонгос үсэг уншиж сурна.",
     "r_level": "Таны түвшин: {level}",
     "show": "Эдгээр номыг харах",
     "again": "Дахин эхлэх",
@@ -1257,7 +1297,12 @@
     "done": "Үзэж дууссан",
     "done_count": "{n}-ээс {d} нь дууссан",
     "qr": "QR код",
-    "qr_text": "Утсаараа уншуулж энэ хуудсыг нээнэ үү."
+    "qr_text": "Утсаараа уншуулж энэ хуудсыг нээнэ үү.",
+    "intro_title": "Хангылийн анхны алхам",
+    "intro_desc": "Солонгос үсгийг тэгээс уншиж сурах үнэгүй видео хичээл.",
+    "ep_vowels": "Үндсэн эгшиг",
+    "next_ep": "Дараагийн ангийг хүлээж байгаарай!",
+    "ep_consonants": "Үндсэн гийгүүлэгч"
    }
   },
   "ja": {
@@ -1353,7 +1398,7 @@
     "q3": "TOPIK IIの文章や韓国語のニュースが読めますか？",
     "yes": "はい",
     "no": "まだです",
-    "r_hangul": "「やさしい韓国語の歌」とMVテキストから始めて、ハングルはYouTubeチャンネルで学びましょう。",
+    "r_hangul": "まずは無料動画講座「ハングルはじめの一歩」から。韓国語の文字が読めるようになります。",
     "r_level": "おすすめレベル：{level}",
     "show": "このテキストを見る",
     "again": "最初からやり直す",
@@ -1361,7 +1406,12 @@
     "done": "学習済み",
     "done_count": "{d} / {n}冊 学習済み",
     "qr": "QRコード",
-    "qr_text": "スマホで読み取るとこのページが開きます。"
+    "qr_text": "スマホで読み取るとこのページが開きます。",
+    "intro_title": "ハングルはじめの一歩",
+    "intro_desc": "ゼロから韓国語の文字が読めるようになる無料動画講座です。",
+    "ep_vowels": "基本母音",
+    "next_ep": "次回もお楽しみに！",
+    "ep_consonants": "基本子音"
    }
   },
   "zh-Hans": {
@@ -1457,7 +1507,7 @@
     "q3": "你能读懂TOPIK II文章或韩语新闻吗？",
     "yes": "会",
     "no": "还不会",
-    "r_hangul": "先从《简单韩语歌曲》和MV教材开始，再到我们的YouTube频道学习韩文字母。",
+    "r_hangul": "先从免费视频课程《韩文入门第一步》开始，学会读韩文字母。",
     "r_level": "推荐级别：{level}",
     "show": "查看这些教材",
     "again": "重新开始",
@@ -1465,7 +1515,12 @@
     "done": "已学完",
     "done_count": "已学完 {d} / {n} 本",
     "qr": "二维码",
-    "qr_text": "用手机扫码打开此页面。"
+    "qr_text": "用手机扫码打开此页面。",
+    "intro_title": "韩文入门第一步",
+    "intro_desc": "从零开始学会读韩文字母的免费视频课程。",
+    "ep_vowels": "基本元音",
+    "next_ep": "敬请期待下一集！",
+    "ep_consonants": "基本辅音"
    }
   },
   "th": {
@@ -1561,7 +1616,7 @@
     "q3": "คุณอ่านบทความ TOPIK II หรือข่าวภาษาเกาหลีได้ไหม",
     "yes": "ได้",
     "no": "ยังไม่ได้",
-    "r_hangul": "เริ่มจากเพลงภาษาเกาหลีง่าย ๆ และหนังสือเรียนจาก MV แล้วเรียนฮันกึลในช่อง YouTube ของเรา",
+    "r_hangul": "เริ่มจากคอร์สวิดีโอฟรี ก้าวแรกสู่ฮันกึล ที่จะสอนให้คุณอ่านตัวอักษรเกาหลีได้",
     "r_level": "ระดับของคุณ: {level}",
     "show": "ดูหนังสือเหล่านี้",
     "again": "เริ่มใหม่",
@@ -1569,7 +1624,12 @@
     "done": "เรียนแล้ว",
     "done_count": "เรียนแล้ว {d} / {n} เล่ม",
     "qr": "คิวอาร์โค้ด",
-    "qr_text": "สแกนเพื่อเปิดหน้านี้บนโทรศัพท์"
+    "qr_text": "สแกนเพื่อเปิดหน้านี้บนโทรศัพท์",
+    "intro_title": "ก้าวแรกสู่ฮันกึล",
+    "intro_desc": "คอร์สวิดีโอฟรี เรียนอ่านตัวอักษรเกาหลีตั้งแต่เริ่มต้น",
+    "ep_vowels": "สระพื้นฐาน",
+    "next_ep": "รอติดตามตอนต่อไป!",
+    "ep_consonants": "พยัญชนะพื้นฐาน"
    }
   },
   "km": {
@@ -1665,7 +1725,7 @@
     "q3": "តើអ្នកអាចអានអត្ថបទ TOPIK II ឬព័ត៌មានកូរ៉េបានទេ?",
     "yes": "បាន",
     "no": "មិនទាន់",
-    "r_hangul": "ចាប់ផ្ដើមពីចម្រៀងកូរ៉េងាយៗ និងសៀវភៅតាម MV ហើយរៀនហាន់គុលនៅឆានែល YouTube របស់យើង។",
+    "r_hangul": "ចាប់ផ្ដើមពីវគ្គវីដេអូឥតគិតថ្លៃ «ជំហានដំបូងនៃហាន់គុល» ដែលបង្រៀនអ្នកឱ្យអានអក្សរកូរ៉េបាន។",
     "r_level": "កម្រិតរបស់អ្នក៖ {level}",
     "show": "បង្ហាញសៀវភៅទាំងនេះ",
     "again": "ចាប់ផ្ដើមម្ដងទៀត",
@@ -1673,7 +1733,12 @@
     "done": "បានរៀនរួច",
     "done_count": "បានរៀនរួច {d} / {n}",
     "qr": "កូដ QR",
-    "qr_text": "ស្កេនដើម្បីបើកទំព័រនេះលើទូរសព្ទ។"
+    "qr_text": "ស្កេនដើម្បីបើកទំព័រនេះលើទូរសព្ទ។",
+    "intro_title": "ជំហានដំបូងនៃហាន់គុល",
+    "intro_desc": "វគ្គវីដេអូឥតគិតថ្លៃ រៀនអានអក្សរកូរ៉េពីសូន្យ។",
+    "ep_vowels": "ស្រៈមូលដ្ឋាន",
+    "next_ep": "សូមរង់ចាំភាគបន្ទាប់!",
+    "ep_consonants": "ព្យញ្ជនៈមូលដ្ឋាន"
    }
   },
   "my": {
@@ -1769,7 +1834,7 @@
     "q3": "TOPIK II စာပိုဒ် သို့မဟုတ် ကိုရီးယားသတင်း ဖတ်တတ်ပြီလား",
     "yes": "ဟုတ်",
     "no": "မတတ်သေး",
-    "r_hangul": "လွယ်ကူသော ကိုရီးယားသီချင်းနှင့် MV စာအုပ်များမှ စတင်ပြီး ဟန်ဂူလ်ကို ကျွန်ုပ်တို့၏ YouTube ချန်နယ်တွင် လေ့လာပါ။",
+    "r_hangul": "ကိုရီးယား စာလုံး ဖတ်တတ်အောင် သင်ပေးသော အခမဲ့ ဗီဒီယို «ဟန်ဂူလ် ပထမခြေလှမ်း» မှ စတင်ပါ။",
     "r_level": "သင့်အဆင့် - {level}",
     "show": "ဤစာအုပ်များကို ပြရန်",
     "again": "အစမှ ပြန်စရန်",
@@ -1777,7 +1842,12 @@
     "done": "လေ့လာပြီး",
     "done_count": "{n} အုပ်တွင် {d} အုပ် လေ့လာပြီး",
     "qr": "QR ကုဒ်",
-    "qr_text": "ဖုန်းဖြင့် စကင်ဖတ်ပြီး ဤစာမျက်နှာကို ဖွင့်ပါ။"
+    "qr_text": "ဖုန်းဖြင့် စကင်ဖတ်ပြီး ဤစာမျက်နှာကို ဖွင့်ပါ။",
+    "intro_title": "ဟန်ဂူလ် ပထမခြေလှမ်း",
+    "intro_desc": "ကိုရီးယား စာလုံးများကို အစမှ ဖတ်တတ်အောင် သင်ပေးသော အခမဲ့ ဗီဒီယို သင်တန်း။",
+    "ep_vowels": "အခြေခံ သရ",
+    "next_ep": "နောက်အပိုင်းကို မျှော်လင့်ထားပါ!",
+    "ep_consonants": "အခြေခံ ဗျည်း"
    }
   },
   "ne": {
@@ -1873,7 +1943,7 @@
     "q3": "के तपाईं TOPIK II पाठ वा कोरियन समाचार पढ्न सक्नुहुन्छ?",
     "yes": "सक्छु",
     "no": "अझै सक्दिनँ",
-    "r_hangul": "सजिलो कोरियन गीत र MV पुस्तकबाट सुरु गर्नुहोस्, र हान्गुल हाम्रो YouTube च्यानलमा सिक्नुहोस्।",
+    "r_hangul": "कोरियन अक्षर पढ्न सिकाउने निःशुल्क भिडियो कोर्स «हान्गुलको पहिलो पाइला» बाट सुरु गर्नुहोस्।",
     "r_level": "तपाईंको स्तर: {level}",
     "show": "यी पुस्तक हेर्नुहोस्",
     "again": "फेरि सुरु गर्नुहोस्",
@@ -1881,7 +1951,12 @@
     "done": "पढिसकेँ",
     "done_count": "{n} मध्ये {d} पढिसकियो",
     "qr": "QR कोड",
-    "qr_text": "फोनमा यो पेज खोल्न स्क्यान गर्नुहोस्।"
+    "qr_text": "फोनमा यो पेज खोल्न स्क्यान गर्नुहोस्।",
+    "intro_title": "हान्गुलको पहिलो पाइला",
+    "intro_desc": "कोरियन अक्षर सुरुदेखि पढ्न सिकाउने निःशुल्क भिडियो कोर्स।",
+    "ep_vowels": "आधारभूत स्वर",
+    "next_ep": "अर्को भागको प्रतीक्षा गर्नुहोस्!",
+    "ep_consonants": "आधारभूत व्यञ्जन"
    }
   },
   "bn": {
@@ -1977,7 +2052,7 @@
     "q3": "আপনি কি TOPIK II-এর পাঠ্য বা কোরিয়ান খবর পড়তে পারেন?",
     "yes": "হ্যাঁ",
     "no": "এখনও না",
-    "r_hangul": "সহজ কোরিয়ান গান আর MV বই দিয়ে শুরু করুন, আর হানগুল আমাদের YouTube চ্যানেলে শিখুন।",
+    "r_hangul": "কোরিয়ান অক্ষর পড়া শেখানো বিনামূল্যের ভিডিও কোর্স «হানগুলের প্রথম ধাপ» দিয়ে শুরু করুন।",
     "r_level": "আপনার স্তর: {level}",
     "show": "এই বইগুলো দেখুন",
     "again": "আবার শুরু করুন",
@@ -1985,7 +2060,12 @@
     "done": "পড়া শেষ",
     "done_count": "{n}টির মধ্যে {d}টি পড়া শেষ",
     "qr": "QR কোড",
-    "qr_text": "ফোনে এই পেজ খুলতে স্ক্যান করুন।"
+    "qr_text": "ফোনে এই পেজ খুলতে স্ক্যান করুন।",
+    "intro_title": "হানগুলের প্রথম ধাপ",
+    "intro_desc": "শুরু থেকে কোরিয়ান অক্ষর পড়া শেখার বিনামূল্যের ভিডিও কোর্স।",
+    "ep_vowels": "মৌলিক স্বরবর্ণ",
+    "next_ep": "পরের পর্বের অপেক্ষায় থাকুন!",
+    "ep_consonants": "মৌলিক ব্যঞ্জনবর্ণ"
    }
   },
   "si": {
@@ -2081,7 +2161,7 @@
     "q3": "TOPIK II ඡේද හෝ කොරියානු පුවත් කියවිය හැකිද?",
     "yes": "ඔව්",
     "no": "තවම නැහැ",
-    "r_hangul": "පහසු කොරියානු ගීත සහ MV පොත්වලින් පටන් ගෙන, හංගුල් අපගේ YouTube නාලිකාවෙන් ඉගෙන ගන්න.",
+    "r_hangul": "කොරියානු අකුරු කියවීමට උගන්වන නොමිලේ වීඩියෝ පාඨමාලාව «හංගුල් පළමු පියවර» සමඟ පටන් ගන්න.",
     "r_level": "ඔබේ මට්ටම: {level}",
     "show": "මෙම පොත් පෙන්වන්න",
     "again": "නැවත අරඹන්න",
@@ -2089,7 +2169,12 @@
     "done": "ඉගෙන ගත්තා",
     "done_count": "{n} න් {d} ක් ඉගෙන ගත්තා",
     "qr": "QR කේතය",
-    "qr_text": "දුරකථනයෙන් මෙම පිටුව විවෘත කිරීමට ස්කෑන් කරන්න."
+    "qr_text": "දුරකථනයෙන් මෙම පිටුව විවෘත කිරීමට ස්කෑන් කරන්න.",
+    "intro_title": "හංගුල් පළමු පියවර",
+    "intro_desc": "මුල සිටම කොරියානු අකුරු කියවීමට ඉගැන්වෙන නොමිලේ වීඩියෝ පාඨමාලාව.",
+    "ep_vowels": "මූලික ස්වර",
+    "next_ep": "ඊළඟ කොටස බලාපොරොත්තුවෙන් සිටින්න!",
+    "ep_consonants": "මූලික ව්‍යඤ්ජන"
    }
   },
   "ar": {
@@ -2185,7 +2270,7 @@
     "q3": "هل تستطيع قراءة نصوص TOPIK II أو الأخبار الكورية؟",
     "yes": "نعم",
     "no": "ليس بعد",
-    "r_hangul": "ابدأ بالأغاني الكورية السهلة وكتب الفيديو الموسيقي، وتعلّم الهانغول على قناتنا في يوتيوب.",
+    "r_hangul": "ابدأ بدورة الفيديو المجانية «الخطوات الأولى في الهانغول» لتتعلّم قراءة الحروف الكورية.",
     "r_level": "مستواك: {level}",
     "show": "اعرض هذه الكتب",
     "again": "ابدأ من جديد",
@@ -2193,7 +2278,12 @@
     "done": "تمت دراسته",
     "done_count": "{d} من {n} تمت دراستها",
     "qr": "رمز QR",
-    "qr_text": "امسح الرمز لفتح هذه الصفحة على الهاتف."
+    "qr_text": "امسح الرمز لفتح هذه الصفحة على الهاتف.",
+    "intro_title": "الخطوات الأولى في الهانغول",
+    "intro_desc": "دورة فيديو مجانية لتعلّم قراءة الحروف الكورية من الصفر.",
+    "ep_vowels": "الحروف المتحركة الأساسية",
+    "next_ep": "ترقّبوا الحلقة القادمة!",
+    "ep_consonants": "الحروف الساكنة الأساسية"
    }
   },
   "ur": {
@@ -2289,7 +2379,7 @@
     "q3": "کیا آپ TOPIK II کے متن یا کورین خبریں پڑھ سکتے ہیں؟",
     "yes": "جی ہاں",
     "no": "ابھی نہیں",
-    "r_hangul": "آسان کورین گانوں اور MV کتابوں سے شروع کریں، اور ہنگل ہمارے یوٹیوب چینل پر سیکھیں۔",
+    "r_hangul": "مفت ویڈیو کورس «ہنگل کے پہلے قدم» سے شروع کریں، یہ آپ کو کورین حروف پڑھنا سکھاتا ہے۔",
     "r_level": "آپ کی سطح: {level}",
     "show": "یہ کتابیں دکھائیں",
     "again": "دوبارہ شروع کریں",
@@ -2297,7 +2387,12 @@
     "done": "پڑھ لی",
     "done_count": "{n} میں سے {d} پڑھ لیں",
     "qr": "QR کوڈ",
-    "qr_text": "فون پر یہ صفحہ کھولنے کے لیے اسکین کریں۔"
+    "qr_text": "فون پر یہ صفحہ کھولنے کے لیے اسکین کریں۔",
+    "intro_title": "ہنگل کے پہلے قدم",
+    "intro_desc": "شروع سے کورین حروف پڑھنا سیکھنے کا مفت ویڈیو کورس۔",
+    "ep_vowels": "بنیادی حروفِ علت",
+    "next_ep": "اگلی قسط کا انتظار کریں!",
+    "ep_consonants": "بنیادی حروفِ صحیح"
    }
   }
  },
@@ -2332,7 +2427,8 @@
     "si": "K-Song සඟරාව අංක 01 — හෙන්යෝ (මුහුදේ කාන්තාවන්)",
     "ar": "مجلة K-Song العدد 01 — هينيو (نساء البحر)",
     "ur": "K-Song میگزین شمارہ 01 — ہینیو (سمندر کی عورتیں)"
-   }
+   },
+   "video": "kwgbljJOtjc"
   },
   {
    "id": "epic21-essential-korean-grammar",
@@ -2396,7 +2492,8 @@
     "si": "පන්තියේ අත්‍යවශ්‍ය කොරියානු ප්‍රකාශන 60",
     "ar": "60 تعبيرًا كوريًا أساسيًا في الفصل",
     "ur": "کلاس میں کام آنے والے 60 اہم کورین جملے"
-   }
+   },
+   "video": "1stufhsRTrQ"
   },
   {
    "id": "epic21-topik-vocab-grammar-s1",
@@ -2428,7 +2525,8 @@
     "si": "සංවාද 1–20",
     "ar": "حوارات 1–20",
     "ur": "مکالمے 1–20"
-   }
+   },
+   "video": "YSfsFTqBv2A"
   },
   {
    "id": "epic21-topik-vocab-grammar-s2",
@@ -2460,7 +2558,8 @@
     "si": "සංවාද 21–40",
     "ar": "حوارات 21–40",
     "ur": "مکالمے 21–40"
-   }
+   },
+   "video": "mAZlFrOf7Qw"
   },
   {
    "id": "epic21-topik2-writing-master",
@@ -2492,7 +2591,8 @@
     "si": "TOPIK II ලේඛන ප්‍රවීණ — ප්‍රශ්න 51–54",
     "ar": "إتقان الكتابة في TOPIK II — الأسئلة 51–54",
     "ur": "TOPIK II لکھائی ماسٹر — سوالات 51–54"
-   }
+   },
+   "video": "Zk1wP2trSnw"
   },
   {
    "id": "epic21-topik2-mv-vol1-four-seasons",
@@ -2524,7 +2624,8 @@
     "si": "සෘතු හතර",
     "ar": "الفصول الأربعة",
     "ur": "چار موسم"
-   }
+   },
+   "video": "Wm0RgkqGXbQ"
   },
   {
    "id": "epic21-topik2-mv-vol2-black-coffee",
@@ -2556,7 +2657,8 @@
     "si": "කළු කෝපි",
     "ar": "قهوة سوداء",
     "ur": "بلیک کافی"
-   }
+   },
+   "video": "bi_DYUO-vm0"
   },
   {
    "id": "epic21-topik2-mv-vol3-cola",
@@ -2588,7 +2690,8 @@
     "si": "කෝලා",
     "ar": "كولا",
     "ur": "کولا"
-   }
+   },
+   "video": "JrpbJ5-cV1k"
   },
   {
    "id": "epic21-topik2-mv-vol4-curious",
@@ -2620,7 +2723,8 @@
     "si": "කුතුහලයි",
     "ar": "فضول",
     "ur": "تجسس"
-   }
+   },
+   "video": "7hCXLxdtFr8"
   },
   {
    "id": "epic21-topik2-mv-vol5-parting",
@@ -2652,7 +2756,8 @@
     "si": "හමුවන අය වෙන්වෙති",
     "ar": "من يلتقون لا بد أن يفترقوا",
     "ur": "جو ملتے ہیں وہ بچھڑتے ہیں"
-   }
+   },
+   "video": "Wq_7znHINcQ"
   },
   {
    "id": "epic21-topik2-mv-vol6-favorite-song",
@@ -2684,7 +2789,8 @@
     "si": "මගේ ප්‍රියතම ගීතය",
     "ar": "أغنيتي المفضلة",
     "ur": "میرا پسندیدہ گانا"
-   }
+   },
+   "video": "ElHKiQNGOfM"
   },
   {
    "id": "epic21-topik1-mv-vol1-two-hands",
@@ -2716,7 +2822,8 @@
     "si": "දෑතින්ම",
     "ar": "باليدين",
     "ur": "دونوں ہاتھوں سے"
-   }
+   },
+   "video": "YBzcI5MTbRc"
   },
   {
    "id": "epic21-topik1-mv-vol2-restroom",
@@ -2748,7 +2855,8 @@
     "si": "වැසිකිළිය කොහෙද?",
     "ar": "أين دورة المياه؟",
     "ur": "بیت الخلا کہاں ہے؟"
-   }
+   },
+   "video": "ej3zFVwIrlo"
   },
   {
    "id": "epic21-topik1-mv-vol3-americano",
@@ -2780,7 +2888,8 @@
     "si": "අයිස් ඇමරිකානෝ දෙකක් දෙන්න",
     "ar": "كوبان من الأمريكانو المثلج من فضلك",
     "ur": "دو آئسڈ امریکانو دیجیے"
-   }
+   },
+   "video": "k1P2Wc0CnXk"
   },
   {
    "id": "epic21-topik1-mv-vol4-wifi",
@@ -2812,7 +2921,8 @@
     "si": "මෙතන Wi-Fi තියෙනවද?",
     "ar": "هل يوجد واي فاي هنا؟",
     "ur": "کیا یہاں وائی فائی ہے؟"
-   }
+   },
+   "video": "hutSJWK0lao"
   },
   {
    "id": "epic21-topik1-mv-vol5-myeongdong",
@@ -2844,7 +2954,8 @@
     "si": "මියොංදොං දුම්රිය ස්ථානය කොහෙද?",
     "ar": "أين محطة ميونغدونغ؟",
     "ur": "میونگ دونگ اسٹیشن کہاں ہے؟"
-   }
+   },
+   "video": "HqrqKyLNbzo"
   },
   {
    "id": "epic21-topik1-mv-vol6-transit-card",
@@ -2876,7 +2987,8 @@
     "si": "මගේ ප්‍රවාහන කාඩ්පත රීචාර්ජ් කරන්න",
     "ar": "اشحن بطاقة المواصلات من فضلك",
     "ur": "میرا ٹرانزٹ کارڈ ری چارج کر دیجیے"
-   }
+   },
+   "video": "3ZrFmOvBXJg"
   },
   {
    "id": "epic21-topik1-mv-vol7-shopping",
@@ -2908,7 +3020,8 @@
     "si": "මට මේක ඇඳලා බලන්න පුළුවන්ද?",
     "ar": "هل يمكنني تجربة هذا؟",
     "ur": "کیا میں اسے پہن کر دیکھ سکتا ہوں؟"
-   }
+   },
+   "video": "QadQiS4Uejc"
   },
   {
    "id": "epic21-topik1-mv-vol8-samgyeopsal",
@@ -2940,7 +3053,8 @@
     "si": "අපි සම්ග්‍යොප්සල් කමුද?",
     "ar": "هل نأكل السامغيوبسال؟",
     "ur": "سامگیوپسال کھائیں؟"
-   }
+   },
+   "video": "3mDs6-IhEx0"
   },
   {
    "id": "epic21-topik1-mv-vol9-chicken",
@@ -2972,7 +3086,8 @@
     "si": "එන්න කොච්චර වෙලා යයිද?",
     "ar": "كم يستغرق المجيء؟",
     "ur": "آنے میں کتنا وقت لگے گا؟"
-   }
+   },
+   "video": "tSus1euih3U"
   },
   {
    "id": "epic21-topik1-mv-vol10-clinic",
@@ -3004,7 +3119,8 @@
     "si": "මට හෙම්බිරිස්සාව හැදිලා වගේ",
     "ar": "يبدو أنني أصبت بالزكام",
     "ur": "لگتا ہے مجھے زکام ہو گیا ہے"
-   }
+   },
+   "video": "Lo6VbrJp8OM"
   },
   {
    "id": "epic21-easysong-01-opposites1",
@@ -3036,7 +3152,8 @@
     "si": "පහසු කොරියානු ගීත අංක 01 — විරුද්ධ පද 1",
     "ar": "أغانٍ كورية سهلة رقم 01 — الأضداد 1",
     "ur": "آسان کورین گانے شمارہ 01 — متضاد الفاظ 1"
-   }
+   },
+   "video": "gAkK4gAnRDM"
   },
   {
    "id": "epic21-poem-01-first-payday",
@@ -3068,7 +3185,8 @@
     "si": "කවියෙන් කොරියානු ඉගෙනගමු අංක 01 — පළමු වැටුප් දිනය",
     "ar": "تعلّم الكورية بالشعر رقم 01 — يوم الراتب الأول",
     "ur": "شاعری سے کورین سیکھیں شمارہ 01 — پہلی تنخواہ کا دن"
-   }
+   },
+   "video": "2WyrZ2bQGes"
   },
   {
    "id": "epic21-ttg2056-s1",
@@ -3079,7 +3197,8 @@
    "en": "Time Travel Guide 2056 · Series 1 (#01–#10)",
    "vol": 1,
    "ko_sub": "시리즈 1",
-   "en_sub": "#01–#10"
+   "en_sub": "#01–#10",
+   "video": "5mWymAi3eFg"
   },
   {
    "id": "epic21-ttg2056-s2",
@@ -3090,7 +3209,8 @@
    "en": "Time Travel Guide 2056 · Series 2 (#11–#20)",
    "vol": 2,
    "ko_sub": "시리즈 2",
-   "en_sub": "#11–#20"
+   "en_sub": "#11–#20",
+   "video": "NJsQvsHVX2E"
   },
   {
    "id": "epic21-ttg2056-s3",
@@ -3101,7 +3221,8 @@
    "en": "Time Travel Guide 2056 · Series 3 (#21–#30)",
    "vol": 3,
    "ko_sub": "시리즈 3",
-   "en_sub": "#21–#30"
+   "en_sub": "#21–#30",
+   "video": "f2WTAx2mJ-g"
   },
   {
    "id": "epic21-ttg2056-s4",
@@ -4381,5 +4502,19 @@
   "epic21-ttg2056-s2": "2026-11-09",
   "epic21-ttg2056-s3": "2026-11-09",
   "epic21-ttg2056-s4": "2026-11-10"
- }
+ },
+ "intro": [
+  {
+   "no": 1,
+   "id": "Tnutyr3SC14",
+   "ko": "기본 모음",
+   "key": "ep_vowels"
+  },
+  {
+   "no": 2,
+   "id": "dbgBSaflk1g",
+   "ko": "기본 자음",
+   "key": "ep_consonants"
+  }
+ ]
 }

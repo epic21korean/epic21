@@ -493,7 +493,7 @@ footer a{color:var(--muted)}
 
 <main id="shelf">
   {%- if intro %}
-  <section class="tier tier-start intro" id="lv-start" data-tier="start" data-q="hangul 한글 모음 vowel {{ t.ui.intro_title|lower }} {{ intro|map(attribute='title')|join(' ')|lower }}" aria-labelledby="lvh-start">
+  <section class="tier tier-start intro" id="lv-start" data-tier="start" data-q="hangul 한글 모음 자음 vowel consonant {{ t.ui.intro_title|lower }} {{ intro|map(attribute='title')|join(' ')|lower }}" aria-labelledby="lvh-start">
     <header class="thead">
       {{ gm('start', 0, 'gm-big') }}
       <h2 class="tname" id="lvh-start"><span lang="ko">{{ intro_lv.ko }}</span>{% if lang.code != 'ko' %}<span class="tword" lang="{{ 'en' if is_root else lang.code }}">{{ intro_lv.word }}</span>{% endif %}</h2>

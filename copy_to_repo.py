@@ -6,7 +6,7 @@
   python copy_to_repo.py                       (Documents\GitHub\epic21 으로)
   python copy_to_repo.py "D:\다른\경로\epic21"   (다른 곳으로)
 
-복사 대상: index.html, sw.js, manifest.webmanifest, 언어 폴더 20개, covers, og, icons, qr, og.png, sitemap.xml, robots.txt, .nojekyll,
+복사 대상: index.html, 언어 폴더 20개, covers, og, og.png, sitemap.xml, robots.txt, .nojekyll,
           site.json, template.html, build.py, make_covers.py, fetch_covers.py, check_covers.py,
           copy_to_repo.py, README.md
 그 밖의 파일(업로드 스크립트, 썸네일 png, zip 등)은 건드리지 않는다.
@@ -22,8 +22,8 @@ if not os.path.isdir(dst):
     sys.exit(1)
 
 site = json.load(open(os.path.join(HERE, 'site.json'), encoding='utf-8'))
-dirs = [L['code'] for L in site['langs']] + ['covers', 'og', 'icons', 'qr']
-files = ['index.html', 'sw.js', 'manifest.webmanifest', 'og.png', 'sitemap.xml', 'robots.txt', '.nojekyll', 'site.json', 'template.html',
+dirs = [L['code'] for L in site['langs']] + ['covers', 'og']
+files = ['index.html', 'og.png', 'sitemap.xml', 'robots.txt', '.nojekyll', 'site.json', 'template.html',
          'build.py', 'make_covers.py', 'fetch_covers.py', 'check_covers.py', 'copy_to_repo.py', 'README.md']
 
 n = 0
@@ -33,9 +33,10 @@ for d in dirs:
         print('  (없음)', d)
         continue
     t = os.path.join(dst, d)
-    if os.path.isdir(t):
+    # 언어 폴더만 통째로 바꾸고, covers·og·icons·qr 는 '덧붙이기'만 한다(저장소에 있는 표지를 지우지 않도록)
+    if d not in ('covers', 'og', 'icons', 'qr') and os.path.isdir(t):
         shutil.rmtree(t)
-    shutil.copytree(s, t)
+    shutil.copytree(s, t, dirs_exist_ok=True)
     c = sum(len(f) for _, _, f in os.walk(t))
     n += c
     print(f'  {d}/  {c}개')
