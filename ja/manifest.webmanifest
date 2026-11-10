@@ -1,0 +1,30 @@
+{
+ "name": "EPIC21 — Free Korean Textbooks",
+ "short_name": "EPIC21",
+ "description": "日本語解説付きの無料PDF韓国語教材27冊：TOPIK I・IIの文法・語彙・作文。登録不要・無料。",
+ "lang": "ja",
+ "start_url": "./",
+ "scope": "../",
+ "id": "./",
+ "display": "standalone",
+ "background_color": "#0F1A36",
+ "theme_color": "#0F1A36",
+ "icons": [
+  {
+   "src": "../icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "../icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "../icons/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}

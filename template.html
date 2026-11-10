@@ -8,6 +8,13 @@
 <meta name="theme-color" content="#F7F4EC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1A36" media="(prefers-color-scheme: dark)">
 <link rel="canonical" href="{{ page_url }}">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ base }}icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ base }}icons/favicon-48.png">
+<link rel="apple-touch-icon" href="{{ base }}icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="EPIC21">
 {%- for alt in alternates %}
 <link rel="alternate" hreflang="{{ alt.code }}" href="{{ alt.url }}">
 {%- endfor %}
@@ -36,6 +43,7 @@ try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')docume
 <!-- 원고지 제목용 명조는 그 글자만 받아 온다(text=) → 몇 KB -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&text=%EB%AC%B4%EB%A3%8C%ED%95%9C%EA%B5%AD%EC%96%B4%EA%B5%90%EC%9E%AC&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+{% if goatcounter %}<script data-goatcounter="https://{{ goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
 <script type="application/ld+json">{{ jsonld | safe }}</script>
 <style>
 /* ─────────────────────────────────────────────
@@ -95,6 +103,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ibtn svg{width:18px;height:18px}
 .ibtn .yt{fill:#FF3B30}
 .ibtn span{white-space:nowrap}
+.ibtn[hidden]{display:none}
+#installBtn{border-color:var(--band)}
 #openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
 @media (max-width:400px){ #openLangs span{max-width:5.5em}.tools{gap:4px}.ibtn{padding:0 10px}}
 @media (max-width:560px){.ibtn .lbl{display:none}}
@@ -320,6 +330,10 @@ footer a{color:var(--muted)}
       <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span class="lbl">{{ t.ui.yt }}</span>
     </a>
+    <button class="ibtn" id="installBtn" type="button" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7m0 0-3-3m3 3 3-3"/></svg>
+      <span class="lbl">{{ t.ui.install }}</span>
+    </button>
     <button class="ibtn" id="themeBtn" type="button" aria-label="{{ t.ui.theme }}">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
     </button>
@@ -500,6 +514,8 @@ footer a{color:var(--muted)}
   var LANGS={{ lang_names|tojson }};
   var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
   function store(k,v){try{if(v===undefined){return JSON.parse(localStorage.getItem(k)||'null')}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+  /* 방문 통계(GoatCounter): PDF 받기·영상 누르기를 행사로 센다 */
+  function track(path,title){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title,event:true})}catch(e){}}
   var toastT; function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},1800)}
 
   /* 화면 모드 */
@@ -579,13 +595,15 @@ footer a{color:var(--muted)}
       return;
     }
     var v=e.target.closest('[data-video]'); if(v){
-      e.preventDefault();
+      e.preventDefault(); track('video/'+v.closest('.book').dataset.slug,'영상 '+v.closest('.book').dataset.slug);
       $('#vbox').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.dataset.video)+'?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="YouTube"></iframe>';
       $('#vlink').href='https://www.youtube.com/watch?v='+v.dataset.video;
       $('#vdlg').showModal(); return;
     }
+    var vv=e.target.closest('.sq[href]'); if(vv&&!vv.dataset.video){track('video/'+vv.closest('.book').dataset.slug,'영상 '+vv.closest('.book').dataset.slug)}
     var g=e.target.closest('[data-get]'); if(g){
       var s2=g.closest('.book').dataset.slug, r=store('epic21-recent')||[];
+      track('pdf/'+s2+'/'+PAGE,'PDF '+s2+' ('+PAGE+')');
       r=[s2].concat(r.filter(function(x){return x!==s2})).slice(0,8); store('epic21-recent',r); paintRecent();
     }
   });
@@ -622,6 +640,12 @@ footer a{color:var(--muted)}
     if(b.hidden){$('#reset').click()}
     b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
   });
+  /* 홈 화면 앱 */
+  if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register({{ (base ~ 'sw.js')|tojson }}).catch(function(){})})}
+  var deferred=null, ib=$('#installBtn');
+  window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;ib.hidden=false});
+  ib.addEventListener('click',function(){if(!deferred)return;deferred.prompt();deferred.userChoice.finally(function(){deferred=null;ib.hidden=true})});
+  window.addEventListener('appinstalled',function(){ib.hidden=true});
   paintFav(); paintRecent(); apply(); show();
   window.addEventListener('hashchange',show);
 })();

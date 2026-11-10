@@ -49,3 +49,5 @@ git add -A && git commit -m "hub v2" && git push
 - PDF 용량은 `python build.py --refresh-files` 때 아카이브에서 함께 읽어 site.json "sizes" 에 저장되고 버튼에 표시된다.
 - 교재에 짝 영상을 붙이려면 `site.json` 의 그 교재 덩어리에 `"video": "유튜브영상ID"` 한 줄을 넣고 `python build.py`.
   넣으면 ▶ 버튼이 허브 안에서 바로 재생되고, 없으면 채널 검색으로 연결된다.
+- 홈 화면 앱: `icons/`(새 로고로 만든 아이콘), `sw.js`(저장본), 각 폴더의 `manifest.webmanifest`(build.py 가 만듦).
+- 방문 통계: site.json `"goatcounter": "epic21korean"` → https://epic21korean.goatcounter.com 에서 본다. PDF 받기는 `pdf/교재/언어`, 영상 버튼은 `video/교재` 로 센다.

@@ -60,14 +60,14 @@ UI_NEW = {
            'saved_toast': 'Saved', 'unsaved_toast': 'Removed from saved', 'recent': 'Recently downloaded',
            'watch': 'Watch the video', 'share': 'Share', 'copied': 'Link copied', 'theme': 'Light or dark screen',
            'close': 'Close', 'none': 'No textbooks match.', 'reset': 'Show all textbooks', 'count': '{n} textbooks',
-           'dl_short': 'PDF', 'top': 'Back to top', 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
+           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
     'ko': {'lede': '여러분의 언어로 설명한 한국어 교재입니다. 교재마다 EPIC21 영상이 짝으로 있습니다. PDF를 받아 무료로 공부하세요.',
            'books': '권', 'languages': '개 언어', 'search': '교재 찾기', 'level': '수준',
            'alllv': '모든 수준', 'series': '시리즈', 'saved': '담은 교재', 'save': '이 교재 담기',
            'saved_toast': '담았습니다', 'unsaved_toast': '담기를 뺐습니다', 'recent': '최근 받은 교재',
            'watch': '영상 보기', 'share': '공유', 'copied': '주소를 복사했습니다', 'theme': '밝은 화면·어두운 화면',
            'close': '닫기', 'none': '맞는 교재가 없습니다.', 'reset': '모든 교재 보기', 'count': '교재 {n}권',
-           'dl_short': 'PDF', 'top': 'Back to top', 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
+           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
 }
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
 
@@ -223,7 +223,7 @@ def build_page(site, env, lang, is_root):
     return tpl.render(
         lang=lang, t=t, is_root=is_root, base=base, page_url=page_url, site_url=site_url,
         og_image=og_image, og_locale=OG_LOCALE.get(code, 'en_US'),
-        alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
+        goatcounter=site.get('goatcounter', ''), alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
         jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),
@@ -274,6 +274,23 @@ def main():
     with open(os.path.join(HERE, 'robots.txt'), 'w', encoding='utf-8') as f:
         f.write(f'User-agent: *\nAllow: /\nSitemap: {site_url}/sitemap.xml\n')
     open(os.path.join(HERE, '.nojekyll'), 'a').close()
+
+    # 홈 화면 앱(PWA): 언어마다 manifest — 설치한 언어 페이지로 바로 열린다
+    def manifest(start, scope, lang_code, desc):
+        return {
+            'name': 'EPIC21 — Free Korean Textbooks', 'short_name': 'EPIC21',
+            'description': desc, 'lang': lang_code, 'start_url': start, 'scope': scope, 'id': start,
+            'display': 'standalone', 'background_color': '#0F1A36', 'theme_color': '#0F1A36',
+            'icons': [
+                {'src': f'{scope}icons/icon-192.png', 'sizes': '192x192', 'type': 'image/png'},
+                {'src': f'{scope}icons/icon-512.png', 'sizes': '512x512', 'type': 'image/png'},
+                {'src': f'{scope}icons/icon-maskable-512.png', 'sizes': '512x512', 'type': 'image/png', 'purpose': 'maskable'}]}
+    with open(os.path.join(HERE, 'manifest.webmanifest'), 'w', encoding='utf-8') as f:
+        json.dump(manifest('./', './', 'en', site['text']['en']['desc'].replace('{count}', str(len(site['books'])))), f, ensure_ascii=False, indent=1)
+    for L in site['langs']:
+        with open(os.path.join(HERE, L['code'], 'manifest.webmanifest'), 'w', encoding='utf-8') as f:
+            json.dump(manifest('./', '../', L['code'], site['text'][L['code']]['desc'].replace('{count}', str(len(site['books'])))), f, ensure_ascii=False, indent=1)
+    print('manifest.webmanifest (+20)')
     print('sitemap.xml robots.txt .nojekyll')
 
 

@@ -1,0 +1,30 @@
+{
+ "name": "EPIC21 — Free Korean Textbooks",
+ "short_name": "EPIC21",
+ "description": "27 كتاب PDF مجاني لتعلم الكورية مع شرح بالعربية: قواعد ومفردات وكتابة TOPIK I و II. بدون تسجيل وبدون دفع.",
+ "lang": "ar",
+ "start_url": "./",
+ "scope": "../",
+ "id": "./",
+ "display": "standalone",
+ "background_color": "#0F1A36",
+ "theme_color": "#0F1A36",
+ "icons": [
+  {
+   "src": "../icons/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "../icons/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "../icons/icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
