@@ -95,6 +95,7 @@ try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')docume
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+dialog{margin:auto;max-height:calc(100dvh - 24px)}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 132px)}
 body{
   background:var(--bg);color:var(--ink);
@@ -309,7 +310,7 @@ dialog.vdlg::backdrop{background:rgba(0,0,0,.8)}
   background:var(--chip-on);color:var(--chip-on-ink);font-weight:700;font-size:15px}
 .startbtn b{font-weight:400}
 [dir=rtl] .startbtn b{transform:scaleX(-1)}
-.guide{max-width:min(520px,calc(100vw - 24px))}
+dialog.ldlg.guide{max-width:min(520px,calc(100vw - 24px))}
 .gstep[hidden]{display:none}
 .gq{font-size:19px;font-weight:700;line-height:1.45;margin:6px 0 16px}
 .gans{display:flex;flex-wrap:wrap;gap:10px}
@@ -319,7 +320,7 @@ dialog.vdlg::backdrop{background:rgba(0,0,0,.8)}
 .glink{text-decoration:underline;color:var(--ink-soft);padding:0 8px}
 .gresmark .gm-big{--s:34px}
 /* QR */
-.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
+dialog.ldlg.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
 .qrdlg img{display:block;margin:4px auto 10px;width:min(280px,70vw);height:auto;background:#fff;border-radius:8px;padding:6px}
 .qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
 /* 공부 끝 */
