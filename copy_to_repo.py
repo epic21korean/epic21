@@ -6,7 +6,7 @@
   python copy_to_repo.py                       (Documents\GitHub\epic21 으로)
   python copy_to_repo.py "D:\다른\경로\epic21"   (다른 곳으로)
 
-복사 대상: index.html, 언어 폴더 20개, covers, og, og.png, sitemap.xml, robots.txt, .nojekyll,
+복사 대상: index.html, sw.js, manifest.webmanifest, 언어 폴더 20개, covers, og, icons, qr, og.png, sitemap.xml, robots.txt, .nojekyll,
           site.json, template.html, build.py, make_covers.py, fetch_covers.py, check_covers.py,
           copy_to_repo.py, README.md
 그 밖의 파일(업로드 스크립트, 썸네일 png, zip 등)은 건드리지 않는다.
@@ -22,8 +22,8 @@ if not os.path.isdir(dst):
     sys.exit(1)
 
 site = json.load(open(os.path.join(HERE, 'site.json'), encoding='utf-8'))
-dirs = [L['code'] for L in site['langs']] + ['covers', 'og']
-files = ['index.html', 'og.png', 'sitemap.xml', 'robots.txt', '.nojekyll', 'site.json', 'template.html',
+dirs = [L['code'] for L in site['langs']] + ['covers', 'og', 'icons', 'qr']
+files = ['index.html', 'sw.js', 'manifest.webmanifest', 'og.png', 'sitemap.xml', 'robots.txt', '.nojekyll', 'site.json', 'template.html',
          'build.py', 'make_covers.py', 'fetch_covers.py', 'check_covers.py', 'copy_to_repo.py', 'README.md']
 
 n = 0
