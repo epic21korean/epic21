@@ -271,7 +271,10 @@
     "inapp_btn": "브라우저로 열기",
     "inapp_ios": "화면 구석의 ··· 또는 공유 아이콘을 누르고 ‘Safari로 열기’를 고르세요. 또는 링크를 복사해서 Safari에 붙여 넣으세요.",
     "app_done": "완료! 이제 홈 화면에서 EPIC21을 바로 여세요.",
-    "copylink": "링크 복사"
+    "copylink": "링크 복사",
+    "ep_tense": "된소리",
+    "ep_more_vowels": "나머지 모음",
+    "ep_batchim": "받침"
    }
   },
   "en": {
@@ -346,7 +349,10 @@
     "inapp_btn": "Open in browser",
     "inapp_ios": "Tap ··· or the share icon in a corner of the screen and choose “Open in Safari”. Or copy the link and paste it into Safari.",
     "app_done": "Done! Open EPIC21 from your home screen anytime.",
-    "copylink": "Copy link"
+    "copylink": "Copy link",
+    "ep_tense": "Tense consonants",
+    "ep_more_vowels": "More vowels",
+    "ep_batchim": "Final consonants (batchim)"
    }
   },
   "es": {
@@ -467,7 +473,10 @@
     "inapp_btn": "Abrir en el navegador",
     "inapp_ios": "Toca ··· o el icono de compartir en una esquina y elige «Abrir en Safari». O copia el enlace y pégalo en Safari.",
     "app_done": "¡Listo! Abre EPIC21 desde tu pantalla de inicio cuando quieras.",
-    "copylink": "Copiar enlace"
+    "copylink": "Copiar enlace",
+    "ep_tense": "Consonantes tensas",
+    "ep_more_vowels": "Más vocales",
+    "ep_batchim": "Consonantes finales (batchim)"
    }
   },
   "fr": {
@@ -588,7 +597,10 @@
     "inapp_btn": "Ouvrir dans le navigateur",
     "inapp_ios": "Touchez ··· ou l’icône de partage dans un coin de l’écran et choisissez « Ouvrir dans Safari ». Ou copiez le lien et collez-le dans Safari.",
     "app_done": "C’est fait ! Ouvrez EPIC21 depuis votre écran d’accueil quand vous voulez.",
-    "copylink": "Copier le lien"
+    "copylink": "Copier le lien",
+    "ep_tense": "Consonnes tendues",
+    "ep_more_vowels": "Autres voyelles",
+    "ep_batchim": "Consonnes finales (batchim)"
    }
   },
   "pt": {
@@ -709,7 +721,10 @@
     "inapp_btn": "Abrir no navegador",
     "inapp_ios": "Toque em ··· ou no ícone de compartilhar num canto da tela e escolha “Abrir no Safari”. Ou copie o link e cole no Safari.",
     "app_done": "Pronto! Abra o EPIC21 pela tela de início quando quiser.",
-    "copylink": "Copiar link"
+    "copylink": "Copiar link",
+    "ep_tense": "Consoantes tensas",
+    "ep_more_vowels": "Mais vogais",
+    "ep_batchim": "Consoantes finais (batchim)"
    }
   },
   "id": {
@@ -830,7 +845,10 @@
     "inapp_btn": "Buka di browser",
     "inapp_ios": "Ketuk ··· atau ikon bagikan di sudut layar, lalu pilih “Buka di Safari”. Atau salin tautan dan tempel di Safari.",
     "app_done": "Selesai! Buka EPIC21 dari layar utama kapan saja.",
-    "copylink": "Salin tautan"
+    "copylink": "Salin tautan",
+    "ep_tense": "Konsonan tegang",
+    "ep_more_vowels": "Vokal lainnya",
+    "ep_batchim": "Konsonan akhir (batchim)"
    }
   },
   "vi": {
@@ -951,7 +969,10 @@
     "inapp_btn": "Mở bằng trình duyệt",
     "inapp_ios": "Chạm ··· hoặc biểu tượng chia sẻ ở góc màn hình rồi chọn “Mở bằng Safari”. Hoặc sao chép liên kết và dán vào Safari.",
     "app_done": "Xong! Giờ bạn có thể mở EPIC21 từ màn hình chính bất cứ lúc nào.",
-    "copylink": "Sao chép liên kết"
+    "copylink": "Sao chép liên kết",
+    "ep_tense": "Phụ âm căng",
+    "ep_more_vowels": "Các nguyên âm còn lại",
+    "ep_batchim": "Phụ âm cuối (batchim)"
    }
   },
   "tl": {
@@ -1072,7 +1093,10 @@
     "inapp_btn": "Buksan sa browser",
     "inapp_ios": "I-tap ang ··· o ang share icon sa sulok ng screen at piliin ang “Open in Safari”. O kopyahin ang link at i-paste sa Safari.",
     "app_done": "Tapos na! Buksan ang EPIC21 mula sa home screen anumang oras.",
-    "copylink": "Kopyahin ang link"
+    "copylink": "Kopyahin ang link",
+    "ep_tense": "Mga katinig na mariin",
+    "ep_more_vowels": "Iba pang mga patinig",
+    "ep_batchim": "Mga huling katinig (batchim)"
    }
   },
   "uz": {
@@ -1193,7 +1217,10 @@
     "inapp_btn": "Brauzerda ochish",
     "inapp_ios": "Ekran burchagidagi ··· yoki ulashish belgisini bosing va “Open in Safari” ni tanlang. Yoki havolani nusxalab, Safari’ga joylang.",
     "app_done": "Tayyor! Endi EPIC21 ni istalgan payt bosh ekrandan oching.",
-    "copylink": "Havolani nusxalash"
+    "copylink": "Havolani nusxalash",
+    "ep_tense": "Taranglashgan undoshlar",
+    "ep_more_vowels": "Qolgan unlilar",
+    "ep_batchim": "Oxirgi undoshlar (batchim)"
    }
   },
   "ru": {
@@ -1314,7 +1341,10 @@
     "inapp_btn": "Открыть в браузере",
     "inapp_ios": "Нажмите ··· или значок «Поделиться» в углу экрана и выберите «Открыть в Safari». Или скопируйте ссылку и вставьте её в Safari.",
     "app_done": "Готово! Открывайте EPIC21 с главного экрана в любое время.",
-    "copylink": "Скопировать ссылку"
+    "copylink": "Скопировать ссылку",
+    "ep_tense": "Напряжённые согласные",
+    "ep_more_vowels": "Остальные гласные",
+    "ep_batchim": "Конечные согласные (батчим)"
    }
   },
   "mn": {
@@ -1435,7 +1465,10 @@
     "inapp_btn": "Хөтчөөр нээх",
     "inapp_ios": "Дэлгэцийн булан дахь ··· эсвэл хуваалцах дүрсийг дараад “Open in Safari”-г сонгоно уу. Эсвэл холбоосыг хуулж Safari-д буулгана уу.",
     "app_done": "Болчихлоо! EPIC21-ийг нүүр дэлгэцээсээ хүссэн үедээ нээгээрэй.",
-    "copylink": "Холбоос хуулах"
+    "copylink": "Холбоос хуулах",
+    "ep_tense": "Чангалсан гийгүүлэгч",
+    "ep_more_vowels": "Бусад эгшиг",
+    "ep_batchim": "Төгсгөлийн гийгүүлэгч (батчим)"
    }
   },
   "ja": {
@@ -1556,7 +1589,10 @@
     "inapp_btn": "ブラウザで開く",
     "inapp_ios": "画面の隅にある···または共有アイコンをタップし、「Safariで開く」を選んでください。リンクをコピーしてSafariに貼り付けることもできます。",
     "app_done": "完了です！これからはホーム画面からEPIC21を開けます。",
-    "copylink": "リンクをコピー"
+    "copylink": "リンクをコピー",
+    "ep_tense": "濃音",
+    "ep_more_vowels": "残りの母音",
+    "ep_batchim": "パッチム（終声）"
    }
   },
   "zh-Hans": {
@@ -1677,7 +1713,10 @@
     "inapp_btn": "用浏览器打开",
     "inapp_ios": "轻点屏幕角落的 ··· 或共享图标，选择“在 Safari 中打开”。也可以复制链接，粘贴到 Safari。",
     "app_done": "完成！以后可以随时从主屏幕打开 EPIC21。",
-    "copylink": "复制链接"
+    "copylink": "复制链接",
+    "ep_tense": "紧音",
+    "ep_more_vowels": "其余元音",
+    "ep_batchim": "收音（韵尾）"
    }
   },
   "th": {
@@ -1798,7 +1837,10 @@
     "inapp_btn": "เปิดในเบราว์เซอร์",
     "inapp_ios": "แตะ ··· หรือไอคอนแชร์ที่มุมหน้าจอ แล้วเลือก “เปิดใน Safari” หรือคัดลอกลิงก์ไปวางใน Safari",
     "app_done": "เรียบร้อย! เปิด EPIC21 จากหน้าจอโฮมได้ทุกเมื่อ",
-    "copylink": "คัดลอกลิงก์"
+    "copylink": "คัดลอกลิงก์",
+    "ep_tense": "พยัญชนะเสียงเกร็ง",
+    "ep_more_vowels": "สระที่เหลือ",
+    "ep_batchim": "ตัวสะกด (บัดชิม)"
    }
   },
   "km": {
@@ -1919,7 +1961,10 @@
     "inapp_btn": "បើកក្នុងកម្មវិធីរុករក",
     "inapp_ios": "ចុច ··· ឬរូបចែករំលែកនៅជ្រុងអេក្រង់ ហើយជ្រើស “Open in Safari”។ ឬចម្លងតំណ ហើយបិទភ្ជាប់ក្នុង Safari។",
     "app_done": "រួចរាល់! អ្នកអាចបើក EPIC21 ពីអេក្រង់ដើមបានគ្រប់ពេល។",
-    "copylink": "ចម្លងតំណ"
+    "copylink": "ចម្លងតំណ",
+    "ep_tense": "ព្យញ្ជនៈសំឡេងតឹង",
+    "ep_more_vowels": "ស្រៈដែលនៅសល់",
+    "ep_batchim": "ព្យញ្ជនៈចុងក្រោយ (បាត់ឈីម)"
    }
   },
   "my": {
@@ -2040,7 +2085,10 @@
     "inapp_btn": "ဘရောက်ဇာဖြင့် ဖွင့်မည်",
     "inapp_ios": "စခရင်ထောင့်ရှိ ··· သို့မဟုတ် မျှဝေရန်အိုင်ကွန်ကို နှိပ်ပြီး “Open in Safari” ကို ရွေးပါ။ သို့မဟုတ် လင့်ခ်ကို ကူးယူပြီး Safari တွင် ထည့်ပါ။",
     "app_done": "ပြီးပါပြီ! EPIC21 ကို ပင်မစခရင်မှ အချိန်မရွေး ဖွင့်နိုင်ပါပြီ။",
-    "copylink": "လင့်ခ် ကူးယူမည်"
+    "copylink": "လင့်ခ် ကူးယူမည်",
+    "ep_tense": "အသံတင်း ဗျည်း",
+    "ep_more_vowels": "ကျန်ရှိသော သရများ",
+    "ep_batchim": "အသတ် ဗျည်း (ပတ်ချင်မ်)"
    }
   },
   "ne": {
@@ -2161,7 +2209,10 @@
     "inapp_btn": "ब्राउजरमा खोल्नुहोस्",
     "inapp_ios": "स्क्रिनको कुनामा रहेको ··· वा सेयर आइकन थिचेर “Open in Safari” छान्नुहोस्। वा लिङ्क कपी गरेर Safari मा पेस्ट गर्नुहोस्।",
     "app_done": "भयो! अब जुनसुकै बेला होम स्क्रिनबाट EPIC21 खोल्नुहोस्।",
-    "copylink": "लिङ्क कपी गर्नुहोस्"
+    "copylink": "लिङ्क कपी गर्नुहोस्",
+    "ep_tense": "कडा व्यञ्जन",
+    "ep_more_vowels": "बाँकी स्वर",
+    "ep_batchim": "अन्तिम व्यञ्जन (बाच्छिम)"
    }
   },
   "bn": {
@@ -2282,7 +2333,10 @@
     "inapp_btn": "ব্রাউজারে খুলুন",
     "inapp_ios": "স্ক্রিনের কোণে থাকা ··· বা শেয়ার আইকন ট্যাপ করে “Open in Safari” বেছে নিন। অথবা লিংক কপি করে Safari-তে পেস্ট করুন।",
     "app_done": "হয়ে গেছে! এখন যেকোনো সময় হোম স্ক্রিন থেকে EPIC21 খুলুন।",
-    "copylink": "লিংক কপি করুন"
+    "copylink": "লিংক কপি করুন",
+    "ep_tense": "কঠিন ব্যঞ্জনধ্বনি",
+    "ep_more_vowels": "বাকি স্বরবর্ণ",
+    "ep_batchim": "শেষ ব্যঞ্জনধ্বনি (বাচিম)"
    }
   },
   "si": {
@@ -2403,7 +2457,10 @@
     "inapp_btn": "බ්‍රවුසරයෙන් විවෘත කරන්න",
     "inapp_ios": "තිරයේ කෙළවරේ ඇති ··· හෝ බෙදාගැනීමේ නිරූපකය තට්ටු කර “Open in Safari” තෝරන්න. නැතහොත් සබැඳිය පිටපත් කර Safari හි අලවන්න.",
     "app_done": "හරි! දැන් ඕනෑම වේලාවක මුල් තිරයෙන් EPIC21 විවෘත කරන්න.",
-    "copylink": "සබැඳිය පිටපත් කරන්න"
+    "copylink": "සබැඳිය පිටපත් කරන්න",
+    "ep_tense": "තද ව්‍යඤ්ජන",
+    "ep_more_vowels": "ඉතිරි ස්වර",
+    "ep_batchim": "අවසාන ව්‍යඤ්ජන (බච්චිම්)"
    }
   },
   "ar": {
@@ -2524,7 +2581,10 @@
     "inapp_btn": "فتح في المتصفح",
     "inapp_ios": "اضغط على ··· أو أيقونة المشاركة في زاوية الشاشة واختر «فتح في Safari». أو انسخ الرابط والصقه في Safari.",
     "app_done": "تم! افتح EPIC21 من الشاشة الرئيسية متى شئت.",
-    "copylink": "نسخ الرابط"
+    "copylink": "نسخ الرابط",
+    "ep_tense": "الحروف الساكنة المشدودة",
+    "ep_more_vowels": "بقية الحروف المتحركة",
+    "ep_batchim": "الحروف الساكنة الختامية (باتشيم)"
    }
   },
   "ur": {
@@ -2645,7 +2705,10 @@
     "inapp_btn": "براؤزر میں کھولیں",
     "inapp_ios": "اسکرین کے کونے میں ··· یا شیئر آئیکن دبائیں اور “Open in Safari” منتخب کریں۔ یا لنک کاپی کر کے Safari میں پیسٹ کریں۔",
     "app_done": "ہو گیا! اب جب چاہیں ہوم اسکرین سے EPIC21 کھولیں۔",
-    "copylink": "لنک کاپی کریں"
+    "copylink": "لنک کاپی کریں",
+    "ep_tense": "سخت حروفِ صحیح",
+    "ep_more_vowels": "باقی حروفِ علت",
+    "ep_batchim": "آخری حروفِ صحیح (بَچِم)"
    }
   }
  },
@@ -4769,6 +4832,25 @@
    "id": "dbgBSaflk1g",
    "ko": "기본 자음",
    "key": "ep_consonants"
+  },
+  {
+   "no": 3,
+   "id": "y1mFxUzoT1w",
+   "ko": "된소리",
+   "key": "ep_tense"
+  },
+  {
+   "no": 4,
+   "id": "z3e-xTtfuYk",
+   "ko": "나머지 모음",
+   "key": "ep_more_vowels"
+  },
+  {
+   "no": 5,
+   "id": "P3vRwvgyC80",
+   "ko": "받침",
+   "key": "ep_batchim"
   }
- ]
+ ],
+ "intro_complete": true
 }
