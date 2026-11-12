@@ -758,7 +758,7 @@ footer a{color:var(--muted)}
     }
     var v=e.target.closest('[data-video]'); if(v){
       e.preventDefault(); var vb=v.closest('.book'); var vs=vb?vb.dataset.slug:('intro-'+(v.dataset.ep||'')); track('video/'+vs,'영상 '+vs);
-      $('#vbox').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.dataset.video)+'?autoplay=1&rel=0'+(v.dataset.list?'&list='+encodeURIComponent(v.dataset.list):'')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="YouTube"></iframe>';
+      $('#vbox').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.dataset.video)+'?rel=0&playsinline=1'+(v.dataset.list?'&list='+encodeURIComponent(v.dataset.list):'')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="YouTube"></iframe>';
       $('#vlink').href='https://www.youtube.com/watch?v='+v.dataset.video+(v.dataset.list?'&list='+v.dataset.list:'');
       $('#vdlg').showModal(); return;
     }

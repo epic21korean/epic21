@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="{{ lang.code }}"{% if lang.rtl %} dir="rtl"{% endif %}>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ t.title }}</title>
+<meta name="description" content="{{ t.desc }}">
+<meta name="theme-color" content="#F7F4EC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1A36" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="{{ page_url }}">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ base }}icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ base }}icons/favicon-48.png">
+<link rel="apple-touch-icon" href="{{ base }}icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="EPIC21">
+{%- for alt in alternates %}
+<link rel="alternate" hreflang="{{ alt.code }}" href="{{ alt.url }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site_url }}/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EPIC21">
+<meta property="og:title" content="{{ t.title }}">
+<meta property="og:description" content="{{ t.desc }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ og_locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ t.title }}">
+<meta name="twitter:description" content="{{ t.desc }}">
+<meta name="twitter:image" content="{{ og_image }}">
+
+<script>
+/* 화면 모드: 저장된 선택이 있으면 먼저 적용 (깜빡임 방지) */
+try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')document.documentElement.setAttribute('data-theme',m);}catch(e){}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 원고지 제목용 명조는 그 글자만 받아 온다(text=) → 몇 KB -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@900&text=%EB%AC%B4%EB%A3%8C%ED%95%9C%EA%B5%AD%EC%96%B4%EA%B5%90%EC%9E%AC&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+{% if goatcounter %}<script data-goatcounter="https://{{ goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
+<script type="application/ld+json">{{ jsonld | safe }}</script>
+<style>
+/* ─────────────────────────────────────────────
+   EPIC21 · 교재 허브 v3 (build.py 가 template.html 로 생성)
+   원고지(붉은 칸) · 표지 남색 · 띠지 주황
+   ───────────────────────────────────────────── */
+:root{
+  --bg:#F7F4EC; --surface:#FFFFFF; --ink:#13203F; --ink-soft:#4A5674; --muted:#7A8399;
+  --line:rgba(19,32,63,.12); --grid:#D45B47; --grid-soft:rgba(212,91,71,.38);
+  --band:#F07A1A; --band-ink:#1A1206; --vol:#A85500; --chip:#ECE7DA; --chip-on:#13203F; --chip-on-ink:#F7F4EC;
+  --shadow:0 10px 24px -12px rgba(19,32,63,.45);
+  --hl:rgba(240,122,26,.16);
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1A36; --surface:#17244A; --ink:#F3EEE1; --ink-soft:#C5CBDC; --muted:#8D98B5;
+    --line:rgba(243,238,225,.12); --grid:#E87A66; --grid-soft:rgba(232,122,102,.4);
+    --band:#F28A2E; --vol:#F5A65B; --chip:#1D2B55; --chip-on:#F3EEE1; --chip-on-ink:#0F1A36;
+    --shadow:0 14px 30px -12px rgba(0,0,0,.7); --hl:rgba(242,138,46,.18);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1A36; --surface:#17244A; --ink:#F3EEE1; --ink-soft:#C5CBDC; --muted:#8D98B5;
+  --line:rgba(243,238,225,.12); --grid:#E87A66; --grid-soft:rgba(232,122,102,.4);
+  --band:#F28A2E; --vol:#F5A65B; --chip:#1D2B55; --chip-on:#F3EEE1; --chip-on-ink:#0F1A36;
+  --shadow:0 14px 30px -12px rgba(0,0,0,.7); --hl:rgba(242,138,46,.18);
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+dialog{margin:auto;max-height:calc(100dvh - 24px)}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 132px)}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans KR","Noto Sans","Noto Sans Arabic","Noto Nastaliq Urdu","Noto Sans Bengali","Noto Sans Devanagari",
+    "Noto Sans Khmer","Noto Sans Myanmar","Noto Sans Sinhala","Noto Sans Thai",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  line-height:1.6;min-height:100vh;
+}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--band);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px 80px}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ── 윗줄 ── */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0}
+.brand{font-weight:900;font-size:18px;letter-spacing:.02em;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.brand i{display:inline-block;width:18px;height:18px;border:2px solid var(--grid);position:relative}
+.brand i::after{content:"";position:absolute;inset:3px;background:var(--band)}
+.tools{display:flex;gap:6px}
+.ibtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;min-width:40px;padding:0 12px;
+  border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;background:var(--surface)}
+.ibtn:hover{border-color:var(--band)}
+.ibtn svg{width:18px;height:18px}
+.ibtn .yt{fill:#FF3B30}
+.ibtn span{white-space:nowrap}
+.ibtn[hidden]{display:none}
+#installBtn{border-color:var(--band)}
+#openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:420px){ #openLangs span{display:none}.tools{gap:4px}.ibtn{padding:0 10px}}
+@media (max-width:560px){.ibtn .lbl{display:none}}
+
+/* ── 원고지 제목 ── */
+.hero{padding:28px 0 8px}
+.gk{--c:min(72px,calc((100vw - 40px) / 9));display:flex;flex-wrap:nowrap;width:max-content;max-width:100%;
+  border-top:1.5px solid var(--grid-soft);border-inline-start:1.5px solid var(--grid-soft);
+  font-family:"Noto Serif KR","Noto Sans KR",serif;font-weight:900;line-height:1}
+.gk span{width:var(--c);height:var(--c);display:flex;align-items:center;justify-content:center;
+  border-bottom:1.5px solid var(--grid-soft);border-inline-end:1.5px solid var(--grid-soft);
+  font-size:calc(var(--c) * .62);color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){
+  .gk span b{display:inline-block;opacity:0;transform:translateY(.12em);animation:ink .5s cubic-bezier(.2,.7,.2,1) forwards;font-weight:inherit}
+  {% for i in range(9) %}.gk span:nth-child({{ i+1 }}) b{animation-delay:{{ 120 + i*90 }}ms}{% endfor %}
+}
+@keyframes ink{to{opacity:1;transform:none}}
+.h1loc{font-size:clamp(22px,4.4vw,34px);font-weight:900;line-height:1.3;margin-top:22px;max-width:22em}
+.lede{margin-top:10px;color:var(--ink-soft);font-size:16px;max-width:36em}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:14px;color:var(--ink-soft)}
+.facts b{color:var(--ink);font-weight:700}
+.facts span::before{content:"";display:inline-block;width:8px;height:8px;margin-inline-end:8px;border:1.5px solid var(--grid);vertical-align:1px}
+
+/* ── 언어 제안 ── */
+.suggest{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:20px;padding:12px 16px;border-radius:8px;
+  background:var(--hl);border:1px solid var(--band)}
+.suggest[hidden]{display:none}
+.suggest a{font-weight:700;color:var(--ink)}
+.suggest button{margin-inline-start:auto;font-size:13px;color:var(--ink-soft);text-decoration:underline}
+
+/* ── 원고지 언어표 ── */
+.langs{margin-top:28px}
+.langs h2{font-size:15px;font-weight:700;margin-bottom:10px;color:var(--ink-soft)}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  border-top:1.5px solid var(--grid-soft);border-inline-start:1.5px solid var(--grid-soft);background:var(--surface)}
+.lc{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:64px;padding:10px 6px;
+  border-bottom:1.5px solid var(--grid-soft);border-inline-end:1.5px solid var(--grid-soft);text-align:center;text-decoration:none;
+  transition:background .12s}
+.lc:hover{background:var(--hl)}
+.lc[aria-current="page"]{background:var(--chip-on);color:var(--chip-on-ink)}
+.lc .nat{font-size:18px;font-weight:700;line-height:1.35}
+.lc .gl{font-size:12px;color:var(--muted);white-space:nowrap;line-height:1.3}
+.lc .gl b{color:var(--grid);font-weight:700}
+.lc[aria-current="page"] .gl{color:inherit;opacity:.75}
+.lc[aria-current="page"] .gl b{color:inherit}
+
+/* 언어 창(언어 페이지) */
+dialog.ldlg{border:0;border-radius:10px;padding:18px;max-width:min(760px,calc(100vw - 24px));width:100%;
+  background:var(--bg);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+dialog.ldlg::backdrop{background:rgba(10,16,34,.55)}
+.ldlg-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.ldlg-head h2{font-size:17px}
+.ldlg .lgrid{max-height:70vh;overflow:auto}
+
+/* ── 이 영상의 교재 ── */
+.forvideo{margin-top:28px;padding:16px;border:2px solid var(--band);border-radius:10px;background:var(--hl)}
+.forvideo[hidden]{display:none}
+.forvideo .tag{font-size:13px;font-weight:700;color:var(--band);margin-bottom:12px}
+.forvideo .book{max-width:520px}
+
+/* ── 찾기 줄 (붙어 다님) ── */
+.finder{position:sticky;top:0;z-index:20;margin:36px -20px 0;padding:12px 20px 10px;
+  padding-top:calc(12px + env(safe-area-inset-top,0px));
+  background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--line)}
+.frow{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{flex:1 1 220px;display:flex;align-items:center;gap:8px;min-height:44px;padding:0 14px;border:1.5px solid var(--line);
+  border-radius:999px;background:var(--surface)}
+.search:focus-within{border-color:var(--band)}
+.search svg{width:18px;height:18px;flex:none;color:var(--muted)}
+.search input{flex:1;min-width:0;border:0;background:none;font:inherit;font-size:16px;color:var(--ink);outline:none}
+.lvs{display:flex;gap:6px;flex-wrap:wrap}
+@media (max-width:640px){.lvs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%;min-width:0;flex:1 1 100%}.lvs::-webkit-scrollbar{display:none}.finder{padding-top:calc(8px + env(safe-area-inset-top,0px));padding-bottom:6px}.frow{gap:8px}.search{min-height:42px}}
+.chip{position:relative;display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:0 14px;border-radius:999px;background:var(--chip);
+  font-size:14px;font-weight:500;white-space:nowrap;border:1.5px solid transparent}
+.chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
+.chip .dot{width:10px;height:10px;border-radius:50%}
+.cats{display:flex;gap:6px;overflow-x:auto;margin-top:14px;padding-bottom:4px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cats{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);padding-inline-end:40px}
+[dir=rtl] .cats{-webkit-mask-image:linear-gradient(270deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(270deg,#000 calc(100% - 40px),transparent)}
+.result{margin-top:6px;font-size:13px;color:var(--muted)}
+.result:empty{display:none}
+
+/* ── 담은 교재 / 최근 ── */
+.mine{margin-top:26px}
+.mine[hidden]{display:none}
+.mine h2{font-size:16px;font-weight:700;margin-bottom:10px}
+.strip{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px}
+.strip a{flex:none;width:92px;text-decoration:none;font-size:12px;line-height:1.35;color:var(--ink-soft)}
+.strip img{display:block;width:92px;aspect-ratio:1/1.414;object-fit:cover;border-radius:3px;box-shadow:var(--shadow);margin-bottom:6px;background:var(--surface)}
+
+/* ── 책꽂이 ── */
+/* 수준별 층 */
+.tier{--lc:var(--muted);position:relative;margin-top:56px;padding-inline-start:14px;border-inline-start:6px solid var(--lc)}
+.tier[hidden]{display:none}
+.tier-start{--lc:#1F9A44;--lt:#17773A}.tier-beg{--lc:#1E6FFF;--lt:#1557D6}.tier-int{--lc:#E57A00;--lt:#A85500}.tier-adv{--lc:#D9213A;--lt:#B81B31}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .tier{--lt:var(--lc)}}
+:root[data-theme="dark"] .tier{--lt:var(--lc)}
+.tier-all{--lc:#8B5CF6;border-image:linear-gradient(180deg,#1E6FFF,#E57A00,#D9213A) 1}
+.thead{display:grid;grid-template-columns:auto 1fr;grid-template-areas:"st name" "st meta";gap:4px 18px;align-items:center;
+  margin-inline-start:-14px;padding:18px 14px;background:color-mix(in srgb,var(--lc) 11%,transparent)}
+.tier-all .thead{background:linear-gradient(90deg,rgba(30,111,255,.1),rgba(229,122,0,.1),rgba(217,33,58,.1))}
+.thead .gm-big{grid-area:st}
+.tname{grid-area:name;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;font-size:clamp(30px,6vw,44px);font-weight:900;line-height:1.1;color:var(--lt,var(--lc))}
+.tier-all .tname{color:var(--ink)}
+.tword{font-size:clamp(16px,2.6vw,20px);font-weight:700;color:var(--ink-soft)}
+.tmeta{grid-area:meta;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:14px;color:var(--ink-soft)}
+.topik{padding:2px 10px;border-radius:999px;background:var(--lt,var(--lc));color:#fff;font-weight:700;font-size:13px}
+.tier-all .topik{background:linear-gradient(90deg,#1E6FFF,#E57A00,#D9213A)}
+.cover{border-bottom:5px solid var(--lc)}
+.grp{margin-top:36px}
+.grp[hidden]{display:none}
+.ghead{display:grid;gap:2px;padding-bottom:12px;margin-bottom:18px;border-bottom:1.5px solid var(--grid-soft)}
+.ghead h3{font-size:20px;font-weight:800;line-height:1.3}
+.ghead .gdesc{color:var(--ink-soft);font-size:15px;max-width:48em}
+.ghead .gko{color:var(--muted);font-size:13px}
+.books{display:grid;grid-template-columns:repeat(auto-fill,minmax(136px,1fr));gap:26px 14px}
+.book{display:flex;flex-direction:column;min-width:0;border-radius:8px;transition:background .2s}
+.book[hidden]{display:none}
+.book{container-type:inline-size}
+@container (max-width:210px){.acts{flex-wrap:wrap}.acts .get{flex:1 1 100%}.acts .sq{flex:1 1 0;width:auto}}
+.books.solo{grid-template-columns:1fr}
+.solo .book{display:grid;grid-template-columns:112px minmax(0,1fr);grid-template-rows:1fr auto;grid-template-areas:"cover meta" "cover acts";gap:0 18px}
+.solo .cover{grid-area:cover}.solo .bmeta{grid-area:meta;align-self:end}.solo .acts{grid-area:acts;max-width:300px}
+.book.flash{background:var(--hl);box-shadow:0 0 0 8px var(--hl)}
+.cover{position:relative;aspect-ratio:1/1.414;border-radius:3px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow)}
+.cover img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover}
+.cover img:not([data-ok]){opacity:0}
+.cover .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:30px;font-weight:900;color:var(--muted)}
+/* 원고지 칸 수준 표시: 입문 1칸 · 초급 2칸 · 중급 3칸 · 고급 4칸, 칸 색 = 수준 색 */
+.gm{--s:10px;--gc:var(--grid-soft);display:inline-grid;grid-template-columns:repeat(4,var(--s));flex:none;
+  border-top:1px solid var(--gc);border-inline-start:1px solid var(--gc);vertical-align:middle}
+.gm i{width:var(--s);height:var(--s);background:var(--surface);border-bottom:1px solid var(--gc);border-inline-end:1px solid var(--gc)}
+.gm-start i.on{background:#1F9A44}.gm-beg i.on{background:#1E6FFF}.gm-int i.on{background:#E57A00}.gm-adv i.on{background:#D9213A}
+.gm-all i.c1{background:#1E6FFF}.gm-all i.c2{background:#E57A00}.gm-all i.c3{background:#D9213A}
+.gm-big{--s:22px;border-width:1.5px}
+@media (min-width:720px){.gm-big{--s:30px}}.gm-big i{border-width:1.5px}
+.gm-sm{--s:8px}
+.gm-xs{--s:9px;--gc:rgba(212,91,71,.55)}
+.gm-xs i{background:#fff}
+.lv{position:absolute;z-index:2;inset-inline-start:8px;top:8px;display:inline-flex;align-items:center;gap:6px;padding:4px 9px 4px 6px;border-radius:4px;
+  font-size:11px;font-weight:600;color:#13203F;background:#FBF8F0;box-shadow:0 2px 10px rgba(0,0,0,.35);line-height:1.3}
+.lv b{font-size:13px;font-weight:800}
+.fav{position:absolute;z-index:2;inset-inline-end:6px;bottom:6px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(15,26,54,.55);color:#fff}
+.fav svg{width:20px;height:20px}
+.fav[aria-pressed="true"] svg{fill:#FF5A5A;stroke:#FF5A5A}
+.bmeta{margin-top:12px;flex:1}
+.bvol{font-size:13px;font-weight:700;color:var(--vol)}
+.bname{font-size:16px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.bsub{font-size:13px;color:var(--muted);margin-top:2px;overflow-wrap:anywhere}
+.acts{display:flex;gap:6px;margin-top:12px;align-items:center;min-width:0}
+.get{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 12px;
+  background:var(--band);color:var(--band-ink);font-weight:700;font-size:15px;border-radius:6px;text-decoration:none}
+.get:hover{filter:brightness(1.07)}
+.get svg{width:18px;height:18px;flex:none}
+.get .sz{font-size:12px;font-weight:500;opacity:.75;white-space:nowrap}
+.lv{white-space:nowrap;max-width:calc(100% - 16px);overflow:hidden}
+.solo .lv>span:last-child{display:none}
+@media (max-width:400px){.books:not(.solo) .lv>span:last-child{display:none}}
+.get{min-width:0}
+.sq{flex:none;width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border-radius:6px;border:1.5px solid var(--line);text-decoration:none}
+.sq:hover{border-color:var(--band)}
+.sq svg{width:20px;height:20px}
+.sq .yt{fill:#FF3B30}
+.na{font-size:13px;color:var(--muted)}
+.empty{margin-top:40px;padding:28px;text-align:center;border:1.5px dashed var(--grid-soft);border-radius:10px;color:var(--ink-soft)}
+.empty[hidden]{display:none}
+.empty button{margin-top:10px;font-weight:700;text-decoration:underline}
+
+/* 영상 창 */
+dialog.vdlg{border:0;background:#000;padding:0;width:min(960px,calc(100vw - 16px));border-radius:10px;overflow:hidden}
+dialog.vdlg::backdrop{background:rgba(0,0,0,.8)}
+.vbox{aspect-ratio:16/9}
+.vbox iframe{width:100%;height:100%;border:0;display:block}
+.vbar{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;background:#0F1A36;color:#F3EEE1;font-size:14px}
+.vbar a,.vbar button{color:#F3EEE1}
+
+.totop{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:46px;height:46px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--chip-on);color:var(--chip-on-ink);box-shadow:0 6px 18px rgba(0,0,0,.3)}
+.totop[hidden]{display:none}.totop svg{width:22px;height:22px}
+/* 어디서부터 */
+.startbtn{display:inline-flex;align-items:center;gap:10px;margin-top:18px;min-height:46px;padding:0 18px;border-radius:999px;
+  background:var(--chip-on);color:var(--chip-on-ink);font-weight:700;font-size:15px}
+.startbtn b{font-weight:400}
+[dir=rtl] .startbtn b{transform:scaleX(-1)}
+dialog.ldlg.guide{max-width:min(520px,calc(100vw - 24px))}
+.gstep[hidden]{display:none}
+.gq{font-size:19px;font-weight:700;line-height:1.45;margin:6px 0 16px}
+.gans{display:flex;flex-wrap:wrap;gap:10px}
+.gbtn{min-height:48px;padding:0 22px;border-radius:8px;border:1.5px solid var(--line);background:var(--surface);font-weight:700;font-size:16px}
+.gbtn:hover{border-color:var(--band)}
+.gmain{background:var(--band);color:var(--band-ink);border-color:var(--band)}
+.glink{text-decoration:underline;color:var(--ink-soft);padding:0 8px}
+.gresmark .gm-big{--s:34px}
+/* QR */
+dialog.ldlg.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
+.qrdlg img{display:block;margin:4px auto 10px;width:min(280px,70vw);height:auto;background:#fff;border-radius:8px;padding:6px}
+.qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
+/* 홈 화면 추가 안내 */
+dialog.ldlg.appdlg{max-width:min(440px,calc(100vw - 24px))}
+.appdlg:lang(ko){word-break:keep-all}.appdlg .ldlg-head{gap:10px}.appdlg .ldlg-head h2{min-width:0;overflow-wrap:anywhere;line-height:1.4}.appdlg .ldlg-head .ibtn{flex:none}
+.appid{display:flex;align-items:center;gap:14px;margin:2px 0 12px}
+.appid img{width:60px;height:60px;border-radius:14px;flex:none;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.appid p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
+.appway[hidden]{display:none}
+.appway p{font-size:16px;line-height:1.6;margin:0 0 12px}
+.appsteps{list-style:none;padding:0;margin:4px 0 0;counter-reset:s}
+.appsteps li{counter-increment:s;position:relative;padding-inline-start:40px;min-height:30px;font-size:16px;line-height:1.6;margin-bottom:12px}
+.appsteps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:0;width:28px;height:28px;border-radius:50%;
+  background:var(--band);color:var(--band-ink);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.shareico{display:inline-block;width:1.25em;height:1.25em;vertical-align:-.25em;margin:0 2px;color:#0A84FF}
+.appway .gans{margin-top:4px}
+.appdone{font-size:18px;font-weight:700;line-height:1.5}
+/* 공부 끝 */
+.done{position:absolute;z-index:2;inset-inline-start:6px;bottom:6px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:rgba(15,26,54,.55);color:#fff}
+.done svg{width:20px;height:20px}
+.done[aria-pressed="true"]{background:#1F9A44}
+.stamp{position:absolute;z-index:2;left:50%;top:44%;transform:translate(-50%,-50%) rotate(-12deg);padding:4px 12px;border:3px solid #1F9A44;border-radius:6px;
+  color:#1F9A44;background:rgba(255,255,255,.92);font-weight:900;font-size:15px;white-space:nowrap;display:none}
+.book.studied .stamp{display:block}
+.book.studied .cover img{filter:saturate(.35) brightness(.9)}
+.prog{font-weight:700;color:#1F9A44}
+.prog[hidden]{display:none}
+/* 새 교재 */
+.newtag{display:inline-block;padding:1px 7px;border-radius:4px;background:#D9213A;color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;vertical-align:2px}
+.cover .newtag{position:absolute;z-index:2;inset-inline-end:6px;top:6px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.strip a{position:relative}
+/* 구독 권유 */
+.subsheet{position:fixed;z-index:60;inset-inline:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));margin:0 auto;max-width:560px;
+  display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center;padding:14px 16px;border-radius:14px;
+  background:var(--surface);color:var(--ink);box-shadow:0 18px 50px rgba(0,0,0,.35);border:1px solid var(--line);animation:up .25s ease-out}
+.subsheet[hidden]{display:none}
+@keyframes up{from{transform:translateY(20px);opacity:0}}
+.subsheet img{border-radius:50%}
+.subtxt{display:grid;gap:2px;font-size:14px;color:var(--ink-soft)}
+.subtxt b{color:var(--ink);font-size:15px}
+.subacts{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end;align-items:center}
+.subgo{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;background:#E62117;color:#fff;font-weight:800;text-decoration:none}
+.subgo svg{width:20px;height:20px}
+.sublater{min-height:44px;padding:0 12px;color:var(--ink-soft)}
+/* 입문 영상 강좌 */
+.eps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px 18px}
+.ep{display:flex;flex-direction:column;text-decoration:none;color:inherit;min-width:0}
+.ethumb{position:relative;display:block;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);border-bottom:5px solid #1F9A44}
+.ethumb img{width:100%;height:100%;object-fit:cover;display:block}
+.eplay{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(230,33,23,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.eplay svg{width:28px;height:28px;margin-inline-start:3px}
+.ep:hover .eplay{transform:scale(1.06)}
+.evol{margin-top:10px;font-size:13px;font-weight:700;color:var(--vol)}
+.ename{font-size:17px;font-weight:700;line-height:1.35}
+.epnext{aspect-ratio:16/9;border:1.5px dashed var(--grid-soft);border-radius:6px;display:flex;align-items:center;justify-content:center;padding:14px;text-align:center}
+.enext{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--ink-soft);font-weight:700;font-size:15px}
+/* 알림 */
+.toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;
+  padding:10px 18px;border-radius:999px;background:var(--chip-on);color:var(--chip-on-ink);font-size:14px;font-weight:500;
+  opacity:0;transform:translateY(10px);transition:opacity .2s,transform .2s;pointer-events:none;z-index:50}
+.toast.on{opacity:1;transform:none}
+
+/* ── 아래 ── */
+.about{margin-top:64px;padding-top:24px;border-top:1.5px solid var(--grid-soft);display:grid;gap:8px;color:var(--ink-soft);font-size:14px;max-width:48em}
+.about h2{font-size:15px;color:var(--ink)}
+footer{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--muted);font-size:13px}
+footer a{color:var(--muted)}
+
+@media (min-width:720px){
+  .solo .book{grid-template-columns:180px 1fr}
+  .books{grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:36px 26px}
+  .hero{padding-top:44px}
+}
+@media (min-width:960px){
+  .tier{padding-inline-start:28px}
+  .thead{margin-inline-start:-28px;padding:24px 28px}
+  .grp{display:grid;grid-template-columns:240px 1fr;gap:32px;margin-top:0;padding:32px 0;border-top:1.5px solid var(--line)}
+  .thead + .grp{border-top:0}
+  .ghead{border-bottom:0;margin-bottom:0;padding-bottom:0;align-content:start;position:sticky;top:150px}
+  .ghead h3{font-size:19px}
+  .ghead .gdesc{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+{% macro gm(key, step, cls='') -%}
+<span class="gm {{ cls }} gm-{{ key }}" aria-hidden="true">{% for i in range(4) %}<i class="{{ 'on' if (key == 'all' and i >= 1) or (key != 'all' and i <= step) else '' }} c{{ i }}"></i>{% endfor %}</span>
+{%- endmacro %}
+<div class="wrap">
+
+<div class="top">
+  <a class="brand" href="{{ base or './' }}"><i aria-hidden="true"></i>EPIC21</a>
+  <div class="tools">
+    {% if not is_root %}
+    <button class="ibtn" id="openLangs" type="button" aria-haspopup="dialog">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>
+      <span lang="{{ lang.code }}">{{ lang.name }}</span>
+    </button>
+    {% endif %}
+    <a class="ibtn" href="{{ youtube }}" rel="noopener" aria-label="YouTube @EPIC21korean">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+      <span class="lbl">{{ t.ui.yt }}</span>
+    </a>
+    <button class="ibtn" id="qrBtn" type="button" aria-haspopup="dialog" aria-label="{{ t.ui.qr }}" title="{{ t.ui.qr }}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>
+    </button>
+    <button class="ibtn" id="installBtn" type="button" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7m0 0-3-3m3 3 3-3"/></svg>
+      <span class="lbl">{{ t.ui.install }}</span>
+    </button>
+    <button class="ibtn" id="themeBtn" type="button" aria-label="{{ t.ui.theme }}">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</div>
+
+<header class="hero">
+  {% if is_root %}
+  <h1 class="gk" lang="ko" dir="ltr">{% for ch in '무료 한국어 교재' %}<span{% if ch == ' ' %} class="sp" aria-hidden="true"{% endif %}><b>{{ ch if ch != ' ' else '' }}</b></span>{% endfor %}</h1>
+  <p class="h1loc" lang="en">Free Korean textbooks in 20 languages</p>
+  {% else %}
+  <div class="gk" lang="ko" dir="ltr" aria-hidden="true">{% for ch in '무료 한국어 교재' %}<span{% if ch == ' ' %} class="sp"{% endif %}><b>{{ ch if ch != ' ' else '' }}</b></span>{% endfor %}</div>
+  <h1 class="h1loc">{{ t.h1 }}</h1>
+  {% endif %}
+  <p class="lede">{{ t.ui.lede }}</p>
+  <div class="facts">
+    <span><b>{{ book_count }}</b> {{ t.ui.books }}</span>
+    <span><b>20</b> {{ t.ui.languages }}</span>
+    <span>TOPIK I · II</span>
+    <span>{{ t.ui.free }}</span>
+  </div>
+  <button class="startbtn" id="startBtn" type="button" aria-haspopup="dialog">
+    {{ gm('beg', 1, 'gm-sm') }}<span>{{ t.ui.start }}</span><b aria-hidden="true">→</b>
+  </button>
+  {% if is_root %}
+  <div class="suggest" id="suggest" hidden></div>
+  {% endif %}
+</header>
+
+<section class="forvideo" id="forvideo" hidden aria-live="polite">
+  <div class="tag">{{ t.ui.forvideo }}</div>
+  <div id="forvideo-slot"></div>
+</section>
+
+
+{% macro langgrid(cur) -%}
+<nav class="lgrid">
+{%- for L in langs %}
+  <a class="lc" lang="{{ L.code }}"{% if L.rtl %} dir="rtl"{% endif %} href="{{ base }}{{ L.code }}/"{% if L.code == cur %} aria-current="page"{% endif %}><span class="nat">{{ L.name }}</span><span class="gl" dir="ltr">{% if L.en != L.name %}<span lang="en">{{ L.en }}</span> · {% endif %}<b lang="ko">{{ L.ko }}</b></span></a>
+{%- endfor %}
+</nav>
+{%- endmacro %}
+
+{% if is_root %}
+<section class="langs" aria-labelledby="pickLabel">
+  <h2 id="pickLabel">언어를 고르세요 · Choose your language</h2>
+  {{ langgrid('') }}
+</section>
+{% else %}
+<dialog class="ldlg" id="langDlg" aria-labelledby="ldlgT">
+  <div class="ldlg-head"><h2 id="ldlgT">{{ t.ui.pick }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  {{ langgrid(lang.code) }}
+</dialog>
+{% endif %}
+
+<div class="finder" id="finder" role="search">
+  <div class="frow">
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span class="vh">{{ t.ui.search }}</span>
+      <input id="q" type="search" placeholder="{{ t.ui.search }}" autocomplete="off" enterkeyhint="search">
+    </label>
+    <div class="lvs" id="lvs" role="group" aria-label="{{ t.ui.level }}">
+      <button class="chip" type="button" data-lv="" aria-pressed="true">{{ t.ui.alllv }}</button>
+      {%- for L in levels %}
+      <button class="chip" type="button" data-lv="{{ L.key }}" aria-pressed="false">{{ gm(L.key, L.step, 'gm-sm') }}<span lang="ko">{{ L.ko }}</span>{% if lang.code != 'ko' %}<span class="vh"> {{ L.word }}</span>{% endif %}</button>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <p class="result" id="result" aria-live="polite"></p>
+</div>
+<div class="cats" id="cats" role="group" aria-label="{{ t.ui.series }}">
+    <button class="chip" type="button" data-g="" aria-pressed="true">{{ t.ui.all }}</button>
+    {%- for T in tiers %}{%- for g in T.groups %}
+    <button class="chip" type="button" data-g="{{ g.key }}" aria-pressed="false">{{ gm(T.key, T.step, 'gm-sm') }}{{ g.name }}</button>
+    {%- endfor %}{%- endfor %}
+    <button class="chip" type="button" data-g="__fav" aria-pressed="false">♥ {{ t.ui.saved }}</button>
+  </div>
+
+<section class="mine" id="newbox" hidden>
+  <h2><span class="newtag">NEW</span> {{ t.ui.new_title }}</h2>
+  <div class="strip" id="newStrip"></div>
+</section>
+
+<section class="mine" id="recent" hidden>
+  <h2>{{ t.ui.recent }}</h2>
+  <div class="strip" id="recentStrip"></div>
+</section>
+
+<main id="shelf">
+  {%- if intro %}
+  <section class="tier tier-start intro" id="lv-start" data-tier="start" data-q="hangul 한글 모음 자음 vowel consonant {{ t.ui.intro_title|lower }} {{ intro|map(attribute='title')|join(' ')|lower }}" aria-labelledby="lvh-start">
+    <header class="thead">
+      {{ gm('start', 0, 'gm-big') }}
+      <h2 class="tname" id="lvh-start"><span lang="ko">{{ intro_lv.ko }}</span>{% if lang.code != 'ko' %}<span class="tword" lang="{{ 'en' if is_root else lang.code }}">{{ intro_lv.word }}</span>{% endif %}</h2>
+      <p class="tmeta"><span class="topik" dir="ltr">Pre-TOPIK</span></p>
+    </header>
+    <section class="grp" data-g="__intro">
+      <div class="ghead">
+        <h3 lang="ko">한글 첫걸음</h3>
+        {% if lang.code != 'ko' %}<p class="gko" lang="{{ 'en' if is_root else lang.code }}">{{ t.ui.intro_title }}</p>{% endif %}
+        <p class="gdesc">{{ t.ui.intro_desc }}</p>
+      </div>
+      <div class="eps">
+        {%- for v in intro %}
+        <a class="ep" href="https://www.youtube.com/watch?v={{ v.id }}" rel="noopener" data-video="{{ v.id }}" data-ep="{{ v.no }}">
+          <span class="ethumb"><img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span class="eplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13l11-6.5z"/></svg></span></span>
+          <span class="evol">{{ v.ep }}</span>
+          <span class="ename" lang="ko">{{ v.ko }}</span>
+          {% if lang.code != 'ko' %}<span class="bsub" lang="{{ 'en' if is_root else lang.code }}">{{ v.title }}</span>{% endif %}
+        </a>
+        {%- endfor %}
+        <div class="ep epnext" aria-hidden="false"><span class="enext">{{ gm('start', 0, 'gm-sm') }}<span>{{ t.ui.next_ep }}</span></span></div>
+      </div>
+    </section>
+  </section>
+  {%- endif %}
+  {%- for T in tiers %}
+  <section class="tier tier-{{ T.key }}" id="lv-{{ T.key }}" data-tier="{{ T.key }}" aria-labelledby="lvh-{{ T.key }}">
+    <header class="thead">
+      {{ gm(T.key, T.step, 'gm-big') }}
+      <h2 class="tname" id="lvh-{{ T.key }}"><span lang="ko">{{ T.ko }}</span>{% if lang.code != 'ko' %}<span class="tword" lang="{{ 'en' if is_root else lang.code }}">{{ T.word }}</span>{% endif %}</h2>
+      <p class="tmeta"><span class="topik" dir="ltr">{{ T.topik }}</span><span>{{ t.ui.count.replace('{n}', T.n|string) }}</span><span class="prog" data-n="{{ T.n }}" hidden></span></p>
+    </header>
+    {%- for g in T.groups %}
+    <section class="grp" id="g-{{ g.key }}-{{ T.key }}" data-g="{{ g.key }}">
+      <div class="ghead">
+        <h3>{{ g.name }}</h3>
+        <p class="gdesc">{{ g.desc }}</p>
+        {% if lang.code != 'ko' %}<p class="gko" lang="ko">{{ g.ko }}</p>{% endif %}
+      </div>
+      <div class="books{% if g.books|length == 1 %} solo{% endif %}">
+      {%- for b in g.books %}
+    <article class="book" data-full="{{ b.ko }}" data-added="{{ b.added }}" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
+      <div class="cover">
+        <span class="ph" aria-hidden="true">{{ b.vol or '' }}</span>
+        <img src="{{ b.cover }}" alt="" loading="lazy" width="180" height="254"
+             onload="this.setAttribute('data-ok','1')"
+             onerror="if(!this.dataset.f){this.dataset.f=1;this.src='{{ b.cover_fallback }}'}else{this.remove()}">
+        {%- if b.lv %}
+        <span class="lv lv-{{ b.lv.key }}">{{ gm(b.lv.key, b.lv.step, 'gm-xs') }}<b lang="ko">{{ b.lv.ko }}</b>{% if lang.code != 'ko' %}<span lang="{{ 'en' if is_root else lang.code }}">{{ b.lv.word }}</span>{% endif %}</span>
+        {%- endif %}
+        <button class="done" type="button" aria-pressed="false" aria-label="{{ t.ui.done }}" title="{{ t.ui.done }}" data-done>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+        </button>
+        <span class="stamp" aria-hidden="true">{{ t.ui.done }}</span>
+        <button class="fav" type="button" aria-pressed="false" aria-label="{{ t.ui.save }}" data-fav>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 7 4.5c2 0 3.5 1.2 5 3 1.5-1.8 3-3 5-3 3.6 0 5.6 3.5 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+        </button>
+      </div>
+      <div class="bmeta">
+        {%- if b.single %}
+        <h4 class="bname" lang="ko">{{ b.ko }}</h4>
+        {% if lang.code != 'ko' and b.sub %}<p class="bsub" lang="{{ b.sub_lang }}">{{ b.sub }}</p>{% endif %}
+        {%- else %}
+        {% if b.vol_label %}<p class="bvol">{{ b.vol_label }}</p>{% endif %}
+        <h4 class="bname" lang="ko">{{ b.ko_sub or b.short }}</h4>
+        {% if b.sub and lang.code != 'ko' %}<p class="bsub" lang="{{ b.sub_lang }}">{{ b.sub }}</p>{% endif %}
+        {%- endif %}
+      </div>
+      <div class="acts">
+        {%- if b.pdf %}
+        <a class="get" href="{{ b.pdf }}" target="_blank" rel="noopener" data-get>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
+          <span>{{ t.ui.dl_short }}</span>{% if b.size %}<small class="sz" dir="ltr">{{ b.size }}</small>{% endif %}
+        </a>
+        {%- else %}
+        <a class="na" href="https://archive.org/details/{{ b.id }}">{{ t.ui.na }} — {{ t.ui.open }}</a>
+        {%- endif %}
+        <a class="sq" href="{{ b.video_url }}" rel="noopener"{% if b.video %} data-video="{{ b.video }}"{% if b.video_list %} data-list="{{ b.video_list }}"{% endif %}{% endif %} aria-label="{{ t.ui.watch }}" title="{{ t.ui.watch }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        </a>
+        <button class="sq" type="button" data-share aria-label="{{ t.ui.share }}" title="{{ t.ui.share }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+        </button>
+      </div>
+    </article>
+      {%- endfor %}
+      </div>
+    </section>
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+  <div class="empty" id="empty" hidden><p>{{ t.ui.none }}</p><button type="button" id="reset">{{ t.ui.reset }}</button></div>
+</main>
+
+<section class="about">
+  <h2>{{ t.ui.about }}</h2>
+  <p>{{ t.about }}</p>
+  {% if lang.code != 'ko' %}<p lang="ko">{{ about_ko }}</p>{% endif %}
+</section>
+
+<footer>
+  <a href="{{ youtube }}">YouTube · @EPIC21korean</a>
+  <a href="{{ archive_user }}">Internet Archive</a>
+  <a href="https://kpopfam.com/">KpopFam.com</a>
+  <span>{{ license }}</span>
+</footer>
+
+</div>
+
+<dialog class="vdlg" id="vdlg" aria-label="{{ t.ui.watch }}">
+  <div class="vbox" id="vbox"></div>
+  <div class="vbar"><a id="vlink" href="{{ youtube }}" rel="noopener">{{ t.ui.yt }}</a><button type="button" data-close>{{ t.ui.close }} ✕</button></div>
+</dialog>
+<a class="totop" id="totop" href="#" aria-label="{{ t.ui.top }}" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg></a>
+<dialog class="ldlg guide" id="guideDlg" aria-labelledby="guideT">
+  <div class="ldlg-head"><h2 id="guideT">{{ t.ui.start }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  <div class="gstep" data-step="1"><p class="gq">{{ t.ui.q1 }}</p><div class="gans"><button type="button" class="gbtn" data-go="2">{{ t.ui.yes }}</button><button type="button" class="gbtn" data-res="hangul">{{ t.ui.no }}</button></div></div>
+  <div class="gstep" data-step="2" hidden><p class="gq">{{ t.ui.q2 }}</p><div class="gans"><button type="button" class="gbtn" data-go="3">{{ t.ui.yes }}</button><button type="button" class="gbtn" data-res="beg">{{ t.ui.no }}</button></div></div>
+  <div class="gstep" data-step="3" hidden><p class="gq">{{ t.ui.q3 }}</p><div class="gans"><button type="button" class="gbtn" data-res="adv">{{ t.ui.yes }}</button><button type="button" class="gbtn" data-res="int">{{ t.ui.no }}</button></div></div>
+  <div class="gstep gres" data-step="res" hidden>
+    <div class="gresmark" id="gresMark"></div>
+    <p class="gq" id="gresText"></p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="gShow">{{ t.ui.show }}</button><button type="button" class="glink" id="gAgain">{{ t.ui.again }}</button></div>
+  </div>
+</dialog>
+
+<dialog class="ldlg qrdlg" id="qrDlg" aria-labelledby="qrT">
+  <div class="ldlg-head"><h2 id="qrT">{{ t.ui.qr }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  <img src="{{ base }}qr/{{ qrname }}.svg" alt="{{ page_url }}" width="280" height="280" loading="lazy">
+  <p>{{ t.ui.qr_text }}</p>
+  <p class="qrurl" dir="ltr">{{ page_url }}</p>
+</dialog>
+
+<dialog class="ldlg appdlg" id="appDlg" aria-labelledby="appT">
+  <div class="ldlg-head"><h2 id="appT" data-k="app_title">{{ t.ui.app_title }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  <div class="appid"><img src="{{ base }}icons/icon-192.png" alt="" width="60" height="60"><p data-k="app_lede">{{ t.ui.app_lede }}</p></div>
+  <div class="appway" data-way="btn" hidden><div class="gans"><button type="button" class="gbtn gmain" id="appGo" data-k="app_btn">{{ t.ui.app_btn }}</button></div></div>
+  <div class="appway" data-way="menu" hidden><p data-k="menu">{{ t.ui.menu }}</p></div>
+  {%- set sp = t.ui.ios1.split('{share}') %}
+  <ol class="appway appsteps" data-way="ios" hidden><li data-k="ios1">{{ sp[0] }}<svg class="shareico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></svg>{{ sp[1] }}</li><li data-k="ios2">{{ t.ui.ios2 }}</li><li data-k="ios3">{{ t.ui.ios3 }}</li></ol>
+  <div class="appway" data-way="inapp" hidden>
+    <p data-k="inapp">{{ t.ui.inapp }}</p>
+    <p class="appios" data-k="inapp_ios">{{ t.ui.inapp_ios }}</p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="appOut" data-k="inapp_btn">{{ t.ui.inapp_btn }}</button><button type="button" class="gbtn" id="appCopy" data-k="copylink">{{ t.ui.copylink }}</button></div>
+  </div>
+  <div class="appway" data-way="done" hidden><p class="appdone" data-k="app_done">{{ t.ui.app_done }}</p></div>
+</dialog>
+
+<div class="subsheet" id="subSheet" role="dialog" aria-labelledby="subT" hidden>
+  <img src="{{ base }}icons/icon-192.png" alt="" width="52" height="52">
+  <div class="subtxt"><b id="subT">{{ t.ui.sub_title }}</b><span>{{ t.ui.sub_text }}</span></div>
+  <div class="subacts">
+    <a class="subgo" id="subGo" href="{{ youtube_sub }}" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>{{ t.ui.sub_btn }}</a>
+    <button type="button" class="sublater" id="subLater">{{ t.ui.later }}</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var UI={copied:{{ t.ui.copied|tojson }},saved:{{ t.ui.saved_toast|tojson }},unsaved:{{ t.ui.unsaved_toast|tojson }},
+          count:{{ t.ui.count|tojson }},donecount:{{ t.ui.done_count|tojson }},rhangul:{{ t.ui.r_hangul|tojson }},rlevel:{{ t.ui.r_level|tojson }},watch:{{ ('▶ ' ~ t.ui.watch)|tojson }},show:{{ t.ui.show|tojson }},go:{{ t.ui.go|tojson }},dismiss:{{ t.ui.dismiss|tojson }}};
+  var PAGE={{ lang.code|tojson }}, ROOT={{ 'true' if is_root else 'false' }};
+  var LANGS={{ lang_names|tojson }};
+  var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  function store(k,v){try{if(v===undefined){return JSON.parse(localStorage.getItem(k)||'null')}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}}
+  /* 방문 통계(GoatCounter): PDF 받기·영상 누르기를 행사로 센다 */
+  function track(path,title){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:path,title:title,event:true})}catch(e){}}
+  var toastT; function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('on')},1800)}
+
+  /* 화면 모드 */
+  $('#themeBtn').addEventListener('click',function(){
+    var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);this.setAttribute('aria-pressed',next==='dark'?'true':'false');
+    try{localStorage.setItem('epic21-theme',next)}catch(e){}
+  });
+
+  /* 언어 창 */
+  var ld=$('#langDlg'); if(ld){$('#openLangs').addEventListener('click',function(){ld.showModal()});}
+  $$('dialog').forEach(function(d){
+    d.addEventListener('click',function(e){if(e.target===d||e.target.closest('[data-close]'))d.close()});
+  });
+
+  /* 내 언어 제안 (첫 화면) */
+  if(ROOT){
+    var box=$('#suggest'); var no=store('epic21-nosuggest');
+    var navs=(navigator.languages||[navigator.language||'']).map(function(x){return (x||'').toLowerCase()});
+    var hit=null;
+    navs.some(function(n){
+      if(n.indexOf('zh')===0&&!/tw|hk|hant/.test(n)){hit='zh-Hans';return true}
+      var b=n.split('-')[0]; if(b==='fil')b='tl';
+      if(b!=='en'&&b!=='ko'&&LANGS[b]){hit=b;return true} return b==='en';
+    });
+    if(hit&&!no){
+      box.innerHTML='<span lang="'+hit+'">'+LANGS[hit]+'?</span> <a href="'+hit+'/" lang="'+hit+'">'+UI.go.replace('{lang}',LANGS[hit])+'</a><button type="button">'+UI.dismiss+'</button>';
+      box.hidden=false;
+      $('button',box).addEventListener('click',function(){box.hidden=true;store('epic21-nosuggest',1)});
+    }
+  }
+
+  /* 찾기 */
+  var books=$$('.book',$('#shelf')), state={q:'',lv:'',g:''};
+  var favs=store('epic21-favs')||[];
+  function apply(){
+    var q=state.q.trim().toLowerCase(), n=0;
+    books.forEach(function(b){
+      var g=b.closest('.grp').dataset.g;
+      var ok=(!state.lv||b.dataset.lv===state.lv||(b.dataset.lv==='all'&&state.lv!=='start'))
+        &&(!state.g||(state.g==='__fav'?favs.indexOf(b.dataset.slug)>-1:g===state.g))
+        &&(!q||b.dataset.q.indexOf(q)>-1||b.textContent.toLowerCase().indexOf(q)>-1);
+      b.hidden=!ok; if(ok)n++;
+    });
+    $$('.grp').forEach(function(s){if(s.dataset.g==='__intro')return;s.hidden=!$$('.book',s).some(function(b){return !b.hidden})});
+    $$('.tier').forEach(function(s){if(s.classList.contains('intro'))return;s.hidden=!$$('.grp',s).some(function(g){return !g.hidden})});
+    var it=$('#shelf .intro'); if(it){var ok=(!state.lv||state.lv==='start')&&(!state.g)&&(!q||it.dataset.q.indexOf(q)>-1); it.hidden=!ok; var introOk=ok}
+    $('#empty').hidden=n>0||(typeof introOk!=='undefined'&&introOk);
+    var filtered=state.q||state.lv||state.g;
+    $('#result').textContent=filtered&&n?UI.count.replace('{n}',n):'';
+  }
+  $('#q').addEventListener('input',function(e){state.q=e.target.value;apply()});
+  function chips(sel,key){
+    $$(sel+' .chip').forEach(function(c){c.addEventListener('click',function(){
+      state[key]=c.dataset[key==='lv'?'lv':'g'];
+      $$(sel+' .chip').forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});
+      apply();
+      if(key==='g'&&state.g&&state.g!=='__fav'){var f=$('#finder');window.scrollTo({top:f.offsetTop-0,behavior:'smooth'})}
+    })});
+  }
+  chips('#lvs','lv'); chips('#cats','g');
+  $('#reset').addEventListener('click',function(){state={q:'',lv:'',g:''};$('#q').value='';
+    $$('#lvs .chip,#cats .chip').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.lv===''||x.dataset.g===''?'true':'false')});apply()});
+
+  /* 담기 */
+  function paintFav(){ $$('[data-fav]').forEach(function(b){b.setAttribute('aria-pressed',favs.indexOf(b.closest('.book').dataset.slug)>-1?'true':'false')}) }
+  document.addEventListener('click',function(e){
+    var f=e.target.closest('[data-fav]'); if(f){
+      var s=f.closest('.book').dataset.slug, i=favs.indexOf(s);
+      if(i>-1){favs.splice(i,1);toast(UI.unsaved)}else{favs.unshift(s);toast(UI.saved)}
+      store('epic21-favs',favs);paintFav();if(state.g==='__fav')apply();return;
+    }
+    var sh=e.target.closest('[data-share]'); if(sh){
+      var bk=sh.closest('.book'), url=location.origin+location.pathname+'#'+bk.dataset.slug, title=$('.bname',bk).textContent.trim();
+      if(navigator.share){navigator.share({title:title+' — EPIC21',url:url}).catch(function(){})}
+      else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){toast(UI.copied)},function(){prompt('',url)})}
+      else{prompt('',url)}
+      return;
+    }
+    var v=e.target.closest('[data-video]'); if(v){
+      e.preventDefault(); var vb=v.closest('.book'); var vs=vb?vb.dataset.slug:('intro-'+(v.dataset.ep||'')); track('video/'+vs,'영상 '+vs);
+      $('#vbox').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.dataset.video)+'?rel=0&playsinline=1'+(v.dataset.list?'&list='+encodeURIComponent(v.dataset.list):'')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="YouTube"></iframe>';
+      $('#vlink').href='https://www.youtube.com/watch?v='+v.dataset.video+(v.dataset.list?'&list='+v.dataset.list:'');
+      $('#vdlg').showModal(); return;
+    }
+    var vv=e.target.closest('.sq[href]'); if(vv&&!vv.dataset.video){track('video/'+vv.closest('.book').dataset.slug,'영상 '+vv.closest('.book').dataset.slug)}
+    var g=e.target.closest('[data-get]'); if(g){
+      var s2=g.closest('.book').dataset.slug, r=store('epic21-recent')||[];
+      track('pdf/'+s2+'/'+PAGE,'PDF '+s2+' ('+PAGE+')');
+      r=[s2].concat(r.filter(function(x){return x!==s2})).slice(0,8); store('epic21-recent',r); paintRecent();
+    }
+  });
+  $('#vdlg').addEventListener('close',function(){$('#vbox').innerHTML=''});
+
+  /* 최근 받은 교재 */
+  function paintRecent(){
+    var r=store('epic21-recent')||[], strip=$('#recentStrip'); strip.innerHTML='';
+    r.forEach(function(s){
+      var b=$('.book[data-slug="'+s+'"]',$('#shelf')); if(!b)return;
+      var a=document.createElement('a'); a.href='#'+s; a.dataset.slug=s;
+      var im=$('.cover img',b); a.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
+      a.lastChild.textContent=b.dataset.full||$('.bname',b).textContent.trim(); strip.appendChild(a);
+    });
+    $('#recent').hidden=!strip.children.length;
+  }
+
+  /* 주소 뒤 #slug → 이 영상의 교재 */
+  function show(){
+    var s=(location.hash||'').replace('#','').toLowerCase();
+    var box=$('#forvideo'), slot=$('#forvideo-slot'); slot.innerHTML='';
+    if(!s){box.hidden=true;return}
+    var src=$('.book[data-slug="'+s+'"]',$('#shelf'));
+    if(!src){box.hidden=true;return}
+    var c=src.cloneNode(true); c.hidden=false; slot.appendChild(c); box.hidden=false;
+    box.scrollIntoView({block:'start'});
+  }
+  var tt=$('#totop');
+  window.addEventListener('scroll',function(){tt.hidden=scrollY<900},{passive:true});
+  tt.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});
+  $('#recentStrip').addEventListener('click',function(e){
+    var a=e.target.closest('a'); if(!a)return; e.preventDefault();
+    var b=$('.book[data-slug="'+a.dataset.slug+'"]',$('#shelf')); if(!b)return;
+    if(b.hidden){$('#reset').click()}
+    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+  });
+  /* 홈 화면 앱 */
+  if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register({{ (base ~ 'sw.js')|tojson }}).catch(function(){})})}
+  /* 홈 화면 추가 안내 — 주소 끝에 ?app 을 붙여 보내면 안내 창이 바로 열린다 (예: …/epic21/vi/?app) */
+  var deferred=null, ib=$('#installBtn'), ad=$('#appDlg'), way='';
+  var ua=navigator.userAgent||'';
+  var isIOS=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isAndroid=/Android/i.test(ua), isKakao=/KAKAOTALK/i.test(ua), isLine=/ Line\//.test(ua);
+  var inApp=isKakao||isLine||/FBAN|FBAV|FB_IAB|FBIOS|Instagram|NAVER\(|Zalo|Snapchat|musical_ly|BytedanceWebview|Twitter|DaumApps|Telegram|; wv\)/i.test(ua)
+    ||(isIOS&&!/Safari\//.test(ua));
+  var standalone=function(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true};
+  var qs=new URLSearchParams(location.search), askApp=qs.has('app'), appLang=qs.get('app')||'';
+  var appUrl=location.origin+location.pathname+'?app'+(appLang?'='+encodeURIComponent(appLang):'')+location.hash;
+  /* ?app=ko — 교사용: 안내 창 문구만 한국어로 */
+  if(appLang==='ko'&&PAGE!=='ko'){
+    var KO={{ app_ko|tojson }}; ad.setAttribute('lang','ko'); ad.setAttribute('dir','ltr');
+    $$('[data-k]',ad).forEach(function(el){var k=el.dataset.k;
+      if(k==='ios1'){var sv=$('svg',el),p=KO.ios1.split('{share}');el.textContent=p[0];el.appendChild(sv);el.appendChild(document.createTextNode(p[1]||''));}
+      else el.textContent=KO[k];});
+  }
+  if(askApp){qs.delete('app');var rest=qs.toString();try{history.replaceState(history.state,'',location.pathname+(rest?'?'+rest:'')+location.hash)}catch(e){}}
+  function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':'menu'}
+  function showWay(w){way=w;$$('.appway',ad).forEach(function(x){x.hidden=x.dataset.way!==w});
+    $('.appios',ad).hidden=!isIOS; $('#appOut').hidden=isIOS&&!isKakao&&!isLine}
+  function openApp(src){showWay(pickWay());if(!ad.open)ad.showModal();track('app/'+PAGE+'/'+way,'홈 화면 안내 ('+src+')')}
+  function syncBtn(){ib.hidden=standalone()||!(deferred||isIOS||inApp)}
+  syncBtn();
+  window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;syncBtn();if(ad.open&&way==='menu')showWay('btn')});
+  function prompt2(){if(!deferred)return;deferred.prompt();deferred.userChoice.then(function(c){
+      track('app/'+PAGE+'/'+(c&&c.outcome==='accepted'?'ok':'no'),'홈 화면 설치 선택');
+      if(c&&c.outcome==='accepted'){showWay('done');if(!ad.open)ad.showModal()}
+    }).finally(function(){deferred=null;syncBtn()})}
+  ib.addEventListener('click',function(){if(deferred&&!inApp){prompt2();return}openApp('버튼')});
+  $('#appGo').addEventListener('click',prompt2);
+  $('#appOut').addEventListener('click',function(){
+    track('app/'+PAGE+'/out','다른 브라우저로 열기');
+    if(isKakao){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(appUrl);return}
+    if(isLine){var u=new URL(appUrl);u.searchParams.set('openExternalBrowser','1');location.href=u.toString();return}
+    if(isAndroid){var p=new URL(appUrl);location.href='intent://'+p.host+p.pathname+p.search+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(appUrl)+';end';return}
+    location.href=appUrl;
+  });
+  $('#appCopy').addEventListener('click',function(){
+    if(navigator.clipboard){navigator.clipboard.writeText(appUrl).then(function(){toast(UI.copied)},function(){prompt('',appUrl)})}else{prompt('',appUrl)}
+  });
+  window.addEventListener('appinstalled',function(){deferred=null;syncBtn();if(ad.open)showWay('done')});
+  if(askApp&&!standalone()){
+    /* 안드로이드 크롬은 설치 신호가 조금 늦게 온다 — 잠깐 기다렸다 연다 */
+    if(isAndroid&&!inApp&&!deferred){var waited=0,iv=setInterval(function(){waited+=250;if(deferred||waited>=2000){clearInterval(iv);openApp('링크')}},250)}
+    else openApp('링크');
+  }
+  var NOW=Date.now(), DAY=864e5;
+  /* 새 교재 (30일 이내) */
+  function paintNew(){
+    var strip=$('#newStrip'); strip.innerHTML='';
+    books.forEach(function(b){
+      var a=b.dataset.added; if(!a)return;
+      var age=(NOW-new Date(a+'T00:00:00').getTime())/DAY; if(age<0||age>30)return;
+      var c=$('.cover',b); if(!$('.newtag',c)){var t=document.createElement('span');t.className='newtag';t.textContent='NEW';c.appendChild(t)}
+      var x=document.createElement('a'); x.href='#'+b.dataset.slug; x.dataset.slug=b.dataset.slug;
+      var im=$('.cover img',b); x.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
+      x.lastChild.textContent=b.dataset.full||$('.bname',b).textContent.trim(); strip.appendChild(x);
+    });
+    $('#newbox').hidden=!strip.children.length;
+  }
+  $('#newStrip').addEventListener('click',function(e){var a=e.target.closest('a');if(!a)return;e.preventDefault();jump(a.dataset.slug)});
+  function jump(slug){
+    var b=$('.book[data-slug="'+slug+'"]',$('#shelf')); if(!b)return;
+    if(b.hidden){$('#reset').click()}
+    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+  }
+
+  /* 공부 끝 */
+  var done=store('epic21-done')||[];
+  function paintDone(){
+    $$('.book').forEach(function(b){var on=done.indexOf(b.dataset.slug)>-1;b.classList.toggle('studied',on);var d=$('[data-done]',b);if(d)d.setAttribute('aria-pressed',on?'true':'false')});
+    $$('.tier').forEach(function(t){
+      var p=$('.prog',t), n=0; if(!p)return; $$('.book',t).forEach(function(b){if(done.indexOf(b.dataset.slug)>-1)n++});
+      p.hidden=!n; p.textContent='✓ '+UI.donecount.replace('{d}',n).replace('{n}',p.dataset.n);
+    });
+  }
+  document.addEventListener('click',function(e){
+    var d=e.target.closest('[data-done]'); if(!d)return;
+    var s=d.closest('.book').dataset.slug, i=done.indexOf(s);
+    if(i>-1)done.splice(i,1); else {done.push(s); track('done/'+s,'공부 끝 '+s)}
+    store('epic21-done',done); paintDone();
+  });
+
+  /* 어디서부터 시작할까 */
+  var gd=$('#guideDlg'), LV={{ level_names|tojson }}, gres='';
+  function gstep(n){$$('.gstep',gd).forEach(function(x){x.hidden=x.dataset.step!==String(n)})}
+  $('#startBtn').addEventListener('click',function(){gstep(1);gd.showModal();track('guide/open','수준 찾기 열기')});
+  gd.addEventListener('click',function(e){
+    var g=e.target.closest('[data-go]'); if(g){gstep(g.dataset.go);return}
+    var r=e.target.closest('[data-res]'); if(!r)return;
+    gres=r.dataset.res; var key=gres==='hangul'?'beg':gres;
+    $('#gresMark').innerHTML=$('.tier-'+key+' .gm-big')?$('.tier-'+key+' .gm-big').outerHTML:'';
+    $('#gresText').textContent=gres==='hangul'?UI.rhangul:UI.rlevel.replace('{level}',LV[key]||key);
+    $('#gShow').textContent=gres==='hangul'&&$('.ep[data-video]')?UI.watch:UI.show;
+    gstep('res'); track('guide/'+gres,'수준 찾기 결과 '+gres);
+  });
+  $('#gAgain').addEventListener('click',function(){gstep(1)});
+  $('#gShow').addEventListener('click',function(){
+    gd.close();
+    var ep1=$('.ep[data-video]');
+    if(gres==='hangul'&&ep1){var lv=$('#lvs [data-lv="start"]'); if(lv)lv.click(); $('#lv-start').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(function(){ep1.click()},450); return}
+    var key=gres==='hangul'?'beg':gres;
+    var chip=$('#lvs [data-lv="'+key+'"]'); if(chip)chip.click();
+    var target=gres==='hangul'?($('.grp[data-g="easy"]')||$('#lv-beg')):$('#lv-'+key);
+    if(target)setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'})},60);
+  });
+
+  /* QR */
+  $('#qrBtn').addEventListener('click',function(){$('#qrDlg').showModal();track('qr/'+PAGE,'QR 열기')});
+
+  /* PDF 받은 뒤 구독 권유: 구독을 누르면 다시 안 뜨고, 나중에는 7일 동안 안 뜬다 */
+  var sheet=$('#subSheet');
+  function maybeSub(){
+    var st=store('epic21-sub'); if(st==='yes'||(typeof st==='number'&&NOW-st<7*DAY))return;
+    setTimeout(function(){sheet.hidden=false},500);
+  }
+  $('#subGo').addEventListener('click',function(){store('epic21-sub','yes');sheet.hidden=true;track('subscribe/'+PAGE,'구독 누름')});
+  $('#subLater').addEventListener('click',function(){store('epic21-sub',Date.now());sheet.hidden=true});
+  document.addEventListener('click',function(e){if(e.target.closest('[data-get]'))maybeSub()});
+
+  paintNew(); paintDone();
+  paintFav(); paintRecent(); apply(); show();
+  window.addEventListener('hashchange',show);
+})();
+</script>
+</body>
+</html>
