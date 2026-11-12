@@ -67,6 +67,7 @@ git add -A && git commit -m "hub v2" && git push
   - 특정 교재까지: `https://epic21korean.github.io/epic21/vi/?app#two-hands`
 - 안드로이드 크롬 → 설치 버튼 / 아이폰 사파리 → 공유 → 홈 화면에 추가 3단계 그림 안내 /
   카카오톡·메신저·인스타그램·잘로 등 앱 안 브라우저 → "브라우저로 열기"(안드로이드는 크롬, 카카오톡은 외부 브라우저로 자동 전환) + 링크 복사
+- 교사용(한국어 안내): 주소 끝을 `?app=ko` 로 — 예: `https://epic21korean.github.io/epic21/?app=ko`. 어느 언어 페이지에서든 안내 창 문구만 한국어로 바뀐다.
 - 위쪽 설치 버튼도 이제 아이폰과 앱 안 브라우저에서 보인다(누르면 같은 안내 창).
 - 문구는 `site.json` → `text.<코드>.ui` 의 `app_title … app_done`, `copylink`.
 - 방문 통계(GoatCounter)에 `app/<언어>/<방식>` 으로 안내 창 열림·설치 선택이 기록된다.

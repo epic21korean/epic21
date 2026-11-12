@@ -308,7 +308,7 @@ dialog.ldlg.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
 .qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
 /* 홈 화면 추가 안내 */
 dialog.ldlg.appdlg{max-width:min(440px,calc(100vw - 24px))}
-.appdlg .ldlg-head{gap:10px}.appdlg .ldlg-head h2{min-width:0;overflow-wrap:anywhere;line-height:1.4}.appdlg .ldlg-head .ibtn{flex:none}
+.appdlg:lang(ko){word-break:keep-all}.appdlg .ldlg-head{gap:10px}.appdlg .ldlg-head h2{min-width:0;overflow-wrap:anywhere;line-height:1.4}.appdlg .ldlg-head .ibtn{flex:none}
 .appid{display:flex;align-items:center;gap:14px;margin:2px 0 12px}
 .appid img{width:60px;height:60px;border-radius:14px;flex:none;box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .appid p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
@@ -643,18 +643,18 @@ footer a{color:var(--muted)}
 </dialog>
 
 <dialog class="ldlg appdlg" id="appDlg" aria-labelledby="appT">
-  <div class="ldlg-head"><h2 id="appT">{{ t.ui.app_title }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
-  <div class="appid"><img src="{{ base }}icons/icon-192.png" alt="" width="60" height="60"><p>{{ t.ui.app_lede }}</p></div>
-  <div class="appway" data-way="btn" hidden><div class="gans"><button type="button" class="gbtn gmain" id="appGo">{{ t.ui.app_btn }}</button></div></div>
-  <div class="appway" data-way="menu" hidden><p>{{ t.ui.menu }}</p></div>
+  <div class="ldlg-head"><h2 id="appT" data-k="app_title">{{ t.ui.app_title }}</h2><button class="ibtn" type="button" data-close aria-label="{{ t.ui.close }}">✕</button></div>
+  <div class="appid"><img src="{{ base }}icons/icon-192.png" alt="" width="60" height="60"><p data-k="app_lede">{{ t.ui.app_lede }}</p></div>
+  <div class="appway" data-way="btn" hidden><div class="gans"><button type="button" class="gbtn gmain" id="appGo" data-k="app_btn">{{ t.ui.app_btn }}</button></div></div>
+  <div class="appway" data-way="menu" hidden><p data-k="menu">{{ t.ui.menu }}</p></div>
   {%- set sp = t.ui.ios1.split('{share}') %}
-  <ol class="appway appsteps" data-way="ios" hidden><li>{{ sp[0] }}<svg class="shareico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></svg>{{ sp[1] }}</li><li>{{ t.ui.ios2 }}</li><li>{{ t.ui.ios3 }}</li></ol>
+  <ol class="appway appsteps" data-way="ios" hidden><li data-k="ios1">{{ sp[0] }}<svg class="shareico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></svg>{{ sp[1] }}</li><li data-k="ios2">{{ t.ui.ios2 }}</li><li data-k="ios3">{{ t.ui.ios3 }}</li></ol>
   <div class="appway" data-way="inapp" hidden>
-    <p>{{ t.ui.inapp }}</p>
-    <p class="appios">{{ t.ui.inapp_ios }}</p>
-    <div class="gans"><button type="button" class="gbtn gmain" id="appOut">{{ t.ui.inapp_btn }}</button><button type="button" class="gbtn" id="appCopy">{{ t.ui.copylink }}</button></div>
+    <p data-k="inapp">{{ t.ui.inapp }}</p>
+    <p class="appios" data-k="inapp_ios">{{ t.ui.inapp_ios }}</p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="appOut" data-k="inapp_btn">{{ t.ui.inapp_btn }}</button><button type="button" class="gbtn" id="appCopy" data-k="copylink">{{ t.ui.copylink }}</button></div>
   </div>
-  <div class="appway" data-way="done" hidden><p class="appdone">{{ t.ui.app_done }}</p></div>
+  <div class="appway" data-way="done" hidden><p class="appdone" data-k="app_done">{{ t.ui.app_done }}</p></div>
 </dialog>
 
 <div class="subsheet" id="subSheet" role="dialog" aria-labelledby="subT" hidden>
@@ -812,8 +812,15 @@ footer a{color:var(--muted)}
   var inApp=isKakao||isLine||/FBAN|FBAV|FB_IAB|FBIOS|Instagram|NAVER\(|Zalo|Snapchat|musical_ly|BytedanceWebview|Twitter|DaumApps|Telegram|; wv\)/i.test(ua)
     ||(isIOS&&!/Safari\//.test(ua));
   var standalone=function(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true};
-  var qs=new URLSearchParams(location.search), askApp=qs.has('app');
-  var appUrl=location.origin+location.pathname+'?app'+location.hash;
+  var qs=new URLSearchParams(location.search), askApp=qs.has('app'), appLang=qs.get('app')||'';
+  var appUrl=location.origin+location.pathname+'?app'+(appLang?'='+encodeURIComponent(appLang):'')+location.hash;
+  /* ?app=ko — 교사용: 안내 창 문구만 한국어로 */
+  if(appLang==='ko'&&PAGE!=='ko'){
+    var KO={{ app_ko|tojson }}; ad.setAttribute('lang','ko'); ad.setAttribute('dir','ltr');
+    $$('[data-k]',ad).forEach(function(el){var k=el.dataset.k;
+      if(k==='ios1'){var sv=$('svg',el),p=KO.ios1.split('{share}');el.textContent=p[0];el.appendChild(sv);el.appendChild(document.createTextNode(p[1]||''));}
+      else el.textContent=KO[k];});
+  }
   if(askApp){qs.delete('app');var rest=qs.toString();try{history.replaceState(history.state,'',location.pathname+(rest?'?'+rest:'')+location.hash)}catch(e){}}
   function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':'menu'}
   function showWay(w){way=w;$$('.appway',ad).forEach(function(x){x.hidden=x.dataset.way!==w});

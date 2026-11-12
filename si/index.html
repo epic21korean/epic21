@@ -325,7 +325,7 @@ dialog.ldlg.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
 .qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
 /* 홈 화면 추가 안내 */
 dialog.ldlg.appdlg{max-width:min(440px,calc(100vw - 24px))}
-.appdlg .ldlg-head{gap:10px}.appdlg .ldlg-head h2{min-width:0;overflow-wrap:anywhere;line-height:1.4}.appdlg .ldlg-head .ibtn{flex:none}
+.appdlg:lang(ko){word-break:keep-all}.appdlg .ldlg-head{gap:10px}.appdlg .ldlg-head h2{min-width:0;overflow-wrap:anywhere;line-height:1.4}.appdlg .ldlg-head .ibtn{flex:none}
 .appid{display:flex;align-items:center;gap:14px;margin:2px 0 12px}
 .appid img{width:60px;height:60px;border-radius:14px;flex:none;box-shadow:0 2px 10px rgba(0,0,0,.18)}
 .appid p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
@@ -1643,17 +1643,17 @@ footer a{color:var(--muted)}
 </dialog>
 
 <dialog class="ldlg appdlg" id="appDlg" aria-labelledby="appT">
-  <div class="ldlg-head"><h2 id="appT">EPIC21 මුල් තිරයට එක් කරන්න</h2><button class="ibtn" type="button" data-close aria-label="වසන්න">✕</button></div>
-  <div class="appid"><img src="../icons/icon-192.png" alt="" width="60" height="60"><p>යෙදුමක් වගේ එක් තට්ටුවකින් පෙළපොත් විවෘත කළ හැක. නොමිලේ, ලියාපදිංචි වීමක් අවශ්‍ය නැත.</p></div>
-  <div class="appway" data-way="btn" hidden><div class="gans"><button type="button" class="gbtn gmain" id="appGo">මුල් තිරයට එක් කරන්න</button></div></div>
-  <div class="appway" data-way="menu" hidden><p>බ්‍රවුසර මෙනුව ⋮ විවෘත කර “මුල් තිරයට එක් කරන්න” හෝ “යෙදුම ස්ථාපනය කරන්න” තට්ටු කරන්න.</p></div>
-  <ol class="appway appsteps" data-way="ios" hidden><li>Safari හි බෙදාගන්න බොත්තම <svg class="shareico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></svg> තට්ටු කරන්න. එය නොපෙනේ නම්, පළමුව ··· තට්ටු කරන්න.</li><li>පහළට අනුචලනය කර “Add to Home Screen” තට්ටු කරන්න.</li><li>ඉහළ ඇති “Add” තට්ටු කරන්න.</li></ol>
+  <div class="ldlg-head"><h2 id="appT" data-k="app_title">EPIC21 මුල් තිරයට එක් කරන්න</h2><button class="ibtn" type="button" data-close aria-label="වසන්න">✕</button></div>
+  <div class="appid"><img src="../icons/icon-192.png" alt="" width="60" height="60"><p data-k="app_lede">යෙදුමක් වගේ එක් තට්ටුවකින් පෙළපොත් විවෘත කළ හැක. නොමිලේ, ලියාපදිංචි වීමක් අවශ්‍ය නැත.</p></div>
+  <div class="appway" data-way="btn" hidden><div class="gans"><button type="button" class="gbtn gmain" id="appGo" data-k="app_btn">මුල් තිරයට එක් කරන්න</button></div></div>
+  <div class="appway" data-way="menu" hidden><p data-k="menu">බ්‍රවුසර මෙනුව ⋮ විවෘත කර “මුල් තිරයට එක් කරන්න” හෝ “යෙදුම ස්ථාපනය කරන්න” තට්ටු කරන්න.</p></div>
+  <ol class="appway appsteps" data-way="ios" hidden><li data-k="ios1">Safari හි බෙදාගන්න බොත්තම <svg class="shareico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></svg> තට්ටු කරන්න. එය නොපෙනේ නම්, පළමුව ··· තට්ටු කරන්න.</li><li data-k="ios2">පහළට අනුචලනය කර “Add to Home Screen” තට්ටු කරන්න.</li><li data-k="ios3">ඉහළ ඇති “Add” තට්ටු කරන්න.</li></ol>
   <div class="appway" data-way="inapp" hidden>
-    <p>මෙම සබැඳිය වෙනත් යෙදුමක් තුළ විවෘත වී ඇති නිසා මුල් තිරයට එක් කළ නොහැක. පළමුව දුරකථනයේ බ්‍රවුසරයෙන් විවෘත කරන්න.</p>
-    <p class="appios">තිරයේ කෙළවරේ ඇති ··· හෝ බෙදාගැනීමේ නිරූපකය තට්ටු කර “Open in Safari” තෝරන්න. නැතහොත් සබැඳිය පිටපත් කර Safari හි අලවන්න.</p>
-    <div class="gans"><button type="button" class="gbtn gmain" id="appOut">බ්‍රවුසරයෙන් විවෘත කරන්න</button><button type="button" class="gbtn" id="appCopy">සබැඳිය පිටපත් කරන්න</button></div>
+    <p data-k="inapp">මෙම සබැඳිය වෙනත් යෙදුමක් තුළ විවෘත වී ඇති නිසා මුල් තිරයට එක් කළ නොහැක. පළමුව දුරකථනයේ බ්‍රවුසරයෙන් විවෘත කරන්න.</p>
+    <p class="appios" data-k="inapp_ios">තිරයේ කෙළවරේ ඇති ··· හෝ බෙදාගැනීමේ නිරූපකය තට්ටු කර “Open in Safari” තෝරන්න. නැතහොත් සබැඳිය පිටපත් කර Safari හි අලවන්න.</p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="appOut" data-k="inapp_btn">බ්‍රවුසරයෙන් විවෘත කරන්න</button><button type="button" class="gbtn" id="appCopy" data-k="copylink">සබැඳිය පිටපත් කරන්න</button></div>
   </div>
-  <div class="appway" data-way="done" hidden><p class="appdone">හරි! දැන් ඕනෑම වේලාවක මුල් තිරයෙන් EPIC21 විවෘත කරන්න.</p></div>
+  <div class="appway" data-way="done" hidden><p class="appdone" data-k="app_done">හරි! දැන් ඕනෑම වේලාවක මුල් තිරයෙන් EPIC21 විවෘත කරන්න.</p></div>
 </dialog>
 
 <div class="subsheet" id="subSheet" role="dialog" aria-labelledby="subT" hidden>
@@ -1811,8 +1811,15 @@ footer a{color:var(--muted)}
   var inApp=isKakao||isLine||/FBAN|FBAV|FB_IAB|FBIOS|Instagram|NAVER\(|Zalo|Snapchat|musical_ly|BytedanceWebview|Twitter|DaumApps|Telegram|; wv\)/i.test(ua)
     ||(isIOS&&!/Safari\//.test(ua));
   var standalone=function(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true};
-  var qs=new URLSearchParams(location.search), askApp=qs.has('app');
-  var appUrl=location.origin+location.pathname+'?app'+location.hash;
+  var qs=new URLSearchParams(location.search), askApp=qs.has('app'), appLang=qs.get('app')||'';
+  var appUrl=location.origin+location.pathname+'?app'+(appLang?'='+encodeURIComponent(appLang):'')+location.hash;
+  /* ?app=ko — 교사용: 안내 창 문구만 한국어로 */
+  if(appLang==='ko'&&PAGE!=='ko'){
+    var KO={"app_btn": "\ud648 \ud654\uba74\uc5d0 \ucd94\uac00", "app_done": "\uc644\ub8cc! \uc774\uc81c \ud648 \ud654\uba74\uc5d0\uc11c EPIC21\uc744 \ubc14\ub85c \uc5ec\uc138\uc694.", "app_lede": "\uc571\ucc98\ub7fc \ud55c \ubc88\ub9cc \ub204\ub974\uba74 \uad50\uc7ac\uac00 \uc5f4\ub824\uc694. \ubb34\ub8cc\uc774\uace0 \uac00\uc785\ub3c4 \ud544\uc694 \uc5c6\uc5b4\uc694.", "app_title": "EPIC21\uc744 \ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud558\uc138\uc694", "copylink": "\ub9c1\ud06c \ubcf5\uc0ac", "inapp": "\uc9c0\uae08\uc740 \ub2e4\ub978 \uc571 \uc548\uc5d0\uc11c \ub9c1\ud06c\uac00 \uc5f4\ub824 \uc788\uc5b4\uc11c \ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud560 \uc218 \uc5c6\uc5b4\uc694. \uba3c\uc800 \ud734\ub300\ud3f0 \ube0c\ub77c\uc6b0\uc800\ub85c \uc5ec\uc138\uc694.", "inapp_btn": "\ube0c\ub77c\uc6b0\uc800\ub85c \uc5f4\uae30", "inapp_ios": "\ud654\uba74 \uad6c\uc11d\uc758 \u00b7\u00b7\u00b7 \ub610\ub294 \uacf5\uc720 \uc544\uc774\ucf58\uc744 \ub204\ub974\uace0 \u2018Safari\ub85c \uc5f4\uae30\u2019\ub97c \uace0\ub974\uc138\uc694. \ub610\ub294 \ub9c1\ud06c\ub97c \ubcf5\uc0ac\ud574\uc11c Safari\uc5d0 \ubd99\uc5ec \ub123\uc73c\uc138\uc694.", "ios1": "Safari\uc5d0\uc11c \uacf5\uc720 \ubc84\ud2bc {share}\uc744 \ub204\ub974\uc138\uc694. \ubc84\ud2bc\uc774 \uc548 \ubcf4\uc774\uba74 \uba3c\uc800 \u00b7\u00b7\u00b7\uc744 \ub204\ub974\uc138\uc694.", "ios2": "\uc544\ub798\ub85c \ub0b4\ub824\uc11c \u2018\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "ios3": "\uc704\ucabd\uc758 \u2018\ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "menu": "\ube0c\ub77c\uc6b0\uc800 \uba54\ub274 \u22ee\ub97c \uc5f4\uace0 \u2018\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\u2019 \ub610\ub294 \u2018\uc571 \uc124\uce58\u2019\ub97c \ub204\ub974\uc138\uc694."}; ad.setAttribute('lang','ko'); ad.setAttribute('dir','ltr');
+    $$('[data-k]',ad).forEach(function(el){var k=el.dataset.k;
+      if(k==='ios1'){var sv=$('svg',el),p=KO.ios1.split('{share}');el.textContent=p[0];el.appendChild(sv);el.appendChild(document.createTextNode(p[1]||''));}
+      else el.textContent=KO[k];});
+  }
   if(askApp){qs.delete('app');var rest=qs.toString();try{history.replaceState(history.state,'',location.pathname+(rest?'?'+rest:'')+location.hash)}catch(e){}}
   function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':'menu'}
   function showWay(w){way=w;$$('.appway',ad).forEach(function(x){x.hidden=x.dataset.way!==w});

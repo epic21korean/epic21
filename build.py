@@ -70,6 +70,8 @@ UI_NEW = {
            'dl_short': 'PDF', 'top': '맨 위로', 'install': '앱으로 설치', 'next_ep': "다음 편을 기대해 주세요!", 'ep_vowels': "기본 모음", 'ep_consonants': "기본 자음", 'intro_desc': "한글을 처음부터 읽을 수 있게 배우는 무료 영상 강좌예요.", 'intro_title': "한글 첫걸음", 'sub_title': "PDF가 새 탭에서 열리고 있어요", 'sub_text': "유튜브에서 EPIC21을 구독하면 새 무료 교재와 영상 소식을 받을 수 있어요.", 'sub_btn': "구독하기", 'later': "나중에", 'start': "어디서부터 시작할까요?", 'q1': "한글을 읽을 수 있나요?", 'q2': "한국어로 자기소개를 하고 카페에서 주문할 수 있나요?", 'q3': "TOPIK II 지문이나 한국어 뉴스를 읽을 수 있나요?", 'yes': "네", 'no': "아직요", 'r_hangul': "「한글 첫걸음」 영상 강좌부터 시작하세요. 한글을 처음부터 읽을 수 있게 알려 드려요.", 'r_level': "추천 수준: {level}", 'show': "이 교재 보기", 'again': "처음부터 다시", 'new_title': "새 교재", 'done': "공부 끝", 'done_count': "{d} / {n}권 공부 끝", 'qr': "QR 코드", 'qr_text': "휴대폰으로 찍으면 이 페이지가 열려요.", 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
 }
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
+# 홈 화면 추가 안내 문구 — ?app=ko 로 열면 어느 페이지에서든 안내 창만 한국어로 바뀐다(교사용)
+APP_KEYS = ['app_title', 'app_lede', 'app_btn', 'ios1', 'ios2', 'ios3', 'menu', 'inapp', 'inapp_btn', 'inapp_ios', 'copylink', 'app_done']
 
 
 def level_info(level, code):
@@ -230,6 +232,7 @@ def build_page(site, env, lang, is_root):
         intro=intro, intro_lv=level_info('입문', lv_code), level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
+        app_ko={k: T['ko']['ui'][k] for k in APP_KEYS},
         jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),
     )
 
