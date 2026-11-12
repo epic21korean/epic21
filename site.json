@@ -258,7 +258,19 @@
     "open": "아카이브에서 열기",
     "forvideo": "이 영상의 교재",
     "all": "모든 교재",
-    "langpage": "이 언어 페이지"
+    "langpage": "이 언어 페이지",
+    "app_title": "EPIC21을 홈 화면에 추가하세요",
+    "app_lede": "앱처럼 한 번만 누르면 교재가 열려요. 무료이고 가입도 필요 없어요.",
+    "app_btn": "홈 화면에 추가",
+    "ios1": "Safari에서 공유 버튼 {share}을 누르세요. 버튼이 안 보이면 먼저 ···을 누르세요.",
+    "ios2": "아래로 내려서 ‘홈 화면에 추가’를 누르세요.",
+    "ios3": "위쪽의 ‘추가’를 누르세요.",
+    "menu": "브라우저 메뉴 ⋮를 열고 ‘홈 화면에 추가’ 또는 ‘앱 설치’를 누르세요.",
+    "inapp": "지금은 다른 앱 안에서 링크가 열려 있어서 홈 화면에 추가할 수 없어요. 먼저 휴대폰 브라우저로 여세요.",
+    "inapp_btn": "브라우저로 열기",
+    "inapp_ios": "화면 구석의 ··· 또는 공유 아이콘을 누르고 ‘Safari로 열기’를 고르세요. 또는 링크를 복사해서 Safari에 붙여 넣으세요.",
+    "app_done": "완료! 이제 홈 화면에서 EPIC21을 바로 여세요.",
+    "copylink": "링크 복사"
    }
   },
   "en": {
@@ -321,7 +333,19 @@
     "open": "Open on Archive",
     "forvideo": "For this video",
     "all": "All textbooks",
-    "langpage": "English page"
+    "langpage": "English page",
+    "app_title": "Add EPIC21 to your home screen",
+    "app_lede": "Then you can open the textbooks with one tap, like an app. Free, no sign-up.",
+    "app_btn": "Add to home screen",
+    "ios1": "In Safari, tap the Share button {share}. If you can’t see it, tap ··· first.",
+    "ios2": "Scroll down and tap “Add to Home Screen”.",
+    "ios3": "Tap “Add” at the top.",
+    "menu": "Open the browser menu ⋮ and tap “Add to home screen” or “Install app”.",
+    "inapp": "This link opened inside another app, which can’t add pages to your home screen. Open it in your phone’s browser first.",
+    "inapp_btn": "Open in browser",
+    "inapp_ios": "Tap ··· or the share icon in a corner of the screen and choose “Open in Safari”. Or copy the link and paste it into Safari.",
+    "app_done": "Done! Open EPIC21 from your home screen anytime.",
+    "copylink": "Copy link"
    }
   },
   "es": {
@@ -430,7 +454,19 @@
     "intro_desc": "Aprende a leer las letras coreanas desde cero con este curso de video gratis.",
     "ep_vowels": "Vocales básicas",
     "next_ep": "¡Espera el próximo episodio!",
-    "ep_consonants": "Consonantes básicas"
+    "ep_consonants": "Consonantes básicas",
+    "app_title": "Añade EPIC21 a tu pantalla de inicio",
+    "app_lede": "Así abrirás los libros con un solo toque, como una app. Gratis y sin registro.",
+    "app_btn": "Añadir a la pantalla de inicio",
+    "ios1": "En Safari, toca el botón Compartir {share}. Si no lo ves, toca primero ···.",
+    "ios2": "Desliza hacia abajo y toca «Añadir a pantalla de inicio».",
+    "ios3": "Toca «Añadir» arriba.",
+    "menu": "Abre el menú del navegador ⋮ y toca «Añadir a pantalla de inicio» o «Instalar aplicación».",
+    "inapp": "Este enlace se abrió dentro de otra app, que no puede añadir páginas a la pantalla de inicio. Ábrelo primero en el navegador del teléfono.",
+    "inapp_btn": "Abrir en el navegador",
+    "inapp_ios": "Toca ··· o el icono de compartir en una esquina y elige «Abrir en Safari». O copia el enlace y pégalo en Safari.",
+    "app_done": "¡Listo! Abre EPIC21 desde tu pantalla de inicio cuando quieras.",
+    "copylink": "Copiar enlace"
    }
   },
   "fr": {
@@ -539,7 +575,19 @@
     "intro_desc": "Apprenez à lire l’alphabet coréen à partir de zéro avec ce cours vidéo gratuit.",
     "ep_vowels": "Voyelles de base",
     "next_ep": "Le prochain épisode arrive bientôt !",
-    "ep_consonants": "Consonnes de base"
+    "ep_consonants": "Consonnes de base",
+    "app_title": "Ajoutez EPIC21 à votre écran d’accueil",
+    "app_lede": "Vous ouvrirez les manuels d’un seul toucher, comme une appli. Gratuit, sans inscription.",
+    "app_btn": "Ajouter à l’écran d’accueil",
+    "ios1": "Dans Safari, touchez le bouton Partager {share}. Si vous ne le voyez pas, touchez d’abord ···.",
+    "ios2": "Faites défiler et touchez « Sur l’écran d’accueil ».",
+    "ios3": "Touchez « Ajouter » en haut.",
+    "menu": "Ouvrez le menu du navigateur ⋮ et touchez « Ajouter à l’écran d’accueil » ou « Installer l’application ».",
+    "inapp": "Ce lien s’est ouvert dans une autre appli, qui ne peut pas ajouter de pages à l’écran d’accueil. Ouvrez-le d’abord dans le navigateur du téléphone.",
+    "inapp_btn": "Ouvrir dans le navigateur",
+    "inapp_ios": "Touchez ··· ou l’icône de partage dans un coin de l’écran et choisissez « Ouvrir dans Safari ». Ou copiez le lien et collez-le dans Safari.",
+    "app_done": "C’est fait ! Ouvrez EPIC21 depuis votre écran d’accueil quand vous voulez.",
+    "copylink": "Copier le lien"
    }
   },
   "pt": {
@@ -648,7 +696,19 @@
     "intro_desc": "Aprenda a ler as letras coreanas do zero com este curso em vídeo gratuito.",
     "ep_vowels": "Vogais básicas",
     "next_ep": "Aguarde o próximo episódio!",
-    "ep_consonants": "Consoantes básicas"
+    "ep_consonants": "Consoantes básicas",
+    "app_title": "Adicione o EPIC21 à tela de início",
+    "app_lede": "Assim você abre os livros com um toque, como um app. Grátis, sem cadastro.",
+    "app_btn": "Adicionar à tela de início",
+    "ios1": "No Safari, toque no botão Compartilhar {share}. Se não o vir, toque primeiro em ···.",
+    "ios2": "Role para baixo e toque em “Adicionar à Tela de Início”.",
+    "ios3": "Toque em “Adicionar” no topo.",
+    "menu": "Abra o menu do navegador ⋮ e toque em “Adicionar à tela inicial” ou “Instalar app”.",
+    "inapp": "Este link abriu dentro de outro app, que não consegue adicionar páginas à tela de início. Abra-o primeiro no navegador do celular.",
+    "inapp_btn": "Abrir no navegador",
+    "inapp_ios": "Toque em ··· ou no ícone de compartilhar num canto da tela e escolha “Abrir no Safari”. Ou copie o link e cole no Safari.",
+    "app_done": "Pronto! Abra o EPIC21 pela tela de início quando quiser.",
+    "copylink": "Copiar link"
    }
   },
   "id": {
@@ -757,7 +817,19 @@
     "intro_desc": "Belajar membaca huruf Korea dari nol lewat kursus video gratis ini.",
     "ep_vowels": "Vokal dasar",
     "next_ep": "Nantikan episode berikutnya!",
-    "ep_consonants": "Konsonan dasar"
+    "ep_consonants": "Konsonan dasar",
+    "app_title": "Tambahkan EPIC21 ke layar utama",
+    "app_lede": "Buka buku pelajaran dengan sekali ketuk, seperti aplikasi. Gratis, tanpa daftar.",
+    "app_btn": "Tambah ke layar utama",
+    "ios1": "Di Safari, ketuk tombol Bagikan {share}. Jika tidak terlihat, ketuk ··· dulu.",
+    "ios2": "Gulir ke bawah dan ketuk “Tambah ke Layar Utama”.",
+    "ios3": "Ketuk “Tambah” di bagian atas.",
+    "menu": "Buka menu browser ⋮ lalu ketuk “Tambahkan ke layar utama” atau “Instal aplikasi”.",
+    "inapp": "Tautan ini terbuka di dalam aplikasi lain yang tidak bisa menambahkan halaman ke layar utama. Buka dulu di browser ponsel.",
+    "inapp_btn": "Buka di browser",
+    "inapp_ios": "Ketuk ··· atau ikon bagikan di sudut layar, lalu pilih “Buka di Safari”. Atau salin tautan dan tempel di Safari.",
+    "app_done": "Selesai! Buka EPIC21 dari layar utama kapan saja.",
+    "copylink": "Salin tautan"
    }
   },
   "vi": {
@@ -866,7 +938,19 @@
     "intro_desc": "Khóa học video miễn phí giúp bạn đọc được chữ Hàn từ con số 0.",
     "ep_vowels": "Nguyên âm cơ bản",
     "next_ep": "Hãy đón chờ tập tiếp theo!",
-    "ep_consonants": "Phụ âm cơ bản"
+    "ep_consonants": "Phụ âm cơ bản",
+    "app_title": "Thêm EPIC21 vào màn hình chính",
+    "app_lede": "Mở giáo trình chỉ với một chạm, như một ứng dụng. Miễn phí, không cần đăng ký.",
+    "app_btn": "Thêm vào màn hình chính",
+    "ios1": "Trong Safari, chạm vào nút Chia sẻ {share}. Nếu không thấy, hãy chạm ··· trước.",
+    "ios2": "Kéo xuống và chạm “Thêm vào MH chính”.",
+    "ios3": "Chạm “Thêm” ở phía trên.",
+    "menu": "Mở menu trình duyệt ⋮ rồi chạm “Thêm vào màn hình chính” hoặc “Cài đặt ứng dụng”.",
+    "inapp": "Liên kết này đang mở bên trong một ứng dụng khác nên không thể thêm vào màn hình chính. Hãy mở bằng trình duyệt của điện thoại trước.",
+    "inapp_btn": "Mở bằng trình duyệt",
+    "inapp_ios": "Chạm ··· hoặc biểu tượng chia sẻ ở góc màn hình rồi chọn “Mở bằng Safari”. Hoặc sao chép liên kết và dán vào Safari.",
+    "app_done": "Xong! Giờ bạn có thể mở EPIC21 từ màn hình chính bất cứ lúc nào.",
+    "copylink": "Sao chép liên kết"
    }
   },
   "tl": {
@@ -975,7 +1059,19 @@
     "intro_desc": "Libreng video course para matutong bumasa ng letrang Korean mula sa simula.",
     "ep_vowels": "Mga pangunahing patinig",
     "next_ep": "Abangan ang susunod na episode!",
-    "ep_consonants": "Mga pangunahing katinig"
+    "ep_consonants": "Mga pangunahing katinig",
+    "app_title": "Idagdag ang EPIC21 sa home screen",
+    "app_lede": "Mabubuksan mo ang mga aklat sa isang tap, parang app. Libre, walang sign-up.",
+    "app_btn": "Idagdag sa home screen",
+    "ios1": "Sa Safari, i-tap ang Share button {share}. Kung hindi mo makita, i-tap muna ang ···.",
+    "ios2": "Mag-scroll pababa at i-tap ang “Add to Home Screen”.",
+    "ios3": "I-tap ang “Add” sa itaas.",
+    "menu": "Buksan ang menu ng browser ⋮ at i-tap ang “Add to Home screen” o “Install app”.",
+    "inapp": "Nabuksan ang link na ito sa loob ng ibang app, kaya hindi ito maidaragdag sa home screen. Buksan muna ito sa browser ng iyong telepono.",
+    "inapp_btn": "Buksan sa browser",
+    "inapp_ios": "I-tap ang ··· o ang share icon sa sulok ng screen at piliin ang “Open in Safari”. O kopyahin ang link at i-paste sa Safari.",
+    "app_done": "Tapos na! Buksan ang EPIC21 mula sa home screen anumang oras.",
+    "copylink": "Kopyahin ang link"
    }
   },
   "uz": {
@@ -1084,7 +1180,19 @@
     "intro_desc": "Koreys harflarini noldan o‘qishni o‘rgatadigan bepul video kurs.",
     "ep_vowels": "Asosiy unlilar",
     "next_ep": "Keyingi qismni kuting!",
-    "ep_consonants": "Asosiy undoshlar"
+    "ep_consonants": "Asosiy undoshlar",
+    "app_title": "EPIC21 ni bosh ekranga qo‘shing",
+    "app_lede": "Darsliklarni ilova kabi bir bosishda ochasiz. Bepul, ro‘yxatdan o‘tish shart emas.",
+    "app_btn": "Bosh ekranga qo‘shish",
+    "ios1": "Safari’da Ulashish tugmasini {share} bosing. Ko‘rinmasa, avval ··· ni bosing.",
+    "ios2": "Pastga suring va “Add to Home Screen” ni bosing.",
+    "ios3": "Yuqoridagi “Add” ni bosing.",
+    "menu": "Brauzer menyusini ⋮ oching va “Bosh ekranga qo‘shish” yoki “Ilovani o‘rnatish” ni bosing.",
+    "inapp": "Bu havola boshqa ilova ichida ochildi, u yerdan bosh ekranga qo‘shib bo‘lmaydi. Avval telefoningiz brauzerida oching.",
+    "inapp_btn": "Brauzerda ochish",
+    "inapp_ios": "Ekran burchagidagi ··· yoki ulashish belgisini bosing va “Open in Safari” ni tanlang. Yoki havolani nusxalab, Safari’ga joylang.",
+    "app_done": "Tayyor! Endi EPIC21 ni istalgan payt bosh ekrandan oching.",
+    "copylink": "Havolani nusxalash"
    }
   },
   "ru": {
@@ -1193,7 +1301,19 @@
     "intro_desc": "Бесплатный видеокурс: учимся читать корейские буквы с нуля.",
     "ep_vowels": "Основные гласные",
     "next_ep": "Ждите следующую серию!",
-    "ep_consonants": "Основные согласные"
+    "ep_consonants": "Основные согласные",
+    "app_title": "Добавьте EPIC21 на главный экран",
+    "app_lede": "Учебники будут открываться одним касанием, как приложение. Бесплатно, без регистрации.",
+    "app_btn": "Добавить на главный экран",
+    "ios1": "В Safari нажмите кнопку «Поделиться» {share}. Если её не видно, сначала нажмите ···.",
+    "ios2": "Прокрутите вниз и нажмите «На экран „Домой“».",
+    "ios3": "Нажмите «Добавить» вверху.",
+    "menu": "Откройте меню браузера ⋮ и нажмите «Добавить на главный экран» или «Установить приложение».",
+    "inapp": "Ссылка открылась внутри другого приложения — оттуда нельзя добавить страницу на главный экран. Сначала откройте её в браузере телефона.",
+    "inapp_btn": "Открыть в браузере",
+    "inapp_ios": "Нажмите ··· или значок «Поделиться» в углу экрана и выберите «Открыть в Safari». Или скопируйте ссылку и вставьте её в Safari.",
+    "app_done": "Готово! Открывайте EPIC21 с главного экрана в любое время.",
+    "copylink": "Скопировать ссылку"
    }
   },
   "mn": {
@@ -1302,7 +1422,19 @@
     "intro_desc": "Солонгос үсгийг тэгээс уншиж сурах үнэгүй видео хичээл.",
     "ep_vowels": "Үндсэн эгшиг",
     "next_ep": "Дараагийн ангийг хүлээж байгаарай!",
-    "ep_consonants": "Үндсэн гийгүүлэгч"
+    "ep_consonants": "Үндсэн гийгүүлэгч",
+    "app_title": "EPIC21-ийг нүүр дэлгэцэндээ нэмээрэй",
+    "app_lede": "Сурах бичгээ апп шиг нэг дараад нээнэ. Үнэгүй, бүртгэл шаардлагагүй.",
+    "app_btn": "Нүүр дэлгэцэнд нэмэх",
+    "ios1": "Safari дээр Хуваалцах товч {share}-ийг дарна уу. Харагдахгүй бол эхлээд ··· дарна уу.",
+    "ios2": "Доош гүйлгээд “Add to Home Screen”-ийг дарна уу.",
+    "ios3": "Дээд талын “Add”-ийг дарна уу.",
+    "menu": "Хөтчийн цэс ⋮-ийг нээгээд “Нүүр дэлгэцэнд нэмэх” эсвэл “Апп суулгах”-ыг дарна уу.",
+    "inapp": "Энэ холбоос өөр аппын дотор нээгдсэн тул нүүр дэлгэцэнд нэмэх боломжгүй. Эхлээд утасныхаа хөтчөөр нээнэ үү.",
+    "inapp_btn": "Хөтчөөр нээх",
+    "inapp_ios": "Дэлгэцийн булан дахь ··· эсвэл хуваалцах дүрсийг дараад “Open in Safari”-г сонгоно уу. Эсвэл холбоосыг хуулж Safari-д буулгана уу.",
+    "app_done": "Болчихлоо! EPIC21-ийг нүүр дэлгэцээсээ хүссэн үедээ нээгээрэй.",
+    "copylink": "Холбоос хуулах"
    }
   },
   "ja": {
@@ -1411,7 +1543,19 @@
     "intro_desc": "ゼロから韓国語の文字が読めるようになる無料動画講座です。",
     "ep_vowels": "基本母音",
     "next_ep": "次回もお楽しみに！",
-    "ep_consonants": "基本子音"
+    "ep_consonants": "基本子音",
+    "app_title": "EPIC21をホーム画面に追加",
+    "app_lede": "アプリのようにワンタップで教材を開けます。無料・登録不要です。",
+    "app_btn": "ホーム画面に追加",
+    "ios1": "Safariで共有ボタン{share}をタップします。見当たらないときは、先に···をタップしてください。",
+    "ios2": "下にスクロールして「ホーム画面に追加」をタップします。",
+    "ios3": "上の「追加」をタップします。",
+    "menu": "ブラウザのメニュー⋮を開き、「ホーム画面に追加」または「アプリをインストール」をタップします。",
+    "inapp": "このリンクは別のアプリの中で開いているため、ホーム画面に追加できません。まずスマホのブラウザで開いてください。",
+    "inapp_btn": "ブラウザで開く",
+    "inapp_ios": "画面の隅にある···または共有アイコンをタップし、「Safariで開く」を選んでください。リンクをコピーしてSafariに貼り付けることもできます。",
+    "app_done": "完了です！これからはホーム画面からEPIC21を開けます。",
+    "copylink": "リンクをコピー"
    }
   },
   "zh-Hans": {
@@ -1520,7 +1664,19 @@
     "intro_desc": "从零开始学会读韩文字母的免费视频课程。",
     "ep_vowels": "基本元音",
     "next_ep": "敬请期待下一集！",
-    "ep_consonants": "基本辅音"
+    "ep_consonants": "基本辅音",
+    "app_title": "把 EPIC21 添加到主屏幕",
+    "app_lede": "像应用一样，一点就能打开教材。免费，无需注册。",
+    "app_btn": "添加到主屏幕",
+    "ios1": "在 Safari 中轻点“共享”按钮 {share}。如果看不到，请先轻点 ···。",
+    "ios2": "向下滑动，轻点“添加到主屏幕”。",
+    "ios3": "轻点顶部的“添加”。",
+    "menu": "打开浏览器菜单 ⋮，点按“添加到主屏幕”或“安装应用”。",
+    "inapp": "这个链接是在其他应用里打开的，无法添加到主屏幕。请先用手机浏览器打开。",
+    "inapp_btn": "用浏览器打开",
+    "inapp_ios": "轻点屏幕角落的 ··· 或共享图标，选择“在 Safari 中打开”。也可以复制链接，粘贴到 Safari。",
+    "app_done": "完成！以后可以随时从主屏幕打开 EPIC21。",
+    "copylink": "复制链接"
    }
   },
   "th": {
@@ -1629,7 +1785,19 @@
     "intro_desc": "คอร์สวิดีโอฟรี เรียนอ่านตัวอักษรเกาหลีตั้งแต่เริ่มต้น",
     "ep_vowels": "สระพื้นฐาน",
     "next_ep": "รอติดตามตอนต่อไป!",
-    "ep_consonants": "พยัญชนะพื้นฐาน"
+    "ep_consonants": "พยัญชนะพื้นฐาน",
+    "app_title": "เพิ่ม EPIC21 ไว้ที่หน้าจอโฮม",
+    "app_lede": "เปิดตำราได้ในแตะเดียวเหมือนแอป ฟรี ไม่ต้องสมัคร",
+    "app_btn": "เพิ่มไปยังหน้าจอโฮม",
+    "ios1": "ใน Safari ให้แตะปุ่มแชร์ {share} ถ้าไม่เห็น ให้แตะ ··· ก่อน",
+    "ios2": "เลื่อนลงแล้วแตะ “เพิ่มไปยังหน้าจอโฮม”",
+    "ios3": "แตะ “เพิ่ม” ที่ด้านบน",
+    "menu": "เปิดเมนูเบราว์เซอร์ ⋮ แล้วแตะ “เพิ่มลงในหน้าจอหลัก” หรือ “ติดตั้งแอป”",
+    "inapp": "ลิงก์นี้เปิดอยู่ในแอปอื่น จึงเพิ่มไปที่หน้าจอโฮมไม่ได้ กรุณาเปิดด้วยเบราว์เซอร์ของโทรศัพท์ก่อน",
+    "inapp_btn": "เปิดในเบราว์เซอร์",
+    "inapp_ios": "แตะ ··· หรือไอคอนแชร์ที่มุมหน้าจอ แล้วเลือก “เปิดใน Safari” หรือคัดลอกลิงก์ไปวางใน Safari",
+    "app_done": "เรียบร้อย! เปิด EPIC21 จากหน้าจอโฮมได้ทุกเมื่อ",
+    "copylink": "คัดลอกลิงก์"
    }
   },
   "km": {
@@ -1738,7 +1906,19 @@
     "intro_desc": "វគ្គវីដេអូឥតគិតថ្លៃ រៀនអានអក្សរកូរ៉េពីសូន្យ។",
     "ep_vowels": "ស្រៈមូលដ្ឋាន",
     "next_ep": "សូមរង់ចាំភាគបន្ទាប់!",
-    "ep_consonants": "ព្យញ្ជនៈមូលដ្ឋាន"
+    "ep_consonants": "ព្យញ្ជនៈមូលដ្ឋាន",
+    "app_title": "បន្ថែម EPIC21 ទៅអេក្រង់ដើម",
+    "app_lede": "បើកសៀវភៅសិក្សាដោយចុចតែម្ដង ដូចកម្មវិធី។ ឥតគិតថ្លៃ មិនចាំបាច់ចុះឈ្មោះ។",
+    "app_btn": "បន្ថែមទៅអេក្រង់ដើម",
+    "ios1": "នៅក្នុង Safari ចុចប៊ូតុងចែករំលែក {share}។ បើមើលមិនឃើញ សូមចុច ··· ជាមុនសិន។",
+    "ios2": "អូសចុះក្រោម ហើយចុច “Add to Home Screen”។",
+    "ios3": "ចុច “Add” នៅខាងលើ។",
+    "menu": "បើកម៉ឺនុយកម្មវិធីរុករក ⋮ ហើយចុច “បន្ថែមទៅអេក្រង់ដើម” ឬ “ដំឡើងកម្មវិធី”។",
+    "inapp": "តំណនេះបើកនៅក្នុងកម្មវិធីផ្សេង ដូច្នេះមិនអាចបន្ថែមទៅអេក្រង់ដើមបានទេ។ សូមបើកវាក្នុងកម្មវិធីរុករករបស់ទូរស័ព្ទជាមុនសិន។",
+    "inapp_btn": "បើកក្នុងកម្មវិធីរុករក",
+    "inapp_ios": "ចុច ··· ឬរូបចែករំលែកនៅជ្រុងអេក្រង់ ហើយជ្រើស “Open in Safari”។ ឬចម្លងតំណ ហើយបិទភ្ជាប់ក្នុង Safari។",
+    "app_done": "រួចរាល់! អ្នកអាចបើក EPIC21 ពីអេក្រង់ដើមបានគ្រប់ពេល។",
+    "copylink": "ចម្លងតំណ"
    }
   },
   "my": {
@@ -1847,7 +2027,19 @@
     "intro_desc": "ကိုရီးယား စာလုံးများကို အစမှ ဖတ်တတ်အောင် သင်ပေးသော အခမဲ့ ဗီဒီယို သင်တန်း။",
     "ep_vowels": "အခြေခံ သရ",
     "next_ep": "နောက်အပိုင်းကို မျှော်လင့်ထားပါ!",
-    "ep_consonants": "အခြေခံ ဗျည်း"
+    "ep_consonants": "အခြေခံ ဗျည်း",
+    "app_title": "EPIC21 ကို ပင်မစခရင်တွင် ထည့်ပါ",
+    "app_lede": "အက်ပ်လိုပဲ တစ်ချက်နှိပ်ရုံဖြင့် ဖတ်စာအုပ်များကို ဖွင့်နိုင်သည်။ အခမဲ့ဖြစ်ပြီး စာရင်းသွင်းရန် မလိုပါ။",
+    "app_btn": "ပင်မစခရင်တွင် ထည့်မည်",
+    "ios1": "Safari တွင် မျှဝေရန်ခလုတ် {share} ကို နှိပ်ပါ။ မမြင်ရပါက ··· ကို အရင်နှိပ်ပါ။",
+    "ios2": "အောက်သို့ဆွဲပြီး “Add to Home Screen” ကို နှိပ်ပါ။",
+    "ios3": "အပေါ်ရှိ “Add” ကို နှိပ်ပါ။",
+    "menu": "ဘရောက်ဇာမီနူး ⋮ ကိုဖွင့်ပြီး “ပင်မစခရင်သို့ ထည့်ရန်” သို့မဟုတ် “အက်ပ် ထည့်သွင်းရန်” ကို နှိပ်ပါ။",
+    "inapp": "ဤလင့်ခ်ကို အခြားအက်ပ်အတွင်း ဖွင့်ထားသဖြင့် ပင်မစခရင်တွင် ထည့်၍မရပါ။ ဖုန်း၏ ဘရောက်ဇာဖြင့် အရင်ဖွင့်ပါ။",
+    "inapp_btn": "ဘရောက်ဇာဖြင့် ဖွင့်မည်",
+    "inapp_ios": "စခရင်ထောင့်ရှိ ··· သို့မဟုတ် မျှဝေရန်အိုင်ကွန်ကို နှိပ်ပြီး “Open in Safari” ကို ရွေးပါ။ သို့မဟုတ် လင့်ခ်ကို ကူးယူပြီး Safari တွင် ထည့်ပါ။",
+    "app_done": "ပြီးပါပြီ! EPIC21 ကို ပင်မစခရင်မှ အချိန်မရွေး ဖွင့်နိုင်ပါပြီ။",
+    "copylink": "လင့်ခ် ကူးယူမည်"
    }
   },
   "ne": {
@@ -1956,7 +2148,19 @@
     "intro_desc": "कोरियन अक्षर सुरुदेखि पढ्न सिकाउने निःशुल्क भिडियो कोर्स।",
     "ep_vowels": "आधारभूत स्वर",
     "next_ep": "अर्को भागको प्रतीक्षा गर्नुहोस्!",
-    "ep_consonants": "आधारभूत व्यञ्जन"
+    "ep_consonants": "आधारभूत व्यञ्जन",
+    "app_title": "EPIC21 लाई होम स्क्रिनमा थप्नुहोस्",
+    "app_lede": "एपजस्तै एक पटक थिचेर पाठ्यपुस्तक खोल्न सकिन्छ। निःशुल्क, दर्ता आवश्यक छैन।",
+    "app_btn": "होम स्क्रिनमा थप्नुहोस्",
+    "ios1": "Safari मा सेयर बटन {share} थिच्नुहोस्। देखिएन भने पहिले ··· थिच्नुहोस्।",
+    "ios2": "तल स्क्रोल गरेर “Add to Home Screen” थिच्नुहोस्।",
+    "ios3": "माथिको “Add” थिच्नुहोस्।",
+    "menu": "ब्राउजरको मेनु ⋮ खोलेर “होम स्क्रिनमा थप्नुहोस्” वा “एप इन्स्टल गर्नुहोस्” थिच्नुहोस्।",
+    "inapp": "यो लिङ्क अर्को एपभित्र खुलेकाले होम स्क्रिनमा थप्न मिल्दैन। पहिले फोनको ब्राउजरमा खोल्नुहोस्।",
+    "inapp_btn": "ब्राउजरमा खोल्नुहोस्",
+    "inapp_ios": "स्क्रिनको कुनामा रहेको ··· वा सेयर आइकन थिचेर “Open in Safari” छान्नुहोस्। वा लिङ्क कपी गरेर Safari मा पेस्ट गर्नुहोस्।",
+    "app_done": "भयो! अब जुनसुकै बेला होम स्क्रिनबाट EPIC21 खोल्नुहोस्।",
+    "copylink": "लिङ्क कपी गर्नुहोस्"
    }
   },
   "bn": {
@@ -2065,7 +2269,19 @@
     "intro_desc": "শুরু থেকে কোরিয়ান অক্ষর পড়া শেখার বিনামূল্যের ভিডিও কোর্স।",
     "ep_vowels": "মৌলিক স্বরবর্ণ",
     "next_ep": "পরের পর্বের অপেক্ষায় থাকুন!",
-    "ep_consonants": "মৌলিক ব্যঞ্জনবর্ণ"
+    "ep_consonants": "মৌলিক ব্যঞ্জনবর্ণ",
+    "app_title": "EPIC21 হোম স্ক্রিনে যোগ করুন",
+    "app_lede": "অ্যাপের মতো এক ট্যাপেই পাঠ্যবই খুলবে। বিনামূল্যে, নিবন্ধন লাগবে না।",
+    "app_btn": "হোম স্ক্রিনে যোগ করুন",
+    "ios1": "Safari-তে শেয়ার বোতাম {share} ট্যাপ করুন। না দেখলে আগে ··· ট্যাপ করুন।",
+    "ios2": "নিচে স্ক্রল করে “Add to Home Screen” ট্যাপ করুন।",
+    "ios3": "উপরের “Add” ট্যাপ করুন।",
+    "menu": "ব্রাউজারের মেনু ⋮ খুলে “হোম স্ক্রিনে যোগ করুন” বা “অ্যাপ ইনস্টল করুন” ট্যাপ করুন।",
+    "inapp": "লিংকটি অন্য একটি অ্যাপের ভেতরে খুলেছে, তাই হোম স্ক্রিনে যোগ করা যাচ্ছে না। আগে ফোনের ব্রাউজারে খুলুন।",
+    "inapp_btn": "ব্রাউজারে খুলুন",
+    "inapp_ios": "স্ক্রিনের কোণে থাকা ··· বা শেয়ার আইকন ট্যাপ করে “Open in Safari” বেছে নিন। অথবা লিংক কপি করে Safari-তে পেস্ট করুন।",
+    "app_done": "হয়ে গেছে! এখন যেকোনো সময় হোম স্ক্রিন থেকে EPIC21 খুলুন।",
+    "copylink": "লিংক কপি করুন"
    }
   },
   "si": {
@@ -2174,7 +2390,19 @@
     "intro_desc": "මුල සිටම කොරියානු අකුරු කියවීමට ඉගැන්වෙන නොමිලේ වීඩියෝ පාඨමාලාව.",
     "ep_vowels": "මූලික ස්වර",
     "next_ep": "ඊළඟ කොටස බලාපොරොත්තුවෙන් සිටින්න!",
-    "ep_consonants": "මූලික ව්‍යඤ්ජන"
+    "ep_consonants": "මූලික ව්‍යඤ්ජන",
+    "app_title": "EPIC21 මුල් තිරයට එක් කරන්න",
+    "app_lede": "යෙදුමක් වගේ එක් තට්ටුවකින් පෙළපොත් විවෘත කළ හැක. නොමිලේ, ලියාපදිංචි වීමක් අවශ්‍ය නැත.",
+    "app_btn": "මුල් තිරයට එක් කරන්න",
+    "ios1": "Safari හි බෙදාගන්න බොත්තම {share} තට්ටු කරන්න. එය නොපෙනේ නම්, පළමුව ··· තට්ටු කරන්න.",
+    "ios2": "පහළට අනුචලනය කර “Add to Home Screen” තට්ටු කරන්න.",
+    "ios3": "ඉහළ ඇති “Add” තට්ටු කරන්න.",
+    "menu": "බ්‍රවුසර මෙනුව ⋮ විවෘත කර “මුල් තිරයට එක් කරන්න” හෝ “යෙදුම ස්ථාපනය කරන්න” තට්ටු කරන්න.",
+    "inapp": "මෙම සබැඳිය වෙනත් යෙදුමක් තුළ විවෘත වී ඇති නිසා මුල් තිරයට එක් කළ නොහැක. පළමුව දුරකථනයේ බ්‍රවුසරයෙන් විවෘත කරන්න.",
+    "inapp_btn": "බ්‍රවුසරයෙන් විවෘත කරන්න",
+    "inapp_ios": "තිරයේ කෙළවරේ ඇති ··· හෝ බෙදාගැනීමේ නිරූපකය තට්ටු කර “Open in Safari” තෝරන්න. නැතහොත් සබැඳිය පිටපත් කර Safari හි අලවන්න.",
+    "app_done": "හරි! දැන් ඕනෑම වේලාවක මුල් තිරයෙන් EPIC21 විවෘත කරන්න.",
+    "copylink": "සබැඳිය පිටපත් කරන්න"
    }
   },
   "ar": {
@@ -2283,7 +2511,19 @@
     "intro_desc": "دورة فيديو مجانية لتعلّم قراءة الحروف الكورية من الصفر.",
     "ep_vowels": "الحروف المتحركة الأساسية",
     "next_ep": "ترقّبوا الحلقة القادمة!",
-    "ep_consonants": "الحروف الساكنة الأساسية"
+    "ep_consonants": "الحروف الساكنة الأساسية",
+    "app_title": "أضف EPIC21 إلى الشاشة الرئيسية",
+    "app_lede": "ستفتح الكتب بلمسة واحدة مثل التطبيق. مجانًا وبدون تسجيل.",
+    "app_btn": "إضافة إلى الشاشة الرئيسية",
+    "ios1": "في Safari، اضغط على زر المشاركة {share}. إذا لم تجده، فاضغط أولًا على ···.",
+    "ios2": "مرّر إلى الأسفل واضغط على «إضافة إلى الشاشة الرئيسية».",
+    "ios3": "اضغط على «إضافة» في الأعلى.",
+    "menu": "افتح قائمة المتصفح ⋮ واضغط على «إضافة إلى الشاشة الرئيسية» أو «تثبيت التطبيق».",
+    "inapp": "فُتح هذا الرابط داخل تطبيق آخر لا يمكنه إضافة الصفحات إلى الشاشة الرئيسية. افتحه أولًا في متصفح الهاتف.",
+    "inapp_btn": "فتح في المتصفح",
+    "inapp_ios": "اضغط على ··· أو أيقونة المشاركة في زاوية الشاشة واختر «فتح في Safari». أو انسخ الرابط والصقه في Safari.",
+    "app_done": "تم! افتح EPIC21 من الشاشة الرئيسية متى شئت.",
+    "copylink": "نسخ الرابط"
    }
   },
   "ur": {
@@ -2392,7 +2632,19 @@
     "intro_desc": "شروع سے کورین حروف پڑھنا سیکھنے کا مفت ویڈیو کورس۔",
     "ep_vowels": "بنیادی حروفِ علت",
     "next_ep": "اگلی قسط کا انتظار کریں!",
-    "ep_consonants": "بنیادی حروفِ صحیح"
+    "ep_consonants": "بنیادی حروفِ صحیح",
+    "app_title": "EPIC21 کو ہوم اسکرین پر شامل کریں",
+    "app_lede": "ایپ کی طرح ایک ٹچ میں کتابیں کھولیں۔ مفت، کوئی رجسٹریشن نہیں۔",
+    "app_btn": "ہوم اسکرین پر شامل کریں",
+    "ios1": "Safari میں شیئر بٹن {share} دبائیں۔ اگر نظر نہ آئے تو پہلے ··· دبائیں۔",
+    "ios2": "نیچے اسکرول کریں اور “Add to Home Screen” دبائیں۔",
+    "ios3": "اوپر “Add” دبائیں۔",
+    "menu": "براؤزر کا مینو ⋮ کھولیں اور “ہوم اسکرین پر شامل کریں” یا “ایپ انسٹال کریں” دبائیں۔",
+    "inapp": "یہ لنک کسی دوسری ایپ کے اندر کھلا ہے، اس لیے اسے ہوم اسکرین پر شامل نہیں کیا جا سکتا۔ پہلے اسے فون کے براؤزر میں کھولیں۔",
+    "inapp_btn": "براؤزر میں کھولیں",
+    "inapp_ios": "اسکرین کے کونے میں ··· یا شیئر آئیکن دبائیں اور “Open in Safari” منتخب کریں۔ یا لنک کاپی کر کے Safari میں پیسٹ کریں۔",
+    "app_done": "ہو گیا! اب جب چاہیں ہوم اسکرین سے EPIC21 کھولیں۔",
+    "copylink": "لنک کاپی کریں"
    }
   }
  },

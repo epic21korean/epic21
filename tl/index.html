@@ -323,6 +323,21 @@ dialog.ldlg.guide{max-width:min(520px,calc(100vw - 24px))}
 dialog.ldlg.qrdlg{max-width:min(380px,calc(100vw - 24px));text-align:center}
 .qrdlg img{display:block;margin:4px auto 10px;width:min(280px,70vw);height:auto;background:#fff;border-radius:8px;padding:6px}
 .qrurl{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin-top:4px}
+/* 홈 화면 추가 안내 */
+dialog.ldlg.appdlg{max-width:min(440px,calc(100vw - 24px))}
+.appdlg .ldlg-head{gap:10px}.appdlg .ldlg-head h2{min-width:0;overflow-wrap:anywhere;line-height:1.4}.appdlg .ldlg-head .ibtn{flex:none}
+.appid{display:flex;align-items:center;gap:14px;margin:2px 0 12px}
+.appid img{width:60px;height:60px;border-radius:14px;flex:none;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+.appid p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
+.appway[hidden]{display:none}
+.appway p{font-size:16px;line-height:1.6;margin:0 0 12px}
+.appsteps{list-style:none;padding:0;margin:4px 0 0;counter-reset:s}
+.appsteps li{counter-increment:s;position:relative;padding-inline-start:40px;min-height:30px;font-size:16px;line-height:1.6;margin-bottom:12px}
+.appsteps li::before{content:counter(s);position:absolute;inset-inline-start:0;top:0;width:28px;height:28px;border-radius:50%;
+  background:var(--band);color:var(--band-ink);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.shareico{display:inline-block;width:1.25em;height:1.25em;vertical-align:-.25em;margin:0 2px;color:#0A84FF}
+.appway .gans{margin-top:4px}
+.appdone{font-size:18px;font-weight:700;line-height:1.5}
 /* 공부 끝 */
 .done{position:absolute;z-index:2;inset-inline-start:6px;bottom:6px;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   background:rgba(15,26,54,.55);color:#fff}
@@ -1627,6 +1642,20 @@ footer a{color:var(--muted)}
   <p class="qrurl" dir="ltr">https://epic21korean.github.io/epic21/tl/</p>
 </dialog>
 
+<dialog class="ldlg appdlg" id="appDlg" aria-labelledby="appT">
+  <div class="ldlg-head"><h2 id="appT">Idagdag ang EPIC21 sa home screen</h2><button class="ibtn" type="button" data-close aria-label="Isara">✕</button></div>
+  <div class="appid"><img src="../icons/icon-192.png" alt="" width="60" height="60"><p>Mabubuksan mo ang mga aklat sa isang tap, parang app. Libre, walang sign-up.</p></div>
+  <div class="appway" data-way="btn" hidden><div class="gans"><button type="button" class="gbtn gmain" id="appGo">Idagdag sa home screen</button></div></div>
+  <div class="appway" data-way="menu" hidden><p>Buksan ang menu ng browser ⋮ at i-tap ang “Add to Home screen” o “Install app”.</p></div>
+  <ol class="appway appsteps" data-way="ios" hidden><li>Sa Safari, i-tap ang Share button <svg class="shareico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4"/><path d="M8 11H6a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-2"/></svg>. Kung hindi mo makita, i-tap muna ang ···.</li><li>Mag-scroll pababa at i-tap ang “Add to Home Screen”.</li><li>I-tap ang “Add” sa itaas.</li></ol>
+  <div class="appway" data-way="inapp" hidden>
+    <p>Nabuksan ang link na ito sa loob ng ibang app, kaya hindi ito maidaragdag sa home screen. Buksan muna ito sa browser ng iyong telepono.</p>
+    <p class="appios">I-tap ang ··· o ang share icon sa sulok ng screen at piliin ang “Open in Safari”. O kopyahin ang link at i-paste sa Safari.</p>
+    <div class="gans"><button type="button" class="gbtn gmain" id="appOut">Buksan sa browser</button><button type="button" class="gbtn" id="appCopy">Kopyahin ang link</button></div>
+  </div>
+  <div class="appway" data-way="done" hidden><p class="appdone">Tapos na! Buksan ang EPIC21 mula sa home screen anumang oras.</p></div>
+</dialog>
+
 <div class="subsheet" id="subSheet" role="dialog" aria-labelledby="subT" hidden>
   <img src="../icons/icon-192.png" alt="" width="52" height="52">
   <div class="subtxt"><b id="subT">Binubuksan ang PDF mo sa bagong tab</b><span>Mag-subscribe sa EPIC21 sa YouTube para makakuha ng mga bagong libreng aklat at video.</span></div>
@@ -1774,10 +1803,46 @@ footer a{color:var(--muted)}
   });
   /* 홈 화면 앱 */
   if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register("../sw.js").catch(function(){})})}
-  var deferred=null, ib=$('#installBtn');
-  window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;ib.hidden=false});
-  ib.addEventListener('click',function(){if(!deferred)return;deferred.prompt();deferred.userChoice.finally(function(){deferred=null;ib.hidden=true})});
-  window.addEventListener('appinstalled',function(){ib.hidden=true});
+  /* 홈 화면 추가 안내 — 주소 끝에 ?app 을 붙여 보내면 안내 창이 바로 열린다 (예: …/epic21/vi/?app) */
+  var deferred=null, ib=$('#installBtn'), ad=$('#appDlg'), way='';
+  var ua=navigator.userAgent||'';
+  var isIOS=/iPhone|iPad|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  var isAndroid=/Android/i.test(ua), isKakao=/KAKAOTALK/i.test(ua), isLine=/ Line\//.test(ua);
+  var inApp=isKakao||isLine||/FBAN|FBAV|FB_IAB|FBIOS|Instagram|NAVER\(|Zalo|Snapchat|musical_ly|BytedanceWebview|Twitter|DaumApps|Telegram|; wv\)/i.test(ua)
+    ||(isIOS&&!/Safari\//.test(ua));
+  var standalone=function(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true};
+  var qs=new URLSearchParams(location.search), askApp=qs.has('app');
+  var appUrl=location.origin+location.pathname+'?app'+location.hash;
+  if(askApp){qs.delete('app');var rest=qs.toString();try{history.replaceState(history.state,'',location.pathname+(rest?'?'+rest:'')+location.hash)}catch(e){}}
+  function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':'menu'}
+  function showWay(w){way=w;$$('.appway',ad).forEach(function(x){x.hidden=x.dataset.way!==w});
+    $('.appios',ad).hidden=!isIOS; $('#appOut').hidden=isIOS&&!isKakao&&!isLine}
+  function openApp(src){showWay(pickWay());if(!ad.open)ad.showModal();track('app/'+PAGE+'/'+way,'홈 화면 안내 ('+src+')')}
+  function syncBtn(){ib.hidden=standalone()||!(deferred||isIOS||inApp)}
+  syncBtn();
+  window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;syncBtn();if(ad.open&&way==='menu')showWay('btn')});
+  function prompt2(){if(!deferred)return;deferred.prompt();deferred.userChoice.then(function(c){
+      track('app/'+PAGE+'/'+(c&&c.outcome==='accepted'?'ok':'no'),'홈 화면 설치 선택');
+      if(c&&c.outcome==='accepted'){showWay('done');if(!ad.open)ad.showModal()}
+    }).finally(function(){deferred=null;syncBtn()})}
+  ib.addEventListener('click',function(){if(deferred&&!inApp){prompt2();return}openApp('버튼')});
+  $('#appGo').addEventListener('click',prompt2);
+  $('#appOut').addEventListener('click',function(){
+    track('app/'+PAGE+'/out','다른 브라우저로 열기');
+    if(isKakao){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(appUrl);return}
+    if(isLine){var u=new URL(appUrl);u.searchParams.set('openExternalBrowser','1');location.href=u.toString();return}
+    if(isAndroid){var p=new URL(appUrl);location.href='intent://'+p.host+p.pathname+p.search+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(appUrl)+';end';return}
+    location.href=appUrl;
+  });
+  $('#appCopy').addEventListener('click',function(){
+    if(navigator.clipboard){navigator.clipboard.writeText(appUrl).then(function(){toast(UI.copied)},function(){prompt('',appUrl)})}else{prompt('',appUrl)}
+  });
+  window.addEventListener('appinstalled',function(){deferred=null;syncBtn();if(ad.open)showWay('done')});
+  if(askApp&&!standalone()){
+    /* 안드로이드 크롬은 설치 신호가 조금 늦게 온다 — 잠깐 기다렸다 연다 */
+    if(isAndroid&&!inApp&&!deferred){var waited=0,iv=setInterval(function(){waited+=250;if(deferred||waited>=2000){clearInterval(iv);openApp('링크')}},250)}
+    else openApp('링크');
+  }
   var NOW=Date.now(), DAY=864e5;
   /* 새 교재 (30일 이내) */
   function paintNew(){

@@ -60,3 +60,13 @@ git add -A && git commit -m "hub v2" && git push
 - 공부 끝 체크: 표지 왼쪽 아래 ✓, 층 머리에 진도 표시(학습자 휴대폰에만 저장).
 - QR: 위쪽 QR 버튼. `qr/<언어>.svg` 는 segno 가 있으면 build 때 새로 만든다(`pip install segno`), 없으면 있던 파일을 그대로 쓴다.
 - 통계 행사 이름: pdf/교재/언어, video/교재, subscribe/언어, guide/결과, done/교재, qr/언어.
+
+## 홈 화면 추가 안내 링크
+- 주소 끝에 `?app` 을 붙여 보내면, 받은 사람의 휴대폰에 맞는 "홈 화면에 추가" 안내 창이 그 언어로 바로 열린다.
+  - 예: `https://epic21korean.github.io/epic21/vi/?app` (베트남어), `https://epic21korean.github.io/epic21/mn/?app` (몽골어)
+  - 특정 교재까지: `https://epic21korean.github.io/epic21/vi/?app#two-hands`
+- 안드로이드 크롬 → 설치 버튼 / 아이폰 사파리 → 공유 → 홈 화면에 추가 3단계 그림 안내 /
+  카카오톡·메신저·인스타그램·잘로 등 앱 안 브라우저 → "브라우저로 열기"(안드로이드는 크롬, 카카오톡은 외부 브라우저로 자동 전환) + 링크 복사
+- 위쪽 설치 버튼도 이제 아이폰과 앱 안 브라우저에서 보인다(누르면 같은 안내 창).
+- 문구는 `site.json` → `text.<코드>.ui` 의 `app_title … app_done`, `copylink`.
+- 방문 통계(GoatCounter)에 `app/<언어>/<방식>` 으로 안내 창 열림·설치 선택이 기록된다.

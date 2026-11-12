@@ -1,7 +1,7 @@
 /* EPIC21 교재 허브 — 서비스 워커
    페이지: 인터넷 먼저, 안 되면 저장본 / 표지·아이콘: 저장본 먼저
    (PDF는 archive.org 에 있어 저장하지 않는다) */
-const V = 'epic21-44c254b7';
+const V = 'epic21-77cfbfd5';
 self.addEventListener('install', () => self.skipWaiting());
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(ks => Promise.all(ks.filter(k => k !== V).map(k => caches.delete(k))))
