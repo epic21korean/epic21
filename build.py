@@ -181,11 +181,17 @@ def build_page(site, env, lang, is_root):
             sub, sub_lang = (tr, code) if tr else (en_line, 'en')
             vid = b.get('video') or ''
             q = b.get('ko_sub') or b['ko'].split('·')[-1].strip()
-            video_url = (f"https://www.youtube.com/watch?v={vid}" if vid
-                         else site['youtube'].rstrip('/') + '/search?query=' + quote(q))
+            # 재생목록: 교재 덩어리의 "playlist" → 없으면 그 묶음(groups)의 "playlist"
+            plist = b.get('playlist') or next((g.get('playlist', '') for g in site['groups'] if g['key'] == b['group']), '')
+            if vid:
+                video_url = f"https://www.youtube.com/watch?v={vid}" + (f"&list={plist}" if plist else '')
+            elif plist:
+                video_url = f"https://www.youtube.com/playlist?list={plist}"
+            else:
+                video_url = site['youtube'].rstrip('/') + '/search?query=' + quote(q)
             search = ' '.join(x for x in [tr or '', b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
-            bk = dict(b, added=site.get('added', {}).get(b['id'], ''), sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
+            bk = dict(b, added=site.get('added', {}).get(b['id'], ''), sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_list=plist if vid else '', video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"

@@ -32,7 +32,8 @@
    "key": "poem"
   },
   {
-   "key": "ttg"
+   "key": "ttg",
+   "playlist": "PLbkrfZQvbu6o"
   }
  ],
  "langs": [
@@ -3485,7 +3486,8 @@
    "en": "Time Travel Guide 2056 · Series 4 (#31–#40)",
    "vol": 4,
    "ko_sub": "시리즈 4",
-   "en_sub": "#31–#40"
+   "en_sub": "#31–#40",
+   "video": "4TRgrjYLRnQ"
   }
  ],
  "files": {
