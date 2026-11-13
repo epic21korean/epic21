@@ -656,6 +656,8 @@ footer a{color:var(--muted)}
     <p class="appios" data-k="inapp_ios">{{ t.ui.inapp_ios }}</p>
     <div class="gans"><button type="button" class="gbtn gmain" id="appOut" data-k="inapp_btn">{{ t.ui.inapp_btn }}</button><button type="button" class="gbtn" id="appCopy" data-k="copylink">{{ t.ui.copylink }}</button></div>
   </div>
+  <div class="appway" data-way="mac" hidden><p data-k="pc_mac">{{ t.ui.pc_mac }}</p></div>
+  <div class="appway" data-way="other" hidden><p data-k="pc_other">{{ t.ui.pc_other }}</p><div class="gans"><button type="button" class="gbtn" id="appCopy2" data-k="copylink">{{ t.ui.copylink }}</button></div></div>
   <div class="appway" data-way="done" hidden><p class="appdone" data-k="app_done">{{ t.ui.app_done }}</p></div>
 </dialog>
 
@@ -816,19 +818,29 @@ footer a{color:var(--muted)}
   var standalone=function(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true};
   var qs=new URLSearchParams(location.search), askApp=qs.has('app'), appLang=qs.get('app')||'';
   var appUrl=location.origin+location.pathname+'?app'+(appLang?'='+encodeURIComponent(appLang):'')+location.hash;
+  var KO_PC={{ app_ko_pc|tojson }};
   /* ?app=ko — 교사용: 안내 창 문구만 한국어로 */
   if(appLang==='ko'&&PAGE!=='ko'){
     var KO={{ app_ko|tojson }}; ad.setAttribute('lang','ko'); ad.setAttribute('dir','ltr');
     $$('[data-k]',ad).forEach(function(el){var k=el.dataset.k;
       if(k==='ios1'){var sv=$('svg',el),p=KO.ios1.split('{share}');el.textContent=p[0];el.appendChild(sv);el.appendChild(document.createTextNode(p[1]||''));}
-      else el.textContent=KO[k];});
+      else if(KO[k]!=null)el.textContent=KO[k];});
+  }
+  /* 컴퓨터(데스크톱): 크롬·엣지는 설치 버튼, 맥 사파리는 파일 → Dock에 추가, 파이어폭스 등은 크롬·엣지로 열라고 안내 */
+  var isDesk=!isIOS&&!isAndroid&&!inApp&&!/Mobi|Tablet|Silk|KFAPWI/i.test(ua);
+  var isMacSafari=isDesk&&/Macintosh/.test(ua)&&/Safari\//.test(ua)&&!/Chrome|Chromium|Edg\/|OPR\/|Firefox\//.test(ua);
+  var isDeskOther=isDesk&&!isMacSafari&&!/Chrome|Chromium|Edg\//.test(ua);
+  if(isDesk){
+    var PC=(appLang==='ko'&&PAGE!=='ko')?KO_PC:{{ pc_ui|tojson }};
+    var PCMAP={app_title:'pc_title',app_lede:'pc_lede',app_btn:'pc_btn',menu:'pc_menu',app_done:'pc_done'};
+    $$('[data-k]',ad).forEach(function(el){var k=PCMAP[el.dataset.k];if(k&&PC[k])el.textContent=PC[k]});
   }
   if(askApp){qs.delete('app');var rest=qs.toString();try{history.replaceState(history.state,'',location.pathname+(rest?'?'+rest:'')+location.hash)}catch(e){}}
-  function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':'menu'}
+  function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':isMacSafari?'mac':isDeskOther?'other':'menu'}
   function showWay(w){way=w;$$('.appway',ad).forEach(function(x){x.hidden=x.dataset.way!==w});
     $('.appios',ad).hidden=!isIOS; $('#appOut').hidden=isIOS&&!isKakao&&!isLine}
   function openApp(src){showWay(pickWay());if(!ad.open)ad.showModal();track('app/'+PAGE+'/'+way,'홈 화면 안내 ('+src+')')}
-  function syncBtn(){ib.hidden=standalone()||!(deferred||isIOS||inApp)}
+  function syncBtn(){ib.hidden=standalone()||!(deferred||isIOS||inApp||isMacSafari)}
   syncBtn();
   window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;syncBtn();if(ad.open&&way==='menu')showWay('btn')});
   function prompt2(){if(!deferred)return;deferred.prompt();deferred.userChoice.then(function(c){
@@ -844,13 +856,14 @@ footer a{color:var(--muted)}
     if(isAndroid){var p=new URL(appUrl);location.href='intent://'+p.host+p.pathname+p.search+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(appUrl)+';end';return}
     location.href=appUrl;
   });
+  $('#appCopy2').addEventListener('click',function(){$('#appCopy').click()});
   $('#appCopy').addEventListener('click',function(){
     if(navigator.clipboard){navigator.clipboard.writeText(appUrl).then(function(){toast(UI.copied)},function(){prompt('',appUrl)})}else{prompt('',appUrl)}
   });
   window.addEventListener('appinstalled',function(){deferred=null;syncBtn();if(ad.open)showWay('done')});
   if(askApp&&!standalone()){
-    /* 안드로이드 크롬은 설치 신호가 조금 늦게 온다 — 잠깐 기다렸다 연다 */
-    if(isAndroid&&!inApp&&!deferred){var waited=0,iv=setInterval(function(){waited+=250;if(deferred||waited>=2000){clearInterval(iv);openApp('링크')}},250)}
+    /* 안드로이드·컴퓨터 크롬은 설치 신호가 조금 늦게 온다 — 잠깐 기다렸다 연다 */
+    if((isAndroid||isDesk&&!isMacSafari&&!isDeskOther)&&!inApp&&!deferred){var waited=0,iv=setInterval(function(){waited+=250;if(deferred||waited>=2000){clearInterval(iv);openApp('링크')}},250)}
     else openApp('링크');
   }
   var NOW=Date.now(), DAY=864e5;

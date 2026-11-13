@@ -274,7 +274,14 @@
     "copylink": "링크 복사",
     "ep_tense": "된소리",
     "ep_more_vowels": "나머지 모음",
-    "ep_batchim": "받침"
+    "ep_batchim": "받침",
+    "pc_title": "EPIC21을 컴퓨터에 설치하세요",
+    "pc_lede": "한 번 설치하면 바탕화면이나 작업 표시줄에서 바로 열려요. 무료이고 가입도 필요 없어요.",
+    "pc_btn": "컴퓨터에 설치",
+    "pc_menu": "주소창 오른쪽 끝의 설치 아이콘을 누르거나, 브라우저 메뉴(⋮ 또는 …)에서 ‘앱 설치’를 고르세요.",
+    "pc_mac": "화면 맨 위 메뉴 막대에서 ‘파일’ → ‘Dock에 추가’를 누르세요.",
+    "pc_other": "이 브라우저에서는 설치할 수 없어요. 크롬(Chrome)이나 엣지(Edge)에서 이 링크를 여세요.",
+    "pc_done": "완료! 이제 바탕화면·작업 표시줄·Dock에서 EPIC21을 바로 여세요."
    }
   },
   "en": {
@@ -352,7 +359,14 @@
     "copylink": "Copy link",
     "ep_tense": "Tense consonants",
     "ep_more_vowels": "More vowels",
-    "ep_batchim": "Final consonants (batchim)"
+    "ep_batchim": "Final consonants (batchim)",
+    "pc_title": "Install EPIC21 on your computer",
+    "pc_lede": "Install it once and open the textbooks straight from your desktop or taskbar. Free, no sign-up.",
+    "pc_btn": "Install on this computer",
+    "pc_menu": "Click the install icon at the right end of the address bar, or choose “Install app” in the browser menu (⋮ or …).",
+    "pc_mac": "In the menu bar at the top of the screen, choose File → Add to Dock.",
+    "pc_other": "This browser can’t install apps. Open this link in Chrome or Edge.",
+    "pc_done": "Done! Open EPIC21 from your desktop, taskbar or Dock anytime."
    }
   },
   "es": {
@@ -476,7 +490,14 @@
     "copylink": "Copiar enlace",
     "ep_tense": "Consonantes tensas",
     "ep_more_vowels": "Más vocales",
-    "ep_batchim": "Consonantes finales (batchim)"
+    "ep_batchim": "Consonantes finales (batchim)",
+    "pc_title": "Instala EPIC21 en tu computadora",
+    "pc_lede": "Instálalo una vez y abre los libros directamente desde el escritorio o la barra de tareas. Gratis y sin registro.",
+    "pc_btn": "Instalar en esta computadora",
+    "pc_menu": "Haz clic en el icono de instalación al final de la barra de direcciones o elige «Instalar aplicación» en el menú del navegador (⋮ o …).",
+    "pc_mac": "En la barra de menús de la parte superior, elige Archivo → Añadir al Dock.",
+    "pc_other": "Este navegador no puede instalar aplicaciones. Abre este enlace en Chrome o Edge.",
+    "pc_done": "¡Listo! Abre EPIC21 cuando quieras desde el escritorio, la barra de tareas o el Dock."
    }
   },
   "fr": {
@@ -600,7 +621,14 @@
     "copylink": "Copier le lien",
     "ep_tense": "Consonnes tendues",
     "ep_more_vowels": "Autres voyelles",
-    "ep_batchim": "Consonnes finales (batchim)"
+    "ep_batchim": "Consonnes finales (batchim)",
+    "pc_title": "Installez EPIC21 sur votre ordinateur",
+    "pc_lede": "Installez-le une fois et ouvrez les manuels directement depuis le bureau ou la barre des tâches. Gratuit, sans inscription.",
+    "pc_btn": "Installer sur cet ordinateur",
+    "pc_menu": "Cliquez sur l’icône d’installation au bout de la barre d’adresse, ou choisissez « Installer l’application » dans le menu du navigateur (⋮ ou …).",
+    "pc_mac": "Dans la barre des menus en haut de l’écran, choisissez Fichier → Ajouter au Dock.",
+    "pc_other": "Ce navigateur ne peut pas installer d’applications. Ouvrez ce lien dans Chrome ou Edge.",
+    "pc_done": "C’est fait ! Ouvrez EPIC21 quand vous voulez depuis le bureau, la barre des tâches ou le Dock."
    }
   },
   "pt": {
@@ -724,7 +752,14 @@
     "copylink": "Copiar link",
     "ep_tense": "Consoantes tensas",
     "ep_more_vowels": "Mais vogais",
-    "ep_batchim": "Consoantes finais (batchim)"
+    "ep_batchim": "Consoantes finais (batchim)",
+    "pc_title": "Instale o EPIC21 no seu computador",
+    "pc_lede": "Instale uma vez e abra os livros direto da área de trabalho ou da barra de tarefas. Grátis e sem cadastro.",
+    "pc_btn": "Instalar neste computador",
+    "pc_menu": "Clique no ícone de instalação no fim da barra de endereço ou escolha “Instalar app” no menu do navegador (⋮ ou …).",
+    "pc_mac": "Na barra de menus no topo da tela, escolha Arquivo → Adicionar ao Dock.",
+    "pc_other": "Este navegador não instala apps. Abra este link no Chrome ou no Edge.",
+    "pc_done": "Pronto! Abra o EPIC21 quando quiser pela área de trabalho, barra de tarefas ou Dock."
    }
   },
   "id": {
@@ -848,7 +883,14 @@
     "copylink": "Salin tautan",
     "ep_tense": "Konsonan tegang",
     "ep_more_vowels": "Vokal lainnya",
-    "ep_batchim": "Konsonan akhir (batchim)"
+    "ep_batchim": "Konsonan akhir (batchim)",
+    "pc_title": "Pasang EPIC21 di komputer Anda",
+    "pc_lede": "Pasang sekali, lalu buka buku langsung dari desktop atau taskbar. Gratis, tanpa daftar.",
+    "pc_btn": "Pasang di komputer ini",
+    "pc_menu": "Klik ikon pasang di ujung kanan bilah alamat, atau pilih “Instal aplikasi” di menu browser (⋮ atau …).",
+    "pc_mac": "Di bilah menu bagian atas layar, pilih Arsip (File) → Tambahkan ke Dock (Add to Dock).",
+    "pc_other": "Browser ini tidak bisa memasang aplikasi. Buka tautan ini di Chrome atau Edge.",
+    "pc_done": "Selesai! Buka EPIC21 kapan saja dari desktop, taskbar, atau Dock."
    }
   },
   "vi": {
@@ -972,7 +1014,14 @@
     "copylink": "Sao chép liên kết",
     "ep_tense": "Phụ âm căng",
     "ep_more_vowels": "Các nguyên âm còn lại",
-    "ep_batchim": "Phụ âm cuối (batchim)"
+    "ep_batchim": "Phụ âm cuối (batchim)",
+    "pc_title": "Cài EPIC21 lên máy tính",
+    "pc_lede": "Cài một lần là mở giáo trình ngay từ màn hình nền hoặc thanh tác vụ. Miễn phí, không cần đăng ký.",
+    "pc_btn": "Cài lên máy tính này",
+    "pc_menu": "Bấm biểu tượng cài đặt ở cuối thanh địa chỉ, hoặc chọn “Cài đặt ứng dụng” trong menu trình duyệt (⋮ hoặc …).",
+    "pc_mac": "Trên thanh menu ở đầu màn hình, chọn Tệp (File) → Thêm vào Dock (Add to Dock).",
+    "pc_other": "Trình duyệt này không cài được ứng dụng. Hãy mở liên kết này bằng Chrome hoặc Edge.",
+    "pc_done": "Xong! Giờ hãy mở EPIC21 ngay từ màn hình nền, thanh tác vụ hoặc Dock."
    }
   },
   "tl": {
@@ -1096,7 +1145,14 @@
     "copylink": "Kopyahin ang link",
     "ep_tense": "Mga katinig na mariin",
     "ep_more_vowels": "Iba pang mga patinig",
-    "ep_batchim": "Mga huling katinig (batchim)"
+    "ep_batchim": "Mga huling katinig (batchim)",
+    "pc_title": "I-install ang EPIC21 sa computer mo",
+    "pc_lede": "I-install nang isang beses at buksan ang mga aklat diretso mula sa desktop o taskbar. Libre, walang sign-up.",
+    "pc_btn": "I-install sa computer na ito",
+    "pc_menu": "I-click ang install icon sa dulo ng address bar, o piliin ang “Install app” sa menu ng browser (⋮ o …).",
+    "pc_mac": "Sa menu bar sa itaas ng screen, piliin ang File → Add to Dock.",
+    "pc_other": "Hindi makapag-install ng app ang browser na ito. Buksan ang link na ito sa Chrome o Edge.",
+    "pc_done": "Tapos na! Buksan ang EPIC21 anumang oras mula sa desktop, taskbar o Dock."
    }
   },
   "uz": {
@@ -1220,7 +1276,14 @@
     "copylink": "Havolani nusxalash",
     "ep_tense": "Taranglashgan undoshlar",
     "ep_more_vowels": "Qolgan unlilar",
-    "ep_batchim": "Oxirgi undoshlar (batchim)"
+    "ep_batchim": "Oxirgi undoshlar (batchim)",
+    "pc_title": "EPIC21 ni kompyuteringizga o‘rnating",
+    "pc_lede": "Bir marta o‘rnating — darsliklar ish stoli yoki vazifalar panelidan darhol ochiladi. Bepul, ro‘yxatdan o‘tish shart emas.",
+    "pc_btn": "Bu kompyuterga o‘rnatish",
+    "pc_menu": "Manzil satrining o‘ng chetidagi o‘rnatish belgisini bosing yoki brauzer menyusidan (⋮ yoki …) “Ilovani o‘rnatish”ni tanlang.",
+    "pc_mac": "Ekran tepasidagi menyu satrida File → Add to Dock ni tanlang.",
+    "pc_other": "Bu brauzer ilova o‘rnata olmaydi. Havolani Chrome yoki Edge’da oching.",
+    "pc_done": "Tayyor! Endi EPIC21 ni ish stoli, vazifalar paneli yoki Dock’dan oching."
    }
   },
   "ru": {
@@ -1344,7 +1407,14 @@
     "copylink": "Скопировать ссылку",
     "ep_tense": "Напряжённые согласные",
     "ep_more_vowels": "Остальные гласные",
-    "ep_batchim": "Конечные согласные (батчим)"
+    "ep_batchim": "Конечные согласные (батчим)",
+    "pc_title": "Установите EPIC21 на компьютер",
+    "pc_lede": "Установите один раз — и учебники будут открываться прямо с рабочего стола или панели задач. Бесплатно, без регистрации.",
+    "pc_btn": "Установить на этот компьютер",
+    "pc_menu": "Нажмите значок установки в правом конце адресной строки или выберите «Установить приложение» в меню браузера (⋮ или …).",
+    "pc_mac": "В строке меню вверху экрана выберите Файл → Добавить в Dock.",
+    "pc_other": "Этот браузер не умеет устанавливать приложения. Откройте ссылку в Chrome или Edge.",
+    "pc_done": "Готово! Открывайте EPIC21 с рабочего стола, панели задач или из Dock."
    }
   },
   "mn": {
@@ -1468,7 +1538,14 @@
     "copylink": "Холбоос хуулах",
     "ep_tense": "Чангалсан гийгүүлэгч",
     "ep_more_vowels": "Бусад эгшиг",
-    "ep_batchim": "Төгсгөлийн гийгүүлэгч (батчим)"
+    "ep_batchim": "Төгсгөлийн гийгүүлэгч (батчим)",
+    "pc_title": "EPIC21-ийг компьютертоо суулгаарай",
+    "pc_lede": "Нэг удаа суулгахад сурах бичгүүд ширээний дэлгэц эсвэл ажлын самбараас шууд нээгдэнэ. Үнэгүй, бүртгүүлэх шаардлагагүй.",
+    "pc_btn": "Энэ компьютерт суулгах",
+    "pc_menu": "Хаягийн мөрийн баруун захын суулгах дүрсийг дарах эсвэл хөтчийн цэснээс (⋮ эсвэл …) “Апп суулгах”-ыг сонгоорой.",
+    "pc_mac": "Дэлгэцийн дээд талын цэсний мөрөөс File → Add to Dock-ийг сонгоорой.",
+    "pc_other": "Энэ хөтөч апп суулгаж чадахгүй. Холбоосыг Chrome эсвэл Edge-ээр нээгээрэй.",
+    "pc_done": "Боллоо! EPIC21-ийг ширээний дэлгэц, ажлын самбар эсвэл Dock-оос хүссэн үедээ нээгээрэй."
    }
   },
   "ja": {
@@ -1592,7 +1669,14 @@
     "copylink": "リンクをコピー",
     "ep_tense": "濃音",
     "ep_more_vowels": "残りの母音",
-    "ep_batchim": "パッチム（終声）"
+    "ep_batchim": "パッチム（終声）",
+    "pc_title": "EPIC21をパソコンにインストール",
+    "pc_lede": "一度インストールすれば、デスクトップやタスクバーから教材をすぐに開けます。無料・登録不要です。",
+    "pc_btn": "このパソコンにインストール",
+    "pc_menu": "アドレスバーの右端にあるインストールのアイコンを押すか、ブラウザのメニュー（⋮ または …）で「アプリをインストール」を選んでください。",
+    "pc_mac": "画面上部のメニューバーで「ファイル」→「Dockに追加」を選んでください。",
+    "pc_other": "このブラウザではインストールできません。ChromeかEdgeでこのリンクを開いてください。",
+    "pc_done": "完了！デスクトップ、タスクバー、DockからいつでもEPIC21を開けます。"
    }
   },
   "zh-Hans": {
@@ -1716,7 +1800,14 @@
     "copylink": "复制链接",
     "ep_tense": "紧音",
     "ep_more_vowels": "其余元音",
-    "ep_batchim": "收音（韵尾）"
+    "ep_batchim": "收音（韵尾）",
+    "pc_title": "把 EPIC21 安装到电脑上",
+    "pc_lede": "安装一次，就能从桌面或任务栏直接打开教材。免费，无需注册。",
+    "pc_btn": "安装到这台电脑",
+    "pc_menu": "点击地址栏最右侧的安装图标，或在浏览器菜单（⋮ 或 …）中选择“安装应用”。",
+    "pc_mac": "在屏幕顶部的菜单栏中选择“文件”→“添加到程序坞”。",
+    "pc_other": "此浏览器无法安装应用。请用 Chrome 或 Edge 打开此链接。",
+    "pc_done": "完成！现在可以随时从桌面、任务栏或程序坞打开 EPIC21。"
    }
   },
   "th": {
@@ -1840,7 +1931,14 @@
     "copylink": "คัดลอกลิงก์",
     "ep_tense": "พยัญชนะเสียงเกร็ง",
     "ep_more_vowels": "สระที่เหลือ",
-    "ep_batchim": "ตัวสะกด (บัดชิม)"
+    "ep_batchim": "ตัวสะกด (บัดชิม)",
+    "pc_title": "ติดตั้ง EPIC21 บนคอมพิวเตอร์ของคุณ",
+    "pc_lede": "ติดตั้งครั้งเดียว แล้วเปิดตำราได้ทันทีจากเดสก์ท็อปหรือแถบงาน ฟรี ไม่ต้องสมัคร",
+    "pc_btn": "ติดตั้งบนคอมพิวเตอร์เครื่องนี้",
+    "pc_menu": "คลิกไอคอนติดตั้งที่ปลายขวาของแถบที่อยู่ หรือเลือก “ติดตั้งแอป” ในเมนูเบราว์เซอร์ (⋮ หรือ …)",
+    "pc_mac": "ในแถบเมนูด้านบนของหน้าจอ เลือก ไฟล์ (File) → เพิ่มไปยัง Dock (Add to Dock)",
+    "pc_other": "เบราว์เซอร์นี้ติดตั้งแอปไม่ได้ โปรดเปิดลิงก์นี้ใน Chrome หรือ Edge",
+    "pc_done": "เสร็จแล้ว! เปิด EPIC21 ได้ทุกเมื่อจากเดสก์ท็อป แถบงาน หรือ Dock"
    }
   },
   "km": {
@@ -1964,7 +2062,14 @@
     "copylink": "ចម្លងតំណ",
     "ep_tense": "ព្យញ្ជនៈសំឡេងតឹង",
     "ep_more_vowels": "ស្រៈដែលនៅសល់",
-    "ep_batchim": "ព្យញ្ជនៈចុងក្រោយ (បាត់ឈីម)"
+    "ep_batchim": "ព្យញ្ជនៈចុងក្រោយ (បាត់ឈីម)",
+    "pc_title": "ដំឡើង EPIC21 នៅលើកុំព្យូទ័ររបស់អ្នក",
+    "pc_lede": "ដំឡើងតែម្តង ហើយបើកសៀវភៅបានភ្លាមៗពីផ្ទៃតុ ឬរបារភារកិច្ច។ ឥតគិតថ្លៃ មិនចាំបាច់ចុះឈ្មោះ។",
+    "pc_btn": "ដំឡើងលើកុំព្យូទ័រនេះ",
+    "pc_menu": "ចុចរូបតំណាងដំឡើងនៅចុងខាងស្តាំនៃរបារអាសយដ្ឋាន ឬជ្រើស “Install app” ក្នុងម៉ឺនុយកម្មវិធីរុករក (⋮ ឬ …)។",
+    "pc_mac": "នៅរបារម៉ឺនុយខាងលើអេក្រង់ ជ្រើស File → Add to Dock។",
+    "pc_other": "កម្មវិធីរុករកនេះមិនអាចដំឡើងកម្មវិធីបានទេ។ សូមបើកតំណនេះក្នុង Chrome ឬ Edge។",
+    "pc_done": "រួចរាល់! ឥឡូវបើក EPIC21 ពីផ្ទៃតុ របារភារកិច្ច ឬ Dock បានគ្រប់ពេល។"
    }
   },
   "my": {
@@ -2088,7 +2193,14 @@
     "copylink": "လင့်ခ် ကူးယူမည်",
     "ep_tense": "အသံတင်း ဗျည်း",
     "ep_more_vowels": "ကျန်ရှိသော သရများ",
-    "ep_batchim": "အသတ် ဗျည်း (ပတ်ချင်မ်)"
+    "ep_batchim": "အသတ် ဗျည်း (ပတ်ချင်မ်)",
+    "pc_title": "EPIC21 ကို သင့်ကွန်ပျူတာတွင် ထည့်သွင်းပါ",
+    "pc_lede": "တစ်ကြိမ်ထည့်သွင်းထားလျှင် Desktop သို့မဟုတ် Taskbar မှ စာအုပ်များကို ချက်ချင်းဖွင့်နိုင်သည်။ အခမဲ့ဖြစ်ပြီး အကောင့်ဖွင့်ရန် မလိုပါ။",
+    "pc_btn": "ဤကွန်ပျူတာတွင် ထည့်သွင်းရန်",
+    "pc_menu": "လိပ်စာဘား၏ ညာဘက်အစွန်ရှိ install အိုင်ကွန်ကို နှိပ်ပါ၊ သို့မဟုတ် browser menu (⋮ သို့မဟုတ် …) တွင် “Install app” ကို ရွေးပါ။",
+    "pc_mac": "မျက်နှာပြင်ထိပ်ရှိ menu bar တွင် File → Add to Dock ကို ရွေးပါ။",
+    "pc_other": "ဤ browser သည် app ထည့်သွင်း၍ မရပါ။ ဤလင့်ခ်ကို Chrome သို့မဟုတ် Edge တွင် ဖွင့်ပါ။",
+    "pc_done": "ပြီးပါပြီ! EPIC21 ကို Desktop၊ Taskbar သို့မဟုတ် Dock မှ အချိန်မရွေး ဖွင့်ပါ။"
    }
   },
   "ne": {
@@ -2212,7 +2324,14 @@
     "copylink": "लिङ्क कपी गर्नुहोस्",
     "ep_tense": "कडा व्यञ्जन",
     "ep_more_vowels": "बाँकी स्वर",
-    "ep_batchim": "अन्तिम व्यञ्जन (बाच्छिम)"
+    "ep_batchim": "अन्तिम व्यञ्जन (बाच्छिम)",
+    "pc_title": "EPIC21 आफ्नो कम्प्युटरमा इन्स्टल गर्नुहोस्",
+    "pc_lede": "एक पटक इन्स्टल गरेपछि पुस्तकहरू डेस्कटप वा टास्कबारबाट सिधै खुल्छन्। निःशुल्क, साइन-अप चाहिँदैन।",
+    "pc_btn": "यो कम्प्युटरमा इन्स्टल गर्नुहोस्",
+    "pc_menu": "ठेगाना पट्टीको दायाँ छेउको इन्स्टल आइकन थिच्नुहोस्, वा ब्राउजर मेनु (⋮ वा …) मा “Install app” छान्नुहोस्।",
+    "pc_mac": "स्क्रिनको माथिको मेनु पट्टीमा File → Add to Dock छान्नुहोस्।",
+    "pc_other": "यो ब्राउजरले एप इन्स्टल गर्न सक्दैन। यो लिङ्क Chrome वा Edge मा खोल्नुहोस्।",
+    "pc_done": "भयो! अब EPIC21 डेस्कटप, टास्कबार वा Dock बाट जुनसुकै बेला खोल्नुहोस्।"
    }
   },
   "bn": {
@@ -2336,7 +2455,14 @@
     "copylink": "লিংক কপি করুন",
     "ep_tense": "কঠিন ব্যঞ্জনধ্বনি",
     "ep_more_vowels": "বাকি স্বরবর্ণ",
-    "ep_batchim": "শেষ ব্যঞ্জনধ্বনি (বাচিম)"
+    "ep_batchim": "শেষ ব্যঞ্জনধ্বনি (বাচিম)",
+    "pc_title": "EPIC21 আপনার কম্পিউটারে ইনস্টল করুন",
+    "pc_lede": "একবার ইনস্টল করলেই ডেস্কটপ বা টাস্কবার থেকে সরাসরি বই খোলা যাবে। বিনামূল্যে, সাইন-আপ লাগবে না।",
+    "pc_btn": "এই কম্পিউটারে ইনস্টল করুন",
+    "pc_menu": "ঠিকানা বারের ডান প্রান্তের ইনস্টল আইকনে ক্লিক করুন, অথবা ব্রাউজারের মেনু (⋮ বা …) থেকে “Install app” বেছে নিন।",
+    "pc_mac": "স্ক্রিনের উপরের মেনু বারে File → Add to Dock বেছে নিন।",
+    "pc_other": "এই ব্রাউজারে অ্যাপ ইনস্টল করা যায় না। লিংকটি Chrome বা Edge-এ খুলুন।",
+    "pc_done": "হয়ে গেছে! এখন ডেস্কটপ, টাস্কবার বা Dock থেকে যেকোনো সময় EPIC21 খুলুন।"
    }
   },
   "si": {
@@ -2460,7 +2586,14 @@
     "copylink": "සබැඳිය පිටපත් කරන්න",
     "ep_tense": "තද ව්‍යඤ්ජන",
     "ep_more_vowels": "ඉතිරි ස්වර",
-    "ep_batchim": "අවසාන ව්‍යඤ්ජන (බච්චිම්)"
+    "ep_batchim": "අවසාන ව්‍යඤ්ජන (බච්චිම්)",
+    "pc_title": "EPIC21 ඔබේ පරිගණකයේ ස්ථාපනය කරන්න",
+    "pc_lede": "එක් වරක් ස්ථාපනය කළ පසු ඩෙස්ක්ටොප් එකෙන් හෝ ටාස්ක්බාර් එකෙන් පොත් කෙලින්ම විවෘත වේ. නොමිලේ, ලියාපදිංචි වීම අවශ්‍ය නැත.",
+    "pc_btn": "මෙම පරිගණකයේ ස්ථාපනය කරන්න",
+    "pc_menu": "ලිපින තීරුවේ දකුණු කෙළවරේ ඇති ස්ථාපන අයිකනය ඔබන්න, නැතහොත් බ්‍රවුසර මෙනුවේ (⋮ හෝ …) “Install app” තෝරන්න.",
+    "pc_mac": "තිරයේ ඉහළ මෙනු තීරුවේ File → Add to Dock තෝරන්න.",
+    "pc_other": "මෙම බ්‍රවුසරයට යෙදුම් ස්ථාපනය කළ නොහැක. මෙම සබැඳිය Chrome හෝ Edge තුළ විවෘත කරන්න.",
+    "pc_done": "අවසන්! දැන් ඩෙස්ක්ටොප්, ටාස්ක්බාර් හෝ Dock වෙතින් ඕනෑම වේලාවක EPIC21 විවෘත කරන්න."
    }
   },
   "ar": {
@@ -2584,7 +2717,14 @@
     "copylink": "نسخ الرابط",
     "ep_tense": "الحروف الساكنة المشدودة",
     "ep_more_vowels": "بقية الحروف المتحركة",
-    "ep_batchim": "الحروف الساكنة الختامية (باتشيم)"
+    "ep_batchim": "الحروف الساكنة الختامية (باتشيم)",
+    "pc_title": "ثبّت EPIC21 على حاسوبك",
+    "pc_lede": "ثبّته مرة واحدة وافتح الكتب مباشرة من سطح المكتب أو شريط المهام. مجاني وبدون تسجيل.",
+    "pc_btn": "التثبيت على هذا الحاسوب",
+    "pc_menu": "انقر على أيقونة التثبيت في طرف شريط العنوان، أو اختر «تثبيت التطبيق» من قائمة المتصفح (⋮ أو …).",
+    "pc_mac": "من شريط القوائم أعلى الشاشة اختر ملف (File) ← إضافة إلى Dock (Add to Dock).",
+    "pc_other": "لا يستطيع هذا المتصفح تثبيت التطبيقات. افتح هذا الرابط في Chrome أو Edge.",
+    "pc_done": "تم! افتح EPIC21 في أي وقت من سطح المكتب أو شريط المهام أو Dock."
    }
   },
   "ur": {
@@ -2708,7 +2848,14 @@
     "copylink": "لنک کاپی کریں",
     "ep_tense": "سخت حروفِ صحیح",
     "ep_more_vowels": "باقی حروفِ علت",
-    "ep_batchim": "آخری حروفِ صحیح (بَچِم)"
+    "ep_batchim": "آخری حروفِ صحیح (بَچِم)",
+    "pc_title": "EPIC21 اپنے کمپیوٹر پر انسٹال کریں",
+    "pc_lede": "ایک بار انسٹال کریں اور کتابیں ڈیسک ٹاپ یا ٹاسک بار سے فوراً کھولیں۔ مفت، سائن اپ کی ضرورت نہیں۔",
+    "pc_btn": "اس کمپیوٹر پر انسٹال کریں",
+    "pc_menu": "ایڈریس بار کے آخری سرے پر انسٹال آئیکن پر کلک کریں، یا براؤزر مینو (⋮ یا …) میں “Install app” منتخب کریں۔",
+    "pc_mac": "اسکرین کے اوپر مینو بار میں File ← Add to Dock منتخب کریں۔",
+    "pc_other": "یہ براؤزر ایپ انسٹال نہیں کر سکتا۔ یہ لنک Chrome یا Edge میں کھولیں۔",
+    "pc_done": "ہو گیا! اب EPIC21 کو ڈیسک ٹاپ، ٹاسک بار یا Dock سے کسی بھی وقت کھولیں۔"
    }
   }
  },

@@ -72,6 +72,8 @@ UI_NEW = {
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
 # 홈 화면 추가 안내 문구 — ?app=ko 로 열면 어느 페이지에서든 안내 창만 한국어로 바뀐다(교사용)
 APP_KEYS = ['app_title', 'app_lede', 'app_btn', 'ios1', 'ios2', 'ios3', 'menu', 'inapp', 'inapp_btn', 'inapp_ios', 'copylink', 'app_done']
+# 컴퓨터(데스크톱)에서 열었을 때 바꿔 쓰는 안내 문구 — 크롬·엣지 설치, 맥 사파리 Dock, 그 밖의 브라우저
+PC_KEYS = ['pc_title', 'pc_lede', 'pc_btn', 'pc_menu', 'pc_mac', 'pc_other', 'pc_done']
 
 
 def level_info(level, code):
@@ -238,7 +240,9 @@ def build_page(site, env, lang, is_root):
         intro=intro, intro_complete=site.get('intro_complete', False), intro_lv=level_info('입문', lv_code), level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
-        app_ko={k: T['ko']['ui'][k] for k in APP_KEYS},
+        app_ko={k: T['ko']['ui'][k] for k in APP_KEYS + PC_KEYS},
+        app_ko_pc={k: T['ko']['ui'][k] for k in PC_KEYS},
+        pc_ui={k: t['ui'][k] for k in PC_KEYS},
         jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'),
     )
 

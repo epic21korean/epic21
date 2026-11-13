@@ -1670,6 +1670,8 @@ footer a{color:var(--muted)}
     <p class="appios" data-k="inapp_ios">轻点屏幕角落的 ··· 或共享图标，选择“在 Safari 中打开”。也可以复制链接，粘贴到 Safari。</p>
     <div class="gans"><button type="button" class="gbtn gmain" id="appOut" data-k="inapp_btn">用浏览器打开</button><button type="button" class="gbtn" id="appCopy" data-k="copylink">复制链接</button></div>
   </div>
+  <div class="appway" data-way="mac" hidden><p data-k="pc_mac">在屏幕顶部的菜单栏中选择“文件”→“添加到程序坞”。</p></div>
+  <div class="appway" data-way="other" hidden><p data-k="pc_other">此浏览器无法安装应用。请用 Chrome 或 Edge 打开此链接。</p><div class="gans"><button type="button" class="gbtn" id="appCopy2" data-k="copylink">复制链接</button></div></div>
   <div class="appway" data-way="done" hidden><p class="appdone" data-k="app_done">完成！以后可以随时从主屏幕打开 EPIC21。</p></div>
 </dialog>
 
@@ -1830,19 +1832,29 @@ footer a{color:var(--muted)}
   var standalone=function(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true};
   var qs=new URLSearchParams(location.search), askApp=qs.has('app'), appLang=qs.get('app')||'';
   var appUrl=location.origin+location.pathname+'?app'+(appLang?'='+encodeURIComponent(appLang):'')+location.hash;
+  var KO_PC={"pc_btn": "\ucef4\ud4e8\ud130\uc5d0 \uc124\uce58", "pc_done": "\uc644\ub8cc! \uc774\uc81c \ubc14\ud0d5\ud654\uba74\u00b7\uc791\uc5c5 \ud45c\uc2dc\uc904\u00b7Dock\uc5d0\uc11c EPIC21\uc744 \ubc14\ub85c \uc5ec\uc138\uc694.", "pc_lede": "\ud55c \ubc88 \uc124\uce58\ud558\uba74 \ubc14\ud0d5\ud654\uba74\uc774\ub098 \uc791\uc5c5 \ud45c\uc2dc\uc904\uc5d0\uc11c \ubc14\ub85c \uc5f4\ub824\uc694. \ubb34\ub8cc\uc774\uace0 \uac00\uc785\ub3c4 \ud544\uc694 \uc5c6\uc5b4\uc694.", "pc_mac": "\ud654\uba74 \ub9e8 \uc704 \uba54\ub274 \ub9c9\ub300\uc5d0\uc11c \u2018\ud30c\uc77c\u2019 \u2192 \u2018Dock\uc5d0 \ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "pc_menu": "\uc8fc\uc18c\ucc3d \uc624\ub978\ucabd \ub05d\uc758 \uc124\uce58 \uc544\uc774\ucf58\uc744 \ub204\ub974\uac70\ub098, \ube0c\ub77c\uc6b0\uc800 \uba54\ub274(\u22ee \ub610\ub294 \u2026)\uc5d0\uc11c \u2018\uc571 \uc124\uce58\u2019\ub97c \uace0\ub974\uc138\uc694.", "pc_other": "\uc774 \ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c\ub294 \uc124\uce58\ud560 \uc218 \uc5c6\uc5b4\uc694. \ud06c\ub86c(Chrome)\uc774\ub098 \uc5e3\uc9c0(Edge)\uc5d0\uc11c \uc774 \ub9c1\ud06c\ub97c \uc5ec\uc138\uc694.", "pc_title": "EPIC21\uc744 \ucef4\ud4e8\ud130\uc5d0 \uc124\uce58\ud558\uc138\uc694"};
   /* ?app=ko — 교사용: 안내 창 문구만 한국어로 */
   if(appLang==='ko'&&PAGE!=='ko'){
-    var KO={"app_btn": "\ud648 \ud654\uba74\uc5d0 \ucd94\uac00", "app_done": "\uc644\ub8cc! \uc774\uc81c \ud648 \ud654\uba74\uc5d0\uc11c EPIC21\uc744 \ubc14\ub85c \uc5ec\uc138\uc694.", "app_lede": "\uc571\ucc98\ub7fc \ud55c \ubc88\ub9cc \ub204\ub974\uba74 \uad50\uc7ac\uac00 \uc5f4\ub824\uc694. \ubb34\ub8cc\uc774\uace0 \uac00\uc785\ub3c4 \ud544\uc694 \uc5c6\uc5b4\uc694.", "app_title": "EPIC21\uc744 \ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud558\uc138\uc694", "copylink": "\ub9c1\ud06c \ubcf5\uc0ac", "inapp": "\uc9c0\uae08\uc740 \ub2e4\ub978 \uc571 \uc548\uc5d0\uc11c \ub9c1\ud06c\uac00 \uc5f4\ub824 \uc788\uc5b4\uc11c \ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud560 \uc218 \uc5c6\uc5b4\uc694. \uba3c\uc800 \ud734\ub300\ud3f0 \ube0c\ub77c\uc6b0\uc800\ub85c \uc5ec\uc138\uc694.", "inapp_btn": "\ube0c\ub77c\uc6b0\uc800\ub85c \uc5f4\uae30", "inapp_ios": "\ud654\uba74 \uad6c\uc11d\uc758 \u00b7\u00b7\u00b7 \ub610\ub294 \uacf5\uc720 \uc544\uc774\ucf58\uc744 \ub204\ub974\uace0 \u2018Safari\ub85c \uc5f4\uae30\u2019\ub97c \uace0\ub974\uc138\uc694. \ub610\ub294 \ub9c1\ud06c\ub97c \ubcf5\uc0ac\ud574\uc11c Safari\uc5d0 \ubd99\uc5ec \ub123\uc73c\uc138\uc694.", "ios1": "Safari\uc5d0\uc11c \uacf5\uc720 \ubc84\ud2bc {share}\uc744 \ub204\ub974\uc138\uc694. \ubc84\ud2bc\uc774 \uc548 \ubcf4\uc774\uba74 \uba3c\uc800 \u00b7\u00b7\u00b7\uc744 \ub204\ub974\uc138\uc694.", "ios2": "\uc544\ub798\ub85c \ub0b4\ub824\uc11c \u2018\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "ios3": "\uc704\ucabd\uc758 \u2018\ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "menu": "\ube0c\ub77c\uc6b0\uc800 \uba54\ub274 \u22ee\ub97c \uc5f4\uace0 \u2018\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\u2019 \ub610\ub294 \u2018\uc571 \uc124\uce58\u2019\ub97c \ub204\ub974\uc138\uc694."}; ad.setAttribute('lang','ko'); ad.setAttribute('dir','ltr');
+    var KO={"app_btn": "\ud648 \ud654\uba74\uc5d0 \ucd94\uac00", "app_done": "\uc644\ub8cc! \uc774\uc81c \ud648 \ud654\uba74\uc5d0\uc11c EPIC21\uc744 \ubc14\ub85c \uc5ec\uc138\uc694.", "app_lede": "\uc571\ucc98\ub7fc \ud55c \ubc88\ub9cc \ub204\ub974\uba74 \uad50\uc7ac\uac00 \uc5f4\ub824\uc694. \ubb34\ub8cc\uc774\uace0 \uac00\uc785\ub3c4 \ud544\uc694 \uc5c6\uc5b4\uc694.", "app_title": "EPIC21\uc744 \ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud558\uc138\uc694", "copylink": "\ub9c1\ud06c \ubcf5\uc0ac", "inapp": "\uc9c0\uae08\uc740 \ub2e4\ub978 \uc571 \uc548\uc5d0\uc11c \ub9c1\ud06c\uac00 \uc5f4\ub824 \uc788\uc5b4\uc11c \ud648 \ud654\uba74\uc5d0 \ucd94\uac00\ud560 \uc218 \uc5c6\uc5b4\uc694. \uba3c\uc800 \ud734\ub300\ud3f0 \ube0c\ub77c\uc6b0\uc800\ub85c \uc5ec\uc138\uc694.", "inapp_btn": "\ube0c\ub77c\uc6b0\uc800\ub85c \uc5f4\uae30", "inapp_ios": "\ud654\uba74 \uad6c\uc11d\uc758 \u00b7\u00b7\u00b7 \ub610\ub294 \uacf5\uc720 \uc544\uc774\ucf58\uc744 \ub204\ub974\uace0 \u2018Safari\ub85c \uc5f4\uae30\u2019\ub97c \uace0\ub974\uc138\uc694. \ub610\ub294 \ub9c1\ud06c\ub97c \ubcf5\uc0ac\ud574\uc11c Safari\uc5d0 \ubd99\uc5ec \ub123\uc73c\uc138\uc694.", "ios1": "Safari\uc5d0\uc11c \uacf5\uc720 \ubc84\ud2bc {share}\uc744 \ub204\ub974\uc138\uc694. \ubc84\ud2bc\uc774 \uc548 \ubcf4\uc774\uba74 \uba3c\uc800 \u00b7\u00b7\u00b7\uc744 \ub204\ub974\uc138\uc694.", "ios2": "\uc544\ub798\ub85c \ub0b4\ub824\uc11c \u2018\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "ios3": "\uc704\ucabd\uc758 \u2018\ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "menu": "\ube0c\ub77c\uc6b0\uc800 \uba54\ub274 \u22ee\ub97c \uc5f4\uace0 \u2018\ud648 \ud654\uba74\uc5d0 \ucd94\uac00\u2019 \ub610\ub294 \u2018\uc571 \uc124\uce58\u2019\ub97c \ub204\ub974\uc138\uc694.", "pc_btn": "\ucef4\ud4e8\ud130\uc5d0 \uc124\uce58", "pc_done": "\uc644\ub8cc! \uc774\uc81c \ubc14\ud0d5\ud654\uba74\u00b7\uc791\uc5c5 \ud45c\uc2dc\uc904\u00b7Dock\uc5d0\uc11c EPIC21\uc744 \ubc14\ub85c \uc5ec\uc138\uc694.", "pc_lede": "\ud55c \ubc88 \uc124\uce58\ud558\uba74 \ubc14\ud0d5\ud654\uba74\uc774\ub098 \uc791\uc5c5 \ud45c\uc2dc\uc904\uc5d0\uc11c \ubc14\ub85c \uc5f4\ub824\uc694. \ubb34\ub8cc\uc774\uace0 \uac00\uc785\ub3c4 \ud544\uc694 \uc5c6\uc5b4\uc694.", "pc_mac": "\ud654\uba74 \ub9e8 \uc704 \uba54\ub274 \ub9c9\ub300\uc5d0\uc11c \u2018\ud30c\uc77c\u2019 \u2192 \u2018Dock\uc5d0 \ucd94\uac00\u2019\ub97c \ub204\ub974\uc138\uc694.", "pc_menu": "\uc8fc\uc18c\ucc3d \uc624\ub978\ucabd \ub05d\uc758 \uc124\uce58 \uc544\uc774\ucf58\uc744 \ub204\ub974\uac70\ub098, \ube0c\ub77c\uc6b0\uc800 \uba54\ub274(\u22ee \ub610\ub294 \u2026)\uc5d0\uc11c \u2018\uc571 \uc124\uce58\u2019\ub97c \uace0\ub974\uc138\uc694.", "pc_other": "\uc774 \ube0c\ub77c\uc6b0\uc800\uc5d0\uc11c\ub294 \uc124\uce58\ud560 \uc218 \uc5c6\uc5b4\uc694. \ud06c\ub86c(Chrome)\uc774\ub098 \uc5e3\uc9c0(Edge)\uc5d0\uc11c \uc774 \ub9c1\ud06c\ub97c \uc5ec\uc138\uc694.", "pc_title": "EPIC21\uc744 \ucef4\ud4e8\ud130\uc5d0 \uc124\uce58\ud558\uc138\uc694"}; ad.setAttribute('lang','ko'); ad.setAttribute('dir','ltr');
     $$('[data-k]',ad).forEach(function(el){var k=el.dataset.k;
       if(k==='ios1'){var sv=$('svg',el),p=KO.ios1.split('{share}');el.textContent=p[0];el.appendChild(sv);el.appendChild(document.createTextNode(p[1]||''));}
-      else el.textContent=KO[k];});
+      else if(KO[k]!=null)el.textContent=KO[k];});
+  }
+  /* 컴퓨터(데스크톱): 크롬·엣지는 설치 버튼, 맥 사파리는 파일 → Dock에 추가, 파이어폭스 등은 크롬·엣지로 열라고 안내 */
+  var isDesk=!isIOS&&!isAndroid&&!inApp&&!/Mobi|Tablet|Silk|KFAPWI/i.test(ua);
+  var isMacSafari=isDesk&&/Macintosh/.test(ua)&&/Safari\//.test(ua)&&!/Chrome|Chromium|Edg\/|OPR\/|Firefox\//.test(ua);
+  var isDeskOther=isDesk&&!isMacSafari&&!/Chrome|Chromium|Edg\//.test(ua);
+  if(isDesk){
+    var PC=(appLang==='ko'&&PAGE!=='ko')?KO_PC:{"pc_btn": "\u5b89\u88c5\u5230\u8fd9\u53f0\u7535\u8111", "pc_done": "\u5b8c\u6210\uff01\u73b0\u5728\u53ef\u4ee5\u968f\u65f6\u4ece\u684c\u9762\u3001\u4efb\u52a1\u680f\u6216\u7a0b\u5e8f\u575e\u6253\u5f00 EPIC21\u3002", "pc_lede": "\u5b89\u88c5\u4e00\u6b21\uff0c\u5c31\u80fd\u4ece\u684c\u9762\u6216\u4efb\u52a1\u680f\u76f4\u63a5\u6253\u5f00\u6559\u6750\u3002\u514d\u8d39\uff0c\u65e0\u9700\u6ce8\u518c\u3002", "pc_mac": "\u5728\u5c4f\u5e55\u9876\u90e8\u7684\u83dc\u5355\u680f\u4e2d\u9009\u62e9\u201c\u6587\u4ef6\u201d\u2192\u201c\u6dfb\u52a0\u5230\u7a0b\u5e8f\u575e\u201d\u3002", "pc_menu": "\u70b9\u51fb\u5730\u5740\u680f\u6700\u53f3\u4fa7\u7684\u5b89\u88c5\u56fe\u6807\uff0c\u6216\u5728\u6d4f\u89c8\u5668\u83dc\u5355\uff08\u22ee \u6216 \u2026\uff09\u4e2d\u9009\u62e9\u201c\u5b89\u88c5\u5e94\u7528\u201d\u3002", "pc_other": "\u6b64\u6d4f\u89c8\u5668\u65e0\u6cd5\u5b89\u88c5\u5e94\u7528\u3002\u8bf7\u7528 Chrome \u6216 Edge \u6253\u5f00\u6b64\u94fe\u63a5\u3002", "pc_title": "\u628a EPIC21 \u5b89\u88c5\u5230\u7535\u8111\u4e0a"};
+    var PCMAP={app_title:'pc_title',app_lede:'pc_lede',app_btn:'pc_btn',menu:'pc_menu',app_done:'pc_done'};
+    $$('[data-k]',ad).forEach(function(el){var k=PCMAP[el.dataset.k];if(k&&PC[k])el.textContent=PC[k]});
   }
   if(askApp){qs.delete('app');var rest=qs.toString();try{history.replaceState(history.state,'',location.pathname+(rest?'?'+rest:'')+location.hash)}catch(e){}}
-  function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':'menu'}
+  function pickWay(){return standalone()?'done':inApp?'inapp':isIOS?'ios':deferred?'btn':isMacSafari?'mac':isDeskOther?'other':'menu'}
   function showWay(w){way=w;$$('.appway',ad).forEach(function(x){x.hidden=x.dataset.way!==w});
     $('.appios',ad).hidden=!isIOS; $('#appOut').hidden=isIOS&&!isKakao&&!isLine}
   function openApp(src){showWay(pickWay());if(!ad.open)ad.showModal();track('app/'+PAGE+'/'+way,'홈 화면 안내 ('+src+')')}
-  function syncBtn(){ib.hidden=standalone()||!(deferred||isIOS||inApp)}
+  function syncBtn(){ib.hidden=standalone()||!(deferred||isIOS||inApp||isMacSafari)}
   syncBtn();
   window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();deferred=e;syncBtn();if(ad.open&&way==='menu')showWay('btn')});
   function prompt2(){if(!deferred)return;deferred.prompt();deferred.userChoice.then(function(c){
@@ -1858,13 +1870,14 @@ footer a{color:var(--muted)}
     if(isAndroid){var p=new URL(appUrl);location.href='intent://'+p.host+p.pathname+p.search+'#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url='+encodeURIComponent(appUrl)+';end';return}
     location.href=appUrl;
   });
+  $('#appCopy2').addEventListener('click',function(){$('#appCopy').click()});
   $('#appCopy').addEventListener('click',function(){
     if(navigator.clipboard){navigator.clipboard.writeText(appUrl).then(function(){toast(UI.copied)},function(){prompt('',appUrl)})}else{prompt('',appUrl)}
   });
   window.addEventListener('appinstalled',function(){deferred=null;syncBtn();if(ad.open)showWay('done')});
   if(askApp&&!standalone()){
-    /* 안드로이드 크롬은 설치 신호가 조금 늦게 온다 — 잠깐 기다렸다 연다 */
-    if(isAndroid&&!inApp&&!deferred){var waited=0,iv=setInterval(function(){waited+=250;if(deferred||waited>=2000){clearInterval(iv);openApp('링크')}},250)}
+    /* 안드로이드·컴퓨터 크롬은 설치 신호가 조금 늦게 온다 — 잠깐 기다렸다 연다 */
+    if((isAndroid||isDesk&&!isMacSafari&&!isDeskOther)&&!inApp&&!deferred){var waited=0,iv=setInterval(function(){waited+=250;if(deferred||waited>=2000){clearInterval(iv);openApp('링크')}},250)}
     else openApp('링크');
   }
   var NOW=Date.now(), DAY=864e5;
