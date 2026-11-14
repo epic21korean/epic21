@@ -48,7 +48,6 @@ git add -A && git commit -m "hub v2" && git push
 - 교재 부제는 site.json 각 교재의 "tr": {"vi": "…", …} 에 언어별로 넣는다(없으면 영어).
 - PDF 용량은 `python build.py --refresh-files` 때 아카이브에서 함께 읽어 site.json "sizes" 에 저장되고 버튼에 표시된다.
 - 주의: 허브는 반드시 최신 저장소(문서\GitHub\epic21)를 바탕으로 고친다. 옛 사본으로 다시 만들면 새 기능·표지가 사라진다(2026-11-10 시리즈 4 추가 때 실제로 일어남). copy_to_repo.py 는 이제 covers·og 를 지우지 않고 덧붙이기만 한다.
-- 입문 층: site.json "intro" 에 한글 첫걸음 영상 편을 추가하면(no·id·ko·key) 영상 칸이 늘어난다. 편 제목 번역은 text.<코드>.ui 의 key(예: ep_vowels)에 넣는다.
 - 짝 영상 26권 연결(2026-11-10, videos.json 기준). 『한국어 필수 문법 완결판』은 짝 영상이 없어 채널 검색으로 연결.
 - 교재에 짝 영상을 붙이려면 `site.json` 의 그 교재 덩어리에 `"video": "유튜브영상ID"` 한 줄을 넣고 `python build.py`.
   넣으면 ▶ 버튼이 허브 안에서 바로 재생되고, 없으면 채널 검색으로 연결된다.
@@ -77,3 +76,5 @@ git add -A && git commit -m "hub v2" && git push
   - 통계 행사 이름에 `app/<언어>/mac`, `app/<언어>/other` 가 새로 생긴다.
 - 문구는 `site.json` → `text.<코드>.ui` 의 `app_title … app_done`, `copylink`.
 - 방문 통계(GoatCounter)에 `app/<언어>/<방식>` 으로 안내 창 열림·설치 선택이 기록된다.
+
+- 입문 교재 『한글 첫걸음』(2026-11-14): 묶음 "hangul", 수준 "입문". 입문 층 영상 칸("intro")은 없애고 다른 교재처럼 교재 카드 + ▶ 영상 버튼으로 통일했다. 새 교재 표지는 `python fetch_covers.py` 로 아카이브에서 1쪽을 가져온다(없는 표지만 만든다).

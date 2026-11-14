@@ -5,6 +5,9 @@
  "license": "CC BY-NC-ND 4.0",
  "groups": [
   {
+   "key": "hangul"
+  },
+  {
    "key": "mag"
   },
   {
@@ -244,6 +247,10 @@
     "ttg": {
      "name": "유튜브 쇼츠로 배우는 한국어",
      "desc": "『30년 후』 쇼츠와 짝을 이루는 2056 시간여행 가이드북 — 2026과 2056을 비교하며 초급·중급·고급 어휘와 표현, 정답 포함."
+    },
+    "hangul": {
+     "name": "한글 첫걸음",
+     "desc": "한글을 처음부터 그림과 소리로 배우는 입문 교재 — 단원마다 영상 QR, 글자마다 소리 QR."
     }
    },
    "ui": {
@@ -272,9 +279,6 @@
     "inapp_ios": "화면 구석의 ··· 또는 공유 아이콘을 누르고 ‘Safari로 열기’를 고르세요. 또는 링크를 복사해서 Safari에 붙여 넣으세요.",
     "app_done": "완료! 이제 홈 화면에서 EPIC21을 바로 여세요.",
     "copylink": "링크 복사",
-    "ep_tense": "된소리",
-    "ep_more_vowels": "나머지 모음",
-    "ep_batchim": "받침",
     "pc_title": "EPIC21을 컴퓨터에 설치하세요",
     "pc_lede": "한 번 설치하면 바탕화면이나 작업 표시줄에서 바로 열려요. 무료이고 가입도 필요 없어요.",
     "pc_btn": "컴퓨터에 설치",
@@ -329,6 +333,10 @@
     "ttg": {
      "name": "Learn Korean with YouTube Shorts",
      "desc": "Time Travel Guide 2056, paired with the \"30 Years Later\" Shorts — compare 2026 and 2056 and learn beginner to advanced words and expressions. Answer key included."
+    },
+    "hangul": {
+     "name": "Hangul First Steps",
+     "desc": "A starter textbook for reading Korean letters from zero with pictures and sounds — a video QR for every unit and a sound QR for every letter."
     }
    },
    "ui": {
@@ -357,9 +365,6 @@
     "inapp_ios": "Tap ··· or the share icon in a corner of the screen and choose “Open in Safari”. Or copy the link and paste it into Safari.",
     "app_done": "Done! Open EPIC21 from your home screen anytime.",
     "copylink": "Copy link",
-    "ep_tense": "Tense consonants",
-    "ep_more_vowels": "More vowels",
-    "ep_batchim": "Final consonants (batchim)",
     "pc_title": "Install EPIC21 on your computer",
     "pc_lede": "Install it once and open the textbooks straight from your desktop or taskbar. Free, no sign-up.",
     "pc_btn": "Install on this computer",
@@ -414,6 +419,10 @@
     "ttg": {
      "name": "Aprende coreano con YouTube Shorts",
      "desc": "Guía de viaje en el tiempo 2056, junto a los Shorts «30 años después»: compara 2026 y 2056 y aprende vocabulario y expresiones de nivel inicial a avanzado. Con respuestas."
+    },
+    "hangul": {
+     "name": "Primeros pasos en hangul",
+     "desc": "Libro inicial para leer las letras coreanas desde cero con imágenes y sonidos: un QR de video por unidad y un QR de sonido por letra."
     }
    },
    "ui": {
@@ -462,7 +471,7 @@
     "q3": "¿Puedes leer textos del TOPIK II o noticias en coreano?",
     "yes": "Sí",
     "no": "Todavía no",
-    "r_hangul": "Empieza con Primeros pasos en hangul, nuestro curso de video gratis para aprender a leer las letras coreanas.",
+    "r_hangul": "Empieza con el libro Primeros pasos en hangul: aprende a leer las letras coreanas desde cero con imágenes, videos y sonidos.",
     "r_level": "Tu nivel: {level}",
     "show": "Ver estos libros",
     "again": "Empezar de nuevo",
@@ -471,11 +480,6 @@
     "done_count": "{d} / {n} estudiados",
     "qr": "Código QR",
     "qr_text": "Escanéalo para abrir esta página en el móvil.",
-    "intro_title": "Primeros pasos en hangul",
-    "intro_desc": "Aprende a leer las letras coreanas desde cero con este curso de video gratis.",
-    "ep_vowels": "Vocales básicas",
-    "next_ep": "¡Espera el próximo episodio!",
-    "ep_consonants": "Consonantes básicas",
     "app_title": "Añade EPIC21 a tu pantalla de inicio",
     "app_lede": "Así abrirás los libros con un solo toque, como una app. Gratis y sin registro.",
     "app_btn": "Añadir a la pantalla de inicio",
@@ -488,9 +492,6 @@
     "inapp_ios": "Toca ··· o el icono de compartir en una esquina y elige «Abrir en Safari». O copia el enlace y pégalo en Safari.",
     "app_done": "¡Listo! Abre EPIC21 desde tu pantalla de inicio cuando quieras.",
     "copylink": "Copiar enlace",
-    "ep_tense": "Consonantes tensas",
-    "ep_more_vowels": "Más vocales",
-    "ep_batchim": "Consonantes finales (batchim)",
     "pc_title": "Instala EPIC21 en tu computadora",
     "pc_lede": "Instálalo una vez y abre los libros directamente desde el escritorio o la barra de tareas. Gratis y sin registro.",
     "pc_btn": "Instalar en esta computadora",
@@ -545,6 +546,10 @@
     "ttg": {
      "name": "Apprendre le coréen avec YouTube Shorts",
      "desc": "Guide du voyage dans le temps 2056, avec les Shorts « Dans 30 ans » : comparez 2026 et 2056 et apprenez mots et expressions du niveau débutant à avancé. Corrigés inclus."
+    },
+    "hangul": {
+     "name": "Premiers pas en hangeul",
+     "desc": "Manuel d’initiation pour lire l’alphabet coréen à partir de zéro avec images et sons : un QR vidéo par unité et un QR audio par lettre."
     }
    },
    "ui": {
@@ -593,7 +598,7 @@
     "q3": "Savez-vous lire des textes du TOPIK II ou l’actualité en coréen ?",
     "yes": "Oui",
     "no": "Pas encore",
-    "r_hangul": "Commencez par Premiers pas en hangeul, notre cours vidéo gratuit pour apprendre à lire l’alphabet coréen.",
+    "r_hangul": "Commencez par le manuel Premiers pas en hangeul : apprenez à lire l’alphabet coréen à partir de zéro avec images, vidéos et sons.",
     "r_level": "Votre niveau : {level}",
     "show": "Voir ces manuels",
     "again": "Recommencer",
@@ -602,11 +607,6 @@
     "done_count": "{d} / {n} étudiés",
     "qr": "Code QR",
     "qr_text": "Scannez pour ouvrir cette page sur un téléphone.",
-    "intro_title": "Premiers pas en hangeul",
-    "intro_desc": "Apprenez à lire l’alphabet coréen à partir de zéro avec ce cours vidéo gratuit.",
-    "ep_vowels": "Voyelles de base",
-    "next_ep": "Le prochain épisode arrive bientôt !",
-    "ep_consonants": "Consonnes de base",
     "app_title": "Ajoutez EPIC21 à votre écran d’accueil",
     "app_lede": "Vous ouvrirez les manuels d’un seul toucher, comme une appli. Gratuit, sans inscription.",
     "app_btn": "Ajouter à l’écran d’accueil",
@@ -619,9 +619,6 @@
     "inapp_ios": "Touchez ··· ou l’icône de partage dans un coin de l’écran et choisissez « Ouvrir dans Safari ». Ou copiez le lien et collez-le dans Safari.",
     "app_done": "C’est fait ! Ouvrez EPIC21 depuis votre écran d’accueil quand vous voulez.",
     "copylink": "Copier le lien",
-    "ep_tense": "Consonnes tendues",
-    "ep_more_vowels": "Autres voyelles",
-    "ep_batchim": "Consonnes finales (batchim)",
     "pc_title": "Installez EPIC21 sur votre ordinateur",
     "pc_lede": "Installez-le une fois et ouvrez les manuels directement depuis le bureau ou la barre des tâches. Gratuit, sans inscription.",
     "pc_btn": "Installer sur cet ordinateur",
@@ -676,6 +673,10 @@
     "ttg": {
      "name": "Aprenda coreano com YouTube Shorts",
      "desc": "Guia de Viagem no Tempo 2056, com os Shorts «30 anos depois»: compare 2026 e 2056 e aprenda vocabulário e expressões do nível básico ao avançado. Com gabarito."
+    },
+    "hangul": {
+     "name": "Primeiros passos no hangul",
+     "desc": "Livro inicial para ler as letras coreanas do zero com imagens e sons — um QR de vídeo por unidade e um QR de som por letra."
     }
    },
    "ui": {
@@ -724,7 +725,7 @@
     "q3": "Você consegue ler textos do TOPIK II ou notícias em coreano?",
     "yes": "Sim",
     "no": "Ainda não",
-    "r_hangul": "Comece com Primeiros passos no hangul, nosso curso em vídeo gratuito para aprender a ler as letras coreanas.",
+    "r_hangul": "Comece pelo livro Primeiros passos no hangul: aprenda a ler as letras coreanas do zero com imagens, vídeos e sons.",
     "r_level": "Seu nível: {level}",
     "show": "Ver estes livros",
     "again": "Recomeçar",
@@ -733,11 +734,6 @@
     "done_count": "{d} / {n} estudados",
     "qr": "Código QR",
     "qr_text": "Escaneie para abrir esta página no celular.",
-    "intro_title": "Primeiros passos no hangul",
-    "intro_desc": "Aprenda a ler as letras coreanas do zero com este curso em vídeo gratuito.",
-    "ep_vowels": "Vogais básicas",
-    "next_ep": "Aguarde o próximo episódio!",
-    "ep_consonants": "Consoantes básicas",
     "app_title": "Adicione o EPIC21 à tela de início",
     "app_lede": "Assim você abre os livros com um toque, como um app. Grátis, sem cadastro.",
     "app_btn": "Adicionar à tela de início",
@@ -750,9 +746,6 @@
     "inapp_ios": "Toque em ··· ou no ícone de compartilhar num canto da tela e escolha “Abrir no Safari”. Ou copie o link e cole no Safari.",
     "app_done": "Pronto! Abra o EPIC21 pela tela de início quando quiser.",
     "copylink": "Copiar link",
-    "ep_tense": "Consoantes tensas",
-    "ep_more_vowels": "Mais vogais",
-    "ep_batchim": "Consoantes finais (batchim)",
     "pc_title": "Instale o EPIC21 no seu computador",
     "pc_lede": "Instale uma vez e abra os livros direto da área de trabalho ou da barra de tarefas. Grátis e sem cadastro.",
     "pc_btn": "Instalar neste computador",
@@ -807,6 +800,10 @@
     "ttg": {
      "name": "Belajar Bahasa Korea dengan YouTube Shorts",
      "desc": "Panduan Perjalanan Waktu 2056, pasangan Shorts \"30 Tahun Lagi\" — bandingkan 2026 dan 2056, pelajari kosakata dan ungkapan tingkat dasar hingga mahir. Dengan kunci jawaban."
+    },
+    "hangul": {
+     "name": "Langkah Pertama Hangul",
+     "desc": "Buku awal untuk membaca huruf Korea dari nol dengan gambar dan suara — QR video tiap unit dan QR suara tiap huruf."
     }
    },
    "ui": {
@@ -855,7 +852,7 @@
     "q3": "Apakah kamu bisa membaca soal TOPIK II atau berita Korea?",
     "yes": "Ya",
     "no": "Belum",
-    "r_hangul": "Mulailah dengan Langkah Pertama Hangul, kursus video gratis kami untuk belajar membaca huruf Korea.",
+    "r_hangul": "Mulailah dengan buku Langkah Pertama Hangul: belajar membaca huruf Korea dari nol dengan gambar, video, dan suara.",
     "r_level": "Level kamu: {level}",
     "show": "Tampilkan buku ini",
     "again": "Ulangi",
@@ -864,11 +861,6 @@
     "done_count": "{d} / {n} sudah dipelajari",
     "qr": "Kode QR",
     "qr_text": "Pindai untuk membuka halaman ini di ponsel.",
-    "intro_title": "Langkah Pertama Hangul",
-    "intro_desc": "Belajar membaca huruf Korea dari nol lewat kursus video gratis ini.",
-    "ep_vowels": "Vokal dasar",
-    "next_ep": "Nantikan episode berikutnya!",
-    "ep_consonants": "Konsonan dasar",
     "app_title": "Tambahkan EPIC21 ke layar utama",
     "app_lede": "Buka buku pelajaran dengan sekali ketuk, seperti aplikasi. Gratis, tanpa daftar.",
     "app_btn": "Tambah ke layar utama",
@@ -881,9 +873,6 @@
     "inapp_ios": "Ketuk ··· atau ikon bagikan di sudut layar, lalu pilih “Buka di Safari”. Atau salin tautan dan tempel di Safari.",
     "app_done": "Selesai! Buka EPIC21 dari layar utama kapan saja.",
     "copylink": "Salin tautan",
-    "ep_tense": "Konsonan tegang",
-    "ep_more_vowels": "Vokal lainnya",
-    "ep_batchim": "Konsonan akhir (batchim)",
     "pc_title": "Pasang EPIC21 di komputer Anda",
     "pc_lede": "Pasang sekali, lalu buka buku langsung dari desktop atau taskbar. Gratis, tanpa daftar.",
     "pc_btn": "Pasang di komputer ini",
@@ -938,6 +927,10 @@
     "ttg": {
      "name": "Học tiếng Hàn qua YouTube Shorts",
      "desc": "Cẩm nang du hành thời gian 2056, đi kèm Shorts \"30 năm sau\" — so sánh 2026 và 2056, học từ vựng và biểu hiện từ sơ cấp đến cao cấp. Có đáp án."
+    },
+    "hangul": {
+     "name": "Bước đầu học Hangul",
+     "desc": "Giáo trình nhập môn giúp đọc chữ Hàn từ con số 0 bằng hình ảnh và âm thanh — mỗi bài có QR video, mỗi chữ có QR âm thanh."
     }
    },
    "ui": {
@@ -986,7 +979,7 @@
     "q3": "Bạn có đọc được bài TOPIK II hoặc tin tức tiếng Hàn không?",
     "yes": "Có",
     "no": "Chưa",
-    "r_hangul": "Hãy bắt đầu với Bước đầu học Hangul, khóa học video miễn phí giúp bạn đọc được chữ Hàn.",
+    "r_hangul": "Hãy bắt đầu với giáo trình Bước đầu học Hangul: học đọc chữ Hàn từ con số 0 qua hình ảnh, video và âm thanh.",
     "r_level": "Trình độ của bạn: {level}",
     "show": "Xem các giáo trình này",
     "again": "Làm lại",
@@ -995,11 +988,6 @@
     "done_count": "Đã học {d} / {n}",
     "qr": "Mã QR",
     "qr_text": "Quét để mở trang này trên điện thoại.",
-    "intro_title": "Bước đầu học Hangul",
-    "intro_desc": "Khóa học video miễn phí giúp bạn đọc được chữ Hàn từ con số 0.",
-    "ep_vowels": "Nguyên âm cơ bản",
-    "next_ep": "Hãy đón chờ tập tiếp theo!",
-    "ep_consonants": "Phụ âm cơ bản",
     "app_title": "Thêm EPIC21 vào màn hình chính",
     "app_lede": "Mở giáo trình chỉ với một chạm, như một ứng dụng. Miễn phí, không cần đăng ký.",
     "app_btn": "Thêm vào màn hình chính",
@@ -1012,9 +1000,6 @@
     "inapp_ios": "Chạm ··· hoặc biểu tượng chia sẻ ở góc màn hình rồi chọn “Mở bằng Safari”. Hoặc sao chép liên kết và dán vào Safari.",
     "app_done": "Xong! Giờ bạn có thể mở EPIC21 từ màn hình chính bất cứ lúc nào.",
     "copylink": "Sao chép liên kết",
-    "ep_tense": "Phụ âm căng",
-    "ep_more_vowels": "Các nguyên âm còn lại",
-    "ep_batchim": "Phụ âm cuối (batchim)",
     "pc_title": "Cài EPIC21 lên máy tính",
     "pc_lede": "Cài một lần là mở giáo trình ngay từ màn hình nền hoặc thanh tác vụ. Miễn phí, không cần đăng ký.",
     "pc_btn": "Cài lên máy tính này",
@@ -1069,6 +1054,10 @@
     "ttg": {
      "name": "Matuto ng Korean sa YouTube Shorts",
      "desc": "Time Travel Guide 2056, kapares ng Shorts na \"30 Taon Mula Ngayon\" — paghambingin ang 2026 at 2056 at matuto ng mga salita at ekspresyon mula baguhan hanggang mataas na antas. May sagot."
+    },
+    "hangul": {
+     "name": "Unang Hakbang sa Hangul",
+     "desc": "Panimulang aklat para matutong bumasa ng letrang Korean mula sa simula gamit ang larawan at tunog — may video QR bawat aralin at sound QR bawat letra."
     }
    },
    "ui": {
@@ -1117,7 +1106,7 @@
     "q3": "Kaya mo bang magbasa ng teksto sa TOPIK II o balita sa Korean?",
     "yes": "Oo",
     "no": "Hindi pa",
-    "r_hangul": "Magsimula sa Unang Hakbang sa Hangul, ang aming libreng video course para matutong bumasa ng letrang Korean.",
+    "r_hangul": "Magsimula sa aklat na Unang Hakbang sa Hangul: matutong bumasa ng letrang Korean mula sa simula gamit ang larawan, video at tunog.",
     "r_level": "Antas mo: {level}",
     "show": "Ipakita ang mga aklat na ito",
     "again": "Ulitin",
@@ -1126,11 +1115,6 @@
     "done_count": "{d} / {n} napag-aralan",
     "qr": "QR code",
     "qr_text": "I-scan para buksan ang pahinang ito sa telepono.",
-    "intro_title": "Unang Hakbang sa Hangul",
-    "intro_desc": "Libreng video course para matutong bumasa ng letrang Korean mula sa simula.",
-    "ep_vowels": "Mga pangunahing patinig",
-    "next_ep": "Abangan ang susunod na episode!",
-    "ep_consonants": "Mga pangunahing katinig",
     "app_title": "Idagdag ang EPIC21 sa home screen",
     "app_lede": "Mabubuksan mo ang mga aklat sa isang tap, parang app. Libre, walang sign-up.",
     "app_btn": "Idagdag sa home screen",
@@ -1143,9 +1127,6 @@
     "inapp_ios": "I-tap ang ··· o ang share icon sa sulok ng screen at piliin ang “Open in Safari”. O kopyahin ang link at i-paste sa Safari.",
     "app_done": "Tapos na! Buksan ang EPIC21 mula sa home screen anumang oras.",
     "copylink": "Kopyahin ang link",
-    "ep_tense": "Mga katinig na mariin",
-    "ep_more_vowels": "Iba pang mga patinig",
-    "ep_batchim": "Mga huling katinig (batchim)",
     "pc_title": "I-install ang EPIC21 sa computer mo",
     "pc_lede": "I-install nang isang beses at buksan ang mga aklat diretso mula sa desktop o taskbar. Libre, walang sign-up.",
     "pc_btn": "I-install sa computer na ito",
@@ -1200,6 +1181,10 @@
     "ttg": {
      "name": "YouTube Shorts orqali koreys tilini o‘rganing",
      "desc": "2056-yil vaqt sayohati qo‘llanmasi, «30 yildan keyin» Shorts bilan — 2026 va 2056 ni solishtirib, boshlang‘ichdan yuqori darajagacha so‘z va iboralarni o‘rganing. Javoblar bilan."
+    },
+    "hangul": {
+     "name": "Hangulga ilk qadam",
+     "desc": "Koreys harflarini noldan rasm va tovush bilan o‘qishni o‘rgatadigan boshlang‘ich darslik — har bo‘limda video QR, har harfda tovush QR."
     }
    },
    "ui": {
@@ -1248,7 +1233,7 @@
     "q3": "TOPIK II matnlari yoki koreyscha yangiliklarni o‘qiy olasizmi?",
     "yes": "Ha",
     "no": "Hali yo‘q",
-    "r_hangul": "Hangulga ilk qadam bepul video kursimizdan boshlang — u koreys harflarini o‘qishni o‘rgatadi.",
+    "r_hangul": "«Hangulga ilk qadam» darsligidan boshlang: koreys harflarini noldan rasm, video va tovush bilan o‘qishni o‘rganing.",
     "r_level": "Darajangiz: {level}",
     "show": "Shu darsliklarni ko‘rsatish",
     "again": "Qaytadan",
@@ -1257,11 +1242,6 @@
     "done_count": "{d} / {n} o‘rganildi",
     "qr": "QR kod",
     "qr_text": "Bu sahifani telefonda ochish uchun skanerlang.",
-    "intro_title": "Hangulga ilk qadam",
-    "intro_desc": "Koreys harflarini noldan o‘qishni o‘rgatadigan bepul video kurs.",
-    "ep_vowels": "Asosiy unlilar",
-    "next_ep": "Keyingi qismni kuting!",
-    "ep_consonants": "Asosiy undoshlar",
     "app_title": "EPIC21 ni bosh ekranga qo‘shing",
     "app_lede": "Darsliklarni ilova kabi bir bosishda ochasiz. Bepul, ro‘yxatdan o‘tish shart emas.",
     "app_btn": "Bosh ekranga qo‘shish",
@@ -1274,9 +1254,6 @@
     "inapp_ios": "Ekran burchagidagi ··· yoki ulashish belgisini bosing va “Open in Safari” ni tanlang. Yoki havolani nusxalab, Safari’ga joylang.",
     "app_done": "Tayyor! Endi EPIC21 ni istalgan payt bosh ekrandan oching.",
     "copylink": "Havolani nusxalash",
-    "ep_tense": "Taranglashgan undoshlar",
-    "ep_more_vowels": "Qolgan unlilar",
-    "ep_batchim": "Oxirgi undoshlar (batchim)",
     "pc_title": "EPIC21 ni kompyuteringizga o‘rnating",
     "pc_lede": "Bir marta o‘rnating — darsliklar ish stoli yoki vazifalar panelidan darhol ochiladi. Bepul, ro‘yxatdan o‘tish shart emas.",
     "pc_btn": "Bu kompyuterga o‘rnatish",
@@ -1331,6 +1308,10 @@
     "ttg": {
      "name": "Корейский по YouTube Shorts",
      "desc": "Путеводитель во времени 2056 к Shorts «Через 30 лет» — сравнивайте 2026 и 2056 и учите слова и выражения от начального до продвинутого уровня. С ответами."
+    },
+    "hangul": {
+     "name": "Первые шаги в хангыле",
+     "desc": "Вводный учебник: читаем корейские буквы с нуля по картинкам и звукам — QR-видео к каждому уроку и QR-звук к каждой букве."
     }
    },
    "ui": {
@@ -1379,7 +1360,7 @@
     "q3": "Можете читать тексты TOPIK II или корейские новости?",
     "yes": "Да",
     "no": "Пока нет",
-    "r_hangul": "Начните с бесплатного видеокурса «Первые шаги в хангыле» — он научит читать корейские буквы.",
+    "r_hangul": "Начните с учебника «Первые шаги в хангыле»: учитесь читать корейские буквы с нуля по картинкам, видео и звукам.",
     "r_level": "Ваш уровень: {level}",
     "show": "Показать эти учебники",
     "again": "Начать заново",
@@ -1388,11 +1369,6 @@
     "done_count": "Изучено {d} из {n}",
     "qr": "QR-код",
     "qr_text": "Отсканируйте, чтобы открыть страницу на телефоне.",
-    "intro_title": "Первые шаги в хангыле",
-    "intro_desc": "Бесплатный видеокурс: учимся читать корейские буквы с нуля.",
-    "ep_vowels": "Основные гласные",
-    "next_ep": "Ждите следующую серию!",
-    "ep_consonants": "Основные согласные",
     "app_title": "Добавьте EPIC21 на главный экран",
     "app_lede": "Учебники будут открываться одним касанием, как приложение. Бесплатно, без регистрации.",
     "app_btn": "Добавить на главный экран",
@@ -1405,9 +1381,6 @@
     "inapp_ios": "Нажмите ··· или значок «Поделиться» в углу экрана и выберите «Открыть в Safari». Или скопируйте ссылку и вставьте её в Safari.",
     "app_done": "Готово! Открывайте EPIC21 с главного экрана в любое время.",
     "copylink": "Скопировать ссылку",
-    "ep_tense": "Напряжённые согласные",
-    "ep_more_vowels": "Остальные гласные",
-    "ep_batchim": "Конечные согласные (батчим)",
     "pc_title": "Установите EPIC21 на компьютер",
     "pc_lede": "Установите один раз — и учебники будут открываться прямо с рабочего стола или панели задач. Бесплатно, без регистрации.",
     "pc_btn": "Установить на этот компьютер",
@@ -1462,6 +1435,10 @@
     "ttg": {
      "name": "YouTube Shorts-оор солонгос хэл сур",
      "desc": "«30 жилийн дараа» Shorts-тай хосолсон 2056 цаг хугацааны аяллын хөтөч — 2026 ба 2056-г харьцуулан анхан шатнаас ахисан түвшний үг, хэллэг сур. Хариутай."
+    },
+    "hangul": {
+     "name": "Хангылийн анхны алхам",
+     "desc": "Солонгос үсгийг тэгээс зураг, дуугаар уншиж сурах эхлэлийн ном — хичээл бүрт видео QR, үсэг бүрт дууны QR."
     }
    },
    "ui": {
@@ -1510,7 +1487,7 @@
     "q3": "TOPIK II-ын текст эсвэл солонгос мэдээ уншиж чадах уу?",
     "yes": "Тийм",
     "no": "Хараахан үгүй",
-    "r_hangul": "«Хангылийн анхны алхам» үнэгүй видео хичээлээс эхлээрэй — солонгос үсэг уншиж сурна.",
+    "r_hangul": "«Хангылийн анхны алхам» номоос эхлээрэй: солонгос үсгийг тэгээс зураг, видео, дуугаар уншиж сур.",
     "r_level": "Таны түвшин: {level}",
     "show": "Эдгээр номыг харах",
     "again": "Дахин эхлэх",
@@ -1519,11 +1496,6 @@
     "done_count": "{n}-ээс {d} нь дууссан",
     "qr": "QR код",
     "qr_text": "Утсаараа уншуулж энэ хуудсыг нээнэ үү.",
-    "intro_title": "Хангылийн анхны алхам",
-    "intro_desc": "Солонгос үсгийг тэгээс уншиж сурах үнэгүй видео хичээл.",
-    "ep_vowels": "Үндсэн эгшиг",
-    "next_ep": "Дараагийн ангийг хүлээж байгаарай!",
-    "ep_consonants": "Үндсэн гийгүүлэгч",
     "app_title": "EPIC21-ийг нүүр дэлгэцэндээ нэмээрэй",
     "app_lede": "Сурах бичгээ апп шиг нэг дараад нээнэ. Үнэгүй, бүртгэл шаардлагагүй.",
     "app_btn": "Нүүр дэлгэцэнд нэмэх",
@@ -1536,9 +1508,6 @@
     "inapp_ios": "Дэлгэцийн булан дахь ··· эсвэл хуваалцах дүрсийг дараад “Open in Safari”-г сонгоно уу. Эсвэл холбоосыг хуулж Safari-д буулгана уу.",
     "app_done": "Болчихлоо! EPIC21-ийг нүүр дэлгэцээсээ хүссэн үедээ нээгээрэй.",
     "copylink": "Холбоос хуулах",
-    "ep_tense": "Чангалсан гийгүүлэгч",
-    "ep_more_vowels": "Бусад эгшиг",
-    "ep_batchim": "Төгсгөлийн гийгүүлэгч (батчим)",
     "pc_title": "EPIC21-ийг компьютертоо суулгаарай",
     "pc_lede": "Нэг удаа суулгахад сурах бичгүүд ширээний дэлгэц эсвэл ажлын самбараас шууд нээгдэнэ. Үнэгүй, бүртгүүлэх шаардлагагүй.",
     "pc_btn": "Энэ компьютерт суулгах",
@@ -1593,6 +1562,10 @@
     "ttg": {
      "name": "YouTubeショートで学ぶ韓国語",
      "desc": "ショート「30年後」とセットの2056タイムトラベルガイド — 2026年と2056年を比べながら初級〜上級の語彙と表現を学びます。解答付き。"
+    },
+    "hangul": {
+     "name": "ハングルはじめの一歩",
+     "desc": "絵と音でゼロからハングルが読めるようになる入門テキスト。単元ごとに動画QR、文字ごとに音声QR付き。"
     }
    },
    "ui": {
@@ -1641,7 +1614,7 @@
     "q3": "TOPIK IIの文章や韓国語のニュースが読めますか？",
     "yes": "はい",
     "no": "まだです",
-    "r_hangul": "まずは無料動画講座「ハングルはじめの一歩」から。韓国語の文字が読めるようになります。",
+    "r_hangul": "まずはテキスト「ハングルはじめの一歩」から。絵と動画と音で、ゼロからハングルが読めるようになります。",
     "r_level": "おすすめレベル：{level}",
     "show": "このテキストを見る",
     "again": "最初からやり直す",
@@ -1650,11 +1623,6 @@
     "done_count": "{d} / {n}冊 学習済み",
     "qr": "QRコード",
     "qr_text": "スマホで読み取るとこのページが開きます。",
-    "intro_title": "ハングルはじめの一歩",
-    "intro_desc": "ゼロから韓国語の文字が読めるようになる無料動画講座です。",
-    "ep_vowels": "基本母音",
-    "next_ep": "次回もお楽しみに！",
-    "ep_consonants": "基本子音",
     "app_title": "EPIC21をホーム画面に追加",
     "app_lede": "アプリのようにワンタップで教材を開けます。無料・登録不要です。",
     "app_btn": "ホーム画面に追加",
@@ -1667,9 +1635,6 @@
     "inapp_ios": "画面の隅にある···または共有アイコンをタップし、「Safariで開く」を選んでください。リンクをコピーしてSafariに貼り付けることもできます。",
     "app_done": "完了です！これからはホーム画面からEPIC21を開けます。",
     "copylink": "リンクをコピー",
-    "ep_tense": "濃音",
-    "ep_more_vowels": "残りの母音",
-    "ep_batchim": "パッチム（終声）",
     "pc_title": "EPIC21をパソコンにインストール",
     "pc_lede": "一度インストールすれば、デスクトップやタスクバーから教材をすぐに開けます。無料・登録不要です。",
     "pc_btn": "このパソコンにインストール",
@@ -1724,6 +1689,10 @@
     "ttg": {
      "name": "看YouTube短视频学韩语",
      "desc": "与短视频《30年后》配套的《2056时间旅行指南》——对比2026年与2056年，学习初级到高级的词汇和表达。附答案。"
+    },
+    "hangul": {
+     "name": "韩文入门第一步",
+     "desc": "用图片和声音从零学会读韩文字母的入门教材——每单元有视频二维码，每个字母有发音二维码。"
     }
    },
    "ui": {
@@ -1772,7 +1741,7 @@
     "q3": "你能读懂TOPIK II文章或韩语新闻吗？",
     "yes": "会",
     "no": "还不会",
-    "r_hangul": "先从免费视频课程《韩文入门第一步》开始，学会读韩文字母。",
+    "r_hangul": "先从教材《韩文入门第一步》开始：用图片、视频和声音，从零学会读韩文字母。",
     "r_level": "推荐级别：{level}",
     "show": "查看这些教材",
     "again": "重新开始",
@@ -1781,11 +1750,6 @@
     "done_count": "已学完 {d} / {n} 本",
     "qr": "二维码",
     "qr_text": "用手机扫码打开此页面。",
-    "intro_title": "韩文入门第一步",
-    "intro_desc": "从零开始学会读韩文字母的免费视频课程。",
-    "ep_vowels": "基本元音",
-    "next_ep": "敬请期待下一集！",
-    "ep_consonants": "基本辅音",
     "app_title": "把 EPIC21 添加到主屏幕",
     "app_lede": "像应用一样，一点就能打开教材。免费，无需注册。",
     "app_btn": "添加到主屏幕",
@@ -1798,9 +1762,6 @@
     "inapp_ios": "轻点屏幕角落的 ··· 或共享图标，选择“在 Safari 中打开”。也可以复制链接，粘贴到 Safari。",
     "app_done": "完成！以后可以随时从主屏幕打开 EPIC21。",
     "copylink": "复制链接",
-    "ep_tense": "紧音",
-    "ep_more_vowels": "其余元音",
-    "ep_batchim": "收音（韵尾）",
     "pc_title": "把 EPIC21 安装到电脑上",
     "pc_lede": "安装一次，就能从桌面或任务栏直接打开教材。免费，无需注册。",
     "pc_btn": "安装到这台电脑",
@@ -1855,6 +1816,10 @@
     "ttg": {
      "name": "เรียนภาษาเกาหลีกับ YouTube Shorts",
      "desc": "คู่มือเดินทางข้ามเวลา 2056 คู่กับ Shorts \"อีก 30 ปีข้างหน้า\" — เปรียบเทียบปี 2026 กับ 2056 เรียนคำศัพท์และสำนวนระดับต้นถึงระดับสูง มีเฉลย"
+    },
+    "hangul": {
+     "name": "ก้าวแรกสู่ฮันกึล",
+     "desc": "หนังสือเรียนเบื้องต้น อ่านตัวอักษรเกาหลีตั้งแต่ศูนย์ด้วยภาพและเสียง — มี QR วิดีโอทุกบท และ QR เสียงทุกตัวอักษร"
     }
    },
    "ui": {
@@ -1903,7 +1868,7 @@
     "q3": "คุณอ่านบทความ TOPIK II หรือข่าวภาษาเกาหลีได้ไหม",
     "yes": "ได้",
     "no": "ยังไม่ได้",
-    "r_hangul": "เริ่มจากคอร์สวิดีโอฟรี ก้าวแรกสู่ฮันกึล ที่จะสอนให้คุณอ่านตัวอักษรเกาหลีได้",
+    "r_hangul": "เริ่มจากหนังสือ ก้าวแรกสู่ฮันกึล: เรียนอ่านตัวอักษรเกาหลีตั้งแต่ศูนย์ด้วยภาพ วิดีโอ และเสียง",
     "r_level": "ระดับของคุณ: {level}",
     "show": "ดูหนังสือเหล่านี้",
     "again": "เริ่มใหม่",
@@ -1912,11 +1877,6 @@
     "done_count": "เรียนแล้ว {d} / {n} เล่ม",
     "qr": "คิวอาร์โค้ด",
     "qr_text": "สแกนเพื่อเปิดหน้านี้บนโทรศัพท์",
-    "intro_title": "ก้าวแรกสู่ฮันกึล",
-    "intro_desc": "คอร์สวิดีโอฟรี เรียนอ่านตัวอักษรเกาหลีตั้งแต่เริ่มต้น",
-    "ep_vowels": "สระพื้นฐาน",
-    "next_ep": "รอติดตามตอนต่อไป!",
-    "ep_consonants": "พยัญชนะพื้นฐาน",
     "app_title": "เพิ่ม EPIC21 ไว้ที่หน้าจอโฮม",
     "app_lede": "เปิดตำราได้ในแตะเดียวเหมือนแอป ฟรี ไม่ต้องสมัคร",
     "app_btn": "เพิ่มไปยังหน้าจอโฮม",
@@ -1929,9 +1889,6 @@
     "inapp_ios": "แตะ ··· หรือไอคอนแชร์ที่มุมหน้าจอ แล้วเลือก “เปิดใน Safari” หรือคัดลอกลิงก์ไปวางใน Safari",
     "app_done": "เรียบร้อย! เปิด EPIC21 จากหน้าจอโฮมได้ทุกเมื่อ",
     "copylink": "คัดลอกลิงก์",
-    "ep_tense": "พยัญชนะเสียงเกร็ง",
-    "ep_more_vowels": "สระที่เหลือ",
-    "ep_batchim": "ตัวสะกด (บัดชิม)",
     "pc_title": "ติดตั้ง EPIC21 บนคอมพิวเตอร์ของคุณ",
     "pc_lede": "ติดตั้งครั้งเดียว แล้วเปิดตำราได้ทันทีจากเดสก์ท็อปหรือแถบงาน ฟรี ไม่ต้องสมัคร",
     "pc_btn": "ติดตั้งบนคอมพิวเตอร์เครื่องนี้",
@@ -1986,6 +1943,10 @@
     "ttg": {
      "name": "រៀនភាសាកូរ៉េតាម YouTube Shorts",
      "desc": "សៀវភៅណែនាំការធ្វើដំណើរឆ្លងពេលវេលា 2056 ភ្ជាប់ជាមួយ Shorts «30 ឆ្នាំក្រោយ» — ប្រៀបធៀប 2026 និង 2056 ហើយរៀនពាក្យ និងកន្សោមពីកម្រិតដំបូងដល់កម្រិតខ្ពស់។ មានចម្លើយ។"
+    },
+    "hangul": {
+     "name": "ជំហានដំបូងនៃហាន់គុល",
+     "desc": "សៀវភៅចាប់ផ្ដើម រៀនអានអក្សរកូរ៉េពីសូន្យតាមរូបភាព និងសំឡេង — មាន QR វីដេអូគ្រប់មេរៀន និង QR សំឡេងគ្រប់តួអក្សរ។"
     }
    },
    "ui": {
@@ -2034,7 +1995,7 @@
     "q3": "តើអ្នកអាចអានអត្ថបទ TOPIK II ឬព័ត៌មានកូរ៉េបានទេ?",
     "yes": "បាន",
     "no": "មិនទាន់",
-    "r_hangul": "ចាប់ផ្ដើមពីវគ្គវីដេអូឥតគិតថ្លៃ «ជំហានដំបូងនៃហាន់គុល» ដែលបង្រៀនអ្នកឱ្យអានអក្សរកូរ៉េបាន។",
+    "r_hangul": "ចាប់ផ្ដើមពីសៀវភៅ «ជំហានដំបូងនៃហាន់គុល»៖ រៀនអានអក្សរកូរ៉េពីសូន្យតាមរូបភាព វីដេអូ និងសំឡេង។",
     "r_level": "កម្រិតរបស់អ្នក៖ {level}",
     "show": "បង្ហាញសៀវភៅទាំងនេះ",
     "again": "ចាប់ផ្ដើមម្ដងទៀត",
@@ -2043,11 +2004,6 @@
     "done_count": "បានរៀនរួច {d} / {n}",
     "qr": "កូដ QR",
     "qr_text": "ស្កេនដើម្បីបើកទំព័រនេះលើទូរសព្ទ។",
-    "intro_title": "ជំហានដំបូងនៃហាន់គុល",
-    "intro_desc": "វគ្គវីដេអូឥតគិតថ្លៃ រៀនអានអក្សរកូរ៉េពីសូន្យ។",
-    "ep_vowels": "ស្រៈមូលដ្ឋាន",
-    "next_ep": "សូមរង់ចាំភាគបន្ទាប់!",
-    "ep_consonants": "ព្យញ្ជនៈមូលដ្ឋាន",
     "app_title": "បន្ថែម EPIC21 ទៅអេក្រង់ដើម",
     "app_lede": "បើកសៀវភៅសិក្សាដោយចុចតែម្ដង ដូចកម្មវិធី។ ឥតគិតថ្លៃ មិនចាំបាច់ចុះឈ្មោះ។",
     "app_btn": "បន្ថែមទៅអេក្រង់ដើម",
@@ -2060,9 +2016,6 @@
     "inapp_ios": "ចុច ··· ឬរូបចែករំលែកនៅជ្រុងអេក្រង់ ហើយជ្រើស “Open in Safari”។ ឬចម្លងតំណ ហើយបិទភ្ជាប់ក្នុង Safari។",
     "app_done": "រួចរាល់! អ្នកអាចបើក EPIC21 ពីអេក្រង់ដើមបានគ្រប់ពេល។",
     "copylink": "ចម្លងតំណ",
-    "ep_tense": "ព្យញ្ជនៈសំឡេងតឹង",
-    "ep_more_vowels": "ស្រៈដែលនៅសល់",
-    "ep_batchim": "ព្យញ្ជនៈចុងក្រោយ (បាត់ឈីម)",
     "pc_title": "ដំឡើង EPIC21 នៅលើកុំព្យូទ័ររបស់អ្នក",
     "pc_lede": "ដំឡើងតែម្តង ហើយបើកសៀវភៅបានភ្លាមៗពីផ្ទៃតុ ឬរបារភារកិច្ច។ ឥតគិតថ្លៃ មិនចាំបាច់ចុះឈ្មោះ។",
     "pc_btn": "ដំឡើងលើកុំព្យូទ័រនេះ",
@@ -2117,6 +2070,10 @@
     "ttg": {
      "name": "YouTube Shorts ဖြင့် ကိုရီးယားစာ လေ့လာပါ",
      "desc": "«နောက် နှစ် ၃၀» Shorts နှင့် တွဲထားသော ၂၀၅၆ အချိန်ခရီး လမ်းညွှန် — ၂၀၂၆ နှင့် ၂၀၅၆ ကို နှိုင်းယှဉ်ပြီး အခြေခံမှ အဆင့်မြင့်အထိ စကားလုံးနှင့် အသုံးအနှုန်းများ လေ့လာပါ။ အဖြေပါဝင်သည်။"
+    },
+    "hangul": {
+     "name": "ဟန်ဂူလ် ပထမခြေလှမ်း",
+     "desc": "ပုံနှင့် အသံဖြင့် ကိုရီးယား စာလုံးများကို အစမှ ဖတ်တတ်စေသော အစပြု စာအုပ် — သင်ခန်းစာတိုင်းတွင် ဗီဒီယို QR၊ စာလုံးတိုင်းတွင် အသံ QR ပါသည်။"
     }
    },
    "ui": {
@@ -2165,7 +2122,7 @@
     "q3": "TOPIK II စာပိုဒ် သို့မဟုတ် ကိုရီးယားသတင်း ဖတ်တတ်ပြီလား",
     "yes": "ဟုတ်",
     "no": "မတတ်သေး",
-    "r_hangul": "ကိုရီးယား စာလုံး ဖတ်တတ်အောင် သင်ပေးသော အခမဲ့ ဗီဒီယို «ဟန်ဂူလ် ပထမခြေလှမ်း» မှ စတင်ပါ။",
+    "r_hangul": "«ဟန်ဂူလ် ပထမခြေလှမ်း» စာအုပ်မှ စတင်ပါ — ပုံ၊ ဗီဒီယိုနှင့် အသံဖြင့် ကိုရီးယား စာလုံးကို အစမှ ဖတ်တတ်အောင် လေ့လာပါ။",
     "r_level": "သင့်အဆင့် - {level}",
     "show": "ဤစာအုပ်များကို ပြရန်",
     "again": "အစမှ ပြန်စရန်",
@@ -2174,11 +2131,6 @@
     "done_count": "{n} အုပ်တွင် {d} အုပ် လေ့လာပြီး",
     "qr": "QR ကုဒ်",
     "qr_text": "ဖုန်းဖြင့် စကင်ဖတ်ပြီး ဤစာမျက်နှာကို ဖွင့်ပါ။",
-    "intro_title": "ဟန်ဂူလ် ပထမခြေလှမ်း",
-    "intro_desc": "ကိုရီးယား စာလုံးများကို အစမှ ဖတ်တတ်အောင် သင်ပေးသော အခမဲ့ ဗီဒီယို သင်တန်း။",
-    "ep_vowels": "အခြေခံ သရ",
-    "next_ep": "နောက်အပိုင်းကို မျှော်လင့်ထားပါ!",
-    "ep_consonants": "အခြေခံ ဗျည်း",
     "app_title": "EPIC21 ကို ပင်မစခရင်တွင် ထည့်ပါ",
     "app_lede": "အက်ပ်လိုပဲ တစ်ချက်နှိပ်ရုံဖြင့် ဖတ်စာအုပ်များကို ဖွင့်နိုင်သည်။ အခမဲ့ဖြစ်ပြီး စာရင်းသွင်းရန် မလိုပါ။",
     "app_btn": "ပင်မစခရင်တွင် ထည့်မည်",
@@ -2191,9 +2143,6 @@
     "inapp_ios": "စခရင်ထောင့်ရှိ ··· သို့မဟုတ် မျှဝေရန်အိုင်ကွန်ကို နှိပ်ပြီး “Open in Safari” ကို ရွေးပါ။ သို့မဟုတ် လင့်ခ်ကို ကူးယူပြီး Safari တွင် ထည့်ပါ။",
     "app_done": "ပြီးပါပြီ! EPIC21 ကို ပင်မစခရင်မှ အချိန်မရွေး ဖွင့်နိုင်ပါပြီ။",
     "copylink": "လင့်ခ် ကူးယူမည်",
-    "ep_tense": "အသံတင်း ဗျည်း",
-    "ep_more_vowels": "ကျန်ရှိသော သရများ",
-    "ep_batchim": "အသတ် ဗျည်း (ပတ်ချင်မ်)",
     "pc_title": "EPIC21 ကို သင့်ကွန်ပျူတာတွင် ထည့်သွင်းပါ",
     "pc_lede": "တစ်ကြိမ်ထည့်သွင်းထားလျှင် Desktop သို့မဟုတ် Taskbar မှ စာအုပ်များကို ချက်ချင်းဖွင့်နိုင်သည်။ အခမဲ့ဖြစ်ပြီး အကောင့်ဖွင့်ရန် မလိုပါ။",
     "pc_btn": "ဤကွန်ပျူတာတွင် ထည့်သွင်းရန်",
@@ -2248,6 +2197,10 @@
     "ttg": {
      "name": "YouTube Shorts बाट कोरियाली भाषा सिक्नुहोस्",
      "desc": "«३० वर्षपछि» Shorts सँगको २०५६ समय-यात्रा गाइड — २०२६ र २०५६ तुलना गर्दै सुरुदेखि उच्च तहसम्मका शब्द र अभिव्यक्ति सिक्नुहोस्। उत्तरसहित।"
+    },
+    "hangul": {
+     "name": "हान्गुलको पहिलो पाइला",
+     "desc": "चित्र र आवाजबाट कोरियन अक्षर सुरुदेखि पढ्न सिकाउने सुरुवाती पुस्तक — हरेक पाठमा भिडियो QR र हरेक अक्षरमा आवाज QR।"
     }
    },
    "ui": {
@@ -2296,7 +2249,7 @@
     "q3": "के तपाईं TOPIK II पाठ वा कोरियन समाचार पढ्न सक्नुहुन्छ?",
     "yes": "सक्छु",
     "no": "अझै सक्दिनँ",
-    "r_hangul": "कोरियन अक्षर पढ्न सिकाउने निःशुल्क भिडियो कोर्स «हान्गुलको पहिलो पाइला» बाट सुरु गर्नुहोस्।",
+    "r_hangul": "«हान्गुलको पहिलो पाइला» पुस्तकबाट सुरु गर्नुहोस्: चित्र, भिडियो र आवाजबाट कोरियन अक्षर सुरुदेखि पढ्न सिक्नुहोस्।",
     "r_level": "तपाईंको स्तर: {level}",
     "show": "यी पुस्तक हेर्नुहोस्",
     "again": "फेरि सुरु गर्नुहोस्",
@@ -2305,11 +2258,6 @@
     "done_count": "{n} मध्ये {d} पढिसकियो",
     "qr": "QR कोड",
     "qr_text": "फोनमा यो पेज खोल्न स्क्यान गर्नुहोस्।",
-    "intro_title": "हान्गुलको पहिलो पाइला",
-    "intro_desc": "कोरियन अक्षर सुरुदेखि पढ्न सिकाउने निःशुल्क भिडियो कोर्स।",
-    "ep_vowels": "आधारभूत स्वर",
-    "next_ep": "अर्को भागको प्रतीक्षा गर्नुहोस्!",
-    "ep_consonants": "आधारभूत व्यञ्जन",
     "app_title": "EPIC21 लाई होम स्क्रिनमा थप्नुहोस्",
     "app_lede": "एपजस्तै एक पटक थिचेर पाठ्यपुस्तक खोल्न सकिन्छ। निःशुल्क, दर्ता आवश्यक छैन।",
     "app_btn": "होम स्क्रिनमा थप्नुहोस्",
@@ -2322,9 +2270,6 @@
     "inapp_ios": "स्क्रिनको कुनामा रहेको ··· वा सेयर आइकन थिचेर “Open in Safari” छान्नुहोस्। वा लिङ्क कपी गरेर Safari मा पेस्ट गर्नुहोस्।",
     "app_done": "भयो! अब जुनसुकै बेला होम स्क्रिनबाट EPIC21 खोल्नुहोस्।",
     "copylink": "लिङ्क कपी गर्नुहोस्",
-    "ep_tense": "कडा व्यञ्जन",
-    "ep_more_vowels": "बाँकी स्वर",
-    "ep_batchim": "अन्तिम व्यञ्जन (बाच्छिम)",
     "pc_title": "EPIC21 आफ्नो कम्प्युटरमा इन्स्टल गर्नुहोस्",
     "pc_lede": "एक पटक इन्स्टल गरेपछि पुस्तकहरू डेस्कटप वा टास्कबारबाट सिधै खुल्छन्। निःशुल्क, साइन-अप चाहिँदैन।",
     "pc_btn": "यो कम्प्युटरमा इन्स्टल गर्नुहोस्",
@@ -2379,6 +2324,10 @@
     "ttg": {
      "name": "YouTube Shorts দিয়ে কোরীয় শিখুন",
      "desc": "«৩০ বছর পর» Shorts-এর সঙ্গী ২০৫৬ টাইম ট্রাভেল গাইড — ২০২৬ ও ২০৫৬ তুলনা করে প্রাথমিক থেকে উচ্চ স্তরের শব্দ ও অভিব্যক্তি শিখুন। উত্তরসহ।"
+    },
+    "hangul": {
+     "name": "হানগুলের প্রথম ধাপ",
+     "desc": "ছবি ও ধ্বনিতে শুরু থেকে কোরিয়ান অক্ষর পড়া শেখার প্রাথমিক বই — প্রতিটি পাঠে ভিডিও QR, প্রতিটি অক্ষরে ধ্বনি QR।"
     }
    },
    "ui": {
@@ -2427,7 +2376,7 @@
     "q3": "আপনি কি TOPIK II-এর পাঠ্য বা কোরিয়ান খবর পড়তে পারেন?",
     "yes": "হ্যাঁ",
     "no": "এখনও না",
-    "r_hangul": "কোরিয়ান অক্ষর পড়া শেখানো বিনামূল্যের ভিডিও কোর্স «হানগুলের প্রথম ধাপ» দিয়ে শুরু করুন।",
+    "r_hangul": "«হানগুলের প্রথম ধাপ» বই দিয়ে শুরু করুন: ছবি, ভিডিও ও ধ্বনিতে শুরু থেকে কোরিয়ান অক্ষর পড়া শিখুন।",
     "r_level": "আপনার স্তর: {level}",
     "show": "এই বইগুলো দেখুন",
     "again": "আবার শুরু করুন",
@@ -2436,11 +2385,6 @@
     "done_count": "{n}টির মধ্যে {d}টি পড়া শেষ",
     "qr": "QR কোড",
     "qr_text": "ফোনে এই পেজ খুলতে স্ক্যান করুন।",
-    "intro_title": "হানগুলের প্রথম ধাপ",
-    "intro_desc": "শুরু থেকে কোরিয়ান অক্ষর পড়া শেখার বিনামূল্যের ভিডিও কোর্স।",
-    "ep_vowels": "মৌলিক স্বরবর্ণ",
-    "next_ep": "পরের পর্বের অপেক্ষায় থাকুন!",
-    "ep_consonants": "মৌলিক ব্যঞ্জনবর্ণ",
     "app_title": "EPIC21 হোম স্ক্রিনে যোগ করুন",
     "app_lede": "অ্যাপের মতো এক ট্যাপেই পাঠ্যবই খুলবে। বিনামূল্যে, নিবন্ধন লাগবে না।",
     "app_btn": "হোম স্ক্রিনে যোগ করুন",
@@ -2453,9 +2397,6 @@
     "inapp_ios": "স্ক্রিনের কোণে থাকা ··· বা শেয়ার আইকন ট্যাপ করে “Open in Safari” বেছে নিন। অথবা লিংক কপি করে Safari-তে পেস্ট করুন।",
     "app_done": "হয়ে গেছে! এখন যেকোনো সময় হোম স্ক্রিন থেকে EPIC21 খুলুন।",
     "copylink": "লিংক কপি করুন",
-    "ep_tense": "কঠিন ব্যঞ্জনধ্বনি",
-    "ep_more_vowels": "বাকি স্বরবর্ণ",
-    "ep_batchim": "শেষ ব্যঞ্জনধ্বনি (বাচিম)",
     "pc_title": "EPIC21 আপনার কম্পিউটারে ইনস্টল করুন",
     "pc_lede": "একবার ইনস্টল করলেই ডেস্কটপ বা টাস্কবার থেকে সরাসরি বই খোলা যাবে। বিনামূল্যে, সাইন-আপ লাগবে না।",
     "pc_btn": "এই কম্পিউটারে ইনস্টল করুন",
@@ -2510,6 +2451,10 @@
     "ttg": {
      "name": "YouTube Shorts මගින් කොරියානු ඉගෙන ගන්න",
      "desc": "«අවුරුදු 30කට පසු» Shorts සමඟ 2056 කාල සංචාර මාර්ගෝපදේශය — 2026 සහ 2056 සසඳමින් මූලික සිට උසස් මට්ටම දක්වා වචන හා යෙදුම් ඉගෙන ගන්න. පිළිතුරු සහිතයි."
+    },
+    "hangul": {
+     "name": "හංගුල් පළමු පියවර",
+     "desc": "රූප හා ශබ්ද සමඟ මුල සිටම කොරියානු අකුරු කියවීමට උගන්වන ආරම්භක පොත — සෑම පාඩමකටම වීඩියෝ QR, සෑම අකුරකටම ශබ්ද QR."
     }
    },
    "ui": {
@@ -2558,7 +2503,7 @@
     "q3": "TOPIK II ඡේද හෝ කොරියානු පුවත් කියවිය හැකිද?",
     "yes": "ඔව්",
     "no": "තවම නැහැ",
-    "r_hangul": "කොරියානු අකුරු කියවීමට උගන්වන නොමිලේ වීඩියෝ පාඨමාලාව «හංගුල් පළමු පියවර» සමඟ පටන් ගන්න.",
+    "r_hangul": "«හංගුල් පළමු පියවර» පොතෙන් පටන් ගන්න: රූප, වීඩියෝ හා ශබ්ද සමඟ මුල සිටම කොරියානු අකුරු කියවීමට ඉගෙන ගන්න.",
     "r_level": "ඔබේ මට්ටම: {level}",
     "show": "මෙම පොත් පෙන්වන්න",
     "again": "නැවත අරඹන්න",
@@ -2567,11 +2512,6 @@
     "done_count": "{n} න් {d} ක් ඉගෙන ගත්තා",
     "qr": "QR කේතය",
     "qr_text": "දුරකථනයෙන් මෙම පිටුව විවෘත කිරීමට ස්කෑන් කරන්න.",
-    "intro_title": "හංගුල් පළමු පියවර",
-    "intro_desc": "මුල සිටම කොරියානු අකුරු කියවීමට ඉගැන්වෙන නොමිලේ වීඩියෝ පාඨමාලාව.",
-    "ep_vowels": "මූලික ස්වර",
-    "next_ep": "ඊළඟ කොටස බලාපොරොත්තුවෙන් සිටින්න!",
-    "ep_consonants": "මූලික ව්‍යඤ්ජන",
     "app_title": "EPIC21 මුල් තිරයට එක් කරන්න",
     "app_lede": "යෙදුමක් වගේ එක් තට්ටුවකින් පෙළපොත් විවෘත කළ හැක. නොමිලේ, ලියාපදිංචි වීමක් අවශ්‍ය නැත.",
     "app_btn": "මුල් තිරයට එක් කරන්න",
@@ -2584,9 +2524,6 @@
     "inapp_ios": "තිරයේ කෙළවරේ ඇති ··· හෝ බෙදාගැනීමේ නිරූපකය තට්ටු කර “Open in Safari” තෝරන්න. නැතහොත් සබැඳිය පිටපත් කර Safari හි අලවන්න.",
     "app_done": "හරි! දැන් ඕනෑම වේලාවක මුල් තිරයෙන් EPIC21 විවෘත කරන්න.",
     "copylink": "සබැඳිය පිටපත් කරන්න",
-    "ep_tense": "තද ව්‍යඤ්ජන",
-    "ep_more_vowels": "ඉතිරි ස්වර",
-    "ep_batchim": "අවසාන ව්‍යඤ්ජන (බච්චිම්)",
     "pc_title": "EPIC21 ඔබේ පරිගණකයේ ස්ථාපනය කරන්න",
     "pc_lede": "එක් වරක් ස්ථාපනය කළ පසු ඩෙස්ක්ටොප් එකෙන් හෝ ටාස්ක්බාර් එකෙන් පොත් කෙලින්ම විවෘත වේ. නොමිලේ, ලියාපදිංචි වීම අවශ්‍ය නැත.",
     "pc_btn": "මෙම පරිගණකයේ ස්ථාපනය කරන්න",
@@ -2641,6 +2578,10 @@
     "ttg": {
      "name": "تعلّم الكورية مع YouTube Shorts",
      "desc": "دليل السفر عبر الزمن 2056 المرافق لمقاطع «بعد 30 عامًا» — قارن بين 2026 و2056 وتعلّم المفردات والتعابير من المستوى المبتدئ إلى المتقدم. مع الإجابات."
+    },
+    "hangul": {
+     "name": "الخطوات الأولى في الهانغول",
+     "desc": "كتاب تمهيدي لتعلّم قراءة الحروف الكورية من الصفر بالصور والأصوات — رمز QR لفيديو كل وحدة ورمز QR لصوت كل حرف."
     }
    },
    "ui": {
@@ -2689,7 +2630,7 @@
     "q3": "هل تستطيع قراءة نصوص TOPIK II أو الأخبار الكورية؟",
     "yes": "نعم",
     "no": "ليس بعد",
-    "r_hangul": "ابدأ بدورة الفيديو المجانية «الخطوات الأولى في الهانغول» لتتعلّم قراءة الحروف الكورية.",
+    "r_hangul": "ابدأ بكتاب «الخطوات الأولى في الهانغول»: تعلّم قراءة الحروف الكورية من الصفر بالصور والفيديو والأصوات.",
     "r_level": "مستواك: {level}",
     "show": "اعرض هذه الكتب",
     "again": "ابدأ من جديد",
@@ -2698,11 +2639,6 @@
     "done_count": "{d} من {n} تمت دراستها",
     "qr": "رمز QR",
     "qr_text": "امسح الرمز لفتح هذه الصفحة على الهاتف.",
-    "intro_title": "الخطوات الأولى في الهانغول",
-    "intro_desc": "دورة فيديو مجانية لتعلّم قراءة الحروف الكورية من الصفر.",
-    "ep_vowels": "الحروف المتحركة الأساسية",
-    "next_ep": "ترقّبوا الحلقة القادمة!",
-    "ep_consonants": "الحروف الساكنة الأساسية",
     "app_title": "أضف EPIC21 إلى الشاشة الرئيسية",
     "app_lede": "ستفتح الكتب بلمسة واحدة مثل التطبيق. مجانًا وبدون تسجيل.",
     "app_btn": "إضافة إلى الشاشة الرئيسية",
@@ -2715,9 +2651,6 @@
     "inapp_ios": "اضغط على ··· أو أيقونة المشاركة في زاوية الشاشة واختر «فتح في Safari». أو انسخ الرابط والصقه في Safari.",
     "app_done": "تم! افتح EPIC21 من الشاشة الرئيسية متى شئت.",
     "copylink": "نسخ الرابط",
-    "ep_tense": "الحروف الساكنة المشدودة",
-    "ep_more_vowels": "بقية الحروف المتحركة",
-    "ep_batchim": "الحروف الساكنة الختامية (باتشيم)",
     "pc_title": "ثبّت EPIC21 على حاسوبك",
     "pc_lede": "ثبّته مرة واحدة وافتح الكتب مباشرة من سطح المكتب أو شريط المهام. مجاني وبدون تسجيل.",
     "pc_btn": "التثبيت على هذا الحاسوب",
@@ -2772,6 +2705,10 @@
     "ttg": {
      "name": "YouTube Shorts کے ساتھ کوریائی سیکھیں",
      "desc": "«30 سال بعد» Shorts کے ساتھ 2056 ٹائم ٹریول گائیڈ — 2026 اور 2056 کا موازنہ کرتے ہوئے ابتدائی سے اعلیٰ سطح تک الفاظ اور اظہار سیکھیں۔ جوابات شامل ہیں۔"
+    },
+    "hangul": {
+     "name": "ہنگل کے پہلے قدم",
+     "desc": "تصویروں اور آوازوں سے شروع سے کورین حروف پڑھنا سکھانے والی ابتدائی کتاب — ہر سبق کے لیے ویڈیو QR اور ہر حرف کے لیے آواز QR۔"
     }
    },
    "ui": {
@@ -2820,7 +2757,7 @@
     "q3": "کیا آپ TOPIK II کے متن یا کورین خبریں پڑھ سکتے ہیں؟",
     "yes": "جی ہاں",
     "no": "ابھی نہیں",
-    "r_hangul": "مفت ویڈیو کورس «ہنگل کے پہلے قدم» سے شروع کریں، یہ آپ کو کورین حروف پڑھنا سکھاتا ہے۔",
+    "r_hangul": "«ہنگل کے پہلے قدم» کتاب سے شروع کریں: تصویروں، ویڈیو اور آوازوں سے شروع سے کورین حروف پڑھنا سیکھیں۔",
     "r_level": "آپ کی سطح: {level}",
     "show": "یہ کتابیں دکھائیں",
     "again": "دوبارہ شروع کریں",
@@ -2829,11 +2766,6 @@
     "done_count": "{n} میں سے {d} پڑھ لیں",
     "qr": "QR کوڈ",
     "qr_text": "فون پر یہ صفحہ کھولنے کے لیے اسکین کریں۔",
-    "intro_title": "ہنگل کے پہلے قدم",
-    "intro_desc": "شروع سے کورین حروف پڑھنا سیکھنے کا مفت ویڈیو کورس۔",
-    "ep_vowels": "بنیادی حروفِ علت",
-    "next_ep": "اگلی قسط کا انتظار کریں!",
-    "ep_consonants": "بنیادی حروفِ صحیح",
     "app_title": "EPIC21 کو ہوم اسکرین پر شامل کریں",
     "app_lede": "ایپ کی طرح ایک ٹچ میں کتابیں کھولیں۔ مفت، کوئی رجسٹریشن نہیں۔",
     "app_btn": "ہوم اسکرین پر شامل کریں",
@@ -2846,9 +2778,6 @@
     "inapp_ios": "اسکرین کے کونے میں ··· یا شیئر آئیکن دبائیں اور “Open in Safari” منتخب کریں۔ یا لنک کاپی کر کے Safari میں پیسٹ کریں۔",
     "app_done": "ہو گیا! اب جب چاہیں ہوم اسکرین سے EPIC21 کھولیں۔",
     "copylink": "لنک کاپی کریں",
-    "ep_tense": "سخت حروفِ صحیح",
-    "ep_more_vowels": "باقی حروفِ علت",
-    "ep_batchim": "آخری حروفِ صحیح (بَچِم)",
     "pc_title": "EPIC21 اپنے کمپیوٹر پر انسٹال کریں",
     "pc_lede": "ایک بار انسٹال کریں اور کتابیں ڈیسک ٹاپ یا ٹاسک بار سے فوراً کھولیں۔ مفت، سائن اپ کی ضرورت نہیں۔",
     "pc_btn": "اس کمپیوٹر پر انسٹال کریں",
@@ -2860,6 +2789,39 @@
   }
  },
  "books": [
+  {
+   "id": "epic21-hangul-starter-01",
+   "group": "hangul",
+   "level": "입문",
+   "slug": "hangul",
+   "ko": "한글 첫걸음",
+   "en": "Hangul First Steps",
+   "vol": null,
+   "ko_sub": "그림과 소리로 배우는 한글",
+   "en_sub": "Learn Hangul with pictures and sounds",
+   "tr": {
+    "ne": "चित्र र आवाजबाट हाङ्गुल सिकौं",
+    "ru": "Хангыль по картинкам и звукам",
+    "mn": "Зураг, дуугаар хангыль сурах",
+    "my": "ပုံနှင့် အသံဖြင့် ဟန်ဂူလ် လေ့လာမယ်",
+    "vi": "Học Hangul qua hình ảnh và âm thanh",
+    "bn": "ছবি ও ধ্বনিতে হাঙ্গুল শিখি",
+    "es": "Aprende Hangul con imágenes y sonidos",
+    "si": "රූප හා ශබ්ද සමඟ හංගුල් ඉගෙන ගනිමු",
+    "ar": "تعلّم الهانغول بالصور والأصوات",
+    "ur": "تصویروں اور آوازوں سے ہانگل سیکھیں",
+    "uz": "Hangulni rasm va tovush bilan o‘rganamiz",
+    "id": "Belajar Hangul dengan gambar dan suara",
+    "ja": "絵と音で学ぶハングル",
+    "zh-Hans": "用图片和声音学韩文",
+    "km": "រៀនហាន់គុលតាមរូបភាព និងសំឡេង",
+    "tl": "Matuto ng Hangul sa larawan at tunog",
+    "th": "เรียนฮันกึลด้วยภาพและเสียง",
+    "pt": "Aprenda Hangul com imagens e sons",
+    "fr": "Apprendre le hangeul avec des images et des sons"
+   },
+   "video": "Tnutyr3SC14"
+  },
   {
    "id": "epic21-dive-01-haenyeo",
    "group": "mag",
@@ -4350,6 +4312,28 @@
    "EPIC21_TTG2056_S5_18_Sinhala_Free.pdf",
    "EPIC21_TTG2056_S5_19_Arabic_Free.pdf",
    "EPIC21_TTG2056_S5_20_Urdu_Free.pdf"
+  ],
+  "epic21-hangul-starter-01": [
+   "EPIC21_START01_Hangul_01_Arabic_Free.pdf",
+   "EPIC21_START01_Hangul_01_Bengali_Free.pdf",
+   "EPIC21_START01_Hangul_01_Burmese_Free.pdf",
+   "EPIC21_START01_Hangul_01_Chinese-Simplified_Free.pdf",
+   "EPIC21_START01_Hangul_01_English_Free.pdf",
+   "EPIC21_START01_Hangul_01_French_Free.pdf",
+   "EPIC21_START01_Hangul_01_Indonesian_Free.pdf",
+   "EPIC21_START01_Hangul_01_Japanese_Free.pdf",
+   "EPIC21_START01_Hangul_01_Khmer_Free.pdf",
+   "EPIC21_START01_Hangul_01_Mongolian_Free.pdf",
+   "EPIC21_START01_Hangul_01_Nepali_Free.pdf",
+   "EPIC21_START01_Hangul_01_Portuguese_Free.pdf",
+   "EPIC21_START01_Hangul_01_Russian_Free.pdf",
+   "EPIC21_START01_Hangul_01_Sinhala_Free.pdf",
+   "EPIC21_START01_Hangul_01_Spanish_Free.pdf",
+   "EPIC21_START01_Hangul_01_Tagalog_Free.pdf",
+   "EPIC21_START01_Hangul_01_Thai_Free.pdf",
+   "EPIC21_START01_Hangul_01_Urdu_Free.pdf",
+   "EPIC21_START01_Hangul_01_Uzbek_Free.pdf",
+   "EPIC21_START01_Hangul_01_Vietnamese_Free.pdf"
   ]
  },
  "sizes": {
@@ -4990,6 +4974,28 @@
    "EPIC21_TTG2056_S5_18_Sinhala_Free.pdf": 29350466,
    "EPIC21_TTG2056_S5_19_Arabic_Free.pdf": 29403667,
    "EPIC21_TTG2056_S5_20_Urdu_Free.pdf": 31599735
+  },
+  "epic21-hangul-starter-01": {
+   "EPIC21_START01_Hangul_01_Arabic_Free.pdf": 8549481,
+   "EPIC21_START01_Hangul_01_Bengali_Free.pdf": 8542237,
+   "EPIC21_START01_Hangul_01_Burmese_Free.pdf": 8374993,
+   "EPIC21_START01_Hangul_01_Chinese-Simplified_Free.pdf": 8763438,
+   "EPIC21_START01_Hangul_01_English_Free.pdf": 8528402,
+   "EPIC21_START01_Hangul_01_French_Free.pdf": 8529114,
+   "EPIC21_START01_Hangul_01_Indonesian_Free.pdf": 8528019,
+   "EPIC21_START01_Hangul_01_Japanese_Free.pdf": 8820334,
+   "EPIC21_START01_Hangul_01_Khmer_Free.pdf": 8368854,
+   "EPIC21_START01_Hangul_01_Mongolian_Free.pdf": 8530653,
+   "EPIC21_START01_Hangul_01_Nepali_Free.pdf": 8544298,
+   "EPIC21_START01_Hangul_01_Portuguese_Free.pdf": 8529822,
+   "EPIC21_START01_Hangul_01_Russian_Free.pdf": 8531571,
+   "EPIC21_START01_Hangul_01_Sinhala_Free.pdf": 8543620,
+   "EPIC21_START01_Hangul_01_Spanish_Free.pdf": 8529441,
+   "EPIC21_START01_Hangul_01_Tagalog_Free.pdf": 8528044,
+   "EPIC21_START01_Hangul_01_Thai_Free.pdf": 8545830,
+   "EPIC21_START01_Hangul_01_Urdu_Free.pdf": 8416651,
+   "EPIC21_START01_Hangul_01_Uzbek_Free.pdf": 8529389,
+   "EPIC21_START01_Hangul_01_Vietnamese_Free.pdf": 8529722
   }
  },
  "goatcounter": "epic21korean",
@@ -5022,39 +5028,8 @@
   "epic21-ttg2056-s2": "2026-11-09",
   "epic21-ttg2056-s3": "2026-11-09",
   "epic21-ttg2056-s4": "2026-11-10",
-  "epic21-ttg2056-s5": "2026-11-14"
+  "epic21-ttg2056-s5": "2026-11-14",
+  "epic21-hangul-starter-01": "2026-11-14"
  },
- "intro": [
-  {
-   "no": 1,
-   "id": "Tnutyr3SC14",
-   "ko": "기본 모음",
-   "key": "ep_vowels"
-  },
-  {
-   "no": 2,
-   "id": "dbgBSaflk1g",
-   "ko": "기본 자음",
-   "key": "ep_consonants"
-  },
-  {
-   "no": 3,
-   "id": "y1mFxUzoT1w",
-   "ko": "된소리",
-   "key": "ep_tense"
-  },
-  {
-   "no": 4,
-   "id": "z3e-xTtfuYk",
-   "ko": "나머지 모음",
-   "key": "ep_more_vowels"
-  },
-  {
-   "no": 5,
-   "id": "P3vRwvgyC80",
-   "ko": "받침",
-   "key": "ep_batchim"
-  }
- ],
- "intro_complete": true
+ "intro": []
 }

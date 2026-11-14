@@ -349,18 +349,6 @@ dialog.ldlg.appdlg{max-width:min(440px,calc(100vw - 24px))}
 .subgo{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 18px;border-radius:999px;background:#E62117;color:#fff;font-weight:800;text-decoration:none}
 .subgo svg{width:20px;height:20px}
 .sublater{min-height:44px;padding:0 12px;color:var(--ink-soft)}
-/* 입문 영상 강좌 */
-.eps{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px 18px}
-.ep{display:flex;flex-direction:column;text-decoration:none;color:inherit;min-width:0}
-.ethumb{position:relative;display:block;aspect-ratio:16/9;border-radius:6px;overflow:hidden;background:var(--surface);box-shadow:var(--shadow);border-bottom:5px solid #1F9A44}
-.ethumb img{width:100%;height:100%;object-fit:cover;display:block}
-.eplay{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;background:rgba(230,33,23,.92);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
-.eplay svg{width:28px;height:28px;margin-inline-start:3px}
-.ep:hover .eplay{transform:scale(1.06)}
-.evol{margin-top:10px;font-size:13px;font-weight:700;color:var(--vol)}
-.ename{font-size:17px;font-weight:700;line-height:1.35}
-.epnext{aspect-ratio:16/9;border:1.5px dashed var(--grid-soft);border-radius:6px;display:flex;align-items:center;justify-content:center;padding:14px;text-align:center}
-.enext{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--ink-soft);font-weight:700;font-size:15px}
 /* 알림 */
 .toast{position:fixed;inset-inline:0;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:auto;width:max-content;max-width:90vw;
   padding:10px 18px;border-radius:999px;background:var(--chip-on);color:var(--chip-on-ink);font-size:14px;font-weight:500;
@@ -507,35 +495,6 @@ footer a{color:var(--muted)}
 </section>
 
 <main id="shelf">
-  {%- if intro %}
-  <section class="tier tier-start intro" id="lv-start" data-tier="start" data-q="hangul 한글 모음 자음 된소리 받침 vowel consonant batchim {{ t.ui.intro_title|lower }} {{ intro|map(attribute='title')|join(' ')|lower }}" aria-labelledby="lvh-start">
-    <header class="thead">
-      {{ gm('start', 0, 'gm-big') }}
-      <h2 class="tname" id="lvh-start"><span lang="ko">{{ intro_lv.ko }}</span>{% if lang.code != 'ko' %}<span class="tword" lang="{{ 'en' if is_root else lang.code }}">{{ intro_lv.word }}</span>{% endif %}</h2>
-      <p class="tmeta"><span class="topik" dir="ltr">Pre-TOPIK</span></p>
-    </header>
-    <section class="grp" data-g="__intro">
-      <div class="ghead">
-        <h3 lang="ko">한글 첫걸음</h3>
-        {% if lang.code != 'ko' %}<p class="gko" lang="{{ 'en' if is_root else lang.code }}">{{ t.ui.intro_title }}</p>{% endif %}
-        <p class="gdesc">{{ t.ui.intro_desc }}</p>
-      </div>
-      <div class="eps">
-        {%- for v in intro %}
-        <a class="ep" href="https://www.youtube.com/watch?v={{ v.id }}" rel="noopener" data-video="{{ v.id }}" data-ep="{{ v.no }}">
-          <span class="ethumb"><img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy" width="320" height="180"><span class="eplay" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#fff" d="M8 5.5v13l11-6.5z"/></svg></span></span>
-          <span class="evol">{{ v.ep }}</span>
-          <span class="ename" lang="ko">{{ v.ko }}</span>
-          {% if lang.code != 'ko' %}<span class="bsub" lang="{{ 'en' if is_root else lang.code }}">{{ v.title }}</span>{% endif %}
-        </a>
-        {%- endfor %}
-        {%- if not intro_complete %}
-        <div class="ep epnext" aria-hidden="false"><span class="enext">{{ gm('start', 0, 'gm-sm') }}<span>{{ t.ui.next_ep }}</span></span></div>
-        {%- endif %}
-      </div>
-    </section>
-  </section>
-  {%- endif %}
   {%- for T in tiers %}
   <section class="tier tier-{{ T.key }}" id="lv-{{ T.key }}" data-tier="{{ T.key }}" aria-labelledby="lvh-{{ T.key }}">
     <header class="thead">
@@ -674,7 +633,7 @@ footer a{color:var(--muted)}
 <script>
 (function(){
   var UI={copied:{{ t.ui.copied|tojson }},saved:{{ t.ui.saved_toast|tojson }},unsaved:{{ t.ui.unsaved_toast|tojson }},
-          count:{{ t.ui.count|tojson }},donecount:{{ t.ui.done_count|tojson }},rhangul:{{ t.ui.r_hangul|tojson }},rlevel:{{ t.ui.r_level|tojson }},watch:{{ ('▶ ' ~ t.ui.watch)|tojson }},show:{{ t.ui.show|tojson }},go:{{ t.ui.go|tojson }},dismiss:{{ t.ui.dismiss|tojson }}};
+          count:{{ t.ui.count|tojson }},donecount:{{ t.ui.done_count|tojson }},rhangul:{{ t.ui.r_hangul|tojson }},rlevel:{{ t.ui.r_level|tojson }},show:{{ t.ui.show|tojson }},go:{{ t.ui.go|tojson }},dismiss:{{ t.ui.dismiss|tojson }}};
   var PAGE={{ lang.code|tojson }}, ROOT={{ 'true' if is_root else 'false' }};
   var LANGS={{ lang_names|tojson }};
   var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
@@ -725,10 +684,9 @@ footer a{color:var(--muted)}
         &&(!q||b.dataset.q.indexOf(q)>-1||b.textContent.toLowerCase().indexOf(q)>-1);
       b.hidden=!ok; if(ok)n++;
     });
-    $$('.grp').forEach(function(s){if(s.dataset.g==='__intro')return;s.hidden=!$$('.book',s).some(function(b){return !b.hidden})});
-    $$('.tier').forEach(function(s){if(s.classList.contains('intro'))return;s.hidden=!$$('.grp',s).some(function(g){return !g.hidden})});
-    var it=$('#shelf .intro'); if(it){var ok=(!state.lv||state.lv==='start')&&(!state.g)&&(!q||it.dataset.q.indexOf(q)>-1); it.hidden=!ok; var introOk=ok}
-    $('#empty').hidden=n>0||(typeof introOk!=='undefined'&&introOk);
+    $$('.grp').forEach(function(s){s.hidden=!$$('.book',s).some(function(b){return !b.hidden})});
+    $$('.tier').forEach(function(s){s.hidden=!$$('.grp',s).some(function(g){return !g.hidden})});
+    $('#empty').hidden=n>0;
     var filtered=state.q||state.lv||state.g;
     $('#result').textContent=filtered&&n?UI.count.replace('{n}',n):'';
   }
@@ -761,7 +719,7 @@ footer a{color:var(--muted)}
       return;
     }
     var v=e.target.closest('[data-video]'); if(v){
-      e.preventDefault(); var vb=v.closest('.book'); var vs=vb?vb.dataset.slug:('intro-'+(v.dataset.ep||'')); track('video/'+vs,'영상 '+vs);
+      e.preventDefault(); var vb=v.closest('.book'); var vs=vb?vb.dataset.slug:''; track('video/'+vs,'영상 '+vs);
       $('#vbox').innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+encodeURIComponent(v.dataset.video)+'?rel=0&playsinline=1'+(v.dataset.list?'&list='+encodeURIComponent(v.dataset.list):'')+'" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="YouTube"></iframe>';
       $('#vlink').href='https://www.youtube.com/watch?v='+v.dataset.video+(v.dataset.list?'&list='+v.dataset.list:'');
       $('#vdlg').showModal(); return;
@@ -910,20 +868,17 @@ footer a{color:var(--muted)}
   gd.addEventListener('click',function(e){
     var g=e.target.closest('[data-go]'); if(g){gstep(g.dataset.go);return}
     var r=e.target.closest('[data-res]'); if(!r)return;
-    gres=r.dataset.res; var key=gres==='hangul'?'beg':gres;
+    gres=r.dataset.res; var key=gres==='hangul'?($('#lv-start')?'start':'beg'):gres;
     $('#gresMark').innerHTML=$('.tier-'+key+' .gm-big')?$('.tier-'+key+' .gm-big').outerHTML:'';
     $('#gresText').textContent=gres==='hangul'?UI.rhangul:UI.rlevel.replace('{level}',LV[key]||key);
-    $('#gShow').textContent=gres==='hangul'&&$('.ep[data-video]')?UI.watch:UI.show;
     gstep('res'); track('guide/'+gres,'수준 찾기 결과 '+gres);
   });
   $('#gAgain').addEventListener('click',function(){gstep(1)});
   $('#gShow').addEventListener('click',function(){
     gd.close();
-    var ep1=$('.ep[data-video]');
-    if(gres==='hangul'&&ep1){var lv=$('#lvs [data-lv="start"]'); if(lv)lv.click(); $('#lv-start').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(function(){ep1.click()},450); return}
-    var key=gres==='hangul'?'beg':gres;
+    var key=gres==='hangul'?($('#lv-start')?'start':'beg'):gres;
     var chip=$('#lvs [data-lv="'+key+'"]'); if(chip)chip.click();
-    var target=gres==='hangul'?($('.grp[data-g="easy"]')||$('#lv-beg')):$('#lv-'+key);
+    var target=$('#lv-'+key);
     if(target)setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'})},60);
   });
 

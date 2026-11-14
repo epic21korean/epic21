@@ -60,14 +60,14 @@ UI_NEW = {
            'saved_toast': 'Saved', 'unsaved_toast': 'Removed from saved', 'recent': 'Recently downloaded',
            'watch': 'Watch the video', 'share': 'Share', 'copied': 'Link copied', 'theme': 'Light or dark screen',
            'close': 'Close', 'none': 'No textbooks match.', 'reset': 'Show all textbooks', 'count': '{n} textbooks',
-           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'next_ep': "Look forward to the next episode!", 'ep_vowels': "Basic vowels", 'ep_consonants': "Basic consonants", 'ep_tense': "Tense consonants", 'ep_more_vowels': "More vowels", 'ep_batchim': "Final consonants (batchim)", 'intro_desc': "Learn to read Korean letters from zero — a free video course.", 'intro_title': "Hangul First Steps", 'sub_title': "Your PDF is opening in a new tab", 'sub_text': "Subscribe to EPIC21 on YouTube to get new free textbooks and videos.", 'sub_btn': "Subscribe", 'later': "Later", 'start': "Where should I start?", 'q1': "Can you read Hangul (한글)?", 'q2': "Can you introduce yourself and order at a café in Korean?", 'q3': "Can you read TOPIK II passages or Korean news?", 'yes': "Yes", 'no': "Not yet", 'r_hangul': "Start with Hangul First Steps, our free video course that teaches you to read Korean letters.", 'r_level': "Your level: {level}", 'show': "Show these textbooks", 'again': "Start over", 'new_title': "New textbooks", 'done': "Studied", 'done_count': "{d} / {n} studied", 'qr': "QR code", 'qr_text': "Scan to open this page on a phone.", 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
+           'dl_short': 'PDF', 'top': 'Back to top', 'install': 'Install app', 'sub_title': "Your PDF is opening in a new tab", 'sub_text': "Subscribe to EPIC21 on YouTube to get new free textbooks and videos.", 'sub_btn': "Subscribe", 'later': "Later", 'start': "Where should I start?", 'q1': "Can you read Hangul (한글)?", 'q2': "Can you introduce yourself and order at a café in Korean?", 'q3': "Can you read TOPIK II passages or Korean news?", 'yes': "Yes", 'no': "Not yet", 'r_hangul': "Start with the textbook Hangul First Steps: learn to read Korean letters from zero with pictures, videos and sounds.", 'r_level': "Your level: {level}", 'show': "Show these textbooks", 'again': "Start over", 'new_title': "New textbooks", 'done': "Studied", 'done_count': "{d} / {n} studied", 'qr': "QR code", 'qr_text': "Scan to open this page on a phone.", 'go': 'Open the {lang} page', 'dismiss': 'No thanks'},
     'ko': {'lede': '여러분의 언어로 설명한 한국어 교재입니다. 교재마다 EPIC21 영상이 짝으로 있습니다. PDF를 받아 무료로 공부하세요.',
            'books': '권', 'languages': '개 언어', 'search': '교재 찾기', 'level': '수준',
            'alllv': '모든 수준', 'series': '시리즈', 'saved': '담은 교재', 'save': '이 교재 담기',
            'saved_toast': '담았습니다', 'unsaved_toast': '담기를 뺐습니다', 'recent': '최근 받은 교재',
            'watch': '영상 보기', 'share': '공유', 'copied': '주소를 복사했습니다', 'theme': '밝은 화면·어두운 화면',
            'close': '닫기', 'none': '맞는 교재가 없습니다.', 'reset': '모든 교재 보기', 'count': '교재 {n}권',
-           'dl_short': 'PDF', 'top': '맨 위로', 'install': '앱으로 설치', 'next_ep': "다음 편을 기대해 주세요!", 'ep_vowels': "기본 모음", 'ep_consonants': "기본 자음", 'ep_tense': "된소리", 'ep_more_vowels': "나머지 모음", 'ep_batchim': "받침", 'intro_desc': "한글을 처음부터 읽을 수 있게 배우는 무료 영상 강좌예요.", 'intro_title': "한글 첫걸음", 'sub_title': "PDF가 새 탭에서 열리고 있어요", 'sub_text': "유튜브에서 EPIC21을 구독하면 새 무료 교재와 영상 소식을 받을 수 있어요.", 'sub_btn': "구독하기", 'later': "나중에", 'start': "어디서부터 시작할까요?", 'q1': "한글을 읽을 수 있나요?", 'q2': "한국어로 자기소개를 하고 카페에서 주문할 수 있나요?", 'q3': "TOPIK II 지문이나 한국어 뉴스를 읽을 수 있나요?", 'yes': "네", 'no': "아직요", 'r_hangul': "「한글 첫걸음」 영상 강좌부터 시작하세요. 한글을 처음부터 읽을 수 있게 알려 드려요.", 'r_level': "추천 수준: {level}", 'show': "이 교재 보기", 'again': "처음부터 다시", 'new_title': "새 교재", 'done': "공부 끝", 'done_count': "{d} / {n}권 공부 끝", 'qr': "QR 코드", 'qr_text': "휴대폰으로 찍으면 이 페이지가 열려요.", 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
+           'dl_short': 'PDF', 'top': '맨 위로', 'install': '앱으로 설치', 'sub_title': "PDF가 새 탭에서 열리고 있어요", 'sub_text': "유튜브에서 EPIC21을 구독하면 새 무료 교재와 영상 소식을 받을 수 있어요.", 'sub_btn': "구독하기", 'later': "나중에", 'start': "어디서부터 시작할까요?", 'q1': "한글을 읽을 수 있나요?", 'q2': "한국어로 자기소개를 하고 카페에서 주문할 수 있나요?", 'q3': "TOPIK II 지문이나 한국어 뉴스를 읽을 수 있나요?", 'yes': "네", 'no': "아직요", 'r_hangul': "『한글 첫걸음』 교재부터 시작하세요. 그림과 영상, 소리로 한글을 처음부터 배울 수 있어요.", 'r_level': "추천 수준: {level}", 'show': "이 교재 보기", 'again': "처음부터 다시", 'new_title': "새 교재", 'done': "공부 끝", 'done_count': "{d} / {n}권 공부 끝", 'qr': "QR 코드", 'qr_text': "휴대폰으로 찍으면 이 페이지가 열려요.", 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
 }
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
 # 홈 화면 추가 안내 문구 — ?app=ko 로 열면 어느 페이지에서든 안내 창만 한국어로 바뀐다(교사용)
@@ -229,15 +229,14 @@ def build_page(site, env, lang, is_root):
     alternates = [{'code': L['code'], 'url': f"{site_url}/{L['code']}/"} for L in site['langs']]
 
     levels = [level_info(L, lv_code) for L in LEVEL_ORDER
-              if any(x.get('level') == L for x in site['books']) or (L == '입문' and site.get('intro'))]
-    intro = [dict(v, title=t['ui'].get(v['key'], ''), ep=t['ui']['vol'].replace('{n}', str(v['no']))) for v in site.get('intro', [])]
+              if any(x.get('level') == L for x in site['books'])]
     lang_names = {L['code'].split('-')[0] if L['code'] != 'zh-Hans' else 'zh-Hans': L['name'] for L in site['langs']}
 
     tpl = env.get_template('template.html')
     return tpl.render(
         lang=lang, t=t, is_root=is_root, base=base, page_url=page_url, site_url=site_url,
         og_image=og_image, og_locale=OG_LOCALE.get(code, 'en_US'),
-        intro=intro, intro_complete=site.get('intro_complete', False), intro_lv=level_info('입문', lv_code), level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
+        level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
         app_ko={k: T['ko']['ui'][k] for k in APP_KEYS + PC_KEYS},
