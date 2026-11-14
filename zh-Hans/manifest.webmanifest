@@ -1,7 +1,7 @@
 {
  "name": "EPIC21 — Free Korean Textbooks",
  "short_name": "EPIC21",
- "description": "28本附简体中文讲解的免费PDF韩语教材：TOPIK I & II 语法、词汇、写作。无需注册，完全免费。",
+ "description": "29本附简体中文讲解的免费PDF韩语教材：TOPIK I & II 语法、词汇、写作。无需注册，完全免费。",
  "lang": "zh-Hans",
  "start_url": "./",
  "scope": "../",

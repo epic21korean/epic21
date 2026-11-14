@@ -3698,6 +3698,17 @@
    "ko_sub": "시리즈 4",
    "en_sub": "#31–#40",
    "video": "4TRgrjYLRnQ"
+  },
+  {
+   "id": "epic21-ttg2056-s5",
+   "group": "ttg",
+   "level": "전체",
+   "slug": "ttg-s5",
+   "ko": "2056 시간여행 가이드북 시리즈 5 (#41~#50)",
+   "en": "Time Travel Guide 2056 · Series 5 (#41–#50)",
+   "vol": 5,
+   "ko_sub": "시리즈 5",
+   "en_sub": "#41–#50"
   }
  ],
  "files": {
@@ -4316,6 +4327,28 @@
    "EPIC21_TTG2056_S4_18_Sinhala_Free.pdf",
    "EPIC21_TTG2056_S4_19_Arabic_Free.pdf",
    "EPIC21_TTG2056_S4_20_Urdu_Free.pdf"
+  ],
+  "epic21-ttg2056-s5": [
+   "EPIC21_TTG2056_S5_01_English_Free.pdf",
+   "EPIC21_TTG2056_S5_02_Spanish_Free.pdf",
+   "EPIC21_TTG2056_S5_03_French_Free.pdf",
+   "EPIC21_TTG2056_S5_04_Portuguese_Free.pdf",
+   "EPIC21_TTG2056_S5_05_Indonesian_Free.pdf",
+   "EPIC21_TTG2056_S5_06_Vietnamese_Free.pdf",
+   "EPIC21_TTG2056_S5_07_Tagalog_Free.pdf",
+   "EPIC21_TTG2056_S5_08_Uzbek_Free.pdf",
+   "EPIC21_TTG2056_S5_09_Russian_Free.pdf",
+   "EPIC21_TTG2056_S5_10_Mongolian_Free.pdf",
+   "EPIC21_TTG2056_S5_11_Japanese_Free.pdf",
+   "EPIC21_TTG2056_S5_12_Chinese-Simplified_Free.pdf",
+   "EPIC21_TTG2056_S5_13_Thai_Free.pdf",
+   "EPIC21_TTG2056_S5_14_Khmer_Free.pdf",
+   "EPIC21_TTG2056_S5_15_Burmese_Free.pdf",
+   "EPIC21_TTG2056_S5_16_Nepali_Free.pdf",
+   "EPIC21_TTG2056_S5_17_Bengali_Free.pdf",
+   "EPIC21_TTG2056_S5_18_Sinhala_Free.pdf",
+   "EPIC21_TTG2056_S5_19_Arabic_Free.pdf",
+   "EPIC21_TTG2056_S5_20_Urdu_Free.pdf"
   ]
  },
  "sizes": {
@@ -4934,6 +4967,28 @@
    "EPIC21_TTG2056_S4_18_Sinhala_Free.pdf": 29668159,
    "EPIC21_TTG2056_S4_19_Arabic_Free.pdf": 29738355,
    "EPIC21_TTG2056_S4_20_Urdu_Free.pdf": 31689237
+  },
+  "epic21-ttg2056-s5": {
+   "EPIC21_TTG2056_S5_01_English_Free.pdf": 29332920,
+   "EPIC21_TTG2056_S5_02_Spanish_Free.pdf": 29372860,
+   "EPIC21_TTG2056_S5_03_French_Free.pdf": 29427244,
+   "EPIC21_TTG2056_S5_04_Portuguese_Free.pdf": 29360726,
+   "EPIC21_TTG2056_S5_05_Indonesian_Free.pdf": 29342872,
+   "EPIC21_TTG2056_S5_06_Vietnamese_Free.pdf": 29334038,
+   "EPIC21_TTG2056_S5_07_Tagalog_Free.pdf": 29412077,
+   "EPIC21_TTG2056_S5_08_Uzbek_Free.pdf": 29328820,
+   "EPIC21_TTG2056_S5_09_Russian_Free.pdf": 29480937,
+   "EPIC21_TTG2056_S5_10_Mongolian_Free.pdf": 29438420,
+   "EPIC21_TTG2056_S5_11_Japanese_Free.pdf": 32451572,
+   "EPIC21_TTG2056_S5_12_Chinese-Simplified_Free.pdf": 31922869,
+   "EPIC21_TTG2056_S5_13_Thai_Free.pdf": 29400562,
+   "EPIC21_TTG2056_S5_14_Khmer_Free.pdf": 29874426,
+   "EPIC21_TTG2056_S5_15_Burmese_Free.pdf": 29875237,
+   "EPIC21_TTG2056_S5_16_Nepali_Free.pdf": 29285922,
+   "EPIC21_TTG2056_S5_17_Bengali_Free.pdf": 29339145,
+   "EPIC21_TTG2056_S5_18_Sinhala_Free.pdf": 29350466,
+   "EPIC21_TTG2056_S5_19_Arabic_Free.pdf": 29403667,
+   "EPIC21_TTG2056_S5_20_Urdu_Free.pdf": 31599735
   }
  },
  "goatcounter": "epic21korean",
@@ -4965,7 +5020,8 @@
   "epic21-ttg2056-s1": "2026-11-09",
   "epic21-ttg2056-s2": "2026-11-09",
   "epic21-ttg2056-s3": "2026-11-09",
-  "epic21-ttg2056-s4": "2026-11-10"
+  "epic21-ttg2056-s4": "2026-11-10",
+  "epic21-ttg2056-s5": "2026-11-14"
  },
  "intro": [
   {
