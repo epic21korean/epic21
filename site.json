@@ -8,6 +8,9 @@
    "key": "hangul"
   },
   {
+   "key": "s100"
+  },
+  {
    "key": "mag"
   },
   {
@@ -251,6 +254,10 @@
     "hangul": {
      "name": "한글 첫걸음",
      "desc": "한글을 처음부터 그림과 소리로 배우는 입문 교재 — 단원마다 영상 QR, 글자마다 소리 QR."
+    },
+    "s100": {
+     "name": "한국 사람과 대화할 수 있는 한국어 100문장",
+     "desc": "영상과 짝을 이루는 입문 교재 — 꼭 필요한 문장 100개를 실제 장면과 영상 QR로 배웁니다. 영상이 나올 때마다 단원이 늘어납니다."
     }
    },
    "ui": {
@@ -337,6 +344,10 @@
     "hangul": {
      "name": "Hangul First Steps",
      "desc": "A starter textbook for reading Korean letters from zero with pictures and sounds — a video QR for every unit and a sound QR for every letter."
+    },
+    "s100": {
+     "name": "Top 100 Korean Sentences to Talk with Koreans",
+     "desc": "A starter textbook paired with the video series — learn 100 must-know sentences with real scenes and a video QR for each. A new unit is added with every new video."
     }
    },
    "ui": {
@@ -423,6 +434,10 @@
     "hangul": {
      "name": "Primeros pasos en hangul",
      "desc": "Libro inicial para leer las letras coreanas desde cero con imágenes y sonidos: un QR de video por unidad y un QR de sonido por letra."
+    },
+    "s100": {
+     "name": "100 frases coreanas para hablar con coreanos",
+     "desc": "Libro de inicio que acompaña a la serie de videos: aprende 100 frases esenciales con escenas reales y un QR de video para cada una. Se añade una unidad con cada video nuevo."
     }
    },
    "ui": {
@@ -550,6 +565,10 @@
     "hangul": {
      "name": "Premiers pas en hangeul",
      "desc": "Manuel d’initiation pour lire l’alphabet coréen à partir de zéro avec images et sons : un QR vidéo par unité et un QR audio par lettre."
+    },
+    "s100": {
+     "name": "100 phrases coréennes pour parler avec des Coréens",
+     "desc": "Manuel débutant associé à la série vidéo : 100 phrases essentielles avec des scènes réelles et un QR vidéo pour chacune. Une nouvelle unité à chaque nouvelle vidéo."
     }
    },
    "ui": {
@@ -677,6 +696,10 @@
     "hangul": {
      "name": "Primeiros passos no hangul",
      "desc": "Livro inicial para ler as letras coreanas do zero com imagens e sons — um QR de vídeo por unidade e um QR de som por letra."
+    },
+    "s100": {
+     "name": "100 frases coreanas para conversar com coreanos",
+     "desc": "Livro inicial que acompanha a série de vídeos: aprenda 100 frases essenciais com cenas reais e um QR de vídeo para cada uma. Uma nova unidade a cada vídeo novo."
     }
    },
    "ui": {
@@ -804,6 +827,10 @@
     "hangul": {
      "name": "Langkah Pertama Hangul",
      "desc": "Buku awal untuk membaca huruf Korea dari nol dengan gambar dan suara — QR video tiap unit dan QR suara tiap huruf."
+    },
+    "s100": {
+     "name": "100 Kalimat Korea untuk Bicara dengan Orang Korea",
+     "desc": "Buku pemula pasangan seri video — pelajari 100 kalimat penting dengan adegan nyata dan QR video untuk tiap kalimat. Unit baru ditambahkan setiap ada video baru."
     }
    },
    "ui": {
@@ -931,6 +958,10 @@
     "hangul": {
      "name": "Bước đầu học Hangul",
      "desc": "Giáo trình nhập môn giúp đọc chữ Hàn từ con số 0 bằng hình ảnh và âm thanh — mỗi bài có QR video, mỗi chữ có QR âm thanh."
+    },
+    "s100": {
+     "name": "100 câu tiếng Hàn để nói chuyện với người Hàn",
+     "desc": "Giáo trình nhập môn đi kèm loạt video — học 100 câu cần thiết qua cảnh thật và mã QR video cho từng câu. Mỗi video mới sẽ có thêm một bài."
     }
    },
    "ui": {
@@ -1058,6 +1089,10 @@
     "hangul": {
      "name": "Unang Hakbang sa Hangul",
      "desc": "Panimulang aklat para matutong bumasa ng letrang Korean mula sa simula gamit ang larawan at tunog — may video QR bawat aralin at sound QR bawat letra."
+    },
+    "s100": {
+     "name": "100 Korean na Pangungusap para Makipag-usap sa Koreano",
+     "desc": "Panimulang aklat na kapares ng serye ng video — matuto ng 100 mahahalagang pangungusap sa totoong eksena at QR ng video sa bawat isa. May bagong yunit sa bawat bagong video."
     }
    },
    "ui": {
@@ -1185,6 +1220,10 @@
     "hangul": {
      "name": "Hangulga ilk qadam",
      "desc": "Koreys harflarini noldan rasm va tovush bilan o‘qishni o‘rgatadigan boshlang‘ich darslik — har bo‘limda video QR, har harfda tovush QR."
+    },
+    "s100": {
+     "name": "Koreyslar bilan gaplashish uchun 100 gap",
+     "desc": "Video turkumiga mos boshlang‘ich darslik — 100 ta zarur gapni real sahnalar va har biri uchun video QR orqali o‘rganing. Har yangi video bilan yangi dars qo‘shiladi."
     }
    },
    "ui": {
@@ -1312,6 +1351,10 @@
     "hangul": {
      "name": "Первые шаги в хангыле",
      "desc": "Вводный учебник: читаем корейские буквы с нуля по картинкам и звукам — QR-видео к каждому уроку и QR-звук к каждой букве."
+    },
+    "s100": {
+     "name": "100 главных корейских фраз для общения с корейцами",
+     "desc": "Учебник для начинающих к видеосерии: 100 самых нужных фраз с реальными сценами и видео-QR к каждой. С каждым новым видео добавляется новый урок."
     }
    },
    "ui": {
@@ -1439,6 +1482,10 @@
     "hangul": {
      "name": "Хангылийн анхны алхам",
      "desc": "Солонгос үсгийг тэгээс зураг, дуугаар уншиж сурах эхлэлийн ном — хичээл бүрт видео QR, үсэг бүрт дууны QR."
+    },
+    "s100": {
+     "name": "Солонгосчуудтай ярилцах 100 гол өгүүлбэр",
+     "desc": "Видео цувралтай хослох анхан шатны ном — шаардлагатай 100 өгүүлбэрийг бодит дүр зураг, тус бүрийн видео QR-ээр сурна. Шинэ видео гарах бүрт шинэ хичээл нэмэгдэнэ."
     }
    },
    "ui": {
@@ -1566,6 +1613,10 @@
     "hangul": {
      "name": "ハングルはじめの一歩",
      "desc": "絵と音でゼロからハングルが読めるようになる入門テキスト。単元ごとに動画QR、文字ごとに音声QR付き。"
+    },
+    "s100": {
+     "name": "韓国人と話せる韓国語100文",
+     "desc": "動画シリーズと対になる入門教材 — 必須の100文を実際の場面と動画QRで学びます。新しい動画が出るたびに単元が増えます。"
     }
    },
    "ui": {
@@ -1693,6 +1744,10 @@
     "hangul": {
      "name": "韩文入门第一步",
      "desc": "用图片和声音从零学会读韩文字母的入门教材——每单元有视频二维码，每个字母有发音二维码。"
+    },
+    "s100": {
+     "name": "和韩国人聊天的100句韩语",
+     "desc": "与视频系列配套的入门教材——通过真实场景和每句的视频二维码学习100个必备句子。每出一个新视频就增加一个单元。"
     }
    },
    "ui": {
@@ -1820,6 +1875,10 @@
     "hangul": {
      "name": "ก้าวแรกสู่ฮันกึล",
      "desc": "หนังสือเรียนเบื้องต้น อ่านตัวอักษรเกาหลีตั้งแต่ศูนย์ด้วยภาพและเสียง — มี QR วิดีโอทุกบท และ QR เสียงทุกตัวอักษร"
+    },
+    "s100": {
+     "name": "100 ประโยคภาษาเกาหลีสำคัญสำหรับคุยกับคนเกาหลี",
+     "desc": "ตำราเริ่มต้นคู่กับชุดวิดีโอ — เรียน 100 ประโยคที่จำเป็นผ่านฉากจริงและ QR วิดีโอของแต่ละประโยค มีบทใหม่เพิ่มทุกครั้งที่มีวิดีโอใหม่"
     }
    },
    "ui": {
@@ -1947,6 +2006,10 @@
     "hangul": {
      "name": "ជំហានដំបូងនៃហាន់គុល",
      "desc": "សៀវភៅចាប់ផ្ដើម រៀនអានអក្សរកូរ៉េពីសូន្យតាមរូបភាព និងសំឡេង — មាន QR វីដេអូគ្រប់មេរៀន និង QR សំឡេងគ្រប់តួអក្សរ។"
+    },
+    "s100": {
+     "name": "ប្រយោគកូរ៉េសំខាន់ៗ ១០០ សម្រាប់និយាយជាមួយជនជាតិកូរ៉េ",
+     "desc": "សៀវភៅដំបូងដែលភ្ជាប់ជាមួយវីដេអូ — រៀនប្រយោគចាំបាច់ ១០០ តាមឈុតពិត និង QR វីដេអូសម្រាប់ប្រយោគនីមួយៗ។ មេរៀនថ្មីបន្ថែមរាល់ពេលមានវីដេអូថ្មី។"
     }
    },
    "ui": {
@@ -2074,6 +2137,10 @@
     "hangul": {
      "name": "ဟန်ဂူလ် ပထမခြေလှမ်း",
      "desc": "ပုံနှင့် အသံဖြင့် ကိုရီးယား စာလုံးများကို အစမှ ဖတ်တတ်စေသော အစပြု စာအုပ် — သင်ခန်းစာတိုင်းတွင် ဗီဒီယို QR၊ စာလုံးတိုင်းတွင် အသံ QR ပါသည်။"
+    },
+    "s100": {
+     "name": "ကိုရီးယားနဲ့ စကားပြောရန် ဝါကျ ၁၀၀",
+     "desc": "ဗီဒီယိုစီးရီးနှင့် တွဲသုံးရသော အခြေခံစာအုပ် — မရှိမဖြစ် ဝါကျ ၁၀၀ ကို တကယ့်မြင်ကွင်းများနှင့် ဝါကျတိုင်း ဗီဒီယို QR ဖြင့် လေ့လာပါ။ ဗီဒီယိုအသစ်ထွက်တိုင်း သင်ခန်းစာအသစ် ထပ်တိုးပါမည်။"
     }
    },
    "ui": {
@@ -2201,6 +2268,10 @@
     "hangul": {
      "name": "हान्गुलको पहिलो पाइला",
      "desc": "चित्र र आवाजबाट कोरियन अक्षर सुरुदेखि पढ्न सिकाउने सुरुवाती पुस्तक — हरेक पाठमा भिडियो QR र हरेक अक्षरमा आवाज QR।"
+    },
+    "s100": {
+     "name": "कोरियालीसँग कुरा गर्न शीर्ष १०० कोरियाली वाक्य",
+     "desc": "भिडियो शृङ्खलासँग जोडिएको सुरुआती पुस्तक — वास्तविक दृश्य र हरेक वाक्यको भिडियो QR सहित १०० आवश्यक वाक्य सिक्नुहोस्। हरेक नयाँ भिडियोसँग नयाँ पाठ थपिन्छ।"
     }
    },
    "ui": {
@@ -2328,6 +2399,10 @@
     "hangul": {
      "name": "হানগুলের প্রথম ধাপ",
      "desc": "ছবি ও ধ্বনিতে শুরু থেকে কোরিয়ান অক্ষর পড়া শেখার প্রাথমিক বই — প্রতিটি পাঠে ভিডিও QR, প্রতিটি অক্ষরে ধ্বনি QR।"
+    },
+    "s100": {
+     "name": "কোরিয়ানদের সাথে কথা বলার সেরা ১০০ কোরিয়ান বাক্য",
+     "desc": "ভিডিও সিরিজের সঙ্গী প্রাথমিক বই — বাস্তব দৃশ্য ও প্রতিটি বাক্যের ভিডিও QR দিয়ে ১০০টি জরুরি বাক্য শিখুন। প্রতিটি নতুন ভিডিওর সঙ্গে নতুন অধ্যায় যোগ হয়।"
     }
    },
    "ui": {
@@ -2455,6 +2530,10 @@
     "hangul": {
      "name": "හංගුල් පළමු පියවර",
      "desc": "රූප හා ශබ්ද සමඟ මුල සිටම කොරියානු අකුරු කියවීමට උගන්වන ආරම්භක පොත — සෑම පාඩමකටම වීඩියෝ QR, සෑම අකුරකටම ශබ්ද QR."
+    },
+    "s100": {
+     "name": "කොරියානුවන් සමඟ කතාවට වාක්‍ය 100",
+     "desc": "වීඩියෝ මාලාවට ගැළපෙන ආරම්භක පොත — සැබෑ දර්ශන සහ සෑම වාක්‍යයකටම වීඩියෝ QR සමඟ අත්‍යවශ්‍ය වාක්‍ය 100 ඉගෙන ගන්න. නව වීඩියෝවක් එන සෑම විටම නව පාඩමක් එක් වේ."
     }
    },
    "ui": {
@@ -2582,6 +2661,10 @@
     "hangul": {
      "name": "الخطوات الأولى في الهانغول",
      "desc": "كتاب تمهيدي لتعلّم قراءة الحروف الكورية من الصفر بالصور والأصوات — رمز QR لفيديو كل وحدة ورمز QR لصوت كل حرف."
+    },
+    "s100": {
+     "name": "أهم 100 جملة كورية للتحدث مع الكوريين",
+     "desc": "كتاب للمبتدئين مرافق لسلسلة الفيديو — تعلّم 100 جملة أساسية بمشاهد حقيقية ورمز QR لفيديو كل جملة. تُضاف وحدة جديدة مع كل فيديو جديد."
     }
    },
    "ui": {
@@ -2709,6 +2792,10 @@
     "hangul": {
      "name": "ہنگل کے پہلے قدم",
      "desc": "تصویروں اور آوازوں سے شروع سے کورین حروف پڑھنا سکھانے والی ابتدائی کتاب — ہر سبق کے لیے ویڈیو QR اور ہر حرف کے لیے آواز QR۔"
+    },
+    "s100": {
+     "name": "کوریائی لوگوں سے بات کرنے کے لیے 100 اہم کوریائی جملے",
+     "desc": "ویڈیو سیریز کے ساتھ ابتدائی کتاب — حقیقی مناظر اور ہر جملے کے ویڈیو QR کے ساتھ 100 ضروری جملے سیکھیں۔ ہر نئی ویڈیو کے ساتھ نیا سبق شامل ہوتا ہے۔"
     }
    },
    "ui": {
@@ -3672,6 +3759,39 @@
    "ko_sub": "시리즈 5",
    "en_sub": "#41–#50",
    "video": "xsk8I-d39jE"
+  },
+  {
+   "id": "epic21-first100-sentences",
+   "group": "s100",
+   "level": "입문",
+   "slug": "first100",
+   "ko": "한국 사람과 대화할 수 있는 한국어 100문장",
+   "en": "Top 100 Korean Sentences to Talk with Koreans",
+   "vol": null,
+   "ko_sub": "1단원 공개 · 영상마다 단원 추가",
+   "en_sub": "Unit 1 out · a new unit with each video",
+   "tr": {
+    "ne": "एकाइ १ उपलब्ध · हरेक भिडियोसँग नयाँ एकाइ",
+    "ru": "Урок 1 уже доступен · новый урок с каждым видео",
+    "mn": "1-р хичээл гарсан · видео бүрт шинэ хичээл",
+    "my": "သင်ခန်းစာ ၁ ထွက်ပြီ · ဗီဒီယိုတိုင်း သင်ခန်းစာအသစ်",
+    "vi": "Đã có bài 1 · thêm bài mới theo từng video",
+    "bn": "অধ্যায় ১ প্রকাশিত · প্রতি ভিডিওতে নতুন অধ্যায়",
+    "es": "Unidad 1 disponible · una unidad nueva con cada video",
+    "si": "පාඩම 1 නිකුත් විය · සෑම වීඩියෝවකටම නව පාඩමක්",
+    "ar": "الوحدة 1 متاحة · وحدة جديدة مع كل فيديو",
+    "ur": "سبق 1 دستیاب · ہر ویڈیو کے ساتھ نیا سبق",
+    "uz": "1-dars chiqdi · har videoga yangi dars",
+    "id": "Unit 1 tersedia · unit baru di setiap video",
+    "ja": "第1課公開中 · 動画ごとに新しい課を追加",
+    "zh-Hans": "第1单元已发布 · 每个视频新增一个单元",
+    "km": "មេរៀនទី ១ ចេញហើយ · មេរៀនថ្មីរាល់វីដេអូ",
+    "tl": "Yunit 1 na ang labas · bagong yunit sa bawat video",
+    "th": "บทที่ 1 มาแล้ว · เพิ่มบทใหม่ทุกวิดีโอ",
+    "pt": "Unidade 1 disponível · uma nova unidade a cada vídeo",
+    "fr": "Unité 1 disponible · une nouvelle unité à chaque vidéo"
+   },
+   "video": "uo2SO5kBS3c"
   }
  ],
  "files": {
@@ -4334,6 +4454,28 @@
    "EPIC21_START01_Hangul_01_Urdu_Free.pdf",
    "EPIC21_START01_Hangul_01_Uzbek_Free.pdf",
    "EPIC21_START01_Hangul_01_Vietnamese_Free.pdf"
+  ],
+  "epic21-first100-sentences": [
+   "EPIC21_START02_100Sentences_Arabic_Free.pdf",
+   "EPIC21_START02_100Sentences_Bengali_Free.pdf",
+   "EPIC21_START02_100Sentences_Burmese_Free.pdf",
+   "EPIC21_START02_100Sentences_Chinese-Simplified_Free.pdf",
+   "EPIC21_START02_100Sentences_English_Free.pdf",
+   "EPIC21_START02_100Sentences_French_Free.pdf",
+   "EPIC21_START02_100Sentences_Indonesian_Free.pdf",
+   "EPIC21_START02_100Sentences_Japanese_Free.pdf",
+   "EPIC21_START02_100Sentences_Khmer_Free.pdf",
+   "EPIC21_START02_100Sentences_Mongolian_Free.pdf",
+   "EPIC21_START02_100Sentences_Nepali_Free.pdf",
+   "EPIC21_START02_100Sentences_Portuguese_Free.pdf",
+   "EPIC21_START02_100Sentences_Russian_Free.pdf",
+   "EPIC21_START02_100Sentences_Sinhala_Free.pdf",
+   "EPIC21_START02_100Sentences_Spanish_Free.pdf",
+   "EPIC21_START02_100Sentences_Tagalog_Free.pdf",
+   "EPIC21_START02_100Sentences_Thai_Free.pdf",
+   "EPIC21_START02_100Sentences_Urdu_Free.pdf",
+   "EPIC21_START02_100Sentences_Uzbek_Free.pdf",
+   "EPIC21_START02_100Sentences_Vietnamese_Free.pdf"
   ]
  },
  "sizes": {
@@ -4996,6 +5138,28 @@
    "EPIC21_START01_Hangul_01_Urdu_Free.pdf": 8416651,
    "EPIC21_START01_Hangul_01_Uzbek_Free.pdf": 8529389,
    "EPIC21_START01_Hangul_01_Vietnamese_Free.pdf": 8529722
+  },
+  "epic21-first100-sentences": {
+   "EPIC21_START02_100Sentences_Arabic_Free.pdf": 2961330,
+   "EPIC21_START02_100Sentences_Bengali_Free.pdf": 2957327,
+   "EPIC21_START02_100Sentences_Burmese_Free.pdf": 2963157,
+   "EPIC21_START02_100Sentences_Chinese-Simplified_Free.pdf": 3269675,
+   "EPIC21_START02_100Sentences_English_Free.pdf": 2947271,
+   "EPIC21_START02_100Sentences_French_Free.pdf": 2948443,
+   "EPIC21_START02_100Sentences_Indonesian_Free.pdf": 2946760,
+   "EPIC21_START02_100Sentences_Japanese_Free.pdf": 3252571,
+   "EPIC21_START02_100Sentences_Khmer_Free.pdf": 2963001,
+   "EPIC21_START02_100Sentences_Mongolian_Free.pdf": 2948135,
+   "EPIC21_START02_100Sentences_Nepali_Free.pdf": 2956710,
+   "EPIC21_START02_100Sentences_Portuguese_Free.pdf": 2947379,
+   "EPIC21_START02_100Sentences_Russian_Free.pdf": 2948629,
+   "EPIC21_START02_100Sentences_Sinhala_Free.pdf": 2962007,
+   "EPIC21_START02_100Sentences_Spanish_Free.pdf": 2947085,
+   "EPIC21_START02_100Sentences_Tagalog_Free.pdf": 2946193,
+   "EPIC21_START02_100Sentences_Thai_Free.pdf": 2957864,
+   "EPIC21_START02_100Sentences_Urdu_Free.pdf": 2995682,
+   "EPIC21_START02_100Sentences_Uzbek_Free.pdf": 2947257,
+   "EPIC21_START02_100Sentences_Vietnamese_Free.pdf": 2950851
   }
  },
  "goatcounter": "epic21korean",
@@ -5029,7 +5193,8 @@
   "epic21-ttg2056-s3": "2026-11-09",
   "epic21-ttg2056-s4": "2026-11-10",
   "epic21-ttg2056-s5": "2026-11-14",
-  "epic21-hangul-starter-01": "2026-11-14"
+  "epic21-hangul-starter-01": "2026-11-14",
+  "epic21-first100-sentences": "2026-11-16"
  },
  "intro": []
 }
