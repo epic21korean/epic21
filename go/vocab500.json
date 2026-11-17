@@ -1,0 +1,59 @@
+{
+ "note": "그림으로 배우는 한국어 어휘 500 단원 QR → 본편 영상 + 쇼츠. video 에 본편 ID, shorts 에 쇼츠 ID 목록을 넣고 python3 make_go.py",
+ "soon": {
+  "ko": "이 단원의 영상을 곧 공개합니다.",
+  "en": "The video for this unit is coming soon."
+ },
+ "links": {
+  "v1-u01": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 1단원 「눈, 코, 입」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u02": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 2단원 「우리 가족」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u03": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 3단원 「형, 오빠, 누나, 언니」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u04": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 4단원 「병원에 가요」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u05": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 5단원 「하루 생활」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u06": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 6단원 「기분이 좋아요」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u07": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 7단원 「나, 너, 우리」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u08": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 8단원 「만나서 반가워요」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u09": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 9단원 「안녕하세요」",
+   "video": null,
+   "shorts": []
+  },
+  "v1-u10": {
+   "title": "그림으로 배우는 한국어 어휘 500 · 1권 10단원 「글쎄요」",
+   "video": null,
+   "shorts": []
+  }
+ }
+}
