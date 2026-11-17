@@ -8,6 +8,9 @@
    "key": "hangul"
   },
   {
+   "key": "v500"
+  },
+  {
    "key": "s100"
   },
   {
@@ -265,6 +268,10 @@
     "kiip": {
      "name": "사회통합프로그램(KIIP)",
      "desc": "사회통합프로그램 『한국어와 한국문화』 교재의 어휘·문법을 모국어로 정리한 핸드북과, 단계평가·중간평가·사전평가 합격 문제집. 문제집의 정답과 해설은 책 속 QR로 여는 유튜브 영상(20개 언어 자막)에서 볼 수 있습니다."
+    },
+    "v500": {
+     "name": "그림으로 배우는 한국어 어휘 500",
+     "desc": "연구로 고른 입문 필수 단어 500개를 실사 그림으로 배우는 교재 — 5권(권마다 100개), 단원마다 QR 쇼츠로 소리와 정답을 확인해요."
     }
    },
    "ui": {
@@ -359,6 +366,10 @@
     "kiip": {
      "name": "Korea Immigration & Integration Program (KIIP)",
      "desc": "Free handbooks of the vocabulary and grammar in the KIIP textbook \"Korean Language and Culture\", plus mock-test workbooks. Answers and explanations are in YouTube videos (subtitles in 20 languages) — scan the QR codes in each workbook."
+    },
+    "v500": {
+     "name": "Korean Vocabulary 500 in Pictures",
+     "desc": "The 500 must-know starter words, chosen by research, with real photos — 5 volumes of 100 words; scan each unit's QR for Shorts with sounds and answers."
     }
    },
    "ui": {
@@ -453,6 +464,10 @@
     "kiip": {
      "name": "Programa de Integración Social de Corea (KIIP)",
      "desc": "Manuales gratuitos del vocabulario y la gramática del libro KIIP «Lengua y cultura coreanas» y cuadernos de exámenes de práctica. Las respuestas y explicaciones están en videos de YouTube (subtítulos en 20 idiomas): escanea los QR del cuaderno."
+    },
+    "v500": {
+     "name": "500 palabras coreanas con imágenes",
+     "desc": "Las 500 palabras esenciales para empezar, elegidas por investigación, con fotos reales: 5 volúmenes de 100; escanea el QR de cada unidad para ver Shorts con sonidos y respuestas."
     }
    },
    "ui": {
@@ -588,6 +603,10 @@
     "kiip": {
      "name": "Programme d'intégration sociale de Corée (KIIP)",
      "desc": "Manuels gratuits du vocabulaire et de la grammaire du manuel KIIP « Langue et culture coréennes » et cahiers d'examens blancs. Les corrigés expliqués sont dans des vidéos YouTube (sous-titres en 20 langues) : scannez les QR du cahier."
+    },
+    "v500": {
+     "name": "500 mots coréens en images",
+     "desc": "Les 500 mots essentiels pour débuter, choisis par la recherche, avec de vraies photos : 5 volumes de 100 ; le QR de chaque unité ouvre des Shorts avec sons et réponses."
     }
    },
    "ui": {
@@ -723,6 +742,10 @@
     "kiip": {
      "name": "Programa de Integração Social da Coreia (KIIP)",
      "desc": "Manuais gratuitos de vocabulário e gramática do livro KIIP «Língua e Cultura Coreanas» e cadernos de simulados. As respostas e explicações estão em vídeos do YouTube (legendas em 20 idiomas): leia os QR do caderno."
+    },
+    "v500": {
+     "name": "500 palavras coreanas em imagens",
+     "desc": "As 500 palavras essenciais para iniciantes, escolhidas por pesquisa, com fotos reais: 5 volumes de 100; o QR de cada unidade abre Shorts com sons e respostas."
     }
    },
    "ui": {
@@ -858,6 +881,10 @@
     "kiip": {
      "name": "Program Integrasi Sosial Korea (KIIP)",
      "desc": "Buku saku gratis kosakata dan tata bahasa buku KIIP \"Bahasa dan Budaya Korea\", serta buku latihan ujian. Kunci jawaban dan pembahasan ada di video YouTube (subtitle 20 bahasa) — pindai QR di buku latihan."
+    },
+    "v500": {
+     "name": "500 Kosakata Korea dengan Gambar",
+     "desc": "500 kata wajib untuk pemula, dipilih lewat riset, dengan foto asli — 5 jilid berisi 100 kata; pindai QR tiap unit untuk Shorts berisi suara dan jawaban."
     }
    },
    "ui": {
@@ -993,6 +1020,10 @@
     "kiip": {
      "name": "Chương trình Hội nhập Xã hội (KIIP)",
      "desc": "Sổ tay miễn phí về từ vựng và ngữ pháp trong giáo trình KIIP \"Tiếng Hàn và Văn hóa Hàn Quốc\", cùng sách luyện đề thi thử. Đáp án và giải thích có trong video YouTube (phụ đề 20 ngôn ngữ) — hãy quét mã QR trong sách."
+    },
+    "v500": {
+     "name": "500 từ vựng tiếng Hàn qua hình ảnh",
+     "desc": "500 từ thiết yếu cho người mới bắt đầu, được chọn qua nghiên cứu, kèm ảnh thật — 5 tập, mỗi tập 100 từ; quét QR mỗi bài để xem Shorts có âm thanh và đáp án."
     }
    },
    "ui": {
@@ -1128,6 +1159,10 @@
     "kiip": {
      "name": "Social Integration Program ng Korea (KIIP)",
      "desc": "Libreng handbook ng bokabularyo at gramatika ng aklat ng KIIP na \"Korean Language and Culture\", at mga workbook ng mock test. Nasa mga video sa YouTube ang mga sagot at paliwanag (subtitle sa 20 wika) — i-scan ang QR sa workbook."
+    },
+    "v500": {
+     "name": "500 Salitang Koreano sa Larawan",
+     "desc": "Ang 500 pangunahing salita para sa baguhan, pinili sa pananaliksik, may tunay na larawan — 5 tomo na tig-100; i-scan ang QR ng bawat aralin para sa Shorts na may tunog at sagot."
     }
    },
    "ui": {
@@ -1263,6 +1298,10 @@
     "kiip": {
      "name": "Ijtimoiy integratsiya dasturi (KIIP)",
      "desc": "KIIP «Koreys tili va madaniyati» darsligidagi lugʻat va grammatika boʻyicha bepul qoʻllanmalar hamda sinov imtihonlari toʻplamlari. Javoblar va izohlar YouTube videolarida (20 tilda subtitr) — toʻplamdagi QR kodni skanerlang."
+    },
+    "v500": {
+     "name": "Rasmlarda 500 koreyscha soʻz",
+     "desc": "Tadqiqot asosida tanlangan boshlovchilar uchun 500 ta zarur soʻz, haqiqiy suratlar bilan — 5 jild, har birida 100 soʻz; har bir dars QR kodi tovush va javobli Shorts’ni ochadi."
     }
    },
    "ui": {
@@ -1398,6 +1437,10 @@
     "kiip": {
      "name": "Программа социальной интеграции (KIIP)",
      "desc": "Бесплатные справочники по лексике и грамматике учебника KIIP «Корейский язык и культура» и сборники пробных экзаменов. Ответы и объяснения — в видео на YouTube (субтитры на 20 языках): отсканируйте QR-коды в сборнике."
+    },
+    "v500": {
+     "name": "500 корейских слов в картинках",
+     "desc": "500 самых нужных слов для начинающих, отобранных исследованием, с настоящими фото — 5 томов по 100 слов; QR каждого урока открывает Shorts со звуком и ответами."
     }
    },
    "ui": {
@@ -1533,6 +1576,10 @@
     "kiip": {
      "name": "Нийгэмд нэгтгэх хөтөлбөр (KIIP)",
      "desc": "KIIP-ийн «Солонгос хэл ба соёл» сурах бичгийн үг, дүрмийн үнэгүй гарын авлага болон туршилтын шалгалтын ном. Хариу, тайлбар нь YouTube видеонд (20 хэлний хадмал) — номын QR кодыг уншуулна уу."
+    },
+    "v500": {
+     "name": "Зурагтай солонгос 500 үг",
+     "desc": "Судалгаагаар сонгосон анхан шатны 500 чухал үгийг бодит зурагтай — 5 боть, боть бүрт 100 үг; хичээл бүрийн QR-ээр дуу, хариутай Shorts үзнэ."
     }
    },
    "ui": {
@@ -1668,6 +1715,10 @@
     "kiip": {
      "name": "社会統合プログラム（KIIP）",
      "desc": "KIIP教材『韓国語と韓国文化』の語彙・文法をまとめた無料ハンドブックと模擬試験問題集。解答・解説はYouTube動画（20言語字幕）で公開しています。問題集のQRコードを読み取ってください。"
+    },
+    "v500": {
+     "name": "絵で学ぶ韓国語単語500",
+     "desc": "研究で選んだ入門必須単語500語を実写の絵で — 全5巻（各100語）、課ごとのQRで音声と答えのショート動画が見られます。"
     }
    },
    "ui": {
@@ -1803,6 +1854,10 @@
     "kiip": {
      "name": "社会融合项目（KIIP）",
      "desc": "KIIP教材《韩国语与韩国文化》词汇与语法免费手册以及模拟考试练习册。答案与解析在YouTube视频中（20种语言字幕），请扫描练习册中的二维码。"
+    },
+    "v500": {
+     "name": "看图学韩语词汇500",
+     "desc": "经研究选出的入门必学500词，配真实照片——共5册，每册100词；扫描每课二维码观看带声音和答案的短视频。"
     }
    },
    "ui": {
@@ -1938,6 +1993,10 @@
     "kiip": {
      "name": "โครงการบูรณาการทางสังคม (KIIP)",
      "desc": "คู่มือฟรีคำศัพท์และไวยากรณ์จากตำรา KIIP «ภาษาและวัฒนธรรมเกาหลี» และแบบฝึกหัดข้อสอบจำลอง เฉลยและคำอธิบายอยู่ในวิดีโอ YouTube (ซับไตเติล 20 ภาษา) — สแกน QR ในแบบฝึกหัด"
+    },
+    "v500": {
+     "name": "คำศัพท์เกาหลี 500 คำผ่านภาพ",
+     "desc": "คำศัพท์จำเป็น 500 คำสำหรับผู้เริ่มต้น คัดเลือกจากงานวิจัย พร้อมภาพถ่ายจริง — 5 เล่ม เล่มละ 100 คำ สแกน QR ของแต่ละบทเพื่อดู Shorts พร้อมเสียงและเฉลย"
     }
    },
    "ui": {
@@ -2073,6 +2132,10 @@
     "kiip": {
      "name": "កម្មវិធីសមាហរណកម្មសង្គម (KIIP)",
      "desc": "សៀវភៅជំនួយឥតគិតថ្លៃអំពីវាក្យសព្ទ និងវេយ្យាករណ៍ក្នុងសៀវភៅ KIIP «ភាសា និងវប្បធម៌កូរ៉េ» និងសៀវភៅប្រឡងសាកល្បង។ ចម្លើយ និងការពន្យល់មាននៅក្នុងវីដេអូ YouTube (អក្សររត់ 20 ភាសា) — សូមស្កេន QR ក្នុងសៀវភៅ។"
+    },
+    "v500": {
+     "name": "ពាក្យកូរ៉េ ៥០០ តាមរូបភាព",
+     "desc": "ពាក្យសំខាន់ៗ ៥០០ សម្រាប់អ្នកចាប់ផ្តើម ជ្រើសរើសតាមការស្រាវជ្រាវ មានរូបថតពិត — ៥ ភាគ ភាគនីមួយៗ ១០០ ពាក្យ ស្កេន QR មេរៀននីមួយៗ ដើម្បីមើល Shorts មានសំឡេង និងចម្លើយ។"
     }
    },
    "ui": {
@@ -2208,6 +2271,10 @@
     "kiip": {
      "name": "လူမှုပေါင်းစည်းရေး အစီအစဉ် (KIIP)",
      "desc": "KIIP «ကိုရီးယားဘာသာစကားနှင့် ယဉ်ကျေးမှု» စာအုပ်ပါ ဝေါဟာရနှင့် သဒ္ဒါ အခမဲ့ လက်စွဲစာအုပ်များနှင့် စမ်းသပ်စာမေးပွဲ လေ့ကျင့်စာအုပ်များ။ အဖြေနှင့် ရှင်းလင်းချက်များကို YouTube ဗီဒီယို (ဘာသာစကား ၂၀ စာတန်းထိုး) တွင် ကြည့်နိုင်သည် — စာအုပ်ထဲက QR ကို စကန်ဖတ်ပါ။"
+    },
+    "v500": {
+     "name": "ပုံများဖြင့် ကိုရီးယား စကားလုံး ၅၀၀",
+     "desc": "သုတေသနဖြင့် ရွေးထားသော အခြေခံ မရှိမဖြစ် စကားလုံး ၅၀၀ ကို ဓာတ်ပုံအစစ်များဖြင့် — ၅ အုပ်၊ တစ်အုပ်လျှင် ၁၀၀၊ သင်ခန်းတိုင်း၏ QR ဖြင့် အသံနှင့် အဖြေပါ Shorts ကြည့်ပါ။"
     }
    },
    "ui": {
@@ -2343,6 +2410,10 @@
     "kiip": {
      "name": "सामाजिक एकीकरण कार्यक्रम (KIIP)",
      "desc": "KIIP पाठ्यपुस्तक «कोरियाली भाषा र संस्कृति» का शब्द र व्याकरणका निःशुल्क पुस्तिका र नमुना परीक्षा पुस्तिका। उत्तर र व्याख्या YouTube भिडियोमा छन् (२० भाषामा उपशीर्षक) — पुस्तिकाको QR स्क्यान गर्नुहोस्।"
+    },
+    "v500": {
+     "name": "चित्रमा कोरियाली ५०० शब्द",
+     "desc": "अनुसन्धानबाट छानिएका सुरुका ५०० आवश्यक शब्द, वास्तविक फोटोसहित — ५ भाग, प्रत्येकमा १०० शब्द; हरेक पाठको QR बाट आवाज र उत्तरसहितको सर्ट हेर्नुहोस्।"
     }
    },
    "ui": {
@@ -2478,6 +2549,10 @@
     "kiip": {
      "name": "সামাজিক সমন্বয় কর্মসূচি (KIIP)",
      "desc": "KIIP পাঠ্যবই «কোরীয় ভাষা ও সংস্কৃতি»-এর শব্দ ও ব্যাকরণের বিনামূল্যে হ্যান্ডবুক এবং মক টেস্ট বই। উত্তর ও ব্যাখ্যা YouTube ভিডিওতে (২০ ভাষায় সাবটাইটেল) — বইয়ের QR স্ক্যান করুন।"
+    },
+    "v500": {
+     "name": "ছবিতে কোরিয়ান ৫০০ শব্দ",
+     "desc": "গবেষণায় বাছাই করা শুরুর ৫০০টি জরুরি শব্দ, আসল ছবিসহ — ৫ খণ্ড, প্রতিটিতে ১০০ শব্দ; প্রতিটি অধ্যায়ের QR থেকে শব্দ ও উত্তরসহ শর্টস দেখুন।"
     }
    },
    "ui": {
@@ -2613,6 +2688,10 @@
     "kiip": {
      "name": "සමාජ ඒකාබද්ධතා වැඩසටහන (KIIP)",
      "desc": "KIIP «කොරියානු භාෂාව සහ සංස්කෘතිය» පෙළපොතේ වචන සහ ව්‍යාකරණ පිළිබඳ නොමිලේ අත්පොත් සහ ආදර්ශ විභාග පොත්. පිළිතුරු සහ පැහැදිලි කිරීම් YouTube වීඩියෝවල ඇත (භාෂා 20ක උපසිරැසි) — පොතේ QR ස්කෑන් කරන්න."
+    },
+    "v500": {
+     "name": "රූප සමඟ කොරියානු වචන 500",
+     "desc": "පර්යේෂණයෙන් තෝරාගත් ආරම්භක අත්‍යවශ්‍ය වචන 500 සැබෑ ඡායාරූප සමඟ — කාණ්ඩ 5, එක් එකක වචන 100; එක් එක් පාඩමේ QR මඟින් ශබ්ද සහ පිළිතුරු සහිත Shorts බලන්න."
     }
    },
    "ui": {
@@ -2748,6 +2827,10 @@
     "kiip": {
      "name": "برنامج الاندماج الاجتماعي (KIIP)",
      "desc": "كتيبات مجانية لمفردات وقواعد كتاب KIIP «اللغة والثقافة الكورية» وكتب الاختبارات التجريبية. الإجابات والشروح في فيديوهات يوتيوب (ترجمة بـ20 لغة) — امسح رموز QR في الكتاب."
+    },
+    "v500": {
+     "name": "500 كلمة كورية بالصور",
+     "desc": "أهم 500 كلمة للمبتدئين، مختارة بالبحث، مع صور حقيقية — 5 مجلدات في كل منها 100 كلمة؛ امسح رمز QR لكل وحدة لمشاهدة مقاطع Shorts بالصوت والإجابات."
     }
    },
    "ui": {
@@ -2883,6 +2966,10 @@
     "kiip": {
      "name": "سماجی انضمام پروگرام (KIIP)",
      "desc": "KIIP کی کتاب «کوریائی زبان اور ثقافت» کے الفاظ اور گرامر کی مفت ہینڈ بک اور فرضی امتحان کی کتابیں۔ جوابات اور وضاحتیں YouTube ویڈیوز میں ہیں (20 زبانوں میں سب ٹائٹل) — کتاب کے QR اسکین کریں۔"
+    },
+    "v500": {
+     "name": "تصویروں میں 500 کوریائی الفاظ",
+     "desc": "تحقیق سے چنے گئے ابتدائی 500 ضروری الفاظ، اصل تصویروں کے ساتھ — 5 جلدیں، ہر ایک میں 100 الفاظ؛ ہر سبق کا QR اسکین کر کے آواز اور جوابات والے شارٹس دیکھیں۔"
     }
    },
    "ui": {
@@ -4167,6 +4254,38 @@
     "ar": "كتاب التمارين · اختبار تحديد المستوى (المرحلة 0)",
     "ur": "مشقی کتاب · سطح جانچ ٹیسٹ (مرحلہ 0)"
    }
+  },
+  {
+   "id": "epic21-vocab500-v1",
+   "group": "v500",
+   "level": "입문",
+   "slug": "vocab500-1",
+   "ko": "그림으로 배우는 한국어 어휘 500 · 1권",
+   "en": "Korean Vocabulary 500 in Pictures · Volume 1",
+   "vol": 1,
+   "ko_sub": "사람·몸·마음 · 단어 100개 · 단원마다 QR 쇼츠",
+   "en_sub": "People, Body & Feelings · 100 words · Shorts QR in every unit",
+   "tr": {
+    "ne": "मानिस, शरीर र मन · १०० शब्द · १० पाठ",
+    "ru": "Люди, тело и чувства · 100 слов · 10 уроков",
+    "mn": "Хүн, бие, сэтгэл · 100 үг · 10 хичээл",
+    "my": "လူ၊ ခန္ဓာ၊ စိတ် · စကားလုံး ၁၀၀ · သင်ခန်း ၁၀",
+    "vi": "Con người, cơ thể, cảm xúc · 100 từ · 10 bài",
+    "bn": "মানুষ, শরীর ও মন · ১০০ শব্দ · ১০ অধ্যায়",
+    "es": "Personas, cuerpo y sentimientos · 100 palabras · 10 unidades",
+    "si": "මිනිසා, ශරීරය, සිත · වචන 100 · පාඩම් 10",
+    "ar": "الإنسان والجسم والمشاعر · 100 كلمة · 10 وحدات",
+    "ur": "انسان، جسم اور دل · 100 الفاظ · 10 اسباق",
+    "uz": "Inson, tana, koʻngil · 100 soʻz · 10 dars",
+    "id": "Manusia, Tubuh, dan Perasaan · 100 kata · 10 unit",
+    "ja": "人・からだ・こころ · 単語100 · 10課",
+    "zh-Hans": "人·身体·心情 · 100个词 · 10课",
+    "km": "មនុស្ស រាងកាយ និងចិត្ត · ពាក្យ ១០០ · មេរៀន ១០",
+    "tl": "Tao, Katawan at Damdamin · 100 salita · 10 aralin",
+    "th": "คน ร่างกาย และจิตใจ · 100 คำ · 10 บท",
+    "pt": "Pessoas, corpo e sentimentos · 100 palavras · 10 unidades",
+    "fr": "Les gens, le corps et les sentiments · 100 mots · 10 unités"
+   }
   }
  ],
  "files": {
@@ -4954,6 +5073,28 @@
   ],
   "epic21-kiip-workbook-s5": [
    "EPIC21_KIIP_S5_Korean.pdf"
+  ],
+  "epic21-vocab500-v1": [
+   "EPIC21_VOCAB500_V1_Arabic.pdf",
+   "EPIC21_VOCAB500_V1_Bengali.pdf",
+   "EPIC21_VOCAB500_V1_Burmese.pdf",
+   "EPIC21_VOCAB500_V1_Chinese-Simplified.pdf",
+   "EPIC21_VOCAB500_V1_English.pdf",
+   "EPIC21_VOCAB500_V1_French.pdf",
+   "EPIC21_VOCAB500_V1_Indonesian.pdf",
+   "EPIC21_VOCAB500_V1_Japanese.pdf",
+   "EPIC21_VOCAB500_V1_Khmer.pdf",
+   "EPIC21_VOCAB500_V1_Mongolian.pdf",
+   "EPIC21_VOCAB500_V1_Nepali.pdf",
+   "EPIC21_VOCAB500_V1_Portuguese.pdf",
+   "EPIC21_VOCAB500_V1_Russian.pdf",
+   "EPIC21_VOCAB500_V1_Sinhala.pdf",
+   "EPIC21_VOCAB500_V1_Spanish.pdf",
+   "EPIC21_VOCAB500_V1_Tagalog.pdf",
+   "EPIC21_VOCAB500_V1_Thai.pdf",
+   "EPIC21_VOCAB500_V1_Urdu.pdf",
+   "EPIC21_VOCAB500_V1_Uzbek.pdf",
+   "EPIC21_VOCAB500_V1_Vietnamese.pdf"
   ]
  },
  "sizes": {
@@ -5741,6 +5882,28 @@
   },
   "epic21-kiip-workbook-s5": {
    "EPIC21_KIIP_S5_Korean.pdf": 1840766
+  },
+  "epic21-vocab500-v1": {
+   "EPIC21_VOCAB500_V1_Arabic.pdf": 97506232,
+   "EPIC21_VOCAB500_V1_Bengali.pdf": 98265586,
+   "EPIC21_VOCAB500_V1_Burmese.pdf": 97644280,
+   "EPIC21_VOCAB500_V1_Chinese-Simplified.pdf": 99422169,
+   "EPIC21_VOCAB500_V1_English.pdf": 97340488,
+   "EPIC21_VOCAB500_V1_French.pdf": 97299637,
+   "EPIC21_VOCAB500_V1_Indonesian.pdf": 99706934,
+   "EPIC21_VOCAB500_V1_Japanese.pdf": 98123654,
+   "EPIC21_VOCAB500_V1_Khmer.pdf": 96846602,
+   "EPIC21_VOCAB500_V1_Mongolian.pdf": 97197772,
+   "EPIC21_VOCAB500_V1_Nepali.pdf": 96780077,
+   "EPIC21_VOCAB500_V1_Portuguese.pdf": 97187606,
+   "EPIC21_VOCAB500_V1_Russian.pdf": 97808393,
+   "EPIC21_VOCAB500_V1_Sinhala.pdf": 97118621,
+   "EPIC21_VOCAB500_V1_Spanish.pdf": 97926849,
+   "EPIC21_VOCAB500_V1_Tagalog.pdf": 97285544,
+   "EPIC21_VOCAB500_V1_Thai.pdf": 96686249,
+   "EPIC21_VOCAB500_V1_Urdu.pdf": 97772460,
+   "EPIC21_VOCAB500_V1_Uzbek.pdf": 97892105,
+   "EPIC21_VOCAB500_V1_Vietnamese.pdf": 98236452
   }
  },
  "goatcounter": "epic21korean",
