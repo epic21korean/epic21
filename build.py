@@ -125,6 +125,10 @@ def match_pdf(names, lang_file):
         for tkn in tokens:
             if (tkn + '_') in nl or (tkn + '.') in nl:
                 return n
+    # 한국어 단일판(언어별 판이 없는 책)은 모든 언어 페이지에서 같은 파일을 준다
+    for n in names:
+        if n.lower().endswith('_korean.pdf'):
+            return n
     return None
 
 

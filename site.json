@@ -264,7 +264,7 @@
     },
     "kiip": {
      "name": "사회통합프로그램(KIIP)",
-     "desc": "사회통합프로그램 『한국어와 한국문화』 교재의 어휘·문법을 모국어로 정리한 핸드북과, 단계평가·중간평가·사전평가 모의고사 문제집의 정답과 해설입니다."
+     "desc": "사회통합프로그램 『한국어와 한국문화』 교재의 어휘·문법을 모국어로 정리한 핸드북과, 단계평가·중간평가·사전평가 합격 문제집. 문제집의 정답과 해설은 책 속 QR로 여는 유튜브 영상(20개 언어 자막)에서 볼 수 있습니다."
     }
    },
    "ui": {
@@ -358,7 +358,7 @@
     },
     "kiip": {
      "name": "Korea Immigration & Integration Program (KIIP)",
-     "desc": "Free handbooks of the vocabulary and grammar in the KIIP textbook \"Korean Language and Culture\", plus answer keys with explanations for the EPIC21 KIIP mock-test workbooks."
+     "desc": "Free handbooks of the vocabulary and grammar in the KIIP textbook \"Korean Language and Culture\", plus mock-test workbooks. Answers and explanations are in YouTube videos (subtitles in 20 languages) — scan the QR codes in each workbook."
     }
    },
    "ui": {
@@ -452,7 +452,7 @@
     },
     "kiip": {
      "name": "Programa de Integración Social de Corea (KIIP)",
-     "desc": "Manuales gratuitos del vocabulario y la gramática del libro KIIP «Lengua y cultura coreanas» y soluciones explicadas de los cuadernos de exámenes de práctica."
+     "desc": "Manuales gratuitos del vocabulario y la gramática del libro KIIP «Lengua y cultura coreanas» y cuadernos de exámenes de práctica. Las respuestas y explicaciones están en videos de YouTube (subtítulos en 20 idiomas): escanea los QR del cuaderno."
     }
    },
    "ui": {
@@ -587,7 +587,7 @@
     },
     "kiip": {
      "name": "Programme d'intégration sociale de Corée (KIIP)",
-     "desc": "Manuels gratuits du vocabulaire et de la grammaire du manuel KIIP « Langue et culture coréennes », et corrigés expliqués des cahiers d'examens blancs."
+     "desc": "Manuels gratuits du vocabulaire et de la grammaire du manuel KIIP « Langue et culture coréennes » et cahiers d'examens blancs. Les corrigés expliqués sont dans des vidéos YouTube (sous-titres en 20 langues) : scannez les QR du cahier."
     }
    },
    "ui": {
@@ -722,7 +722,7 @@
     },
     "kiip": {
      "name": "Programa de Integração Social da Coreia (KIIP)",
-     "desc": "Manuais gratuitos de vocabulário e gramática do livro KIIP «Língua e Cultura Coreanas» e gabaritos comentados dos cadernos de simulados."
+     "desc": "Manuais gratuitos de vocabulário e gramática do livro KIIP «Língua e Cultura Coreanas» e cadernos de simulados. As respostas e explicações estão em vídeos do YouTube (legendas em 20 idiomas): leia os QR do caderno."
     }
    },
    "ui": {
@@ -857,7 +857,7 @@
     },
     "kiip": {
      "name": "Program Integrasi Sosial Korea (KIIP)",
-     "desc": "Buku saku gratis kosakata dan tata bahasa buku KIIP \"Bahasa dan Budaya Korea\", serta kunci jawaban dan pembahasan buku latihan ujian."
+     "desc": "Buku saku gratis kosakata dan tata bahasa buku KIIP \"Bahasa dan Budaya Korea\", serta buku latihan ujian. Kunci jawaban dan pembahasan ada di video YouTube (subtitle 20 bahasa) — pindai QR di buku latihan."
     }
    },
    "ui": {
@@ -992,7 +992,7 @@
     },
     "kiip": {
      "name": "Chương trình Hội nhập Xã hội (KIIP)",
-     "desc": "Sổ tay miễn phí về từ vựng và ngữ pháp trong giáo trình KIIP \"Tiếng Hàn và Văn hóa Hàn Quốc\", cùng đáp án và giải thích cho sách luyện đề thi thử."
+     "desc": "Sổ tay miễn phí về từ vựng và ngữ pháp trong giáo trình KIIP \"Tiếng Hàn và Văn hóa Hàn Quốc\", cùng sách luyện đề thi thử. Đáp án và giải thích có trong video YouTube (phụ đề 20 ngôn ngữ) — hãy quét mã QR trong sách."
     }
    },
    "ui": {
@@ -1127,7 +1127,7 @@
     },
     "kiip": {
      "name": "Social Integration Program ng Korea (KIIP)",
-     "desc": "Libreng handbook ng bokabularyo at gramatika ng aklat ng KIIP na \"Korean Language and Culture\", at mga sagot na may paliwanag para sa mga workbook ng mock test."
+     "desc": "Libreng handbook ng bokabularyo at gramatika ng aklat ng KIIP na \"Korean Language and Culture\", at mga workbook ng mock test. Nasa mga video sa YouTube ang mga sagot at paliwanag (subtitle sa 20 wika) — i-scan ang QR sa workbook."
     }
    },
    "ui": {
@@ -1262,7 +1262,7 @@
     },
     "kiip": {
      "name": "Ijtimoiy integratsiya dasturi (KIIP)",
-     "desc": "KIIP «Koreys tili va madaniyati» darsligidagi lugʻat va grammatika boʻyicha bepul qoʻllanmalar hamda sinov imtihonlari toʻplamlarining izohli javoblari."
+     "desc": "KIIP «Koreys tili va madaniyati» darsligidagi lugʻat va grammatika boʻyicha bepul qoʻllanmalar hamda sinov imtihonlari toʻplamlari. Javoblar va izohlar YouTube videolarida (20 tilda subtitr) — toʻplamdagi QR kodni skanerlang."
     }
    },
    "ui": {
@@ -1397,7 +1397,7 @@
     },
     "kiip": {
      "name": "Программа социальной интеграции (KIIP)",
-     "desc": "Бесплатные справочники по лексике и грамматике учебника KIIP «Корейский язык и культура», а также ответы с объяснениями к сборникам пробных экзаменов."
+     "desc": "Бесплатные справочники по лексике и грамматике учебника KIIP «Корейский язык и культура» и сборники пробных экзаменов. Ответы и объяснения — в видео на YouTube (субтитры на 20 языках): отсканируйте QR-коды в сборнике."
     }
    },
    "ui": {
@@ -1532,7 +1532,7 @@
     },
     "kiip": {
      "name": "Нийгэмд нэгтгэх хөтөлбөр (KIIP)",
-     "desc": "KIIP-ийн «Солонгос хэл ба соёл» сурах бичгийн үг, дүрмийн үнэгүй гарын авлага болон туршилтын шалгалтын номын хариу, тайлбар."
+     "desc": "KIIP-ийн «Солонгос хэл ба соёл» сурах бичгийн үг, дүрмийн үнэгүй гарын авлага болон туршилтын шалгалтын ном. Хариу, тайлбар нь YouTube видеонд (20 хэлний хадмал) — номын QR кодыг уншуулна уу."
     }
    },
    "ui": {
@@ -1667,7 +1667,7 @@
     },
     "kiip": {
      "name": "社会統合プログラム（KIIP）",
-     "desc": "KIIP教材『韓国語と韓国文化』の語彙・文法をまとめた無料ハンドブックと、模擬試験問題集の解答・解説。"
+     "desc": "KIIP教材『韓国語と韓国文化』の語彙・文法をまとめた無料ハンドブックと模擬試験問題集。解答・解説はYouTube動画（20言語字幕）で公開しています。問題集のQRコードを読み取ってください。"
     }
    },
    "ui": {
@@ -1802,7 +1802,7 @@
     },
     "kiip": {
      "name": "社会融合项目（KIIP）",
-     "desc": "KIIP教材《韩国语与韩国文化》词汇与语法免费手册，以及模拟考试练习册的答案与解析。"
+     "desc": "KIIP教材《韩国语与韩国文化》词汇与语法免费手册以及模拟考试练习册。答案与解析在YouTube视频中（20种语言字幕），请扫描练习册中的二维码。"
     }
    },
    "ui": {
@@ -1937,7 +1937,7 @@
     },
     "kiip": {
      "name": "โครงการบูรณาการทางสังคม (KIIP)",
-     "desc": "คู่มือฟรีคำศัพท์และไวยากรณ์จากตำรา KIIP «ภาษาและวัฒนธรรมเกาหลี» พร้อมเฉลยและคำอธิบายของแบบฝึกหัดข้อสอบจำลอง"
+     "desc": "คู่มือฟรีคำศัพท์และไวยากรณ์จากตำรา KIIP «ภาษาและวัฒนธรรมเกาหลี» และแบบฝึกหัดข้อสอบจำลอง เฉลยและคำอธิบายอยู่ในวิดีโอ YouTube (ซับไตเติล 20 ภาษา) — สแกน QR ในแบบฝึกหัด"
     }
    },
    "ui": {
@@ -2072,7 +2072,7 @@
     },
     "kiip": {
      "name": "កម្មវិធីសមាហរណកម្មសង្គម (KIIP)",
-     "desc": "សៀវភៅជំនួយឥតគិតថ្លៃអំពីវាក្យសព្ទ និងវេយ្យាករណ៍ក្នុងសៀវភៅ KIIP «ភាសា និងវប្បធម៌កូរ៉េ» និងចម្លើយព្រមទាំងការពន្យល់សម្រាប់សៀវភៅប្រឡងសាកល្បង។"
+     "desc": "សៀវភៅជំនួយឥតគិតថ្លៃអំពីវាក្យសព្ទ និងវេយ្យាករណ៍ក្នុងសៀវភៅ KIIP «ភាសា និងវប្បធម៌កូរ៉េ» និងសៀវភៅប្រឡងសាកល្បង។ ចម្លើយ និងការពន្យល់មាននៅក្នុងវីដេអូ YouTube (អក្សររត់ 20 ភាសា) — សូមស្កេន QR ក្នុងសៀវភៅ។"
     }
    },
    "ui": {
@@ -2207,7 +2207,7 @@
     },
     "kiip": {
      "name": "လူမှုပေါင်းစည်းရေး အစီအစဉ် (KIIP)",
-     "desc": "KIIP «ကိုရီးယားဘာသာစကားနှင့် ယဉ်ကျေးမှု» စာအုပ်ပါ ဝေါဟာရနှင့် သဒ္ဒါ အခမဲ့ လက်စွဲစာအုပ်များနှင့် စမ်းသပ်စာမေးပွဲ လေ့ကျင့်စာအုပ်များ၏ အဖြေနှင့် ရှင်းလင်းချက်။"
+     "desc": "KIIP «ကိုရီးယားဘာသာစကားနှင့် ယဉ်ကျေးမှု» စာအုပ်ပါ ဝေါဟာရနှင့် သဒ္ဒါ အခမဲ့ လက်စွဲစာအုပ်များနှင့် စမ်းသပ်စာမေးပွဲ လေ့ကျင့်စာအုပ်များ။ အဖြေနှင့် ရှင်းလင်းချက်များကို YouTube ဗီဒီယို (ဘာသာစကား ၂၀ စာတန်းထိုး) တွင် ကြည့်နိုင်သည် — စာအုပ်ထဲက QR ကို စကန်ဖတ်ပါ။"
     }
    },
    "ui": {
@@ -2342,7 +2342,7 @@
     },
     "kiip": {
      "name": "सामाजिक एकीकरण कार्यक्रम (KIIP)",
-     "desc": "KIIP पाठ्यपुस्तक «कोरियाली भाषा र संस्कृति» का शब्द र व्याकरणका निःशुल्क पुस्तिका, साथै नमुना परीक्षा पुस्तिकाका उत्तर र व्याख्या।"
+     "desc": "KIIP पाठ्यपुस्तक «कोरियाली भाषा र संस्कृति» का शब्द र व्याकरणका निःशुल्क पुस्तिका र नमुना परीक्षा पुस्तिका। उत्तर र व्याख्या YouTube भिडियोमा छन् (२० भाषामा उपशीर्षक) — पुस्तिकाको QR स्क्यान गर्नुहोस्।"
     }
    },
    "ui": {
@@ -2477,7 +2477,7 @@
     },
     "kiip": {
      "name": "সামাজিক সমন্বয় কর্মসূচি (KIIP)",
-     "desc": "KIIP পাঠ্যবই «কোরীয় ভাষা ও সংস্কৃতি»-এর শব্দ ও ব্যাকরণের বিনামূল্যে হ্যান্ডবুক এবং মক টেস্ট বইয়ের উত্তর ও ব্যাখ্যা।"
+     "desc": "KIIP পাঠ্যবই «কোরীয় ভাষা ও সংস্কৃতি»-এর শব্দ ও ব্যাকরণের বিনামূল্যে হ্যান্ডবুক এবং মক টেস্ট বই। উত্তর ও ব্যাখ্যা YouTube ভিডিওতে (২০ ভাষায় সাবটাইটেল) — বইয়ের QR স্ক্যান করুন।"
     }
    },
    "ui": {
@@ -2612,7 +2612,7 @@
     },
     "kiip": {
      "name": "සමාජ ඒකාබද්ධතා වැඩසටහන (KIIP)",
-     "desc": "KIIP «කොරියානු භාෂාව සහ සංස්කෘතිය» පෙළපොතේ වචන සහ ව්‍යාකරණ පිළිබඳ නොමිලේ අත්පොත් සහ ආදර්ශ විභාග පොත්වල පිළිතුරු සහ පැහැදිලි කිරීම්."
+     "desc": "KIIP «කොරියානු භාෂාව සහ සංස්කෘතිය» පෙළපොතේ වචන සහ ව්‍යාකරණ පිළිබඳ නොමිලේ අත්පොත් සහ ආදර්ශ විභාග පොත්. පිළිතුරු සහ පැහැදිලි කිරීම් YouTube වීඩියෝවල ඇත (භාෂා 20ක උපසිරැසි) — පොතේ QR ස්කෑන් කරන්න."
     }
    },
    "ui": {
@@ -2747,7 +2747,7 @@
     },
     "kiip": {
      "name": "برنامج الاندماج الاجتماعي (KIIP)",
-     "desc": "كتيبات مجانية لمفردات وقواعد كتاب KIIP «اللغة والثقافة الكورية»، مع الإجابات والشروح لكتب الاختبارات التجريبية."
+     "desc": "كتيبات مجانية لمفردات وقواعد كتاب KIIP «اللغة والثقافة الكورية» وكتب الاختبارات التجريبية. الإجابات والشروح في فيديوهات يوتيوب (ترجمة بـ20 لغة) — امسح رموز QR في الكتاب."
     }
    },
    "ui": {
@@ -2882,7 +2882,7 @@
     },
     "kiip": {
      "name": "سماجی انضمام پروگرام (KIIP)",
-     "desc": "KIIP کی کتاب «کوریائی زبان اور ثقافت» کے الفاظ اور گرامر کی مفت ہینڈ بک، اور فرضی امتحان کی کتابوں کے جوابات اور وضاحتیں۔"
+     "desc": "KIIP کی کتاب «کوریائی زبان اور ثقافت» کے الفاظ اور گرامر کی مفت ہینڈ بک اور فرضی امتحان کی کتابیں۔ جوابات اور وضاحتیں YouTube ویڈیوز میں ہیں (20 زبانوں میں سب ٹائٹل) — کتاب کے QR اسکین کریں۔"
     }
    },
    "ui": {
@@ -4009,163 +4009,163 @@
    }
   },
   {
-   "id": "epic21-kiip-answers-s1",
+   "id": "epic21-kiip-workbook-s1",
    "group": "kiip",
    "level": "초급",
-   "slug": "kiip-answers1",
-   "ko": "사회통합프로그램 정답과 해설 · 1단계 평가",
-   "en": "KIIP Answer Key · Stage 1 test",
+   "slug": "kiip-workbook1",
+   "ko": "사회통합프로그램 합격 문제집 · 1단계 평가",
+   "en": "KIIP Mock-Test Workbook · Stage 1 test",
    "vol": null,
-   "ko_sub": "1단계 평가 모의고사 문제집 정답과 해설",
-   "en_sub": "Answers & explanations · Stage 1 test",
+   "ko_sub": "1단계 평가 대비 문제집 · 정답과 해설은 유튜브 영상(20개 언어 자막)",
+   "en_sub": "Mock-test workbook · Stage 1 test · answers in YouTube videos",
    "tr": {
-    "es": "Soluciones explicadas · Examen del nivel 1",
-    "fr": "Corrigés expliqués · Examen du niveau 1",
-    "pt": "Gabarito comentado · Prova do nível 1",
-    "id": "Kunci jawaban & pembahasan · Ujian tahap 1",
-    "vi": "Đáp án và giải thích · Bài thi cấp 1",
-    "tl": "Mga sagot at paliwanag · Pagsusulit ng antas 1",
-    "uz": "Javoblar va izohlar · 1-bosqich imtihoni",
-    "ru": "Ответы и объяснения · Экзамен 1-й ступени",
-    "mn": "Хариу ба тайлбар · 1-р шатны шалгалт",
-    "ja": "解答・解説 · 1段階評価",
-    "zh-Hans": "答案与解析 · 第1阶段考试",
-    "th": "เฉลยและคำอธิบาย · การสอบระดับ 1",
-    "km": "ចម្លើយ និងការពន្យល់ · ការប្រឡងកម្រិត 1",
-    "my": "အဖြေနှင့် ရှင်းလင်းချက် · အဆင့် ၁ စာမေးပွဲ",
-    "ne": "उत्तर र व्याख्या · चरण १ परीक्षा",
-    "bn": "উত্তর ও ব্যাখ্যা · ধাপ ১ পরীক্ষা",
-    "si": "පිළිතුරු සහ පැහැදිලි කිරීම් · අදියර 1 විභාගය",
-    "ar": "الإجابات والشروح · اختبار المرحلة 1",
-    "ur": "جوابات اور وضاحتیں · مرحلہ 1 کا امتحان"
+    "es": "Cuaderno de práctica · Examen del nivel 1",
+    "fr": "Cahier d'entraînement · Examen du niveau 1",
+    "pt": "Caderno de exercícios · Prova do nível 1",
+    "id": "Buku latihan · Ujian tahap 1",
+    "vi": "Sách luyện đề · Bài thi cấp 1",
+    "tl": "Workbook ng pagsasanay · Pagsusulit ng antas 1",
+    "uz": "Mashq toʻplami · 1-bosqich imtihoni",
+    "ru": "Сборник упражнений · Экзамен 1-й ступени",
+    "mn": "Дасгалын ном · 1-р шатны шалгалт",
+    "ja": "問題集 · 1段階評価",
+    "zh-Hans": "练习册 · 第1阶段考试",
+    "th": "แบบฝึกหัด · การสอบระดับ 1",
+    "km": "សៀវភៅលំហាត់ · ការប្រឡងកម្រិត 1",
+    "my": "လေ့ကျင့်ခန်းစာအုပ် · အဆင့် ၁ စာမေးပွဲ",
+    "ne": "अभ्यास पुस्तिका · चरण १ परीक्षा",
+    "bn": "অনুশীলন বই · ধাপ ১ পরীক্ষা",
+    "si": "අභ්‍යාස පොත · අදියර 1 විභාගය",
+    "ar": "كتاب التمارين · اختبار المرحلة 1",
+    "ur": "مشقی کتاب · مرحلہ 1 کا امتحان"
    }
   },
   {
-   "id": "epic21-kiip-answers-s2",
+   "id": "epic21-kiip-workbook-s2",
    "group": "kiip",
    "level": "초급",
-   "slug": "kiip-answers2",
-   "ko": "사회통합프로그램 정답과 해설 · 2단계 평가",
-   "en": "KIIP Answer Key · Stage 2 test",
+   "slug": "kiip-workbook2",
+   "ko": "사회통합프로그램 합격 문제집 · 2단계 평가",
+   "en": "KIIP Mock-Test Workbook · Stage 2 test",
    "vol": null,
-   "ko_sub": "2단계 평가 모의고사 문제집 정답과 해설",
-   "en_sub": "Answers & explanations · Stage 2 test",
+   "ko_sub": "2단계 평가 대비 문제집 · 정답과 해설은 유튜브 영상(20개 언어 자막)",
+   "en_sub": "Mock-test workbook · Stage 2 test · answers in YouTube videos",
    "tr": {
-    "es": "Soluciones explicadas · Examen del nivel 2",
-    "fr": "Corrigés expliqués · Examen du niveau 2",
-    "pt": "Gabarito comentado · Prova do nível 2",
-    "id": "Kunci jawaban & pembahasan · Ujian tahap 2",
-    "vi": "Đáp án và giải thích · Bài thi cấp 2",
-    "tl": "Mga sagot at paliwanag · Pagsusulit ng antas 2",
-    "uz": "Javoblar va izohlar · 2-bosqich imtihoni",
-    "ru": "Ответы и объяснения · Экзамен 2-й ступени",
-    "mn": "Хариу ба тайлбар · 2-р шатны шалгалт",
-    "ja": "解答・解説 · 2段階評価",
-    "zh-Hans": "答案与解析 · 第2阶段考试",
-    "th": "เฉลยและคำอธิบาย · การสอบระดับ 2",
-    "km": "ចម្លើយ និងការពន្យល់ · ការប្រឡងកម្រិត 2",
-    "my": "အဖြေနှင့် ရှင်းလင်းချက် · အဆင့် ၂ စာမေးပွဲ",
-    "ne": "उत्तर र व्याख्या · चरण २ परीक्षा",
-    "bn": "উত্তর ও ব্যাখ্যা · ধাপ ২ পরীক্ষা",
-    "si": "පිළිතුරු සහ පැහැදිලි කිරීම් · අදියර 2 විභාගය",
-    "ar": "الإجابات والشروح · اختبار المرحلة 2",
-    "ur": "جوابات اور وضاحتیں · مرحلہ 2 کا امتحان"
+    "es": "Cuaderno de práctica · Examen del nivel 2",
+    "fr": "Cahier d'entraînement · Examen du niveau 2",
+    "pt": "Caderno de exercícios · Prova do nível 2",
+    "id": "Buku latihan · Ujian tahap 2",
+    "vi": "Sách luyện đề · Bài thi cấp 2",
+    "tl": "Workbook ng pagsasanay · Pagsusulit ng antas 2",
+    "uz": "Mashq toʻplami · 2-bosqich imtihoni",
+    "ru": "Сборник упражнений · Экзамен 2-й ступени",
+    "mn": "Дасгалын ном · 2-р шатны шалгалт",
+    "ja": "問題集 · 2段階評価",
+    "zh-Hans": "练习册 · 第2阶段考试",
+    "th": "แบบฝึกหัด · การสอบระดับ 2",
+    "km": "សៀវភៅលំហាត់ · ការប្រឡងកម្រិត 2",
+    "my": "လေ့ကျင့်ခန်းစာအုပ် · အဆင့် ၂ စာမေးပွဲ",
+    "ne": "अभ्यास पुस्तिका · चरण २ परीक्षा",
+    "bn": "অনুশীলন বই · ধাপ ২ পরীক্ষা",
+    "si": "අභ්‍යාස පොත · අදියර 2 විභාගය",
+    "ar": "كتاب التمارين · اختبار المرحلة 2",
+    "ur": "مشقی کتاب · مرحلہ 2 کا امتحان"
    }
   },
   {
-   "id": "epic21-kiip-answers-s3",
+   "id": "epic21-kiip-workbook-s3",
    "group": "kiip",
    "level": "중급",
-   "slug": "kiip-answers3",
-   "ko": "사회통합프로그램 정답과 해설 · 3단계 평가",
-   "en": "KIIP Answer Key · Stage 3 test",
+   "slug": "kiip-workbook3",
+   "ko": "사회통합프로그램 합격 문제집 · 3단계 평가",
+   "en": "KIIP Mock-Test Workbook · Stage 3 test",
    "vol": null,
-   "ko_sub": "3단계 평가 모의고사 문제집 정답과 해설",
-   "en_sub": "Answers & explanations · Stage 3 test",
+   "ko_sub": "3단계 평가 대비 문제집 · 정답과 해설은 유튜브 영상(20개 언어 자막)",
+   "en_sub": "Mock-test workbook · Stage 3 test · answers in YouTube videos",
    "tr": {
-    "es": "Soluciones explicadas · Examen del nivel 3",
-    "fr": "Corrigés expliqués · Examen du niveau 3",
-    "pt": "Gabarito comentado · Prova do nível 3",
-    "id": "Kunci jawaban & pembahasan · Ujian tahap 3",
-    "vi": "Đáp án và giải thích · Bài thi cấp 3",
-    "tl": "Mga sagot at paliwanag · Pagsusulit ng antas 3",
-    "uz": "Javoblar va izohlar · 3-bosqich imtihoni",
-    "ru": "Ответы и объяснения · Экзамен 3-й ступени",
-    "mn": "Хариу ба тайлбар · 3-р шатны шалгалт",
-    "ja": "解答・解説 · 3段階評価",
-    "zh-Hans": "答案与解析 · 第3阶段考试",
-    "th": "เฉลยและคำอธิบาย · การสอบระดับ 3",
-    "km": "ចម្លើយ និងការពន្យល់ · ការប្រឡងកម្រិត 3",
-    "my": "အဖြေနှင့် ရှင်းလင်းချက် · အဆင့် ၃ စာမေးပွဲ",
-    "ne": "उत्तर र व्याख्या · चरण ३ परीक्षा",
-    "bn": "উত্তর ও ব্যাখ্যা · ধাপ ৩ পরীক্ষা",
-    "si": "පිළිතුරු සහ පැහැදිලි කිරීම් · අදියර 3 විභාගය",
-    "ar": "الإجابات والشروح · اختبار المرحلة 3",
-    "ur": "جوابات اور وضاحتیں · مرحلہ 3 کا امتحان"
+    "es": "Cuaderno de práctica · Examen del nivel 3",
+    "fr": "Cahier d'entraînement · Examen du niveau 3",
+    "pt": "Caderno de exercícios · Prova do nível 3",
+    "id": "Buku latihan · Ujian tahap 3",
+    "vi": "Sách luyện đề · Bài thi cấp 3",
+    "tl": "Workbook ng pagsasanay · Pagsusulit ng antas 3",
+    "uz": "Mashq toʻplami · 3-bosqich imtihoni",
+    "ru": "Сборник упражнений · Экзамен 3-й ступени",
+    "mn": "Дасгалын ном · 3-р шатны шалгалт",
+    "ja": "問題集 · 3段階評価",
+    "zh-Hans": "练习册 · 第3阶段考试",
+    "th": "แบบฝึกหัด · การสอบระดับ 3",
+    "km": "សៀវភៅលំហាត់ · ការប្រឡងកម្រិត 3",
+    "my": "လေ့ကျင့်ခန်းစာအုပ် · အဆင့် ၃ စာမေးပွဲ",
+    "ne": "अभ्यास पुस्तिका · चरण ३ परीक्षा",
+    "bn": "অনুশীলন বই · ধাপ ৩ পরীক্ষা",
+    "si": "අභ්‍යාස පොත · අදියර 3 විභාගය",
+    "ar": "كتاب التمارين · اختبار المرحلة 3",
+    "ur": "مشقی کتاب · مرحلہ 3 کا امتحان"
    }
   },
   {
-   "id": "epic21-kiip-answers-s4",
+   "id": "epic21-kiip-workbook-s4",
    "group": "kiip",
    "level": "중급",
-   "slug": "kiip-answers4",
-   "ko": "사회통합프로그램 정답과 해설 · 중간평가",
-   "en": "KIIP Answer Key · Mid-term test (Stage 4)",
+   "slug": "kiip-workbook4",
+   "ko": "사회통합프로그램 합격 문제집 · 중간평가",
+   "en": "KIIP Mock-Test Workbook · Mid-term test (Stage 4)",
    "vol": null,
-   "ko_sub": "중간평가 모의고사 문제집 정답과 해설",
-   "en_sub": "Answers & explanations · Mid-term test (Stage 4)",
+   "ko_sub": "중간평가 대비 문제집 · 정답과 해설은 유튜브 영상(20개 언어 자막)",
+   "en_sub": "Mock-test workbook · Mid-term test (Stage 4) · answers in YouTube videos",
    "tr": {
-    "es": "Soluciones explicadas · Examen intermedio (nivel 4)",
-    "fr": "Corrigés expliqués · Examen intermédiaire (niveau 4)",
-    "pt": "Gabarito comentado · Prova intermediária (nível 4)",
-    "id": "Kunci jawaban & pembahasan · Ujian tengah (tahap 4)",
-    "vi": "Đáp án và giải thích · Bài thi giữa kỳ (cấp 4)",
-    "tl": "Mga sagot at paliwanag · Midterm na pagsusulit (antas 4)",
-    "uz": "Javoblar va izohlar · Oraliq imtihon (4-bosqich)",
-    "ru": "Ответы и объяснения · Промежуточный экзамен (4-я ступень)",
-    "mn": "Хариу ба тайлбар · Дунд шатны шалгалт (4-р шат)",
-    "ja": "解答・解説 · 中間評価（4段階）",
-    "zh-Hans": "答案与解析 · 中期考试（第4阶段）",
-    "th": "เฉลยและคำอธิบาย · การสอบกลางภาค (ระดับ 4)",
-    "km": "ចម្លើយ និងការពន្យល់ · ការប្រឡងពាក់កណ្ដាលវគ្គ (កម្រិត 4)",
-    "my": "အဖြေနှင့် ရှင်းလင်းချက် · အလယ်အလတ် စာမေးပွဲ (အဆင့် ၄)",
-    "ne": "उत्तर र व्याख्या · मध्यावधि परीक्षा (चरण ४)",
-    "bn": "উত্তর ও ব্যাখ্যা · মধ্যবর্তী পরীক্ষা (ধাপ ৪)",
-    "si": "පිළිතුරු සහ පැහැදිලි කිරීම් · මධ්‍ය විභාගය (අදියර 4)",
-    "ar": "الإجابات والشروح · الاختبار المرحلي (المرحلة 4)",
-    "ur": "جوابات اور وضاحتیں · وسطی امتحان (مرحلہ 4)"
+    "es": "Cuaderno de práctica · Examen intermedio (nivel 4)",
+    "fr": "Cahier d'entraînement · Examen intermédiaire (niveau 4)",
+    "pt": "Caderno de exercícios · Prova intermediária (nível 4)",
+    "id": "Buku latihan · Ujian tengah (tahap 4)",
+    "vi": "Sách luyện đề · Bài thi giữa kỳ (cấp 4)",
+    "tl": "Workbook ng pagsasanay · Midterm na pagsusulit (antas 4)",
+    "uz": "Mashq toʻplami · Oraliq imtihon (4-bosqich)",
+    "ru": "Сборник упражнений · Промежуточный экзамен (4-я ступень)",
+    "mn": "Дасгалын ном · Дунд шатны шалгалт (4-р шат)",
+    "ja": "問題集 · 中間評価（4段階）",
+    "zh-Hans": "练习册 · 中期考试（第4阶段）",
+    "th": "แบบฝึกหัด · การสอบกลางภาค (ระดับ 4)",
+    "km": "សៀវភៅលំហាត់ · ការប្រឡងពាក់កណ្ដាលវគ្គ (កម្រិត 4)",
+    "my": "လေ့ကျင့်ခန်းစာအုပ် · အလယ်အလတ် စာမေးပွဲ (အဆင့် ၄)",
+    "ne": "अभ्यास पुस्तिका · मध्यावधि परीक्षा (चरण ४)",
+    "bn": "অনুশীলন বই · মধ্যবর্তী পরীক্ষা (ধাপ ৪)",
+    "si": "අභ්‍යාස පොත · මධ්‍ය විභාගය (අදියර 4)",
+    "ar": "كتاب التمارين · الاختبار المرحلي (المرحلة 4)",
+    "ur": "مشقی کتاب · وسطی امتحان (مرحلہ 4)"
    }
   },
   {
-   "id": "epic21-kiip-answers-s5",
+   "id": "epic21-kiip-workbook-s5",
    "group": "kiip",
    "level": "입문",
-   "slug": "kiip-answers5",
-   "ko": "사회통합프로그램 정답과 해설 · 사전평가",
-   "en": "KIIP Answer Key · Pre-test (Stage 0)",
+   "slug": "kiip-workbook5",
+   "ko": "사회통합프로그램 합격 문제집 · 사전평가",
+   "en": "KIIP Mock-Test Workbook · Pre-test (Stage 0)",
    "vol": null,
-   "ko_sub": "사전평가 모의고사 문제집 정답과 해설",
-   "en_sub": "Answers & explanations · Pre-test (Stage 0)",
+   "ko_sub": "사전평가 대비 문제집 · 정답과 해설은 유튜브 영상(20개 언어 자막)",
+   "en_sub": "Mock-test workbook · Pre-test (Stage 0) · answers in YouTube videos",
    "tr": {
-    "es": "Soluciones explicadas · Prueba de nivel (nivel 0)",
-    "fr": "Corrigés expliqués · Test de placement (niveau 0)",
-    "pt": "Gabarito comentado · Teste de nivelamento (nível 0)",
-    "id": "Kunci jawaban & pembahasan · Tes penempatan (tahap 0)",
-    "vi": "Đáp án và giải thích · Bài thi đầu vào (cấp 0)",
-    "tl": "Mga sagot at paliwanag · Placement test (antas 0)",
-    "uz": "Javoblar va izohlar · Darajani aniqlash testi (0-bosqich)",
-    "ru": "Ответы и объяснения · Входной тест (ступень 0)",
-    "mn": "Хариу ба тайлбар · Түвшин тогтоох шалгалт (0-р шат)",
-    "ja": "解答・解説 · 事前評価（0段階）",
-    "zh-Hans": "答案与解析 · 分级考试（第0阶段）",
-    "th": "เฉลยและคำอธิบาย · การสอบวัดระดับ (ระดับ 0)",
-    "km": "ចម្លើយ និងការពន្យល់ · ការប្រឡងវាយតម្លៃកម្រិត (កម្រិត 0)",
-    "my": "အဖြေနှင့် ရှင်းလင်းချက် · အဆင့်သတ်မှတ် စာမေးပွဲ (အဆင့် ၀)",
-    "ne": "उत्तर र व्याख्या · स्तर निर्धारण परीक्षा (चरण ०)",
-    "bn": "উত্তর ও ব্যাখ্যা · স্তর নির্ধারণী পরীক্ষা (ধাপ ০)",
-    "si": "පිළිතුරු සහ පැහැදිලි කිරීම් · මට්ටම් පරීක්ෂණය (අදියර 0)",
-    "ar": "الإجابات والشروح · اختبار تحديد المستوى (المرحلة 0)",
-    "ur": "جوابات اور وضاحتیں · سطح جانچ ٹیسٹ (مرحلہ 0)"
+    "es": "Cuaderno de práctica · Prueba de nivel (nivel 0)",
+    "fr": "Cahier d'entraînement · Test de placement (niveau 0)",
+    "pt": "Caderno de exercícios · Teste de nivelamento (nível 0)",
+    "id": "Buku latihan · Tes penempatan (tahap 0)",
+    "vi": "Sách luyện đề · Bài thi đầu vào (cấp 0)",
+    "tl": "Workbook ng pagsasanay · Placement test (antas 0)",
+    "uz": "Mashq toʻplami · Darajani aniqlash testi (0-bosqich)",
+    "ru": "Сборник упражнений · Входной тест (ступень 0)",
+    "mn": "Дасгалын ном · Түвшин тогтоох шалгалт (0-р шат)",
+    "ja": "問題集 · 事前評価（0段階）",
+    "zh-Hans": "练习册 · 分级考试（第0阶段）",
+    "th": "แบบฝึกหัด · การสอบวัดระดับ (ระดับ 0)",
+    "km": "សៀវភៅលំហាត់ · ការប្រឡងវាយតម្លៃកម្រិត (កម្រិត 0)",
+    "my": "လေ့ကျင့်ခန်းစာအုပ် · အဆင့်သတ်မှတ် စာမေးပွဲ (အဆင့် ၀)",
+    "ne": "अभ्यास पुस्तिका · स्तर निर्धारण परीक्षा (चरण ०)",
+    "bn": "অনুশীলন বই · স্তর নির্ধারণী পরীক্ষা (ধাপ ০)",
+    "si": "අභ්‍යාස පොත · මට්ටම් පරීක්ෂණය (අදියර 0)",
+    "ar": "كتاب التمارين · اختبار تحديد المستوى (المرحلة 0)",
+    "ur": "مشقی کتاب · سطح جانچ ٹیسٹ (مرحلہ 0)"
    }
   }
  ],
@@ -4940,115 +4940,20 @@
    "EPIC21_KIIP_H4_Uzbek_Free.pdf",
    "EPIC21_KIIP_H4_Vietnamese_Free.pdf"
   ],
-  "epic21-kiip-answers-s1": [
-   "EPIC21_KIIP_S1_Answers_Arabic.pdf",
-   "EPIC21_KIIP_S1_Answers_Bengali.pdf",
-   "EPIC21_KIIP_S1_Answers_Burmese.pdf",
-   "EPIC21_KIIP_S1_Answers_Chinese-Simplified.pdf",
-   "EPIC21_KIIP_S1_Answers_English.pdf",
-   "EPIC21_KIIP_S1_Answers_French.pdf",
-   "EPIC21_KIIP_S1_Answers_Indonesian.pdf",
-   "EPIC21_KIIP_S1_Answers_Japanese.pdf",
-   "EPIC21_KIIP_S1_Answers_Khmer.pdf",
-   "EPIC21_KIIP_S1_Answers_Mongolian.pdf",
-   "EPIC21_KIIP_S1_Answers_Nepali.pdf",
-   "EPIC21_KIIP_S1_Answers_Portuguese.pdf",
-   "EPIC21_KIIP_S1_Answers_Russian.pdf",
-   "EPIC21_KIIP_S1_Answers_Sinhala.pdf",
-   "EPIC21_KIIP_S1_Answers_Spanish.pdf",
-   "EPIC21_KIIP_S1_Answers_Tagalog.pdf",
-   "EPIC21_KIIP_S1_Answers_Thai.pdf",
-   "EPIC21_KIIP_S1_Answers_Urdu.pdf",
-   "EPIC21_KIIP_S1_Answers_Uzbek.pdf",
-   "EPIC21_KIIP_S1_Answers_Vietnamese.pdf"
+  "epic21-kiip-workbook-s1": [
+   "EPIC21_KIIP_S1_Korean.pdf"
   ],
-  "epic21-kiip-answers-s2": [
-   "EPIC21_KIIP_S2_Answers_Arabic.pdf",
-   "EPIC21_KIIP_S2_Answers_Bengali.pdf",
-   "EPIC21_KIIP_S2_Answers_Burmese.pdf",
-   "EPIC21_KIIP_S2_Answers_Chinese-Simplified.pdf",
-   "EPIC21_KIIP_S2_Answers_English.pdf",
-   "EPIC21_KIIP_S2_Answers_French.pdf",
-   "EPIC21_KIIP_S2_Answers_Indonesian.pdf",
-   "EPIC21_KIIP_S2_Answers_Japanese.pdf",
-   "EPIC21_KIIP_S2_Answers_Khmer.pdf",
-   "EPIC21_KIIP_S2_Answers_Mongolian.pdf",
-   "EPIC21_KIIP_S2_Answers_Nepali.pdf",
-   "EPIC21_KIIP_S2_Answers_Portuguese.pdf",
-   "EPIC21_KIIP_S2_Answers_Russian.pdf",
-   "EPIC21_KIIP_S2_Answers_Sinhala.pdf",
-   "EPIC21_KIIP_S2_Answers_Spanish.pdf",
-   "EPIC21_KIIP_S2_Answers_Tagalog.pdf",
-   "EPIC21_KIIP_S2_Answers_Thai.pdf",
-   "EPIC21_KIIP_S2_Answers_Urdu.pdf",
-   "EPIC21_KIIP_S2_Answers_Uzbek.pdf",
-   "EPIC21_KIIP_S2_Answers_Vietnamese.pdf"
+  "epic21-kiip-workbook-s2": [
+   "EPIC21_KIIP_S2_Korean.pdf"
   ],
-  "epic21-kiip-answers-s3": [
-   "EPIC21_KIIP_S3_Answers_Arabic.pdf",
-   "EPIC21_KIIP_S3_Answers_Bengali.pdf",
-   "EPIC21_KIIP_S3_Answers_Burmese.pdf",
-   "EPIC21_KIIP_S3_Answers_Chinese-Simplified.pdf",
-   "EPIC21_KIIP_S3_Answers_English.pdf",
-   "EPIC21_KIIP_S3_Answers_French.pdf",
-   "EPIC21_KIIP_S3_Answers_Indonesian.pdf",
-   "EPIC21_KIIP_S3_Answers_Japanese.pdf",
-   "EPIC21_KIIP_S3_Answers_Khmer.pdf",
-   "EPIC21_KIIP_S3_Answers_Mongolian.pdf",
-   "EPIC21_KIIP_S3_Answers_Nepali.pdf",
-   "EPIC21_KIIP_S3_Answers_Portuguese.pdf",
-   "EPIC21_KIIP_S3_Answers_Russian.pdf",
-   "EPIC21_KIIP_S3_Answers_Sinhala.pdf",
-   "EPIC21_KIIP_S3_Answers_Spanish.pdf",
-   "EPIC21_KIIP_S3_Answers_Tagalog.pdf",
-   "EPIC21_KIIP_S3_Answers_Thai.pdf",
-   "EPIC21_KIIP_S3_Answers_Urdu.pdf",
-   "EPIC21_KIIP_S3_Answers_Uzbek.pdf",
-   "EPIC21_KIIP_S3_Answers_Vietnamese.pdf"
+  "epic21-kiip-workbook-s3": [
+   "EPIC21_KIIP_S3_Korean.pdf"
   ],
-  "epic21-kiip-answers-s4": [
-   "EPIC21_KIIP_S4_Answers_Arabic.pdf",
-   "EPIC21_KIIP_S4_Answers_Bengali.pdf",
-   "EPIC21_KIIP_S4_Answers_Burmese.pdf",
-   "EPIC21_KIIP_S4_Answers_Chinese-Simplified.pdf",
-   "EPIC21_KIIP_S4_Answers_English.pdf",
-   "EPIC21_KIIP_S4_Answers_French.pdf",
-   "EPIC21_KIIP_S4_Answers_Indonesian.pdf",
-   "EPIC21_KIIP_S4_Answers_Japanese.pdf",
-   "EPIC21_KIIP_S4_Answers_Khmer.pdf",
-   "EPIC21_KIIP_S4_Answers_Mongolian.pdf",
-   "EPIC21_KIIP_S4_Answers_Nepali.pdf",
-   "EPIC21_KIIP_S4_Answers_Portuguese.pdf",
-   "EPIC21_KIIP_S4_Answers_Russian.pdf",
-   "EPIC21_KIIP_S4_Answers_Sinhala.pdf",
-   "EPIC21_KIIP_S4_Answers_Spanish.pdf",
-   "EPIC21_KIIP_S4_Answers_Tagalog.pdf",
-   "EPIC21_KIIP_S4_Answers_Thai.pdf",
-   "EPIC21_KIIP_S4_Answers_Urdu.pdf",
-   "EPIC21_KIIP_S4_Answers_Uzbek.pdf",
-   "EPIC21_KIIP_S4_Answers_Vietnamese.pdf"
+  "epic21-kiip-workbook-s4": [
+   "EPIC21_KIIP_S4_Korean.pdf"
   ],
-  "epic21-kiip-answers-s5": [
-   "EPIC21_KIIP_S5_Answers_Arabic.pdf",
-   "EPIC21_KIIP_S5_Answers_Bengali.pdf",
-   "EPIC21_KIIP_S5_Answers_Burmese.pdf",
-   "EPIC21_KIIP_S5_Answers_Chinese-Simplified.pdf",
-   "EPIC21_KIIP_S5_Answers_English.pdf",
-   "EPIC21_KIIP_S5_Answers_French.pdf",
-   "EPIC21_KIIP_S5_Answers_Indonesian.pdf",
-   "EPIC21_KIIP_S5_Answers_Japanese.pdf",
-   "EPIC21_KIIP_S5_Answers_Khmer.pdf",
-   "EPIC21_KIIP_S5_Answers_Mongolian.pdf",
-   "EPIC21_KIIP_S5_Answers_Nepali.pdf",
-   "EPIC21_KIIP_S5_Answers_Portuguese.pdf",
-   "EPIC21_KIIP_S5_Answers_Russian.pdf",
-   "EPIC21_KIIP_S5_Answers_Sinhala.pdf",
-   "EPIC21_KIIP_S5_Answers_Spanish.pdf",
-   "EPIC21_KIIP_S5_Answers_Tagalog.pdf",
-   "EPIC21_KIIP_S5_Answers_Thai.pdf",
-   "EPIC21_KIIP_S5_Answers_Urdu.pdf",
-   "EPIC21_KIIP_S5_Answers_Uzbek.pdf",
-   "EPIC21_KIIP_S5_Answers_Vietnamese.pdf"
+  "epic21-kiip-workbook-s5": [
+   "EPIC21_KIIP_S5_Korean.pdf"
   ]
  },
  "sizes": {
@@ -5822,115 +5727,20 @@
    "EPIC21_KIIP_H4_Uzbek_Free.pdf": 1806149,
    "EPIC21_KIIP_H4_Vietnamese_Free.pdf": 1821502
   },
-  "epic21-kiip-answers-s1": {
-   "EPIC21_KIIP_S1_Answers_Arabic.pdf": 1712366,
-   "EPIC21_KIIP_S1_Answers_Bengali.pdf": 1561996,
-   "EPIC21_KIIP_S1_Answers_Burmese.pdf": 1599988,
-   "EPIC21_KIIP_S1_Answers_Chinese-Simplified.pdf": 1805285,
-   "EPIC21_KIIP_S1_Answers_English.pdf": 1517353,
-   "EPIC21_KIIP_S1_Answers_French.pdf": 1534743,
-   "EPIC21_KIIP_S1_Answers_Indonesian.pdf": 1514098,
-   "EPIC21_KIIP_S1_Answers_Japanese.pdf": 1794188,
-   "EPIC21_KIIP_S1_Answers_Khmer.pdf": 1584662,
-   "EPIC21_KIIP_S1_Answers_Mongolian.pdf": 1540297,
-   "EPIC21_KIIP_S1_Answers_Nepali.pdf": 1544434,
-   "EPIC21_KIIP_S1_Answers_Portuguese.pdf": 1532494,
-   "EPIC21_KIIP_S1_Answers_Russian.pdf": 1517021,
-   "EPIC21_KIIP_S1_Answers_Sinhala.pdf": 1571297,
-   "EPIC21_KIIP_S1_Answers_Spanish.pdf": 1529986,
-   "EPIC21_KIIP_S1_Answers_Tagalog.pdf": 1518617,
-   "EPIC21_KIIP_S1_Answers_Thai.pdf": 1556071,
-   "EPIC21_KIIP_S1_Answers_Urdu.pdf": 1701145,
-   "EPIC21_KIIP_S1_Answers_Uzbek.pdf": 1529021,
-   "EPIC21_KIIP_S1_Answers_Vietnamese.pdf": 1535313
+  "epic21-kiip-workbook-s1": {
+   "EPIC21_KIIP_S1_Korean.pdf": 3194272
   },
-  "epic21-kiip-answers-s2": {
-   "EPIC21_KIIP_S2_Answers_Arabic.pdf": 1777147,
-   "EPIC21_KIIP_S2_Answers_Bengali.pdf": 1608336,
-   "EPIC21_KIIP_S2_Answers_Burmese.pdf": 1653821,
-   "EPIC21_KIIP_S2_Answers_Chinese-Simplified.pdf": 1871822,
-   "EPIC21_KIIP_S2_Answers_English.pdf": 1554133,
-   "EPIC21_KIIP_S2_Answers_French.pdf": 1577003,
-   "EPIC21_KIIP_S2_Answers_Indonesian.pdf": 1555328,
-   "EPIC21_KIIP_S2_Answers_Japanese.pdf": 1867397,
-   "EPIC21_KIIP_S2_Answers_Khmer.pdf": 1639644,
-   "EPIC21_KIIP_S2_Answers_Mongolian.pdf": 1578486,
-   "EPIC21_KIIP_S2_Answers_Nepali.pdf": 1584851,
-   "EPIC21_KIIP_S2_Answers_Portuguese.pdf": 1568349,
-   "EPIC21_KIIP_S2_Answers_Russian.pdf": 1556743,
-   "EPIC21_KIIP_S2_Answers_Sinhala.pdf": 1619360,
-   "EPIC21_KIIP_S2_Answers_Spanish.pdf": 1565947,
-   "EPIC21_KIIP_S2_Answers_Tagalog.pdf": 1557084,
-   "EPIC21_KIIP_S2_Answers_Thai.pdf": 1607943,
-   "EPIC21_KIIP_S2_Answers_Urdu.pdf": 1766913,
-   "EPIC21_KIIP_S2_Answers_Uzbek.pdf": 1565911,
-   "EPIC21_KIIP_S2_Answers_Vietnamese.pdf": 1575365
+  "epic21-kiip-workbook-s2": {
+   "EPIC21_KIIP_S2_Korean.pdf": 2973403
   },
-  "epic21-kiip-answers-s3": {
-   "EPIC21_KIIP_S3_Answers_Arabic.pdf": 1732388,
-   "EPIC21_KIIP_S3_Answers_Bengali.pdf": 1571607,
-   "EPIC21_KIIP_S3_Answers_Burmese.pdf": 1629606,
-   "EPIC21_KIIP_S3_Answers_Chinese-Simplified.pdf": 1849449,
-   "EPIC21_KIIP_S3_Answers_English.pdf": 1528457,
-   "EPIC21_KIIP_S3_Answers_French.pdf": 1542788,
-   "EPIC21_KIIP_S3_Answers_Indonesian.pdf": 1521656,
-   "EPIC21_KIIP_S3_Answers_Japanese.pdf": 1850709,
-   "EPIC21_KIIP_S3_Answers_Khmer.pdf": 1596801,
-   "EPIC21_KIIP_S3_Answers_Mongolian.pdf": 1546036,
-   "EPIC21_KIIP_S3_Answers_Nepali.pdf": 1550930,
-   "EPIC21_KIIP_S3_Answers_Portuguese.pdf": 1537269,
-   "EPIC21_KIIP_S3_Answers_Russian.pdf": 1523691,
-   "EPIC21_KIIP_S3_Answers_Sinhala.pdf": 1584640,
-   "EPIC21_KIIP_S3_Answers_Spanish.pdf": 1535523,
-   "EPIC21_KIIP_S3_Answers_Tagalog.pdf": 1525003,
-   "EPIC21_KIIP_S3_Answers_Thai.pdf": 1569793,
-   "EPIC21_KIIP_S3_Answers_Urdu.pdf": 1719337,
-   "EPIC21_KIIP_S3_Answers_Uzbek.pdf": 1533892,
-   "EPIC21_KIIP_S3_Answers_Vietnamese.pdf": 1540029
+  "epic21-kiip-workbook-s3": {
+   "EPIC21_KIIP_S3_Korean.pdf": 2774202
   },
-  "epic21-kiip-answers-s4": {
-   "EPIC21_KIIP_S4_Answers_Arabic.pdf": 1844391,
-   "EPIC21_KIIP_S4_Answers_Bengali.pdf": 1650094,
-   "EPIC21_KIIP_S4_Answers_Burmese.pdf": 1721716,
-   "EPIC21_KIIP_S4_Answers_Chinese-Simplified.pdf": 1940411,
-   "EPIC21_KIIP_S4_Answers_English.pdf": 1593633,
-   "EPIC21_KIIP_S4_Answers_French.pdf": 1626920,
-   "EPIC21_KIIP_S4_Answers_Indonesian.pdf": 1588067,
-   "EPIC21_KIIP_S4_Answers_Japanese.pdf": 1940914,
-   "EPIC21_KIIP_S4_Answers_Khmer.pdf": 1687580,
-   "EPIC21_KIIP_S4_Answers_Mongolian.pdf": 1618329,
-   "EPIC21_KIIP_S4_Answers_Nepali.pdf": 1621265,
-   "EPIC21_KIIP_S4_Answers_Portuguese.pdf": 1610416,
-   "EPIC21_KIIP_S4_Answers_Russian.pdf": 1600817,
-   "EPIC21_KIIP_S4_Answers_Sinhala.pdf": 1662138,
-   "EPIC21_KIIP_S4_Answers_Spanish.pdf": 1606532,
-   "EPIC21_KIIP_S4_Answers_Tagalog.pdf": 1591534,
-   "EPIC21_KIIP_S4_Answers_Thai.pdf": 1651012,
-   "EPIC21_KIIP_S4_Answers_Urdu.pdf": 1829692,
-   "EPIC21_KIIP_S4_Answers_Uzbek.pdf": 1605567,
-   "EPIC21_KIIP_S4_Answers_Vietnamese.pdf": 1615404
+  "epic21-kiip-workbook-s4": {
+   "EPIC21_KIIP_S4_Korean.pdf": 3053246
   },
-  "epic21-kiip-answers-s5": {
-   "EPIC21_KIIP_S5_Answers_Arabic.pdf": 1505486,
-   "EPIC21_KIIP_S5_Answers_Bengali.pdf": 1402899,
-   "EPIC21_KIIP_S5_Answers_Burmese.pdf": 1450784,
-   "EPIC21_KIIP_S5_Answers_Chinese-Simplified.pdf": 1682949,
-   "EPIC21_KIIP_S5_Answers_English.pdf": 1368974,
-   "EPIC21_KIIP_S5_Answers_French.pdf": 1388623,
-   "EPIC21_KIIP_S5_Answers_Indonesian.pdf": 1367070,
-   "EPIC21_KIIP_S5_Answers_Japanese.pdf": 1682850,
-   "EPIC21_KIIP_S5_Answers_Khmer.pdf": 1418891,
-   "EPIC21_KIIP_S5_Answers_Mongolian.pdf": 1389310,
-   "EPIC21_KIIP_S5_Answers_Nepali.pdf": 1388125,
-   "EPIC21_KIIP_S5_Answers_Portuguese.pdf": 1378746,
-   "EPIC21_KIIP_S5_Answers_Russian.pdf": 1368074,
-   "EPIC21_KIIP_S5_Answers_Sinhala.pdf": 1409042,
-   "EPIC21_KIIP_S5_Answers_Spanish.pdf": 1375890,
-   "EPIC21_KIIP_S5_Answers_Tagalog.pdf": 1366505,
-   "EPIC21_KIIP_S5_Answers_Thai.pdf": 1400801,
-   "EPIC21_KIIP_S5_Answers_Urdu.pdf": 1497069,
-   "EPIC21_KIIP_S5_Answers_Uzbek.pdf": 1376242,
-   "EPIC21_KIIP_S5_Answers_Vietnamese.pdf": 1382148
+  "epic21-kiip-workbook-s5": {
+   "EPIC21_KIIP_S5_Korean.pdf": 1840766
   }
  },
  "goatcounter": "epic21korean",
@@ -5970,11 +5780,11 @@
   "epic21-kiip-handbook-2": "2026-11-16",
   "epic21-kiip-handbook-3": "2026-11-16",
   "epic21-kiip-handbook-4": "2026-11-16",
-  "epic21-kiip-answers-s1": "2026-11-16",
-  "epic21-kiip-answers-s2": "2026-11-16",
-  "epic21-kiip-answers-s3": "2026-11-16",
-  "epic21-kiip-answers-s4": "2026-11-16",
-  "epic21-kiip-answers-s5": "2026-11-16"
+  "epic21-kiip-workbook-s1": "2026-11-17",
+  "epic21-kiip-workbook-s2": "2026-11-17",
+  "epic21-kiip-workbook-s3": "2026-11-17",
+  "epic21-kiip-workbook-s4": "2026-11-17",
+  "epic21-kiip-workbook-s5": "2026-11-17"
  },
  "intro": []
 }
