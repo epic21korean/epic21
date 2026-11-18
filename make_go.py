@@ -13,6 +13,7 @@ go/<시리즈>.json 의 {키: 유튜브 영상 ID 또는 null} 을 읽어
 쇼츠까지 모으는 단원 페이지(예: go/vocab500.json):
   "v1-u01": {"title": "...", "video": "본편ID 또는 null", "shorts": ["쇼츠ID", ...]}
   · shorts 가 있으면 바로 넘기지 않고, 본편 + 쇼츠를 한 페이지에 모아 보여 준다
+  · "t": 초 — 긴 모음 영상의 그 챕터 시각부터 재생 (예: 1단계 3과 → 모음 영상 7:43)
   · 시리즈 json 의 "soon": {"ko": "...", "en": "..."} 로 '공개 예정' 문구를 바꿀 수 있다
 """
 import json, os, glob, html
@@ -50,6 +51,8 @@ def main():
                 page = PAGE.format(title=t, redirect='', body=body)
             elif vid:
                 url = f'https://www.youtube.com/watch?v={vid}'
+                if isinstance(v, dict) and v.get('t'):      # 모음 영상의 해당 챕터 시각(초)으로 바로
+                    url += f'&t={int(v["t"])}s'
                 page = PAGE.format(title=t, redirect=f'<meta http-equiv="refresh" content="0;url={url}">',
                                    body=f'<p><a class="b y" href="{url}">▶ 영상 보기 · Watch</a></p>')
             else:
