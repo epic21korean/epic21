@@ -136,7 +136,7 @@ def cover_exists(book_id, lang_file):
     return os.path.exists(os.path.join(HERE, 'covers', book_id, lang_file + '.jpg'))
 
 
-def build_page(site, env, lang, is_root):
+def build_page(site, env, lang, is_root, collect=None):
     site_url = site['site_url'].rstrip('/')
     code = lang['code']
     T = site['text']
@@ -197,12 +197,16 @@ def build_page(site, env, lang, is_root):
                 video_url = site['youtube'].rstrip('/') + '/search?query=' + quote(q)
             search = ' '.join(x for x in [tr or '', b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
-            bk = dict(b, added=site.get('added', {}).get(b['id'], ''), sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_list=plist if vid else '', video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
+            page = f"{base}{'en/' if is_root else ''}{b['slug']}/" if is_root else f"{b['slug']}/"
+            bk = dict(b, page=page, gname=gt['name'], gdesc=gt['desc'], added=site.get('added', {}).get(b['id'], ''), sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_list=plist if vid else '', video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
+            if collect is not None:
+                collect.append(bk)
             if pdf:
                 items.append({'@type': 'Book', 'name': f"{vol_label + ' ' if vol_label else ''}{gt['name']}"
                               + (f" — {b['ko_sub']}" if b.get('ko_sub') else ''),
-                              'inLanguage': ['ko', 'en' if code == '_root' else code], 'url': pdf, 'isAccessibleForFree': True,
+                              'inLanguage': ['ko', 'en' if code == '_root' else code],
+                              'url': f"{site_url}/{'en' if code == '_root' else code}/{b['slug']}/", 'isAccessibleForFree': True,
                               'license': 'https://creativecommons.org/licenses/by-nc-nd/4.0/'})
         groups.append(dict(key=gk, name=gt['name'], desc=gt['desc'], ko=gko, books=books))
 
@@ -250,6 +254,66 @@ def build_page(site, env, lang, is_root):
     )
 
 
+BOOK_FREE = {  # 상세 페이지 제목에 붙는 "무료 PDF 교재" — 없으면 영어
+    'en': 'Free Korean textbook (PDF)', 'ko': '무료 한국어 교재 (PDF)',
+}
+
+
+def build_book_pages(site, env, lang, books):
+    """교재 × 언어 상세 페이지: /<언어>/<slug>/index.html — 짝 영상이 맨 위, 그다음 PDF."""
+    site_url = site['site_url'].rstrip('/')
+    code = lang['code']
+    T = site['text']
+    t = json.loads(json.dumps(T.get(code, T['en'])))
+    ui = dict(UI_NEW['en']); ui.update(UI_NEW.get(code, {})); ui.update(t['ui']); t['ui'] = ui
+    free = t['title'].split(' — ')[0].split(' | ')[0].strip()
+    tpl = env.get_template('book.html')
+    lic_url = 'https://creativecommons.org/licenses/by-nc-nd/4.0/'
+    for i, b in enumerate(books):
+        d = os.path.join(HERE, code, b['slug'])
+        os.makedirs(d, exist_ok=True)
+        page_url = f"{site_url}/{code}/{b['slug']}/"
+        ko_name = b['ko']
+        sub = b['sub'] or b.get('en_sub') or b.get('en', '')
+        title = f"{ko_name} — {sub} | {free} | EPIC21" if sub else f"{ko_name} | {free} | EPIC21"
+        desc = (f"{sub}. " if sub else '') + b['gdesc']
+        cover_abs = f"{site_url}/covers/{b['id']}/{lang['file']}.jpg" if cover_exists(b['id'], lang['file']) else ''
+        alternates = [{'code': L['code'], 'url': f"{site_url}/{L['code']}/{b['slug']}/", 'name': L['name']} for L in site['langs']]
+        node = {'@type': ['Book', 'LearningResource'], 'name': ko_name + (f' — {sub}' if sub else ''),
+                'url': page_url, 'inLanguage': ['ko', code], 'isAccessibleForFree': True, 'license': lic_url,
+                'learningResourceType': 'Textbook', 'educationalUse': 'Self-study',
+                'teaches': 'Korean language', 'bookFormat': 'https://schema.org/EBook',
+                'author': {'@type': 'Organization', 'name': 'EPIC21', 'url': site['youtube']},
+                'publisher': {'@type': 'Organization', 'name': 'EPIC21', 'url': site_url + '/'},
+                'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD', 'availability': 'https://schema.org/InStock'}}
+        if b['lv']:
+            node['educationalLevel'] = b['lv']['word'] + ' / ' + b['lv']['ko']
+        if cover_abs:
+            node['image'] = cover_abs
+        if b['pdf']:
+            node['encoding'] = {'@type': 'MediaObject', 'contentUrl': b['pdf'], 'encodingFormat': 'application/pdf'}
+        if b['video']:
+            node['subjectOf'] = {'@type': 'VideoObject', 'name': ko_name, 'description': sub or ko_name,
+                                 'embedUrl': f"https://www.youtube.com/embed/{b['video']}",
+                                 'url': f"https://www.youtube.com/watch?v={b['video']}",
+                                 'thumbnailUrl': f"https://i.ytimg.com/vi/{b['video']}/hqdefault.jpg"}
+        crumbs = {'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'EPIC21', 'item': site_url + '/'},
+            {'@type': 'ListItem', 'position': 2, 'name': lang['name'], 'item': f"{site_url}/{code}/"},
+            {'@type': 'ListItem', 'position': 3, 'name': ko_name, 'item': page_url}]}
+        jsonld = {'@context': 'https://schema.org', '@graph': [node, crumbs]}
+        others = [x for x in books if x['group'] == b['group'] and x['slug'] != b['slug']][:6]
+        html_out = tpl.render(lang=lang, t=t, b=b, title=title, desc=desc, page_url=page_url, site_url=site_url,
+                              alternates=alternates, cover_abs=cover_abs, og_locale=OG_LOCALE.get(code, 'en_US'),
+                              others=others, goatcounter=site.get('goatcounter', ''),
+                              youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', youtube=site['youtube'],
+                              license=site['license'], lic_url=lic_url,
+                              jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'))
+        with open(os.path.join(d, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html_out)
+    return len(books)
+
+
 def main():
     site = load()
     if '--refresh-files' in sys.argv:
@@ -277,13 +341,19 @@ def main():
     print('index.html')
 
     urls = [site_url + '/']
+    book_urls = []
     for L in site['langs']:
         d = os.path.join(HERE, L['code'])
         os.makedirs(d, exist_ok=True)
+        got = []
         with open(os.path.join(d, 'index.html'), 'w', encoding='utf-8') as f:
-            f.write(build_page(site, env, L, False))
+            f.write(build_page(site, env, L, False, collect=got))
         urls.append(f"{site_url}/{L['code']}/")
         print(f"{L['code']}/index.html")
+        n = build_book_pages(site, env, L, got)
+        book_urls += [f"{site_url}/{L['code']}/{b['slug']}/" for b in got]
+        print(f"  {L['code']}/<교재>/ ×{n}")
+    urls += book_urls
 
     today = datetime.date.today().isoformat()
     with open(os.path.join(HERE, 'sitemap.xml'), 'w', encoding='utf-8') as f:

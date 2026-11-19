@@ -78,6 +78,7 @@ try{var m=localStorage.getItem('epic21-theme');if(m==='light'||m==='dark')docume
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.bname a{color:inherit;text-decoration:none}.bname a:hover{text-decoration:underline}
 dialog{margin:auto;max-height:calc(100dvh - 24px)}
 html{-webkit-text-size-adjust:100%;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 132px)}
 body{
@@ -530,11 +531,11 @@ footer a{color:var(--muted)}
       </div>
       <div class="bmeta">
         {%- if b.single %}
-        <h4 class="bname" lang="ko">{{ b.ko }}</h4>
+        <h4 class="bname" lang="ko"><a href="{{ b.page }}">{{ b.ko }}</a></h4>
         {% if lang.code != 'ko' and b.sub %}<p class="bsub" lang="{{ b.sub_lang }}">{{ b.sub }}</p>{% endif %}
         {%- else %}
         {% if b.vol_label %}<p class="bvol">{{ b.vol_label }}</p>{% endif %}
-        <h4 class="bname" lang="ko">{{ b.ko_sub or b.short }}</h4>
+        <h4 class="bname" lang="ko"><a href="{{ b.page }}">{{ b.ko_sub or b.short }}</a></h4>
         {% if b.sub and lang.code != 'ko' %}<p class="bsub" lang="{{ b.sub_lang }}">{{ b.sub }}</p>{% endif %}
         {%- endif %}
       </div>
