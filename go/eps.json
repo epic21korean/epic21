@@ -1,0 +1,7 @@
+{
+ "note": "EPS 모의고사 문제지 QR → 듣기 영상·정답 해설 영상. 영상이 바뀌면 video만 고치고 python3 make_go.py",
+ "links": {
+  "1-listen": {"title": "EPS-TOPIK 실전 모의고사 1회 듣기", "video": "_xdDiMr6GTA", "t": 0},
+  "1-explain": {"title": "EPS-TOPIK 실전 모의고사 1회 정답·해설", "video": "FIWvVB7o8Ek", "t": 0}
+ }
+}
