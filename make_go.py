@@ -15,6 +15,7 @@ go/<시리즈>.json 의 {키: 유튜브 영상 ID 또는 null} 을 읽어
   · shorts 가 있으면 바로 넘기지 않고, 본편 + 쇼츠를 한 페이지에 모아 보여 준다
   · "from": "2026-11-21T10:00:00+09:00" — 예약 공개 시각. 그 전엔 '공개 예정', 지나면 자동으로 영상으로 넘어감
   · "t": 초 — 긴 모음 영상의 그 챕터 시각부터 재생 (예: 1단계 3과 → 모음 영상 7:43)
+  · "answers": [[제목, 내용], ...] — 교재 정답 쪽(정답을 책에 싣지 않고 QR로 여기 보여 줌)
   · 시리즈 json 의 "soon": {"ko": "...", "en": "..."} 로 '공개 예정' 문구를 바꿀 수 있다
 """
 import json, os, glob, html
@@ -45,7 +46,13 @@ def main():
             shorts = v.get('shorts', []) if isinstance(v, dict) else []
             t = html.escape(title)
             emb = lambda i, c: f'<div class="{c}"><iframe src="https://www.youtube-nocookie.com/embed/{i}" allowfullscreen loading="lazy"></iframe></div>'
-            if shorts:
+            if isinstance(v, dict) and v.get('answers'):      # 교재 정답 쪽: 정답 + 그 장면 영상
+                body = ''.join(f'<h2>{html.escape(h)}</h2><p style="text-align:left">{html.escape(x)}</p>' for h, x in v['answers'])
+                if vid:
+                    body += emb(vid + (f'?start={int(v["t"])}' if v.get('t') else ''), 'v')
+                body += f'<a class="b y" href="{CH}">▶ 구독 · Subscribe</a><a class="b h" href="{HUB}">교재 허브 · Hub</a>'
+                page = PAGE.format(title=t, redirect='', body=body)
+            elif shorts:
                 body = (emb(vid, 'v') if vid else f'<p>{soon["ko"]}<br><span style="font-size:13px">{soon["en"]}</span></p>')
                 body += '<h2>쇼츠 · Shorts</h2><div class="g">' + ''.join(emb(i, 's') for i in shorts) + '</div>'
                 body += f'<a class="b y" href="{CH}">▶ 구독 · Subscribe</a><a class="b h" href="{HUB}">교재 허브 · Hub</a>'
