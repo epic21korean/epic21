@@ -1,9 +1,46 @@
 {
  "note": "뮤직비디오로 배우는 TOPIK II 실전 모의고사 교재 QR → 뮤직비디오·듣기 영상·정답·해설 영상. 영상이 나오면 video 에 ID를 넣고 python3 make_go.py",
- "soon": {"ko": "이 영상을 곧 공개합니다.", "en": "This video is coming soon."},
+ "soon": {
+  "ko": "이 영상을 곧 공개합니다.",
+  "en": "This video is coming soon."
+ },
  "links": {
-  "siwon-mv": {"title": "뮤직비디오 「시원시원한 여자」", "video": null, "shorts": []},
-  "siwon-listen": {"title": "TOPIK II 실전 모의고사 제1편 「시원시원한 여자」 듣기", "video": null, "shorts": []},
-  "siwon-explain": {"title": "TOPIK II 실전 모의고사 제1편 「시원시원한 여자」 정답·해설", "video": null, "shorts": []}
+  "siwon-mv": {
+   "title": "뮤직비디오 「시원시원한 여자」",
+   "video": null,
+   "shorts": []
+  },
+  "siwon-listen": {
+   "title": "TOPIK II 실전 모의고사 제1편 「시원시원한 여자」 듣기",
+   "video": null,
+   "shorts": []
+  },
+  "siwon-explain": {
+   "title": "TOPIK II 실전 모의고사 제1편 「시원시원한 여자」 정답·해설",
+   "video": null,
+   "shorts": [],
+   "answers": [
+    [
+     "듣기 1~10번",
+     "1③ 2① 3③ 4① 5④ 6③ 7② 8③ 9② 10④"
+    ],
+    [
+     "읽기 13~26번",
+     "13④ 14③ 15① 16① 17③ 18④ 19② 20① 21④ 22③ 23① 24③ 25① 26④"
+    ],
+    [
+     "읽기 27~40번",
+     "27② 28② 29① 30④ 31① 32② 33④ 34② 35② 36③ 37① 38④ 39② 40③"
+    ],
+    [
+     "쓰기 11~12번",
+     "모범 답안과 채점 기준은 정답·해설 영상에서 확인하세요."
+    ],
+    [
+     "상세 해설",
+     "문항마다 정답 근거·보기별 풀이·풀이 요령을 영상에서 설명합니다. (20개 언어 자막)"
+    ]
+   ]
+  }
  }
 }
