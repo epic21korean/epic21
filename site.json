@@ -42,6 +42,10 @@
    "playlist": "PLbkrfZQvbu6o"
   },
   {
+   "key": "eps",
+   "playlist": "PLQTlQrYgFhkc"
+  },
+  {
    "key": "kiip"
   }
  ],
@@ -265,6 +269,10 @@
     "kiip": {
      "name": "사회통합프로그램(KIIP)",
      "desc": "사회통합프로그램 『한국어와 한국문화』 교재의 어휘·문법을 모국어로 정리한 핸드북과, 단계평가·중간평가·사전평가 합격 문제집. 문제집의 정답과 해설은 책 속 QR로 여는 유튜브 영상(20개 언어 자막)에서 볼 수 있습니다."
+    },
+    "eps": {
+     "name": "EPS-TOPIK 모의고사",
+     "desc": "고용허가제 한국어능력시험(EPS-TOPIK)과 같은 형식의 실전 모의고사. 문제지 PDF는 한국어판과 20개 언어판, 휴대폰으로 푸는 무료 연습 사이트(바로 채점), 듣기 영상과 정답·해설 영상(20개 언어 자막)이 함께 있습니다."
     }
    },
    "ui": {
@@ -359,6 +367,10 @@
     "kiip": {
      "name": "Korea Immigration & Integration Program (KIIP)",
      "desc": "Free handbooks of the vocabulary and grammar in the KIIP textbook \"Korean Language and Culture\", plus mock-test workbooks. Answers and explanations are in YouTube videos (subtitles in 20 languages) — scan the QR codes in each workbook."
+    },
+    "eps": {
+     "name": "EPS-TOPIK Mock Tests",
+     "desc": "Full mock tests in the same format as the EPS-TOPIK (Employment Permit System Korean test). Question booklets (PDF) in Korean and 20 languages, a free practice site you can use on your phone (instant score), a listening video and an answers & explanations video (subtitles in 20 languages)."
     }
    },
    "ui": {
@@ -453,6 +465,10 @@
     "kiip": {
      "name": "Programa de Integración Social de Corea (KIIP)",
      "desc": "Manuales gratuitos del vocabulario y la gramática del libro KIIP «Lengua y cultura coreanas» y cuadernos de exámenes de práctica. Las respuestas y explicaciones están en videos de YouTube (subtítulos en 20 idiomas): escanea los QR del cuaderno."
+    },
+    "eps": {
+     "name": "Simulacros EPS-TOPIK",
+     "desc": "Exámenes de práctica con el mismo formato que el EPS-TOPIK. Cuadernillos (PDF) en coreano y en 20 idiomas, sitio de práctica gratis en el móvil (nota al instante), video de audición y video de respuestas y explicaciones (subtítulos en 20 idiomas)."
     }
    },
    "ui": {
@@ -588,6 +604,10 @@
     "kiip": {
      "name": "Programme d'intégration sociale de Corée (KIIP)",
      "desc": "Manuels gratuits du vocabulaire et de la grammaire du manuel KIIP « Langue et culture coréennes » et cahiers d'examens blancs. Les corrigés expliqués sont dans des vidéos YouTube (sous-titres en 20 langues) : scannez les QR du cahier."
+    },
+    "eps": {
+     "name": "Examens blancs EPS-TOPIK",
+     "desc": "Examens blancs au même format que l'EPS-TOPIK. Livrets de questions (PDF) en coréen et en 20 langues, site d'entraînement gratuit sur téléphone (note immédiate), vidéo d'écoute et vidéo de corrigé expliqué (sous-titres en 20 langues)."
     }
    },
    "ui": {
@@ -723,6 +743,10 @@
     "kiip": {
      "name": "Programa de Integração Social da Coreia (KIIP)",
      "desc": "Manuais gratuitos de vocabulário e gramática do livro KIIP «Língua e Cultura Coreanas» e cadernos de simulados. As respostas e explicações estão em vídeos do YouTube (legendas em 20 idiomas): leia os QR do caderno."
+    },
+    "eps": {
+     "name": "Simulados EPS-TOPIK",
+     "desc": "Simulados no mesmo formato do EPS-TOPIK. Cadernos de questões (PDF) em coreano e em 20 idiomas, site de prática grátis no celular (nota na hora), vídeo de audição e vídeo de respostas e explicações (legendas em 20 idiomas)."
     }
    },
    "ui": {
@@ -858,6 +882,10 @@
     "kiip": {
      "name": "Program Integrasi Sosial Korea (KIIP)",
      "desc": "Buku saku gratis kosakata dan tata bahasa buku KIIP \"Bahasa dan Budaya Korea\", serta buku latihan ujian. Kunci jawaban dan pembahasan ada di video YouTube (subtitle 20 bahasa) — pindai QR di buku latihan."
+    },
+    "eps": {
+     "name": "Tryout EPS-TOPIK",
+     "desc": "Tryout lengkap dengan format yang sama seperti EPS-TOPIK. Buku soal (PDF) dalam bahasa Korea dan 20 bahasa, situs latihan gratis di HP (nilai langsung), video mendengarkan dan video jawaban & pembahasan (subtitle 20 bahasa)."
     }
    },
    "ui": {
@@ -993,6 +1021,10 @@
     "kiip": {
      "name": "Chương trình Hội nhập Xã hội (KIIP)",
      "desc": "Sổ tay miễn phí về từ vựng và ngữ pháp trong giáo trình KIIP \"Tiếng Hàn và Văn hóa Hàn Quốc\", cùng sách luyện đề thi thử. Đáp án và giải thích có trong video YouTube (phụ đề 20 ngôn ngữ) — hãy quét mã QR trong sách."
+    },
+    "eps": {
+     "name": "Đề thi thử EPS-TOPIK",
+     "desc": "Đề thi thử theo đúng dạng EPS-TOPIK (kỳ thi tiếng Hàn theo Chương trình cấp phép lao động). Đề thi (PDF) bản tiếng Hàn và 20 ngôn ngữ, trang luyện thi miễn phí trên điện thoại (chấm điểm ngay), video nghe và video đáp án & giải thích (phụ đề 20 ngôn ngữ)."
     }
    },
    "ui": {
@@ -1128,6 +1160,10 @@
     "kiip": {
      "name": "Social Integration Program ng Korea (KIIP)",
      "desc": "Libreng handbook ng bokabularyo at gramatika ng aklat ng KIIP na \"Korean Language and Culture\", at mga workbook ng mock test. Nasa mga video sa YouTube ang mga sagot at paliwanag (subtitle sa 20 wika) — i-scan ang QR sa workbook."
+    },
+    "eps": {
+     "name": "EPS-TOPIK Mock Test",
+     "desc": "Mga mock test na kapareho ng format ng EPS-TOPIK. Question booklet (PDF) sa Korean at 20 wika, libreng practice site sa cellphone (agad ang score), listening video at video ng sagot at paliwanag (subtitle sa 20 wika)."
     }
    },
    "ui": {
@@ -1263,6 +1299,10 @@
     "kiip": {
      "name": "Ijtimoiy integratsiya dasturi (KIIP)",
      "desc": "KIIP «Koreys tili va madaniyati» darsligidagi lugʻat va grammatika boʻyicha bepul qoʻllanmalar hamda sinov imtihonlari toʻplamlari. Javoblar va izohlar YouTube videolarida (20 tilda subtitr) — toʻplamdagi QR kodni skanerlang."
+    },
+    "eps": {
+     "name": "EPS-TOPIK sinov imtihonlari",
+     "desc": "EPS-TOPIK bilan bir xil formatdagi sinov imtihonlari. Savollar kitobchasi (PDF) koreys tilida va 20 tilda, telefonda ishlaydigan bepul mashq sayti (darhol ball), tinglash videosi va javoblar va izohlar videosi (20 tilda subtitr)."
     }
    },
    "ui": {
@@ -1398,6 +1438,10 @@
     "kiip": {
      "name": "Программа социальной интеграции (KIIP)",
      "desc": "Бесплатные справочники по лексике и грамматике учебника KIIP «Корейский язык и культура» и сборники пробных экзаменов. Ответы и объяснения — в видео на YouTube (субтитры на 20 языках): отсканируйте QR-коды в сборнике."
+    },
+    "eps": {
+     "name": "Пробные тесты EPS-TOPIK",
+     "desc": "Пробные тесты в формате EPS-TOPIK (экзамен по корейскому для системы трудовых разрешений). Буклеты с заданиями (PDF) на корейском и 20 языках, бесплатный сайт для тренировки на телефоне (баллы сразу), видео аудирования и видео с ответами и объяснениями (субтитры на 20 языках)."
     }
    },
    "ui": {
@@ -1533,6 +1577,10 @@
     "kiip": {
      "name": "Нийгэмд нэгтгэх хөтөлбөр (KIIP)",
      "desc": "KIIP-ийн «Солонгос хэл ба соёл» сурах бичгийн үг, дүрмийн үнэгүй гарын авлага болон туршилтын шалгалтын ном. Хариу, тайлбар нь YouTube видеонд (20 хэлний хадмал) — номын QR кодыг уншуулна уу."
+    },
+    "eps": {
+     "name": "EPS-TOPIK туршилтын шалгалт",
+     "desc": "EPS-TOPIK-тэй ижил хэлбэрийн туршилтын шалгалт. Асуултын товхимол (PDF) солонгос болон 20 хэлээр, утсаараа хийх үнэгүй дасгалын сайт (оноо шууд), сонсголын видео ба хариулт, тайлбарын видео (20 хэлний хадмал)."
     }
    },
    "ui": {
@@ -1668,6 +1716,10 @@
     "kiip": {
      "name": "社会統合プログラム（KIIP）",
      "desc": "KIIP教材『韓国語と韓国文化』の語彙・文法をまとめた無料ハンドブックと模擬試験問題集。解答・解説はYouTube動画（20言語字幕）で公開しています。問題集のQRコードを読み取ってください。"
+    },
+    "eps": {
+     "name": "EPS-TOPIK 模擬試験",
+     "desc": "EPS-TOPIK（雇用許可制韓国語能力試験）と同じ形式の模擬試験。韓国語版と20言語版の問題冊子（PDF）、スマホで解ける無料練習サイト（すぐ採点）、聞き取り動画と正解・解説動画（20言語字幕）があります。"
     }
    },
    "ui": {
@@ -1803,6 +1855,10 @@
     "kiip": {
      "name": "社会融合项目（KIIP）",
      "desc": "KIIP教材《韩国语与韩国文化》词汇与语法免费手册以及模拟考试练习册。答案与解析在YouTube视频中（20种语言字幕），请扫描练习册中的二维码。"
+    },
+    "eps": {
+     "name": "EPS-TOPIK 模拟考试",
+     "desc": "与EPS-TOPIK（雇佣许可制韩国语能力考试）形式相同的模拟考试。韩语版和20种语言版试题册（PDF）、用手机做题的免费练习网站（立即评分）、听力视频和答案解析视频（20种语言字幕）。"
     }
    },
    "ui": {
@@ -1938,6 +1994,10 @@
     "kiip": {
      "name": "โครงการบูรณาการทางสังคม (KIIP)",
      "desc": "คู่มือฟรีคำศัพท์และไวยากรณ์จากตำรา KIIP «ภาษาและวัฒนธรรมเกาหลี» และแบบฝึกหัดข้อสอบจำลอง เฉลยและคำอธิบายอยู่ในวิดีโอ YouTube (ซับไตเติล 20 ภาษา) — สแกน QR ในแบบฝึกหัด"
+    },
+    "eps": {
+     "name": "ข้อสอบจำลอง EPS-TOPIK",
+     "desc": "ข้อสอบจำลองรูปแบบเดียวกับ EPS-TOPIK สมุดข้อสอบ (PDF) ภาษาเกาหลีและ 20 ภาษา เว็บฝึกฟรีทำบนมือถือได้ (รู้คะแนนทันที) วิดีโอการฟังและวิดีโอเฉลยพร้อมคำอธิบาย (ซับ 20 ภาษา)"
     }
    },
    "ui": {
@@ -2073,6 +2133,10 @@
     "kiip": {
      "name": "កម្មវិធីសមាហរណកម្មសង្គម (KIIP)",
      "desc": "សៀវភៅជំនួយឥតគិតថ្លៃអំពីវាក្យសព្ទ និងវេយ្យាករណ៍ក្នុងសៀវភៅ KIIP «ភាសា និងវប្បធម៌កូរ៉េ» និងសៀវភៅប្រឡងសាកល្បង។ ចម្លើយ និងការពន្យល់មាននៅក្នុងវីដេអូ YouTube (អក្សររត់ 20 ភាសា) — សូមស្កេន QR ក្នុងសៀវភៅ។"
+    },
+    "eps": {
+     "name": "ប្រឡងសាកល្បង EPS-TOPIK",
+     "desc": "ប្រឡងសាកល្បងទម្រង់ដូច EPS-TOPIK។ សៀវភៅសំណួរ (PDF) ជាភាសាកូរ៉េ និង ២០ ភាសា គេហទំព័រហាត់ឥតគិតថ្លៃលើទូរស័ព្ទ (ដឹងពិន្ទុភ្លាម) វីដេអូស្ដាប់ និងវីដេអូចម្លើយ និងការពន្យល់ (អក្សររត់ ២០ ភាសា)។"
     }
    },
    "ui": {
@@ -2208,6 +2272,10 @@
     "kiip": {
      "name": "လူမှုပေါင်းစည်းရေး အစီအစဉ် (KIIP)",
      "desc": "KIIP «ကိုရီးယားဘာသာစကားနှင့် ယဉ်ကျေးမှု» စာအုပ်ပါ ဝေါဟာရနှင့် သဒ္ဒါ အခမဲ့ လက်စွဲစာအုပ်များနှင့် စမ်းသပ်စာမေးပွဲ လေ့ကျင့်စာအုပ်များ။ အဖြေနှင့် ရှင်းလင်းချက်များကို YouTube ဗီဒီယို (ဘာသာစကား ၂၀ စာတန်းထိုး) တွင် ကြည့်နိုင်သည် — စာအုပ်ထဲက QR ကို စကန်ဖတ်ပါ။"
+    },
+    "eps": {
+     "name": "EPS-TOPIK စမ်းသပ်စာမေးပွဲ",
+     "desc": "EPS-TOPIK နှင့် ပုံစံတူ စမ်းသပ်စာမေးပွဲများ။ ကိုရီးယားနှင့် ဘာသာစကား ၂၀ ဖြင့် မေးခွန်းစာအုပ် (PDF)၊ ဖုန်းဖြင့် ဖြေနိုင်သော အခမဲ့ လေ့ကျင့်ရေးဆိုက် (ချက်ချင်း အမှတ်ရ)၊ နားထောင်ခြင်း ဗီဒီယိုနှင့် အဖြေ၊ ရှင်းလင်းချက် ဗီဒီယို (ဘာသာစကား ၂၀ စာတန်းထိုး)။"
     }
    },
    "ui": {
@@ -2343,6 +2411,10 @@
     "kiip": {
      "name": "सामाजिक एकीकरण कार्यक्रम (KIIP)",
      "desc": "KIIP पाठ्यपुस्तक «कोरियाली भाषा र संस्कृति» का शब्द र व्याकरणका निःशुल्क पुस्तिका र नमुना परीक्षा पुस्तिका। उत्तर र व्याख्या YouTube भिडियोमा छन् (२० भाषामा उपशीर्षक) — पुस्तिकाको QR स्क्यान गर्नुहोस्।"
+    },
+    "eps": {
+     "name": "EPS-TOPIK नमुना परीक्षा",
+     "desc": "EPS-TOPIK जस्तै ढाँचाको नमुना परीक्षा। कोरियाली र २० भाषामा प्रश्नपत्र (PDF), मोबाइलमा गर्न मिल्ने निःशुल्क अभ्यास साइट (तुरुन्त अंक), सुन्ने भिडियो र उत्तर तथा व्याख्या भिडियो (२० भाषामा सबटाइटल)।"
     }
    },
    "ui": {
@@ -2478,6 +2550,10 @@
     "kiip": {
      "name": "সামাজিক সমন্বয় কর্মসূচি (KIIP)",
      "desc": "KIIP পাঠ্যবই «কোরীয় ভাষা ও সংস্কৃতি»-এর শব্দ ও ব্যাকরণের বিনামূল্যে হ্যান্ডবুক এবং মক টেস্ট বই। উত্তর ও ব্যাখ্যা YouTube ভিডিওতে (২০ ভাষায় সাবটাইটেল) — বইয়ের QR স্ক্যান করুন।"
+    },
+    "eps": {
+     "name": "EPS-TOPIK মডেল টেস্ট",
+     "desc": "EPS-TOPIK-এর মতো একই ধরনের মডেল টেস্ট। কোরিয়ান ও ২০টি ভাষায় প্রশ্নপত্র (PDF), মোবাইলে দেওয়ার মতো বিনামূল্যে অনুশীলন সাইট (সঙ্গে সঙ্গে নম্বর), শোনার ভিডিও এবং উত্তর ও ব্যাখ্যার ভিডিও (২০ ভাষায় সাবটাইটেল)।"
     }
    },
    "ui": {
@@ -2613,6 +2689,10 @@
     "kiip": {
      "name": "සමාජ ඒකාබද්ධතා වැඩසටහන (KIIP)",
      "desc": "KIIP «කොරියානු භාෂාව සහ සංස්කෘතිය» පෙළපොතේ වචන සහ ව්‍යාකරණ පිළිබඳ නොමිලේ අත්පොත් සහ ආදර්ශ විභාග පොත්. පිළිතුරු සහ පැහැදිලි කිරීම් YouTube වීඩියෝවල ඇත (භාෂා 20ක උපසිරැසි) — පොතේ QR ස්කෑන් කරන්න."
+    },
+    "eps": {
+     "name": "EPS-TOPIK ආදර්ශ විභාග",
+     "desc": "EPS-TOPIK ආකෘතියටම සකස් කළ ආදර්ශ විභාග. කොරියානු සහ භාෂා 20කින් ප්‍රශ්න පත්‍ර (PDF), දුරකථනයෙන් කළ හැකි නොමිලේ පුහුණු අඩවිය (ලකුණු වහාම), සවන්දීමේ වීඩියෝව සහ පිළිතුරු හා පැහැදිලි කිරීම් වීඩියෝව (භාෂා 20 උපසිරැසි)."
     }
    },
    "ui": {
@@ -2748,6 +2828,10 @@
     "kiip": {
      "name": "برنامج الاندماج الاجتماعي (KIIP)",
      "desc": "كتيبات مجانية لمفردات وقواعد كتاب KIIP «اللغة والثقافة الكورية» وكتب الاختبارات التجريبية. الإجابات والشروح في فيديوهات يوتيوب (ترجمة بـ20 لغة) — امسح رموز QR في الكتاب."
+    },
+    "eps": {
+     "name": "اختبارات EPS-TOPIK التجريبية",
+     "desc": "اختبارات تجريبية بنفس شكل EPS-TOPIK. كتيبات أسئلة (PDF) بالكورية وبـ20 لغة، وموقع تدريب مجاني على الهاتف (نتيجة فورية)، وفيديو الاستماع وفيديو الإجابات والشرح (ترجمة بـ20 لغة)."
     }
    },
    "ui": {
@@ -2883,6 +2967,10 @@
     "kiip": {
      "name": "سماجی انضمام پروگرام (KIIP)",
      "desc": "KIIP کی کتاب «کوریائی زبان اور ثقافت» کے الفاظ اور گرامر کی مفت ہینڈ بک اور فرضی امتحان کی کتابیں۔ جوابات اور وضاحتیں YouTube ویڈیوز میں ہیں (20 زبانوں میں سب ٹائٹل) — کتاب کے QR اسکین کریں۔"
+    },
+    "eps": {
+     "name": "EPS-TOPIK ماڈل ٹیسٹ",
+     "desc": "EPS-TOPIK جیسے ہی فارمیٹ کے ماڈل ٹیسٹ۔ کوریائی اور 20 زبانوں میں سوالیہ کتابچے (PDF)، فون پر حل کرنے کے لیے مفت پریکٹس سائٹ (فوراً نمبر)، سننے کی ویڈیو اور جوابات و وضاحت کی ویڈیو (20 زبانوں میں سب ٹائٹل)۔"
     }
    },
    "ui": {
@@ -4167,6 +4255,176 @@
     "ar": "كتاب التمارين · اختبار تحديد المستوى (المرحلة 0)",
     "ur": "مشقی کتاب · سطح جانچ ٹیسٹ (مرحلہ 0)"
    }
+  },
+  {
+   "id": "epic21-eps-mock01",
+   "group": "eps",
+   "level": "초급",
+   "slug": "eps-mock1",
+   "ko": "EPS-TOPIK 실전 모의고사 · 1회",
+   "en": "EPS-TOPIK Mock Test 1",
+   "vol": 1,
+   "ko_sub": "1회 · 40문제 50분 · 연습 사이트 바로 채점 · 정답·해설 영상(20개 언어 자막)",
+   "en_sub": "Test 1 · 40 questions, 50 min · practice site + answer videos",
+   "tr": {
+    "ne": "1 औं परीक्षा · ४० प्रश्न, ५० मिनेट",
+    "ru": "Тест 1 · 40 заданий, 50 минут",
+    "mn": "1-р шалгалт · 40 асуулт, 50 минут",
+    "my": "စာမေးပွဲ 1 · မေးခွန်း ၄၀၊ ၅၀ မိနစ်",
+    "vi": "Đề số 1 · 40 câu, 50 phút",
+    "bn": "টেস্ট 1 · ৪০টি প্রশ্ন, ৫০ মিনিট",
+    "es": "Simulacro 1 · 40 preguntas, 50 minutos",
+    "si": "විභාගය 1 · ප්‍රශ්න 40, මිනිත්තු 50",
+    "ar": "الاختبار 1 · 40 سؤالًا، 50 دقيقة",
+    "ur": "ٹیسٹ 1 · 40 سوالات، 50 منٹ",
+    "uz": "1-sinov · 40 savol, 50 daqiqa",
+    "id": "Tryout 1 · 40 soal, 50 menit",
+    "ja": "第1回 · 40問・50分",
+    "zh-Hans": "第1套 · 40题，50分钟",
+    "km": "ប្រឡងទី 1 · ៤០ សំណួរ ៥០ នាទី",
+    "tl": "Test 1 · 40 tanong, 50 minuto",
+    "th": "ชุดที่ 1 · 40 ข้อ 50 นาที",
+    "pt": "Simulado 1 · 40 questões, 50 minutos",
+    "fr": "Examen 1 · 40 questions, 50 minutes"
+   },
+   "video": "jdF8gxbYMDY",
+   "playlist": "PLQTlQrYgFhkc"
+  },
+  {
+   "id": "epic21-eps-mock02",
+   "group": "eps",
+   "level": "초급",
+   "slug": "eps-mock2",
+   "ko": "EPS-TOPIK 실전 모의고사 · 2회",
+   "en": "EPS-TOPIK Mock Test 2",
+   "vol": 2,
+   "ko_sub": "2회 · 40문제 50분 · 연습 사이트 바로 채점 · 정답·해설 영상(20개 언어 자막)",
+   "en_sub": "Test 2 · 40 questions, 50 min · practice site + answer videos",
+   "tr": {
+    "ne": "2 औं परीक्षा · ४० प्रश्न, ५० मिनेट",
+    "ru": "Тест 2 · 40 заданий, 50 минут",
+    "mn": "2-р шалгалт · 40 асуулт, 50 минут",
+    "my": "စာမေးပွဲ 2 · မေးခွန်း ၄၀၊ ၅၀ မိနစ်",
+    "vi": "Đề số 2 · 40 câu, 50 phút",
+    "bn": "টেস্ট 2 · ৪০টি প্রশ্ন, ৫০ মিনিট",
+    "es": "Simulacro 2 · 40 preguntas, 50 minutos",
+    "si": "විභාගය 2 · ප්‍රශ්න 40, මිනිත්තු 50",
+    "ar": "الاختبار 2 · 40 سؤالًا، 50 دقيقة",
+    "ur": "ٹیسٹ 2 · 40 سوالات، 50 منٹ",
+    "uz": "2-sinov · 40 savol, 50 daqiqa",
+    "id": "Tryout 2 · 40 soal, 50 menit",
+    "ja": "第2回 · 40問・50分",
+    "zh-Hans": "第2套 · 40题，50分钟",
+    "km": "ប្រឡងទី 2 · ៤០ សំណួរ ៥០ នាទី",
+    "tl": "Test 2 · 40 tanong, 50 minuto",
+    "th": "ชุดที่ 2 · 40 ข้อ 50 นาที",
+    "pt": "Simulado 2 · 40 questões, 50 minutos",
+    "fr": "Examen 2 · 40 questions, 50 minutes"
+   },
+   "video": "jdF8gxbYMDY",
+   "playlist": "PLQTlQrYgFhkc"
+  },
+  {
+   "id": "epic21-eps-mock03",
+   "group": "eps",
+   "level": "초급",
+   "slug": "eps-mock3",
+   "ko": "EPS-TOPIK 실전 모의고사 · 3회",
+   "en": "EPS-TOPIK Mock Test 3",
+   "vol": 3,
+   "ko_sub": "3회 · 40문제 50분 · 연습 사이트 바로 채점 · 정답·해설 영상(20개 언어 자막)",
+   "en_sub": "Test 3 · 40 questions, 50 min · practice site + answer videos",
+   "tr": {
+    "ne": "3 औं परीक्षा · ४० प्रश्न, ५० मिनेट",
+    "ru": "Тест 3 · 40 заданий, 50 минут",
+    "mn": "3-р шалгалт · 40 асуулт, 50 минут",
+    "my": "စာမေးပွဲ 3 · မေးခွန်း ၄၀၊ ၅၀ မိနစ်",
+    "vi": "Đề số 3 · 40 câu, 50 phút",
+    "bn": "টেস্ট 3 · ৪০টি প্রশ্ন, ৫০ মিনিট",
+    "es": "Simulacro 3 · 40 preguntas, 50 minutos",
+    "si": "විභාගය 3 · ප්‍රශ්න 40, මිනිත්තු 50",
+    "ar": "الاختبار 3 · 40 سؤالًا، 50 دقيقة",
+    "ur": "ٹیسٹ 3 · 40 سوالات، 50 منٹ",
+    "uz": "3-sinov · 40 savol, 50 daqiqa",
+    "id": "Tryout 3 · 40 soal, 50 menit",
+    "ja": "第3回 · 40問・50分",
+    "zh-Hans": "第3套 · 40题，50分钟",
+    "km": "ប្រឡងទី 3 · ៤០ សំណួរ ៥០ នាទី",
+    "tl": "Test 3 · 40 tanong, 50 minuto",
+    "th": "ชุดที่ 3 · 40 ข้อ 50 นาที",
+    "pt": "Simulado 3 · 40 questões, 50 minutos",
+    "fr": "Examen 3 · 40 questions, 50 minutes"
+   },
+   "video": "jdF8gxbYMDY",
+   "playlist": "PLQTlQrYgFhkc"
+  },
+  {
+   "id": "epic21-eps-mock04",
+   "group": "eps",
+   "level": "초급",
+   "slug": "eps-mock4",
+   "ko": "EPS-TOPIK 실전 모의고사 · 4회",
+   "en": "EPS-TOPIK Mock Test 4",
+   "vol": 4,
+   "ko_sub": "4회 · 40문제 50분 · 연습 사이트 바로 채점 · 정답·해설 영상(20개 언어 자막)",
+   "en_sub": "Test 4 · 40 questions, 50 min · practice site + answer videos",
+   "tr": {
+    "ne": "4 औं परीक्षा · ४० प्रश्न, ५० मिनेट",
+    "ru": "Тест 4 · 40 заданий, 50 минут",
+    "mn": "4-р шалгалт · 40 асуулт, 50 минут",
+    "my": "စာမေးပွဲ 4 · မေးခွန်း ၄၀၊ ၅၀ မိနစ်",
+    "vi": "Đề số 4 · 40 câu, 50 phút",
+    "bn": "টেস্ট 4 · ৪০টি প্রশ্ন, ৫০ মিনিট",
+    "es": "Simulacro 4 · 40 preguntas, 50 minutos",
+    "si": "විභාගය 4 · ප්‍රශ්න 40, මිනිත්තු 50",
+    "ar": "الاختبار 4 · 40 سؤالًا، 50 دقيقة",
+    "ur": "ٹیسٹ 4 · 40 سوالات، 50 منٹ",
+    "uz": "4-sinov · 40 savol, 50 daqiqa",
+    "id": "Tryout 4 · 40 soal, 50 menit",
+    "ja": "第4回 · 40問・50分",
+    "zh-Hans": "第4套 · 40题，50分钟",
+    "km": "ប្រឡងទី 4 · ៤០ សំណួរ ៥០ នាទី",
+    "tl": "Test 4 · 40 tanong, 50 minuto",
+    "th": "ชุดที่ 4 · 40 ข้อ 50 นาที",
+    "pt": "Simulado 4 · 40 questões, 50 minutos",
+    "fr": "Examen 4 · 40 questions, 50 minutes"
+   },
+   "video": "jdF8gxbYMDY",
+   "playlist": "PLQTlQrYgFhkc"
+  },
+  {
+   "id": "epic21-eps-mock05",
+   "group": "eps",
+   "level": "초급",
+   "slug": "eps-mock5",
+   "ko": "EPS-TOPIK 실전 모의고사 · 5회",
+   "en": "EPS-TOPIK Mock Test 5",
+   "vol": 5,
+   "ko_sub": "5회 · 40문제 50분 · 연습 사이트 바로 채점 · 정답·해설 영상(20개 언어 자막)",
+   "en_sub": "Test 5 · 40 questions, 50 min · practice site + answer videos",
+   "tr": {
+    "ne": "5 औं परीक्षा · ४० प्रश्न, ५० मिनेट",
+    "ru": "Тест 5 · 40 заданий, 50 минут",
+    "mn": "5-р шалгалт · 40 асуулт, 50 минут",
+    "my": "စာမေးပွဲ 5 · မေးခွန်း ၄၀၊ ၅၀ မိနစ်",
+    "vi": "Đề số 5 · 40 câu, 50 phút",
+    "bn": "টেস্ট 5 · ৪০টি প্রশ্ন, ৫০ মিনিট",
+    "es": "Simulacro 5 · 40 preguntas, 50 minutos",
+    "si": "විභාගය 5 · ප්‍රශ්න 40, මිනිත්තු 50",
+    "ar": "الاختبار 5 · 40 سؤالًا، 50 دقيقة",
+    "ur": "ٹیسٹ 5 · 40 سوالات، 50 منٹ",
+    "uz": "5-sinov · 40 savol, 50 daqiqa",
+    "id": "Tryout 5 · 40 soal, 50 menit",
+    "ja": "第5回 · 40問・50分",
+    "zh-Hans": "第5套 · 40题，50分钟",
+    "km": "ប្រឡងទី 5 · ៤០ សំណួរ ៥០ នាទី",
+    "tl": "Test 5 · 40 tanong, 50 minuto",
+    "th": "ชุดที่ 5 · 40 ข้อ 50 นาที",
+    "pt": "Simulado 5 · 40 questões, 50 minutos",
+    "fr": "Examen 5 · 40 questions, 50 minutes"
+   },
+   "video": "jdF8gxbYMDY",
+   "playlist": "PLQTlQrYgFhkc"
   }
  ],
  "files": {
@@ -4954,6 +5212,121 @@
   ],
   "epic21-kiip-workbook-s5": [
    "EPIC21_KIIP_S5_Korean.pdf"
+  ],
+  "epic21-eps-mock01": [
+   "EPIC21_EPS_MockTest_01_Arabic_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Bengali_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Burmese_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Chinese-Simplified_Free.pdf",
+   "EPIC21_EPS_MockTest_01_English_Free.pdf",
+   "EPIC21_EPS_MockTest_01_French_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Indonesian_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Japanese_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Khmer_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Korean_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Mongolian_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Nepali_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Portuguese_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Russian_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Sinhala_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Spanish_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Tagalog_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Thai_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Urdu_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Uzbek_Free.pdf",
+   "EPIC21_EPS_MockTest_01_Vietnamese_Free.pdf"
+  ],
+  "epic21-eps-mock02": [
+   "EPIC21_EPS_MockTest_02_Arabic_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Bengali_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Burmese_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Chinese-Simplified_Free.pdf",
+   "EPIC21_EPS_MockTest_02_English_Free.pdf",
+   "EPIC21_EPS_MockTest_02_French_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Indonesian_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Japanese_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Khmer_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Korean_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Mongolian_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Nepali_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Portuguese_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Russian_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Sinhala_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Spanish_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Tagalog_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Thai_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Urdu_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Uzbek_Free.pdf",
+   "EPIC21_EPS_MockTest_02_Vietnamese_Free.pdf"
+  ],
+  "epic21-eps-mock03": [
+   "EPIC21_EPS_MockTest_03_Arabic_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Bengali_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Burmese_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Chinese-Simplified_Free.pdf",
+   "EPIC21_EPS_MockTest_03_English_Free.pdf",
+   "EPIC21_EPS_MockTest_03_French_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Indonesian_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Japanese_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Khmer_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Korean_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Mongolian_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Nepali_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Portuguese_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Russian_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Sinhala_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Spanish_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Tagalog_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Thai_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Urdu_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Uzbek_Free.pdf",
+   "EPIC21_EPS_MockTest_03_Vietnamese_Free.pdf"
+  ],
+  "epic21-eps-mock04": [
+   "EPIC21_EPS_MockTest_04_Arabic_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Bengali_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Burmese_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Chinese-Simplified_Free.pdf",
+   "EPIC21_EPS_MockTest_04_English_Free.pdf",
+   "EPIC21_EPS_MockTest_04_French_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Indonesian_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Japanese_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Khmer_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Korean_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Mongolian_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Nepali_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Portuguese_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Russian_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Sinhala_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Spanish_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Tagalog_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Thai_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Urdu_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Uzbek_Free.pdf",
+   "EPIC21_EPS_MockTest_04_Vietnamese_Free.pdf"
+  ],
+  "epic21-eps-mock05": [
+   "EPIC21_EPS_MockTest_05_Arabic_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Bengali_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Burmese_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Chinese-Simplified_Free.pdf",
+   "EPIC21_EPS_MockTest_05_English_Free.pdf",
+   "EPIC21_EPS_MockTest_05_French_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Indonesian_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Japanese_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Khmer_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Korean_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Mongolian_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Nepali_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Portuguese_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Russian_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Sinhala_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Spanish_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Tagalog_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Thai_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Urdu_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Uzbek_Free.pdf",
+   "EPIC21_EPS_MockTest_05_Vietnamese_Free.pdf"
   ]
  },
  "sizes": {
@@ -5741,6 +6114,121 @@
   },
   "epic21-kiip-workbook-s5": {
    "EPIC21_KIIP_S5_Korean.pdf": 1840766
+  },
+  "epic21-eps-mock01": {
+   "EPIC21_EPS_MockTest_01_Arabic_Free.pdf": 3382995,
+   "EPIC21_EPS_MockTest_01_Bengali_Free.pdf": 3384995,
+   "EPIC21_EPS_MockTest_01_Burmese_Free.pdf": 3381699,
+   "EPIC21_EPS_MockTest_01_Chinese-Simplified_Free.pdf": 3556186,
+   "EPIC21_EPS_MockTest_01_English_Free.pdf": 3377324,
+   "EPIC21_EPS_MockTest_01_French_Free.pdf": 3379574,
+   "EPIC21_EPS_MockTest_01_Indonesian_Free.pdf": 3377490,
+   "EPIC21_EPS_MockTest_01_Japanese_Free.pdf": 3535924,
+   "EPIC21_EPS_MockTest_01_Khmer_Free.pdf": 3382167,
+   "EPIC21_EPS_MockTest_01_Korean_Free.pdf": 3374195,
+   "EPIC21_EPS_MockTest_01_Mongolian_Free.pdf": 3398228,
+   "EPIC21_EPS_MockTest_01_Nepali_Free.pdf": 3382320,
+   "EPIC21_EPS_MockTest_01_Portuguese_Free.pdf": 3379473,
+   "EPIC21_EPS_MockTest_01_Russian_Free.pdf": 3379274,
+   "EPIC21_EPS_MockTest_01_Sinhala_Free.pdf": 3384520,
+   "EPIC21_EPS_MockTest_01_Spanish_Free.pdf": 3381061,
+   "EPIC21_EPS_MockTest_01_Tagalog_Free.pdf": 3377146,
+   "EPIC21_EPS_MockTest_01_Thai_Free.pdf": 3380091,
+   "EPIC21_EPS_MockTest_01_Urdu_Free.pdf": 3381853,
+   "EPIC21_EPS_MockTest_01_Uzbek_Free.pdf": 3380555,
+   "EPIC21_EPS_MockTest_01_Vietnamese_Free.pdf": 3383850
+  },
+  "epic21-eps-mock02": {
+   "EPIC21_EPS_MockTest_02_Arabic_Free.pdf": 3856682,
+   "EPIC21_EPS_MockTest_02_Bengali_Free.pdf": 3858655,
+   "EPIC21_EPS_MockTest_02_Burmese_Free.pdf": 3855365,
+   "EPIC21_EPS_MockTest_02_Chinese-Simplified_Free.pdf": 4029853,
+   "EPIC21_EPS_MockTest_02_English_Free.pdf": 3850992,
+   "EPIC21_EPS_MockTest_02_French_Free.pdf": 3853238,
+   "EPIC21_EPS_MockTest_02_Indonesian_Free.pdf": 3851156,
+   "EPIC21_EPS_MockTest_02_Japanese_Free.pdf": 4009587,
+   "EPIC21_EPS_MockTest_02_Khmer_Free.pdf": 3855841,
+   "EPIC21_EPS_MockTest_02_Korean_Free.pdf": 3847867,
+   "EPIC21_EPS_MockTest_02_Mongolian_Free.pdf": 3871885,
+   "EPIC21_EPS_MockTest_02_Nepali_Free.pdf": 3856012,
+   "EPIC21_EPS_MockTest_02_Portuguese_Free.pdf": 3853147,
+   "EPIC21_EPS_MockTest_02_Russian_Free.pdf": 3852964,
+   "EPIC21_EPS_MockTest_02_Sinhala_Free.pdf": 3858192,
+   "EPIC21_EPS_MockTest_02_Spanish_Free.pdf": 3854760,
+   "EPIC21_EPS_MockTest_02_Tagalog_Free.pdf": 3850807,
+   "EPIC21_EPS_MockTest_02_Thai_Free.pdf": 3853754,
+   "EPIC21_EPS_MockTest_02_Urdu_Free.pdf": 3855518,
+   "EPIC21_EPS_MockTest_02_Uzbek_Free.pdf": 3854225,
+   "EPIC21_EPS_MockTest_02_Vietnamese_Free.pdf": 3857514
+  },
+  "epic21-eps-mock03": {
+   "EPIC21_EPS_MockTest_03_Arabic_Free.pdf": 4085164,
+   "EPIC21_EPS_MockTest_03_Bengali_Free.pdf": 4087162,
+   "EPIC21_EPS_MockTest_03_Burmese_Free.pdf": 4083850,
+   "EPIC21_EPS_MockTest_03_Chinese-Simplified_Free.pdf": 4258346,
+   "EPIC21_EPS_MockTest_03_English_Free.pdf": 4079478,
+   "EPIC21_EPS_MockTest_03_French_Free.pdf": 4081725,
+   "EPIC21_EPS_MockTest_03_Indonesian_Free.pdf": 4079649,
+   "EPIC21_EPS_MockTest_03_Japanese_Free.pdf": 4238076,
+   "EPIC21_EPS_MockTest_03_Khmer_Free.pdf": 4084330,
+   "EPIC21_EPS_MockTest_03_Korean_Free.pdf": 4076347,
+   "EPIC21_EPS_MockTest_03_Mongolian_Free.pdf": 4100382,
+   "EPIC21_EPS_MockTest_03_Nepali_Free.pdf": 4084486,
+   "EPIC21_EPS_MockTest_03_Portuguese_Free.pdf": 4081634,
+   "EPIC21_EPS_MockTest_03_Russian_Free.pdf": 4081457,
+   "EPIC21_EPS_MockTest_03_Sinhala_Free.pdf": 4086689,
+   "EPIC21_EPS_MockTest_03_Spanish_Free.pdf": 4083236,
+   "EPIC21_EPS_MockTest_03_Tagalog_Free.pdf": 4079288,
+   "EPIC21_EPS_MockTest_03_Thai_Free.pdf": 4082218,
+   "EPIC21_EPS_MockTest_03_Urdu_Free.pdf": 4083999,
+   "EPIC21_EPS_MockTest_03_Uzbek_Free.pdf": 4082707,
+   "EPIC21_EPS_MockTest_03_Vietnamese_Free.pdf": 4085999
+  },
+  "epic21-eps-mock04": {
+   "EPIC21_EPS_MockTest_04_Arabic_Free.pdf": 3803509,
+   "EPIC21_EPS_MockTest_04_Bengali_Free.pdf": 3805508,
+   "EPIC21_EPS_MockTest_04_Burmese_Free.pdf": 3802207,
+   "EPIC21_EPS_MockTest_04_Chinese-Simplified_Free.pdf": 3976698,
+   "EPIC21_EPS_MockTest_04_English_Free.pdf": 3797836,
+   "EPIC21_EPS_MockTest_04_French_Free.pdf": 3800089,
+   "EPIC21_EPS_MockTest_04_Indonesian_Free.pdf": 3797998,
+   "EPIC21_EPS_MockTest_04_Japanese_Free.pdf": 3956446,
+   "EPIC21_EPS_MockTest_04_Khmer_Free.pdf": 3802698,
+   "EPIC21_EPS_MockTest_04_Korean_Free.pdf": 3794712,
+   "EPIC21_EPS_MockTest_04_Mongolian_Free.pdf": 3818737,
+   "EPIC21_EPS_MockTest_04_Nepali_Free.pdf": 3802847,
+   "EPIC21_EPS_MockTest_04_Portuguese_Free.pdf": 3800015,
+   "EPIC21_EPS_MockTest_04_Russian_Free.pdf": 3799800,
+   "EPIC21_EPS_MockTest_04_Sinhala_Free.pdf": 3805037,
+   "EPIC21_EPS_MockTest_04_Spanish_Free.pdf": 3801598,
+   "EPIC21_EPS_MockTest_04_Tagalog_Free.pdf": 3797667,
+   "EPIC21_EPS_MockTest_04_Thai_Free.pdf": 3800606,
+   "EPIC21_EPS_MockTest_04_Urdu_Free.pdf": 3802367,
+   "EPIC21_EPS_MockTest_04_Uzbek_Free.pdf": 3801080,
+   "EPIC21_EPS_MockTest_04_Vietnamese_Free.pdf": 3804366
+  },
+  "epic21-eps-mock05": {
+   "EPIC21_EPS_MockTest_05_Arabic_Free.pdf": 3828375,
+   "EPIC21_EPS_MockTest_05_Bengali_Free.pdf": 3830363,
+   "EPIC21_EPS_MockTest_05_Burmese_Free.pdf": 3827064,
+   "EPIC21_EPS_MockTest_05_Chinese-Simplified_Free.pdf": 4001570,
+   "EPIC21_EPS_MockTest_05_English_Free.pdf": 3822699,
+   "EPIC21_EPS_MockTest_05_French_Free.pdf": 3824949,
+   "EPIC21_EPS_MockTest_05_Indonesian_Free.pdf": 3822852,
+   "EPIC21_EPS_MockTest_05_Japanese_Free.pdf": 3981318,
+   "EPIC21_EPS_MockTest_05_Khmer_Free.pdf": 3827533,
+   "EPIC21_EPS_MockTest_05_Korean_Free.pdf": 3819553,
+   "EPIC21_EPS_MockTest_05_Mongolian_Free.pdf": 3843602,
+   "EPIC21_EPS_MockTest_05_Nepali_Free.pdf": 3827695,
+   "EPIC21_EPS_MockTest_05_Portuguese_Free.pdf": 3824853,
+   "EPIC21_EPS_MockTest_05_Russian_Free.pdf": 3824657,
+   "EPIC21_EPS_MockTest_05_Sinhala_Free.pdf": 3829873,
+   "EPIC21_EPS_MockTest_05_Spanish_Free.pdf": 3826473,
+   "EPIC21_EPS_MockTest_05_Tagalog_Free.pdf": 3822516,
+   "EPIC21_EPS_MockTest_05_Thai_Free.pdf": 3825440,
+   "EPIC21_EPS_MockTest_05_Urdu_Free.pdf": 3827205,
+   "EPIC21_EPS_MockTest_05_Uzbek_Free.pdf": 3825923,
+   "EPIC21_EPS_MockTest_05_Vietnamese_Free.pdf": 3829212
   }
  },
  "goatcounter": "epic21korean",
@@ -5784,7 +6272,12 @@
   "epic21-kiip-workbook-s2": "2026-11-17",
   "epic21-kiip-workbook-s3": "2026-11-17",
   "epic21-kiip-workbook-s4": "2026-11-17",
-  "epic21-kiip-workbook-s5": "2026-11-17"
+  "epic21-kiip-workbook-s5": "2026-11-17",
+  "epic21-eps-mock01": "2026-11-24",
+  "epic21-eps-mock02": "2026-11-24",
+  "epic21-eps-mock03": "2026-11-24",
+  "epic21-eps-mock04": "2026-11-24",
+  "epic21-eps-mock05": "2026-11-24"
  },
  "intro": []
 }

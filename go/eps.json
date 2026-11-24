@@ -1,7 +1,55 @@
 {
- "note": "EPS 모의고사 문제지 QR → 듣기 영상·정답 해설 영상. 영상이 바뀌면 video만 고치고 python3 make_go.py",
+ "note": "EPS 모의고사 문제지 QR → 1~5회 묶음 영상의 해당 회차 시작점. 영상이 바뀌면 video·t만 고치고 python3 make_go.py",
  "links": {
-  "1-listen": {"title": "EPS-TOPIK 실전 모의고사 1회 듣기", "video": "_xdDiMr6GTA", "t": 0},
-  "1-explain": {"title": "EPS-TOPIK 실전 모의고사 1회 정답·해설", "video": "FIWvVB7o8Ek", "t": 0}
+  "1-listen": {
+   "title": "EPS-TOPIK 실전 모의고사 1회 듣기",
+   "video": "eJd2BXoV5tM",
+   "t": 0
+  },
+  "1-explain": {
+   "title": "EPS-TOPIK 실전 모의고사 1회 정답·해설",
+   "video": "jdF8gxbYMDY",
+   "t": 0
+  },
+  "2-listen": {
+   "title": "EPS-TOPIK 실전 모의고사 2회 듣기",
+   "video": "eJd2BXoV5tM",
+   "t": 605
+  },
+  "2-explain": {
+   "title": "EPS-TOPIK 실전 모의고사 2회 정답·해설",
+   "video": "jdF8gxbYMDY",
+   "t": 734
+  },
+  "3-listen": {
+   "title": "EPS-TOPIK 실전 모의고사 3회 듣기",
+   "video": "eJd2BXoV5tM",
+   "t": 1190
+  },
+  "3-explain": {
+   "title": "EPS-TOPIK 실전 모의고사 3회 정답·해설",
+   "video": "jdF8gxbYMDY",
+   "t": 1451
+  },
+  "4-listen": {
+   "title": "EPS-TOPIK 실전 모의고사 4회 듣기",
+   "video": "eJd2BXoV5tM",
+   "t": 1774
+  },
+  "4-explain": {
+   "title": "EPS-TOPIK 실전 모의고사 4회 정답·해설",
+   "video": "jdF8gxbYMDY",
+   "t": 2177
+  },
+  "5-listen": {
+   "title": "EPS-TOPIK 실전 모의고사 5회 듣기",
+   "video": "eJd2BXoV5tM",
+   "t": 2361
+  },
+  "5-explain": {
+   "title": "EPS-TOPIK 실전 모의고사 5회 정답·해설",
+   "video": "jdF8gxbYMDY",
+   "t": 2896
+  }
  }
 }

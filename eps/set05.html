@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>EPS-TOPIK 실전 모의고사 5회 · 무료 EPS-TOPIK 연습 | EPIC21</title>
+<meta name="description" content="무료 EPS-TOPIK 실전 모의고사. 읽기 20·듣기 20, 50분, 100점. 회원 가입 없이 휴대폰으로 바로 풀고 해설 영상으로 공부하세요.">
+<style>
+:root{--navy:#0e1730;--navy2:#18264a;--cream:#f5f0e3;--ora:#e8913c;--ok:#2eaa62;--ng:#dc5050;--line:#d9d4c6;--ink:#1e1e28}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;background:var(--cream);color:var(--ink);-webkit-tap-highlight-color:transparent}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.top{position:sticky;top:0;z-index:5;background:var(--navy);color:#fff;display:flex;align-items:center;gap:10px;padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top))}
+.top .brand{font-weight:800;letter-spacing:.5px}
+.top .brand b{color:var(--ora)}
+.top .sec{font-size:13px;background:var(--navy2);border-radius:99px;padding:4px 10px}
+.top .time{margin-left:auto;font-variant-numeric:tabular-nums;font-weight:700;font-size:18px}
+.top .time.warn{color:#ffb4a0}
+main{max-width:720px;margin:0 auto;padding:16px 14px 120px}
+.card{background:#fff;border-radius:16px;box-shadow:0 2px 10px rgba(14,23,48,.08);padding:18px}
+.start h1{font-size:24px;line-height:1.35;margin-bottom:6px}
+.start .sub{color:#666;margin-bottom:16px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.facts div{background:var(--cream);border-radius:12px;padding:12px 6px;text-align:center}
+.facts b{display:block;font-size:22px;color:var(--navy)}
+.facts span{font-size:12px;color:#666}
+.big{display:block;width:100%;background:var(--ora);color:#fff;font-weight:800;font-size:18px;border-radius:14px;padding:16px;margin-top:10px}
+.big.navy{background:var(--navy)}
+.note{font-size:13px;color:#666;margin-top:12px;line-height:1.6}
+.group{font-size:14px;color:var(--navy2);font-weight:700;margin-bottom:10px;line-height:1.5}
+.qno{display:inline-block;background:var(--navy);color:#fff;border-radius:8px;padding:2px 9px;font-weight:800;margin-right:6px}
+.stem{font-size:18px;line-height:1.6;margin:8px 0 12px}
+.passage{border:1.5px solid var(--line);border-radius:12px;padding:14px;line-height:1.75;font-size:16px;white-space:pre-line;margin:10px 0;background:#fffdf8}
+.passage .kind{display:inline-block;font-size:12px;color:#fff;background:var(--navy2);border-radius:6px;padding:1px 7px;margin-bottom:6px}
+.dialog p{margin:4px 0}
+.pic{width:100%;aspect-ratio:4/3;border-radius:12px;background:#e7e3d8;display:flex;align-items:center;justify-content:center;overflow:hidden;margin:6px 0 12px;color:#999;font-size:13px}
+.pic img{width:100%;height:100%;object-fit:cover}
+.opts{display:grid;gap:10px}
+.opts.grid{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:center;gap:10px;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:13px 14px;font-size:17px;line-height:1.45;min-height:56px}
+.opt .c{flex:none;width:30px;height:30px;border-radius:50%;border:2px solid var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy)}
+.opt.sel{border-color:var(--navy);background:#eef1f8}
+.opt.sel .c{background:var(--navy);color:#fff}
+.opt.img{flex-direction:column;padding:8px}
+.opt.img .pic{margin:6px 0 0;aspect-ratio:1}
+.listen{display:flex;align-items:center;gap:10px;background:var(--navy);color:#fff;border-radius:14px;padding:12px 14px;margin:6px 0 14px;width:100%;font-weight:700;font-size:16px}
+.listen .ic{width:34px;height:34px;border-radius:50%;background:var(--ora);display:flex;align-items:center;justify-content:center}
+.listen small{font-weight:400;opacity:.75;margin-left:auto;font-size:12px}
+.nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 14px;padding-bottom:calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;z-index:6}
+.nav button{flex:1;border-radius:12px;padding:13px 0;font-weight:800;font-size:16px;background:var(--cream)}
+.nav .next{background:var(--navy);color:#fff}
+.nav .grid-btn{flex:0 0 56px}
+.sheet{position:fixed;inset:0;background:rgba(14,23,48,.55);z-index:9;display:none;align-items:flex-end}
+.sheet.on{display:flex}
+.sheet .box{background:#fff;width:100%;max-width:720px;margin:0 auto;border-radius:18px 18px 0 0;padding:16px 14px calc(16px + env(safe-area-inset-bottom))}
+.nums{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin:10px 0}
+.nums button{aspect-ratio:1;border-radius:8px;background:var(--cream);font-weight:700;font-size:14px}
+.nums button.done{background:var(--navy);color:#fff}
+.nums button.cur{outline:3px solid var(--ora)}
+.nums button.ok{background:var(--ok);color:#fff}
+.nums button.ng{background:var(--ng);color:#fff}
+.nums button.lock{opacity:.35}
+.lbl{font-size:13px;color:#666;font-weight:700;margin-top:6px}
+.score{text-align:center;padding:10px 0 4px}
+.score .pt{font-size:56px;font-weight:900;color:var(--navy);line-height:1}
+.score .pt small{font-size:20px;color:#888}
+.bar{display:flex;gap:8px;margin:14px 0}
+.bar div{flex:1;background:var(--cream);border-radius:12px;padding:10px;text-align:center;font-size:13px}
+.bar b{display:block;font-size:20px}
+.cut{border-radius:12px;padding:12px 14px;margin:6px 0;display:flex;justify-content:space-between;font-weight:700}
+.cut.pass{background:#e4f5ea;color:#1d7a45}.cut.fail{background:#fbe6e6;color:#a33}
+.wrong{display:flex;align-items:center;gap:10px;border-bottom:1px solid #eee;padding:10px 0}
+.wrong .qno{background:var(--ng)}
+.wrong a{margin-left:auto;background:#ff0033;color:#fff;text-decoration:none;font-weight:800;border-radius:10px;padding:9px 12px;font-size:14px;white-space:nowrap}
+.wrong a.wait{background:#bbb;pointer-events:none}
+.yt{position:fixed;width:1px;height:1px;left:-9999px;top:0}
+.sub-cta{display:block;text-align:center;background:#ff0033;color:#fff;font-weight:800;border-radius:14px;padding:15px;text-decoration:none;margin-top:12px}
+</style></head><body>
+<header class="top"><span class="brand">EPIC<b>21</b></span><span class="sec" id="sec">EPS-TOPIK</span><span class="time" id="time"></span></header>
+<main id="app"></main>
+<nav class="nav" id="nav" style="display:none">
+ <button id="prev">◀ 이전</button><button class="grid-btn" id="gridb">▦</button><button class="next" id="next">다음 ▶</button>
+</nav>
+<div class="sheet" id="sheet"><div class="box"><div id="sheetIn"></div><button class="big navy" id="closeS">닫기</button></div></div>
+<div class="yt"><div id="ytp"></div></div>
+<script>
+const D={"title": "EPS-TOPIK 실전 모의고사 5회", "set": 5, "items": [{"n": 1, "section": "읽기", "group": "[1~4] 다음 그림을 보고 알맞은 것을 고르십시오.", "options": ["장갑", "마스크", "귀마개", "앞치마"], "answer": 2, "image": {"id": "s5-r01", "ko": "작업대 위에 놓인 흰색 일회용 마스크 하나, 실사 사진"}}, {"n": 2, "section": "읽기", "group": "[1~4] 다음 그림을 보고 알맞은 것을 고르십시오.", "options": ["서요", "누워요", "걸어요", "앉아요"], "answer": 4, "image": {"id": "s5-r02", "ko": "작업복을 입은 남자가 공장 휴게실 의자에 앉는 모습, 실사 사진"}}, {"n": 3, "section": "읽기", "group": "[1~4] 다음 그림을 보고 알맞은 것을 고르십시오.", "options": ["흐려요", "맑아요", "더워요", "눈이 와요"], "answer": 1, "image": {"id": "s5-r03", "ko": "회색 구름이 하늘을 덮은 흐린 날의 공장 단지 거리, 비는 오지 않음, 실사 사진"}}, {"n": 4, "section": "읽기", "group": "[1~4] 다음 그림을 보고 알맞은 것을 고르십시오.", "stem": "여기는 어디입니까?", "options": ["식당", "공원", "학교", "마트"], "answer": 4, "image": {"id": "s5-r04", "ko": "한국 대형 마트 안, 장바구니를 든 사람들이 진열대에서 물건을 고르는 모습, 실사 사진"}}, {"n": 5, "section": "읽기", "group": "[5~6] 다음 (     )에 들어갈 가장 알맞은 것을 고르십시오.", "stem": "기계를 처음 쓰기 전에 (     )을/를 잘 읽으세요.", "options": ["안내 방송", "사용 설명서", "회사 소개서", "월급 명세서"], "answer": 2}, {"n": 6, "section": "읽기", "group": "[5~6] 다음 (     )에 들어갈 가장 알맞은 것을 고르십시오.", "stem": "(     ) 비가 와서 편의점에서 우산을 샀어요.", "options": ["갑자기", "천천히", "조용히", "깨끗이"], "answer": 1}, {"n": 7, "section": "읽기", "group": "[7] 다음 밑줄 친 부분과 의미가 같은 것을 고르십시오.", "stem": "<u>잠깐</u> 기다려 주세요. 곧 갈게요.", "options": ["오래", "잠시", "계속", "먼저"], "answer": 2}, {"n": 8, "section": "읽기", "group": "[8] 다음 밑줄 친 부분과 의미가 반대인 것을 고르십시오.", "stem": "이 물은 아주 <u>깨끗해요</u>.", "options": ["차가워요", "뜨거워요", "시원해요", "더러워요"], "answer": 4}, {"n": 9, "section": "읽기", "group": "[9~10] 다음 그림을 보고 알맞은 것을 고르십시오.", "stem": "이 표지는 무슨 뜻입니까?", "options": ["모자를 쓰세요", "장갑을 끼세요", "보안경을 쓰세요", "마스크를 쓰세요"], "answer": 4, "image": {"id": "s5-r09", "ko": "공장 벽에 붙은 파란 원형 의무 표지, 마스크를 쓴 얼굴 그림 기호(글자 없음), 실사 사진"}}, {"n": 10, "section": "읽기", "group": "[9~10] 다음 그림을 보고 알맞은 것을 고르십시오.", "stem": "이 표지는 무슨 뜻입니까?", "options": ["위를 조심하세요", "발을 조심하세요", "차를 조심하세요", "불을 조심하세요"], "answer": 1, "image": {"id": "s5-r10", "ko": "건물 공사장 입구에 붙은 노란 삼각형 경고 표지, 위에서 상자가 떨어지는 그림 기호(글자 없음), 실사 사진"}}, {"n": 11, "section": "읽기", "group": "[11~12] 다음을 읽고 물음에 답하십시오.", "stem": "토요일에 무엇을 합니까?", "options": ["청소", "회의", "운동", "파티"], "answer": 1, "passage": "이번 주 토요일 오전 10시에 기숙사 대청소를 합니다.\n모두 방 앞 복도에 모여 주세요.\n- 기숙사 관리인", "passage_kind": "문자"}, {"n": 12, "section": "읽기", "group": "[11~12] 다음을 읽고 물음에 답하십시오.", "stem": "이 글의 내용과 같은 것을 고르십시오.", "options": ["도서관은 월요일에도 열어요.", "책은 2주 동안 빌릴 수 있어요.", "책은 한 번에 5권 빌릴 수 있어요.", "책을 빌릴 때 아무것도 필요 없어요."], "answer": 2, "passage": "[외국인 근로자 도서관]\n· 이용 시간: 화~일 오전 10시~오후 8시\n· 월요일은 쉽니다.\n· 책은 한 번에 3권, 2주 동안 빌릴 수 있습니다.\n· 외국인등록증이 필요합니다.", "passage_kind": "안내문"}, {"n": 13, "section": "읽기", "group": "[13~14] 다음 대화의 (     )에 들어갈 가장 알맞은 것을 고르십시오.", "options": ["네, 있어요", "회의실이에요", "아침 9시예요", "과장님이 해요"], "answer": 3, "dialog": ["가: 내일 회의가 몇 시예요?", "나: (     ). 늦지 마세요."]}, {"n": 14, "section": "읽기", "group": "[13~14] 다음 대화의 (     )에 들어갈 가장 알맞은 것을 고르십시오.", "options": ["이", "을", "와", "께"], "answer": 4, "dialog": ["가: 이 서류를 누구에게 줄까요?", "나: 과장님(     ) 드리세요."]}, {"n": 15, "section": "읽기", "group": "[15~16] 다음 글의 중심 내용으로 가장 알맞은 것을 고르십시오.", "options": ["식사 예절", "음식 종류", "식당 위치", "요리 방법"], "answer": 1, "passage": "한국에서는 어른이 먼저 숟가락을 든 후에 밥을 먹기 시작합니다. 그리고 밥그릇을 손에 들고 먹지 않습니다. 식사가 끝나면 '잘 먹었습니다'라고 인사합니다."}, {"n": 16, "section": "읽기", "group": "[15~16] 다음 글의 중심 내용으로 가장 알맞은 것을 고르십시오.", "options": ["기계는 매일 고쳐야 합니다", "전원을 끄면 기계가 고장 납니다", "기계를 고칠 때는 전원을 꺼야 합니다", "기계가 움직이면 손으로 빨리 잡아야 합니다"], "answer": 3, "passage": "기계를 고칠 때는 반드시 전원을 끄고 해야 합니다. 전원을 끄지 않으면 기계가 갑자기 움직여서 크게 다칠 수 있습니다. 고치는 동안에는 '수리 중' 표지를 붙여 두십시오."}, {"n": 17, "section": "읽기", "group": "[17~18] 다음 글의 내용과 같은 것을 고르십시오.", "options": ["송금 창구는 일요일에 쉽니다.", "일요일에도 돈을 보낼 수 있습니다.", "일요일에는 오후 6시까지 문을 엽니다.", "송금할 때는 여권만 가지고 가면 됩니다."], "answer": 2, "passage": "외국인 근로자 전용 송금 창구는 일요일에도 문을 엽니다. 일요일에는 오전 10시부터 오후 4시까지 이용할 수 있습니다. 송금할 때는 외국인등록증과 통장이 필요합니다."}, {"n": 18, "section": "읽기", "group": "[17~18] 다음 글의 내용과 같은 것을 고르십시오.", "options": ["택시비는 회사에서 줍니다.", "버스는 아침 8시에 출발합니다.", "통근 버스는 돈을 내지 않습니다.", "버스는 회사 정문 앞에서 출발합니다."], "answer": 3, "passage": "회사 통근 버스는 아침 7시 30분에 기숙사 앞에서 출발합니다. 버스는 무료입니다. 버스를 놓치면 택시를 타고 와야 하고, 택시비는 회사에서 주지 않습니다."}, {"n": 19, "section": "읽기", "group": "[19~20] 다음 글을 읽고 물음에 답하십시오.", "stem": "(     )에 들어갈 가장 알맞은 것을 고르십시오.", "options": ["아직", "결국", "별로", "가끔"], "answer": 2, "passage": "저는 우즈베키스탄에서 온 사르도르입니다. 한국에 오기 전에 고향에서 EPS-TOPIK 시험을 준비했습니다. 첫 번째 시험에서는 점수가 낮아서 떨어졌습니다. 하지만 포기하지 않고 매일 두 시간씩 듣기 공부를 했습니다. 그래서 두 번째 시험에서는 (     ) 합격할 수 있었습니다."}, {"n": 20, "section": "읽기", "stem": "이 글의 내용과 같은 것을 고르십시오.", "options": ["사르도르 씨는 매일 쓰기 공부를 했습니다.", "사르도르 씨는 두 번째 시험에 합격했습니다.", "사르도르 씨는 첫 번째 시험에 합격했습니다.", "사르도르 씨는 한국에서 처음 시험을 봤습니다."], "answer": 2, "passage_ref": 19}, {"n": 21, "section": "듣기", "group": "[21~24] 다음을 듣고 알맞은 그림을 고르십시오.", "options": ["①", "②", "③", "④"], "answer": 4, "option_images": [{"id": "s5-l21-1", "ko": "흰 바탕 위의 야구 모자 하나, 실사 사진"}, {"id": "s5-l21-2", "ko": "흰 바탕 위의 검은 배낭 하나, 실사 사진"}, {"id": "s5-l21-3", "ko": "흰 바탕 위의 운동화 한 켤레, 실사 사진"}, {"id": "s5-l21-4", "ko": "흰 바탕 위의 펼친 우산 하나, 실사 사진"}], "script": [["여", "우산"]]}, {"n": 22, "section": "듣기", "group": "[21~24] 다음을 듣고 알맞은 그림을 고르십시오.", "options": ["①", "②", "③", "④"], "answer": 1, "option_images": [{"id": "s5-l22-1", "ko": "작업복 입은 남자가 사무실 창문을 여는 모습, 실사 사진"}, {"id": "s5-l22-2", "ko": "작업복 입은 남자가 사무실 창문을 걸레로 닦는 모습, 실사 사진"}, {"id": "s5-l22-3", "ko": "작업복 입은 남자가 사무실 출입문을 여는 모습, 실사 사진"}, {"id": "s5-l22-4", "ko": "작업복 입은 여자가 사무실 창문을 여는 모습, 실사 사진"}], "script": [["남", "남자가 창문을 열고 있습니다."]]}, {"n": 23, "section": "듣기", "group": "[21~24] 다음을 듣고 알맞은 그림을 고르십시오.", "options": ["①", "②", "③", "④"], "answer": 2, "option_images": [{"id": "s5-l23-1", "ko": "사무실 책상 위에 종이 상자가 놓인 모습, 실사 사진"}, {"id": "s5-l23-2", "ko": "사무실 책상 아래 바닥에 종이 상자가 놓인 모습, 실사 사진"}, {"id": "s5-l23-3", "ko": "사무실 의자 위에 종이 상자가 놓인 모습, 실사 사진"}, {"id": "s5-l23-4", "ko": "사무실 문 옆 바닥에 종이 상자가 놓인 모습, 실사 사진"}], "script": [["남", "이 상자를 어디에 둘까요?"], ["여", "책상 아래에 두세요."]]}, {"n": 24, "section": "듣기", "group": "[21~24] 다음을 듣고 알맞은 그림을 고르십시오.", "options": ["①", "②", "③", "④"], "answer": 1, "option_images": [{"id": "s5-l24-1", "ko": "7시 5분을 가리키는 벽시계(build/draw_clock.py로 직접 그림)"}, {"id": "s5-l24-2", "ko": "7시 50분을 가리키는 벽시계(build/draw_clock.py로 직접 그림)"}, {"id": "s5-l24-3", "ko": "11시 5분을 가리키는 벽시계(build/draw_clock.py로 직접 그림)"}, {"id": "s5-l24-4", "ko": "8시 5분을 가리키는 벽시계(build/draw_clock.py로 직접 그림)"}], "script": [["여", "내일 몇 시에 만나요?"], ["남", "일곱 시 오 분에 만나요."]]}, {"n": 25, "section": "듣기", "group": "[25~26] 다음을 듣고 들은 것을 고르십시오.", "options": ["자", "짜", "사", "차"], "answer": 4, "script": [["남", "차"]]}, {"n": 26, "section": "듣기", "group": "[25~26] 다음을 듣고 들은 것을 고르십시오.", "options": ["읽어요", "익어요", "잃어요", "있어요"], "answer": 1, "script": [["여", "읽어요"]]}, {"n": 27, "section": "듣기", "group": "[27~28] 다음 질문을 듣고 알맞은 대답을 고르십시오.", "options": ["네, 살아요", "2년 살았어요", "친구하고 살아요", "기숙사에 살아요"], "answer": 3, "script": [["남", "누구하고 살아요?"]]}, {"n": 28, "section": "듣기", "group": "[27~28] 다음 질문을 듣고 알맞은 대답을 고르십시오.", "options": ["내일 갈게요", "감기에 걸렸어요", "네, 안 왔어요", "어제 회사에 갔어요"], "answer": 2, "script": [["여", "어제 왜 회사에 안 왔어요?"]]}, {"n": 29, "section": "듣기", "group": "[29~30] 다음 그림을 보고 알맞은 설명을 고르십시오.", "options": ["여자가 서류를 쓰고 있습니다.", "여자가 서류를 보고 있습니다.", "남자가 서류를 보고 있습니다.", "여자가 서류를 버리고 있습니다."], "answer": 2, "image": {"id": "s5-l29", "ko": "사무실 책상에 앉은 여자가 두 손으로 서류를 들고 읽는 모습(펜은 들지 않음), 실사 사진"}, "options_audio": true, "script": [["여", "① 여자가 서류를 쓰고 있습니다."], ["여", "② 여자가 서류를 보고 있습니다."], ["여", "③ 남자가 서류를 보고 있습니다."], ["여", "④ 여자가 서류를 버리고 있습니다."]]}, {"n": 30, "section": "듣기", "group": "[29~30] 다음 그림을 보고 알맞은 설명을 고르십시오.", "options": ["남자가 모자를 사고 있습니다.", "남자가 안전모를 벗고 있습니다.", "여자가 안전모를 쓰고 있습니다.", "남자가 안전모를 쓰고 있습니다."], "answer": 4, "image": {"id": "s5-l30", "ko": "공장 입구에서 작업복을 입은 남자가 두 손으로 노란 안전모를 머리에 쓰는 모습, 실사 사진"}, "options_audio": true, "script": [["남", "① 남자가 모자를 사고 있습니다."], ["남", "② 남자가 안전모를 벗고 있습니다."], ["남", "③ 여자가 안전모를 쓰고 있습니다."], ["남", "④ 남자가 안전모를 쓰고 있습니다."]]}, {"n": 31, "section": "듣기", "group": "[31] 다음 대화를 듣고 여기가 어디인지 고르십시오.", "options": ["공항", "호텔", "기차역", "여행사"], "answer": 1, "script": [["여", "여권을 보여 주세요."], ["남", "여기 있어요."], ["여", "짐은 이쪽에 올려놓으세요. 창가 자리로 드릴까요?"], ["남", "네, 창가로 주세요."]]}, {"n": 32, "section": "듣기", "group": "[32] 다음 대화를 듣고 무엇에 대해 이야기하는지 고르십시오.", "options": ["고향", "친구", "나이", "가족"], "answer": 4, "script": [["여", "형제가 몇 명이에요?"], ["남", "누나가 한 명, 동생이 두 명 있어요."], ["여", "와, 가족이 많네요."]]}, {"n": 33, "section": "듣기", "group": "[33~36] 다음 대화를 듣고 물음에 답하십시오.", "stem": "여자는 이제 무엇을 하겠습니까?", "options": ["색을 칠해요", "제품을 팔아요", "제품을 확인해요", "남자를 도와줘요"], "answer": 3, "script": [["남", "수지 씨, 이 제품에 문제가 있어요."], ["여", "어디요?"], ["남", "여기 색이 달라요. 다시 확인해 주세요."], ["여", "네, 지금 확인할게요."]]}, {"n": 34, "section": "듣기", "group": "[33~36] 다음 대화를 듣고 물음에 답하십시오.", "stem": "들은 내용과 같은 것을 고르십시오.", "options": ["여자는 한국어 수업을 들어요.", "한국어 수업은 일요일에 있어요.", "남자는 토요일에 한국어를 배워요.", "한국어 수업은 돈을 내고 들어야 해요."], "answer": 3, "script": [["여", "이번 주말에 뭐 해요?"], ["남", "한국어 수업이 있어요. 매주 토요일 오전에 들어요."], ["여", "어디에서 해요?"], ["남", "외국인력지원센터에서 해요. 무료예요."]]}, {"n": 35, "section": "듣기", "group": "[33~36] 다음 대화를 듣고 물음에 답하십시오.", "stem": "남자는 먼저 무엇을 해야 합니까?", "options": ["불을 꺼요", "크게 소리쳐요", "비상구로 나가요", "엘리베이터를 타요"], "answer": 2, "script": [["남", "저기에서 불이 났어요!"], ["여", "먼저 '불이야!' 하고 크게 소리치세요."], ["남", "그다음에는요?"], ["여", "비상구로 나가세요. 엘리베이터는 타면 안 돼요."]]}, {"n": 36, "section": "듣기", "group": "[33~36] 다음 대화를 듣고 물음에 답하십시오.", "stem": "들은 내용과 같은 것을 고르십시오.", "options": ["셔츠가 너무 커요.", "남자는 영수증이 없어요.", "남자는 큰 셔츠로 바꿔요.", "남자는 셔츠 값을 돌려받아요."], "answer": 3, "script": [["남", "이 셔츠 좀 바꿀 수 있어요? 너무 작아요."], ["여", "영수증 있으세요?"], ["남", "네, 여기요."], ["여", "큰 사이즈로 바꿔 드릴게요."]]}, {"n": 37, "section": "듣기", "group": "[37~38] 다음을 듣고 물음에 답하십시오.", "stem": "무엇에 대한 안내입니까?", "options": ["소방 훈련", "이사 안내", "건강 검진", "기숙사 청소"], "answer": 1, "script": [["방송", "기숙사에 계신 분들께 알려 드립니다. 내일 오후 3시에 소방 훈련이 있습니다. 경보 소리가 나면 엘리베이터를 타지 말고 계단으로 1층 마당에 모이십시오. 훈련은 30분 동안 합니다."]]}, {"n": 38, "section": "듣기", "stem": "들은 내용과 같은 것을 고르십시오.", "options": ["훈련은 내일 오전에 합니다.", "훈련은 한 시간 동안 합니다.", "경보가 울리면 마당에 모입니다.", "엘리베이터를 타고 내려가야 합니다."], "answer": 3, "script_ref": 37}, {"n": 39, "section": "듣기", "group": "[39~40] 다음 대화를 듣고 물음에 답하십시오.", "stem": "여자는 왜 밤에 일하고 싶어 합니까?", "options": ["돈을 더 받으려고", "낮에 학원에 다니려고", "밤에 하는 일이 쉬워서", "낮에 집에서 잠을 자려고"], "answer": 2, "script": [["여", "반장님, 다음 주부터 밤에 일하고 싶어요."], ["남", "왜요?"], ["여", "낮에 한국어 학원에 다니고 싶어서요."], ["남", "좋은 생각이에요. 그런데 밤에 일하면 힘드니까 건강 조심하세요."], ["여", "네, 고마워요."], ["남", "다음 주 월요일부터 야간 팀으로 바꿔 줄게요."]]}, {"n": 40, "section": "듣기", "stem": "들은 내용과 같은 것을 고르십시오.", "options": ["여자는 이미 학원에 다녀요.", "남자는 여자의 생각에 반대해요.", "여자는 다음 주부터 밤에 일해요.", "여자는 이번 주부터 밤에 일해요."], "answer": 3, "script_ref": 39}], "timing": {"explain": {"1": 2899, "2": 2909, "3": 2919, "4": 2929, "5": 2940, "6": 2952, "7": 2963, "8": 2972, "9": 2983, "10": 2995, "11": 3007, "12": 3020, "13": 3034, "14": 3046, "15": 3057, "16": 3070, "17": 3085, "18": 3099, "19": 3114, "20": 3130, "21": 3145, "22": 3158, "23": 3175, "24": 3193, "25": 3212, "26": 3228, "27": 3244, "28": 3259, "29": 3275, "30": 3306, "31": 3338, "32": 3363, "33": 3385, "34": 3410, "35": 3437, "36": 3466, "37": 3491, "38": 3522, "39": 3543, "40": 3582}, "explain_video": "jdF8gxbYMDY", "listen_video": "eJd2BXoV5tM", "listen": {"21": [2382.19, 2388.04], "22": [2393.04, 2401.63], "23": [2406.63, 2419.41], "24": [2424.41, 2437.05], "25": [2448.52, 2454.0], "26": [2459.0, 2465.11], "27": [2477.44, 2484.39], "28": [2489.39, 2497.92], "29": [2509.95, 2542.79], "30": [2547.79, 2582.25], "31": [2593.39, 2618.5], "32": [2630.23, 2650.21], "33": [2662.12, 2691.19], "34": [2697.19, 2727.5], "35": [2733.5, 2765.3], "36": [2771.3, 2799.39], "37": [2811.87, 2848.72], "38": [2816.25, 2848.72], "39": [2872.51, 2921.02], "40": [2877.84, 2921.02]}, "listen_total": 583.07}, "cutoffs": {"제조업": 60, "그 밖의 업종": 45}};
+const C='①②③④', IT=D.items, T=D.timing||{}, byN={}; IT.forEach(q=>byN[q.n]=q);
+const S={ans:{},cur:1,phase:'start',left:0,timer:null};
+const $=id=>document.getElementById(id), app=$('app');
+const esc=s=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])).replace(/&lt;u&gt;(.*?)&lt;\/u&gt;/g,'<u>$1</u>');
+const pic=im=>`<div class="pic">${im?`<img src="img/${im.id}.jpg" alt="" onerror="this.replaceWith(document.createTextNode('그림 준비 중'))">`:''}</div>`;
+function fmt(s){s=Math.max(0,s|0);return String(s/60|0).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function tick(){S.left--;$('time').textContent=fmt(S.left);$('time').classList.toggle('warn',S.left<180);
+ if(S.left<=0){clearInterval(S.timer); if(S.phase==='read'){alert('읽기 시간이 끝났습니다. 듣기를 시작합니다.');startPhase('listen')} else submit()}}
+function startPhase(p){S.phase=p;S.left=25*60;clearInterval(S.timer);S.timer=setInterval(tick,1000);$('time').textContent=fmt(S.left);
+ $('sec').textContent=p==='read'?'읽기 1~20':'듣기 21~40';S.cur=p==='read'?1:21;$('nav').style.display='flex';render()}
+function inPhase(n){return S.phase==='read'?n<=20:n>20}
+function startScreen(){
+ app.innerHTML=`<div class="card start"><h1>${esc(D.title)}</h1><p class="sub">회원 가입 없이 바로 푸는 무료 EPS-TOPIK 연습</p>
+ <div class="facts"><div><b>40</b><span>문항</span></div><div><b>50분</b><span>읽기 25·듣기 25</span></div><div><b>100</b><span>점 만점</span></div></div>
+ <button class="big" id="go">▶ 시험 시작</button>
+ <p class="note">· 읽기 25분이 끝나면 듣기 25분이 시작됩니다.<br>· 듣기는 ▶ 버튼을 누르면 문제의 소리가 나옵니다(이어폰을 쓰세요).<br>· 다 풀면 점수와 업종별 하한 점수를 보여 드립니다. 틀린 문제는 <b>해설 영상</b>으로 공부하세요.</p></div>`;
+ $('go').onclick=()=>startPhase('read')}
+function render(){
+ const q=byN[S.cur]; let h=`<div class="card">`;
+ if(q.group) h+=`<div class="group">${esc(q.group)}</div>`; else { const g=[...IT].reverse().find(x=>x.n<q.n&&x.group); if(g&&q.n-g.n<4) h+=`<div class="group">${esc(g.group)}</div>`}
+ h+=`<div><span class="qno">${q.n}</span></div>`;
+ if(q.section==='듣기') h+=`<button class="listen" id="play"><span class="ic">▶</span>듣기 ${q.n}번<small>${T.listen_video?'':'(미리보기 음성)'}</small></button>`;
+ const P=q.passage||(q.passage_ref&&byN[q.passage_ref].passage);
+ if(q.image) h+=pic(q.image);
+ if(P) h+=`<div class="passage">${q.passage_kind?`<span class="kind">${esc(q.passage_kind)}</span><br>`:''}${esc(P)}</div>`;
+ if(q.dialog) h+=`<div class="passage dialog">${q.dialog.map(l=>`<p>${esc(l)}</p>`).join('')}</div>`;
+ if(q.stem) h+=`<div class="stem">${esc(q.stem)}</div>`;
+ const grid=!!q.option_images||q.options.every(o=>o.length<=5);
+ h+=`<div class="opts ${grid?'grid':''}">`+q.options.map((o,i)=>{
+   const sel=S.ans[q.n]===i+1?' sel':'';
+   if(q.option_images) return `<button class="opt img${sel}" data-i="${i+1}"><span class="c">${C[i]}</span>${pic(q.option_images[i])}</button>`;
+   return `<button class="opt${sel}" data-i="${i+1}"><span class="c">${C[i]}</span><span>${q.options_audio?'':esc(o)}</span></button>`}).join('')+`</div></div>`;
+ app.innerHTML=h; scrollTo(0,0);
+ app.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{S.ans[q.n]=+b.dataset.i;render()});
+ if($('play')) $('play').onclick=()=>play(q);
+ const last=S.phase==='read'?20:40, first=S.phase==='read'?1:21;
+ $('prev').disabled=S.cur===first; $('next').textContent=S.cur===last?(S.phase==='read'?'듣기로 ▶':'제출하기'):'다음 ▶'}
+/* 듣기: 유튜브 「듣기」 영상의 구간 재생. 영상이 아직 없으면 브라우저 음성으로 미리 듣기 */
+let YTP=null,ytReady=false,stopT=null;
+function loadYT(){ if(!T.listen_video||window.YT) return; const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);
+ window.onYouTubeIframeAPIReady=()=>{YTP=new YT.Player('ytp',{videoId:T.listen_video,playerVars:{playsinline:1},events:{onReady:()=>ytReady=true}})}}
+function play(q){
+ const k=String(T.listen&&T.listen[q.n]?q.n:(q.script_ref||q.n));
+ if(T.listen_video&&T.listen&&T.listen[k]&&ytReady){const [a,b]=T.listen[k];YTP.seekTo(a,true);YTP.playVideo();clearTimeout(stopT);stopT=setTimeout(()=>YTP.pauseVideo(),(b-a)*1000);return}
+ const sc=(q.script||byN[q.script_ref].script); speechSynthesis.cancel();
+ sc.forEach(([who,t])=>{const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.9;u.pitch=who==='남'?.8:1.15;speechSynthesis.speak(u)})}
+function next(){const last=S.phase==='read'?20:40;
+ if(S.cur<last){S.cur++;render();return}
+ if(S.phase==='read'){if(confirm('읽기를 끝내고 듣기를 시작할까요? 읽기로 돌아올 수 없습니다.'))startPhase('listen')}
+ else{const left=IT.filter(q=>q.n>20&&!S.ans[q.n]).length; if(confirm(left?`안 푼 문제가 ${left}개 있습니다. 제출할까요?`:'제출할까요?'))submit()}}
+function sheet(){
+ let h=`<div class="lbl">${S.phase==='read'?'읽기':'듣기'} 문제 번호 (색칠 = 답함)</div><div class="nums">`;
+ IT.forEach(q=>{const on=inPhase(q.n);h+=`<button class="${S.ans[q.n]?'done':''} ${q.n===S.cur?'cur':''} ${on?'':'lock'}" data-n="${q.n}" ${on?'':'disabled'}>${q.n}</button>`});
+ $('sheetIn').innerHTML=h+'</div>'; $('sheet').classList.add('on');
+ $('sheetIn').querySelectorAll('button[data-n]').forEach(b=>b.onclick=()=>{S.cur=+b.dataset.n;$('sheet').classList.remove('on');render()})}
+function submit(){
+ clearInterval(S.timer);speechSynthesis.cancel();if(YTP&&ytReady)YTP.pauseVideo();S.phase='done';$('nav').style.display='none';$('time').textContent='';$('sec').textContent='결과';
+ let r=0,l=0; IT.forEach(q=>{if(S.ans[q.n]===q.answer){q.n<=20?r++:l++}});
+ const pt=(r+l)*2.5, ex=T.explain_video, link=n=>ex?`https://www.youtube.com/watch?v=${ex}&t=${(T.explain||{})[n]||0}s`:'';
+ let h=`<div class="card"><div class="score"><div class="lbl">내 점수</div><div class="pt">${pt}<small> / 100</small></div></div>
+ <div class="bar"><div>읽기<b>${r*2.5}</b>${r}/20</div><div>듣기<b>${l*2.5}</b>${l}/20</div></div>`;
+ for(const [k,v] of Object.entries(D.cutoffs)) h+=`<div class="cut ${pt>=v?'pass':'fail'}"><span>${k} 하한 ${v}점</span><span>${pt>=v?'넘었어요':'아직이에요'}</span></div>`;
+ h+=`<p class="note">하한 점수를 넘으면 구직자 명부 순위 경쟁에 들어갑니다. 실제 선발은 높은 점수 순서입니다.</p>`;
+ h+=`<div class="lbl" style="margin-top:14px">문제별 결과</div><div class="nums">`+IT.map(q=>`<button class="${S.ans[q.n]===q.answer?'ok':'ng'}" disabled>${q.n}</button>`).join('')+`</div>`;
+ const W=IT.filter(q=>S.ans[q.n]!==q.answer);
+ if(W.length){h+=`<div class="lbl" style="margin-top:14px">틀린 문제 ${W.length}개 — 해설 영상에서 풀이를 보세요</div>`+
+   W.map(q=>`<div class="wrong"><span class="qno">${q.n}</span><span>${q.section}</span><a class="${ex?'':'wait'}" href="${link(q.n)}" target="_blank" rel="noopener">${ex?'▶ 해설 영상':'영상 준비 중'}</a></div>`).join('')}
+ h+=`<a class="sub-cta" href="https://www.youtube.com/@EPIC21korean?sub_confirmation=1" target="_blank" rel="noopener">▶ 다음 회 모의고사 알림 받기 (유튜브 구독)</a>
+ <button class="big navy" onclick="location.reload()">다시 풀기</button></div>`;
+ app.innerHTML=h; scrollTo(0,0)}
+$('prev').onclick=()=>{S.cur--;render()}; $('next').onclick=next; $('gridb').onclick=sheet; $('closeS').onclick=()=>$('sheet').classList.remove('on');
+loadYT(); startScreen();
+</script></body></html>
