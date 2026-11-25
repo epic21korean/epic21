@@ -405,7 +405,9 @@ footer a{color:var(--muted)}
 .tile:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
 .tile-eps{--ac:#E57A00}.tile-topik{--ac:#1E6FFF}.tile-kiip{--ac:#1F9A44}.tile-start{--ac:#8B5CF6}
 .ticon{font-size:30px;line-height:1}
-.tname2{font-size:19px;font-weight:900;line-height:1.2;margin-top:4px}
+.tname2{font-size:clamp(16px,4.4vw,19px);font-weight:900;line-height:1.2;margin-top:4px;word-break:keep-all;overflow-wrap:anywhere}
+.map,.ax,.grp,.gtxt,.tdesc{word-break:keep-all;overflow-wrap:anywhere}
+details.ax,details.grp{scroll-margin-top:130px}
 .tko{font-size:13px;color:var(--muted)}
 .tdesc{font-size:13.5px;line-height:1.4;color:var(--ink-soft);flex:1}
 .tcount{font-size:12.5px;font-weight:700;color:var(--ac)}
