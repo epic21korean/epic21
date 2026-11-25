@@ -78,3 +78,9 @@ git add -A && git commit -m "hub v2" && git push
 - 방문 통계(GoatCounter)에 `app/<언어>/<방식>` 으로 안내 창 열림·설치 선택이 기록된다.
 
 - 입문 교재 『한글 첫걸음』(2026-11-14): 묶음 "hangul", 수준 "입문". 입문 층 영상 칸("intro")은 없애고 다른 교재처럼 교재 카드 + ▶ 영상 버튼으로 통일했다. 새 교재 표지는 `python fetch_covers.py` 로 아카이브에서 1쪽을 가져온다(없는 표지만 만든다).
+
+## 허브 v4 (2026-11-25)
+- 첫 화면 지도: 수준별 층 대신 목적별 축(EPS-TOPIK · TOPIK · 사회통합프로그램 · 처음 시작 · 더 보기). 축과 시리즈는 접혀 있고 눌러서 편다. 축 구성은 `build.py` 의 `AXES`.
+- 시험·제도 안내: `/<언어>/guide/eps|topik|kiip/`. 본문은 `guides/<언어>.txt` (한 줄에 한 문장, 117줄, 줄 순서 고정 — `guides/ko.txt` 가 기준). 축 이름·지도 문구도 이 파일에 있다. 공식 사이트 링크와 확인 날짜는 `guides.json`.
+- 문구를 고치면 `python guides_tool.py` 로 줄 수를 확인하고 `python build.py`.
+- 미리보기: `python build.py --preview` → `preview/ko`, `preview/en` (검색 제외).
