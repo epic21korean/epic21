@@ -655,7 +655,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <article class="book" data-full="{{ b.ko }}" data-added="{{ b.added }}" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
       <div class="cover">
         <span class="ph" aria-hidden="true">{{ b.vol or '' }}</span>
-        <img src="{{ b.cover }}" alt="" loading="lazy" width="180" height="254"
+        <img src="{{ b.cover }}" data-fb="{{ b.cover_fallback }}" alt="" loading="lazy" width="180" height="254"
              onload="this.setAttribute('data-ok','1')"
              onerror="if(!this.dataset.f){this.dataset.f=1;this.src='{{ b.cover_fallback }}'}else{this.remove()}">
         {%- if b.lv %}
@@ -880,12 +880,16 @@ details.ax>*:not(summary){margin-inline:14px}
   $('#vdlg').addEventListener('close',function(){$('#vbox').innerHTML='';if(typeof maybeSub==='function')maybeSub('video')});
 
   /* 최근 받은 교재 */
+  function miniCover(im){
+    if(!im) return '';
+    return '<img src="'+im.getAttribute('src')+'" data-fb="'+(im.getAttribute('data-fb')||'')+'" alt="" loading="lazy" onerror="if(this.dataset.fb&&!this.dataset.f){this.dataset.f=1;this.src=this.dataset.fb}else{this.remove()}">';
+  }
   function paintRecent(){
     var r=store('epic21-recent')||[], strip=$('#recentStrip'); strip.innerHTML='';
     r.forEach(function(s){
       var b=$('.book[data-slug="'+s+'"]',$('#shelf')); if(!b)return;
       var a=document.createElement('a'); a.href='#'+s; a.dataset.slug=s;
-      var im=$('.cover img',b); a.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
+      var im=$('.cover img',b); a.innerHTML=miniCover(im)+'<span></span>';
       a.lastChild.textContent=b.dataset.full||$('.bname',b).textContent.trim(); strip.appendChild(a);
     });
     $('#recent').hidden=!strip.children.length;
@@ -979,7 +983,7 @@ details.ax>*:not(summary){margin-inline:14px}
       var age=(NOW-new Date(a+'T00:00:00').getTime())/DAY; if(age<0||age>30)return;
       var c=$('.cover',b); if(!$('.newtag',c)){var t=document.createElement('span');t.className='newtag';t.textContent='NEW';c.appendChild(t)}
       var x=document.createElement('a'); x.href='#'+b.dataset.slug; x.dataset.slug=b.dataset.slug;
-      var im=$('.cover img',b); x.innerHTML=(im?'<img src="'+im.getAttribute('src')+'" alt="" loading="lazy">':'')+'<span></span>';
+      var im=$('.cover img',b); x.innerHTML=miniCover(im)+'<span></span>';
       x.lastChild.textContent=b.dataset.full||$('.bname',b).textContent.trim(); strip.appendChild(x);
     });
     $('#newbox').hidden=!strip.children.length;
