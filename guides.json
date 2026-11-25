@@ -1,0 +1,44 @@
+{
+ "checked": "2026-11-25",
+ "order": [
+  "eps",
+  "topik",
+  "kiip"
+ ],
+ "links": {
+  "eps": [
+   [
+    "EPS-TOPIK (HRD Korea)",
+    "https://epstopik.hrdkorea.or.kr"
+   ],
+   [
+    "EPS",
+    "https://www.eps.go.kr"
+   ]
+  ],
+  "topik": [
+   [
+    "TOPIK",
+    "https://www.topik.go.kr"
+   ],
+   [
+    "Study in Korea",
+    "https://www.studyinkorea.go.kr"
+   ]
+  ],
+  "kiip": [
+   [
+    "Soci-Net",
+    "https://www.socinet.go.kr"
+   ],
+   [
+    "KIIP Test",
+    "https://www.kiiptest.org"
+   ],
+   [
+    "Hi Korea",
+    "https://www.hikorea.go.kr"
+   ]
+  ]
+ }
+}

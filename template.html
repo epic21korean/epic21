@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ lang.code }}"{% if lang.rtl %} dir="rtl"{% endif %}>
-<head>
+<head>{% if preview %}<meta name="robots" content="noindex,nofollow">{% endif %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{{ t.title }}</title>
@@ -377,11 +377,121 @@ footer a{color:var(--muted)}
   .ghead .gdesc{font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ── 허브 v4: 지도 + 접는 축·시리즈 ── */
+.map{margin-top:30px}
+.map h2{font-size:20px;font-weight:800;margin-bottom:12px}
+.tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+@media (min-width:860px){.tiles{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.tile{--ac:#1E6FFF;display:flex;flex-direction:column;gap:4px;padding:16px 14px 14px;border-radius:14px;text-decoration:none;color:var(--ink);
+  background:var(--card,rgba(127,127,127,.06));border:1.5px solid var(--line);border-top:6px solid var(--ac);min-height:150px;transition:transform .15s,box-shadow .15s}
+.tile:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.tile-eps{--ac:#E57A00}.tile-topik{--ac:#1E6FFF}.tile-kiip{--ac:#1F9A44}.tile-start{--ac:#8B5CF6}
+.ticon{font-size:30px;line-height:1}
+.tname2{font-size:clamp(16px,4.4vw,19px);font-weight:900;line-height:1.2;margin-top:4px;word-break:keep-all;overflow-wrap:anywhere}
+.map,.ax,.grp,.gtxt,.tdesc{word-break:keep-all;overflow-wrap:anywhere}
+details.ax,details.grp{scroll-margin-top:130px}
+.tko{font-size:13px;color:var(--muted)}
+.tdesc{font-size:13.5px;line-height:1.4;color:var(--ink-soft);flex:1}
+.tcount{font-size:12.5px;font-weight:700;color:var(--ac)}
+.tmore{display:inline-block;margin-top:10px;font-size:14px;color:var(--ink-soft);text-decoration:none;border-bottom:1px dashed var(--line)}
+details.ax{--lc:#1E6FFF;margin-top:18px;border-inline-start:6px solid var(--lc);border-radius:4px}
+.ax-eps{--lc:#E57A00}.ax-topik{--lc:#1E6FFF}.ax-kiip{--lc:#1F9A44}.ax-start{--lc:#8B5CF6}.ax-more{--lc:var(--muted)}
+details.ax[hidden],details.grp[hidden]{display:none}
+details.ax>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"ic name chev" "ic meta chev";gap:2px 14px;align-items:center;padding:16px 16px 16px 14px;margin:0}
+details.ax>summary::-webkit-details-marker,details.grp>summary::-webkit-details-marker{display:none}
+details.ax>summary .aicon{grid-area:ic;font-size:34px}
+details.ax>summary .tname{grid-area:name;font-size:clamp(22px,4.6vw,32px);color:var(--lc)}
+.ax-more>summary .tname{color:var(--ink-soft)}
+details.ax>summary .tmeta{grid-area:meta}
+details.ax>summary .chev{grid-area:chev}
+.chev{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--line);position:relative;flex:none}
+.chev::after{content:"";position:absolute;inset:0;margin:auto;width:8px;height:8px;border-inline-end:2.2px solid currentColor;border-bottom:2.2px solid currentColor;transform:translateY(-2px) rotate(45deg);transition:transform .2s}
+details[open]>summary .chev::after{transform:translateY(2px) rotate(225deg)}
+details.ax>*:not(summary){margin-inline-start:14px}
+details.grp{margin:0 0 0 0;padding:0;border-top:1.5px solid var(--grid-soft);display:block}
+details.grp>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:14px 12px 14px 0;margin:0;border:0;position:static}
+details.grp>summary h3{font-size:17px;line-height:1.3}
+.gtxt{display:grid;gap:2px;min-width:0}
+.gtxt .gdesc{font-size:13.5px;color:var(--ink-soft);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.gtxt .gko{font-size:12px;color:var(--muted)}
+.gcov{display:flex;width:64px;height:51px;position:relative}
+.gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
+.gcov img:first-child{margin-inline-start:0}
+.gn{font-size:13px;font-weight:800;min-width:28px;height:28px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--lc);color:#fff;padding:0 8px}
+details.grp>.books{padding:6px 0 26px}
+@media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
+.sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
+.sq.vid .yt{fill:#fff}
+.sq.vid span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.acts .get{flex:1}
+@container (max-width:210px){.acts .sq.vid{flex:1 1 100%}}
+
+/* ── 허브 v4 지도: 젊은 감각 (그라데이션·그림 기호·빛망울) ── */
+.map h2{font-size:22px;font-weight:900;letter-spacing:-.01em;display:inline-block;background:linear-gradient(90deg,#FF5A5F,#7C3AED 55%,#2563EB);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tiles{gap:12px}
+.tile{--a1:#3B82F6;--a2:#7C3AED;position:relative;overflow:hidden;isolation:isolate;border:0;border-radius:22px;color:#fff;min-height:186px;padding:16px 16px 14px;
+  background:linear-gradient(140deg,var(--a1) 0%,var(--a2) 100%);box-shadow:0 14px 28px -14px var(--a2),inset 0 1px 0 rgba(255,255,255,.35)}
+.tile::before{content:"";position:absolute;z-index:-1;width:170px;height:170px;border-radius:50%;right:-60px;top:-70px;background:radial-gradient(circle,rgba(255,255,255,.35),rgba(255,255,255,0) 70%)}
+.tile::after{content:"";position:absolute;z-index:-1;inset:0;background-image:radial-gradient(rgba(255,255,255,.16) 1.2px,transparent 1.3px);background-size:14px 14px;-webkit-mask-image:linear-gradient(200deg,#000,transparent 60%);mask-image:linear-gradient(200deg,#000,transparent 60%)}
+.tile:hover{transform:translateY(-3px) rotate(-.4deg);box-shadow:0 20px 34px -14px var(--a2),inset 0 1px 0 rgba(255,255,255,.35)}
+.tile-eps{--a1:#FFB020;--a2:#FF3D5A}
+.tile-topik{--a1:#38BDF8;--a2:#6D28D9}
+.tile-kiip{--a1:#22D3A6;--a2:#1D4ED8}
+.tile-start{--a1:#F472B6;--a2:#8B5CF6}
+.ticon{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);margin-bottom:6px}
+.ticon .axi{width:50px;height:50px;filter:drop-shadow(0 3px 4px rgba(0,0,0,.18))}
+.tname2{color:#fff;font-size:clamp(17px,4.6vw,21px);text-shadow:0 1px 2px rgba(0,0,0,.15)}
+.tko{color:rgba(255,255,255,.85)}
+.tdesc{color:rgba(255,255,255,.92);font-size:13px}
+.tcount{align-self:flex-start;margin-top:6px;background:#fff;color:var(--a2);padding:3px 10px;border-radius:999px;font-size:12px;font-weight:900}
+.tmore{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 14px 8px 8px;border:1.5px solid var(--line);border-radius:999px;font-weight:700;color:var(--ink)}
+.tmore .mi .axi{width:24px;height:24px}
+.tmore .mi{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:linear-gradient(140deg,#CBD5E1,#94A3B8)}
+details.ax>summary .aicon{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(140deg,var(--a1,#3B82F6),var(--a2,#7C3AED));box-shadow:0 8px 18px -10px var(--a2,#7C3AED)}
+details.ax>summary .aicon .axi{width:42px;height:42px}
+.ax-eps{--lc:#FF3D5A;--a1:#FFB020;--a2:#FF3D5A}.ax-topik{--lc:#6D28D9;--a1:#38BDF8;--a2:#6D28D9}.ax-kiip{--lc:#1D4ED8;--a1:#22D3A6;--a2:#1D4ED8}.ax-start{--lc:#8B5CF6;--a1:#F472B6;--a2:#8B5CF6}.ax-more{--a1:#CBD5E1;--a2:#94A3B8}
+details.ax{border-inline-start:0;border-radius:20px;background:linear-gradient(180deg,color-mix(in srgb,var(--lc) 7%,transparent),transparent 120px);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--lc) 22%,transparent)}
+details.ax>summary .tname{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.ax-more>summary .tname{color:var(--ink-soft);background:none;-webkit-text-fill-color:currentColor}
+details.ax>*:not(summary){margin-inline:14px}
+.gn{background:linear-gradient(140deg,var(--a1,var(--lc)),var(--a2,var(--lc)))}
+
+.twho{display:inline-block;align-self:flex-start;margin-top:2px;padding:3px 9px;border-radius:999px;background:rgba(0,0,0,.18);color:#fff;font-size:12.5px;font-weight:800;line-height:1.3}
+.tile .tdesc{font-size:12.5px;opacity:.95}
+.why{margin:4px 14px 14px;padding:14px 16px;border-radius:16px;background:var(--bg,#fff);box-shadow:0 6px 18px -12px var(--a2,#7C3AED),inset 0 0 0 1.5px color-mix(in srgb,var(--lc) 25%,transparent);position:relative;overflow:hidden}
+.why::before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:linear-gradient(180deg,var(--a1),var(--a2))}
+[dir=rtl] .why::before{inset:0 0 0 auto}
+.whyt{display:block;font-size:15px;font-weight:900;margin-bottom:6px;color:var(--lc)}
+.why p{font-size:14.5px;line-height:1.65;color:var(--ink);margin:0}
+.why a{display:inline-block;margin-top:8px;font-size:13px;font-weight:800;color:var(--lc);text-decoration:none;border-bottom:1.5px solid currentColor}
+
+.gcorner{margin-top:22px;padding:18px 16px;border-radius:22px;background:var(--card,rgba(127,127,127,.07));box-shadow:inset 0 0 0 1.5px var(--line)}
+.gcorner h2{font-size:18px;background:none;-webkit-text-fill-color:currentColor;color:var(--ink);display:block}
+.gcorner p{font-size:13.5px;color:var(--ink-soft);margin-bottom:8px}
+.gc{--a1:#38BDF8;--a2:#6D28D9;display:grid;grid-template-columns:1fr auto;gap:0 10px;align-items:center;padding:12px 14px;margin-top:8px;border-radius:16px;text-decoration:none;color:var(--ink);background:var(--bg,#fff);border-inline-start:6px solid var(--a2)}
+.gc-eps{--a2:#FF3D5A}.gc-topik{--a2:#6D28D9}.gc-kiip{--a2:#1D4ED8}
+.gc span{font-size:12px;font-weight:800;color:var(--a2);grid-column:1}.gc b{font-size:15.5px;grid-column:1}.gc i{grid-column:2;grid-row:1/3;font-style:normal;font-weight:900;color:var(--a2)}
+.glink{display:block;margin:2px 14px 12px;padding:12px 14px;border-radius:14px;text-decoration:none;font-size:14.5px;color:var(--ink);background:var(--bg,#fff);box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--lc) 25%,transparent)}
+.glink b{color:var(--lc);white-space:nowrap}
 </style>
 </head>
 <body>
 {% macro gm(key, step, cls='') -%}
 <span class="gm {{ cls }} gm-{{ key }}" aria-hidden="true">{% for i in range(4) %}<i class="{{ 'on' if (key == 'all' and i >= 1) or (key != 'all' and i <= step) else '' }} c{{ i }}"></i>{% endfor %}</span>
+{%- endmacro %}
+{% macro axicon(key) -%}
+{%- if key == 'eps' -%}
+<svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="58" r="26" fill="#1E3A8A"/><path d="M14 64c2-12 9-18 18-18s16 6 18 18z" fill="#2563EB"/><path d="M27 46l5 8 5-8" fill="#FDE68A"/><circle cx="32" cy="31" r="12" fill="#FDD9B5"/><circle cx="27.5" cy="31" r="1.6" fill="#3B2F2F"/><circle cx="36.5" cy="31" r="1.6" fill="#3B2F2F"/><path d="M28 36q4 3 8 0" stroke="#3B2F2F" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M17 26c0-10 7-16 15-16s15 6 15 16z" fill="#FACC15"/><rect x="13" y="24" width="38" height="5" rx="2.5" fill="#EAB308"/><rect x="29.5" y="9" width="5" height="16" rx="2" fill="#FDE047"/></svg>
+{%- elif key == 'topik' -%}
+<svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="6" width="36" height="48" rx="5" fill="#fff"/><rect x="18" y="14" width="18" height="3.5" rx="1.75" fill="#93C5FD"/><rect x="18" y="22" width="24" height="3" rx="1.5" fill="#CBD5E1"/><rect x="18" y="29" width="20" height="3" rx="1.5" fill="#CBD5E1"/><rect x="18" y="36" width="22" height="3" rx="1.5" fill="#CBD5E1"/><path d="M19 45l4 4 8-9" stroke="#22C55E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g transform="rotate(35 46 40)"><rect x="42" y="16" width="8" height="32" rx="2" fill="#F59E0B"/><rect x="42" y="16" width="8" height="5" rx="2" fill="#F472B6"/><path d="M42 48h8l-4 8z" fill="#FDE68A"/><path d="M45 54h2l-1 2z" fill="#1F2937"/></g></svg>
+{%- elif key == 'kiip' -%}
+<svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="12" width="60" height="40" rx="5" fill="#fff"/><g transform="translate(32 32) rotate(-33.7)"><path d="M-9 0a9 9 0 0 1 18 0a4.5 4.5 0 0 1-9 0a4.5 4.5 0 0 0-9 0z" fill="#CD2E3A"/><path d="M9 0a9 9 0 0 1-18 0a4.5 4.5 0 0 1 9 0a4.5 4.5 0 0 0 9 0z" fill="#0047A0"/></g><g fill="#111"><g transform="translate(13.5 20.5) rotate(-56.3)"><rect x="-6" y="-4.6" width="12" height="2.2"/><rect x="-6" y="-1.1" width="12" height="2.2"/><rect x="-6" y="2.4" width="12" height="2.2"/></g><g transform="translate(50.5 43.5) rotate(-56.3)"><rect x="-6" y="-4.6" width="5.3" height="2.2"/><rect x=".7" y="-4.6" width="5.3" height="2.2"/><rect x="-6" y="-1.1" width="5.3" height="2.2"/><rect x=".7" y="-1.1" width="5.3" height="2.2"/><rect x="-6" y="2.4" width="5.3" height="2.2"/><rect x=".7" y="2.4" width="5.3" height="2.2"/></g><g transform="translate(50.5 20.5) rotate(56.3)"><rect x="-6" y="-4.6" width="5.3" height="2.2"/><rect x=".7" y="-4.6" width="5.3" height="2.2"/><rect x="-6" y="-1.1" width="12" height="2.2"/><rect x="-6" y="2.4" width="5.3" height="2.2"/><rect x=".7" y="2.4" width="5.3" height="2.2"/></g><g transform="translate(13.5 43.5) rotate(56.3)"><rect x="-6" y="-4.6" width="12" height="2.2"/><rect x="-6" y="-1.1" width="5.3" height="2.2"/><rect x=".7" y="-1.1" width="5.3" height="2.2"/><rect x="-6" y="2.4" width="12" height="2.2"/></g></g></svg>
+{%- elif key == 'start' -%}
+<svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="3" y="14" width="20" height="26" rx="5" fill="#fff" transform="rotate(-10 13 27)"/><rect x="22" y="10" width="20" height="26" rx="5" fill="#FDE68A"/><rect x="41" y="14" width="20" height="26" rx="5" fill="#fff" transform="rotate(10 51 27)"/><text x="13" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#DB2777" transform="rotate(-10 13 27)" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">가</text><text x="32" y="30" text-anchor="middle" font-size="16" font-weight="900" fill="#7C3AED" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">나</text><text x="51" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#2563EB" transform="rotate(10 51 27)" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">다</text><path d="M14 50h36" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/></svg>
+{%- else -%}
+<svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="#fff" opacity=".9"/><path d="M32 22v20M22 32h20" stroke="#64748B" stroke-width="5" stroke-linecap="round"/></svg>
+{%- endif -%}
 {%- endmacro %}
 <div class="wrap">
 
@@ -434,6 +544,30 @@ footer a{color:var(--muted)}
   {% endif %}
 </header>
 
+<nav class="map" id="map" aria-labelledby="mapT">
+  <h2 id="mapT">{{ t.ui.map_title }}</h2>
+  <div class="tiles">
+  {%- for A in axes if not A.minor %}
+    <a class="tile tile-{{ A.key }}" href="#ax-{{ A.key }}" data-ax="{{ A.key }}">
+      <span class="ticon">{{ axicon(A.key) }}</span>
+      <b class="tname2">{{ A.name }}</b>{% if lang.code != 'ko' and A.ko != A.name %}<span class="tko" lang="ko">{{ A.ko }}</span>{% endif %}
+      <span class="twho">{{ A.who }}</span>
+      <span class="tdesc">{{ A.desc }}</span>
+      <span class="tcount">{{ t.ui.count.replace('{n}', A.n|string) }}</span>
+    </a>
+  {%- endfor %}
+  </div>
+  {%- for A in axes if A.minor %}
+  <a class="tmore" href="#ax-{{ A.key }}" data-ax="{{ A.key }}"><span class="mi">{{ axicon(A.key) }}</span>{{ A.name }} · {{ t.ui.count.replace('{n}', A.n|string) }}</a>
+  {%- endfor %}
+  {%- if guides %}
+  <div class="gcorner">
+    <h2>📖 {{ guides[1].corner }}</h2><p>{{ guides[1].corner_sub }}</p>
+    {%- for x in guides[0] %}<a class="gc gc-{{ x.key }}" href="{{ guide_base }}guide/{{ x.key }}/"><span>{{ x.short }}</span><b>{{ x.title }}</b><i aria-hidden="true">→</i></a>{%- endfor %}
+  </div>
+  {%- endif %}
+</nav>
+
 <section class="forvideo" id="forvideo" hidden aria-live="polite">
   <div class="tag">{{ t.ui.forvideo }}</div>
   <div id="forvideo-slot"></div>
@@ -479,9 +613,6 @@ footer a{color:var(--muted)}
 </div>
 <div class="cats" id="cats" role="group" aria-label="{{ t.ui.series }}">
     <button class="chip" type="button" data-g="" aria-pressed="true">{{ t.ui.all }}</button>
-    {%- for T in tiers %}{%- for g in T.groups %}
-    <button class="chip" type="button" data-g="{{ g.key }}" aria-pressed="false">{{ gm(T.key, T.step, 'gm-sm') }}{{ g.name }}</button>
-    {%- endfor %}{%- endfor %}
     <button class="chip" type="button" data-g="__fav" aria-pressed="false">♥ {{ t.ui.saved }}</button>
   </div>
 
@@ -496,20 +627,29 @@ footer a{color:var(--muted)}
 </section>
 
 <main id="shelf">
-  {%- for T in tiers %}
-  <section class="tier tier-{{ T.key }}" id="lv-{{ T.key }}" data-tier="{{ T.key }}" aria-labelledby="lvh-{{ T.key }}">
-    <header class="thead">
-      {{ gm(T.key, T.step, 'gm-big') }}
-      <h2 class="tname" id="lvh-{{ T.key }}"><span lang="ko">{{ T.ko }}</span>{% if lang.code != 'ko' %}<span class="tword" lang="{{ 'en' if is_root else lang.code }}">{{ T.word }}</span>{% endif %}</h2>
-      <p class="tmeta"><span class="topik" dir="ltr">{{ T.topik }}</span><span>{{ t.ui.count.replace('{n}', T.n|string) }}</span><span class="prog" data-n="{{ T.n }}" hidden></span></p>
-    </header>
-    {%- for g in T.groups %}
-    <section class="grp" id="g-{{ g.key }}-{{ T.key }}" data-g="{{ g.key }}">
-      <div class="ghead">
-        <h3>{{ g.name }}</h3>
-        <p class="gdesc">{{ g.desc }}</p>
-        {% if lang.code != 'ko' %}<p class="gko" lang="ko">{{ g.ko }}</p>{% endif %}
-      </div>
+  {%- for A in axes %}
+  <details class="ax ax-{{ A.key }}{% if A.minor %} ax-minor{% endif %}" id="ax-{{ A.key }}" data-ax="{{ A.key }}">
+    <summary class="thead">
+      <span class="aicon">{{ axicon(A.key) }}</span>
+      <h2 class="tname" id="axh-{{ A.key }}"><span>{{ A.name }}</span>{% if lang.code != 'ko' and A.ko != A.name %}<span class="tword" lang="ko">{{ A.ko }}</span>{% endif %}</h2>
+      <p class="tmeta"><span>{{ A.desc }}</span><span>{{ t.ui.count.replace('{n}', A.n|string) }}</span><span class="prog" data-n="{{ A.n }}" hidden></span></p>
+      <span class="chev" aria-hidden="true"></span>
+    </summary>
+    {%- if A.guide %}
+    <a class="glink" href="{{ guide_base }}guide/{{ A.key }}/">📖 {{ guides[0]|selectattr('key','equalto',A.key)|map(attribute='title')|first }} <b>{{ guides[1].more }} →</b></a>
+    {%- endif %}
+    {%- for g in A.groups %}
+    <details class="grp" id="g-{{ g.key }}" data-g="{{ g.key }}">
+      <summary class="ghead">
+        <span class="gcov" aria-hidden="true">{%- for b in g.books[:4] %}<img src="{{ b.cover }}" alt="" loading="lazy" width="36" height="51" onerror="this.remove()">{%- endfor %}</span>
+        <span class="gtxt">
+          <h3>{{ g.name }}</h3>
+          <span class="gdesc">{{ g.desc }}</span>
+          {% if lang.code != 'ko' %}<span class="gko" lang="ko">{{ g.ko }}</span>{% endif %}
+        </span>
+        <span class="gn">{{ g.books|length }}</span>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
       <div class="books{% if g.books|length == 1 %} solo{% endif %}">
       {%- for b in g.books %}
     <article class="book" data-full="{{ b.ko }}" data-added="{{ b.added }}" data-slug="{{ b.slug }}" data-lv="{{ b.lv.key if b.lv else '' }}" data-q="{{ b.search }}">
@@ -540,6 +680,9 @@ footer a{color:var(--muted)}
         {%- endif %}
       </div>
       <div class="acts">
+        <a class="sq vid" href="{{ b.video_url }}" rel="noopener"{% if b.video %} data-video="{{ b.video }}"{% if b.video_list %} data-list="{{ b.video_list }}"{% endif %}{% endif %} aria-label="{{ t.ui.watch }}" title="{{ t.ui.watch }}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>{{ t.ui.watch }}</span>
+        </a>
         {%- if b.pdf %}
         <a class="get" href="{{ b.pdf }}" target="_blank" rel="noopener" data-get>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13m0 0 5-5m-5 5-5-5M4 21h16"/></svg>
@@ -548,9 +691,7 @@ footer a{color:var(--muted)}
         {%- else %}
         <a class="na" href="https://archive.org/details/{{ b.id }}">{{ t.ui.na }} — {{ t.ui.open }}</a>
         {%- endif %}
-        <a class="sq" href="{{ b.video_url }}" rel="noopener"{% if b.video %} data-video="{{ b.video }}"{% if b.video_list %} data-list="{{ b.video_list }}"{% endif %}{% endif %} aria-label="{{ t.ui.watch }}" title="{{ t.ui.watch }}">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        </a>
+        
         <button class="sq" type="button" data-share aria-label="{{ t.ui.share }}" title="{{ t.ui.share }}">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
         </button>
@@ -558,9 +699,9 @@ footer a{color:var(--muted)}
     </article>
       {%- endfor %}
       </div>
-    </section>
+    </details>
     {%- endfor %}
-  </section>
+  </details>
   {%- endfor %}
   <div class="empty" id="empty" hidden><p>{{ t.ui.none }}</p><button type="button" id="reset">{{ t.ui.reset }}</button></div>
 </main>
@@ -633,7 +774,7 @@ footer a{color:var(--muted)}
 
 <script>
 (function(){
-  var UI={copied:{{ t.ui.copied|tojson }},saved:{{ t.ui.saved_toast|tojson }},unsaved:{{ t.ui.unsaved_toast|tojson }},
+  var UI={subt:{{ t.ui.sub_title|tojson }},subx:{{ t.ui.sub_text|tojson }},subtv:{{ t.ui.sub_title_v|tojson }},subxv:{{ t.ui.sub_text_v|tojson }},copied:{{ t.ui.copied|tojson }},saved:{{ t.ui.saved_toast|tojson }},unsaved:{{ t.ui.unsaved_toast|tojson }},
           count:{{ t.ui.count|tojson }},donecount:{{ t.ui.done_count|tojson }},rhangul:{{ t.ui.r_hangul|tojson }},rlevel:{{ t.ui.r_level|tojson }},show:{{ t.ui.show|tojson }},go:{{ t.ui.go|tojson }},dismiss:{{ t.ui.dismiss|tojson }}};
   var PAGE={{ lang.code|tojson }}, ROOT={{ 'true' if is_root else 'false' }};
   var LANGS={{ lang_names|tojson }};
@@ -674,7 +815,8 @@ footer a{color:var(--muted)}
   }
 
   /* 찾기 */
-  var books=$$('.book',$('#shelf')), state={q:'',lv:'',g:''};
+  var books=$$('.book',$('#shelf')), state={q:'',lv:'',g:''}, wasFiltered=false;
+  function reveal(el){var d=el&&el.closest('details');while(d){d.open=true;d=d.parentElement&&d.parentElement.closest('details')}}
   var favs=store('epic21-favs')||[];
   function apply(){
     var q=state.q.trim().toLowerCase(), n=0;
@@ -686,9 +828,12 @@ footer a{color:var(--muted)}
       b.hidden=!ok; if(ok)n++;
     });
     $$('.grp').forEach(function(s){s.hidden=!$$('.book',s).some(function(b){return !b.hidden})});
-    $$('.tier').forEach(function(s){s.hidden=!$$('.grp',s).some(function(g){return !g.hidden})});
+    $$('.ax').forEach(function(s){s.hidden=!$$('.grp',s).some(function(g){return !g.hidden})});
     $('#empty').hidden=n>0;
     var filtered=state.q||state.lv||state.g;
+    if(filtered){$$('details.grp,details.ax').forEach(function(d){if(!d.hidden)d.open=true})}
+    else if(wasFiltered){$$('details.grp,details.ax').forEach(function(d){d.open=false})}
+    wasFiltered=!!filtered;
     $('#result').textContent=filtered&&n?UI.count.replace('{n}',n):'';
   }
   $('#q').addEventListener('input',function(e){state.q=e.target.value;apply()});
@@ -732,7 +877,7 @@ footer a{color:var(--muted)}
       r=[s2].concat(r.filter(function(x){return x!==s2})).slice(0,8); store('epic21-recent',r); paintRecent();
     }
   });
-  $('#vdlg').addEventListener('close',function(){$('#vbox').innerHTML=''});
+  $('#vdlg').addEventListener('close',function(){$('#vbox').innerHTML='';if(typeof maybeSub==='function')maybeSub('video')});
 
   /* 최근 받은 교재 */
   function paintRecent(){
@@ -763,7 +908,7 @@ footer a{color:var(--muted)}
     var a=e.target.closest('a'); if(!a)return; e.preventDefault();
     var b=$('.book[data-slug="'+a.dataset.slug+'"]',$('#shelf')); if(!b)return;
     if(b.hidden){$('#reset').click()}
-    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+    reveal(b); b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
   });
   /* 홈 화면 앱 */
   if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register({{ (base ~ 'sw.js')|tojson }}).catch(function(){})})}
@@ -843,14 +988,14 @@ footer a{color:var(--muted)}
   function jump(slug){
     var b=$('.book[data-slug="'+slug+'"]',$('#shelf')); if(!b)return;
     if(b.hidden){$('#reset').click()}
-    b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
+    reveal(b); b.scrollIntoView({behavior:'smooth',block:'center'}); b.classList.add('flash'); setTimeout(function(){b.classList.remove('flash')},1600);
   }
 
   /* 공부 끝 */
   var done=store('epic21-done')||[];
   function paintDone(){
     $$('.book').forEach(function(b){var on=done.indexOf(b.dataset.slug)>-1;b.classList.toggle('studied',on);var d=$('[data-done]',b);if(d)d.setAttribute('aria-pressed',on?'true':'false')});
-    $$('.tier').forEach(function(t){
+    $$('.ax').forEach(function(t){
       var p=$('.prog',t), n=0; if(!p)return; $$('.book',t).forEach(function(b){if(done.indexOf(b.dataset.slug)>-1)n++});
       p.hidden=!n; p.textContent='✓ '+UI.donecount.replace('{d}',n).replace('{n}',p.dataset.n);
     });
@@ -870,7 +1015,7 @@ footer a{color:var(--muted)}
     var g=e.target.closest('[data-go]'); if(g){gstep(g.dataset.go);return}
     var r=e.target.closest('[data-res]'); if(!r)return;
     gres=r.dataset.res; var key=gres==='hangul'?($('#lv-start')?'start':'beg'):gres;
-    $('#gresMark').innerHTML=$('.tier-'+key+' .gm-big')?$('.tier-'+key+' .gm-big').outerHTML:'';
+    var gmk=$('#lvs [data-lv="'+key+'"] .gm'); $('#gresMark').innerHTML=gmk?gmk.outerHTML:'';
     $('#gresText').textContent=gres==='hangul'?UI.rhangul:UI.rlevel.replace('{level}',LV[key]||key);
     gstep('res'); track('guide/'+gres,'수준 찾기 결과 '+gres);
   });
@@ -879,7 +1024,7 @@ footer a{color:var(--muted)}
     gd.close();
     var key=gres==='hangul'?($('#lv-start')?'start':'beg'):gres;
     var chip=$('#lvs [data-lv="'+key+'"]'); if(chip)chip.click();
-    var target=$('#lv-'+key);
+    var target=$('#shelf');
     if(target)setTimeout(function(){target.scrollIntoView({behavior:'smooth',block:'start'})},60);
   });
 
@@ -888,17 +1033,25 @@ footer a{color:var(--muted)}
 
   /* PDF 받은 뒤 구독 권유: 구독을 누르면 다시 안 뜨고, 나중에는 7일 동안 안 뜬다 */
   var sheet=$('#subSheet');
-  function maybeSub(){
+  var SUBT={pdf:[UI.subt,UI.subx],video:[UI.subtv,UI.subxv]};
+  function maybeSub(kind){
     var st=store('epic21-sub'); if(st==='yes'||(typeof st==='number'&&NOW-st<7*DAY))return;
+    var tx=SUBT[kind||'pdf']; $('#subT').textContent=tx[0]; $('.subtxt span',sheet).textContent=tx[1];
     setTimeout(function(){sheet.hidden=false},500);
   }
   $('#subGo').addEventListener('click',function(){store('epic21-sub','yes');sheet.hidden=true;track('subscribe/'+PAGE,'구독 누름')});
   $('#subLater').addEventListener('click',function(){store('epic21-sub',Date.now());sheet.hidden=true});
-  document.addEventListener('click',function(e){if(e.target.closest('[data-get]'))maybeSub()});
+  document.addEventListener('click',function(e){if(e.target.closest('[data-get]'))maybeSub('pdf')});
 
+  /* 지도 타일·#ax-·#g- 주소: 해당 칸을 펼치고 이동 */
+  function openTarget(id){var el=document.getElementById(id);if(!el||el.tagName!=='DETAILS')return false;
+    reveal(el);el.open=true;setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'})},30);return true}
+  $$('[data-ax]').forEach(function(a){if(a.tagName!=='A')return;a.addEventListener('click',function(e){e.preventDefault();openTarget('ax-'+a.dataset.ax);track('map/'+a.dataset.ax,'지도 '+a.dataset.ax);
+    try{history.replaceState(null,'','#ax-'+a.dataset.ax)}catch(_){}})});
+  function hashOpen(){var h=(location.hash||'').slice(1);if(/^(ax|g)-/.test(h))openTarget(h)}
   paintNew(); paintDone();
-  paintFav(); paintRecent(); apply(); show();
-  window.addEventListener('hashchange',show);
+  paintFav(); paintRecent(); apply(); show(); hashOpen();
+  window.addEventListener('hashchange',function(){show();hashOpen()});
 })();
 </script>
 </body>

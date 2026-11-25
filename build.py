@@ -70,6 +70,50 @@ UI_NEW = {
            'dl_short': 'PDF', 'top': '맨 위로', 'install': '앱으로 설치', 'sub_title': "PDF가 새 탭에서 열리고 있어요", 'sub_text': "유튜브에서 EPIC21을 구독하면 새 무료 교재와 영상 소식을 받을 수 있어요.", 'sub_btn': "구독하기", 'later': "나중에", 'start': "어디서부터 시작할까요?", 'q1': "한글을 읽을 수 있나요?", 'q2': "한국어로 자기소개를 하고 카페에서 주문할 수 있나요?", 'q3': "TOPIK II 지문이나 한국어 뉴스를 읽을 수 있나요?", 'yes': "네", 'no': "아직요", 'r_hangul': "『한글 첫걸음』 교재부터 시작하세요. 그림과 영상, 소리로 한글을 처음부터 배울 수 있어요.", 'r_level': "추천 수준: {level}", 'show': "이 교재 보기", 'again': "처음부터 다시", 'new_title': "새 교재", 'done': "공부 끝", 'done_count': "{d} / {n}권 공부 끝", 'qr': "QR 코드", 'qr_text': "휴대폰으로 찍으면 이 페이지가 열려요.", 'go': '{lang} 페이지로 가기', 'dismiss': '괜찮아요'},
 }
 LEVEL_ORDER = ['입문', '초급', '중급', '고급']
+# 허브 v4 (2026-11-25): 수준별 층 대신 학습 목적별 '축'으로 묶고, 축·시리즈를 접어 둔다.
+AXES = [('eps', '🧑‍🏭', ['eps']),
+        ('topik', '📝', ['mv1', 'dlg', 'cls', 'core', 'mv2', 'mag', 'wrt']),
+        ('kiip', '🏛️', ['kiip']),
+        ('start', '🔤', ['hangul', 's100']),
+        ('more', '➕', ['easy', 'poem', 'ttg'])]
+AX_TEXT = {  # [이름, 축 설명, 지도 칸 한 줄(누구를 위한가), 왜 필요한가]
+    'en': {'eps': ['EPS-TOPIK', 'Korean for working in Korea — mock tests with video explanations',
+                   'If you want to work in Korea',
+                   "Korea's Employment Permit System (EPS) brings workers from partner countries to factories, farms, fishing, construction and service jobs on an E-9 visa. You take the EPS-TOPIK in your own country, and Korean employers choose workers from the list of people who passed — so your score really matters."],
+           'topik': ['TOPIK I · II', "Korea's official Korean test — songs, dialogues, grammar and writing",
+                     'If you want to study or build a career in Korea',
+                     "TOPIK is Korea's official Korean language test. Universities use it for admission (usually level 3 or higher) and graduation, and companies, scholarships and some visa point systems use it too. TOPIK I covers levels 1–2, TOPIK II covers levels 3–6. A score is valid for 2 years."],
+           'kiip': ['KIIP · Social Integration Program', 'Prepare for the KIIP pre-test, level tests and mid-term test',
+                    'If you want to live in Korea long-term',
+                    "KIIP is the Ministry of Justice program for foreigners living in Korea. Completing it gives extra points when you apply to extend or change your visa, and it counts toward the requirements for permanent residency and naturalization (Korean citizenship)."],
+           'start': ['First steps', 'Hangul and your first 100 sentences — start here',
+                     'If you are learning Korean for the first time',
+                     'EPS-TOPIK, TOPIK and KIIP all begin with Hangul, the Korean alphabet. Learn to read it with pictures and sounds, then learn 100 sentences you can use with Koreans right away.'],
+           'more': ['More', 'Other series', '', '']},
+    'ko': {'eps': ['EPS-TOPIK', '한국 취업을 위한 한국어 — 영상 해설이 있는 실전 모의고사',
+                   '한국에서 일하고 싶다면',
+                   '고용허가제(EPS)는 협약을 맺은 나라의 근로자가 E-9 비자로 한국의 공장·농장·어업·건설·서비스 현장에서 일하게 하는 제도예요. EPS-TOPIK은 자기 나라에서 치르고, 한국 회사는 합격자 명단에서 근로자를 골라요. 그래서 점수가 정말 중요해요.'],
+           'topik': ['TOPIK I · II', '한국어능력시험 — 노래·대화·문법·쓰기',
+                     '한국에서 공부하거나 일하고 싶다면',
+                     'TOPIK은 한국 정부가 운영하는 공식 한국어 시험이에요. 한국 대학 입학(보통 3급 이상)과 졸업에 쓰이고, 회사 취업·장학금·일부 비자 점수에도 쓰여요. TOPIK I은 1~2급, TOPIK II는 3~6급이고, 성적은 2년 동안 유효해요.'],
+           'kiip': ['사회통합프로그램', '사전평가·단계평가·중간평가 대비',
+                    '한국에서 오래 살고 싶다면',
+                    '사회통합프로그램은 한국에 사는 외국인을 위한 법무부 교육이에요. 이수하면 비자를 연장하거나 바꿀 때 가점을 받고, 영주권과 귀화(한국 국적) 신청 요건을 채울 수 있어요.'],
+           'start': ['처음 시작', '한글과 첫 100문장 — 여기서 시작하세요',
+                     '한국어를 처음 배운다면',
+                     'EPS-TOPIK도, TOPIK도, 사회통합프로그램도 모두 한글에서 시작해요. 그림과 소리로 한글을 읽는 법을 배우고, 한국 사람과 바로 쓸 수 있는 100문장을 익히세요.'],
+           'more': ['더 보기', '다른 시리즈', '', '']},
+}
+AX_LINK = {'eps': 'https://epstopik.hrdkorea.or.kr', 'topik': 'https://www.topik.go.kr', 'kiip': 'https://www.socinet.go.kr'}
+UI_V4 = {
+    'en': {'map_title': 'What do you want to study?', 'tap_open': 'Tap to open',
+           'sub_title_v': 'Did the video help?', 'sub_text_v': "Subscribe to EPIC21 so you don't miss the next lesson.",
+           'why': 'Why do I need this?', 'official': 'Official website'},
+    'ko': {'map_title': '무엇을 공부할까요?', 'tap_open': '눌러서 펼치기',
+           'sub_title_v': '영상이 도움이 되었나요?', 'sub_text_v': 'EPIC21을 구독하면 다음 강의를 놓치지 않아요.',
+           'why': '왜 필요할까요?', 'official': '공식 사이트'},
+}
+
 # 홈 화면 추가 안내 문구 — ?app=ko 로 열면 어느 페이지에서든 안내 창만 한국어로 바뀐다(교사용)
 APP_KEYS = ['app_title', 'app_lede', 'app_btn', 'ios1', 'ios2', 'ios3', 'menu', 'inapp', 'inapp_btn', 'inapp_ios', 'copylink', 'app_done']
 # 컴퓨터(데스크톱)에서 열었을 때 바꿔 쓰는 안내 문구 — 크롬·엣지 설치, 맥 사파리 Dock, 그 밖의 브라우저
@@ -136,14 +180,15 @@ def cover_exists(book_id, lang_file):
     return os.path.exists(os.path.join(HERE, 'covers', book_id, lang_file + '.jpg'))
 
 
-def build_page(site, env, lang, is_root, collect=None):
+def build_page(site, env, lang, is_root, collect=None, preview=False):
     site_url = site['site_url'].rstrip('/')
     code = lang['code']
     T = site['text']
     t = T.get(code, T['en'])
     count = len(site['books'])
     t = json.loads(json.dumps(t))  # 복사
-    ui = dict(UI_NEW['en']); ui.update(UI_NEW.get(code, {})); ui.update(t['ui']); t['ui'] = ui
+    ui = dict(UI_NEW['en']); ui.update(UI_NEW.get(code, {})); ui.update(t['ui'])
+    ui.update({k: v for k, v in UI_V4['en'].items() if k not in ui}); ui.update(UI_V4.get(code, {})); ui.update(t['ui'].get('v4', {}) if isinstance(t['ui'].get('v4'), dict) else {}); t['ui'] = ui
     for k in ('title', 'desc'):
         t[k] = t[k].replace('{count}', str(count))
 
@@ -198,6 +243,8 @@ def build_page(site, env, lang, is_root, collect=None):
             search = ' '.join(x for x in [tr or '', b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
             page = f"{base}{'en/' if is_root else ''}{b['slug']}/" if is_root else f"{b['slug']}/"
+            if preview:
+                page = f"{base}{code}/{b['slug']}/"
             bk = dict(b, page=page, gname=gt['name'], gdesc=gt['desc'], added=site.get('added', {}).get(b['id'], ''), sub=sub, sub_lang=sub_lang, size=size, short=short, video=vid, video_list=plist if vid else '', video_url=video_url, search=search, pdf=pdf, cover=cover, cover_fallback=cover_fallback, vol_label=vol_label, name=name, single=single, lv=lv)
             books.append(bk)
             if collect is not None:
@@ -226,6 +273,22 @@ def build_page(site, env, lang, is_root, collect=None):
             tiers.append(dict(info, topik=TOPIK_LBL[L], groups=subs,
                               n=sum(len(x['books']) for x in subs)))
 
+    # 축: 시리즈를 학습 목적별로 묶는다. 축 이름은 site.json text.<코드>.axes 가 있으면 그것, 없으면 AX_TEXT
+    _gt = guide_text(lv_code)
+    axt = dict(AX_TEXT['en']); axt.update(AX_TEXT.get(lv_code, {}))
+    if _gt:
+        axt.update({k: [v[0], v[1], '' if v[2] == '-' else v[2], ''] for k, v in _gt['axes'].items()})
+        t['ui'].update(_gt['v4'])
+    gmap = {g['key']: g for g in groups}
+    axes = []
+    for ak, icon, gkeys in AXES:
+        subs = [gmap[k] for k in gkeys if k in gmap and gmap[k]['books']]
+        if not subs:
+            continue
+        lvs = sorted({b['lv']['step'] for x in subs for b in x['books'] if b['lv'] and b['lv']['key'] != 'all'})
+        axes.append(dict(key=ak, icon=icon, name=axt[ak][0], desc=axt[ak][1], who=axt[ak][2], why=axt[ak][3], link=AX_LINK.get(ak, ''), ko=AX_TEXT['ko'][ak][0], groups=subs,
+                         n=sum(len(x['books']) for x in subs), lvs=lvs, minor=(ak == 'more')))
+
     itemlist = {'@type': 'ItemList', 'name': t['title'],
               'url': page_url, 'numberOfItems': len(items),
               'itemListElement': [{'@type': 'ListItem', 'position': i + 1, 'item': it}
@@ -240,11 +303,15 @@ def build_page(site, env, lang, is_root, collect=None):
               if any(x.get('level') == L for x in site['books'])]
     lang_names = {L['code'].split('-')[0] if L['code'] != 'zh-Hans' else 'zh-Hans': L['name'] for L in site['langs']}
 
+    _G = load_guides()
+    guides = ([{'key': k, 'title': _gt[k]['title'], 'short': _gt[k]['short']} for k in _G['order']], _gt['ui']) if _gt else None
+    for A in axes:
+        A['guide'] = bool(_gt) and A['key'] in _G['order']
     tpl = env.get_template('template.html')
-    return tpl.render(
+    return tpl.render(guides=guides, guide_base=('en/' if is_root else ''), 
         lang=lang, t=t, is_root=is_root, base=base, page_url=page_url, site_url=site_url,
         og_image=og_image, og_locale=OG_LOCALE.get(code, 'en_US'),
-        level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, book_count=count,
+        level_names={L['key']: L['ko'] + ('' if code == 'ko' else ' ' + L['word']) for L in levels}, goatcounter=site.get('goatcounter', ''), qrname=('root' if is_root else lang['code']), youtube_sub=site['youtube'].rstrip('/') + '?sub_confirmation=1', alternates=alternates, langs=site['langs'], groups=groups, tiers=tiers, axes=axes, book_count=count, preview=preview,
         youtube=site['youtube'], archive_user=site['archive_user'], license=site['license'],
         about_ko=T['ko']['about'], levels=levels, lang_names=lang_names,
         app_ko={k: T['ko']['ui'][k] for k in APP_KEYS + PC_KEYS},
@@ -314,6 +381,41 @@ def build_book_pages(site, env, lang, books):
     return len(books)
 
 
+def load_guides():
+    with open(os.path.join(HERE, 'guides.json'), encoding='utf-8') as f:
+        G = json.load(f)
+    G.pop('text', None)
+    return G
+
+
+def guide_text(code):
+    import guides_tool
+    return guides_tool.load_lang(code)
+
+
+def build_guides(site, env, lang, outdir, home, preview=False):
+    """시험·제도 안내 페이지: <outdir>/guide/<주제>/index.html. 그 언어 본문이 없으면 만들지 않는다."""
+    G = load_guides(); code = lang['code']; tx = guide_text(code)
+    if not tx:
+        return []
+    site_url = site['site_url'].rstrip('/'); tpl = env.get_template('guide.html'); made = []
+    for key in G['order']:
+        g = tx[key]; d = os.path.join(outdir, 'guide', key); os.makedirs(d, exist_ok=True)
+        page_url = f"{site_url}/{code}/guide/{key}/"
+        alternates = [{'code': L['code'], 'url': f"{site_url}/{L['code']}/guide/{key}/"} for L in site['langs'] if guide_text(L['code'])]
+        jsonld = {'@context': 'https://schema.org', '@type': 'Article', 'headline': g['title'], 'description': g['lead'],
+                  'inLanguage': code, 'dateModified': G['checked'], 'url': page_url,
+                  'author': {'@type': 'Organization', 'name': 'EPIC21'}, 'publisher': {'@type': 'Organization', 'name': 'EPIC21'}}
+        out = tpl.render(lang=lang, g=g, u=tx['ui'], key=key, links=G['links'][key], checked=G['checked'], home=home,
+                         others=[{'key': k, 'title': tx[k]['title']} for k in G['order'] if k != key],
+                         page_url=page_url, site_url=site_url, alternates=alternates, preview=preview,
+                         goatcounter=site.get('goatcounter', ''), jsonld=json.dumps(jsonld, ensure_ascii=False).replace('</', '<\\/'))
+        with open(os.path.join(d, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(out)
+        made.append(page_url)
+    return made
+
+
 def main():
     site = load()
     if '--refresh-files' in sys.argv:
@@ -322,6 +424,17 @@ def main():
 
     env = Environment(loader=FileSystemLoader(HERE), autoescape=select_autoescape(['html']))
     site_url = site['site_url'].rstrip('/')
+    if '--preview' in sys.argv:
+        en_l = next(L for L in site['langs'] if L['code'] == 'en')
+        for L in [en_l, dict(en_l, code='ko', name='한국어', en='Korean', ko='한국어')]:
+            d = os.path.join(HERE, 'preview', L['code']); os.makedirs(d, exist_ok=True)
+            out = build_page(site, env, L, False, preview=True)
+            out = out.replace('href="../', 'href="../../').replace('src="../', 'src="../../').replace("'../sw.js'", "'../../sw.js'").replace('"../sw.js"', '"../../sw.js"')
+            with open(os.path.join(d, 'index.html'), 'w', encoding='utf-8') as f:
+                f.write(out)
+            print('preview/' + L['code'] + '/index.html')
+            build_guides(site, env, L, d, '../../', preview=True)
+        return
 
     # 첫 화면: 언어표 + 영어 목록 (검색 엔진이 읽을 수 있도록 정적으로 넣는다)
     en = next(L for L in site['langs'] if L['code'] == 'en')
@@ -350,6 +463,7 @@ def main():
             f.write(build_page(site, env, L, False, collect=got))
         urls.append(f"{site_url}/{L['code']}/")
         print(f"{L['code']}/index.html")
+        urls += build_guides(site, env, L, d, '../../')
         n = build_book_pages(site, env, L, got)
         book_urls += [f"{site_url}/{L['code']}/{b['slug']}/" for b in got]
         print(f"  {L['code']}/<교재>/ ×{n}")
