@@ -124,8 +124,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ibtn span{white-space:nowrap}
 .ibtn[hidden]{display:none}
 #installBtn{border-color:var(--band)}
-#openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
-@media (max-width:420px){ #openLangs span{display:none}.tools{gap:4px}.ibtn{padding:0 10px}}
+@media (max-width:420px){ .tools{gap:4px}.ibtn{padding:0 10px}}
 @media (max-width:560px){.ibtn .lbl{display:none}}
 
 /* ── 원고지 제목 ── */
@@ -155,6 +154,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .suggest button{margin-inline-start:auto;font-size:13px;color:var(--ink-soft);text-decoration:underline}
 
 /* ── 원고지 언어표 ── */
+.langbar{display:flex;align-items:center;gap:8px;width:100%;margin-top:10px;padding:10px 14px;border-radius:12px;border:1.5px solid var(--band);background:var(--card,transparent);color:var(--ink);font:inherit;cursor:pointer;text-align:start}
+.langbar svg{width:20px;height:20px;flex:none}
+.langbar b{font-size:16px}
+.langbar .lb-pick{color:var(--ink-soft);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.langbar .lb-ko{color:var(--muted);font-size:12px;margin-inline-start:auto;white-space:nowrap}
+.langbar i{font-style:normal;color:var(--ink-soft)}
+@media (max-width:420px){.langbar .lb-ko{display:none}.langbar i{margin-inline-start:auto}}
+.langs.first{margin-top:6px}
 .langs{margin-top:28px}
 .langs h2{font-size:15px;font-weight:700;margin-bottom:10px;color:var(--ink-soft)}
 .lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
@@ -498,10 +505,11 @@ details.ax>*:not(summary){margin-inline:14px}
 
 <div class="wrap">
 
+
+
 <div class="top">
   <a class="brand" href="./"><i aria-hidden="true"></i>EPIC21</a>
   <div class="tools">
-    
     <a class="ibtn" href="https://www.youtube.com/@EPIC21korean" rel="noopener" aria-label="YouTube @EPIC21korean">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span class="lbl">Watch on YouTube</span>
@@ -518,6 +526,33 @@ details.ax>*:not(summary){margin-inline:14px}
     </button>
   </div>
 </div>
+
+
+<section class="langs first" aria-labelledby="pickLabel">
+  <h2 id="pickLabel">언어를 고르세요 · Choose your language</h2>
+  <nav class="lgrid">
+  <a class="lc" lang="en" href="en/"><span class="nat">English</span><span class="gl" dir="ltr"><b lang="ko">영어</b></span></a>
+  <a class="lc" lang="es" href="es/"><span class="nat">Español</span><span class="gl" dir="ltr"><span lang="en">Spanish</span> · <b lang="ko">스페인어</b></span></a>
+  <a class="lc" lang="fr" href="fr/"><span class="nat">Français</span><span class="gl" dir="ltr"><span lang="en">French</span> · <b lang="ko">프랑스어</b></span></a>
+  <a class="lc" lang="pt" href="pt/"><span class="nat">Português</span><span class="gl" dir="ltr"><span lang="en">Portuguese</span> · <b lang="ko">포르투갈어</b></span></a>
+  <a class="lc" lang="id" href="id/"><span class="nat">Bahasa Indonesia</span><span class="gl" dir="ltr"><span lang="en">Indonesian</span> · <b lang="ko">인도네시아어</b></span></a>
+  <a class="lc" lang="vi" href="vi/"><span class="nat">Tiếng Việt</span><span class="gl" dir="ltr"><span lang="en">Vietnamese</span> · <b lang="ko">베트남어</b></span></a>
+  <a class="lc" lang="tl" href="tl/"><span class="nat">Tagalog</span><span class="gl" dir="ltr"><span lang="en">Filipino</span> · <b lang="ko">타갈로그어</b></span></a>
+  <a class="lc" lang="uz" href="uz/"><span class="nat">Oʻzbekcha</span><span class="gl" dir="ltr"><span lang="en">Uzbek</span> · <b lang="ko">우즈베크어</b></span></a>
+  <a class="lc" lang="ru" href="ru/"><span class="nat">Русский</span><span class="gl" dir="ltr"><span lang="en">Russian</span> · <b lang="ko">러시아어</b></span></a>
+  <a class="lc" lang="mn" href="mn/"><span class="nat">Монгол</span><span class="gl" dir="ltr"><span lang="en">Mongolian</span> · <b lang="ko">몽골어</b></span></a>
+  <a class="lc" lang="ja" href="ja/"><span class="nat">日本語</span><span class="gl" dir="ltr"><span lang="en">Japanese</span> · <b lang="ko">일본어</b></span></a>
+  <a class="lc" lang="zh-Hans" href="zh-Hans/"><span class="nat">简体中文</span><span class="gl" dir="ltr"><span lang="en">Chinese</span> · <b lang="ko">중국어</b></span></a>
+  <a class="lc" lang="th" href="th/"><span class="nat">ภาษาไทย</span><span class="gl" dir="ltr"><span lang="en">Thai</span> · <b lang="ko">태국어</b></span></a>
+  <a class="lc" lang="km" href="km/"><span class="nat">ភាសាខ្មែរ</span><span class="gl" dir="ltr"><span lang="en">Khmer</span> · <b lang="ko">캄보디아어</b></span></a>
+  <a class="lc" lang="my" href="my/"><span class="nat">မြန်မာ</span><span class="gl" dir="ltr"><span lang="en">Burmese</span> · <b lang="ko">버마어</b></span></a>
+  <a class="lc" lang="ne" href="ne/"><span class="nat">नेपाली</span><span class="gl" dir="ltr"><span lang="en">Nepali</span> · <b lang="ko">네팔어</b></span></a>
+  <a class="lc" lang="bn" href="bn/"><span class="nat">বাংলা</span><span class="gl" dir="ltr"><span lang="en">Bengali</span> · <b lang="ko">벵골어</b></span></a>
+  <a class="lc" lang="si" href="si/"><span class="nat">සිංහල</span><span class="gl" dir="ltr"><span lang="en">Sinhala</span> · <b lang="ko">싱할라어</b></span></a>
+  <a class="lc" lang="ar" dir="rtl" href="ar/"><span class="nat">العربية</span><span class="gl" dir="ltr"><span lang="en">Arabic</span> · <b lang="ko">아랍어</b></span></a>
+  <a class="lc" lang="ur" dir="rtl" href="ur/"><span class="nat">اردو</span><span class="gl" dir="ltr"><span lang="en">Urdu</span> · <b lang="ko">우르두어</b></span></a>
+</nav>
+</section>
 
 <header class="hero">
   
@@ -584,33 +619,6 @@ details.ax>*:not(summary){margin-inline:14px}
 
 
 
-
-
-<section class="langs" aria-labelledby="pickLabel">
-  <h2 id="pickLabel">언어를 고르세요 · Choose your language</h2>
-  <nav class="lgrid">
-  <a class="lc" lang="en" href="en/"><span class="nat">English</span><span class="gl" dir="ltr"><b lang="ko">영어</b></span></a>
-  <a class="lc" lang="es" href="es/"><span class="nat">Español</span><span class="gl" dir="ltr"><span lang="en">Spanish</span> · <b lang="ko">스페인어</b></span></a>
-  <a class="lc" lang="fr" href="fr/"><span class="nat">Français</span><span class="gl" dir="ltr"><span lang="en">French</span> · <b lang="ko">프랑스어</b></span></a>
-  <a class="lc" lang="pt" href="pt/"><span class="nat">Português</span><span class="gl" dir="ltr"><span lang="en">Portuguese</span> · <b lang="ko">포르투갈어</b></span></a>
-  <a class="lc" lang="id" href="id/"><span class="nat">Bahasa Indonesia</span><span class="gl" dir="ltr"><span lang="en">Indonesian</span> · <b lang="ko">인도네시아어</b></span></a>
-  <a class="lc" lang="vi" href="vi/"><span class="nat">Tiếng Việt</span><span class="gl" dir="ltr"><span lang="en">Vietnamese</span> · <b lang="ko">베트남어</b></span></a>
-  <a class="lc" lang="tl" href="tl/"><span class="nat">Tagalog</span><span class="gl" dir="ltr"><span lang="en">Filipino</span> · <b lang="ko">타갈로그어</b></span></a>
-  <a class="lc" lang="uz" href="uz/"><span class="nat">Oʻzbekcha</span><span class="gl" dir="ltr"><span lang="en">Uzbek</span> · <b lang="ko">우즈베크어</b></span></a>
-  <a class="lc" lang="ru" href="ru/"><span class="nat">Русский</span><span class="gl" dir="ltr"><span lang="en">Russian</span> · <b lang="ko">러시아어</b></span></a>
-  <a class="lc" lang="mn" href="mn/"><span class="nat">Монгол</span><span class="gl" dir="ltr"><span lang="en">Mongolian</span> · <b lang="ko">몽골어</b></span></a>
-  <a class="lc" lang="ja" href="ja/"><span class="nat">日本語</span><span class="gl" dir="ltr"><span lang="en">Japanese</span> · <b lang="ko">일본어</b></span></a>
-  <a class="lc" lang="zh-Hans" href="zh-Hans/"><span class="nat">简体中文</span><span class="gl" dir="ltr"><span lang="en">Chinese</span> · <b lang="ko">중국어</b></span></a>
-  <a class="lc" lang="th" href="th/"><span class="nat">ภาษาไทย</span><span class="gl" dir="ltr"><span lang="en">Thai</span> · <b lang="ko">태국어</b></span></a>
-  <a class="lc" lang="km" href="km/"><span class="nat">ភាសាខ្មែរ</span><span class="gl" dir="ltr"><span lang="en">Khmer</span> · <b lang="ko">캄보디아어</b></span></a>
-  <a class="lc" lang="my" href="my/"><span class="nat">မြန်မာ</span><span class="gl" dir="ltr"><span lang="en">Burmese</span> · <b lang="ko">버마어</b></span></a>
-  <a class="lc" lang="ne" href="ne/"><span class="nat">नेपाली</span><span class="gl" dir="ltr"><span lang="en">Nepali</span> · <b lang="ko">네팔어</b></span></a>
-  <a class="lc" lang="bn" href="bn/"><span class="nat">বাংলা</span><span class="gl" dir="ltr"><span lang="en">Bengali</span> · <b lang="ko">벵골어</b></span></a>
-  <a class="lc" lang="si" href="si/"><span class="nat">සිංහල</span><span class="gl" dir="ltr"><span lang="en">Sinhala</span> · <b lang="ko">싱할라어</b></span></a>
-  <a class="lc" lang="ar" dir="rtl" href="ar/"><span class="nat">العربية</span><span class="gl" dir="ltr"><span lang="en">Arabic</span> · <b lang="ko">아랍어</b></span></a>
-  <a class="lc" lang="ur" dir="rtl" href="ur/"><span class="nat">اردو</span><span class="gl" dir="ltr"><span lang="en">Urdu</span> · <b lang="ko">우르두어</b></span></a>
-</nav>
-</section>
 
 
 <div class="finder" id="finder" role="search">

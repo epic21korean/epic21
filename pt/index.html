@@ -124,8 +124,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ibtn span{white-space:nowrap}
 .ibtn[hidden]{display:none}
 #installBtn{border-color:var(--band)}
-#openLangs span{max-width:9em;overflow:hidden;text-overflow:ellipsis}
-@media (max-width:420px){ #openLangs span{display:none}.tools{gap:4px}.ibtn{padding:0 10px}}
+@media (max-width:420px){ .tools{gap:4px}.ibtn{padding:0 10px}}
 @media (max-width:560px){.ibtn .lbl{display:none}}
 
 /* ── 원고지 제목 ── */
@@ -155,6 +154,14 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .suggest button{margin-inline-start:auto;font-size:13px;color:var(--ink-soft);text-decoration:underline}
 
 /* ── 원고지 언어표 ── */
+.langbar{display:flex;align-items:center;gap:8px;width:100%;margin-top:10px;padding:10px 14px;border-radius:12px;border:1.5px solid var(--band);background:var(--card,transparent);color:var(--ink);font:inherit;cursor:pointer;text-align:start}
+.langbar svg{width:20px;height:20px;flex:none}
+.langbar b{font-size:16px}
+.langbar .lb-pick{color:var(--ink-soft);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.langbar .lb-ko{color:var(--muted);font-size:12px;margin-inline-start:auto;white-space:nowrap}
+.langbar i{font-style:normal;color:var(--ink-soft)}
+@media (max-width:420px){.langbar .lb-ko{display:none}.langbar i{margin-inline-start:auto}}
+.langs.first{margin-top:6px}
 .langs{margin-top:28px}
 .langs h2{font-size:15px;font-weight:700;margin-bottom:10px;color:var(--ink-soft)}
 .lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
@@ -498,15 +505,16 @@ details.ax>*:not(summary){margin-inline:14px}
 
 <div class="wrap">
 
+
+
+<button class="langbar" id="openLangs" type="button" aria-haspopup="dialog">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>
+  <b lang="pt">Português</b><span class="lb-pick">Escolha seu idioma</span><span class="lb-ko" lang="ko">언어 바꾸기</span><i aria-hidden="true">▾</i>
+</button>
+
 <div class="top">
   <a class="brand" href="../"><i aria-hidden="true"></i>EPIC21</a>
   <div class="tools">
-    
-    <button class="ibtn" id="openLangs" type="button" aria-haspopup="dialog">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.8 2.5 15.2 0 18M12 3c-2.5 2.8-2.5 15.2 0 18"/></svg>
-      <span lang="pt">Português</span>
-    </button>
-    
     <a class="ibtn" href="https://www.youtube.com/@EPIC21korean" rel="noopener" aria-label="YouTube @EPIC21korean">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
       <span class="lbl">Assistir no YouTube</span>
@@ -523,6 +531,7 @@ details.ax>*:not(summary){margin-inline:14px}
     </button>
   </div>
 </div>
+
 
 <header class="hero">
   
@@ -584,7 +593,6 @@ details.ax>*:not(summary){margin-inline:14px}
   <div class="tag">Para este vídeo</div>
   <div id="forvideo-slot"></div>
 </section>
-
 
 
 

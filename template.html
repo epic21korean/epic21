@@ -501,6 +501,13 @@ details.ax>*:not(summary){margin-inline:14px}
 {%- endif -%}
 {%- endmacro %}
 <div class="wrap">
+{% macro langgrid(cur) -%}
+<nav class="lgrid">
+{%- for L in langs %}
+  <a class="lc" lang="{{ L.code }}"{% if L.rtl %} dir="rtl"{% endif %} href="{{ base }}{{ L.code }}/"{% if L.code == cur %} aria-current="page"{% endif %}><span class="nat">{{ L.name }}</span><span class="gl" dir="ltr">{% if L.en != L.name %}<span lang="en">{{ L.en }}</span> · {% endif %}<b lang="ko">{{ L.ko }}</b></span></a>
+{%- endfor %}
+</nav>
+{%- endmacro %}
 
 {% if not is_root %}
 <button class="langbar" id="openLangs" type="button" aria-haspopup="dialog">
@@ -587,13 +594,6 @@ details.ax>*:not(summary){margin-inline:14px}
 </section>
 
 
-{% macro langgrid(cur) -%}
-<nav class="lgrid">
-{%- for L in langs %}
-  <a class="lc" lang="{{ L.code }}"{% if L.rtl %} dir="rtl"{% endif %} href="{{ base }}{{ L.code }}/"{% if L.code == cur %} aria-current="page"{% endif %}><span class="nat">{{ L.name }}</span><span class="gl" dir="ltr">{% if L.en != L.name %}<span lang="en">{{ L.en }}</span> · {% endif %}<b lang="ko">{{ L.ko }}</b></span></a>
-{%- endfor %}
-</nav>
-{%- endmacro %}
 
 {% if not is_root %}
 <dialog class="ldlg" id="langDlg" aria-labelledby="ldlgT">
