@@ -239,7 +239,7 @@ def build_page(site, env, lang, is_root, collect=None, preview=False):
             elif plist:
                 video_url = f"https://www.youtube.com/playlist?list={plist}"
             else:
-                video_url = site['youtube'].rstrip('/') + '/search?query=' + quote(q)
+                video_url = site['youtube']   # 짝 영상이 없는 교재: 엉뚱한 검색 결과 대신 채널 첫 화면
             search = ' '.join(x for x in [tr or '', b['ko'], b.get('en', ''), b.get('ko_sub', ''), b.get('en_sub', ''),
                                          gt['name'], b.get('slug', '')] if x).lower()
             page = f"{base}{'en/' if is_root else ''}{b['slug']}/" if is_root else f"{b['slug']}/"
