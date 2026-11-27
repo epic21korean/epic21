@@ -442,11 +442,11 @@ details.grp>summary h3{font-size:17px;line-height:1.3}
 .gcov{display:flex;width:64px;height:51px;position:relative}
 .gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
 .gcov img:first-child{margin-inline-start:0}
-.gn{flex:none;font-size:13px;font-weight:800;min-height:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--lc);color:#fff;padding:4px 14px 4px 10px;box-shadow:0 3px 10px rgba(0,0,0,.15);max-width:9.5em;line-height:1.15}
-.gn svg{width:20px;height:20px;flex:none}
-.gn b{font-size:22px;font-weight:900;margin:0 2px}
-.gnt{text-align:center}
-@media (max-width:420px){.gn{padding:4px 10px 4px 8px}.gn svg{width:17px;height:17px}.gn b{font-size:20px}}
+.gcov{position:relative}
+.gn{position:absolute;top:-10px;inset-inline-end:-12px;min-width:38px;height:38px;border-radius:19px;display:flex;align-items:center;justify-content:center;padding:0 8px;font-size:21px;font-weight:900;color:#fff;background:var(--lc);border:3px solid var(--bg,#fff);box-shadow:0 3px 10px rgba(0,0,0,.2);z-index:2}
+.gcount{display:inline-flex;align-items:center;gap:5px;justify-self:start;align-self:flex-start;margin:4px 0 2px;padding:3px 12px 3px 8px;border-radius:999px;background:var(--lc);color:#fff;font-size:14px;font-weight:800;line-height:1.3}
+.gcount svg{width:17px;height:17px;flex:none}
+.gcount b{font-size:18px;font-weight:900;margin:0 1px}
 details.grp>.books{padding:6px 0 26px}
 @media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
 .sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
@@ -483,7 +483,7 @@ details.ax{border-inline-start:0;border-radius:20px;background:linear-gradient(1
 details.ax>summary .tname{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .ax-more>summary .tname{color:var(--ink-soft);background:none;-webkit-text-fill-color:currentColor}
 details.ax>*:not(summary){margin-inline:14px}
-.gn{background:linear-gradient(140deg,var(--a1,var(--lc)),var(--a2,var(--lc)))}
+.gn,.gcount{background:linear-gradient(140deg,var(--a1,var(--lc)),var(--a2,var(--lc)))}
 
 .twho{display:block;margin-top:2px;color:#fff;font-size:13.5px;font-weight:900;line-height:1.35;text-shadow:0 1px 2px rgba(0,0,0,.18)}
 .tile .tdesc{font-size:12.5px;opacity:.95}
@@ -666,7 +666,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="58" r="26" fill="#1E3A8A"/><path d="M14 64c2-12 9-18 18-18s16 6 18 18z" fill="#2563EB"/><path d="M27 46l5 8 5-8" fill="#FDE68A"/><circle cx="32" cy="31" r="12" fill="#FDD9B5"/><circle cx="27.5" cy="31" r="1.6" fill="#3B2F2F"/><circle cx="36.5" cy="31" r="1.6" fill="#3B2F2F"/><path d="M28 36q4 3 8 0" stroke="#3B2F2F" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M17 26c0-10 7-16 15-16s15 6 15 16z" fill="#FACC15"/><rect x="13" y="24" width="38" height="5" rx="2.5" fill="#EAB308"/><rect x="29.5" y="9" width="5" height="16" rx="2" fill="#FDE047"/></svg></span>
       <h2 class="tname" id="axh-eps"><span>EPS-TOPIK</span></h2>
-      <p class="tmeta"><span>Coreano para trabalhar na Coreia — simulados com explicação em vídeo</span><span>5 livros</span><span class="prog" data-n="5" hidden></span></p>
+      <p class="tmeta"><span>Coreano para trabalhar na Coreia — simulados com explicação em vídeo</span><span class="gcount"><b>5</b> livros</span><span class="prog" data-n="5" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <a class="glink" href="guide/eps/">📖 O que é o EPS-TOPIK? <b>Saiba mais →</b></a>
@@ -675,10 +675,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-eps-mock01/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-eps-mock02/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-eps-mock03/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-eps-mock04/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Simulados EPS-TOPIK</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>5</b> livros</span>
           <span class="gdesc">Simulados no mesmo formato do EPS-TOPIK. Cadernos de questões (PDF) em coreano e em 20 idiomas, site de prática grátis no celular (nota na hora), vídeo de audição e vídeo de respostas e explicações (legendas em 20 idiomas).</span>
           <span class="gko" lang="ko">EPS-TOPIK 모의고사</span>
         </span>
-        <span class="gn" title="5 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -859,7 +860,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="6" width="36" height="48" rx="5" fill="#fff"/><rect x="18" y="14" width="18" height="3.5" rx="1.75" fill="#93C5FD"/><rect x="18" y="22" width="24" height="3" rx="1.5" fill="#CBD5E1"/><rect x="18" y="29" width="20" height="3" rx="1.5" fill="#CBD5E1"/><rect x="18" y="36" width="22" height="3" rx="1.5" fill="#CBD5E1"/><path d="M19 45l4 4 8-9" stroke="#22C55E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g transform="rotate(35 46 40)"><rect x="42" y="16" width="8" height="32" rx="2" fill="#F59E0B"/><rect x="42" y="16" width="8" height="5" rx="2" fill="#F472B6"/><path d="M42 48h8l-4 8z" fill="#FDE68A"/><path d="M45 54h2l-1 2z" fill="#1F2937"/></g></svg></span>
       <h2 class="tname" id="axh-topik"><span>TOPIK I · II</span></h2>
-      <p class="tmeta"><span>O exame oficial de coreano — músicas, diálogos, gramática e redação</span><span>22 livros</span><span class="prog" data-n="22" hidden></span></p>
+      <p class="tmeta"><span>O exame oficial de coreano — músicas, diálogos, gramática e redação</span><span class="gcount"><b>22</b> livros</span><span class="prog" data-n="22" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <a class="glink" href="guide/topik/">📖 O que é o TOPIK (Teste de Proficiência em Coreano)? <b>Saiba mais →</b></a>
@@ -868,10 +869,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik1-mv-vol1-two-hands/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik1-mv-vol2-restroom/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik1-mv-vol3-americano/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik1-mv-vol4-wifi/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Aprenda coreano com videoclipes — TOPIK I</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>10</b> livros</span>
           <span class="gdesc">Coreano para iniciantes com cenas do dia a dia: cafés, metrô, compras.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</span>
         </span>
-        <span class="gn" title="10 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>10</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1222,10 +1224,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik-vocab-grammar-s1/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik-vocab-grammar-s2/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Vocabulário e gramática TOPIK por meio de diálogos</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>2</b> livros</span>
           <span class="gdesc">Aprenda palavras e gramática do TOPIK dentro de conversas reais.</span>
           <span class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</span>
         </span>
-        <span class="gn" title="2 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>2</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1304,10 +1307,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-classroom-korean-60/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Coreano na sala de aula</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Expressões que se ouvem na aula, com morfemas, pronúncia e cultura.</span>
           <span class="gko" lang="ko">교실 한국어</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1351,10 +1355,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-essential-korean-grammar/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Gramática coreana essencial</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Todos os pontos gramaticais essenciais do TOPIK I e II em um só livro.</span>
           <span class="gko" lang="ko">한국어 필수 문법 완결판</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1398,10 +1403,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik2-mv-vol1-four-seasons/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik2-mv-vol2-black-coffee/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik2-mv-vol3-cola/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik2-mv-vol4-curious/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Aprenda coreano com videoclipes — TOPIK II</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>6</b> livros</span>
           <span class="gdesc">Gramática e vocabulário intermediários a partir dos videoclipes da EPIC21.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</span>
         </span>
-        <span class="gn" title="6 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>6</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1616,10 +1622,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-dive-01-haenyeo/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Revista K-Song</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Livros em estilo revista, cada um com seu videoclipe: páginas de fotos, palavras em imagens e letra bilíngue.</span>
           <span class="gko" lang="ko">K-Song 매거진</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1663,10 +1670,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik2-writing-master/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Escrita TOPIK II</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Prática passo a passo para as questões de escrita 51–54.</span>
           <span class="gko" lang="ko">TOPIK II 쓰기</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1710,7 +1718,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="12" width="60" height="40" rx="5" fill="#fff"/><g transform="translate(32 32) rotate(-33.7)"><path d="M-9 0a9 9 0 0 1 18 0a4.5 4.5 0 0 1-9 0a4.5 4.5 0 0 0-9 0z" fill="#CD2E3A"/><path d="M9 0a9 9 0 0 1-18 0a4.5 4.5 0 0 1 9 0a4.5 4.5 0 0 0 9 0z" fill="#0047A0"/></g><g fill="#111"><g transform="translate(13.5 20.5) rotate(-56.3)"><rect x="-6" y="-4.6" width="12" height="2.2"/><rect x="-6" y="-1.1" width="12" height="2.2"/><rect x="-6" y="2.4" width="12" height="2.2"/></g><g transform="translate(50.5 43.5) rotate(-56.3)"><rect x="-6" y="-4.6" width="5.3" height="2.2"/><rect x=".7" y="-4.6" width="5.3" height="2.2"/><rect x="-6" y="-1.1" width="5.3" height="2.2"/><rect x=".7" y="-1.1" width="5.3" height="2.2"/><rect x="-6" y="2.4" width="5.3" height="2.2"/><rect x=".7" y="2.4" width="5.3" height="2.2"/></g><g transform="translate(50.5 20.5) rotate(56.3)"><rect x="-6" y="-4.6" width="5.3" height="2.2"/><rect x=".7" y="-4.6" width="5.3" height="2.2"/><rect x="-6" y="-1.1" width="12" height="2.2"/><rect x="-6" y="2.4" width="5.3" height="2.2"/><rect x=".7" y="2.4" width="5.3" height="2.2"/></g><g transform="translate(13.5 43.5) rotate(56.3)"><rect x="-6" y="-4.6" width="12" height="2.2"/><rect x="-6" y="-1.1" width="5.3" height="2.2"/><rect x=".7" y="-1.1" width="5.3" height="2.2"/><rect x="-6" y="2.4" width="12" height="2.2"/></g></g></svg></span>
       <h2 class="tname" id="axh-kiip"><span>Programa de Integração Social (KIIP)</span><span class="tword" lang="ko">사회통합프로그램</span></h2>
-      <p class="tmeta"><span>Prepare-se para o teste inicial, os testes de nível e o teste intermediário</span><span>9 livros</span><span class="prog" data-n="9" hidden></span></p>
+      <p class="tmeta"><span>Prepare-se para o teste inicial, os testes de nível e o teste intermediário</span><span class="gcount"><b>9</b> livros</span><span class="prog" data-n="9" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <a class="glink" href="guide/kiip/">📖 O que é o Programa de Integração Social (KIIP)? <b>Saiba mais →</b></a>
@@ -1719,10 +1727,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-kiip-handbook-1/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-kiip-handbook-2/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-kiip-handbook-3/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-kiip-handbook-4/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Programa de Integração Social da Coreia (KIIP)</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>9</b> livros</span>
           <span class="gdesc">Manuais gratuitos de vocabulário e gramática do livro KIIP «Língua e Cultura Coreanas» e cadernos de simulados. As respostas e explicações estão em vídeos do YouTube (legendas em 20 idiomas): leia os QR do caderno.</span>
           <span class="gko" lang="ko">사회통합프로그램(KIIP)</span>
         </span>
-        <span class="gn" title="9 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>9</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -2039,7 +2048,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="3" y="14" width="20" height="26" rx="5" fill="#fff" transform="rotate(-10 13 27)"/><rect x="22" y="10" width="20" height="26" rx="5" fill="#FDE68A"/><rect x="41" y="14" width="20" height="26" rx="5" fill="#fff" transform="rotate(10 51 27)"/><text x="13" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#DB2777" transform="rotate(-10 13 27)" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">가</text><text x="32" y="30" text-anchor="middle" font-size="16" font-weight="900" fill="#7C3AED" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">나</text><text x="51" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#2563EB" transform="rotate(10 51 27)" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">다</text><path d="M14 50h36" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/></svg></span>
       <h2 class="tname" id="axh-start"><span>Primeiros passos</span><span class="tword" lang="ko">처음 시작</span></h2>
-      <p class="tmeta"><span>Hangul e suas primeiras 100 frases — comece aqui</span><span>2 livros</span><span class="prog" data-n="2" hidden></span></p>
+      <p class="tmeta"><span>Hangul e suas primeiras 100 frases — comece aqui</span><span class="gcount"><b>2</b> livros</span><span class="prog" data-n="2" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <details class="grp" id="g-hangul" data-g="hangul">
@@ -2047,10 +2056,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-hangul-starter-01/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Primeiros passos no hangul</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Livro inicial para ler as letras coreanas do zero com imagens e sons — um QR de vídeo por unidade e um QR de som por letra.</span>
           <span class="gko" lang="ko">한글 첫걸음</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2094,10 +2104,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-first100-sentences/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>100 frases coreanas para conversar com coreanos</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Livro inicial que acompanha a série de vídeos: aprenda 100 frases essenciais com cenas reais e um QR de vídeo para cada uma. Uma nova unidade a cada vídeo novo.</span>
           <span class="gko" lang="ko">한국 사람과 대화할 수 있는 한국어 100문장</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2141,7 +2152,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="#fff" opacity=".9"/><path d="M32 22v20M22 32h20" stroke="#64748B" stroke-width="5" stroke-linecap="round"/></svg></span>
       <h2 class="tname" id="axh-more"><span>Mais</span><span class="tword" lang="ko">더 보기</span></h2>
-      <p class="tmeta"><span>Outras séries</span><span>7 livros</span><span class="prog" data-n="7" hidden></span></p>
+      <p class="tmeta"><span>Outras séries</span><span class="gcount"><b>7</b> livros</span><span class="prog" data-n="7" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <details class="grp" id="g-easy" data-g="easy">
@@ -2149,10 +2160,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-easysong-01-opposites1/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Músicas coreanas fáceis</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Livros para iniciantes com um videoclipe cada: aprenda palavras básicas com músicas, fotos, jogos e cartões.</span>
           <span class="gko" lang="ko">쉬운 한국어 노래</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2196,10 +2208,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-poem-01-first-payday/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Aprenda coreano com poesia</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> livros</span>
           <span class="gdesc">Livros de nível intermediário-avançado com um poema original: vocabulário, gramática, questões estilo TOPIK II e folha de redação.</span>
           <span class="gko" lang="ko">시로 배우는 한국어</span>
         </span>
-        <span class="gn" title="1 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2243,10 +2256,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-ttg2056-s1/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-ttg2056-s2/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-ttg2056-s3/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-ttg2056-s4/Portuguese.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>Aprenda coreano com YouTube Shorts</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>5</b> livros</span>
           <span class="gdesc">Guia de Viagem no Tempo 2056, com os Shorts «30 anos depois»: compare 2026 e 2056 e aprenda vocabulário e expressões do nível básico ao avançado. Com gabarito.</span>
           <span class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</span>
         </span>
-        <span class="gn" title="5 livros"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> livros</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">

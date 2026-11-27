@@ -442,11 +442,11 @@ details.grp>summary h3{font-size:17px;line-height:1.3}
 .gcov{display:flex;width:64px;height:51px;position:relative}
 .gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
 .gcov img:first-child{margin-inline-start:0}
-.gn{flex:none;font-size:13px;font-weight:800;min-height:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--lc);color:#fff;padding:4px 14px 4px 10px;box-shadow:0 3px 10px rgba(0,0,0,.15);max-width:9.5em;line-height:1.15}
-.gn svg{width:20px;height:20px;flex:none}
-.gn b{font-size:22px;font-weight:900;margin:0 2px}
-.gnt{text-align:center}
-@media (max-width:420px){.gn{padding:4px 10px 4px 8px}.gn svg{width:17px;height:17px}.gn b{font-size:20px}}
+.gcov{position:relative}
+.gn{position:absolute;top:-10px;inset-inline-end:-12px;min-width:38px;height:38px;border-radius:19px;display:flex;align-items:center;justify-content:center;padding:0 8px;font-size:21px;font-weight:900;color:#fff;background:var(--lc);border:3px solid var(--bg,#fff);box-shadow:0 3px 10px rgba(0,0,0,.2);z-index:2}
+.gcount{display:inline-flex;align-items:center;gap:5px;justify-self:start;align-self:flex-start;margin:4px 0 2px;padding:3px 12px 3px 8px;border-radius:999px;background:var(--lc);color:#fff;font-size:14px;font-weight:800;line-height:1.3}
+.gcount svg{width:17px;height:17px;flex:none}
+.gcount b{font-size:18px;font-weight:900;margin:0 1px}
 details.grp>.books{padding:6px 0 26px}
 @media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
 .sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
@@ -483,7 +483,7 @@ details.ax{border-inline-start:0;border-radius:20px;background:linear-gradient(1
 details.ax>summary .tname{background:linear-gradient(90deg,var(--a1),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
 .ax-more>summary .tname{color:var(--ink-soft);background:none;-webkit-text-fill-color:currentColor}
 details.ax>*:not(summary){margin-inline:14px}
-.gn{background:linear-gradient(140deg,var(--a1,var(--lc)),var(--a2,var(--lc)))}
+.gn,.gcount{background:linear-gradient(140deg,var(--a1,var(--lc)),var(--a2,var(--lc)))}
 
 .twho{display:block;margin-top:2px;color:#fff;font-size:13.5px;font-weight:900;line-height:1.35;text-shadow:0 1px 2px rgba(0,0,0,.18)}
 .tile .tdesc{font-size:12.5px;opacity:.95}
@@ -666,7 +666,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="58" r="26" fill="#1E3A8A"/><path d="M14 64c2-12 9-18 18-18s16 6 18 18z" fill="#2563EB"/><path d="M27 46l5 8 5-8" fill="#FDE68A"/><circle cx="32" cy="31" r="12" fill="#FDD9B5"/><circle cx="27.5" cy="31" r="1.6" fill="#3B2F2F"/><circle cx="36.5" cy="31" r="1.6" fill="#3B2F2F"/><path d="M28 36q4 3 8 0" stroke="#3B2F2F" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M17 26c0-10 7-16 15-16s15 6 15 16z" fill="#FACC15"/><rect x="13" y="24" width="38" height="5" rx="2.5" fill="#EAB308"/><rect x="29.5" y="9" width="5" height="16" rx="2" fill="#FDE047"/></svg></span>
       <h2 class="tname" id="axh-eps"><span>EPS-TOPIK</span></h2>
-      <p class="tmeta"><span>الكورية للعمل في كوريا — اختبارات تجريبية مع شرح بالفيديو</span><span>5 كتابًا</span><span class="prog" data-n="5" hidden></span></p>
+      <p class="tmeta"><span>الكورية للعمل في كوريا — اختبارات تجريبية مع شرح بالفيديو</span><span class="gcount"><b>5</b> كتابًا</span><span class="prog" data-n="5" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <a class="glink" href="guide/eps/">📖 ما هو EPS-TOPIK؟ <b>اقرأ المزيد →</b></a>
@@ -675,10 +675,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-eps-mock01/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-eps-mock02/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-eps-mock03/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-eps-mock04/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>اختبارات EPS-TOPIK التجريبية</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>5</b> كتابًا</span>
           <span class="gdesc">اختبارات تجريبية بنفس شكل EPS-TOPIK. كتيبات أسئلة (PDF) بالكورية وبـ20 لغة، وموقع تدريب مجاني على الهاتف (نتيجة فورية)، وفيديو الاستماع وفيديو الإجابات والشرح (ترجمة بـ20 لغة).</span>
           <span class="gko" lang="ko">EPS-TOPIK 모의고사</span>
         </span>
-        <span class="gn" title="5 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -859,7 +860,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="6" width="36" height="48" rx="5" fill="#fff"/><rect x="18" y="14" width="18" height="3.5" rx="1.75" fill="#93C5FD"/><rect x="18" y="22" width="24" height="3" rx="1.5" fill="#CBD5E1"/><rect x="18" y="29" width="20" height="3" rx="1.5" fill="#CBD5E1"/><rect x="18" y="36" width="22" height="3" rx="1.5" fill="#CBD5E1"/><path d="M19 45l4 4 8-9" stroke="#22C55E" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g transform="rotate(35 46 40)"><rect x="42" y="16" width="8" height="32" rx="2" fill="#F59E0B"/><rect x="42" y="16" width="8" height="5" rx="2" fill="#F472B6"/><path d="M42 48h8l-4 8z" fill="#FDE68A"/><path d="M45 54h2l-1 2z" fill="#1F2937"/></g></svg></span>
       <h2 class="tname" id="axh-topik"><span>TOPIK I · II</span></h2>
-      <p class="tmeta"><span>الاختبار الرسمي للغة الكورية — أغانٍ وحوارات وقواعد وكتابة</span><span>22 كتابًا</span><span class="prog" data-n="22" hidden></span></p>
+      <p class="tmeta"><span>الاختبار الرسمي للغة الكورية — أغانٍ وحوارات وقواعد وكتابة</span><span class="gcount"><b>22</b> كتابًا</span><span class="prog" data-n="22" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <a class="glink" href="guide/topik/">📖 ما هو TOPIK (اختبار الكفاءة في اللغة الكورية)؟ <b>اقرأ المزيد →</b></a>
@@ -868,10 +869,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik1-mv-vol1-two-hands/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik1-mv-vol2-restroom/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik1-mv-vol3-americano/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik1-mv-vol4-wifi/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>تعلّم الكورية عبر الفيديوهات الموسيقية — TOPIK I</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>10</b> كتابًا</span>
           <span class="gdesc">الكورية للمبتدئين من مشاهد يومية: المقهى، المترو، التسوق.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</span>
         </span>
-        <span class="gn" title="10 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>10</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1222,10 +1224,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik-vocab-grammar-s1/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik-vocab-grammar-s2/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>مفردات وقواعد TOPIK من خلال الحوار</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>2</b> كتابًا</span>
           <span class="gdesc">تعلّم كلمات وقواعد TOPIK داخل محادثات حقيقية.</span>
           <span class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</span>
         </span>
-        <span class="gn" title="2 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>2</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1304,10 +1307,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-classroom-korean-60/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>الكورية في الفصل</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">العبارات التي تُسمع في الصف، مع تحليل الصرف والنطق والثقافة.</span>
           <span class="gko" lang="ko">교실 한국어</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1351,10 +1355,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-essential-korean-grammar/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>قواعد اللغة الكورية الأساسية — النسخة الكاملة</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">جميع القواعد الأساسية لـ TOPIK I و II في كتاب واحد.</span>
           <span class="gko" lang="ko">한국어 필수 문법 완결판</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1398,10 +1403,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik2-mv-vol1-four-seasons/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik2-mv-vol2-black-coffee/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik2-mv-vol3-cola/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-topik2-mv-vol4-curious/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>تعلّم الكورية عبر الفيديوهات الموسيقية — TOPIK II</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>6</b> كتابًا</span>
           <span class="gdesc">قواعد ومفردات المستوى المتوسط من فيديوهات EPIC21 الموسيقية.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</span>
         </span>
-        <span class="gn" title="6 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>6</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1616,10 +1622,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-dive-01-haenyeo/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>مجلة K-Song</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">كتب بأسلوب المجلات، لكل منها فيديو موسيقي: صفحات صور، كلمات بالصور، وكلمات الأغنية بلغتين.</span>
           <span class="gko" lang="ko">K-Song 매거진</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1663,10 +1670,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-topik2-writing-master/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>كتابة TOPIK II</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">تدريب خطوة بخطوة على أسئلة الكتابة 51–54.</span>
           <span class="gko" lang="ko">TOPIK II 쓰기</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1710,7 +1718,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="12" width="60" height="40" rx="5" fill="#fff"/><g transform="translate(32 32) rotate(-33.7)"><path d="M-9 0a9 9 0 0 1 18 0a4.5 4.5 0 0 1-9 0a4.5 4.5 0 0 0-9 0z" fill="#CD2E3A"/><path d="M9 0a9 9 0 0 1-18 0a4.5 4.5 0 0 1 9 0a4.5 4.5 0 0 0 9 0z" fill="#0047A0"/></g><g fill="#111"><g transform="translate(13.5 20.5) rotate(-56.3)"><rect x="-6" y="-4.6" width="12" height="2.2"/><rect x="-6" y="-1.1" width="12" height="2.2"/><rect x="-6" y="2.4" width="12" height="2.2"/></g><g transform="translate(50.5 43.5) rotate(-56.3)"><rect x="-6" y="-4.6" width="5.3" height="2.2"/><rect x=".7" y="-4.6" width="5.3" height="2.2"/><rect x="-6" y="-1.1" width="5.3" height="2.2"/><rect x=".7" y="-1.1" width="5.3" height="2.2"/><rect x="-6" y="2.4" width="5.3" height="2.2"/><rect x=".7" y="2.4" width="5.3" height="2.2"/></g><g transform="translate(50.5 20.5) rotate(56.3)"><rect x="-6" y="-4.6" width="5.3" height="2.2"/><rect x=".7" y="-4.6" width="5.3" height="2.2"/><rect x="-6" y="-1.1" width="12" height="2.2"/><rect x="-6" y="2.4" width="5.3" height="2.2"/><rect x=".7" y="2.4" width="5.3" height="2.2"/></g><g transform="translate(13.5 43.5) rotate(56.3)"><rect x="-6" y="-4.6" width="12" height="2.2"/><rect x="-6" y="-1.1" width="5.3" height="2.2"/><rect x=".7" y="-1.1" width="5.3" height="2.2"/><rect x="-6" y="2.4" width="12" height="2.2"/></g></g></svg></span>
       <h2 class="tname" id="axh-kiip"><span>برنامج الاندماج الاجتماعي (KIIP)</span><span class="tword" lang="ko">사회통합프로그램</span></h2>
-      <p class="tmeta"><span>الاستعداد للتقييم المسبق وتقييمات المراحل والتقييم المتوسط</span><span>9 كتابًا</span><span class="prog" data-n="9" hidden></span></p>
+      <p class="tmeta"><span>الاستعداد للتقييم المسبق وتقييمات المراحل والتقييم المتوسط</span><span class="gcount"><b>9</b> كتابًا</span><span class="prog" data-n="9" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <a class="glink" href="guide/kiip/">📖 ما هو برنامج الاندماج الاجتماعي (KIIP)؟ <b>اقرأ المزيد →</b></a>
@@ -1719,10 +1727,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-kiip-handbook-1/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-kiip-handbook-2/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-kiip-handbook-3/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-kiip-handbook-4/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>برنامج الاندماج الاجتماعي (KIIP)</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>9</b> كتابًا</span>
           <span class="gdesc">كتيبات مجانية لمفردات وقواعد كتاب KIIP «اللغة والثقافة الكورية» وكتب الاختبارات التجريبية. الإجابات والشروح في فيديوهات يوتيوب (ترجمة بـ20 لغة) — امسح رموز QR في الكتاب.</span>
           <span class="gko" lang="ko">사회통합프로그램(KIIP)</span>
         </span>
-        <span class="gn" title="9 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>9</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -2039,7 +2048,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><rect x="3" y="14" width="20" height="26" rx="5" fill="#fff" transform="rotate(-10 13 27)"/><rect x="22" y="10" width="20" height="26" rx="5" fill="#FDE68A"/><rect x="41" y="14" width="20" height="26" rx="5" fill="#fff" transform="rotate(10 51 27)"/><text x="13" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#DB2777" transform="rotate(-10 13 27)" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">가</text><text x="32" y="30" text-anchor="middle" font-size="16" font-weight="900" fill="#7C3AED" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">나</text><text x="51" y="34" text-anchor="middle" font-size="16" font-weight="900" fill="#2563EB" transform="rotate(10 51 27)" font-family="'Noto Sans KR','Malgun Gothic',sans-serif">다</text><path d="M14 50h36" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 7"/></svg></span>
       <h2 class="tname" id="axh-start"><span>الخطوات الأولى</span><span class="tword" lang="ko">처음 시작</span></h2>
-      <p class="tmeta"><span>الهانغول وأول 100 جملة — ابدأ من هنا</span><span>2 كتابًا</span><span class="prog" data-n="2" hidden></span></p>
+      <p class="tmeta"><span>الهانغول وأول 100 جملة — ابدأ من هنا</span><span class="gcount"><b>2</b> كتابًا</span><span class="prog" data-n="2" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <details class="grp" id="g-hangul" data-g="hangul">
@@ -2047,10 +2056,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-hangul-starter-01/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>الخطوات الأولى في الهانغول</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">كتاب تمهيدي لتعلّم قراءة الحروف الكورية من الصفر بالصور والأصوات — رمز QR لفيديو كل وحدة ورمز QR لصوت كل حرف.</span>
           <span class="gko" lang="ko">한글 첫걸음</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2094,10 +2104,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-first100-sentences/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>أهم 100 جملة كورية للتحدث مع الكوريين</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">كتاب للمبتدئين مرافق لسلسلة الفيديو — تعلّم 100 جملة أساسية بمشاهد حقيقية ورمز QR لفيديو كل جملة. تُضاف وحدة جديدة مع كل فيديو جديد.</span>
           <span class="gko" lang="ko">한국 사람과 대화할 수 있는 한국어 100문장</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2141,7 +2152,7 @@ details.ax>*:not(summary){margin-inline:14px}
     <summary class="thead">
       <span class="aicon"><svg class="axi" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="22" fill="#fff" opacity=".9"/><path d="M32 22v20M22 32h20" stroke="#64748B" stroke-width="5" stroke-linecap="round"/></svg></span>
       <h2 class="tname" id="axh-more"><span>المزيد</span><span class="tword" lang="ko">더 보기</span></h2>
-      <p class="tmeta"><span>سلاسل أخرى</span><span>7 كتابًا</span><span class="prog" data-n="7" hidden></span></p>
+      <p class="tmeta"><span>سلاسل أخرى</span><span class="gcount"><b>7</b> كتابًا</span><span class="prog" data-n="7" hidden></span></p>
       <span class="chev" aria-hidden="true"></span>
     </summary>
     <details class="grp" id="g-easy" data-g="easy">
@@ -2149,10 +2160,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-easysong-01-opposites1/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>أغانٍ كورية سهلة</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">كتب للمبتدئين مع فيديو موسيقي لكل منها — تعلّم الكلمات الأساسية بالأغاني والصور والألعاب والبطاقات.</span>
           <span class="gko" lang="ko">쉬운 한국어 노래</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2196,10 +2208,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-poem-01-first-payday/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>تعلّم الكورية بالشعر</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>1</b> كتابًا</span>
           <span class="gdesc">كتب للمستوى المتوسط والمتقدم حول قصيدة أصلية — مفردات وقواعد وأسئلة على نمط TOPIK II وورق مربعات للكتابة.</span>
           <span class="gko" lang="ko">시로 배우는 한국어</span>
         </span>
-        <span class="gn" title="1 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2243,10 +2256,11 @@ details.ax>*:not(summary){margin-inline:14px}
         <span class="gcov" aria-hidden="true"><img src="../covers/epic21-ttg2056-s1/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-ttg2056-s2/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-ttg2056-s3/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"><img src="../covers/epic21-ttg2056-s4/Arabic.jpg" alt="" loading="lazy" width="36" height="51" onerror="this.remove()"></span>
         <span class="gtxt">
           <h3>تعلّم الكورية مع YouTube Shorts</h3>
+          <span class="gcount"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><b>5</b> كتابًا</span>
           <span class="gdesc">دليل السفر عبر الزمن 2056 المرافق لمقاطع «بعد 30 عامًا» — قارن بين 2026 و2056 وتعلّم المفردات والتعابير من المستوى المبتدئ إلى المتقدم. مع الإجابات.</span>
           <span class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</span>
         </span>
-        <span class="gn" title="5 كتابًا"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> كتابًا</span></span>
+        
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
