@@ -442,7 +442,11 @@ details.grp>summary h3{font-size:17px;line-height:1.3}
 .gcov{display:flex;width:64px;height:51px;position:relative}
 .gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
 .gcov img:first-child{margin-inline-start:0}
-.gn{font-size:13px;font-weight:800;min-width:28px;height:28px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--lc);color:#fff;padding:0 8px}
+.gn{flex:none;font-size:13px;font-weight:800;min-height:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--lc);color:#fff;padding:4px 14px 4px 10px;box-shadow:0 3px 10px rgba(0,0,0,.15);max-width:9.5em;line-height:1.15}
+.gn svg{width:20px;height:20px;flex:none}
+.gn b{font-size:22px;font-weight:900;margin:0 2px}
+.gnt{text-align:center}
+@media (max-width:420px){.gn{padding:4px 10px 4px 8px}.gn svg{width:17px;height:17px}.gn b{font-size:20px}}
 details.grp>.books{padding:6px 0 26px}
 @media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
 .sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
@@ -674,7 +678,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Full mock tests in the same format as the EPS-TOPIK (Employment Permit System Korean test). Question booklets (PDF) in Korean and 20 languages, a free practice site you can use on your phone (instant score), a listening video and an answers &amp; explanations video (subtitles in 20 languages).</span>
           <span class="gko" lang="ko">EPS-TOPIK 모의고사</span>
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="5 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -867,7 +871,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Beginner Korean from everyday scenes: cafés, subway, shopping.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</span>
         </span>
-        <span class="gn">10</span>
+        <span class="gn" title="10 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>10</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1221,7 +1225,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Learn TOPIK words and grammar inside real conversations.</span>
           <span class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</span>
         </span>
-        <span class="gn">2</span>
+        <span class="gn" title="2 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>2</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1303,7 +1307,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Expressions you hear in class, with morpheme breakdown, pronunciation and culture.</span>
           <span class="gko" lang="ko">교실 한국어</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1350,7 +1354,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Every core grammar point for TOPIK I &amp; II in one book.</span>
           <span class="gko" lang="ko">한국어 필수 문법 완결판</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1374,7 +1378,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Essential Korean Grammar</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%9C%EA%B5%AD%EC%96%B4%20%ED%95%84%EC%88%98%20%EB%AC%B8%EB%B2%95%20%EC%99%84%EA%B2%B0%ED%8C%90" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean" rel="noopener" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-essential-korean-grammar/00_EPIC21_EssentialKoreanGrammar_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1397,7 +1401,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Intermediate grammar and vocabulary from EPIC21 music videos.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</span>
         </span>
-        <span class="gn">6</span>
+        <span class="gn" title="6 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>6</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1615,7 +1619,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Magazine-style textbooks paired with one music video each — photo pages, words in pictures and lyrics side by side.</span>
           <span class="gko" lang="ko">K-Song 매거진</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1662,7 +1666,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Step-by-step practice for writing questions 51–54.</span>
           <span class="gko" lang="ko">TOPIK II 쓰기</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1718,7 +1722,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Free handbooks of the vocabulary and grammar in the KIIP textbook &#34;Korean Language and Culture&#34;, plus mock-test workbooks. Answers and explanations are in YouTube videos (subtitles in 20 languages) — scan the QR codes in each workbook.</span>
           <span class="gko" lang="ko">사회통합프로그램(KIIP)</span>
         </span>
-        <span class="gn">9</span>
+        <span class="gn" title="9 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>9</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1743,7 +1747,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Vocabulary &amp; grammar handbook · Stage 1</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%B4%88%EA%B8%891" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=9rYCKMp2xr4&amp;list=PLdy_9helrPVk" rel="noopener" data-video="9rYCKMp2xr4" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-1/EPIC21_KIIP_H1_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1777,7 +1781,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Vocabulary &amp; grammar handbook · Stage 2</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%B4%88%EA%B8%892" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=f90Q6m-i4Z8&amp;list=PLdy_9helrPVk" rel="noopener" data-video="f90Q6m-i4Z8" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-2/EPIC21_KIIP_H2_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1811,7 +1815,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Vocabulary &amp; grammar handbook · Stage 3</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%A4%91%EA%B8%891" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=tP_MG92iQgI&amp;list=PLdy_9helrPVk" rel="noopener" data-video="tP_MG92iQgI" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-3/EPIC21_KIIP_H3_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1845,7 +1849,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Vocabulary &amp; grammar handbook · Stage 4</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%A4%91%EA%B8%892" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=utTjYf30ojs&amp;list=PLdy_9helrPVk" rel="noopener" data-video="utTjYf30ojs" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-4/EPIC21_KIIP_H4_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1879,7 +1883,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Mock-test workbook · Stage 1 test · answers in YouTube videos</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=1%EB%8B%A8%EA%B3%84%20%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=s6VO194KG_Q&amp;list=PLdy_9helrPVk" rel="noopener" data-video="s6VO194KG_Q" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s1/EPIC21_KIIP_S1_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -1913,7 +1917,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Mock-test workbook · Stage 2 test · answers in YouTube videos</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=2%EB%8B%A8%EA%B3%84%20%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=GQs8oSX7XhQ&amp;list=PLdy_9helrPVk" rel="noopener" data-video="GQs8oSX7XhQ" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s2/EPIC21_KIIP_S2_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -1947,7 +1951,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Mock-test workbook · Stage 3 test · answers in YouTube videos</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=3%EB%8B%A8%EA%B3%84%20%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=is-pgM0Z9wM&amp;list=PLdy_9helrPVk" rel="noopener" data-video="is-pgM0Z9wM" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s3/EPIC21_KIIP_S3_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -1981,7 +1985,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Mock-test workbook · Mid-term test (Stage 4) · answers in YouTube videos</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%A4%91%EA%B0%84%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=bqwKdYl4kxk&amp;list=PLdy_9helrPVk" rel="noopener" data-video="bqwKdYl4kxk" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s4/EPIC21_KIIP_S4_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -2015,7 +2019,7 @@ details.ax>*:not(summary){margin-inline:14px}
         <p class="bsub" lang="en">Mock-test workbook · Pre-test (Stage 0) · answers in YouTube videos</p>
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%82%AC%EC%A0%84%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="Watch the video" title="Watch the video">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=X7QRHUPYQ8o&amp;list=PLdy_9helrPVk" rel="noopener" data-video="X7QRHUPYQ8o" data-list="PLdy_9helrPVk" aria-label="Watch the video" title="Watch the video">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>Watch the video</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s5/EPIC21_KIIP_S5_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -2046,7 +2050,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">A starter textbook for reading Korean letters from zero with pictures and sounds — a video QR for every unit and a sound QR for every letter.</span>
           <span class="gko" lang="ko">한글 첫걸음</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2093,7 +2097,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">A starter textbook paired with the video series — learn 100 must-know sentences with real scenes and a video QR for each. A new unit is added with every new video.</span>
           <span class="gko" lang="ko">한국 사람과 대화할 수 있는 한국어 100문장</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2148,7 +2152,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Beginner textbooks paired with music videos — learn basic words through songs, photos, games and word cards.</span>
           <span class="gko" lang="ko">쉬운 한국어 노래</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2195,7 +2199,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Intermediate–advanced textbooks built on one original poem — words, grammar, TOPIK II-style questions and manuscript paper.</span>
           <span class="gko" lang="ko">시로 배우는 한국어</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2242,7 +2246,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Time Travel Guide 2056, paired with the &#34;30 Years Later&#34; Shorts — compare 2026 and 2056 and learn beginner to advanced words and expressions. Answer key included.</span>
           <span class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</span>
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="5 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">

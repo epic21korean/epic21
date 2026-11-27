@@ -442,7 +442,11 @@ details.grp>summary h3{font-size:17px;line-height:1.3}
 .gcov{display:flex;width:64px;height:51px;position:relative}
 .gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
 .gcov img:first-child{margin-inline-start:0}
-.gn{font-size:13px;font-weight:800;min-width:28px;height:28px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--lc);color:#fff;padding:0 8px}
+.gn{flex:none;font-size:13px;font-weight:800;min-height:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--lc);color:#fff;padding:4px 14px 4px 10px;box-shadow:0 3px 10px rgba(0,0,0,.15);max-width:9.5em;line-height:1.15}
+.gn svg{width:20px;height:20px;flex:none}
+.gn b{font-size:22px;font-weight:900;margin:0 2px}
+.gnt{text-align:center}
+@media (max-width:420px){.gn{padding:4px 10px 4px 8px}.gn svg{width:17px;height:17px}.gn b{font-size:20px}}
 details.grp>.books{padding:6px 0 26px}
 @media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
 .sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
@@ -674,7 +678,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Full mock tests in the same format as the EPS-TOPIK (Employment Permit System Korean test). Question booklets (PDF) in Korean and 20 languages, a free practice site you can use on your phone (instant score), a listening video and an answers &amp; explanations video (subtitles in 20 languages).</span>
           <span class="gko" lang="ko">EPS-TOPIK 모의고사</span>
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="5 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -867,7 +871,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Beginner Korean from everyday scenes: cafés, subway, shopping.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</span>
         </span>
-        <span class="gn">10</span>
+        <span class="gn" title="10 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>10</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1221,7 +1225,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Learn TOPIK words and grammar inside real conversations.</span>
           <span class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</span>
         </span>
-        <span class="gn">2</span>
+        <span class="gn" title="2 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>2</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1303,7 +1307,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Expressions you hear in class, with morpheme breakdown, pronunciation and culture.</span>
           <span class="gko" lang="ko">교실 한국어</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1350,7 +1354,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Every core grammar point for TOPIK I &amp; II in one book.</span>
           <span class="gko" lang="ko">한국어 필수 문법 완결판</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1397,7 +1401,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Intermediate grammar and vocabulary from EPIC21 music videos.</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</span>
         </span>
-        <span class="gn">6</span>
+        <span class="gn" title="6 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>6</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1615,7 +1619,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Magazine-style textbooks paired with one music video each — photo pages, words in pictures and lyrics side by side.</span>
           <span class="gko" lang="ko">K-Song 매거진</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1662,7 +1666,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Step-by-step practice for writing questions 51–54.</span>
           <span class="gko" lang="ko">TOPIK II 쓰기</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1718,7 +1722,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Free handbooks of the vocabulary and grammar in the KIIP textbook &#34;Korean Language and Culture&#34;, plus mock-test workbooks. Answers and explanations are in YouTube videos (subtitles in 20 languages) — scan the QR codes in each workbook.</span>
           <span class="gko" lang="ko">사회통합프로그램(KIIP)</span>
         </span>
-        <span class="gn">9</span>
+        <span class="gn" title="9 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>9</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -2046,7 +2050,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">A starter textbook for reading Korean letters from zero with pictures and sounds — a video QR for every unit and a sound QR for every letter.</span>
           <span class="gko" lang="ko">한글 첫걸음</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2093,7 +2097,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">A starter textbook paired with the video series — learn 100 must-know sentences with real scenes and a video QR for each. A new unit is added with every new video.</span>
           <span class="gko" lang="ko">한국 사람과 대화할 수 있는 한국어 100문장</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2148,7 +2152,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Beginner textbooks paired with music videos — learn basic words through songs, photos, games and word cards.</span>
           <span class="gko" lang="ko">쉬운 한국어 노래</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2195,7 +2199,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Intermediate–advanced textbooks built on one original poem — words, grammar, TOPIK II-style questions and manuscript paper.</span>
           <span class="gko" lang="ko">시로 배우는 한국어</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="1 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>1</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2242,7 +2246,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">Time Travel Guide 2056, paired with the &#34;30 Years Later&#34; Shorts — compare 2026 and 2056 and learn beginner to advanced words and expressions. Answer key included.</span>
           <span class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</span>
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="5 textbooks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt"><b>5</b> textbooks</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">

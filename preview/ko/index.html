@@ -442,7 +442,11 @@ details.grp>summary h3{font-size:17px;line-height:1.3}
 .gcov{display:flex;width:64px;height:51px;position:relative}
 .gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
 .gcov img:first-child{margin-inline-start:0}
-.gn{font-size:13px;font-weight:800;min-width:28px;height:28px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--lc);color:#fff;padding:0 8px}
+.gn{flex:none;font-size:13px;font-weight:800;min-height:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--lc);color:#fff;padding:4px 14px 4px 10px;box-shadow:0 3px 10px rgba(0,0,0,.15);max-width:9.5em;line-height:1.15}
+.gn svg{width:20px;height:20px;flex:none}
+.gn b{font-size:22px;font-weight:900;margin:0 2px}
+.gnt{text-align:center}
+@media (max-width:420px){.gn{padding:4px 10px 4px 8px}.gn svg{width:17px;height:17px}.gn b{font-size:20px}}
 details.grp>.books{padding:6px 0 26px}
 @media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
 .sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
@@ -674,7 +678,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">고용허가제 한국어능력시험(EPS-TOPIK)과 같은 형식의 실전 모의고사. 문제지 PDF는 한국어판과 20개 언어판, 휴대폰으로 푸는 무료 연습 사이트(바로 채점), 듣기 영상과 정답·해설 영상(20개 언어 자막)이 함께 있습니다.</span>
           
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="교재 5권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>5</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -867,7 +871,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">카페·지하철·쇼핑 등 일상 장면으로 배우는 초급 한국어.</span>
           
         </span>
-        <span class="gn">10</span>
+        <span class="gn" title="교재 10권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>10</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1221,7 +1225,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">실제 대화 속에서 TOPIK 어휘와 문법을 익힙니다.</span>
           
         </span>
-        <span class="gn">2</span>
+        <span class="gn" title="교재 2권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>2</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1303,7 +1307,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">수업에서 바로 쓰는 표현을 형태소·발음·문화까지 한 권에 담았습니다.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1350,7 +1354,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">TOPIK I·II 핵심 문법을 한 권에 담았습니다.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1374,7 +1378,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%ED%95%9C%EA%B5%AD%EC%96%B4%20%ED%95%84%EC%88%98%20%EB%AC%B8%EB%B2%95%20%EC%99%84%EA%B2%B0%ED%8C%90" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean" rel="noopener" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-essential-korean-grammar/00_EPIC21_EssentialKoreanGrammar_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1397,7 +1401,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">EPIC21 뮤직비디오로 배우는 중급 문법과 어휘.</span>
           
         </span>
-        <span class="gn">6</span>
+        <span class="gn" title="교재 6권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>6</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1615,7 +1619,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">뮤직비디오 한 편과 짝을 이루는 잡지형 교재 — 화보·사진 단어·가사 병기로 재미있게 배우는 한국어.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1662,7 +1666,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">51~54번 쓰기 문항을 단계별로 연습합니다.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1718,7 +1722,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">사회통합프로그램 『한국어와 한국문화』 교재의 어휘·문법을 모국어로 정리한 핸드북과, 단계평가·중간평가·사전평가 합격 문제집. 문제집의 정답과 해설은 책 속 QR로 여는 유튜브 영상(20개 언어 자막)에서 볼 수 있습니다.</span>
           
         </span>
-        <span class="gn">9</span>
+        <span class="gn" title="교재 9권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>9</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1743,7 +1747,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%B4%88%EA%B8%891" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=9rYCKMp2xr4&amp;list=PLdy_9helrPVk" rel="noopener" data-video="9rYCKMp2xr4" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-1/EPIC21_KIIP_H1_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1777,7 +1781,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%B4%88%EA%B8%892" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=f90Q6m-i4Z8&amp;list=PLdy_9helrPVk" rel="noopener" data-video="f90Q6m-i4Z8" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-2/EPIC21_KIIP_H2_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1811,7 +1815,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%A4%91%EA%B8%891" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=tP_MG92iQgI&amp;list=PLdy_9helrPVk" rel="noopener" data-video="tP_MG92iQgI" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-3/EPIC21_KIIP_H3_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1845,7 +1849,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%96%B4%ED%9C%98%EC%99%80%20%EB%AC%B8%EB%B2%95%20%C2%B7%20%ED%95%9C%EA%B5%AD%EC%96%B4%EC%99%80%20%ED%95%9C%EA%B5%AD%EB%AC%B8%ED%99%94%20%EC%A4%91%EA%B8%892" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=utTjYf30ojs&amp;list=PLdy_9helrPVk" rel="noopener" data-video="utTjYf30ojs" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-handbook-4/EPIC21_KIIP_H4_English_Free.pdf" target="_blank" rel="noopener" data-get>
@@ -1879,7 +1883,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=1%EB%8B%A8%EA%B3%84%20%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=s6VO194KG_Q&amp;list=PLdy_9helrPVk" rel="noopener" data-video="s6VO194KG_Q" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s1/EPIC21_KIIP_S1_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -1913,7 +1917,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=2%EB%8B%A8%EA%B3%84%20%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=GQs8oSX7XhQ&amp;list=PLdy_9helrPVk" rel="noopener" data-video="GQs8oSX7XhQ" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s2/EPIC21_KIIP_S2_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -1947,7 +1951,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=3%EB%8B%A8%EA%B3%84%20%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=is-pgM0Z9wM&amp;list=PLdy_9helrPVk" rel="noopener" data-video="is-pgM0Z9wM" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s3/EPIC21_KIIP_S3_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -1981,7 +1985,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%A4%91%EA%B0%84%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=bqwKdYl4kxk&amp;list=PLdy_9helrPVk" rel="noopener" data-video="bqwKdYl4kxk" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s4/EPIC21_KIIP_S4_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -2015,7 +2019,7 @@ details.ax>*:not(summary){margin-inline:14px}
         
       </div>
       <div class="acts">
-        <a class="sq vid" href="https://www.youtube.com/@EPIC21korean/search?query=%EC%82%AC%EC%A0%84%ED%8F%89%EA%B0%80%20%EB%8C%80%EB%B9%84%20%EB%AC%B8%EC%A0%9C%EC%A7%91%20%C2%B7%20%EC%A0%95%EB%8B%B5%EA%B3%BC%20%ED%95%B4%EC%84%A4%EC%9D%80%20%EC%9C%A0%ED%8A%9C%EB%B8%8C%20%EC%98%81%EC%83%81%2820%EA%B0%9C%20%EC%96%B8%EC%96%B4%20%EC%9E%90%EB%A7%89%29" rel="noopener" aria-label="영상 보기" title="영상 보기">
+        <a class="sq vid" href="https://www.youtube.com/watch?v=X7QRHUPYQ8o&amp;list=PLdy_9helrPVk" rel="noopener" data-video="X7QRHUPYQ8o" data-list="PLdy_9helrPVk" aria-label="영상 보기" title="영상 보기">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path class="yt" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg><span>영상 보기</span>
         </a>
         <a class="get" href="https://archive.org/download/epic21-kiip-workbook-s5/EPIC21_KIIP_S5_Korean.pdf" target="_blank" rel="noopener" data-get>
@@ -2046,7 +2050,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">한글을 처음부터 그림과 소리로 배우는 입문 교재 — 단원마다 영상 QR, 글자마다 소리 QR.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2093,7 +2097,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">영상과 짝을 이루는 입문 교재 — 꼭 필요한 문장 100개를 실제 장면과 영상 QR로 배웁니다. 영상이 나올 때마다 단원이 늘어납니다.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2148,7 +2152,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">초급 어휘를 노래로 배우는 뮤직비디오 짝 교재 — 사진, 가사, 놀이, 단어 카드.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2195,7 +2199,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">중고급 학습자를 위한 창작시 교재 — 시 한 편, 낱말·문법, TOPIK II 유형 문제와 원고지.</span>
           
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="교재 1권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>1</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2242,7 +2246,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">『30년 후』 쇼츠와 짝을 이루는 2056 시간여행 가이드북 — 2026과 2056을 비교하며 초급·중급·고급 어휘와 표현, 정답 포함.</span>
           
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="교재 5권"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">교재 <b>5</b>권</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">

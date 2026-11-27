@@ -442,7 +442,11 @@ details.grp>summary h3{font-size:17px;line-height:1.3}
 .gcov{display:flex;width:64px;height:51px;position:relative}
 .gcov img{width:36px;height:51px;object-fit:cover;border-radius:3px;box-shadow:0 1px 4px rgba(0,0,0,.18);margin-inline-start:-22px;background:#ddd}
 .gcov img:first-child{margin-inline-start:0}
-.gn{font-size:13px;font-weight:800;min-width:28px;height:28px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;background:var(--lc);color:#fff;padding:0 8px}
+.gn{flex:none;font-size:13px;font-weight:800;min-height:40px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:6px;background:var(--lc);color:#fff;padding:4px 14px 4px 10px;box-shadow:0 3px 10px rgba(0,0,0,.15);max-width:9.5em;line-height:1.15}
+.gn svg{width:20px;height:20px;flex:none}
+.gn b{font-size:22px;font-weight:900;margin:0 2px}
+.gnt{text-align:center}
+@media (max-width:420px){.gn{padding:4px 10px 4px 8px}.gn svg{width:17px;height:17px}.gn b{font-size:20px}}
 details.grp>.books{padding:6px 0 26px}
 @media (min-width:900px){details.grp{display:block;grid-template-columns:none;padding:0}details.grp>summary{position:static}}
 .sq.vid{flex:1.3;width:auto;gap:6px;padding:0 10px;background:#FF0000;border-color:#FF0000;color:#fff;font-weight:800;font-size:14px}
@@ -674,7 +678,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">ប្រឡងសាកល្បងទម្រង់ដូច EPS-TOPIK។ សៀវភៅសំណួរ (PDF) ជាភាសាកូរ៉េ និង ២០ ភាសា គេហទំព័រហាត់ឥតគិតថ្លៃលើទូរស័ព្ទ (ដឹងពិន្ទុភ្លាម) វីដេអូស្ដាប់ និងវីដេអូចម្លើយ និងការពន្យល់ (អក្សររត់ ២០ ភាសា)។</span>
           <span class="gko" lang="ko">EPS-TOPIK 모의고사</span>
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="សៀវភៅ 5 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>5</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -867,7 +871,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">ភាសាកូរ៉េកម្រិតដំបូង ពីឈុតឆាកប្រចាំថ្ងៃ៖ ហាងកាហ្វេ រថភ្លើងក្រោមដី ការទិញឥវ៉ាន់។</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK I</span>
         </span>
-        <span class="gn">10</span>
+        <span class="gn" title="សៀវភៅ 10 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>10</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1221,7 +1225,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">រៀនពាក្យ និងវេយ្យាករណ៍ TOPIK នៅក្នុងការសន្ទនាពិត។</span>
           <span class="gko" lang="ko">대화로 배우는 TOPIK 어휘와 문법</span>
         </span>
-        <span class="gn">2</span>
+        <span class="gn" title="សៀវភៅ 2 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>2</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1303,7 +1307,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">ឃ្លាដែលឮក្នុងថ្នាក់រៀន ជាមួយការវិភាគរូបវិទ្យា ការបញ្ចេញសំឡេង និងវប្បធម៌។</span>
           <span class="gko" lang="ko">교실 한국어</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1350,7 +1354,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">វេយ្យាករណ៍សំខាន់ៗទាំងអស់នៃ TOPIK I &amp; II ក្នុងសៀវភៅតែមួយ។</span>
           <span class="gko" lang="ko">한국어 필수 문법 완결판</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1397,7 +1401,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">វេយ្យាករណ៍ និងវាក្យសព្ទកម្រិតមធ្យម ពីវីដេអូចម្រៀង EPIC21។</span>
           <span class="gko" lang="ko">뮤직비디오로 배우는 TOPIK II</span>
         </span>
-        <span class="gn">6</span>
+        <span class="gn" title="សៀវភៅ 6 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>6</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -1615,7 +1619,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅបែបទស្សនាវដ្តី ភ្ជាប់នឹង MV មួយៗ៖ ទំព័ររូបថត ពាក្យជារូបភាព និងទំនុកច្រៀងពីរភាសា។</span>
           <span class="gko" lang="ko">K-Song 매거진</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1662,7 +1666,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">លំហាត់មួយជំហានម្ដងៗ សម្រាប់សំណួរសរសេរ ៥១–៥៤។</span>
           <span class="gko" lang="ko">TOPIK II 쓰기</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -1718,7 +1722,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅជំនួយឥតគិតថ្លៃអំពីវាក្យសព្ទ និងវេយ្យាករណ៍ក្នុងសៀវភៅ KIIP «ភាសា និងវប្បធម៌កូរ៉េ» និងសៀវភៅប្រឡងសាកល្បង។ ចម្លើយ និងការពន្យល់មាននៅក្នុងវីដេអូ YouTube (អក្សររត់ 20 ភាសា) — សូមស្កេន QR ក្នុងសៀវភៅ។</span>
           <span class="gko" lang="ko">사회통합프로그램(KIIP)</span>
         </span>
-        <span class="gn">9</span>
+        <span class="gn" title="សៀវភៅ 9 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>9</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
@@ -2046,7 +2050,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅចាប់ផ្ដើម រៀនអានអក្សរកូរ៉េពីសូន្យតាមរូបភាព និងសំឡេង — មាន QR វីដេអូគ្រប់មេរៀន និង QR សំឡេងគ្រប់តួអក្សរ។</span>
           <span class="gko" lang="ko">한글 첫걸음</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2093,7 +2097,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅដំបូងដែលភ្ជាប់ជាមួយវីដេអូ — រៀនប្រយោគចាំបាច់ ១០០ តាមឈុតពិត និង QR វីដេអូសម្រាប់ប្រយោគនីមួយៗ។ មេរៀនថ្មីបន្ថែមរាល់ពេលមានវីដេអូថ្មី។</span>
           <span class="gko" lang="ko">한국 사람과 대화할 수 있는 한국어 100문장</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2148,7 +2152,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅកម្រិតដំបូងភ្ជាប់ជាមួយ MV — រៀនពាក្យមូលដ្ឋានតាមចម្រៀង រូបថត ល្បែង និងកាតពាក្យ។</span>
           <span class="gko" lang="ko">쉬운 한국어 노래</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2195,7 +2199,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅកម្រិតមធ្យម–ខ្ពស់ ផ្អែកលើកំណាព្យដើមមួយ — ពាក្យ វេយ្យាករណ៍ លំហាត់បែប TOPIK II និងក្រដាសក្រឡា។</span>
           <span class="gko" lang="ko">시로 배우는 한국어</span>
         </span>
-        <span class="gn">1</span>
+        <span class="gn" title="សៀវភៅ 1 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>1</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books solo">
@@ -2242,7 +2246,7 @@ details.ax>*:not(summary){margin-inline:14px}
           <span class="gdesc">សៀវភៅណែនាំការធ្វើដំណើរឆ្លងពេលវេលា 2056 ភ្ជាប់ជាមួយ Shorts «30 ឆ្នាំក្រោយ» — ប្រៀបធៀប 2026 និង 2056 ហើយរៀនពាក្យ និងកន្សោមពីកម្រិតដំបូងដល់កម្រិតខ្ពស់។ មានចម្លើយ។</span>
           <span class="gko" lang="ko">유튜브 쇼츠로 배우는 한국어</span>
         </span>
-        <span class="gn">5</span>
+        <span class="gn" title="សៀវភៅ 5 ក្បាល"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15H5.5A1.5 1.5 0 0 1 4 17.5zM20 5.5A1.5 1.5 0 0 0 18.5 4H13v15h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg><span class="gnt">សៀវភៅ <b>5</b> ក្បាល</span></span>
         <span class="chev" aria-hidden="true"></span>
       </summary>
       <div class="books">
